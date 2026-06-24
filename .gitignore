@@ -1,0 +1,19 @@
+# Windows noise
+Thumbs.db
+desktop.ini
+
+# Local/private project notes
+architecture.md
+architecture*.md
+architecture*.txt
+
+# Local-only tools
+generateAssets.js
+tools_private/
+private/
+_private/
+
+# Local backups
+*.bak
+*_backup*/
+backup*/
