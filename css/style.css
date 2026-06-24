@@ -1899,6 +1899,7 @@ body.shell-drawer-open {
   border-radius: 0.5rem;
   background: #fff;
   overflow: hidden;
+  scroll-margin-top: 4.75rem;
 }
 
 /* Quiz progress text */
@@ -1979,6 +1980,45 @@ body.shell-drawer-open {
 .quiz-feedback.incorrect {
   background: #fee2e2;
   color: #7f1d1d;
+}
+
+
+/*
+  Mobile quiz flow adjustments.
+
+  JavaScript now scrolls the active quiz card or feedback button into view on
+  mobile. These rules make that target fit better above mobile browser chrome
+  and the on-screen keyboard.
+*/
+@media (max-width: 700px) {
+  .quiz-card {
+    scroll-margin-top: 4.25rem;
+  }
+
+  .quiz-progress {
+    padding: 0.55rem 0.7rem;
+  }
+
+  .quiz-image-wrapper {
+    min-height: clamp(170px, 34dvh, 300px);
+    padding: 0.65rem;
+  }
+
+  .quiz-image {
+    max-height: clamp(150px, 32dvh, 280px);
+  }
+
+  .quiz-answer-area,
+  .multiple-choice-options {
+    gap: 0.45rem;
+    padding: 0.65rem;
+  }
+
+  .quiz-answer-area input,
+  .quiz-answer-area button,
+  .multiple-choice-option {
+    min-height: 2.75rem;
+  }
 }
 
 /* Final quiz result */

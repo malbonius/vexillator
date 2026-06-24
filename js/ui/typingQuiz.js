@@ -18,6 +18,40 @@ function setupTypingQuiz() {
 }
 
 /*
+  Mobile quiz screens need deliberate scroll behaviour.
+
+  On phones, immediately focusing the answer input summons the keyboard and
+  causes the browser to centre the textbox rather than the flag.
+*/
+function isTypingQuizMobileViewport() {
+  return window.matchMedia(
+    "(max-width: 700px), (pointer: coarse)"
+  ).matches;
+}
+
+function getTypingQuizScrollBehavior() {
+  return window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches ?
+    "auto" :
+    "smooth";
+}
+
+function scrollTypingQuizElementIntoView(element, block = "start") {
+  if (!element || !isTypingQuizMobileViewport()) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    element.scrollIntoView({
+      behavior: getTypingQuizScrollBehavior(),
+      block,
+      inline: "nearest"
+    });
+  }, 50);
+}
+
+/*
   Starts a new typing quiz from the current working pool.
 */
 function startTypingQuiz() {
@@ -178,7 +212,11 @@ function renderTypingQuizQuestion() {
 
   quizViewElement.appendChild(cardElement);
 
-  answerInput.focus();
+  if (isTypingQuizMobileViewport()) {
+    scrollTypingQuizElementIntoView(cardElement, "start");
+  } else {
+    answerInput.focus();
+  }
 }
 
 /*
@@ -313,6 +351,8 @@ function renderTypingQuizFeedback(result) {
   }
 
   answerArea.appendChild(nextButton);
+
+  scrollTypingQuizElementIntoView(nextButton, "center");
 
     /*
     Register the feedback-stage Enter handler after the original submission

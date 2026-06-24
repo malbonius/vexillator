@@ -19,6 +19,43 @@ function setupMultipleChoiceQuiz() {
 }
 
 /*
+  Mobile quiz screens need deliberate scroll behaviour.
+
+  Multiple-choice does not summon the keyboard, but moving between questions
+  should still bring the flag and options back into the useful viewport area.
+*/
+function isMultipleChoiceQuizMobileViewport() {
+  return window.matchMedia(
+    "(max-width: 700px), (pointer: coarse)"
+  ).matches;
+}
+
+function getMultipleChoiceQuizScrollBehavior() {
+  return window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches ?
+    "auto" :
+    "smooth";
+}
+
+function scrollMultipleChoiceQuizElementIntoView(
+  element,
+  block = "start"
+) {
+  if (!element || !isMultipleChoiceQuizMobileViewport()) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    element.scrollIntoView({
+      behavior: getMultipleChoiceQuizScrollBehavior(),
+      block,
+      inline: "nearest"
+    });
+  }, 50);
+}
+
+/*
   Starts a new multiple-choice quiz from the current working pool.
 */
 function startMultipleChoiceQuiz() {
@@ -187,6 +224,8 @@ function renderMultipleChoiceQuestion() {
   cardElement.appendChild(optionsElement);
 
   quizViewElement.appendChild(cardElement);
+
+  scrollMultipleChoiceQuizElementIntoView(cardElement, "start");
 }
 
 /*
@@ -303,7 +342,11 @@ function renderMultipleChoiceFeedback(selectedOption, allOptions) {
 
   optionsElement.appendChild(nextButton);
 
-  nextButton.focus();
+  if (isMultipleChoiceQuizMobileViewport()) {
+    scrollMultipleChoiceQuizElementIntoView(nextButton, "center");
+  } else {
+    nextButton.focus();
+  }
 }
 
 /*
