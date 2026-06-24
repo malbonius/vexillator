@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Makes the layout behave properly on phones and tablets. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vexillator</title>
+
+  <!--
+    Applies the saved theme before the main stylesheet paints.
+
+    main.js owns the interactive toggle; this small early script only prevents
+    a light-mode flash when the saved or system theme is dark.
+  -->
+  <script>
+    (() => {
+      const storageKey = "vexillatorTheme";
+
+      try {
+        const savedTheme = localStorage.getItem(storageKey);
+        const systemPrefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+        const theme = savedTheme === "dark" ||
+          (!savedTheme && systemPrefersDark)
+            ? "dark"
+            : "light";
+
+        document.documentElement.classList.add(
+          theme === "dark" ? "theme-dark" : "theme-light"
+        );
+
+        document.documentElement.dataset.theme = theme;
+      } catch (error) {
+        document.documentElement.classList.add("theme-light");
+        document.documentElement.dataset.theme = "light";
+      }
+    })();
+  </script>
+
+  <!-- Main stylesheet. -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="app-header">
+    <h1>Vexillator</h1>
+    <p>A flag database and quiz app</p>
+  </header>
+
+  <!--
+    Persistent application controls.
+
+    Browse becomes a pinned sidebar on wide screens and a drawer on smaller
+    screens. Current Selection always opens in a right-hand drawer.
+  -->
+  <div
+    class="app-toolbar"
+    role="toolbar"
+    aria-label="Application controls"
+  >
+    <button
+      id="browseToggleButton"
+      class="app-toolbar-button"
+      type="button"
+      aria-controls="browsePanel"
+      aria-expanded="true"
+    >
+      Browse
+    </button>
+
+    <div class="app-toolbar-context" aria-live="polite">
+      <span class="app-toolbar-context-label">
+        Current view
+      </span>
+
+      <strong id="currentModeTitle">
+        Search
+      </strong>
+    </div>
+
+    <div class="app-toolbar-actions">
+      <button
+        id="selectionToggleButton"
+        class="app-toolbar-button app-toolbar-selection-button"
+        type="button"
+        aria-controls="selectionDrawer"
+        aria-expanded="false"
+      >
+        <span>Selection</span>
+
+        <span
+          id="selectionToolbarSummary"
+          class="app-toolbar-selection-summary"
+        >
+          0 sources · 0 flags
+        </span>
+      </button>
+
+      <button
+        id="themeToggleButton"
+        class="theme-toggle"
+        type="button"
+        aria-label="Use dark mode"
+        aria-pressed="false"
+      >
+        <span class="theme-toggle-track" aria-hidden="true">
+          <span class="theme-toggle-icon theme-toggle-sun"></span>
+          <span class="theme-toggle-icon theme-toggle-moon"></span>
+          <span class="theme-toggle-thumb"></span>
+        </span>
+
+        <span id="themeToggleText" class="visually-hidden">
+          Use dark mode
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Darkens the workspace behind an open overlay drawer. -->
+  <div
+    id="shellBackdrop"
+    class="shell-backdrop hidden"
+    aria-hidden="true"
+  ></div>
+
+  <main id="appLayout" class="app-layout browse-pinned">
+    <!--
+      Browse sidebar.
+
+      It remains in the layout when pinned on wide screens and becomes an
+      overlay drawer at reduced widths.
+    -->
+    <aside
+      id="browsePanel"
+      class="panel browse-panel"
+      aria-label="Browse"
+      tabindex="-1"
+    >
+      <div class="drawer-header">
+        <h2>Browse</h2>
+
+        <div class="drawer-header-actions">
+          <button
+            id="pinBrowseButton"
+            class="drawer-header-button browse-pin-button"
+            type="button"
+            aria-pressed="true"
+          >
+            Unpin
+          </button>
+
+          <button
+            id="closeBrowseButton"
+            class="drawer-close-button"
+            type="button"
+            aria-label="Close Browse"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+
+      <p class="panel-note">
+        Browse curated collections or explore entities directly.
+      </p>
+
+      <div class="browser-mode-tabs">
+        <button
+          id="browseCollectionsButton"
+          class="browser-mode-button active"
+          type="button"
+        >
+          Collections
+        </button>
+
+        <button
+          id="browseEntitiesButton"
+          class="browser-mode-button"
+          type="button"
+        >
+          Entities
+        </button>
+      </div>
+	  
+	  <!--
+        Narrows the CollectionGroup tree while preserving matching ancestor paths.
+
+        Global Search remains separate and searches across all object types.
+      -->
+      <div id="collectionBrowserFilterContainer" hidden>
+        <label for="collectionBrowserFilterInput">
+          Filter collection tree
+        </label>
+
+        <input
+          id="collectionBrowserFilterInput"
+          type="search"
+          placeholder="Filter this tree…"
+          autocomplete="off"
+        >
+      </div>
+
+	  <!--
+        Narrows the Entity hierarchy while preserving matching ancestor paths.
+
+        Global Search remains separate and searches across all object types.
+      -->
+      <div id="entityBrowserFilterContainer" hidden>
+        <label for="entityBrowserFilterInput">
+          Filter entity tree
+        </label>
+
+        <input
+          id="entityBrowserFilterInput"
+          type="search"
+          placeholder="Filter this tree…"
+          autocomplete="off"
+        >
+      </div>
+
+      <div id="browseView">
+        <!-- The active browser mode is rendered here. -->
+      </div>
+    </aside>
+
+    <!-- Panel Two: Search, Entity Detail, Gallery, Quiz and Stats -->
+    <section class="panel gallery-panel">
+      <div class="mode-tabs">
+        <button
+          class="mode-tab active"
+          type="button"
+          data-mode-tab="search"
+        >
+          Search
+        </button>
+		
+		<button
+		  class="mode-tab"
+		  type="button"
+		  data-mode-tab="entity"
+		>
+		  Entity
+		</button>
+
+        <button
+          class="mode-tab"
+          type="button"
+          data-mode-tab="gallery"
+        >
+          Gallery
+        </button>
+
+        <button
+          class="mode-tab"
+          type="button"
+          data-mode-tab="typing"
+        >
+          Typing Quiz
+        </button>
+
+        <button
+          class="mode-tab"
+          type="button"
+          data-mode-tab="multipleChoice"
+        >
+          Multiple-Choice
+        </button>
+
+        <button
+          class="mode-tab"
+          type="button"
+          data-mode-tab="stats"
+        >
+          Stats
+        </button>
+      </div>
+
+      <div class="mode-panel active" id="searchModePanel">
+        <h2>Search</h2>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search entities, variants, collections or groups"
+        >
+
+        <div id="searchResults">
+          <!-- Search results are rendered here. -->
+        </div>
+      </div>
+
+      <!--
+		Displays the currently active entity.
+
+		The active entity may be opened from Browse, Search, Gallery zoom
+		or revisited directly through the Entity tab.
+		-->
+      <div class="mode-panel" id="entityModePanel">
+        <div id="entityView">
+          No entity selected.
+        </div>
+      </div>
+
+      <div class="mode-panel" id="galleryModePanel">
+        <h2>Gallery</h2>
+
+        <p class="panel-note">
+          The gallery displays flags from the current selection.
+        </p>
+
+        <!--
+          Controls gallery organisation, sorting and detail display.
+
+          Gallery zoom follows the selected detail mode.
+        -->
+        <div class="gallery-controls">
+          <div class="gallery-control-group">
+            <label for="galleryOrganisationSelect">Layout</label>
+
+            <select id="galleryOrganisationSelect">
+              <option value="combined">Combined</option>
+              <option value="grouped_source">Grouped by source</option>
+            </select>
+          </div>
+
+          <div class="gallery-control-group">
+            <label for="gallerySortSelect">Sort</label>
+
+            <select id="gallerySortSelect">
+              <option value="name_asc">Name A–Z</option>
+              <option value="name_desc">Name Z–A</option>
+              <option value="year_newest">Year: newest first</option>
+              <option value="year_oldest">Year: oldest first</option>
+            </select>
+          </div>
+
+          <div class="gallery-control-group">
+            <label for="galleryDetailsSelect">Details</label>
+
+            <select id="galleryDetailsSelect">
+              <option value="full">Full Details</option>
+              <option value="name">Name Only</option>
+              <option value="name_year">Name + Year</option>
+              <option value="stats">Stats</option>
+              <option value="image">Image Only</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="galleryView">
+          Select a collection, entity or variant to view flags.
+        </div>
+      </div>
+
+      <div class="mode-panel" id="typingModePanel">
+        <h2>Typing Quiz</h2>
+
+        <p class="panel-note">
+          Start a typing quiz from the current selection.
+        </p>
+
+        <details class="mode-utility-section quiz-presets-section">
+          <summary>Quiz Presets</summary>
+
+          <p class="panel-note">
+            Load a saved typing-quiz setup.
+          </p>
+
+          <div id="typingQuizPresetsView">
+            No typing quiz presets loaded.
+          </div>
+        </details>
+
+        <div class="quiz-controls">
+          <label for="typingQuestionCountInput">Questions</label>
+
+          <input
+            id="typingQuestionCountInput"
+            type="number"
+            min="1"
+            max="100"
+            value="10"
+          >
+
+          <button id="startTypingQuizButton" type="button">
+            Start Typing Quiz
+          </button>
+        </div>
+
+        <div id="typingQuizView">
+          Build a selection, then start a quiz.
+        </div>
+      </div>
+
+      <div class="mode-panel" id="multipleChoiceModePanel">
+        <h2>Multiple-Choice Quiz</h2>
+
+        <p class="panel-note">
+          Start a multiple-choice quiz from the current selection.
+        </p>
+
+        <details class="mode-utility-section quiz-presets-section">
+          <summary>Quiz Presets</summary>
+
+          <p class="panel-note">
+            Load a saved multiple-choice setup.
+          </p>
+
+          <div id="multipleChoiceQuizPresetsView">
+            No multiple-choice presets loaded.
+          </div>
+        </details>
+
+        <div class="quiz-controls">
+          <label for="multipleChoiceQuestionCountInput">Questions</label>
+
+          <input
+            id="multipleChoiceQuestionCountInput"
+            type="number"
+            min="1"
+            max="100"
+            value="10"
+          >
+
+          <button id="startMultipleChoiceQuizButton" type="button">
+            Start Multiple-Choice Quiz
+          </button>
+        </div>
+
+        <div id="multipleChoiceQuizView">
+          Build a selection, then start a quiz.
+        </div>
+      </div>
+
+      <div class="mode-panel" id="statsModePanel">
+        <h2>Stats</h2>
+
+        <p class="panel-note">
+          Review quiz performance by entity, variant and quiz mode.
+        </p>
+
+        <div id="statsSummaryView">
+          No stats summary available yet.
+        </div>
+
+        <div id="statsRecordCountView" class="stats-record-count">
+          Showing 0 stat records.
+        </div>
+
+        <div class="stats-controls">
+          <div class="stats-control-group">
+            <label for="statsTargetTypeFilter">Target</label>
+
+            <select id="statsTargetTypeFilter">
+              <option value="all">All</option>
+              <option value="entity">Entities</option>
+              <option value="variant">Variants</option>
+            </select>
+          </div>
+
+          <div class="stats-control-group">
+            <label for="statsModeFilter">Quiz Mode</label>
+
+            <select id="statsModeFilter">
+              <option value="all">All</option>
+              <option value="typing">Typing</option>
+              <option value="multiple_choice">Multiple-choice</option>
+            </select>
+          </div>
+
+          <div class="stats-control-group">
+            <label for="statsMinimumSeenFilter">Minimum Seen</label>
+
+            <select id="statsMinimumSeenFilter">
+              <option value="0">All</option>
+              <option value="1">1+</option>
+              <option value="2">2+</option>
+              <option value="3">3+</option>
+              <option value="5">5+</option>
+              <option value="10">10+</option>
+            </select>
+          </div>
+
+          <div class="stats-control-group">
+            <label for="statsSortSelect">Sort By</label>
+
+            <select id="statsSortSelect">
+              <option value="weakest">Weakest First</option>
+              <option value="strongest">Strongest First</option>
+              <option value="most_seen">Most Seen</option>
+              <option value="least_seen">Least Seen</option>
+              <option value="slowest">Slowest Average Time</option>
+              <option value="recently_incorrect">Recently Incorrect</option>
+              <option value="alphabetical">Alphabetical</option>
+            </select>
+          </div>
+        </div>
+
+        <details class="mode-utility-section stats-management-section">
+          <summary>Stats Management</summary>
+
+          <div class="stats-management-controls">
+            <div class="stats-management-actions">
+              <button id="refreshStatsButton" type="button">
+                Refresh Stats
+              </button>
+
+              <button id="exportStatsButton" type="button">
+                Export Stats
+              </button>
+
+              <button id="clearStatsButton" type="button">
+                Clear Stats
+              </button>
+            </div>
+
+            <div class="stats-import-control">
+              <label for="importStatsInput">
+                Import Stats
+              </label>
+
+              <input
+                id="importStatsInput"
+                type="file"
+                accept="application/json,.json"
+              >
+            </div>
+          </div>
+        </details>
+
+        <div id="statsView">
+          No stats loaded yet.
+        </div>
+      </div>
+
+      <details class="workspace-diagnostics">
+        <summary>Diagnostics</summary>
+
+        <pre id="systemStatus">Loading Vexillator...</pre>
+      </details>
+    </section>
+
+  </main>
+
+  <!--
+    Current Selection drawer.
+
+    This drawer contains only active selection sources and direct routes into
+    Gallery and quiz modes.
+  -->
+  <aside
+    id="selectionDrawer"
+    class="panel utility-panel selection-drawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="selectionDrawerTitle"
+    aria-hidden="true"
+    tabindex="-1"
+  >
+    <div class="drawer-header">
+      <div>
+        <h2 id="selectionDrawerTitle">
+          Current Selection
+        </h2>
+
+        <p
+          id="selectionDrawerSummary"
+          class="panel-note selection-drawer-summary"
+        >
+          0 sources · 0 resolved flags
+        </p>
+      </div>
+
+      <button
+        id="closeSelectionButton"
+        class="drawer-close-button"
+        type="button"
+        aria-label="Close Current Selection"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="selection-drawer-actions">
+      <button
+        id="selectionGalleryButton"
+        type="button"
+      >
+        Open Gallery
+      </button>
+
+      <button
+        id="selectionTypingButton"
+        type="button"
+      >
+        Typing Quiz
+      </button>
+
+      <button
+        id="selectionMultipleChoiceButton"
+        type="button"
+      >
+        Multiple-Choice
+      </button>
+
+      <button
+        id="clearAllSelectionButton"
+        type="button"
+      >
+        Clear all
+      </button>
+    </div>
+
+    <div id="currentSelection">
+      No selections made.
+    </div>
+
+  </aside>
+
+  <!-- Shared Gallery and Entity Detail zoom viewer. -->
+  <div id="galleryZoomOverlay" class="zoom-overlay hidden">
+    <div
+      class="zoom-viewer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Flag zoom viewer"
+    >
+      <button
+        id="closeGalleryZoomButton"
+        class="zoom-close-button"
+        type="button"
+        aria-label="Close zoom viewer"
+      >
+        ×
+      </button>
+
+      <button
+        id="previousGalleryZoomButton"
+        class="zoom-nav-button zoom-nav-left"
+        type="button"
+        aria-label="Previous flag"
+      >
+        ‹
+      </button>
+
+      <div class="zoom-content">
+        <div class="zoom-image-wrapper">
+          <img id="galleryZoomImage" class="zoom-image" src="" alt="">
+        </div>
+
+        <div class="zoom-details">
+          <h2 id="galleryZoomTitle"></h2>
+          <p id="galleryZoomSubtitle"></p>
+          <p id="galleryZoomMeta"></p>
+		  
+		<div
+		  id="galleryZoomRelatedControls"
+		  class="zoom-related-controls"
+		  hidden
+		>
+		  <button
+			  id="galleryZoomReverseButton"
+			  class="zoom-related-button"
+			  type="button"
+			  hidden
+		>
+			  Show other side
+		  </button>
+		<button
+			id="galleryZoomAlternativeButton"
+			class="zoom-related-button"
+			type="button"
+			hidden
+		>
+			Show alternative
+        </button>  
+		<button
+			id="galleryZoomRenditionButton"
+			class="zoom-related-button"
+			type="button"
+			hidden
+		>
+			Show rendition
+		</button>
+		</div>
+		
+          <button
+            id="viewGalleryZoomEntityButton"
+            class="zoom-entity-button"
+            type="button"
+          >
+            View entity
+          </button>
+        </div>
+      </div>
+
+      <button
+        id="nextGalleryZoomButton"
+        class="zoom-nav-button zoom-nav-right"
+        type="button"
+        aria-label="Next flag"
+      >
+        ›
+      </button>
+    </div>
+  </div>
+
+  <!--
+    Data files load first because the core logic depends on them.
+  -->
+  <script src="data/tags.js"></script>
+  <script src="data/assets.js"></script>
+  <script src="data/entities.js"></script>
+  <script src="data/entityMemberships.js"></script>
+  <script src="data/variants.js"></script>
+  <script src="data/collections.js"></script>
+  <script src="data/collectionGroups.js"></script>
+  <script src="data/entityRelationshipGroups.js"></script>
+  <script src="data/quizPresets.js"></script>
+
+  <!-- Core logic processes the raw data. -->
+  <script src="core/dataIndex.js"></script>
+  <script src="core/collectionResolver.js"></script>
+  <script src="core/workingPoolResolver.js"></script>
+  <script src="core/quizGenerator.js"></script>
+  <script src="core/answerChecker.js"></script>
+  <script src="core/statsManager.js"></script>
+
+  <!-- Shared application state. -->
+  <script src="js/state/appState.js"></script>
+
+  <!-- UI feature scripts split out from main.js. -->
+  <script src="js/ui/browsePanel.js"></script>
+  <script src="js/ui/gallery.js"></script>
+  <script src="js/ui/galleryZoom.js"></script>
+  <script src="js/ui/typingQuiz.js"></script>
+  <script src="js/ui/multipleChoiceQuiz.js"></script>
+  <script src="js/ui/statsView.js"></script>
+  <script src="js/ui/searchView.js"></script>
+  <script src="js/ui/entityDetail.js"></script>
+
+  <!-- Main application entry point. -->
+  <script src="js/main.js"></script>
+</body>
+</html>

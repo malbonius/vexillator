@@ -1,0 +1,7886 @@
+/*
+  Variant registry.
+
+  A variant is one specific visual representation of an entity.
+
+  Maintenance rules:
+  - IDs are permanent and use lowercase snake_case.
+  - entityId must reference the entity represented by the flag.
+  - assetId must reference the displayed image asset.
+  - displayName is the primary user-facing variant label.
+  - aliases contains alternative names for this specific flag design.
+  - tags describe the variant rather than its geographic location.
+  - startYear and endYear may be null when dates are unknown or not useful.
+*/
+
+const variants = [
+  /*
+    Antarctica.
+  */
+  {
+    id: "var_british_antarctic_territory_current",
+    entityId: "ent_british_antarctic_territory",
+    assetId: "ast_british_antarctic_territory_current",
+    displayName: "Official Flag",
+    aliases: ["BAT Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1998,
+    endYear: null
+  },
+
+  /*
+    Australia and New Zealand.
+  */
+  {
+    id: "var_australia_current",
+    entityId: "ent_australia",
+    assetId: "ast_australia_current",
+    displayName: "National Flag",
+    aliases: ["Australian National Flag", "Australian Blue Ensign"],
+    tags: ["official", "current", "national"],
+    startYear: 1908,
+    endYear: null
+  },
+  {
+    id: "var_australian_capital_territory_current",
+    entityId: "ent_australian_capital_territory",
+    assetId: "ast_australian_capital_territory_current",
+    displayName: "Territorial Flag",
+    aliases: ["Australian Capital Territory Flag", "ACT Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_australia_new_south_wales_current",
+    entityId: "ent_australia_new_south_wales",
+    assetId: "ast_new_south_wales_current",
+    displayName: "State Flag",
+    aliases: ["New South Wales Flag", "NSW Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_northern_territory_current",
+    entityId: "ent_northern_territory",
+    assetId: "ast_northern_territory_current",
+    displayName: "Territorial Flag",
+    aliases: ["Northern Territory Flag", "NT Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_australia_queensland_current",
+    entityId: "ent_australia_queensland",
+    assetId: "ast_queensland_current",
+    displayName: "State Flag",
+    aliases: ["Queensland Flag", "QLD Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_australia_south_australia_current",
+    entityId: "ent_australia_south_australia",
+    assetId: "ast_south_australia_current",
+    displayName: "State Flag",
+    aliases: ["South Australia Flag", "SA Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_australia_tasmania_current",
+    entityId: "ent_australia_tasmania",
+    assetId: "ast_tasmania_current",
+    displayName: "State Flag",
+    aliases: ["Tasmania Flag", "TAS Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_australia_victoria_current",
+    entityId: "ent_australia_victoria",
+    assetId: "ast_victoria_current",
+    displayName: "State Flag",
+    aliases: ["Victoria Flag", "VIC Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_australia_western_australia_current",
+    entityId: "ent_australia_western_australia",
+    assetId: "ast_western_australia_current",
+    displayName: "State Flag",
+    aliases: ["Western Australia Flag", "WA Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_christmas_island_current_unofficial",
+    entityId: "ent_christmas_island",
+    assetId: "ast_christmas_island_current_unofficial",
+    displayName: "Unofficial Territorial Flag",
+    aliases: ["Community Flag"],
+    tags: ["unofficial", "current", "national"],
+    startYear: 1986,
+    endYear: null
+  },
+  {
+    id: "var_cocos_keeling_islands_current_unofficial",
+    entityId: "ent_cocos_keeling_islands",
+    assetId: "ast_cocos_keeling_islands_current_unofficial",
+    displayName: "Unofficial Territorial Flag",
+    aliases: ["Community Flag"],
+    tags: ["unofficial", "current", "national"],
+    startYear: 2004,
+    endYear: null
+  },
+  {
+    id: "var_new_zealand_current",
+    entityId: "ent_new_zealand",
+    assetId: "ast_new_zealand_current",
+    displayName: "National Flag",
+    aliases: ["New Zealand Flag", "Te Kara o Aotearoa"],
+    tags: ["official", "current", "national"],
+    startYear: 1902,
+    endYear: null
+  },
+  {
+    id: "var_norfolk_island_current",
+    entityId: "ent_norfolk_island",
+    assetId: "ast_norfolk_island_territory",
+    displayName: "Territorial Flag",
+    aliases: ["Norfolk Island Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1980,
+    endYear: null
+  },
+
+  /*
+    Melanesia.
+  */
+  {
+    id: "var_fiji_current",
+    entityId: "ent_fiji",
+    assetId: "ast_fiji_current",
+    displayName: "National Flag",
+    aliases: ["Fijian Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1970,
+    endYear: null
+  },
+  {
+    id: "var_new_caledonia_kanak_current_unofficial",
+    entityId: "ent_new_caledonia",
+    assetId: "ast_new_caledonia_kanak_unofficial",
+    displayName: "Kanak Flag",
+    aliases: [
+      "Kanaky Flag",
+      "FLNKS Flag",
+      "Pro-Independence Flag"
+    ],
+    tags: ["unofficial", "current", "national"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_papua_new_guinea_current",
+    entityId: "ent_papua_new_guinea",
+    assetId: "ast_papua_new_guinea_current",
+    displayName: "National Flag",
+    aliases: ["PNG Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1971,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_current",
+    entityId: "ent_solomon_islands",
+    assetId: "ast_solomon_islands_current",
+    displayName: "National Flag",
+    aliases: ["Solomon Islands Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1977,
+    endYear: null
+  },
+  {
+    id: "var_vanuatu_current",
+    entityId: "ent_vanuatu",
+    assetId: "ast_vanuatu_current",
+    displayName: "National Flag",
+    aliases: ["Flaeg blong Vanuatu"],
+    tags: ["official", "current", "national"],
+    startYear: 1980,
+    endYear: null
+  },
+
+  /*
+    Micronesia.
+  */
+  {
+    id: "var_federated_states_of_micronesia_current",
+    entityId: "ent_federated_states_of_micronesia",
+    assetId: "ast_federated_states_of_micronesia_current",
+    displayName: "National Flag",
+    aliases: ["FSM Flag", "Micronesian Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1978,
+    endYear: null
+  },
+  {
+    id: "var_micronesia_chuuk_current",
+    entityId: "ent_micronesia_chuuk",
+    assetId: "ast_chuuk_current",
+    displayName: "State Flag",
+    aliases: ["Chuuk State Flag", "Truk State Flag"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_micronesia_kosrae_current",
+    entityId: "ent_micronesia_kosrae",
+    assetId: "ast_kosrae_current",
+    displayName: "State Flag",
+    aliases: ["Kosrae State Flag"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_micronesia_pohnpei_current",
+    entityId: "ent_micronesia_pohnpei",
+    assetId: "ast_pohnpei_current",
+    displayName: "State Flag",
+    aliases: ["Pohnpei State Flag", "Ponape State Flag"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_micronesia_yap_current",
+    entityId: "ent_micronesia_yap",
+    assetId: "ast_yap_current",
+    displayName: "State Flag",
+    aliases: ["Yap State Flag"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_guam_current",
+    entityId: "ent_guam",
+    assetId: "ast_guam_current",
+    displayName: "Territorial Flag",
+    aliases: ["Banderan Guåhan", "Guam Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1948,
+    endYear: null
+  },
+  {
+    id: "var_johnston_atoll_current_unofficial",
+    entityId: "ent_johnston_atoll",
+    assetId: "ast_johnston_atoll_unofficial",
+    displayName: "Unofficial Territorial Flag",
+    aliases: ["Johnston Atoll Flag", "Johnston Island Flag"],
+    tags: ["unofficial", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_kiribati_current",
+    entityId: "ent_kiribati",
+    assetId: "ast_kiribati_current",
+    displayName: "National Flag",
+    aliases: ["Buraki ni Kiribati"],
+    tags: ["official", "current", "national"],
+    startYear: 1979,
+    endYear: null
+  },
+  {
+    id: "var_marshall_islands_current",
+    entityId: "ent_marshall_islands",
+    assetId: "ast_marshall_islands_current",
+    displayName: "National Flag",
+    aliases: ["RMI Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1979,
+    endYear: null
+  },
+  {
+    id: "var_midway_atoll_current_unofficial",
+    entityId: "ent_midway_atoll",
+    assetId: "ast_midway_atoll_unofficial",
+    displayName: "Unofficial Territorial Flag",
+    aliases: ["Midway Atoll Flag", "Midway Islands Flag"],
+    tags: ["unofficial", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_nauru_current",
+    entityId: "ent_nauru",
+    assetId: "ast_nauru_current",
+    displayName: "National Flag",
+    aliases: ["Nauruan Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1968,
+    endYear: null
+  },
+  {
+    id: "var_northern_mariana_islands_current",
+    entityId: "ent_northern_mariana_islands",
+    assetId: "ast_northern_mariana_islands_current",
+    displayName: "Territorial Flag",
+    aliases: ["CNMI Flag", "Northern Marianas Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1985,
+    endYear: null
+  },
+  {
+    id: "var_palau_current",
+    entityId: "ent_palau",
+    assetId: "ast_palau_current",
+    displayName: "National Flag",
+    aliases: ["Belau Flag", "Palauan Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1981,
+    endYear: null
+  },
+  {
+    id: "var_wake_island_current_unofficial",
+    entityId: "ent_wake_island",
+    assetId: "ast_wake_island_unofficial",
+    displayName: "Unofficial Territorial Flag",
+    aliases: ["Wake Island Flag", "Wake Atoll Flag"],
+    tags: ["unofficial", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Technical quiz-safe Micronesia variants.
+
+    text_removed variants are displayed during a quiz but resolve to their
+    base variant for Gallery display and answer reveal.
+  */
+  {
+    id: "var_guam_current_text_removed",
+    entityId: "ent_guam",
+    assetId: "ast_guam_current_text_removed",
+    displayName: "Territorial Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1948,
+    endYear: null,
+    baseVariantId: "var_guam_current"
+  },
+  {
+    id: "var_johnston_atoll_current_unofficial_text_removed",
+    entityId: "ent_johnston_atoll",
+    assetId: "ast_johnston_atoll_unofficial_text_removed",
+    displayName: "Unofficial Territorial Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_johnston_atoll_current_unofficial"
+  },
+  {
+    id: "var_wake_island_current_unofficial_text_removed",
+    entityId: "ent_wake_island",
+    assetId: "ast_wake_island_unofficial_text_removed",
+    displayName: "Unofficial Territorial Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_wake_island_current_unofficial"
+  },
+
+  /*
+    Polynesia.
+  */
+  {
+    id: "var_american_samoa_current",
+    entityId: "ent_american_samoa",
+    assetId: "ast_american_samoa_current",
+    displayName: "Territorial Flag",
+    aliases: ["American Samoan Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1960,
+    endYear: null
+  },
+  {
+    id: "var_cook_islands_current",
+    entityId: "ent_cook_islands",
+    assetId: "ast_cook_islands_current",
+    displayName: "National Flag",
+    aliases: ["Cook Islands Ensign"],
+    tags: ["official", "current", "national"],
+    startYear: 1979,
+    endYear: null
+  },
+  {
+    id: "var_french_polynesia_current",
+    entityId: "ent_french_polynesia",
+    assetId: "ast_french_polynesia_current",
+    displayName: "Territorial Flag",
+    aliases: ["Drapeau de la Polynésie française"],
+    tags: ["official", "current", "national"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_niue_current",
+    entityId: "ent_niue",
+    assetId: "ast_niue_current",
+    displayName: "National Flag",
+    aliases: ["Niuean Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1975,
+    endYear: null
+  },
+  {
+    id: "var_pitcairn_islands_current",
+    entityId: "ent_pitcairn_islands",
+    assetId: "ast_pitcairn_islands_current",
+    displayName: "Territorial Flag",
+    aliases: ["Pitcairn Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_samoa_current",
+    entityId: "ent_samoa",
+    assetId: "ast_samoa_current",
+    displayName: "National Flag",
+    aliases: ["Samoan Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1949,
+    endYear: null
+  },
+  {
+    id: "var_tokelau_current",
+    entityId: "ent_tokelau",
+    assetId: "ast_tokelau_current",
+    displayName: "Territorial Flag",
+    aliases: ["Tokelau National Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2009,
+    endYear: null
+  },
+  {
+    id: "var_tonga_current",
+    entityId: "ent_tonga",
+    assetId: "ast_tonga_current",
+    displayName: "National Flag",
+    aliases: ["Tongan Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1875,
+    endYear: null
+  },
+  {
+    id: "var_tuvalu_current",
+    entityId: "ent_tuvalu",
+    assetId: "ast_tuvalu_current",
+    displayName: "National Flag",
+    aliases: ["Tuvaluan Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1997,
+    endYear: null
+  },
+  {
+    id: "var_wallis_and_futuna_current_unofficial",
+    entityId: "ent_wallis_and_futuna",
+    assetId: "ast_wallis_and_futuna_unofficial",
+    displayName: "Unofficial Territorial Flag",
+    aliases: ["Uvéa Flag"],
+    tags: ["unofficial", "current", "national"],
+    startYear: 1985,
+    endYear: null
+  },
+
+  /*
+    Northern Africa.
+  */
+  {
+    id: "var_algeria_current",
+    entityId: "ent_algeria",
+    assetId: "ast_algeria_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1962,
+    endYear: null
+  },
+  {
+    id: "var_egypt_current",
+    entityId: "ent_egypt",
+    assetId: "ast_egypt_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_libya_current",
+    entityId: "ent_libya",
+    assetId: "ast_libya_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2011,
+    endYear: null
+  },
+  {
+    id: "var_morocco_current",
+    entityId: "ent_morocco",
+    assetId: "ast_morocco_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1915,
+    endYear: null
+  },
+  {
+    id: "var_sudan_current",
+    entityId: "ent_sudan",
+    assetId: "ast_sudan_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1970,
+    endYear: null
+  },
+  {
+    id: "var_tunisia_current",
+    entityId: "ent_tunisia",
+    assetId: "ast_tunisia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1999,
+    endYear: null
+  },
+  {
+    id: "var_western_sahara_current",
+    entityId: "ent_western_sahara",
+    assetId: "ast_sahrawi_arab_democratic_republic_current",
+    displayName: "Flag of the Sahrawi Arab Democratic Republic",
+    aliases: [
+      "Sahrawi Flag",
+      "SADR Flag",
+      "Polisario Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1976,
+    endYear: null
+  },
+
+  /*
+    Eastern Africa.
+  */
+  {
+    id: "var_burundi_current",
+    entityId: "ent_burundi",
+    assetId: "ast_burundi_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1967,
+    endYear: null
+  },
+  {
+    id: "var_comoros_current",
+    entityId: "ent_comoros",
+    assetId: "ast_comoros_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2001,
+    endYear: null
+  },
+  {
+    id: "var_djibouti_current",
+    entityId: "ent_djibouti",
+    assetId: "ast_djibouti_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1977,
+    endYear: null
+  },
+  {
+    id: "var_eritrea_current",
+    entityId: "ent_eritrea",
+    assetId: "ast_eritrea_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1995,
+    endYear: null
+  },
+  {
+    id: "var_ethiopia_current",
+    entityId: "ent_ethiopia",
+    assetId: "ast_ethiopia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2009,
+    endYear: null
+  },
+  {
+    id: "var_kenya_current",
+    entityId: "ent_kenya",
+    assetId: "ast_kenya_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1963,
+    endYear: null
+  },
+  {
+    id: "var_madagascar_current",
+    entityId: "ent_madagascar",
+    assetId: "ast_madagascar_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1958,
+    endYear: null
+  },
+  {
+    id: "var_malawi_current",
+    entityId: "ent_malawi",
+    assetId: "ast_malawi_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2012,
+    endYear: null
+  },
+  {
+    id: "var_mauritius_current",
+    entityId: "ent_mauritius",
+    assetId: "ast_mauritius_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1968,
+    endYear: null
+  },
+  {
+    id: "var_mozambique_current",
+    entityId: "ent_mozambique",
+    assetId: "ast_mozambique_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1983,
+    endYear: null
+  },
+  {
+    id: "var_rwanda_current",
+    entityId: "ent_rwanda",
+    assetId: "ast_rwanda_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2001,
+    endYear: null
+  },
+  {
+    id: "var_seychelles_current",
+    entityId: "ent_seychelles",
+    assetId: "ast_seychelles_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1996,
+    endYear: null
+  },
+  {
+    id: "var_somalia_current",
+    entityId: "ent_somalia",
+    assetId: "ast_somalia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1954,
+    endYear: null
+  },
+  {
+    id: "var_somaliland_current",
+    entityId: "ent_somaliland",
+    assetId: "ast_somaliland_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1996,
+    endYear: null
+  },
+  {
+    id: "var_south_sudan_current",
+    entityId: "ent_south_sudan",
+    assetId: "ast_south_sudan_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2005,
+    endYear: null
+  },
+  {
+    id: "var_tanzania_current",
+    entityId: "ent_tanzania",
+    assetId: "ast_tanzania_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1964,
+    endYear: null
+  },
+  {
+    id: "var_uganda_current",
+    entityId: "ent_uganda",
+    assetId: "ast_uganda_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1962,
+    endYear: null
+  },
+  {
+    id: "var_zambia_current",
+    entityId: "ent_zambia",
+    assetId: "ast_zambia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1996,
+    endYear: null
+  },
+  {
+    id: "var_zimbabwe_current",
+    entityId: "ent_zimbabwe",
+    assetId: "ast_zimbabwe_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1980,
+    endYear: null
+  },
+  {
+    id: "var_mayotte_unofficial",
+    entityId: "ent_mayotte",
+    assetId: "ast_mayotte_unofficial",
+    displayName: "Unofficial Local Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_reunion_unofficial",
+    entityId: "ent_reunion",
+    assetId: "ast_reunion_unofficial",
+    displayName: "Unofficial Local Flag",
+    aliases: [
+      "Lö Mahavéli",
+      "Lo Mahavéli",
+      "Lö Mavéli",
+      "Lo Mavéli"
+    ],
+    tags: ["unofficial", "current", "first_level_subdivision"],
+    startYear: 2003,
+    endYear: null
+  },
+  {
+    id: "var_british_indian_ocean_territory_current",
+    entityId: "ent_british_indian_ocean_territory",
+    assetId: "ast_british_indian_ocean_territory_current",
+    displayName: "Official Flag",
+    aliases: ["BIOT Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_french_southern_and_antarctic_lands_current",
+    entityId: "ent_french_southern_and_antarctic_lands",
+    assetId: "ast_french_southern_and_antarctic_lands_current",
+    displayName: "Official Flag",
+    aliases: [
+      "TAAF Flag",
+      "Flag of the French Southern Territories"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 2007,
+    endYear: null
+  },
+  
+  /*
+    International organisations.
+  */
+  {
+    id: "var_united_nations_current",
+    entityId: "ent_united_nations",
+    assetId: "ast_united_nations_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_unicef_current",
+    entityId: "ent_unicef",
+    assetId: "ast_unicef_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_unesco_current",
+    entityId: "ent_unesco",
+    assetId: "ast_unesco_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_world_health_organization_current",
+    entityId: "ent_world_health_organization",
+    assetId: "ast_who_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_world_food_programme_current",
+    entityId: "ent_world_food_programme",
+    assetId: "ast_wfp_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_international_labour_organization_current",
+    entityId: "ent_international_labour_organization",
+    assetId: "ast_ilo_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_international_maritime_organization_current",
+    entityId: "ent_international_maritime_organization",
+    assetId: "ast_imo_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_international_telecommunication_union_current",
+    entityId: "ent_international_telecommunication_union",
+    assetId: "ast_itu_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_international_civil_aviation_organization_current",
+    entityId: "ent_international_civil_aviation_organization",
+    assetId: "ast_icao_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_world_meteorological_organization_current",
+    entityId: "ent_world_meteorological_organization",
+    assetId: "ast_wmo_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_international_atomic_energy_agency_current",
+    entityId: "ent_international_atomic_energy_agency",
+    assetId: "ast_iaea_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_universal_postal_union_current",
+    entityId: "ent_universal_postal_union",
+    assetId: "ast_upu_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_international_criminal_court_current",
+    entityId: "ent_international_criminal_court",
+    assetId: "ast_icc_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_united_nations_parliamentary_administration_current",
+    entityId: "ent_united_nations_parliamentary_administration",
+    assetId: "ast_unpa_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_arab_league_current",
+    entityId: "ent_arab_league",
+    assetId: "ast_arab_league_current",
+    displayName: "Organisation Flag",
+    aliases: ["Flag of the League of Arab States"],
+    tags: ["organisation", "current"],
+    startYear: 1945,
+    endYear: null
+  },
+
+  {
+    id: "var_european_union_current",
+    entityId: "ent_european_union",
+    assetId: "ast_eu_current",
+    displayName: "European Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_nato_current",
+    entityId: "ent_nato",
+    assetId: "ast_nato_current",
+    displayName: "NATO Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_antarctic_treaty_system_current",
+    entityId: "ent_antarctic_treaty_system",
+    assetId: "ast_antarctic_treaty_current",
+    displayName: "Treaty Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_interpol_current",
+    entityId: "ent_interpol",
+    assetId: "ast_interpol_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_international_olympic_committee_current",
+    entityId: "ent_international_olympic_committee",
+    assetId: "ast_olympics_current",
+    displayName: "Olympic Flag",
+    aliases: [],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_fifa_current",
+    entityId: "ent_fifa",
+    assetId: "ast_fifa_current",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current", "non_quizzable"],
+    startYear: null,
+    endYear: null
+  },
+
+/*
+    Technical quiz-safe variants.
+
+    text_removed variants are displayed during a quiz but normally resolve to
+    the entity's default or gallery variant for Gallery and answer reveal.
+  */
+  {
+    id: "var_mayotte_unofficial_quiz",
+    entityId: "ent_mayotte",
+    assetId: "ast_mayotte_unofficial_text_removed",
+    displayName: "Unofficial Local Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_mayotte_unofficial"
+  },
+
+  /*
+    Middle Africa.
+  */
+  {
+    id: "var_angola_current",
+    entityId: "ent_angola",
+    assetId: "ast_angola_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1975,
+    endYear: null
+  },
+  {
+    id: "var_cameroon_current",
+    entityId: "ent_cameroon",
+    assetId: "ast_cameroon_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1975,
+    endYear: null
+  },
+  {
+    id: "var_central_african_republic_current",
+    entityId: "ent_central_african_republic",
+    assetId: "ast_central_african_republic_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1958,
+    endYear: null
+  },
+  {
+    id: "var_chad_current",
+    entityId: "ent_chad",
+    assetId: "ast_chad_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "ambiguous_quiz_visual"],
+    quizVisualGroupId: "blue_yellow_red_vertical_tricolour",
+    startYear: 1959,
+    endYear: null
+  },
+  {
+    id: "var_democratic_republic_of_the_congo_current",
+    entityId: "ent_democratic_republic_of_the_congo",
+    assetId: "ast_democratic_republic_of_the_congo_current",
+    displayName: "National Flag",
+    aliases: [
+      "DR Congo Flag",
+      "DRC Flag",
+      "Congo-Kinshasa Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 2006,
+    endYear: null
+  },
+  {
+    id: "var_equatorial_guinea_current",
+    entityId: "ent_equatorial_guinea",
+    assetId: "ast_equatorial_guinea_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1979,
+    endYear: null
+  },
+  {
+    id: "var_gabon_current",
+    entityId: "ent_gabon",
+    assetId: "ast_gabon_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1960,
+    endYear: null
+  },
+  {
+    id: "var_republic_of_the_congo_current",
+    entityId: "ent_republic_of_the_congo",
+    assetId: "ast_republic_of_the_congo_current",
+    displayName: "National Flag",
+    aliases: [
+      "Congo Republic Flag",
+      "Congo-Brazzaville Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1991,
+    endYear: null
+  },
+  {
+    id: "var_sao_tome_and_principe_current",
+    entityId: "ent_sao_tome_and_principe",
+    assetId: "ast_sao_tome_and_principe_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1975,
+    endYear: null
+  },
+
+  /*
+    Southern Africa.
+  */
+  {
+    id: "var_botswana_current",
+    entityId: "ent_botswana",
+    assetId: "ast_botswana_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1966,
+    endYear: null
+  },
+  {
+    id: "var_eswatini_current",
+    entityId: "ent_eswatini",
+    assetId: "ast_eswatini_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1968,
+    endYear: null
+  },
+  {
+    id: "var_lesotho_current",
+    entityId: "ent_lesotho",
+    assetId: "ast_lesotho_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2006,
+    endYear: null
+  },
+  {
+    id: "var_namibia_current",
+    entityId: "ent_namibia",
+    assetId: "ast_namibia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_south_africa_current",
+    entityId: "ent_south_africa",
+    assetId: "ast_south_africa_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1994,
+    endYear: null
+  },
+
+  /*
+    Western Africa.
+  */
+  {
+    id: "var_benin_current",
+    entityId: "ent_benin",
+    assetId: "ast_benin_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_burkina_faso_current",
+    entityId: "ent_burkina_faso",
+    assetId: "ast_burkina_faso_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_cabo_verde_current",
+    entityId: "ent_cabo_verde",
+    assetId: "ast_cape_verde_current",
+    displayName: "National Flag",
+    aliases: ["Cape Verde Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_cote_d_ivoire_current",
+    entityId: "ent_cote_d_ivoire",
+    assetId: "ast_cote_divoire_current",
+    displayName: "National Flag",
+    aliases: [
+      "Ivory Coast Flag",
+      "Cote d'Ivoire Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1959,
+    endYear: null
+  },
+  {
+    id: "var_gambia_current",
+    entityId: "ent_gambia",
+    assetId: "ast_gambia_current",
+    displayName: "National Flag",
+    aliases: ["Gambian Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1965,
+    endYear: null
+  },
+  {
+    id: "var_ghana_current",
+    entityId: "ent_ghana",
+    assetId: "ast_ghana_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1966,
+    endYear: null
+  },
+  {
+    id: "var_guinea_current",
+    entityId: "ent_guinea",
+    assetId: "ast_guinea_current",
+    displayName: "National Flag",
+    aliases: ["Guinea-Conakry Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1958,
+    endYear: null
+  },
+  {
+    id: "var_guinea_bissau_current",
+    entityId: "ent_guinea_bissau",
+    assetId: "ast_guinea_bissau_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1973,
+    endYear: null
+  },
+  {
+    id: "var_liberia_current",
+    entityId: "ent_liberia",
+    assetId: "ast_liberia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1847,
+    endYear: null
+  },
+  {
+    id: "var_mali_current",
+    entityId: "ent_mali",
+    assetId: "ast_mali_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1961,
+    endYear: null
+  },
+  {
+    id: "var_mauritania_current",
+    entityId: "ent_mauritania",
+    assetId: "ast_mauritania_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2017,
+    endYear: null
+  },
+  {
+    id: "var_niger_current",
+    entityId: "ent_niger",
+    assetId: "ast_niger_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1959,
+    endYear: null
+  },
+  {
+    id: "var_nigeria_current",
+    entityId: "ent_nigeria",
+    assetId: "ast_nigeria_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1960,
+    endYear: null
+  },
+  {
+    id: "var_senegal_current",
+    entityId: "ent_senegal",
+    assetId: "ast_senegal_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1960,
+    endYear: null
+  },
+  {
+    id: "var_sierra_leone_current",
+    entityId: "ent_sierra_leone",
+    assetId: "ast_sierra_leone_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1961,
+    endYear: null
+  },
+  {
+    id: "var_togo_current",
+    entityId: "ent_togo",
+    assetId: "ast_togo_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1960,
+    endYear: null
+  },
+  {
+    id: "var_saint_helena_current",
+    entityId: "ent_saint_helena",
+    assetId: "ast_saint_helena_current",
+    displayName: "Official Flag",
+    aliases: ["St Helena Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2019,
+    endYear: null
+  },
+  {
+    id: "var_ascension_island_current",
+    entityId: "ent_ascension_island",
+    assetId: "ast_ascension_island_current",
+    displayName: "Official Flag",
+    aliases: ["Ascension Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2013,
+    endYear: null
+  },
+  {
+    id: "var_tristan_da_cunha_current",
+    entityId: "ent_tristan_da_cunha",
+    assetId: "ast_tristan_da_cunha_current",
+    displayName: "Official Flag",
+    aliases: ["Tristan Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2002,
+    endYear: null
+  },
+
+  /*
+    South America.
+  */
+  {
+    id: "var_argentina_civil",
+    entityId: "ent_argentina",
+    assetId: "ast_argentina_civil",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "civil", "ensign"],
+    startYear: 1861,
+    endYear: null
+  },
+  {
+    id: "var_argentina_current",
+    entityId: "ent_argentina",
+    assetId: "ast_argentina_current",
+    displayName: "National Flag",
+    aliases: ["Argentine Flag"],
+    tags: ["official", "current", "national", "state", "naval_ensign"],
+    startYear: 1861,
+    endYear: null
+  },
+  {
+    id: "var_bolivia_civil",
+    entityId: "ent_bolivia",
+    assetId: "ast_bolivia_civil",
+    displayName: "Civil Flag",
+    aliases: ["La Tricolor"],
+    tags: ["official", "civil", "current", "national"],
+    startYear: 1851,
+    endYear: null
+  },
+  {
+    id: "var_bolivia_state",
+    entityId: "ent_bolivia",
+    assetId: "ast_bolivia_state",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "state", "current", "national"],
+    startYear: 1851,
+    endYear: null
+  },
+  {
+    id: "var_brazil_current",
+    entityId: "ent_brazil",
+    assetId: "ast_brazil_current",
+    displayName: "National Flag",
+    aliases: ["A Auriverde", "Verde e amarela"],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_brazil_naval_jack",
+    entityId: "ent_brazil",
+    assetId: "ast_brazil_naval_jack",
+    displayName: "Naval Jack",
+    aliases: [],
+    tags: ["official", "current", "naval_jack"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_chile_current",
+    entityId: "ent_chile",
+    assetId: "ast_chile_current",
+    displayName: "National Flag",
+    aliases: ["La Estrella Solitaria"],
+    tags: ["official", "current", "ensign", "national"],
+    startYear: 1817,
+    endYear: null
+  },
+  {
+    id: "var_colombia_civil_ensign",
+    entityId: "ent_colombia",
+    assetId: "ast_colombia_civil_ensign",
+    displayName: "Civil Ensign",
+    aliases: [],
+    tags: ["official", "current", "civil_ensign"],
+    startYear: 1861,
+    endYear: null
+  },
+  {
+    id: "var_colombia_current",
+    entityId: "ent_colombia",
+    assetId: "ast_colombia_current",
+    displayName: "National Flag",
+    aliases: ["El Tricolor Nacional"],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 1861,
+    endYear: null
+  },
+  {
+    id: "var_colombia_naval_ensign",
+    entityId: "ent_colombia",
+    assetId: "ast_colombia_naval_ensign",
+    displayName: "Naval Ensign",
+    aliases: [],
+    tags: ["official", "current", "naval_ensign"],
+    startYear: 1861,
+    endYear: null
+  },
+  {
+    id: "var_colombia_naval_jack",
+    entityId: "ent_colombia",
+    assetId: "ast_colombia_naval_jack",
+    displayName: "Naval Jack",
+    aliases: [],
+    tags: ["official", "current", "naval_jack"],
+    startYear: 1861,
+    endYear: null
+  },
+  {
+    id: "var_colombia_state",
+    entityId: "ent_colombia",
+    assetId: "ast_colombia_state",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "state", "ensign"],
+    startYear: 1861,
+    endYear: null
+  },
+  {
+    id: "var_ecuador_civil",
+    entityId: "ent_ecuador",
+    assetId: "ast_ecuador_civil",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "civil"],
+    startYear: 2009,
+    endYear: null
+  },
+  {
+    id: "var_ecuador_current",
+    entityId: "ent_ecuador",
+    assetId: "ast_ecuador_current",
+    displayName: "State Flag",
+    aliases: ["La Tricolor", "The Tricolor"],
+    tags: ["official", "current", "state", "war", "civil_ensign", "national"],
+    startYear: 2009,
+    endYear: null
+  },
+  {
+    id: "var_falkland_islands_civil_ensign",
+    entityId: "ent_falkland_islands",
+    assetId: "ast_falkland_islands_civil_ensign",
+    displayName: "Civil Ensign",
+    aliases: [],
+    tags: ["official", "current", "civil_ensign"],
+    startYear: 1999,
+    endYear: null
+  },
+  {
+    id: "var_falkland_islands_current",
+    entityId: "ent_falkland_islands",
+    assetId: "ast_falkland_islands_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1999,
+    endYear: null
+  },
+  {
+    id: "var_french_guiana_current_unofficial",
+    entityId: "ent_french_guiana",
+    assetId: "ast_french_guiana_current_unofficial",
+    displayName: "Unofficial National Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "national"],
+    startYear: 1967,
+    endYear: null
+  },
+  {
+    id: "var_guyana_civil_air_ensign",
+    entityId: "ent_guyana",
+    assetId: "ast_guyana_civil_air_ensign",
+    displayName: "Civil Air Ensign",
+    aliases: [],
+    tags: ["official", "current", "air_force"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_guyana_current",
+    entityId: "ent_guyana",
+    assetId: "ast_guyana_current",
+    displayName: "National Flag",
+    aliases: ["The Golden Arrowhead"],
+    tags: ["official", "current", "national"],
+    startYear: 1966,
+    endYear: null
+  },
+  {
+    id: "var_paraguay_obverse",
+    entityId: "ent_paraguay",
+    assetId: "ast_paraguay_obverse",
+    displayName: "Obverse",
+    aliases: [],
+    tags: ["official", "current", "obverse", "national"],
+    startYear: 2013,
+    endYear: null,
+	relatedVariants: {
+    reverses: ["var_paraguay_reverse"]
+    }
+  },
+  {
+    id: "var_paraguay_reverse",
+    entityId: "ent_paraguay",
+    assetId: "ast_paraguay_reverse",
+    displayName: "Reverse",
+    aliases: [],
+    tags: ["official", "current", "reverse", "national"],
+    startYear: 2013,
+    endYear: null,
+	relatedVariants: {
+    reverses: ["var_paraguay_obverse"]
+    }	
+  },
+  {
+    id: "var_peru_civil",
+    entityId: "ent_peru",
+    assetId: "ast_peru_civil",
+    displayName: "Civil Flag",
+    aliases: ["Bandera nacional", "El pendón bicolor", "The Bicolor Banner",
+	"La enseña nacional", "The National Ensign"],
+    tags: ["official", "current", "civil", "national"],
+    startYear: 1950,
+    endYear: null
+  },
+   {
+    id: "var_peru_state",
+    entityId: "ent_peru",
+    assetId: "ast_peru_state",
+    displayName: "State Flag",
+    aliases: ["Pabellón nacional"],
+    tags: ["official", "current", "state"],
+    startYear: 1950,
+    endYear: null
+  },
+  {
+    id: "var_peru_war",
+    entityId: "ent_peru",
+    assetId: "ast_peru_war",
+    displayName: "War Flag",
+    aliases: [],
+    tags: ["official", "current", "war"],
+    startYear: 1901,
+    endYear: null
+  },
+  {
+    id: "var_south_georgia_and_the_south_sandwich_islands_current",
+    entityId: "ent_south_georgia_and_the_south_sandwich_islands",
+    assetId: "ast_south_georgia_and_the_south_sandwich_islands_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1999,
+    endYear: null
+  },
+  {
+    id: "var_suriname_current",
+    entityId: "ent_suriname",
+    assetId: "ast_suriname_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1975,
+    endYear: null
+  },
+  {
+    id: "var_uruguay_artigas",
+    entityId: "ent_uruguay",
+    assetId: "ast_uruguay_artigas",
+    displayName: "Artigas Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: 1952,
+    endYear: null,
+	relatedVariants: {
+    alternatives: [
+      "var_uruguay_current",
+      "var_uruguay_treinta"
+      ]
+    }
+  },
+  {
+    id: "var_uruguay_current",
+    entityId: "ent_uruguay",
+    assetId: "ast_uruguay_current",
+    displayName: "National Flag",
+    aliases: ["Pabellón nacional", "National Pavilion"],
+    tags: ["official", "current", "national"],
+    startYear: 1830,
+    endYear: null,
+	relatedVariants: {
+    alternatives: [
+      "var_uruguay_artigas",
+      "var_uruguay_treinta"
+      ]
+    }
+  },
+  {
+    id: "var_uruguay_treinta",
+    entityId: "ent_uruguay",
+    assetId: "ast_uruguay_treinta",
+    displayName: "Flag of the Treinta y Tres",
+    aliases: ["Treinta y Tres", "Flag of the Thirty Three", "Thirty Three"],
+    tags: ["official", "current"],
+    startYear: 1952,
+    endYear: null,
+	relatedVariants: {
+    alternatives: [
+      "var_uruguay_current",
+      "var_uruguay_artigas"
+      ]
+    }
+  },
+  {
+    id: "var_venezuela_current",
+    entityId: "ent_venezuela",
+    assetId: "ast_venezuela_current",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 2006,
+    endYear: null
+  },
+  {
+    id: "var_venezuela_state",
+    entityId: "ent_venezuela",
+    assetId: "ast_venezuela_state",
+    displayName: "State and War Flag",
+    aliases: [],
+    tags: ["official", "current", "state", "war"],
+    startYear: 2006,
+    endYear: null
+  },
+
+  /*
+    Venezuelan states and Capital District.
+  */
+  {
+    id: "var_amazonas_current",
+    entityId: "ent_venezuela_amazonas",
+    assetId: "ast_amazonas_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_anzoategui_current",
+    entityId: "ent_venezuela_anzoategui",
+    assetId: "ast_anzoategui_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_apure_current",
+    entityId: "ent_venezuela_apure",
+    assetId: "ast_apure_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_aragua_current",
+    entityId: "ent_venezuela_aragua",
+    assetId: "ast_aragua_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_barinas_current",
+    entityId: "ent_venezuela_barinas",
+    assetId: "ast_barinas_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bolivar_current",
+    entityId: "ent_venezuela_bolivar",
+    assetId: "ast_bolivar_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_carabobo_current",
+    entityId: "ent_venezuela_carabobo",
+    assetId: "ast_carabobo_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_caracas_current",
+    entityId: "ent_venezuela_caracas",
+    assetId: "ast_caracas_current",
+    displayName: "Official Flag",
+    aliases: ["Capital District Flag", "Distrito Capital Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cojedes_current",
+    entityId: "ent_venezuela_cojedes",
+    assetId: "ast_cojedes_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_delta_amacuro_current",
+    entityId: "ent_venezuela_delta_amacuro",
+    assetId: "ast_delta_amacuro_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_falcon_current",
+    entityId: "ent_venezuela_falcon",
+    assetId: "ast_falcon_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_guarico_current",
+    entityId: "ent_venezuela_guarico",
+    assetId: "ast_guarico_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_la_guaira_current",
+    entityId: "ent_venezuela_la_guaira",
+    assetId: "ast_la_guaira_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lara_current",
+    entityId: "ent_venezuela_lara",
+    assetId: "ast_lara_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_merida_current",
+    entityId: "ent_venezuela_merida",
+    assetId: "ast_merida_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_miranda_current",
+    entityId: "ent_venezuela_miranda",
+    assetId: "ast_miranda_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_monagas_current",
+    entityId: "ent_venezuela_monagas",
+    assetId: "ast_monagas_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_nueva_esparta_current",
+    entityId: "ent_venezuela_nueva_esparta",
+    assetId: "ast_nueva_esparta_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_portuguesa_current",
+    entityId: "ent_venezuela_portuguesa",
+    assetId: "ast_portuguesa_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sucre_current",
+    entityId: "ent_venezuela_sucre",
+    assetId: "ast_sucre_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_tachira_current",
+    entityId: "ent_venezuela_tachira",
+    assetId: "ast_tachira_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_trujillo_current",
+    entityId: "ent_venezuela_trujillo",
+    assetId: "ast_trujillo_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_yaracuy_current",
+    entityId: "ent_venezuela_yaracuy",
+    assetId: "ast_yaracuy_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_zulia_current",
+    entityId: "ent_venezuela_zulia",
+    assetId: "ast_zulia_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  
+   /*
+    Technical quiz-safe variants.
+
+    text_removed variants are displayed during a quiz but normally resolve to
+    the entity's default or gallery variant for Gallery and answer reveal.
+  */
+
+  {
+    id: "var_apure_current_text_removed",
+    entityId: "ent_venezuela_apure",
+    assetId: "ast_apure_current_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_apure_current"
+  },
+  {
+    id: "var_aragua_current_text_removed",
+    entityId: "ent_venezuela_aragua",
+    assetId: "ast_aragua_current_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_aragua_current"
+  },
+  {
+    id: "var_bolivia_state_quiz",
+    entityId: "ent_bolivia",
+    assetId: "ast_bolivia_state_text_removed",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["state", "current", "quiz", "text_removed"],
+    startYear: 1851,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_bolivia_state"
+  },
+  {
+    id: "var_paraguay_obverse_quiz",
+    entityId: "ent_paraguay",
+    assetId: "ast_paraguay_obverse_text_removed",
+    displayName: "Obverse",
+    aliases: [],
+    tags: ["official", "current", "obverse", "quiz", "text_removed"],
+    startYear: 2013,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_paraguay_obverse"
+  },
+
+  /*
+    North America.
+  */
+  {
+    id: "var_bermuda_current",
+    entityId: "ent_bermuda",
+    assetId: "ast_bermuda_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1910,
+    endYear: null
+  },
+  {
+    id: "var_canada_current",
+    entityId: "ent_canada",
+    assetId: "ast_canada_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1965,
+    endYear: null
+  },
+  {
+    id: "var_canada_alberta_current",
+    entityId: "ent_canada_alberta",
+    assetId: "ast_alberta_current",
+    displayName: "Provincial Flag",
+    aliases: ["Alberta Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_british_columbia_current",
+    entityId: "ent_canada_british_columbia",
+    assetId: "ast_british_columbia_current",
+    displayName: "Provincial Flag",
+    aliases: ["British Columbia Flag", "BC Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_manitoba_current",
+    entityId: "ent_canada_manitoba",
+    assetId: "ast_manitoba_current",
+    displayName: "Provincial Flag",
+    aliases: ["Manitoba Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_new_brunswick_current",
+    entityId: "ent_canada_new_brunswick",
+    assetId: "ast_new_brunswick_current",
+    displayName: "Provincial Flag",
+    aliases: ["New Brunswick Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_newfoundland_and_labrador_current",
+    entityId: "ent_canada_newfoundland_and_labrador",
+    assetId: "ast_newfoundland_and_labrador_current",
+    displayName: "Provincial Flag",
+    aliases: ["Newfoundland and Labrador Flag", "Newfoundland Flag", "Labrador Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_nova_scotia_current",
+    entityId: "ent_canada_nova_scotia",
+    assetId: "ast_nova_scotia_current",
+    displayName: "Provincial Flag",
+    aliases: ["Nova Scotia Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_ontario_current",
+    entityId: "ent_canada_ontario",
+    assetId: "ast_ontario_current",
+    displayName: "Provincial Flag",
+    aliases: ["Ontario Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_prince_edward_island_current",
+    entityId: "ent_canada_prince_edward_island",
+    assetId: "ast_prince_edward_island_current",
+    displayName: "Provincial Flag",
+    aliases: ["Prince Edward Island Flag", "PEI Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_quebec_current",
+    entityId: "ent_canada_quebec",
+    assetId: "ast_quebec_current",
+    displayName: "Provincial Flag",
+    aliases: ["Quebec Flag", "Québec Flag", "Fleurdelisé"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_saskatchewan_current",
+    entityId: "ent_canada_saskatchewan",
+    assetId: "ast_saskatchewan_current",
+    displayName: "Provincial Flag",
+    aliases: ["Saskatchewan Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_northwest_territories_current",
+    entityId: "ent_canada_northwest_territories",
+    assetId: "ast_northwest_territories_current",
+    displayName: "Territorial Flag",
+    aliases: ["Northwest Territories Flag", "NWT Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_nunavut_current",
+    entityId: "ent_canada_nunavut",
+    assetId: "ast_nunavut_current",
+    displayName: "Territorial Flag",
+    aliases: ["Nunavut Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_canada_yukon_current",
+    entityId: "ent_canada_yukon",
+    assetId: "ast_yukon_current",
+    displayName: "Territorial Flag",
+    aliases: ["Yukon Flag", "Yukon Territory Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_greenland_current",
+    entityId: "ent_greenland",
+    assetId: "ast_greenland_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1985,
+    endYear: null
+  },
+  {
+    id: "var_saint_pierre_and_miquelon_current_unofficial",
+    entityId: "ent_saint_pierre_and_miquelon",
+    assetId: "ast_saint_pierre_and_miquelon_current_unofficial",
+    displayName: "Unofficial National Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "national"],
+    startYear: 1980,
+    startYearLatest: 1989,
+    startYearPrecision: "decade",
+    endYear: null
+},
+  {
+    id: "var_united_states_current",
+    entityId: "ent_united_states",
+    assetId: "ast_united_states_current",
+    displayName: "National Flag",
+    aliases: [
+      "Stars and Stripes",
+      "Old Glory"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1960,
+    endYear: null
+  },
+  
+  /*
+    US States.
+  */
+  {
+    id: "var_alabama",
+    entityId: "ent_alabama",
+    assetId: "ast_alabama",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1895,
+    endYear: null
+  },
+  {
+    id: "var_alaska",
+    entityId: "ent_alaska",
+    assetId: "ast_alaska",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1927,
+    endYear: null
+  },
+  {
+    id: "var_arizona",
+    entityId: "ent_arizona",
+    assetId: "ast_arizona",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1912,
+    endYear: null
+  },
+  {
+    id: "var_arkansas",
+    entityId: "ent_arkansas",
+    assetId: "ast_arkansas",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1913,
+    endYear: null
+  },
+  {
+    id: "var_california_official",
+    entityId: "ent_california",
+    assetId: "ast_california_official",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1911,
+    endYear: null
+  },
+  {
+    id: "var_colorado",
+    entityId: "ent_colorado",
+    assetId: "ast_colorado",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1911,
+    endYear: null
+  },
+  {
+    id: "var_connecticut",
+    entityId: "ent_connecticut",
+    assetId: "ast_connecticut",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1897,
+    endYear: null
+  },
+  {
+    id: "var_delaware",
+    entityId: "ent_delaware",
+    assetId: "ast_delaware",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1913,
+    endYear: null
+  },
+  {
+    id: "var_district_of_columbia",
+    entityId: "ent_district_of_columbia",
+    assetId: "ast_washington_dc",
+    displayName: "Official Flag",
+    aliases: ["Washington, D.C. Flag", "DC Flag"],
+    tags: ["official", "current", "federal_district"],
+    startYear: 1938,
+    endYear: null
+  },
+  {
+    id: "var_florida",
+    entityId: "ent_florida",
+    assetId: "ast_florida",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1900,
+    endYear: null
+  },
+  {
+    id: "var_georgia_state",
+    entityId: "ent_georgia_state",
+    assetId: "ast_georgia_state",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 2003,
+    endYear: null
+  },
+  {
+    id: "var_hawaii",
+    entityId: "ent_hawaii",
+    assetId: "ast_hawaii",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1845,
+    endYear: null
+  },
+  {
+    id: "var_idaho",
+    entityId: "ent_idaho",
+    assetId: "ast_idaho",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1907,
+    endYear: null
+  },
+  {
+    id: "var_illinois",
+    entityId: "ent_illinois",
+    assetId: "ast_illinois",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1915,
+    endYear: null
+  },
+  {
+    id: "var_indiana",
+    entityId: "ent_indiana",
+    assetId: "ast_indiana",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1917,
+    endYear: null
+  },
+  {
+    id: "var_iowa",
+    entityId: "ent_iowa",
+    assetId: "ast_iowa",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1921,
+    endYear: null
+  },
+  {
+    id: "var_kansas",
+    entityId: "ent_kansas",
+    assetId: "ast_kansas",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1961,
+    endYear: null
+  },
+  {
+    id: "var_kentucky",
+    entityId: "ent_kentucky",
+    assetId: "ast_kentucky",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1918,
+    endYear: null
+  },
+    {
+    id: "var_louisiana",
+    entityId: "ent_louisiana",
+    assetId: "ast_louisiana",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 2010,
+    endYear: null
+  },
+  {
+    id: "var_maine",
+    entityId: "ent_maine",
+    assetId: "ast_maine",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1909,
+    endYear: null
+  },
+  {
+    id: "var_maryland",
+    entityId: "ent_maryland",
+    assetId: "ast_maryland",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1904,
+    endYear: null
+  },
+  {
+    id: "var_massachusetts",
+    entityId: "ent_massachusetts",
+    assetId: "ast_massachusetts",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1971,
+    endYear: null
+  },
+  {
+    id: "var_michigan",
+    entityId: "ent_michigan",
+    assetId: "ast_michigan",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1911,
+    endYear: null
+  },
+  {
+    id: "var_minnesota",
+    entityId: "ent_minnesota",
+    assetId: "ast_minnesota",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 2024,
+    endYear: null
+  },
+  {
+    id: "var_mississippi",
+    entityId: "ent_mississippi",
+    assetId: "ast_mississippi",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 2021,
+    endYear: null
+  },
+  {
+    id: "var_missouri",
+    entityId: "ent_missouri",
+    assetId: "ast_missouri",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1913,
+    endYear: null
+  },
+  {
+    id: "var_montana",
+    entityId: "ent_montana",
+    assetId: "ast_montana",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1981,
+    endYear: null
+  },
+  {
+    id: "var_nebraska",
+    entityId: "ent_nebraska",
+    assetId: "ast_nebraska",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1925,
+    endYear: null
+  },
+  {
+    id: "var_nevada",
+    entityId: "ent_nevada",
+    assetId: "ast_nevada",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1991,
+    endYear: null
+  },
+  {
+    id: "var_new_hampshire",
+    entityId: "ent_new_hampshire",
+    assetId: "ast_new_hampshire",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1909,
+    endYear: null
+  },
+  {
+    id: "var_new_jersey",
+    entityId: "ent_new_jersey",
+    assetId: "ast_new_jersey",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1896,
+    endYear: null
+  },
+  {
+    id: "var_new_mexico",
+    entityId: "ent_new_mexico",
+    assetId: "ast_new_mexico",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1925,
+    endYear: null
+  },
+  {
+    id: "var_new_york",
+    entityId: "ent_new_york",
+    assetId: "ast_new_york",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 2020,
+    endYear: null
+  },
+  {
+    id: "var_north_carolina",
+    entityId: "ent_north_carolina",
+    assetId: "ast_north_carolina",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1885,
+    endYear: null
+  },
+  {
+    id: "var_north_dakota",
+    entityId: "ent_north_dakota",
+    assetId: "ast_north_dakota",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1911,
+    endYear: null
+  },
+  {
+    id: "var_ohio",
+    entityId: "ent_ohio",
+    assetId: "ast_ohio",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1902,
+    endYear: null
+  },
+  {
+    id: "var_oklahoma",
+    entityId: "ent_oklahoma",
+    assetId: "ast_oklahoma",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1941,
+    endYear: null
+  },
+  {
+    id: "var_oregon_obverse",
+    entityId: "ent_oregon",
+    assetId: "ast_oregon_obverse",
+    displayName: "Obverse",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision", "obverse"],
+    startYear: 1925,
+    endYear: null,
+	relatedVariants: {
+    reverses: ["var_oregon_reverse"]
+    }
+  },
+  {
+    id: "var_oregon_reverse",
+    entityId: "ent_oregon",
+    assetId: "ast_oregon_reverse",
+    displayName: "Reverse",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision", "reverse"],
+    startYear: 1925,
+    endYear: null,
+	relatedVariants: {
+    reverses: ["var_oregon_obverse"]
+    }
+  },
+  {
+    id: "var_pennsylvania",
+    entityId: "ent_pennsylvania",
+    assetId: "ast_pennsylvania",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1907,
+    endYear: null
+  },
+  {
+    id: "var_rhode_island",
+    entityId: "ent_rhode_island",
+    assetId: "ast_rhode_island",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1897,
+    endYear: null
+  },
+  {
+    id: "var_south_carolina",
+    entityId: "ent_south_carolina",
+    assetId: "ast_south_carolina",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1861,
+    endYear: null
+  },
+  {
+    id: "var_south_dakota",
+    entityId: "ent_south_dakota",
+    assetId: "ast_south_dakota",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_tennessee",
+    entityId: "ent_tennessee",
+    assetId: "ast_tennessee",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1905,
+    endYear: null
+  },
+  {
+    id: "var_texas",
+    entityId: "ent_texas",
+    assetId: "ast_texas",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1839,
+    endYear: null
+  },
+  {
+    id: "var_utah",
+    entityId: "ent_utah",
+    assetId: "ast_utah",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 2024,
+    endYear: null
+  },
+  {
+    id: "var_vermont",
+    entityId: "ent_vermont",
+    assetId: "ast_vermont",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1923,
+    endYear: null
+  },
+  {
+    id: "var_virginia",
+    entityId: "ent_virginia",
+    assetId: "ast_virginia",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1912,
+    endYear: null
+  },
+  {
+    id: "var_washington",
+    entityId: "ent_washington",
+    assetId: "ast_washington",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1923,
+    endYear: null
+  },
+  {
+    id: "var_west_virginia",
+    entityId: "ent_west_virginia",
+    assetId: "ast_west_virginia",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1929,
+    endYear: null
+  },
+  {
+    id: "var_wisconsin",
+    entityId: "ent_wisconsin",
+    assetId: "ast_wisconsin",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1981,
+    endYear: null
+  },
+  {
+    id: "var_wyoming",
+    entityId: "ent_wyoming",
+    assetId: "ast_wyoming",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1917,
+    endYear: null
+  },
+
+  /*
+    Technical quiz-safe variants.
+
+    text_removed variants are displayed during a quiz but normally resolve to
+    the entity's default or gallery variant for Gallery and answer reveal.
+  */
+  {
+    id: "var_arkansas_quiz",
+    entityId: "ent_arkansas",
+    assetId: "ast_arkansas_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1911,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_arkansas"
+  },
+  {
+    id: "var_california_quiz",
+    entityId: "ent_california",
+    assetId: "ast_california_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1911,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_california_official"
+  },
+  {
+    id: "var_florida_quiz",
+    entityId: "ent_florida",
+    assetId: "ast_florida_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1900,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_florida"
+  },
+  {
+    id: "var_idaho_quiz",
+    entityId: "ent_idaho",
+    assetId: "ast_idaho_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1907,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_idaho"
+  },
+  {
+    id: "var_illinois_quiz",
+    entityId: "ent_illinois",
+    assetId: "ast_illinois_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1915,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_illinois"
+  },
+  {
+    id: "var_indiana_quiz",
+    entityId: "ent_indiana",
+    assetId: "ast_indiana_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1917,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_indiana"
+  },
+  {
+    id: "var_iowa_quiz",
+    entityId: "ent_iowa",
+    assetId: "ast_iowa_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1921,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_iowa"
+  },
+  {
+    id: "var_kansas_quiz",
+    entityId: "ent_kansas",
+    assetId: "ast_kansas_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1961,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_kansas"
+  },
+  {
+    id: "var_kentucky_quiz",
+    entityId: "ent_kentucky",
+    assetId: "ast_kentucky_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1918,
+    endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_kentucky"
+  },
+    {
+    id: "var_maine_quiz",
+    entityId: "ent_maine",
+    assetId: "ast_maine_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1909,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_maine"
+  },
+  {
+    id: "var_montana_quiz",
+    entityId: "ent_montana",
+    assetId: "ast_montana_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1981,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_montana"
+  },
+  {
+    id: "var_nebraska_quiz",
+    entityId: "ent_nebraska",
+    assetId: "ast_nebraska_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1925,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_nebraska"
+  },
+  {
+    id: "var_nevada_quiz",
+    entityId: "ent_nevada",
+    assetId: "ast_nevada_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1991,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_nevada"
+  },
+  {
+    id: "var_new_hampshire_quiz",
+    entityId: "ent_new_hampshire",
+    assetId: "ast_new_hampshire_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1909,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_new_hampshire"
+  },
+  {
+    id: "var_north_carolina_quiz",
+    entityId: "ent_north_carolina",
+    assetId: "ast_north_carolina_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1885,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_carolina"
+  },
+  {
+    id: "var_north_dakota_quiz",
+    entityId: "ent_north_dakota",
+    assetId: "ast_north_dakota_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1911,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_dakota"
+  },
+    {
+    id: "var_oklahoma_quiz",
+    entityId: "ent_oklahoma",
+    assetId: "ast_oklahoma_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1941,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_oklahoma"
+  },
+  {
+    id: "var_oregon_quiz",
+    entityId: "ent_oregon",
+    assetId: "ast_oregon_obverse_text_removed",
+    displayName: "Obverse",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1925,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_oregon_obverse"
+  },
+  {
+    id: "var_south_dakota_quiz",
+    entityId: "ent_south_dakota",
+    assetId: "ast_south_dakota_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1992,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_south_dakota"
+  },
+  {
+    id: "var_vermont_quiz",
+    entityId: "ent_vermont",
+    assetId: "ast_vermont_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1923,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_vermont"
+  },
+  {
+    id: "var_virginia_quiz",
+    entityId: "ent_virginia",
+    assetId: "ast_virginia_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1912,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_virginia"
+  },
+  {
+    id: "var_washington_quiz",
+    entityId: "ent_washington",
+    assetId: "ast_washington_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1923,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_washington"
+  },
+  {
+    id: "var_west_virginia_quiz",
+    entityId: "ent_west_virginia",
+    assetId: "ast_west_virginia_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1929,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_west_virginia"
+  },
+  {
+    id: "var_wisconsin_quiz",
+    entityId: "ent_wisconsin",
+    assetId: "ast_wisconsin_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1981,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_wisconsin"
+  },
+  {
+    id: "var_wyoming_quiz",
+    entityId: "ent_wyoming",
+    assetId: "ast_wyoming_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1917,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_wyoming"
+  },
+  
+  /*
+    Central America
+  */
+   {
+  id: "var_belize_current",
+  entityId: "ent_belize",
+  assetId: "ast_belize_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1981,
+  endYear: null
+},
+{
+  id: "var_costa_rica_current",
+  entityId: "ent_costa_rica",
+  assetId: "ast_costa_rica_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1848,
+  endYear: null
+},
+{
+  id: "var_costa_rica_state",
+  entityId: "ent_costa_rica",
+  assetId: "ast_costa_rica_state",
+  displayName: "State Flag",
+  aliases: [],
+  tags: ["official", "current", "national", "state"],
+  startYear: 1998,
+  endYear: null
+},
+{
+  id: "var_el_salvador_current",
+  entityId: "ent_el_salvador",
+  assetId: "ast_el_salvador_current",
+  displayName: "National Flag",
+  aliases: ["Bandera Magna", "Great Flag"],
+  tags: ["official", "current", "national"],
+  startYear: 1922,
+  endYear: null
+},
+{
+  id: "var_el_salvador_civil",
+  entityId: "ent_el_salvador",
+  assetId: "ast_el_salvador_civil",
+  displayName: "Civil Flag",
+  aliases: [],
+  tags: ["official", "current", "national", "civil"],
+  startYear: 1922,
+  endYear: null
+},
+{
+  id: "var_guatemala_current",
+  entityId: "ent_guatemala",
+  assetId: "ast_guatemala_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1871,
+  endYear: null
+},
+{
+  id: "var_guatemala_civil",
+  entityId: "ent_guatemala",
+  assetId: "ast_guatemala_civil",
+  displayName: "Civil Flag",
+  aliases: [],
+  tags: ["official", "current", "national", "civil"],
+  startYear: 1871,
+  endYear: null
+},
+{
+  id: "var_honduras_current",
+  entityId: "ent_honduras",
+  assetId: "ast_honduras_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1949,
+  endYear: null
+},
+{
+  id: "var_nicaragua_current",
+  entityId: "ent_nicaragua",
+  assetId: "ast_nicaragua_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1971,
+  endYear: null
+},
+{
+  id: "var_panama_current",
+  entityId: "ent_panama",
+  assetId: "ast_panama_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1925,
+  endYear: null
+},
+{
+  id: "var_mexico_current",
+  entityId: "ent_mexico",
+  assetId: "ast_mexico_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1968,
+  endYear: null
+},
+{
+  id: "var_mexico_state",
+  entityId: "ent_mexico",
+  assetId: "ast_mexico_state",
+  alternativeAssetIds: [
+    "ast_mexico_state_alt_notext"
+    ],
+  displayName: "State Flag",
+  aliases: [],
+  tags: ["official", "current", "national", "state"],
+  startYear: 1968,
+  endYear: null
+},
+{
+  id: "var_mexico_state_alt_notext",
+  entityId: "ent_mexico",
+  assetId: "ast_mexico_state_alt_notext",
+  displayName: "State Flag",
+  aliases: [],
+  tags: ["official", "current", "national", "state", "alternative"],
+  startYear: 1968,
+  endYear: null
+},
+
+   /*
+    Technical quiz-safe variants.
+
+    text_removed variants are displayed during a quiz but normally resolve to
+    the entity's default or gallery variant for Gallery and answer reveal.
+  */
+  {
+  id: "var_costa_rica_state_quiz",
+  entityId: "ent_costa_rica",
+  assetId: "ast_costa_rica_state_text_removed",
+  displayName: "State Flag",
+  aliases: [],
+  tags: ["quiz", "text_removed", "current"],
+  startYear: 1998,
+  endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_costa_rica_state"
+},
+{
+  id: "var_el_salvador_quiz",
+  entityId: "ent_el_salvador",
+  assetId: "ast_el_salvador_current_text_removed",
+  displayName: "National Flag",
+  aliases: ["Bandera Magna", "Great Flag"],
+  tags: ["quiz", "text_removed", "current"],
+  startYear: 1922,
+  endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_el_salvador_current"
+},
+{
+  id: "var_mexico_state_quiz",
+  entityId: "ent_mexico",
+  assetId: "ast_mexico_state_text_removed",
+  displayName: "State Flag",
+  aliases: [],
+  tags: ["quiz", "text_removed", "current"],
+  startYear: 1922,
+  endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_mexico_state"
+},
+{
+  id: "var_nicaragua_quiz",
+  entityId: "ent_nicaragua",
+  assetId: "ast_nicaragua_current_text_removed",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["quiz", "text_removed", "current"],
+  startYear: 1998,
+  endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_nicaragua_current"
+},
+  
+  
+  /*
+    Caribbean.
+  */
+  {
+    id: "var_anguilla_current",
+    entityId: "ent_anguilla",
+    assetId: "ast_anguilla_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_antigua_and_barbuda_current",
+    entityId: "ent_antigua_and_barbuda",
+    assetId: "ast_antigua_and_barbuda_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1967,
+    endYear: null
+  },
+  {
+    id: "var_aruba_current",
+    entityId: "ent_aruba",
+    assetId: "ast_aruba_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1976,
+    endYear: null
+  },
+{
+    id: "var_bahamas_current",
+    entityId: "ent_bahamas",
+    assetId: "ast_bahamas_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1973,
+    endYear: null
+  },
+  {
+    id: "var_barbados_current",
+    entityId: "ent_barbados",
+    assetId: "ast_barbados_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1966,
+    endYear: null
+  },
+  {
+    id: "var_bonaire_current",
+    entityId: "ent_bonaire",
+    assetId: "ast_bonaire_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1981,
+    endYear: null
+  },
+  {
+    id: "var_british_virgin_islands_current",
+    entityId: "ent_british_virgin_islands",
+    assetId: "ast_british_virgin_islands_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1960,
+    endYear: null
+  },
+  {
+    id: "var_cayman_islands_current",
+    entityId: "ent_cayman_islands",
+    assetId: "ast_cayman_islands_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1999,
+    endYear: null
+  },
+  {
+    id: "var_cuba_current",
+    entityId: "ent_cuba",
+    assetId: "ast_cuba_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1902,
+    endYear: null
+  },
+  {
+    id: "var_curacao_current",
+    entityId: "ent_curacao",
+    assetId: "ast_curacao_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1984,
+    endYear: null
+  }, 
+  {
+    id: "var_dominica_current",
+    entityId: "ent_dominica",
+    assetId: "ast_dominica_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_dominican_republic_current",
+    entityId: "ent_dominican_republic",
+    assetId: "ast_dominican_republic_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1863,
+    endYear: null
+  },
+  {
+    id: "var_federal_dependencies_of_venezuela_current",
+    entityId: "ent_federal_dependencies_of_venezuela",
+    assetId: "ast_federal_dependencies_of_venezuela_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_grenada_current",
+    entityId: "ent_grenada",
+    assetId: "ast_grenada_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1974,
+    endYear: null
+  },
+  {
+    id: "var_guadeloupe_current_unofficial",
+    entityId: "ent_guadeloupe",
+    assetId: "ast_guadeloupe_current_unofficial",
+    alternativeAssetIds: [
+    "ast_guadeloupe_current_unofficial_red"
+    ],
+	quizAssetIds: [
+    "ast_guadeloupe_current_unofficial",
+    "ast_guadeloupe_current_unofficial_red"
+    ],
+    displayName: "Unofficial National Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_guadeloupe_current_unofficial_red",
+    entityId: "ent_guadeloupe",
+    assetId: "ast_guadeloupe_current_unofficial_red",
+    displayName: "Unofficial National Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "national", "alternative"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_haiti_current",
+    entityId: "ent_haiti",
+    assetId: "ast_haiti_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1986,
+    endYear: null
+  },
+  {
+    id: "var_jamaica_current",
+    entityId: "ent_jamaica",
+    assetId: "ast_jamaica_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1962,
+    endYear: null
+  },
+  {
+    id: "var_martinique_current",
+    entityId: "ent_martinique",
+    assetId: "ast_martinique_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2023,
+    endYear: null
+  },
+  {
+    id: "var_montserrat_current",
+    entityId: "ent_montserrat",
+    assetId: "ast_montserrat_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1960,
+    endYear: null
+  },
+  {
+    id: "var_puerto_rico_current",
+    entityId: "ent_puerto_rico",
+    assetId: "ast_puerto_rico_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1952,
+    endYear: null
+  },
+  {
+    id: "var_saba_current",
+    entityId: "ent_saba",
+    assetId: "ast_saba_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1985,
+    endYear: null
+  },
+  {
+    id: "var_saint_barthelemy_current_unofficial",
+    entityId: "ent_saint_barthelemy",
+    assetId: "ast_saint_barthelemy_current_unofficial",
+	alternativeAssetIds: [
+    "ast_saint_barthelemy_current_unofficial_text"
+    ],
+    displayName: "Unofficial National Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_saint_barthelemy_current_unofficial_text",
+    entityId: "ent_saint_barthelemy",
+    assetId: "ast_saint_barthelemy_current_unofficial_text",
+    displayName: "Unofficial National Flag with text",
+    aliases: [],
+    tags: ["unofficial", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_saint_kitts_and_nevis_current",
+    entityId: "ent_saint_kitts_and_nevis",
+    assetId: "ast_saint_kitts_and_nevis_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1983,
+    endYear: null
+  },
+  {
+    id: "var_saint_lucia_current",
+    entityId: "ent_saint_lucia",
+    assetId: "ast_saint_lucia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2002,
+    endYear: null
+  },
+  {
+    id: "var_saint_martin_current_unofficial",
+    entityId: "ent_saint_martin",
+    assetId: "ast_saint_martin_current_unofficial",
+    displayName: "Unofficial National Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_saint_vincent_and_the_grenadines_current",
+    entityId: "ent_saint_vincent_and_the_grenadines",
+    assetId: "ast_saint_vincent_and_the_grenadines_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1985,
+    endYear: null
+  },
+  {
+    id: "var_sint_eustatius_current",
+    entityId: "ent_sint_eustatius",
+    assetId: "ast_sint_eustatius_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2004,
+    endYear: null
+  },
+  {
+    id: "var_sint_maarten_current",
+    entityId: "ent_sint_maarten",
+    assetId: "ast_sint_maarten_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1985,
+    endYear: null
+  },
+  {
+    id: "var_trinidad_and_tobago_current",
+    entityId: "ent_trinidad_and_tobago",
+    assetId: "ast_trinidad_and_tobago_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1962,
+    endYear: null
+  },
+  {
+    id: "var_turks_and_caicos_islands_current",
+    entityId: "ent_turks_and_caicos_islands",
+    assetId: "ast_turks_and_caicos_islands_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1968,
+    endYear: null
+  },
+  {
+    id: "var_us_virgin_islands_current",
+    entityId: "ent_us_virgin_islands",
+    assetId: "ast_us_virgin_islands_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1921,
+    endYear: null
+  },
+  
+  /*
+    Technical quiz-safe variants.
+
+    text_removed variants are displayed during a quiz but normally resolve to
+    the entity's default or gallery variant for Gallery and answer reveal.
+  */
+  {
+  id: "var_saint_martin_current_unofficial_quiz",
+  entityId: "ent_saint_martin",
+  assetId: "ast_saint_martin_current_unofficial_text_removed",
+  displayName: "Unofficial National Flag",
+  aliases: [],
+  tags: ["quiz", "text_removed", "current", "unofficial"],
+  startYear: null,
+  endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_saint_martin_current_unofficial"
+},
+  {
+  id: "var_saint_barthelemy_current_unofficial_text_quiz",
+  entityId: "ent_saint_barthelemy",
+  assetId: "ast_saint_barthelemy_current_unofficial_text_text_removed",
+  displayName: "Unofficial National Flag",
+  aliases: [],
+  tags: ["quiz", "text_removed", "current", "unofficial"],
+  startYear: null,
+  endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_saint_barthelemy_current_unofficial_text"
+},
+	
+  /*
+    Europe.
+  */
+  {
+    id: "var_denmark_current",
+    entityId: "ent_denmark",
+    assetId: "ast_denmark_current",
+    displayName: "National Flag",
+    aliases: ["Dannebrog"],
+    tags: ["official", "current", "national"],
+    startYear: 1625,
+    endYear: null
+  },
+  {
+    id: "var_france_current",
+    entityId: "ent_france",
+    assetId: "ast_france_current",
+	alternativeAssetIds: [
+    "ast_france_current_light"
+    ],
+	quizAssetIds: [
+    "ast_france_current",
+    "ast_france_current_light"
+    ],
+    displayName: "National Flag",
+    aliases: ["Tricolore"],
+    tags: ["official", "current", "national"],
+    startYear: 1794,
+    endYear: null,
+	relatedVariants: {
+    reverses: ["var_france_reverse"]
+    }
+  },
+  {
+    id: "var_france_current_light",
+    entityId: "ent_france",
+    assetId: "ast_france_current_light",
+    displayName: "National Flag",
+    aliases: ["Tricolore"],
+    tags: ["official", "current", "national", "alternative"],
+    startYear: 1794,
+    endYear: null
+  },
+  {
+    id: "var_france_reverse",
+    entityId: "ent_france",
+    assetId: "ast_france_reverse",
+    displayName: "Reverse",
+    aliases: ["Tricolore"],
+    tags: ["official", "current", "national", "reverse"],
+    startYear: 1794,
+    endYear: null
+  },
+  /*
+    France current metropolitan regions.
+  */
+  {
+    id: "var_france_auvergne_rhone_alpes_current",
+    entityId: "ent_france_auvergne_rhone_alpes",
+    assetId: "ast_auvergne_rhone_alpes",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Auvergne-Rhône-Alpes", "Flag of Auvergne-Rhone-Alpes"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_bourgogne_franche_comte_current",
+    entityId: "ent_france_bourgogne_franche_comte",
+    assetId: "ast_bourgogne_franche_comte",
+    displayName: "Regional Flag",
+    aliases: [
+      "Flag of Bourgogne-Franche-Comté",
+      "Flag of Bourgogne-Franche-Comte",
+	  "Flag of Burgundy-Franche-Comte"
+    ],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_brittany_current",
+    entityId: "ent_france_brittany",
+    assetId: "ast_brittany_current",
+    displayName: "Regional Flag",
+    aliases: [
+      "Flag of Brittany",
+      "Gwenn-ha-du",
+      "Flag of Bretagne"
+    ],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_centre_val_de_loire_current",
+    entityId: "ent_france_centre_val_de_loire",
+    assetId: "ast_centre_val_de_loire_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Centre-Val de Loire"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_corsica_current",
+    entityId: "ent_france_corsica",
+    assetId: "ast_corsica_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Corsica", "Flag of Corse"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_grand_est_current",
+    entityId: "ent_france_grand_est",
+    assetId: "ast_grand_est_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Grand Est"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_hauts_de_france_current",
+    entityId: "ent_france_hauts_de_france",
+    assetId: "ast_hauts_de_france_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Hauts-de-France"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_ile_de_france_current",
+    entityId: "ent_france_ile_de_france",
+    assetId: "ast_ile_de_france_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Île-de-France", "Flag of Ile-de-France"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_normandy_current",
+    entityId: "ent_france_normandy",
+    assetId: "ast_normandy_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Normandy", "Flag of Normandie"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_nouvelle_aquitaine_current",
+    entityId: "ent_france_nouvelle_aquitaine",
+    assetId: "ast_nouvelle_aquitaine_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Nouvelle-Aquitaine"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_occitania_current",
+    entityId: "ent_france_occitania",
+    assetId: "ast_occitanie_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Occitania", "Flag of Occitanie"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_pays_de_la_loire_current",
+    entityId: "ent_france_pays_de_la_loire",
+    assetId: "ast_pays_de_la_loire_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Pays de la Loire"],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_france_provence_alpes_cote_dazur_current",
+    entityId: "ent_france_provence_alpes_cote_dazur",
+    assetId: "ast_provence_alpes_cote_dazur_current",
+    displayName: "Regional Flag",
+    aliases: [
+      "Flag of Provence-Alpes-Côte d'Azur",
+      "Flag of Provence-Alpes-Cote d'Azur",
+      "Flag of PACA"
+    ],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    France current-region text-removed quiz-safe variants.
+  */
+  {
+    id: "var_france_centre_val_de_loire_current_text_removed",
+    entityId: "ent_france_centre_val_de_loire",
+    assetId: "ast_centre_val_de_loire_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Centre-Val de Loire"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_france_centre_val_de_loire_current"
+  },
+  {
+    id: "var_france_grand_est_current_text_removed",
+    entityId: "ent_france_grand_est",
+    assetId: "ast_grand_est_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Grand Est"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_france_grand_est_current"
+  },
+  {
+    id: "var_france_hauts_de_france_current_text_removed",
+    entityId: "ent_france_hauts_de_france",
+    assetId: "ast_hauts_de_france_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Hauts-de-France"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_france_hauts_de_france_current"
+  },
+  {
+    id: "var_france_occitania_current_text_removed",
+    entityId: "ent_france_occitania",
+    assetId: "ast_occitanie_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Occitania", "Flag of Occitanie"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_france_occitania_current"
+  },
+  {
+    id: "var_france_pays_de_la_loire_current_text_removed",
+    entityId: "ent_france_pays_de_la_loire",
+    assetId: "ast_pays_de_la_loire_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Pays de la Loire"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_france_pays_de_la_loire_current"
+  },
+
+  {
+  id: "var_isle_of_man_current",
+  entityId: "ent_isle_of_man",
+  assetId: "ast_isle_of_man_current",
+  displayName: "National Flag",
+  aliases: [
+    "Flag of Mann"
+  ],
+  tags: ["official", "current", "national"],
+  startYear: 1932,
+  endYear: null
+},
+  {
+    id: "var_kingdom_of_denmark_current",
+    entityId: "ent_kingdom_of_denmark",
+    assetId: "ast_denmark_current",
+    displayName: "National Flag",
+    aliases: ["Dannebrog"],
+    tags: ["official", "current", "national"],
+    startYear: 1625,
+    endYear: null
+  },
+  {
+    id: "var_kingdom_of_the_netherlands_current",
+    entityId: "ent_kingdom_of_the_netherlands",
+    assetId: "ast_netherlands_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1949,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_current",
+    entityId: "ent_netherlands",
+    assetId: "ast_netherlands_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1949,
+    endYear: null
+  },
+  /*
+    Asia and transcontinental European edge cases.
+  */
+  {
+    id: "var_abkhazia_current",
+    entityId: "ent_abkhazia",
+    assetId: "ast_abkhazia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_armenia_current",
+    entityId: "ent_armenia",
+    assetId: "ast_armenia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_azerbaijan_current",
+    entityId: "ent_azerbaijan",
+    assetId: "ast_azerbaijan_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1991,
+    endYear: null
+  },
+  {
+    id: "var_georgia_current",
+    entityId: "ent_georgia",
+    assetId: "ast_georgia_current",
+    displayName: "National Flag",
+    aliases: ["Five-Cross Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2004,
+    endYear: null
+  },
+  {
+    id: "var_kazakhstan_current",
+    entityId: "ent_kazakhstan",
+    assetId: "ast_kazakhstan_current",
+    displayName: "National Flag",
+    aliases: ["Kök Tu"],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_kyrgyzstan_current",
+    entityId: "ent_kyrgyzstan",
+    assetId: "ast_kyrgyzstan_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2023,
+    endYear: null
+  },
+  {
+    id: "var_tajikistan_current",
+    entityId: "ent_tajikistan",
+    assetId: "ast_tajikistan_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_turkmenistan_current",
+    entityId: "ent_turkmenistan",
+    assetId: "ast_turkmenistan_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2001,
+    endYear: null
+  },
+  {
+    id: "var_uzbekistan_current",
+    entityId: "ent_uzbekistan",
+    assetId: "ast_uzbekistan_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1991,
+    endYear: null
+  },
+  /*
+    Eastern Asia.
+  */
+  {
+    id: "var_china_current",
+    entityId: "ent_china",
+    assetId: "ast_china_current",
+    displayName: "National Flag",
+    aliases: ["Five-star Red Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1949,
+    endYear: null
+  },
+  {
+    id: "var_hong_kong_current",
+    entityId: "ent_hong_kong",
+    assetId: "ast_hong_kong_current",
+    displayName: "Regional Flag",
+    aliases: ["Bauhinia Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1997,
+    endYear: null
+  },
+  {
+    id: "var_japan_current",
+    entityId: "ent_japan",
+    assetId: "ast_japan_current",
+    displayName: "National Flag",
+    aliases: [
+      "Hinomaru",
+      "Nisshōki"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1999,
+    endYear: null
+  },
+
+  /*
+    Japanese prefectures.
+  */
+  {
+    id: "var_japan_hokkaido_current",
+    entityId: "ent_japan_hokkaido",
+    assetId: "ast_hokkaido_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Hokkaido Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_aomori_current",
+    entityId: "ent_japan_aomori",
+    assetId: "ast_aomori_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Aomori Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_iwate_current",
+    entityId: "ent_japan_iwate",
+    assetId: "ast_iwate_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Iwate Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_miyagi_current",
+    entityId: "ent_japan_miyagi",
+    assetId: "ast_miyagi_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Miyagi Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_akita_current",
+    entityId: "ent_japan_akita",
+    assetId: "ast_akita_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Akita Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_yamagata_current",
+    entityId: "ent_japan_yamagata",
+    assetId: "ast_yamagata_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Yamagata Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_fukushima_current",
+    entityId: "ent_japan_fukushima",
+    assetId: "ast_fukushima_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Fukushima Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_ibaraki_current",
+    entityId: "ent_japan_ibaraki",
+    assetId: "ast_ibaraki_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Ibaraki Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_tochigi_current",
+    entityId: "ent_japan_tochigi",
+    assetId: "ast_tochigi_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Tochigi Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_gunma_current",
+    entityId: "ent_japan_gunma",
+    assetId: "ast_gunma_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Gunma Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_saitama_current",
+    entityId: "ent_japan_saitama",
+    assetId: "ast_saitama_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Saitama Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_chiba_current",
+    entityId: "ent_japan_chiba",
+    assetId: "ast_chiba_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Chiba Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_tokyo_current",
+    entityId: "ent_japan_tokyo",
+    assetId: "ast_tokyo_metropolis_current",
+    displayName: "Metropolitan Flag",
+    aliases: ["Tokyo Flag", "Tokyo Metropolis Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_kanagawa_current",
+    entityId: "ent_japan_kanagawa",
+    assetId: "ast_kanagawa_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Kanagawa Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_niigata_current",
+    entityId: "ent_japan_niigata",
+    assetId: "ast_niigata_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Niigata Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_toyama_current",
+    entityId: "ent_japan_toyama",
+    assetId: "ast_toyama_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Toyama Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_ishikawa_current",
+    entityId: "ent_japan_ishikawa",
+    assetId: "ast_ishikawa_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Ishikawa Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_fukui_current",
+    entityId: "ent_japan_fukui",
+    assetId: "ast_fukui_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Fukui Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_yamanashi_current",
+    entityId: "ent_japan_yamanashi",
+    assetId: "ast_yamanashi_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Yamanashi Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_nagano_current",
+    entityId: "ent_japan_nagano",
+    assetId: "ast_nagano_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Nagano Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_gifu_current",
+    entityId: "ent_japan_gifu",
+    assetId: "ast_gifu_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Gifu Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_shizuoka_current",
+    entityId: "ent_japan_shizuoka",
+    assetId: "ast_shizuoka_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Shizuoka Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_aichi_current",
+    entityId: "ent_japan_aichi",
+    assetId: "ast_aichi_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Aichi Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_mie_current",
+    entityId: "ent_japan_mie",
+    assetId: "ast_mie_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Mie Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_shiga_current",
+    entityId: "ent_japan_shiga",
+    assetId: "ast_shiga_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Shiga Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_kyoto_current",
+    entityId: "ent_japan_kyoto",
+    assetId: "ast_kyoto_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Kyoto Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_osaka_current",
+    entityId: "ent_japan_osaka",
+    assetId: "ast_osaka_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Osaka Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_hyogo_current",
+    entityId: "ent_japan_hyogo",
+    assetId: "ast_hyogo_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Hyogo Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_nara_current",
+    entityId: "ent_japan_nara",
+    assetId: "ast_nara_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Nara Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_wakayama_current",
+    entityId: "ent_japan_wakayama",
+    assetId: "ast_wakayama_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Wakayama Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_tottori_current",
+    entityId: "ent_japan_tottori",
+    assetId: "ast_tottori_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Tottori Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_shimane_current",
+    entityId: "ent_japan_shimane",
+    assetId: "ast_shimane_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Shimane Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_okayama_current",
+    entityId: "ent_japan_okayama",
+    assetId: "ast_okayama_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Okayama Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_hiroshima_current",
+    entityId: "ent_japan_hiroshima",
+    assetId: "ast_hiroshima_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Hiroshima Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_yamaguchi_current",
+    entityId: "ent_japan_yamaguchi",
+    assetId: "ast_yamaguchi_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Yamaguchi Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_tokushima_current",
+    entityId: "ent_japan_tokushima",
+    assetId: "ast_tokushima_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Tokushima Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_kagawa_current",
+    entityId: "ent_japan_kagawa",
+    assetId: "ast_kagawa_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Kagawa Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_ehime_current",
+    entityId: "ent_japan_ehime",
+    assetId: "ast_ehime_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Ehime Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_kochi_current",
+    entityId: "ent_japan_kochi",
+    assetId: "ast_kochi_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Kochi Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_fukuoka_current",
+    entityId: "ent_japan_fukuoka",
+    assetId: "ast_fukuoka_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Fukuoka Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_saga_current",
+    entityId: "ent_japan_saga",
+    assetId: "ast_saga_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Saga Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_nagasaki_current",
+    entityId: "ent_japan_nagasaki",
+    assetId: "ast_nagasaki_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Nagasaki Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_kumamoto_current",
+    entityId: "ent_japan_kumamoto",
+    assetId: "ast_kumamoto_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Kumamoto Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_oita_current",
+    entityId: "ent_japan_oita",
+    assetId: "ast_oita_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Oita Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_miyazaki_current",
+    entityId: "ent_japan_miyazaki",
+    assetId: "ast_miyazaki_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Miyazaki Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_kagoshima_current",
+    entityId: "ent_japan_kagoshima",
+    assetId: "ast_kagoshima_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Kagoshima Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_japan_okinawa_current",
+    entityId: "ent_japan_okinawa",
+    assetId: "ast_okinawa_current",
+    displayName: "Prefectural Flag",
+    aliases: ["Okinawa Prefecture Flag"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_macao_current",
+    entityId: "ent_macao",
+    assetId: "ast_macau_current",
+    displayName: "Regional Flag",
+    aliases: [
+      "Macau Regional Flag",
+      "Lotus Flag"
+    ],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1999,
+    endYear: null
+  },
+  {
+    id: "var_mongolia_current",
+    entityId: "ent_mongolia",
+    assetId: "ast_mongolia_current",
+    displayName: "National Flag",
+    aliases: ["Mongolian State Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2011,
+    endYear: null
+  },
+  {
+    id: "var_north_korea_current",
+    entityId: "ent_north_korea",
+    assetId: "ast_north_korea_current",
+    displayName: "National Flag",
+    aliases: ["Blue and Red Flag of the Republic"],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_south_korea_current",
+    entityId: "ent_south_korea",
+    assetId: "ast_south_korea_current",
+    displayName: "National Flag",
+    aliases: [
+      "Taegeukgi",
+      "Taegukgi"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1997,
+    endYear: null
+  },
+  {
+    id: "var_taiwan_current",
+    entityId: "ent_taiwan",
+    assetId: "ast_taiwan_current",
+    displayName: "National Flag",
+    aliases: [
+      "Flag of the Republic of China",
+      "Blue Sky, White Sun, and a Wholly Red Earth"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1928,
+    endYear: null
+  },
+  /*
+    South-eastern Asia.
+  */
+  {
+    id: "var_brunei_current",
+    entityId: "ent_brunei",
+    assetId: "ast_brunei_current",
+    displayName: "National Flag",
+    aliases: ["Flag of Brunei Darussalam"],
+    tags: ["official", "current", "national"],
+    startYear: 1959,
+    endYear: null
+  },
+  {
+    id: "var_cambodia_current",
+    entityId: "ent_cambodia",
+    assetId: "ast_cambodia_current",
+    displayName: "National Flag",
+    aliases: ["Khmer Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1993,
+    endYear: null
+  },
+  {
+    id: "var_indonesia_current",
+    entityId: "ent_indonesia",
+    assetId: "ast_indonesia_current",
+    displayName: "National Flag",
+    aliases: [
+      "Merah Putih",
+      "Sang Saka Merah Putih"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1945,
+    endYear: null
+  },
+  {
+    id: "var_laos_current",
+    entityId: "ent_laos",
+    assetId: "ast_laos_current",
+    displayName: "National Flag",
+    aliases: [
+      "Moon Flag",
+      "White Moon Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1975,
+    endYear: null
+  },
+  {
+    id: "var_malaysia_current",
+    entityId: "ent_malaysia",
+    assetId: "ast_malaysia_current",
+    displayName: "National Flag",
+    aliases: ["Jalur Gemilang"],
+    tags: ["official", "current", "national"],
+    startYear: 1963,
+    endYear: null
+  },
+  {
+    id: "var_myanmar_current",
+    entityId: "ent_myanmar",
+    assetId: "ast_myanmar_current",
+    displayName: "National Flag",
+    aliases: ["Union Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2010,
+    endYear: null
+  },
+  {
+    id: "var_philippines_current",
+    entityId: "ent_philippines",
+    assetId: "ast_philippines_current",
+    displayName: "National Flag",
+    aliases: [
+      "Philippine Flag",
+      "Three Stars and a Sun"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1998,
+    endYear: null
+  },
+  {
+    id: "var_singapore_current",
+    entityId: "ent_singapore",
+    assetId: "ast_singapore_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1959,
+    endYear: null
+  },
+  {
+    id: "var_thailand_current",
+    entityId: "ent_thailand",
+    assetId: "ast_thailand_current",
+    displayName: "National Flag",
+    aliases: [
+      "Thong Trairong",
+      "Thai Tricolour"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 2017,
+    endYear: null
+  },
+  {
+    id: "var_timor_leste_current",
+    entityId: "ent_timor_leste",
+    assetId: "ast_timor_leste_current",
+    displayName: "National Flag",
+    aliases: ["East Timor Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2002,
+    endYear: null
+  },
+  {
+    id: "var_vietnam_current",
+    entityId: "ent_vietnam",
+    assetId: "ast_vietnam_current",
+    displayName: "National Flag",
+    aliases: [
+      "Red Flag with a Golden Star",
+      "Cờ đỏ sao vàng"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1955,
+    endYear: null
+  },
+  /*
+    Southern Asia.
+  */
+  {
+    id: "var_afghanistan_current",
+    entityId: "ent_afghanistan",
+    assetId: "ast_afghanistan_current",
+    displayName: "Islamic Emirate Flag",
+    aliases: [
+      "White Flag",
+      "Shahada Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 2021,
+    endYear: null,
+    relatedVariants: {
+      alternatives: [
+        "var_afghanistan_republic_tricolour_current"
+      ]
+    }
+  },
+  {
+    id: "var_afghanistan_republic_tricolour_current",
+    entityId: "ent_afghanistan",
+    assetId: "ast_afghanistan_republic_tricolour_current",
+    displayName: "Republic Tricolour",
+    aliases: [
+      "Afghan Tricolour",
+      "Islamic Republic Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 2013,
+    endYear: null,
+    relatedVariants: {
+      alternatives: [
+        "var_afghanistan_current"
+      ]
+    }
+  },
+  {
+    id: "var_bangladesh_current",
+    entityId: "ent_bangladesh",
+    assetId: "ast_bangladesh_current",
+    displayName: "National Flag",
+    aliases: [
+      "Red-Green",
+      "Lal Sabuj"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1972,
+    endYear: null
+  },
+  {
+    id: "var_bhutan_current",
+    entityId: "ent_bhutan",
+    assetId: "ast_bhutan_current",
+    displayName: "National Flag",
+    aliases: ["Druk Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1969,
+    endYear: null
+  },
+  {
+    id: "var_india_current",
+    entityId: "ent_india",
+    assetId: "ast_india_current",
+    displayName: "National Flag",
+    aliases: [
+      "Tiranga",
+      "Indian Tricolour"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1947,
+    endYear: null
+  },
+  {
+    id: "var_iran_current",
+    entityId: "ent_iran",
+    assetId: "ast_iran_current",
+    displayName: "National Flag",
+    aliases: ["Flag of the Islamic Republic"],
+    tags: ["official", "current", "national"],
+    startYear: 1980,
+    endYear: null
+  },
+  {
+    id: "var_maldives_current",
+    entityId: "ent_maldives",
+    assetId: "ast_maldives_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1965,
+    endYear: null
+  },
+  {
+    id: "var_nepal_current",
+    entityId: "ent_nepal",
+    assetId: "ast_nepal_current",
+    displayName: "National Flag",
+    aliases: [
+      "Double-pennon",
+      "Double-pennant Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1962,
+    endYear: null
+  },
+  {
+    id: "var_pakistan_current",
+    entityId: "ent_pakistan",
+    assetId: "ast_pakistan_current",
+    displayName: "National Flag",
+    aliases: ["Flag of the Crescent and Star"],
+    tags: ["official", "current", "national"],
+    startYear: 1947,
+    endYear: null
+  },
+  {
+    id: "var_sri_lanka_current",
+    entityId: "ent_sri_lanka",
+    assetId: "ast_sri_lanka_current",
+    displayName: "National Flag",
+    aliases: [
+      "Lion Flag",
+      "Sinha Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1972,
+    endYear: null
+  },
+  {
+    id: "var_russia_current",
+    entityId: "ent_russia",
+    assetId: "ast_russia_current",
+    displayName: "National Flag",
+    aliases: ["Tricolour"],
+    tags: ["official", "current", "national"],
+    startYear: 1993,
+    endYear: null
+  },
+  {
+    id: "var_south_ossetia_current",
+    entityId: "ent_south_ossetia",
+    assetId: "ast_south_ossetia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_turkey_current",
+    entityId: "ent_turkey",
+    assetId: "ast_turkey_current",
+    displayName: "National Flag",
+    aliases: ["Al Bayrak", "Ay Yıldız"],
+    tags: ["official", "current", "national"],
+    startYear: 1936,
+    endYear: null
+  },
+  /*
+    Western Asia — additional UN M49 countries and areas.
+  */
+  {
+    id: "var_bahrain_current",
+    entityId: "ent_bahrain",
+    assetId: "ast_bahrain_current",
+    displayName: "National Flag",
+    aliases: ["Bahraini Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2002,
+    endYear: null
+  },
+  {
+    id: "var_iraq_current",
+    entityId: "ent_iraq",
+    assetId: "ast_iraq_current",
+    displayName: "National Flag",
+    aliases: ["Takbir Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 2008,
+    endYear: null
+  },
+  {
+    id: "var_israel_current",
+    entityId: "ent_israel",
+    assetId: "ast_israel_current",
+    displayName: "National Flag",
+    aliases: [
+      "Blue and White Flag",
+      "Degel Yisrael"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1948,
+    endYear: null
+  },
+  {
+    id: "var_jordan_current",
+    entityId: "ent_jordan",
+    assetId: "ast_jordan_current",
+    displayName: "National Flag",
+    aliases: ["Jordanian Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1928,
+    endYear: null
+  },
+  {
+    id: "var_kuwait_current",
+    entityId: "ent_kuwait",
+    assetId: "ast_kuwait_current",
+    displayName: "National Flag",
+    aliases: ["Kuwaiti Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1961,
+    endYear: null
+  },
+  {
+    id: "var_lebanon_current",
+    entityId: "ent_lebanon",
+    assetId: "ast_lebanon_current",
+    displayName: "National Flag",
+    aliases: ["Cedar Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_oman_current",
+    entityId: "ent_oman",
+    assetId: "ast_oman_current",
+    displayName: "National Flag",
+    aliases: ["Omani Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1995,
+    endYear: null
+  },
+  {
+    id: "var_qatar_current",
+    entityId: "ent_qatar",
+    assetId: "ast_qatar_current",
+    displayName: "National Flag",
+    aliases: ["Al Adaam"],
+    tags: ["official", "current", "national"],
+    startYear: 1971,
+    endYear: null
+  },
+  {
+    id: "var_saudi_arabia_current",
+    entityId: "ent_saudi_arabia",
+    assetId: "ast_saudi_arabia_current",
+    displayName: "National Flag",
+    aliases: [
+      "Green Flag",
+      "Shahada Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1973,
+    endYear: null
+  },
+  {
+    id: "var_palestine_current",
+    entityId: "ent_palestine",
+    assetId: "ast_palestine_current",
+    displayName: "National Flag",
+    aliases: [
+      "Palestinian Flag",
+      "Flag of the State of Palestine"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1988,
+    endYear: null
+  },
+  {
+    id: "var_syria_current",
+    entityId: "ent_syria",
+    assetId: "ast_syria_current",
+    displayName: "National Flag",
+    aliases: [
+      "Syrian Independence Flag",
+      "Revolution Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 2025,
+    endYear: null
+  },
+  {
+    id: "var_united_arab_emirates_current",
+    entityId: "ent_united_arab_emirates",
+    assetId: "ast_united_arab_emirates_current",
+    displayName: "National Flag",
+    aliases: [
+      "UAE Flag",
+      "Emirati Flag"
+    ],
+    tags: ["official", "current", "national"],
+    startYear: 1971,
+    endYear: null
+  },
+  {
+    id: "var_yemen_current",
+    entityId: "ent_yemen",
+    assetId: "ast_yemen_current",
+    displayName: "National Flag",
+    aliases: ["Yemeni Flag"],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+
+  /*
+    First-pass European countries, territories and disputed entities.
+  */
+  {
+    id: "var_aland_current",
+    entityId: "ent_aland",
+    assetId: "ast_aland_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1954,
+    endYear: null
+  },
+  {
+    id: "var_albania_current",
+    entityId: "ent_albania",
+    assetId: "ast_albania_current",
+    displayName: "National Flag",
+    aliases: ["Flamuri Kombëtar"],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_andorra_current",
+    entityId: "ent_andorra",
+    assetId: "ast_andorra_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "state"],
+    startYear: 1993,
+    endYear: null
+  },
+  {
+    id: "var_austria_current",
+    entityId: "ent_austria",
+    assetId: "ast_austria_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 1945,
+    endYear: null
+  },
+  {
+    id: "var_austria_state",
+    entityId: "ent_austria",
+    assetId: "ast_austria_state",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "state"],
+    startYear: 1945,
+    endYear: null
+  },
+  /*
+    Austrian Länder.
+  */
+  {
+    id: "var_austria_burgenland_state_current",
+    entityId: "ent_austria_burgenland",
+    assetId: "ast_burgenland_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Burgenland", "State Flag of Burgenland"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_burgenland_civil_current",
+    entityId: "ent_austria_burgenland",
+    assetId: "ast_burgenland_civil_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Burgenland"],
+    tags: ["official", "current", "civil", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_carinthia_state_current",
+    entityId: "ent_austria_carinthia",
+    assetId: "ast_carinthia_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Carinthia", "State Flag of Carinthia"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_carinthia_civil_current",
+    entityId: "ent_austria_carinthia",
+    assetId: "ast_carinthia_civil_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Carinthia"],
+    tags: ["official", "current", "civil", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_lower_austria_state_current",
+    entityId: "ent_austria_lower_austria",
+    assetId: "ast_lower_austria_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Lower Austria", "State Flag of Lower Austria"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_lower_austria_civil_current",
+    entityId: "ent_austria_lower_austria",
+    assetId: "ast_lower_austria_civil_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Lower Austria"],
+    tags: ["official", "current", "civil", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_salzburg_state_current",
+    entityId: "ent_austria_salzburg",
+    assetId: "ast_salzburg_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Salzburg", "State Flag of Salzburg"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_salzburg_civil_current",
+    entityId: "ent_austria_salzburg",
+    assetId: "ast_salzburg_vienna_vorarlberg_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Salzburg"],
+    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    quizVisualGroupId: "red_white_horizontal_bicolour_dark",
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_styria_state_current",
+    entityId: "ent_austria_styria",
+    assetId: "ast_styria_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Styria", "State Flag of Styria"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_styria_civil_current",
+    entityId: "ent_austria_styria",
+    assetId: "ast_styria_civil_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Styria"],
+    tags: ["official", "current", "civil", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_tyrol_state_current",
+    entityId: "ent_austria_tyrol",
+    assetId: "ast_tyrol_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Tyrol", "State Flag of Tyrol", "Flag of Tirol"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_tyrol_civil_current",
+    entityId: "ent_austria_tyrol",
+    assetId: "ast_tyrol_upper_austria_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Tyrol", "Civil Flag of Tirol"],
+    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    quizVisualGroupId: "white_red_horizontal_bicolour",
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_upper_austria_state_current",
+    entityId: "ent_austria_upper_austria",
+    assetId: "ast_upper_austria_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Upper Austria", "State Flag of Upper Austria"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_upper_austria_civil_current",
+    entityId: "ent_austria_upper_austria",
+    assetId: "ast_tyrol_upper_austria_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Upper Austria"],
+    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    quizVisualGroupId: "white_red_horizontal_bicolour",
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_vienna_state_current",
+    entityId: "ent_austria_vienna",
+    assetId: "ast_vienna_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Vienna", "State Flag of Vienna", "Flag of Wien"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_vienna_civil_current",
+    entityId: "ent_austria_vienna",
+    assetId: "ast_salzburg_vienna_vorarlberg_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Vienna", "Civil Flag of Wien"],
+    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    quizVisualGroupId: "red_white_horizontal_bicolour_dark",
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_vorarlberg_state_current",
+    entityId: "ent_austria_vorarlberg",
+    assetId: "ast_vorarlberg_state_current",
+    displayName: "State Flag",
+    aliases: ["Flag of Vorarlberg", "State Flag of Vorarlberg"],
+    tags: ["official", "current", "state", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austria_vorarlberg_civil_current",
+    entityId: "ent_austria_vorarlberg",
+    assetId: "ast_salzburg_vienna_vorarlberg_current",
+    displayName: "Civil Flag",
+    aliases: ["State Colours", "Civil Flag of Vorarlberg"],
+    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    quizVisualGroupId: "red_white_horizontal_bicolour_dark",
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belarus_current",
+    entityId: "ent_belarus",
+    assetId: "ast_belarus_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2012,
+    endYear: null
+  },
+  {
+    id: "var_belgium_current",
+    entityId: "ent_belgium",
+    assetId: "ast_belgium_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1831,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_current",
+    entityId: "ent_bosnia_and_herzegovina",
+    assetId: "ast_bosnia_and_herzegovina_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1998,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_current",
+    entityId: "ent_bulgaria",
+    assetId: "ast_bulgaria_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1991,
+    endYear: null
+  },
+  {
+    id: "var_croatia_current",
+    entityId: "ent_croatia",
+    assetId: "ast_croatia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_cyprus_current",
+    entityId: "ent_cyprus",
+    assetId: "ast_cyprus_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2006,
+    endYear: null
+  },
+  {
+    id: "var_czechia_current",
+    entityId: "ent_czechia",
+    assetId: "ast_czechia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1993,
+    endYear: null
+  },
+  {
+    id: "var_estonia_current",
+    entityId: "ent_estonia",
+    assetId: "ast_estonia_current",
+    displayName: "National Flag",
+    aliases: ["Sinimustvalge"],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_faroe_islands_current",
+    entityId: "ent_faroe_islands",
+    assetId: "ast_faroe_islands_current",
+    displayName: "National Flag",
+    aliases: ["Merkið"],
+    tags: ["official", "current", "national"],
+    startYear: 1948,
+    endYear: null
+  },
+  {
+    id: "var_finland_current",
+    entityId: "ent_finland",
+    assetId: "ast_finland_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 1918,
+    endYear: null
+  },
+  {
+    id: "var_finland_state",
+    entityId: "ent_finland",
+    assetId: "ast_finland_state",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "state"],
+    startYear: 1918,
+    endYear: null
+  },
+  {
+    id: "var_germany_current",
+    entityId: "ent_germany",
+    assetId: "ast_germany_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 1949,
+    endYear: null
+  },
+  {
+    id: "var_germany_state",
+    entityId: "ent_germany",
+    assetId: "ast_germany_state",
+    displayName: "State Flag",
+    aliases: ["Federal Service Flag"],
+    tags: ["official", "current", "national", "state"],
+    startYear: 1950,
+    endYear: null
+  },
+  /*
+    German Länder.
+  */
+  {
+    id: "var_germany_baden_wurttemberg_current",
+    entityId: "ent_germany_baden_wurttemberg",
+    assetId: "ast_baden_wurttemberg_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Baden-Württemberg", "Flag of Baden-Wuerttemberg"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_bavaria_current_lozengy",
+    entityId: "ent_germany_bavaria",
+    assetId: "ast_bavaria_current_lozengy",
+    displayName: "Lozengy State Flag",
+    aliases: ["Lozenge Flag", "Diamond Flag", "Rautenflagge"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    relatedVariants: {
+      alternatives: ["var_germany_bavaria_current_striped"]
+    }
+  },
+  {
+    id: "var_germany_bavaria_current_striped",
+    entityId: "ent_germany_bavaria",
+    assetId: "ast_bavaria_current_striped",
+    displayName: "Striped State Flag",
+    aliases: ["Stripe Flag", "Streifenflagge"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    relatedVariants: {
+      alternatives: ["var_germany_bavaria_current_lozengy"]
+    }
+  },
+  {
+    id: "var_germany_berlin_current",
+    entityId: "ent_germany_berlin",
+    assetId: "ast_berlin_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Berlin"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_brandenburg_current",
+    entityId: "ent_germany_brandenburg",
+    assetId: "ast_brandenburg_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Brandenburg"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_bremen_current",
+    entityId: "ent_germany_bremen",
+    assetId: "ast_bremen_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Bremen"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_hamburg_current",
+    entityId: "ent_germany_hamburg",
+    assetId: "ast_hamburg_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Hamburg"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_hesse_current",
+    entityId: "ent_germany_hesse",
+    assetId: "ast_hesse_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Hesse", "Flag of Hessen"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_lower_saxony_current",
+    entityId: "ent_germany_lower_saxony",
+    assetId: "ast_lower_saxony_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Lower Saxony", "Flag of Niedersachsen"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_mecklenburg_western_pomerania_current",
+    entityId: "ent_germany_mecklenburg_western_pomerania",
+    assetId: "ast_mecklenburg_western_pomerania_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Mecklenburg-Vorpommern", "Flag of Mecklenburg-Western Pomerania"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_north_rhine_westphalia_current",
+    entityId: "ent_germany_north_rhine_westphalia",
+    assetId: "ast_north_rhine_westphalia_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of North Rhine-Westphalia", "Flag of Nordrhein-Westfalen"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_rhineland_palatinate_current",
+    entityId: "ent_germany_rhineland_palatinate",
+    assetId: "ast_rhineland_palatinate_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Rhineland-Palatinate", "Flag of Rheinland-Pfalz"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_saarland_current",
+    entityId: "ent_germany_saarland",
+    assetId: "ast_saarland_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Saarland"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_saxony_current",
+    entityId: "ent_germany_saxony",
+    assetId: "ast_saxony_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Saxony", "Flag of Sachsen"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_saxony_anhalt_current",
+    entityId: "ent_germany_saxony_anhalt",
+    assetId: "ast_saxony_anhalt_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Saxony-Anhalt", "Flag of Sachsen-Anhalt"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_schleswig_holstein_current",
+    entityId: "ent_germany_schleswig_holstein",
+    assetId: "ast_schleswig_holstein_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Schleswig-Holstein"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_germany_thuringia_current",
+    entityId: "ent_germany_thuringia",
+    assetId: "ast_thuringia_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Thuringia", "Flag of Thüringen"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
+    id: "var_gibraltar_current",
+    entityId: "ent_gibraltar",
+    assetId: "ast_gibraltar_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1982,
+    endYear: null
+  },
+  {
+    id: "var_greece_current",
+    entityId: "ent_greece",
+    assetId: "ast_greece_current",
+    displayName: "National Flag",
+    aliases: ["Galanolefki"],
+    tags: ["official", "current", "national"],
+    startYear: 1978,
+    endYear: null
+  },
+  {
+    id: "var_hungary_current",
+    entityId: "ent_hungary",
+    assetId: "ast_hungary_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 1957,
+    endYear: null
+  },
+  {
+    id: "var_hungary_state_unofficial",
+    entityId: "ent_hungary",
+    assetId: "ast_hungary_state_unofficial",
+    displayName: "Unofficial State Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "national", "state"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_iceland_current",
+    entityId: "ent_iceland",
+    assetId: "ast_iceland_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1944,
+    endYear: null
+  },
+  {
+    id: "var_ireland_current",
+    entityId: "ent_ireland",
+    assetId: "ast_ireland_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1937,
+    endYear: null
+  },
+  {
+    id: "var_italy_current",
+    entityId: "ent_italy",
+    assetId: "ast_italy_current",
+    displayName: "National Flag",
+    aliases: ["Il Tricolore"],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 1946,
+    endYear: null
+  },
+  {
+    id: "var_italy_civil",
+    entityId: "ent_italy",
+    assetId: "ast_italy_civil",
+    displayName: "Civil Ensign",
+    aliases: [],
+    tags: ["official", "current", "civil_ensign"],
+    startYear: 1947,
+    endYear: null
+  },
+  {
+    id: "var_italy_state",
+    entityId: "ent_italy",
+    assetId: "ast_italy_state",
+    displayName: "State Ensign",
+    aliases: [],
+    tags: ["official", "current", "state_ensign"],
+    startYear: 1947,
+    endYear: null
+  },
+  {
+    id: "var_italy_naval",
+    entityId: "ent_italy",
+    assetId: "ast_italy_naval",
+    displayName: "Naval Ensign",
+    aliases: [],
+    tags: ["official", "current", "naval_ensign"],
+    startYear: 1947,
+    endYear: null
+  },
+  /*
+    Italy current regional variants.
+  */,
+  {
+    id: "var_italy_abruzzo_current",
+    entityId: "ent_italy_abruzzo",
+    assetId: "ast_abruzzo_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_aosta_valley_current",
+    entityId: "ent_italy_aosta_valley",
+    assetId: "ast_aosta_valley_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_apulia_current",
+    entityId: "ent_italy_apulia",
+    assetId: "ast_apulia_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_basilicata_current",
+    entityId: "ent_italy_basilicata",
+    assetId: "ast_basilicata_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_calabria_current",
+    entityId: "ent_italy_calabria",
+    assetId: "ast_calabria_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_campania_current",
+    entityId: "ent_italy_campania",
+    assetId: "ast_campania_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_emilia_romagna_current",
+    entityId: "ent_italy_emilia_romagna",
+    assetId: "ast_emilia_romagna_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_friuli_venezia_giulia_current",
+    entityId: "ent_italy_friuli_venezia_giulia",
+    assetId: "ast_friuli_venezia_giulia_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_lazio_current",
+    entityId: "ent_italy_lazio",
+    assetId: "ast_lazio_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_liguria_current",
+    entityId: "ent_italy_liguria",
+    assetId: "ast_liguria_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_lombardy_current",
+    entityId: "ent_italy_lombardy",
+    assetId: "ast_lombardy_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_marche_current",
+    entityId: "ent_italy_marche",
+    assetId: "ast_marche_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_molise_current",
+    entityId: "ent_italy_molise",
+    assetId: "ast_molise_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_piedmont_current",
+    entityId: "ent_italy_piedmont",
+    assetId: "ast_piedmont_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_sardinia_current",
+    entityId: "ent_italy_sardinia",
+    assetId: "ast_sardinia_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_sicily_current",
+    entityId: "ent_italy_sicily",
+    assetId: "ast_sicily_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_trentino_alto_adige_sudtirol_current",
+    entityId: "ent_italy_trentino_alto_adige_sudtirol",
+    assetId: "ast_trentino_alto_south_tyrol_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_tuscany_current",
+    entityId: "ent_italy_tuscany",
+    assetId: "ast_tuscany_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_umbria_current",
+    entityId: "ent_italy_umbria",
+    assetId: "ast_umbria_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_italy_veneto_current",
+    entityId: "ent_italy_veneto",
+    assetId: "ast_veneto_current",
+    displayName: "Regional Flag",
+    aliases: [],
+    tags: ["current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+
+
+  /*
+    Italy current-region text-removed quiz-safe variants.
+  */
+  {
+    id: "var_italy_apulia_current_text_removed",
+    entityId: "ent_italy_apulia",
+    assetId: "ast_apulia_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Apulia"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_italy_apulia_current"
+  },
+  {
+    id: "var_italy_calabria_current_text_removed",
+    entityId: "ent_italy_calabria",
+    assetId: "ast_calabria_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Calabria"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_italy_calabria_current"
+  },
+  {
+    id: "var_italy_emilia_romagna_current_text_removed",
+    entityId: "ent_italy_emilia_romagna",
+    assetId: "ast_emilia_romagna_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Emilia-Romagna", "Flag of Emilia Romagna"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_italy_emilia_romagna_current"
+  },
+  {
+    id: "var_italy_lazio_current_text_removed",
+    entityId: "ent_italy_lazio",
+    assetId: "ast_lazio_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Lazio"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_italy_lazio_current"
+  },
+  {
+    id: "var_italy_molise_current_text_removed",
+    entityId: "ent_italy_molise",
+    assetId: "ast_molise_current_text_removed",
+    displayName: "Regional Flag - Text Removed",
+    aliases: ["Flag of Molise"],
+    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_italy_molise_current"
+  },
+  {
+    id: "var_kosovo_current",
+    entityId: "ent_kosovo",
+    assetId: "ast_kosovo_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2008,
+    endYear: null
+  },
+  {
+    id: "var_latvia_current",
+    entityId: "ent_latvia",
+    assetId: "ast_latvia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_liechtenstein_current",
+    entityId: "ent_liechtenstein",
+    assetId: "ast_liechtenstein_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1982,
+    endYear: null
+  },
+  {
+    id: "var_liechtenstein_state",
+    entityId: "ent_liechtenstein",
+    assetId: "ast_liechtenstein_state",
+    displayName: "State Flag",
+    aliases: ["Government Flag"],
+    tags: ["official", "current", "state"],
+    startYear: 1982,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_current",
+    entityId: "ent_lithuania",
+    assetId: "ast_lithuania_current",
+    displayName: "National Flag",
+    aliases: ["Trispalvė"],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 1988,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_state",
+    entityId: "ent_lithuania",
+    assetId: "ast_lithuania_state",
+    displayName: "State Flag",
+    aliases: ["Vytis Flag"],
+    tags: ["official", "current", "national", "state"],
+    startYear: 2004,
+    endYear: null
+  },
+  {
+    id: "var_luxembourg_current",
+    entityId: "ent_luxembourg",
+    assetId: "ast_luxembourg_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1972,
+    endYear: null
+  },
+  {
+    id: "var_malta_current",
+    entityId: "ent_malta",
+    assetId: "ast_malta_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1964,
+    endYear: null
+  },
+  {
+    id: "var_moldova_current",
+    entityId: "ent_moldova",
+    assetId: "ast_moldova_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_monaco_current",
+    entityId: "ent_monaco",
+    assetId: "ast_monaco_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 1881,
+    endYear: null
+  },
+  {
+    id: "var_monaco_state",
+    entityId: "ent_monaco",
+    assetId: "ast_monaco_state",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "state"],
+    startYear: 1881,
+    endYear: null
+  },
+  {
+    id: "var_montenegro_current",
+    entityId: "ent_montenegro",
+    assetId: "ast_montenegro_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 2004,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_current",
+    entityId: "ent_north_macedonia",
+    assetId: "ast_north_macedonia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1995,
+    endYear: null
+  },
+  {
+    id: "var_northern_cyprus_current",
+    entityId: "ent_northern_cyprus",
+    assetId: "ast_northern_cyprus_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_norway_current",
+    entityId: "ent_norway",
+    assetId: "ast_norway_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1821,
+    endYear: null
+  },
+  {
+    id: "var_poland_current",
+    entityId: "ent_poland",
+    assetId: "ast_poland_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil", "ambiguous_quiz_visual"],
+	quizVisualGroupId: "white_red_horizontal_bicolour",
+    startYear: 1919,
+    endYear: null
+  },
+  {
+    id: "var_poland_state",
+    entityId: "ent_poland",
+    assetId: "ast_poland_state",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "state"],
+    startYear: 1919,
+    endYear: null
+  },
+  {
+    id: "var_portugal_current",
+    entityId: "ent_portugal",
+    assetId: "ast_portugal_current",
+    displayName: "National Flag",
+    aliases: ["Bandeira das Quinas"],
+    tags: ["official", "current", "national"],
+    startYear: 1911,
+    endYear: null
+  },
+  {
+    id: "var_romania_current",
+    entityId: "ent_romania",
+    assetId: "ast_romania_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "ambiguous_quiz_visual"],
+    quizVisualGroupId: "blue_yellow_red_vertical_tricolour",
+    startYear: 1989,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_current",
+    entityId: "ent_san_marino",
+    assetId: "ast_san_marino_current",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "state"],
+    startYear: 2011,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_civil",
+    entityId: "ent_san_marino",
+    assetId: "ast_san_marino_civil",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 2011,
+    endYear: null
+  },
+  {
+    id: "var_serbia_current",
+    entityId: "ent_serbia",
+    assetId: "ast_serbia_current",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "state"],
+    startYear: 2010,
+    endYear: null
+  },
+  {
+    id: "var_serbia_civil",
+    entityId: "ent_serbia",
+    assetId: "ast_serbia_civil",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "national", "civil"],
+    startYear: 2010,
+    endYear: null
+  },
+  {
+    id: "var_slovakia_current",
+    entityId: "ent_slovakia",
+    assetId: "ast_slovakia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_slovenia_current",
+    entityId: "ent_slovenia",
+    assetId: "ast_slovenia_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1991,
+    endYear: null
+  },
+  {
+    id: "var_sweden_current",
+    entityId: "ent_sweden",
+    assetId: "ast_sweden_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1906,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_current",
+    entityId: "ent_switzerland",
+    assetId: "ast_switzerland_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1889,
+    endYear: null
+  },
+  {
+    id: "var_transnistria_current_obverse",
+    entityId: "ent_transnistria",
+    assetId: "ast_transnistria_current_obverse",
+    displayName: "Obverse",
+    aliases: [],
+    tags: ["official", "current", "national", "obverse"],
+    startYear: 2000,
+    endYear: null,
+    relatedVariants: {
+      reverses: ["var_transnistria_current_reverse"]
+    }
+  },
+  {
+    id: "var_transnistria_current_reverse",
+    entityId: "ent_transnistria",
+    assetId: "ast_transnistria_current_reverse",
+    displayName: "Reverse",
+    aliases: [],
+    tags: ["official", "current", "national", "reverse"],
+    startYear: 2000,
+    endYear: null,
+    relatedVariants: {
+      reverses: ["var_transnistria_current_obverse"]
+    }
+  },
+  {
+    id: "var_ukraine_current",
+    entityId: "ent_ukraine",
+    assetId: "ast_ukraine_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_vatican_city_current",
+    entityId: "ent_vatican_city",
+    assetId: "ast_vatican_city_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1929,
+    endYear: null
+  },
+
+  /*
+    Spain and its autonomous communities and cities.
+  */
+  {
+    id: "var_spain_current",
+    entityId: "ent_spain",
+    assetId: "ast_spain_current",
+    displayName: "National Flag",
+    aliases: ["La Rojigualda"],
+    tags: ["official", "current", "national", "state"],
+    startYear: 1981,
+    endYear: null
+  },
+  {
+    id: "var_spain_civil",
+    entityId: "ent_spain",
+    assetId: "ast_spain_civil",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "civil", "national"],
+    startYear: 1981,
+    endYear: null
+  },
+  {
+    id: "var_andalucia_current",
+    entityId: "ent_andalucia",
+    assetId: "ast_andalucia_current",
+    displayName: "Official Flag",
+    aliases: ["Arbonaida"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1982,
+    endYear: null
+  },
+  {
+    id: "var_aragon_current",
+    entityId: "ent_aragon",
+    assetId: "ast_aragon_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_asturias_current",
+    entityId: "ent_asturias",
+    assetId: "ast_asturias_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_balearic_islands_current",
+    entityId: "ent_balearic_islands",
+    assetId: "ast_balearic_islands_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1983,
+    endYear: null
+  },
+  {
+    id: "var_basque_country_current",
+    entityId: "ent_basque_country",
+    assetId: "ast_basque_country_current",
+    displayName: "Official Flag",
+    aliases: ["Ikurriña"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1977,
+    endYear: null
+  },
+  {
+    id: "var_canary_islands_current",
+    entityId: "ent_canary_islands",
+    assetId: "ast_canary_islands_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1982,
+    endYear: null
+  },
+  {
+    id: "var_cantabria_current",
+    entityId: "ent_cantabria",
+    assetId: "ast_cantabria_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_castilla_la_mancha_current",
+    entityId: "ent_castilla_la_mancha",
+    assetId: "ast_castilla_la_mancha_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1982,
+    endYear: null
+  },
+  {
+    id: "var_castilla_y_leon_current",
+    entityId: "ent_castilla_y_leon",
+    assetId: "ast_castilla_y_leon_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1983,
+    endYear: null
+  },
+  {
+    id: "var_catalonia_current",
+    entityId: "ent_catalonia",
+    assetId: "ast_catalonia_current",
+    displayName: "Official Flag",
+    aliases: ["Senyera"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1979,
+    endYear: null
+  },
+  {
+    id: "var_ceuta_current",
+    entityId: "ent_ceuta",
+    assetId: "ast_ceuta_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Saint Vincent"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1995,
+    endYear: null
+  },
+  {
+    id: "var_extremadura_current",
+    entityId: "ent_extremadura",
+    assetId: "ast_extremadura_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1985,
+    endYear: null
+  },
+  {
+    id: "var_galicia_current",
+    entityId: "ent_galicia",
+    assetId: "ast_galicia_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
+    id: "var_la_rioja_current",
+    entityId: "ent_la_rioja",
+    assetId: "ast_la_rioja_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1979,
+    endYear: null
+  },
+  {
+    id: "var_madrid_current",
+    entityId: "ent_madrid",
+    assetId: "ast_madrid_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1983,
+    endYear: null
+  },
+  {
+    id: "var_melilla_current",
+    entityId: "ent_melilla",
+    assetId: "ast_melilla_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1995,
+    endYear: null
+  },
+  {
+    id: "var_murcia_current",
+    entityId: "ent_murcia",
+    assetId: "ast_murcia_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1979,
+    endYear: null
+  },
+  {
+    id: "var_navarra_current",
+    entityId: "ent_navarra",
+    assetId: "ast_navarra_current",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1981,
+    endYear: null
+  },
+  {
+    id: "var_valencia_current",
+    entityId: "ent_valencia",
+    assetId: "ast_valencia_current",
+    displayName: "Official Flag",
+    aliases: ["Senyera Coronada"],
+    tags: ["official", "current", "first_level_subdivision"],
+    startYear: 1984,
+    endYear: null
+  },
+
+  /*
+    Technical quiz-safe Spain variants.
+
+    text_removed variants are displayed during a quiz but resolve to their
+    base variant for Gallery display and answer reveal.
+  */
+  {
+    id: "var_andalucia_current_text_removed",
+    entityId: "ent_andalucia",
+    assetId: "ast_andalucia_current_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1982,
+    endYear: null,
+    baseVariantId: "var_andalucia_current"
+  },
+
+  {
+    id: "var_united_kingdom_current",
+    entityId: "ent_united_kingdom",
+    assetId: "ast_united_kingdom_current",
+    displayName: "Union Flag",
+    aliases: ["Union Jack"],
+    tags: ["official", "current", "national"],
+    startYear: 1801,
+    endYear: null
+  },
+    /*
+    United Kingdom constituent-country flags.
+  */
+  {
+    id: "var_england_current",
+    entityId: "ent_england",
+    assetId: "ast_england_current",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["official", "current", "national"],
+    startYear: 1552,
+    endYear: null
+  },
+  {
+    id: "var_scotland_current",
+    entityId: "ent_scotland",
+    assetId: "ast_scotland_current",
+    displayName: "National Flag",
+    aliases: ["Saltire", "Saint Andrew's Cross"],
+    tags: ["official", "current", "national"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_wales_current",
+    entityId: "ent_wales",
+    assetId: "ast_wales_current",
+    displayName: "National Flag",
+    aliases: ["Y Ddraig Goch", "Red Dragon"],
+    tags: ["official", "current", "national"],
+    startYear: 1959,
+    endYear: null
+  },
+  {
+    id: "var_northern_ireland_unofficial",
+    entityId: "ent_northern_ireland",
+    assetId: "ast_northern_ireland_current",
+    displayName: "Ulster Banner",
+    aliases: [],
+    tags: ["unofficial", "current", "national"],
+    startYear: 1953,
+    endYear: null
+  },
+
+  /*
+    Current English ceremonial county flags.
+  */
+  {
+    id: "var_bedfordshire_current",
+    entityId: "ent_bedfordshire",
+    assetId: "ast_bedfordshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_berkshire_current",
+    entityId: "ent_berkshire",
+    assetId: "ast_berkshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_buckinghamshire_current",
+    entityId: "ent_buckinghamshire",
+    assetId: "ast_buckinghamshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cambridgeshire_current",
+    entityId: "ent_cambridgeshire",
+    assetId: "ast_cambridgeshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cheshire_current",
+    entityId: "ent_cheshire",
+    assetId: "ast_cheshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_city_of_london_current",
+    entityId: "ent_city_of_london",
+    assetId: "ast_city_of_london_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cornwall_current",
+    entityId: "ent_cornwall",
+    assetId: "ast_cornwall_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cumbria_current",
+    entityId: "ent_cumbria",
+    assetId: "ast_cumbria_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_derbyshire_current",
+    entityId: "ent_derbyshire",
+    assetId: "ast_derbyshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_devon_current",
+    entityId: "ent_devon",
+    assetId: "ast_devon_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_dorset_current",
+    entityId: "ent_dorset",
+    assetId: "ast_dorset_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_county_durham_current",
+    entityId: "ent_county_durham",
+    assetId: "ast_county_durham_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_east_riding_of_yorkshire_current",
+    entityId: "ent_east_riding_of_yorkshire",
+    assetId: "ast_east_riding_of_yorkshire",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_east_sussex_current",
+    entityId: "ent_east_sussex",
+    assetId: "ast_east_sussex_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_essex_current",
+    entityId: "ent_essex",
+    assetId: "ast_essex_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_gloucestershire_current",
+    entityId: "ent_gloucestershire",
+    assetId: "ast_gloucestershire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_greater_london_current",
+    entityId: "ent_greater_london",
+    assetId: "ast_greater_london_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_greater_manchester_current",
+    entityId: "ent_greater_manchester",
+    assetId: "ast_greater_manchester_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hampshire_current",
+    entityId: "ent_hampshire",
+    assetId: "ast_hampshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_herefordshire_current",
+    entityId: "ent_herefordshire",
+    assetId: "ast_herefordshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hertfordshire_current",
+    entityId: "ent_hertfordshire",
+    assetId: "ast_hertfordshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_isle_of_wight_current",
+    entityId: "ent_isle_of_wight",
+    assetId: "ast_isle_of_wight_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_kent_current",
+    entityId: "ent_kent",
+    assetId: "ast_kent_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lancashire_current",
+    entityId: "ent_lancashire",
+    assetId: "ast_lancashire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_leicestershire_current",
+    entityId: "ent_leicestershire",
+    assetId: "ast_leicestershire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lincolnshire_current",
+    entityId: "ent_lincolnshire",
+    assetId: "ast_lincolnshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_merseyside_current",
+    entityId: "ent_merseyside",
+    assetId: "ast_merseyside_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norfolk_current",
+    entityId: "ent_norfolk",
+    assetId: "ast_norfolk_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_yorkshire_current",
+    entityId: "ent_north_yorkshire",
+    assetId: "ast_north_yorkshire_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_northamptonshire_current",
+    entityId: "ent_northamptonshire",
+    assetId: "ast_northamptonshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_northumberland_current",
+    entityId: "ent_northumberland",
+    assetId: "ast_northumberland_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_nottinghamshire_current",
+    entityId: "ent_nottinghamshire",
+    assetId: "ast_nottinghamshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_oxfordshire_current",
+    entityId: "ent_oxfordshire",
+    assetId: "ast_oxfordshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_rutland_current",
+    entityId: "ent_rutland",
+    assetId: "ast_rutland_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_shropshire_current",
+    entityId: "ent_shropshire",
+    assetId: "ast_shropshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_somerset_current",
+    entityId: "ent_somerset",
+    assetId: "ast_somerset_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_south_yorkshire_current",
+    entityId: "ent_south_yorkshire",
+    assetId: "ast_south_yorkshire_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_staffordshire_current",
+    entityId: "ent_staffordshire",
+    assetId: "ast_staffordshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_suffolk_current",
+    entityId: "ent_suffolk",
+    assetId: "ast_suffolk_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_surrey_current",
+    entityId: "ent_surrey",
+    assetId: "ast_surrey_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_tyne_and_wear_current",
+    entityId: "ent_tyne_and_wear",
+    assetId: "ast_tyne_and_wear_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_warwickshire_current",
+    entityId: "ent_warwickshire",
+    assetId: "ast_warwickshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_west_midlands_current",
+    entityId: "ent_west_midlands",
+    assetId: "ast_west_midlands_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_west_sussex_current",
+    entityId: "ent_west_sussex",
+    assetId: "ast_west_sussex_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_west_yorkshire_modern",
+    entityId: "ent_west_yorkshire",
+    assetId: "ast_west_yorkshire_unofficial",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_wiltshire_current",
+    entityId: "ent_wiltshire",
+    assetId: "ast_wiltshire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_worcestershire_current",
+    entityId: "ent_worcestershire",
+    assetId: "ast_worcestershire_current",
+    displayName: "Ceremonial County Flag",
+    aliases: [],
+    tags: ["official", "current", "second_level_subdivision"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Flags representing the historic counties of England.
+  */
+  {
+    id: "var_bedfordshire_historic",
+    entityId: "ent_bedfordshire_historic",
+    assetId: "ast_bedfordshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_berkshire_historic",
+    entityId: "ent_berkshire_historic",
+    assetId: "ast_berkshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_buckinghamshire_historic",
+    entityId: "ent_buckinghamshire_historic",
+    assetId: "ast_buckinghamshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cambridgeshire_historic",
+    entityId: "ent_cambridgeshire_historic",
+    assetId: "ast_cambridgeshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cheshire_historic",
+    entityId: "ent_cheshire_historic",
+    assetId: "ast_cheshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cornwall_historic",
+    entityId: "ent_cornwall_historic",
+    assetId: "ast_cornwall_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cumberland_historic",
+    entityId: "ent_cumberland_historic",
+    assetId: "ast_cumberland_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_derbyshire_historic",
+    entityId: "ent_derbyshire_historic",
+    assetId: "ast_derbyshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_devon_historic",
+    entityId: "ent_devon_historic",
+    assetId: "ast_devon_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_dorset_historic",
+    entityId: "ent_dorset_historic",
+    assetId: "ast_dorset_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_durham_historic",
+    entityId: "ent_durham_historic",
+    assetId: "ast_county_durham_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_essex_historic",
+    entityId: "ent_essex_historic",
+    assetId: "ast_essex_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_gloucestershire_historic",
+    entityId: "ent_gloucestershire_historic",
+    assetId: "ast_gloucestershire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hampshire_historic",
+    entityId: "ent_hampshire_historic",
+    assetId: "ast_hampshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_herefordshire_historic",
+    entityId: "ent_herefordshire_historic",
+    assetId: "ast_herefordshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hertfordshire_historic",
+    entityId: "ent_hertfordshire_historic",
+    assetId: "ast_hertfordshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_huntingdonshire_historic",
+    entityId: "ent_huntingdonshire_historic",
+    assetId: "ast_huntingdonshire",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_kent_historic",
+    entityId: "ent_kent_historic",
+    assetId: "ast_kent_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lancashire_historic",
+    entityId: "ent_lancashire_historic",
+    assetId: "ast_lancashire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_leicestershire_historic",
+    entityId: "ent_leicestershire_historic",
+    assetId: "ast_leicestershire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lincolnshire_historic",
+    entityId: "ent_lincolnshire_historic",
+    assetId: "ast_lincolnshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_middlesex_historic",
+    entityId: "ent_middlesex_historic",
+    assetId: "ast_middlesex",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norfolk_historic",
+    entityId: "ent_norfolk_historic",
+    assetId: "ast_norfolk_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_northamptonshire_historic",
+    entityId: "ent_northamptonshire_historic",
+    assetId: "ast_northamptonshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_northumberland_historic",
+    entityId: "ent_northumberland_historic",
+    assetId: "ast_northumberland_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_nottinghamshire_historic",
+    entityId: "ent_nottinghamshire_historic",
+    assetId: "ast_nottinghamshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_oxfordshire_historic",
+    entityId: "ent_oxfordshire_historic",
+    assetId: "ast_oxfordshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_rutland_historic",
+    entityId: "ent_rutland_historic",
+    assetId: "ast_rutland_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_shropshire_historic",
+    entityId: "ent_shropshire_historic",
+    assetId: "ast_shropshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_somerset_historic",
+    entityId: "ent_somerset_historic",
+    assetId: "ast_somerset_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_staffordshire_historic",
+    entityId: "ent_staffordshire_historic",
+    assetId: "ast_staffordshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_suffolk_historic",
+    entityId: "ent_suffolk_historic",
+    assetId: "ast_suffolk_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_surrey_historic",
+    entityId: "ent_surrey_historic",
+    assetId: "ast_surrey_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sussex_historic",
+    entityId: "ent_sussex_historic",
+    assetId: "ast_sussex",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_warwickshire_historic",
+    entityId: "ent_warwickshire_historic",
+    assetId: "ast_warwickshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_westmorland_historic",
+    entityId: "ent_westmorland_historic",
+    assetId: "ast_westmorland",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_wiltshire_historic",
+    entityId: "ent_wiltshire_historic",
+    assetId: "ast_wiltshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_worcestershire_historic",
+    entityId: "ent_worcestershire_historic",
+    assetId: "ast_worcestershire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_yorkshire_historic",
+    entityId: "ent_yorkshire_historic",
+    assetId: "ast_yorkshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Flags representing the historic Ridings of Yorkshire.
+  */
+  {
+    id: "var_east_riding_of_yorkshire_historic",
+    entityId: "ent_east_riding_of_yorkshire_historic",
+    assetId: "ast_east_riding_of_yorkshire",
+    displayName: "Historic Riding Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_riding_of_yorkshire",
+    entityId: "ent_north_riding_of_yorkshire",
+    assetId: "ast_north_riding_of_yorkshire",
+    displayName: "Historic Riding Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_west_riding_historic",
+    entityId: "ent_west_riding_of_yorkshire",
+    assetId: "ast_west_yorkshire_unofficial",
+    displayName: "Historical Riding Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Current English island flags.
+  */
+  {
+    id: "var_lundy_current",
+    entityId: "ent_lundy",
+    assetId: "ast_lundy_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_isle_of_portland_current",
+    entityId: "ent_isle_of_portland",
+    assetId: "ast_isle_of_portland_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_isle_of_purbeck_current",
+    entityId: "ent_isle_of_purbeck",
+    assetId: "ast_isle_of_purbeck_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Flags representing historic Scottish counties.
+  */
+  {
+    id: "var_aberdeenshire_historic",
+    entityId: "ent_aberdeenshire",
+    assetId: "ast_aberdeenshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_banffshire_historic",
+    entityId: "ent_banffshire",
+    assetId: "ast_banffshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_berwickshire_historic",
+    entityId: "ent_berwickshire",
+    assetId: "ast_berwickshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_caithness_historic",
+    entityId: "ent_caithness",
+    assetId: "ast_caithness_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_east_lothian_historic",
+    entityId: "ent_east_lothian",
+    assetId: "ast_east_lothian_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_kirkcudbrightshire_historic",
+    entityId: "ent_kirkcudbrightshire",
+    assetId: "ast_kirkcudbrightshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_morayshire_historic",
+    entityId: "ent_morayshire",
+    assetId: "ast_morayshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_orkney_historic",
+    entityId: "ent_orkney",
+    assetId: "ast_orkney_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_shetland_historic",
+    entityId: "ent_shetland",
+    assetId: "ast_shetland_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sutherland_historic",
+    entityId: "ent_sutherland",
+    assetId: "ast_sutherland_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Current Scottish island flags.
+  */
+  {
+    id: "var_barra_current",
+    entityId: "ent_barra",
+    assetId: "ast_barra_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_great_bernera_current",
+    entityId: "ent_great_bernera",
+    assetId: "ast_great_bernera_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_outer_hebrides_current",
+    entityId: "ent_outer_hebrides",
+    assetId: "ast_outer_hebrides_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_skye_current",
+    entityId: "ent_skye",
+    assetId: "ast_skye_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_south_uist_current",
+    entityId: "ent_south_uist",
+    assetId: "ast_south_uist_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_tiree_current",
+    entityId: "ent_tiree",
+    assetId: "ast_tiree_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Flags representing historic Welsh counties.
+  */
+  {
+    id: "var_anglesey_historic",
+    entityId: "ent_anglesey",
+    assetId: "ast_anglesey_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_brecknockshire_historic",
+    entityId: "ent_brecknockshire",
+    assetId: "ast_brecknockshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_caernarfonshire_historic",
+    entityId: "ent_caernarfonshire",
+    assetId: "ast_caernarfonshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_cardiganshire_historic",
+    entityId: "ent_cardiganshire",
+    assetId: "ast_cardiganshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_flintshire_historic",
+    entityId: "ent_flintshire",
+    assetId: "ast_flintshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_glamorgan_historic",
+    entityId: "ent_glamorgan",
+    assetId: "ast_glamorgan_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_merionethshire_historic",
+    entityId: "ent_merionethshire",
+    assetId: "ast_merionethshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_monmouthshire_historic",
+    entityId: "ent_monmouthshire",
+    assetId: "ast_monmouthshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_pembrokeshire_historic",
+    entityId: "ent_pembrokeshire",
+    assetId: "ast_pembrokeshire_current",
+    displayName: "Historic County Flag",
+    aliases: [],
+    tags: ["historical"],
+    startYear: null,
+    endYear: null
+  },
+  
+  /*
+    Channel Islands.
+  */
+{
+  id: "var_alderney_current",
+  entityId: "ent_alderney",
+  assetId: "ast_alderney_current",
+  displayName: "Island Flag",
+  aliases: [],
+  tags: ["official", "current"],
+  startYear: 1993,
+  endYear: null
+},
+{
+  id: "var_brecqhou_current",
+  entityId: "ent_brecqhou",
+  assetId: "ast_brecqhou_current",
+  displayName: "Unofficial Flag",
+  aliases: [
+    "Local Flag"
+  ],
+  tags: ["unofficial", "current"],
+  startYear: null,
+  endYear: null
+},
+{
+  id: "var_guernsey_current",
+  entityId: "ent_guernsey",
+  assetId: "ast_guernsey_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1985,
+  endYear: null
+},
+{
+  id: "var_herm_current",
+  entityId: "ent_herm",
+  assetId: "ast_herm_current",
+  displayName: "Unofficial Flag",
+  aliases: [],
+  tags: ["unofficial", "current"],
+  startYear: 1953,
+  startYearPrecision: "circa",
+  endYear: null
+},
+{
+  id: "var_jersey_current",
+  entityId: "ent_jersey",
+  assetId: "ast_jersey_current",
+  displayName: "National Flag",
+  aliases: [],
+  tags: ["official", "current", "national"],
+  startYear: 1981,
+  endYear: null
+},
+{
+  id: "var_lihou_current",
+  entityId: "ent_lihou",
+  assetId: "ast_lihou_current",
+  displayName: "Unofficial Flag",
+  aliases: [],
+  tags: [
+    "unofficial",
+    "current"
+  ],
+  startYear: 2019,
+  endYear: null
+},
+{
+  id: "var_sark_current",
+  entityId: "ent_sark",
+  assetId: "ast_sark_current",
+  displayName: "Island Flag",
+  aliases: [],
+  tags: ["official", "current"],
+  startYear: 2020,
+  endYear: null
+},
+
+/*
+    Technical quiz-safe variants.
+
+    text_removed variants are displayed during a quiz but normally resolve to
+    the entity's default or gallery variant for Gallery and answer reveal.
+  */
+  {
+  id: "var_lihou_current_quiz",
+  entityId: "ent_lihou",
+  assetId: "ast_lihou_current_text_removed",
+  displayName: "Unofficial Flag",
+  aliases: [],
+  tags: ["quiz", "text_removed", "current", "unofficial"],
+  startYear: 2019,
+  endYear: null,
+  // The real variant represented by this technical quiz image.
+    baseVariantId: "var_lihou_current"
+}
+
+];

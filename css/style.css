@@ -1,0 +1,2766 @@
+/* 
+  Basic reset.
+  This helps avoid annoying browser default spacing differences.
+*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+}
+
+/* Main header at the top of the app */
+.app-header {
+  padding: 1rem;
+  background: #1f2933;
+  color: white;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.app-header p {
+  margin: 0.25rem 0 0;
+  color: #d4d4d4;
+}
+
+/*
+  Application shell.
+
+  Medium and narrow screens use one main workspace. Browse and Current
+  Selection are off-canvas drawers controlled by classes on the body.
+
+  Wide screens may pin Browse into a stable left column. Current Selection
+  remains a right-hand drawer at every width.
+*/
+.app-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 800;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.5rem;
+  padding: 0.55rem 1rem;
+  border-bottom: 1px solid #cfd4da;
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.app-toolbar-button {
+  min-height: 2.4rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #aeb5bd;
+  border-radius: 0.4rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.app-toolbar-button:hover {
+  background: #eeeeee;
+}
+
+.app-toolbar-button:focus-visible,
+.drawer-header-button:focus-visible,
+.drawer-close-button:focus-visible,
+.selection-drawer-actions button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.app-toolbar-context {
+  min-width: 0;
+  text-align: center;
+}
+
+.app-toolbar-context-label {
+  display: block;
+  color: #666;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+#currentModeTitle {
+  display: block;
+  margin-top: 0.15rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.app-toolbar-selection-button {
+  display: grid;
+  justify-items: end;
+  line-height: 1.1;
+}
+
+.app-toolbar-selection-summary {
+  margin-top: 0.2rem;
+  color: #555;
+  font-size: 0.75rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.app-toolbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+/* Screen-reader-only text helper. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Sliding light/dark theme toggle in the sticky toolbar. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 4.7rem;
+  min-height: 2.4rem;
+  padding: 0.2rem;
+  border: 1px solid #aeb5bd;
+  border-radius: 999px;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.theme-toggle:hover {
+  background: #eeeeee;
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.theme-toggle-track {
+  position: relative;
+  display: block;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.18);
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  z-index: 2;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.28);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+html.theme-dark .theme-toggle-thumb {
+  transform: translateX(2rem);
+}
+
+.theme-toggle-icon {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 1.3rem;
+  height: 1.3rem;
+  transform: translateY(-50%);
+}
+
+.theme-toggle-sun {
+  left: 0.35rem;
+}
+
+.theme-toggle-moon {
+  right: 0.35rem;
+}
+
+.theme-toggle-sun::before {
+  content: "";
+  position: absolute;
+  top: 0.35rem;
+  left: 0.35rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 999px;
+  background: #f59e0b;
+  box-shadow:
+    0 -0.32rem 0 -0.18rem #f59e0b,
+    0 0.32rem 0 -0.18rem #f59e0b,
+    -0.32rem 0 0 -0.18rem #f59e0b,
+    0.32rem 0 0 -0.18rem #f59e0b;
+}
+
+.theme-toggle-moon::before {
+  content: "";
+  position: absolute;
+  inset: 0.22rem;
+  border: 2px solid #475569;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    #475569 0 50%,
+    transparent 50% 100%
+  );
+}
+
+/*
+  The main workspace never stacks side panels beneath itself.
+*/
+.app-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.gallery-panel {
+  grid-column: 1;
+  min-width: 0;
+}
+
+/*
+  Shared drawer header.
+*/
+.drawer-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.drawer-header h2 {
+  margin: 0;
+}
+
+.drawer-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.drawer-header-button,
+.drawer-close-button {
+  border: 1px solid #bbb;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.drawer-header-button {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.35rem;
+}
+
+.drawer-close-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.drawer-header-button:hover,
+.drawer-close-button:hover {
+  background: #eeeeee;
+}
+
+/*
+  Browse is an off-canvas left drawer by default.
+
+  This default covers medium and narrow screens and also wide screens when
+  the user has deliberately unpinned Browse.
+*/
+.browse-panel {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 900;
+  width: min(32rem, calc(100vw - 2rem));
+  max-width: 100%;
+  height: 100dvh;
+  padding: 1rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: translateX(-105%);
+  transition: transform 180ms ease;
+  container-type: inline-size;
+}
+
+body.shell-browse-open .browse-panel {
+  transform: translateX(0);
+}
+
+/*
+  Pinning and unpinning switch Browse between sticky and fixed positioning.
+  Disable the transform transition for that single layout-state change.
+*/
+body.shell-browse-transition-suppressed .browse-panel {
+  transition: none !important;
+}
+
+/*
+  Pinning is a desktop-only action. At smaller widths Browse is always an
+  overlay drawer.
+*/
+.browse-pin-button {
+  display: none;
+}
+
+/*
+  Current Selection is always a right-hand drawer.
+*/
+.selection-drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  z-index: 910;
+  width: min(30rem, 100vw);
+  height: 100dvh;
+  padding: 1rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  transform: translateX(105%);
+  transition: transform 180ms ease;
+}
+
+body.shell-selection-open .selection-drawer {
+  transform: translateX(0);
+}
+
+.selection-drawer-summary {
+  margin: 0.3rem 0 0;
+}
+
+.selection-drawer-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.selection-drawer-actions button {
+  min-width: 0;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.selection-drawer-actions button:hover {
+  background: #eeeeee;
+}
+
+/*
+  Mode-local utility sections.
+
+  Presets, Stats management and diagnostics remain available without occupying
+  permanent sidebar space.
+*/
+.mode-utility-section,
+.workspace-diagnostics {
+  margin: 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  background: #fafafa;
+}
+
+.mode-utility-section > summary,
+.workspace-diagnostics > summary {
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.mode-utility-section[open] > summary,
+.workspace-diagnostics[open] > summary {
+  border-bottom: 1px solid #ddd;
+}
+
+.mode-utility-section > :not(summary),
+.workspace-diagnostics > :not(summary) {
+  margin-right: 0.75rem;
+  margin-left: 0.75rem;
+}
+
+.mode-utility-section > :last-child,
+.workspace-diagnostics > :last-child {
+  margin-bottom: 0.75rem;
+}
+
+.quiz-presets-section .panel-note {
+  margin-top: 0.75rem;
+}
+
+.stats-management-controls {
+  display: grid;
+  gap: 0.75rem;
+  padding-top: 0.75rem;
+}
+
+.stats-management-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.stats-management-actions #refreshStatsButton,
+.stats-management-actions #exportStatsButton,
+.stats-management-actions #clearStatsButton {
+  width: auto;
+  margin: 0;
+  padding: 0.5rem 0.7rem;
+}
+
+.stats-import-control {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stats-import-control label[for="importStatsInput"] {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.stats-import-control #importStatsInput {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+@media (max-width: 500px) {
+  .stats-import-control {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.workspace-diagnostics {
+  margin-top: 1.5rem;
+}
+
+.workspace-diagnostics #systemStatus {
+  margin-top: 0.75rem;
+}
+
+/*
+  Shared overlay behind open shell drawers.
+
+  The zoom viewer remains above drawers because its existing z-index is 1000.
+*/
+.shell-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 850;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+body.shell-drawer-open {
+  overflow: hidden;
+}
+
+/*
+  CollectionGroup paths use the same visual hierarchy as the Entity browser.
+*/
+.group-children {
+  margin-left: 0.65rem;
+  padding-left: 0.35rem;
+  border-left: 2px solid #e5e5e5;
+}
+
+.group-title-button,
+.collection-button {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+/*
+  Wide desktop: Browse may occupy a stable, useful-width sidebar.
+
+  Removing browse-pinned later collapses the layout back to one workspace
+  column while leaving Browse available as an overlay drawer.
+*/
+@media (min-width: 1100px) {
+  .app-layout.browse-pinned {
+    grid-template-columns: minmax(17rem, 20rem) minmax(0, 1fr);
+  }
+
+  .app-layout.browse-pinned .browse-panel {
+    position: sticky;
+    inset: auto;
+    top: 4.5rem;
+    z-index: auto;
+    grid-column: 1;
+    width: auto;
+    max-width: none;
+    height: auto;
+    max-height: calc(100dvh - 5.5rem);
+    border-radius: 0.5rem;
+    transform: none;
+  }
+
+  .app-layout.browse-pinned .gallery-panel {
+    grid-column: 2;
+  }
+
+  .browse-pin-button {
+    display: inline-block;
+  }
+
+  .app-layout.browse-pinned .browse-panel .drawer-close-button {
+    display: none;
+  }
+}
+
+/*
+  Compact toolbar treatment on phones.
+*/
+@media (max-width: 600px) {
+  .app-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .app-header p {
+    display: none;
+  }
+
+  .app-toolbar {
+    gap: 0.4rem;
+    padding: 0.45rem 0.5rem;
+  }
+
+  .app-toolbar-button {
+    padding: 0.4rem 0.5rem;
+  }
+
+  .app-toolbar-context-label {
+    display: none;
+  }
+
+  .app-toolbar-actions {
+    gap: 0.35rem;
+  }
+
+  .app-toolbar-selection-summary {
+    max-width: 8.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .theme-toggle {
+    width: 4.25rem;
+    min-height: 2.25rem;
+    padding: 0.15rem;
+  }
+
+  .theme-toggle-track {
+    width: 3.6rem;
+    height: 1.85rem;
+  }
+
+  .theme-toggle-thumb {
+    width: 1.45rem;
+    height: 1.45rem;
+  }
+
+  html.theme-dark .theme-toggle-thumb {
+    transform: translateX(1.75rem);
+  }
+
+  .app-layout {
+    padding: 0.5rem;
+  }
+
+  .gallery-panel {
+    padding: 0.75rem;
+  }
+
+  .selection-drawer {
+    width: 100vw;
+    border-radius: 0;
+  }
+
+  .selection-drawer-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/*
+  Allow panels and active mode content to shrink within their grid columns
+  instead of forcing the overall layout wider.
+*/
+.panel,
+.mode-panel,
+.entity-variant-body {
+  min-width: 0;
+}
+
+/* Generic card-style panel */
+.panel {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+/* Search input */
+#searchInput {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+/* System status and validation output */
+#systemStatus {
+  white-space: pre-wrap;
+  background: #111;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  overflow-x: auto;
+}
+
+/* Small explanatory text inside panels */
+.panel-note {
+  margin-top: -0.25rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/*
+  CollectionGroup tree branch.
+
+  This now mirrors the Entity browser more closely: groups are tree rows rather
+  than boxed sections.
+*/
+.group-block {
+  margin: 0.25rem 0;
+}
+
+/*
+  CollectionGroup header row.
+
+  The JavaScript title still contains the disclosure arrow, so this remains a
+  single tree-row button rather than a separate arrow column.
+*/
+.group-header {
+  margin: 0.15rem 0;
+}
+
+/*
+  CollectionGroup title button.
+
+  Visually this reads as a tree row, not a large standalone button.
+*/
+.group-title-button {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0.35rem 0.45rem;
+  border: none;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: #222;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.group-title-button:hover {
+  background: #eee;
+}
+
+
+/* Small utility buttons, including Current Selection remove buttons */
+.group-action-button {
+  padding: 0.25rem 0.4rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background: #f8f8f8;
+}
+
+.group-action-button:hover {
+  background: #eeeeee;
+}
+
+/*
+  Nested CollectionGroup children.
+
+  This intentionally repeats the earlier rule near the collection-tree section
+  so future edits keep the tree styling obvious.
+*/
+.group-children {
+  margin-left: 0.65rem;
+  padding-left: 0.35rem;
+  border-left: 2px solid #e5e5e5;
+}
+
+
+/*
+  Collection leaves inside the CollectionGroup tree.
+
+  Use a vertical tree-list rather than a cluster of pill buttons.
+*/
+.collection-list {
+  display: grid;
+  gap: 0.15rem;
+  margin: 0.2rem 0;
+}
+
+/*
+  Individual collection rows.
+
+  These remain buttons for accessibility, but they are styled as tree leaves
+  rather than chunky controls.
+*/
+.collection-button {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  border-left: 4px solid transparent;
+  border-radius: 0.3rem;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.collection-button:hover {
+  background: #eee;
+}
+
+/*
+  Selected collection row.
+
+  A subtle left accent is enough because selected items are also shown in
+  Current Selection.
+*/
+.collection-button.selected {
+  border-left-color: #2563eb;
+  background: #dbeafe;
+  font-weight: 600;
+}
+
+/* Selected collections panel */
+.selected-collection-item {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Switch between collection and entity browsing */
+.browser-mode-tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.browser-mode-button {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.browser-mode-button:hover {
+  background: #eee;
+}
+
+.browser-mode-button.active {
+  background: #dbeafe;
+  border-color: #2563eb;
+  font-weight: 700;
+}
+
+/*
+  Scoped Browse-tree filters.
+
+  The Collection filter appears only in Collection Browse mode.
+  The Entity filter appears only in Entity Browse mode.
+  The hidden attribute controls visibility.
+*/
+#collectionBrowserFilterContainer,
+#entityBrowserFilterContainer {
+  margin: 0.75rem 0;
+}
+
+#collectionBrowserFilterContainer[hidden],
+#entityBrowserFilterContainer[hidden] {
+  display: none;
+}
+
+#collectionBrowserFilterContainer label,
+#entityBrowserFilterContainer label {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+#collectionBrowserFilterInput,
+#entityBrowserFilterInput {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+}
+
+/* One branch in the Entity browser */
+.entity-browser-block {
+  margin: 0.25rem 0;
+}
+
+/*
+  Arrow control and entity name sit on one row.
+
+  The name column may wrap between words, but its minimum width is the width of
+  its longest word. This prevents short names being stacked letter by letter.
+*/
+.entity-browser-row {
+  display: grid;
+  grid-template-columns: 1.5rem minmax(min-content, 1fr);
+  align-items: start;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+/* Separate branch toggle */
+.entity-browser-toggle {
+  width: 1.5rem;
+  padding: 0.25rem 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+}
+
+.entity-browser-toggle:hover:not(:disabled) {
+  background: #eee;
+}
+
+.entity-browser-toggle:disabled {
+  cursor: default;
+}
+
+/* Entity name opens the Entity detail view */
+.entity-browser-entity-button {
+  min-width: min-content;
+  max-width: 100%;
+  padding: 0.4rem 0.5rem;
+  border: none;
+  border-radius: 0.3rem;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.entity-browser-entity-button:hover {
+  background: #eee;
+}
+
+/*
+  Indented descendants.
+
+  Normal levels retain a clear hierarchy. From the fifth nested child
+  container onwards, indentation stops increasing so deeply nested names keep
+  a usable label column.
+*/
+.entity-browser-children {
+  margin-left: 0.65rem;
+  border-left: 2px solid #e5e5e5;
+  padding-left: 0.35rem;
+}
+
+.entity-browser-children
+.entity-browser-children
+.entity-browser-children
+.entity-browser-children
+.entity-browser-children {
+  margin-left: 0;
+  padding-left: 0;
+  border-left: none;
+}
+
+/*
+  A wide Browse drawer has enough room for two additional hierarchy levels.
+
+  Restore normal indentation from level five, then stop increasing it from
+  level seven onwards.
+*/
+@container (min-width: 28rem) {
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children {
+    margin-left: 0.65rem;
+    padding-left: 0.35rem;
+    border-left: 2px solid #e5e5e5;
+  }
+
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children
+  .entity-browser-children {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+
+/*
+  An expanded entity and its immediate descendants form one visual container.
+  This makes the end of the child branch clear before the next sibling begins.
+*/
+.entity-browser-block.expanded {
+  margin-top: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+/* Top of the expanded branch container */
+.entity-browser-block.expanded > .entity-browser-row {
+  border: 1px solid #cfd3d8;
+  border-bottom: none;
+  border-left: 4px solid #6b7280;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.entity-browser-block.expanded
+  > .entity-browser-row
+  > .entity-browser-entity-button {
+  font-weight: 700;
+}
+
+/*
+  The descendants continue the same bordered container.
+
+  Removing the normal left margin here prevents the child area from looking
+  detached from its expanded parent. Padding preserves the hierarchy indent.
+*/
+.entity-browser-block.expanded > .entity-browser-children {
+  margin-top: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0.25rem 0.25rem 0.45rem 1.65rem;
+  border: 1px solid #cfd3d8;
+  border-top: none;
+  border-left: 4px solid #9ca3af;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+
+/*
+  External flags that officially represent the current entity.
+
+  These cards are informational and deliberately have no selection controls.
+*/
+.entity-official-representation-section {
+  margin-top: 1rem;
+}
+
+.entity-official-representation-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.entity-official-representation-item {
+  display: grid;
+  grid-template-columns: minmax(110px, 180px) 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.entity-official-representation-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 130px;
+  object-fit: contain;
+}
+
+.entity-official-representation-body h4 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+@media (max-width: 500px) {
+  .entity-official-representation-item {
+    grid-template-columns: 1fr;
+  }
+
+  .entity-official-representation-image {
+    max-height: 180px;
+  }
+}
+
+/* Direct child links shown on an Entity detail page */
+.entity-child-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.entity-child-button {
+  padding: 0.45rem 0.65rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+/*
+  Large Entity Detail child groups use a compact local browser rather than a
+  wall of full-width navigation buttons.
+*/
+.entity-child-section {
+  margin-top: 1rem;
+}
+
+.entity-child-filter {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.55rem 0.65rem;
+}
+
+.entity-child-list-compact {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(10rem, 100%), 1fr)
+  );
+  gap: 0.35rem 0.6rem;
+}
+
+.entity-child-button-compact {
+  width: 100%;
+  padding: 0.4rem 0.55rem;
+  text-align: left;
+}
+
+.entity-child-no-matches {
+  margin-top: 0.75rem;
+}
+
+.entity-child-button:hover {
+  background: #eee;
+  border-color: #2563eb;
+}
+
+/*
+  Presentation-only relationship subgroups inside Entity Detail.
+
+  These headings do not alter entity ancestry. They organise one or more
+  relationship sources and retain independent grouped-selection provenance.
+*/
+.entity-relationship-subgroup-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.entity-relationship-subgroup {
+  min-width: 0;
+  border: 1px solid #e1e4e8;
+  border-radius: 0.45rem;
+  background: #fafafa;
+}
+
+.entity-relationship-subgroup-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  padding: 0.2rem 0.35rem;
+}
+
+.entity-relationship-subgroup-disclosure {
+  flex: 1;
+  min-width: 0;
+}
+
+.entity-relationship-subgroup .entity-section-actions {
+  margin-left: auto;
+}
+
+.entity-relationship-subgroup-filter {
+  width: calc(100% - 1rem);
+  margin: 0.5rem;
+}
+
+.entity-relationship-subgroup-entities {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.entity-relationship-subgroup > .entity-child-no-matches {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 500px) {
+  .entity-relationship-subgroup-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .entity-relationship-subgroup-header
+    .entity-section-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/*
+  Disclosure control for large Entity Detail child groups.
+*/
+.entity-child-disclosure {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.entity-child-disclosure:hover {
+  text-decoration: underline;
+}
+
+.entity-child-disclosure:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 0.2rem;
+}
+
+/*
+  Contextual Entity Detail history.
+
+  This is separate from entity relationships: it returns to the page the user
+  actually navigated from without implying parentage or membership.
+*/
+.entity-history-navigation {
+  margin-bottom: 0.75rem;
+}
+
+.entity-back-button {
+  max-width: 100%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.entity-back-button:hover {
+  background: #eeeeee;
+  border-color: #2563eb;
+}
+
+.entity-back-button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Clickable parent navigation on Entity pages */
+.entity-parent-section {
+  margin-top: 0.5rem;
+}
+
+.entity-parent-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+}
+
+.entity-parent-button {
+  padding: 0.35rem 0.55rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.entity-parent-button:hover {
+  background: #eee;
+  border-color: #2563eb;
+}
+
+/*
+  Shared disclosure control for collapsible Entity Detail sections.
+*/
+.entity-section-disclosure {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 0.55rem 0.7rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+}
+
+.entity-section-disclosure:hover {
+  text-decoration: underline;
+}
+
+.entity-section-disclosure:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 0.2rem;
+}
+
+/*
+  Entity Detail section headings with compact bulk-selection controls.
+*/
+.entity-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.entity-section-header h3 {
+  margin: 0;
+}
+
+.entity-section-header .entity-child-disclosure,
+.entity-section-header .entity-administered-disclosure,
+.entity-section-header .entity-section-disclosure {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.entity-section-actions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.35rem;
+  margin-left: auto;
+}
+
+@media (max-width: 500px) {
+  .entity-section-header {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .entity-section-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+/*
+  Political and administrative relationships are displayed separately from
+  geographical parents.
+*/
+.entity-administration-section {
+  margin-top: 0.5rem;
+}
+
+.entity-administration-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.3rem;
+}
+
+.entity-administration-button {
+  padding: 0.35rem 0.55rem;
+}
+
+/*
+  Reverse administration and constituent relationships shown on Entity Detail.
+
+  Small groups use compact content-sized buttons. Large searchable groups add
+  the compact modifier and switch back to a full-width responsive grid.
+*/
+.entity-administered-section {
+  margin-top: 1rem;
+}
+
+.entity-administered-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.4rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.entity-administered-button {
+  display: inline-flex;
+  width: auto;
+  max-width: 100%;
+  padding: 0.4rem 0.55rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.entity-administered-button:hover {
+  background: #eee;
+  border-color: #2563eb;
+}
+
+/*
+  Disclosure and filtering for large administered or constituent sections.
+*/
+.entity-administered-disclosure {
+  display: block;
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.entity-administered-disclosure:hover {
+  text-decoration: underline;
+}
+
+.entity-administered-disclosure:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 0.2rem;
+}
+
+.entity-administered-filter {
+  width: 100%;
+  margin-bottom: 0.75rem;
+  padding: 0.55rem 0.65rem;
+}
+
+.entity-administered-list-compact {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(10rem, 100%), 1fr)
+  );
+  align-items: stretch;
+  gap: 0.35rem 0.6rem;
+}
+
+.entity-administered-button-compact {
+  width: 100%;
+}
+
+.entity-administered-no-matches {
+  margin-top: 0.75rem;
+}
+
+/* Full hierarchy context shown on Entity Detail pages */
+.entity-context-section {
+  margin-top: 0.75rem;
+}
+
+.entity-context-section .entity-detail-meta {
+  margin-bottom: 0.35rem;
+}
+
+.entity-context-paths {
+  display: grid;
+  gap: 0.35rem;
+}
+
+/* One complete ancestor path */
+.entity-context-path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* Clickable ancestors in a hierarchy path */
+.entity-context-button {
+  padding: 0.25rem 0.4rem;
+  border: 1px solid #bbb;
+  border-radius: 0.3rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.entity-context-button:hover {
+  background: #eee;
+  border-color: #2563eb;
+}
+
+/* Current entity at the end of the path */
+.entity-context-current {
+  font-weight: 700;
+}
+
+.entity-context-separator {
+  color: #777;
+}
+
+/* Collections that contain the current entity */
+.entity-related-collection-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 18rem), 28rem)
+  );
+  justify-content: start;
+  align-items: start;
+  gap: 0.6rem;
+  margin: 0.75rem 0 1rem;
+}
+
+/*
+  Related collection cards remain compact rather than stretching across the
+  complete Entity Detail panel. The action sits beneath the metadata, which
+  avoids browser-width breakpoints that do not reflect the panel's real width.
+*/
+.entity-related-collection-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  background: #fafafa;
+}
+
+/* Collection name and supporting metadata */
+.entity-related-collection-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.entity-related-collection-name {
+  font-weight: 600;
+}
+
+.entity-related-collection-meta,
+.entity-related-collection-variants {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Keep the collection action compact and aligned with its card content. */
+.entity-related-collection-item .entity-selection-action {
+  justify-self: start;
+  width: auto;
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* Gallery organisation, sort and detail controls */
+.gallery-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 0.75rem;
+  margin: 0.75rem 0 1rem;
+}
+
+/* One label/select pair */
+.gallery-control-group {
+  display: grid;
+  flex: 1 1 10rem;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.gallery-control-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.gallery-control-group select {
+  width: 100%;
+  min-width: 0;
+  padding: 0.35rem 0.5rem;
+  font: inherit;
+}
+
+/*
+  Gallery batch-rendering notice.
+
+  Large selections render in manageable batches. These controls make that
+  behaviour visible without making the Gallery feel like an error state.
+*/
+.gallery-render-limit-notice {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  background: #fafafa;
+}
+
+.gallery-render-limit-notice .panel-note {
+  margin: 0;
+}
+
+.gallery-render-limit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gallery-render-limit-actions .entity-selection-action {
+  margin-top: 0;
+}
+
+/* One section in Grouped by source Gallery mode */
+.gallery-source-section {
+  margin-bottom: 1.5rem;
+}
+
+/* Source heading above a grouped gallery grid */
+.gallery-source-heading {
+  margin: 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Number of displayable flags contributed by this source */
+.gallery-source-count {
+  margin: 0.35rem 0 0.75rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Gallery grid container */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* More columns on wider screens */
+@media (min-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Individual flag card */
+.flag-card {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.flag-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.flag-card:focus {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* Image wrapper gives flags a consistent viewing area */
+.flag-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  padding: 1rem;
+  background: #f8f8f8;
+}
+
+/* Flag image itself */
+.flag-image {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+/* Text area below each flag */
+.flag-card-body {
+  padding: 0.75rem;
+}
+
+.flag-card-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.flag-card-subtitle {
+  margin: 0.25rem 0 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Small metadata line */
+.flag-card-meta {
+  margin: 0.4rem 0 0;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* Compact stats shown when Gallery Details is set to Stats */
+.flag-card-stats {
+  margin-top: 0.5rem;
+}
+
+.flag-card-stats .flag-card-meta {
+  margin-top: 0.25rem;
+}
+
+/* Message shown when there is nothing to display */
+.empty-message {
+  color: #666;
+  font-style: italic;
+}
+
+/* Shared Entity Detail selection actions */
+.entity-selection-action {
+  margin-top: 0.75rem;
+  padding: 0.4rem 0.65rem;
+  border: 1px solid #bbb;
+  border-radius: 0.3rem;
+  background: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.entity-selection-action:hover {
+  background: #eee;
+}
+
+/* Variant card list on an entity page */
+.entity-variant-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.entity-variant-item {
+  display: grid;
+
+  /*
+    Use two columns when the card itself has enough room, but collapse to one
+    automatically when its containing panel becomes narrow.
+  */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+/*
+  Makes the variant opened from Search visibly distinct.
+*/
+.entity-variant-item.focused {
+  border-color: #2563eb;
+  outline: 3px solid rgba(37, 99, 235, 0.25);
+  outline-offset: 2px;
+}
+
+/* Variant image opens the shared zoom viewer */
+.entity-variant-zoom-trigger {
+  cursor: zoom-in;
+}
+
+.entity-variant-zoom-trigger:hover {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.entity-variant-zoom-trigger:focus {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.entity-variant-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  padding: 0.75rem;
+  background: #f8f8f8;
+}
+
+.entity-variant-image {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+.entity-variant-body h4 {
+  margin: 0;
+}
+
+.entity-variant-meta {
+  margin: 0.4rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Variant title and technical status badge */
+.entity-variant-heading-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.entity-variant-heading-row h4 {
+  margin: 0;
+}
+
+/* Marks technical quiz-safe variants */
+.entity-variant-technical-badge {
+  padding: 0.15rem 0.4rem;
+  border: 1px solid #93c5fd;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* Explanation shown only for technical variants */
+.entity-variant-technical-note {
+  margin: 0.5rem 0 0;
+  color: #555;
+  font-size: 0.85rem;
+}
+
+/* Search results wrapper */
+.search-results {
+  margin-top: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* Individual search result card */
+.search-result {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  background: #fafafa;
+}
+
+/* Result title row */
+.search-result-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* Result type label */
+.search-result-type {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+  background: #e5e7eb;
+  color: #333;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+/* Smaller search metadata */
+.search-result-meta {
+  margin: 0.3rem 0 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Search action button */
+.search-result-action {
+  margin-top: 0.5rem;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid #bbb;
+  border-radius: 0.3rem;
+  background: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.search-result-action:hover {
+  background: #eee;
+}
+
+/* Quiz controls */
+.quiz-controls {
+  display: grid;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.quiz-controls input {
+  padding: 0.45rem;
+  font: inherit;
+}
+
+.quiz-controls button {
+  padding: 0.55rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Main quiz card */
+.quiz-card {
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Quiz progress text */
+.quiz-progress {
+  padding: 0.75rem;
+  margin: 0;
+  background: #f3f4f6;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/*
+  Quiz mode shows one flag at a time, so the image should be much larger than
+  Gallery thumbnails while still leaving room for answer controls.
+*/
+.quiz-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(220px, 42vh, 420px);
+  padding: 1rem;
+  background: #f8f8f8;
+}
+
+/* Quiz flag image */
+.quiz-image {
+  max-width: 100%;
+  max-height: clamp(200px, 40vh, 400px);
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+/*
+  Quiz images can be opened in the shared zoom viewer.
+
+  The wrapper receives keyboard focus so the same action is available without
+  a mouse.
+*/
+.quiz-image-zoom-trigger {
+  cursor: zoom-in;
+}
+
+.quiz-image-zoom-trigger:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 0.25rem;
+}
+
+/* Quiz answer area */
+.quiz-answer-area {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+
+.quiz-answer-area input {
+  padding: 0.55rem;
+  font: inherit;
+}
+
+.quiz-answer-area button {
+  padding: 0.55rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* Feedback after submitting an answer */
+.quiz-feedback {
+  padding: 0.75rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.quiz-feedback.correct {
+  background: #dcfce7;
+  color: #14532d;
+}
+
+.quiz-feedback.incorrect {
+  background: #fee2e2;
+  color: #7f1d1d;
+}
+
+/* Final quiz result */
+.quiz-result {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+/* Stats summary cards */
+.stats-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.stats-summary-card {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  background: #fafafa;
+}
+
+.stats-summary-value {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.stats-summary-label {
+  margin: 0.25rem 0 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.stats-record-count {
+  margin: 0.25rem 0 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Stats filter and sort controls */
+.stats-controls {
+  display: grid;
+
+  /*
+    Add as many columns as the Stats panel can actually accommodate.
+
+    This responds to the panel width rather than the overall browser width,
+    so controls stack automatically inside a narrow centre column.
+  */
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.stats-control-group {
+  display: grid;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.stats-control-group label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.stats-control-group select {
+  padding: 0.5rem;
+  font: inherit;
+  min-width: 0;
+}
+
+/* Basic stats list */
+.stats-list {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.stats-item {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.35rem;
+  background: #fafafa;
+}
+
+.stats-item-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.stats-item-mode {
+  margin: 0.2rem 0 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.stats-item-meta {
+  margin: 0.25rem 0 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.stats-item-detail {
+  margin: 0.25rem 0 0;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.stats-item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.stats-field {
+  padding: 0.5rem;
+  border: 1px solid #eee;
+  border-radius: 0.3rem;
+  background: white;
+}
+
+.stats-field-label {
+  margin: 0;
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.stats-field-value {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+}
+
+#refreshStatsButton,
+#exportStatsButton,
+#clearStatsButton,
+#importStatsInput {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  font: inherit;
+}
+
+#refreshStatsButton,
+#exportStatsButton,
+#clearStatsButton {
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+#refreshStatsButton:hover,
+#exportStatsButton:hover,
+#clearStatsButton:hover {
+  background: #eee;
+}
+
+label[for="importStatsInput"] {
+  display: block;
+  margin: 0.75rem 0 0.25rem;
+  font-weight: 700;
+}
+
+/* Multiple-choice option list */
+.multiple-choice-options {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.75rem;
+}
+
+/* Individual multiple-choice option */
+.multiple-choice-option {
+  padding: 0.65rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: white;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.multiple-choice-option:hover {
+  background: #eee;
+}
+
+.multiple-choice-option.correct {
+  background: #dcfce7;
+  border-color: #16a34a;
+}
+
+.multiple-choice-option.incorrect {
+  background: #fee2e2;
+  border-color: #dc2626;
+}
+
+.multiple-choice-option:disabled {
+  cursor: default;
+}
+
+/* Quiz preset list */
+.quiz-preset-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+/* Individual preset card */
+.quiz-preset-item {
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 0.4rem;
+  background: #fafafa;
+}
+
+.quiz-preset-title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.quiz-preset-meta {
+  margin: 0.25rem 0 0;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.quiz-preset-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.quiz-preset-actions button {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #bbb;
+  border-radius: 0.3rem;
+  background: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.quiz-preset-actions button:hover {
+  background: #eee;
+}
+
+/* Centre mode tabs */
+.mode-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+/* Individual mode tab button */
+.mode-tab {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f9f9f9;
+  cursor: pointer;
+  font: inherit;
+  white-space: nowrap;
+}
+
+.mode-tab:hover {
+  background: #eee;
+}
+
+/* Active mode tab */
+.mode-tab.active {
+  background: #dbeafe;
+  border-color: #2563eb;
+  font-weight: 700;
+}
+
+/* Hidden mode panels */
+.mode-panel {
+  display: none;
+}
+
+/* Visible mode panel */
+.mode-panel.active {
+  display: block;
+}
+
+/* Gallery zoom viewer overlay */
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+/* Shared hidden utility */
+.hidden {
+  display: none;
+}
+
+/* Main zoom viewer box */
+.zoom-viewer {
+  position: relative;
+  width: min(100%, 1000px);
+  max-height: 90vh;
+  padding: 1rem 3.5rem;
+  border-radius: 0.6rem;
+  background: white;
+  overflow: auto;
+}
+
+@media (max-width: 600px) {
+  /*
+    Keep the navigation arrows positioned at the sides.
+
+    Extra horizontal padding prevents the arrows from covering the flag.
+  */
+  .zoom-viewer {
+    padding: 3.5rem 3.25rem 1rem;
+  }
+
+  .zoom-nav-button {
+    width: 2.5rem;
+    height: 3.5rem;
+  }
+}
+
+/* Opens the Entity detail page from the zoom viewer */
+.zoom-entity-button {
+  margin-top: 0.75rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.zoom-entity-button:hover {
+  background: #eee;
+  border-color: #2563eb;
+}
+
+/* Close button */
+.zoom-close-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid #bbb;
+  border-radius: 999px;
+  background: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/*
+  Controls for related flag designs shown only inside zoom.
+*/
+.zoom-related-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+.zoom-related-controls[hidden] {
+  display: none;
+}
+
+.zoom-related-button {
+  padding: 0.45rem 0.7rem;
+}
+
+/* Layout inside the zoom viewer */
+.zoom-content {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Large image area */
+.zoom-image-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 0.5rem;
+}
+
+/* Large flag image */
+.zoom-image {
+  max-width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+/* Text under image */
+.zoom-details {
+  text-align: center;
+}
+
+.zoom-details h2 {
+  margin: 0;
+}
+
+.zoom-details p {
+  margin: 0.35rem 0 0;
+  color: #555;
+}
+
+/* Previous/next buttons */
+.zoom-nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 2.5rem;
+  height: 3.5rem;
+  border: 1px solid #bbb;
+  border-radius: 0.4rem;
+  background: white;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.zoom-nav-left {
+  left: 0.5rem;
+}
+
+.zoom-nav-right {
+  right: 0.5rem;
+}
+
+.zoom-nav-button:hover,
+.zoom-close-button:hover {
+  background: #eee;
+}
+
+/*
+  Non-rectangular flag assets use transparent rectangular SVG canvases.
+  Do not draw the normal image border around the empty canvas area.
+*/
+img[src$="nepal_current.svg"],
+img[src$="ohio.svg"] {
+  border: none;
+}
+
+/*
+  Theme layer.
+
+  Earlier rules keep the existing light-mode presentation. This layer overrides
+  shared surfaces through variables so the dark theme can be expanded gradually
+  without rewriting every component rule by hand.
+*/
+:root {
+  color-scheme: light;
+  --app-bg: #f4f4f4;
+  --surface-bg: #ffffff;
+  --surface-bg-soft: #fafafa;
+  --surface-bg-muted: #f8f8f8;
+  --toolbar-bg: rgba(255, 255, 255, 0.97);
+  --header-bg: #1f2933;
+  --header-text: #ffffff;
+  --text-main: #222222;
+  --text-muted: #555555;
+  --text-subtle: #666666;
+  --border-soft: #dddddd;
+  --border-strong: #bbb;
+  --button-bg: #f8f8f8;
+  --button-hover-bg: #eeeeee;
+  --input-bg: #ffffff;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --accent-text: #1e3a8a;
+  --success-bg: #dcfce7;
+  --success-text: #14532d;
+  --danger-bg: #fee2e2;
+  --danger-text: #7f1d1d;
+  --shadow-soft: rgba(0, 0, 0, 0.12);
+  --overlay-backdrop: rgba(0, 0, 0, 0.45);
+}
+
+html.theme-dark {
+  color-scheme: dark;
+  --app-bg: #0f172a;
+  --surface-bg: #111827;
+  --surface-bg-soft: #172033;
+  --surface-bg-muted: #1f2937;
+  --toolbar-bg: rgba(17, 24, 39, 0.97);
+  --header-bg: #020617;
+  --header-text: #f8fafc;
+  --text-main: #e5e7eb;
+  --text-muted: #cbd5e1;
+  --text-subtle: #94a3b8;
+  --border-soft: #334155;
+  --border-strong: #475569;
+  --button-bg: #1f2937;
+  --button-hover-bg: #334155;
+  --input-bg: #0f172a;
+  --accent: #60a5fa;
+  --accent-soft: #1e3a8a;
+  --accent-text: #bfdbfe;
+  --success-bg: #14532d;
+  --success-text: #dcfce7;
+  --danger-bg: #7f1d1d;
+  --danger-text: #fee2e2;
+  --shadow-soft: rgba(0, 0, 0, 0.38);
+  --overlay-backdrop: rgba(0, 0, 0, 0.68);
+}
+
+body {
+  background: var(--app-bg);
+  color: var(--text-main);
+}
+
+.app-header {
+  background: var(--header-bg);
+  color: var(--header-text);
+}
+
+.app-header p,
+.panel-note,
+.app-toolbar-context-label,
+.app-toolbar-selection-summary,
+.gallery-source-count,
+.flag-card-subtitle,
+.flag-card-meta,
+.empty-message,
+.entity-variant-meta,
+.entity-variant-technical-note,
+.search-result-meta,
+.stats-record-count,
+.stats-summary-label,
+.stats-item-mode,
+.stats-item-meta,
+.stats-item-detail,
+.stats-field-label,
+.quiz-preset-meta,
+.zoom-details p {
+  color: var(--text-subtle);
+}
+
+.app-toolbar {
+  border-bottom-color: var(--border-soft);
+  background: var(--toolbar-bg);
+  box-shadow: 0 2px 8px var(--shadow-soft);
+}
+
+.panel,
+.flag-card,
+.entity-variant-item,
+.quiz-card,
+.quiz-result,
+.zoom-viewer {
+  border-color: var(--border-soft);
+  background: var(--surface-bg);
+  color: var(--text-main);
+}
+
+.mode-utility-section,
+.workspace-diagnostics,
+.entity-relationship-subgroup,
+.entity-related-collection-item,
+.gallery-render-limit-notice,
+.search-result,
+.stats-summary-card,
+.stats-item,
+.quiz-preset-item {
+  border-color: var(--border-soft);
+  background: var(--surface-bg-soft);
+  color: var(--text-main);
+}
+
+.app-toolbar-button,
+.drawer-header-button,
+.drawer-close-button,
+.selection-drawer-actions button,
+.browser-mode-button,
+.mode-tab,
+.group-action-button,
+.entity-child-button,
+.entity-back-button,
+.entity-parent-button,
+.entity-administered-button,
+.entity-context-button,
+.entity-selection-action,
+.search-result-action,
+.quiz-controls button,
+.quiz-answer-area button,
+#refreshStatsButton,
+#exportStatsButton,
+#clearStatsButton,
+.multiple-choice-option,
+.zoom-entity-button,
+.zoom-close-button,
+.zoom-nav-button,
+.zoom-related-button,
+.theme-toggle {
+  border-color: var(--border-strong);
+  background: var(--button-bg);
+  color: var(--text-main);
+}
+
+.app-toolbar-button:hover,
+.drawer-header-button:hover,
+.drawer-close-button:hover,
+.selection-drawer-actions button:hover,
+.browser-mode-button:hover,
+.mode-tab:hover,
+.group-action-button:hover,
+.group-title-button:hover,
+.collection-button:hover,
+.entity-browser-toggle:hover:not(:disabled),
+.entity-browser-entity-button:hover,
+.entity-child-button:hover,
+.entity-back-button:hover,
+.entity-parent-button:hover,
+.entity-administered-button:hover,
+.entity-context-button:hover,
+.entity-selection-action:hover,
+.search-result-action:hover,
+.quiz-controls button:hover,
+.quiz-answer-area button:hover,
+#refreshStatsButton:hover,
+#exportStatsButton:hover,
+#clearStatsButton:hover,
+.multiple-choice-option:hover,
+.zoom-entity-button:hover,
+.zoom-close-button:hover,
+.zoom-nav-button:hover,
+.zoom-related-button:hover,
+.theme-toggle:hover {
+  background: var(--button-hover-bg);
+}
+
+input,
+select,
+textarea {
+  border-color: var(--border-strong);
+  background: var(--input-bg);
+  color: var(--text-main);
+}
+
+::placeholder {
+  color: var(--text-subtle);
+}
+
+.drawer-header,
+.mode-tabs,
+.mode-utility-section[open] > summary,
+.workspace-diagnostics[open] > summary,
+.gallery-source-heading,
+.selected-collection-item {
+  border-color: var(--border-soft);
+}
+
+.group-children,
+.entity-browser-children {
+  border-left-color: var(--border-soft);
+}
+
+.entity-browser-block.expanded > .entity-browser-row,
+.entity-browser-block.expanded > .entity-browser-children {
+  border-color: var(--border-strong);
+}
+
+.collection-button,
+.group-title-button,
+.entity-browser-toggle,
+.entity-browser-entity-button,
+.entity-child-disclosure,
+.entity-administered-disclosure,
+.entity-section-disclosure {
+  color: var(--text-main);
+}
+
+.collection-button.selected,
+.browser-mode-button.active,
+.mode-tab.active,
+.entity-variant-technical-badge {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+
+.flag-image-wrapper,
+.entity-variant-image-wrapper,
+.entity-official-representation-item,
+.quiz-progress,
+.quiz-image-wrapper,
+.zoom-image-wrapper,
+.stats-field {
+  border-color: var(--border-soft);
+  background: var(--surface-bg-muted);
+  color: var(--text-main);
+}
+
+.flag-image,
+.entity-variant-image,
+.entity-official-representation-image,
+.quiz-image,
+.zoom-image {
+  border-color: var(--border-soft);
+}
+
+.flag-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px var(--shadow-soft);
+}
+
+.entity-variant-item.focused {
+  border-color: var(--accent);
+  outline-color: color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.quiz-feedback.correct,
+.multiple-choice-option.correct {
+  background: var(--success-bg);
+  color: var(--success-text);
+}
+
+.quiz-feedback.incorrect,
+.multiple-choice-option.incorrect {
+  background: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+.shell-backdrop {
+  background: var(--overlay-backdrop);
+}
+
+#systemStatus {
+  background: #020617;
+  color: #e5e7eb;
+}
+
+.theme-toggle-track {
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+html.theme-dark .theme-toggle-track {
+  background: #1e293b;
+}
+
+html.theme-dark .theme-toggle-thumb {
+  background: #e5e7eb;
+}
+
+html.theme-dark .theme-toggle-sun::before {
+  background: #facc15;
+  box-shadow:
+    0 -0.32rem 0 -0.18rem #facc15,
+    0 0.32rem 0 -0.18rem #facc15,
+    -0.32rem 0 0 -0.18rem #facc15,
+    0.32rem 0 0 -0.18rem #facc15;
+}
+
+html.theme-dark .theme-toggle-moon::before {
+  border-color: #bfdbfe;
+  background: linear-gradient(
+    90deg,
+    #bfdbfe 0 50%,
+    transparent 50% 100%
+  );
+}

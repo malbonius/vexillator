@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="750" height="500" viewBox="0 0 750 500">
+<desc>Created with SVGMaker Editor 3.0.0</desc>
+<defs>
+</defs>
+<rect transform="translate(0,0)" style="stroke: rgb(255,255,255); stroke-opacity: 0; fill: rgb(0,133,206); fill-rule: evenodd" x="0" y="0" width="750" height="500"/>
+<path transform="translate(0,0)" style="stroke: rgb(190,190,190); stroke-width: 12; fill: rgb(215,25,25)" stroke-linecap="round" d="M262.7 107L262.7001 139.8916C262.7388 198.4663 275.9015 316.4716 375.2 347.5 474.4996 316.4712 487.6615 198.4635 487.6999 139.8895L487.7 107"/>
+<path transform="translate(0,0)" style="fill: rgb(190,190,190); fill-rule: evenodd" stroke-linecap="round" d="M329.7204 171.9916L315.5237 167.2431 308.8476 180.6251 302.1715 167.2431 287.9748 171.9916 292.7301 157.8151 279.3291 151.1486 292.7301 144.482 287.9748 130.3055 302.1715 135.054 308.8476 121.672 315.5237 135.054 329.7204 130.3055 324.9651 144.482 338.3662 151.1486 324.9651 157.8151Z"/>
+<path transform="translate(0,0)" style="fill: rgb(190,190,190); fill-rule: evenodd" stroke-linecap="round" d="M460.1537 111.2309L293.6303 270.1817C300.5069 286.1412 309.2191 300.5466 320.2658 311.3646L485.4509 153.6884 484.7824 111.8612Z"/>
+<rect transform="translate(0,0)" style="fill: rgb(190,190,190); fill-rule: evenodd" x="256.7016" y="100.4998" width="236.9962" height="12"/>
+</svg>

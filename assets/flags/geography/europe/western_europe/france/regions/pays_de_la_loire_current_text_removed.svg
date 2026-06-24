@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="svg1" width="324" height="216" viewBox="0 0 324 216" xmlns="http://www.w3.org/2000/svg">
+  <g id="g1">
+    <rect style="fill:#000fa0;fill-opacity:1;stroke-width:0.5;stroke-linecap:round" id="rect1" width="324" height="216" x="0" y="0"/>
+    <g transform="matrix(0.67176726,0,0,0.6693202,-47.445276,-14.102411)" fill="#000fa0" id="g7" style="fill:#ffffff;stroke-width:1.49132">
+      <path d="m 122.5,91.88 h 33.85 c 0,0 32.27,0 32.27,89.77 0,87.91 -32.27,90.7 -32.27,90.7 h -33.66 c 0,0 32.75,-2.784 32.75,-90.25 0,-90.21 -32.93,-90.21 -32.93,-90.21" id="path1" style="fill:#ffffff;stroke-width:1.49132"/>
+      <path d="m 178.3,91.88 h 33.85 c 0,0 32.27,0 32.27,89.77 0,87.91 -32.27,90.7 -32.27,90.7 h -33.66 c 0,0 32.75,-2.784 32.75,-90.25 0,-90.21 -32.93,-90.21 -32.93,-90.21" id="path2" style="fill:#ffffff;stroke-width:1.49132"/>
+    </g>
+  </g>
+</svg>
