@@ -47,7 +47,7 @@ const variants = [
     assetId: "ast_australian_capital_territory_current",
     displayName: "Territorial Flag",
     aliases: ["Australian Capital Territory Flag", "ACT Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -57,7 +57,7 @@ const variants = [
     assetId: "ast_new_south_wales_current",
     displayName: "State Flag",
     aliases: ["New South Wales Flag", "NSW Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -67,7 +67,7 @@ const variants = [
     assetId: "ast_northern_territory_current",
     displayName: "Territorial Flag",
     aliases: ["Northern Territory Flag", "NT Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -77,7 +77,7 @@ const variants = [
     assetId: "ast_queensland_current",
     displayName: "State Flag",
     aliases: ["Queensland Flag", "QLD Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -87,7 +87,7 @@ const variants = [
     assetId: "ast_south_australia_current",
     displayName: "State Flag",
     aliases: ["South Australia Flag", "SA Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -97,7 +97,7 @@ const variants = [
     assetId: "ast_tasmania_current",
     displayName: "State Flag",
     aliases: ["Tasmania Flag", "TAS Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -107,7 +107,7 @@ const variants = [
     assetId: "ast_victoria_current",
     displayName: "State Flag",
     aliases: ["Victoria Flag", "VIC Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -117,7 +117,7 @@ const variants = [
     assetId: "ast_western_australia_current",
     displayName: "State Flag",
     aliases: ["Western Australia Flag", "WA Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -239,7 +239,7 @@ const variants = [
     assetId: "ast_chuuk_current",
     displayName: "State Flag",
     aliases: ["Chuuk State Flag", "Truk State Flag"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -249,7 +249,7 @@ const variants = [
     assetId: "ast_kosrae_current",
     displayName: "State Flag",
     aliases: ["Kosrae State Flag"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -259,7 +259,7 @@ const variants = [
     assetId: "ast_pohnpei_current",
     displayName: "State Flag",
     aliases: ["Pohnpei State Flag", "Ponape State Flag"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -269,7 +269,7 @@ const variants = [
     assetId: "ast_yap_current",
     displayName: "State Flag",
     aliases: ["Yap State Flag"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -785,7 +785,7 @@ const variants = [
     assetId: "ast_mayotte_unofficial",
     displayName: "Unofficial Local Flag",
     aliases: [],
-    tags: ["unofficial", "current", "first_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -800,7 +800,7 @@ const variants = [
       "Lö Mavéli",
       "Lo Mavéli"
     ],
-    tags: ["unofficial", "current", "first_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: 2003,
     endYear: null
   },
@@ -1782,7 +1782,7 @@ const variants = [
     assetId: "ast_amazonas_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1792,7 +1792,7 @@ const variants = [
     assetId: "ast_anzoategui_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1802,7 +1802,7 @@ const variants = [
     assetId: "ast_apure_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1812,7 +1812,7 @@ const variants = [
     assetId: "ast_aragua_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1822,7 +1822,7 @@ const variants = [
     assetId: "ast_barinas_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1832,7 +1832,7 @@ const variants = [
     assetId: "ast_bolivar_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1842,7 +1842,7 @@ const variants = [
     assetId: "ast_carabobo_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1852,7 +1852,7 @@ const variants = [
     assetId: "ast_caracas_current",
     displayName: "Official Flag",
     aliases: ["Capital District Flag", "Distrito Capital Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1862,7 +1862,7 @@ const variants = [
     assetId: "ast_cojedes_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1872,7 +1872,7 @@ const variants = [
     assetId: "ast_delta_amacuro_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1882,7 +1882,7 @@ const variants = [
     assetId: "ast_falcon_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1892,7 +1892,7 @@ const variants = [
     assetId: "ast_guarico_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1902,7 +1902,7 @@ const variants = [
     assetId: "ast_la_guaira_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1912,7 +1912,7 @@ const variants = [
     assetId: "ast_lara_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1922,7 +1922,7 @@ const variants = [
     assetId: "ast_merida_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1932,7 +1932,7 @@ const variants = [
     assetId: "ast_miranda_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1942,7 +1942,7 @@ const variants = [
     assetId: "ast_monagas_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1952,7 +1952,7 @@ const variants = [
     assetId: "ast_nueva_esparta_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1962,7 +1962,7 @@ const variants = [
     assetId: "ast_portuguesa_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1972,7 +1972,7 @@ const variants = [
     assetId: "ast_sucre_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1982,7 +1982,7 @@ const variants = [
     assetId: "ast_tachira_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -1992,7 +1992,7 @@ const variants = [
     assetId: "ast_trujillo_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2002,7 +2002,7 @@ const variants = [
     assetId: "ast_yaracuy_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2012,7 +2012,7 @@ const variants = [
     assetId: "ast_zulia_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2030,7 +2030,7 @@ const variants = [
     assetId: "ast_apure_current_text_removed",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision", "quiz", "text_removed"],
+    tags: ["official", "current", "quiz", "text_removed"],
     startYear: null,
     endYear: null,
     // The real variant represented by this technical quiz image.
@@ -2042,7 +2042,7 @@ const variants = [
     assetId: "ast_aragua_current_text_removed",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision", "quiz", "text_removed"],
+    tags: ["official", "current", "quiz", "text_removed"],
     startYear: null,
     endYear: null,
     // The real variant represented by this technical quiz image.
@@ -2102,7 +2102,7 @@ const variants = [
     assetId: "ast_alberta_current",
     displayName: "Provincial Flag",
     aliases: ["Alberta Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2112,7 +2112,7 @@ const variants = [
     assetId: "ast_british_columbia_current",
     displayName: "Provincial Flag",
     aliases: ["British Columbia Flag", "BC Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2122,7 +2122,7 @@ const variants = [
     assetId: "ast_manitoba_current",
     displayName: "Provincial Flag",
     aliases: ["Manitoba Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2132,7 +2132,7 @@ const variants = [
     assetId: "ast_new_brunswick_current",
     displayName: "Provincial Flag",
     aliases: ["New Brunswick Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2142,7 +2142,7 @@ const variants = [
     assetId: "ast_newfoundland_and_labrador_current",
     displayName: "Provincial Flag",
     aliases: ["Newfoundland and Labrador Flag", "Newfoundland Flag", "Labrador Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2152,7 +2152,7 @@ const variants = [
     assetId: "ast_nova_scotia_current",
     displayName: "Provincial Flag",
     aliases: ["Nova Scotia Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2162,7 +2162,7 @@ const variants = [
     assetId: "ast_ontario_current",
     displayName: "Provincial Flag",
     aliases: ["Ontario Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2172,7 +2172,7 @@ const variants = [
     assetId: "ast_prince_edward_island_current",
     displayName: "Provincial Flag",
     aliases: ["Prince Edward Island Flag", "PEI Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2182,7 +2182,7 @@ const variants = [
     assetId: "ast_quebec_current",
     displayName: "Provincial Flag",
     aliases: ["Quebec Flag", "Québec Flag", "Fleurdelisé"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2192,7 +2192,7 @@ const variants = [
     assetId: "ast_saskatchewan_current",
     displayName: "Provincial Flag",
     aliases: ["Saskatchewan Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2202,7 +2202,7 @@ const variants = [
     assetId: "ast_northwest_territories_current",
     displayName: "Territorial Flag",
     aliases: ["Northwest Territories Flag", "NWT Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2212,7 +2212,7 @@ const variants = [
     assetId: "ast_nunavut_current",
     displayName: "Territorial Flag",
     aliases: ["Nunavut Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2222,7 +2222,7 @@ const variants = [
     assetId: "ast_yukon_current",
     displayName: "Territorial Flag",
     aliases: ["Yukon Flag", "Yukon Territory Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -2271,7 +2271,7 @@ const variants = [
     assetId: "ast_alabama",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1895,
     endYear: null
   },
@@ -2281,7 +2281,7 @@ const variants = [
     assetId: "ast_alaska",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1927,
     endYear: null
   },
@@ -2291,7 +2291,7 @@ const variants = [
     assetId: "ast_arizona",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1912,
     endYear: null
   },
@@ -2301,7 +2301,7 @@ const variants = [
     assetId: "ast_arkansas",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1913,
     endYear: null
   },
@@ -2311,7 +2311,7 @@ const variants = [
     assetId: "ast_california_official",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1911,
     endYear: null
   },
@@ -2321,7 +2321,7 @@ const variants = [
     assetId: "ast_colorado",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1911,
     endYear: null
   },
@@ -2331,7 +2331,7 @@ const variants = [
     assetId: "ast_connecticut",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1897,
     endYear: null
   },
@@ -2341,7 +2341,7 @@ const variants = [
     assetId: "ast_delaware",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1913,
     endYear: null
   },
@@ -2351,7 +2351,7 @@ const variants = [
     assetId: "ast_washington_dc",
     displayName: "Official Flag",
     aliases: ["Washington, D.C. Flag", "DC Flag"],
-    tags: ["official", "current", "federal_district"],
+    tags: ["official", "current"],
     startYear: 1938,
     endYear: null
   },
@@ -2361,7 +2361,7 @@ const variants = [
     assetId: "ast_florida",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1900,
     endYear: null
   },
@@ -2371,7 +2371,7 @@ const variants = [
     assetId: "ast_georgia_state",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 2003,
     endYear: null
   },
@@ -2381,7 +2381,7 @@ const variants = [
     assetId: "ast_hawaii",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1845,
     endYear: null
   },
@@ -2391,7 +2391,7 @@ const variants = [
     assetId: "ast_idaho",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1907,
     endYear: null
   },
@@ -2401,7 +2401,7 @@ const variants = [
     assetId: "ast_illinois",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1915,
     endYear: null
   },
@@ -2411,7 +2411,7 @@ const variants = [
     assetId: "ast_indiana",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1917,
     endYear: null
   },
@@ -2421,7 +2421,7 @@ const variants = [
     assetId: "ast_iowa",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1921,
     endYear: null
   },
@@ -2431,7 +2431,7 @@ const variants = [
     assetId: "ast_kansas",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1961,
     endYear: null
   },
@@ -2441,7 +2441,7 @@ const variants = [
     assetId: "ast_kentucky",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1918,
     endYear: null
   },
@@ -2451,7 +2451,7 @@ const variants = [
     assetId: "ast_louisiana",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 2010,
     endYear: null
   },
@@ -2461,7 +2461,7 @@ const variants = [
     assetId: "ast_maine",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1909,
     endYear: null
   },
@@ -2471,7 +2471,7 @@ const variants = [
     assetId: "ast_maryland",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1904,
     endYear: null
   },
@@ -2481,7 +2481,7 @@ const variants = [
     assetId: "ast_massachusetts",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1971,
     endYear: null
   },
@@ -2491,7 +2491,7 @@ const variants = [
     assetId: "ast_michigan",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1911,
     endYear: null
   },
@@ -2501,7 +2501,7 @@ const variants = [
     assetId: "ast_minnesota",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 2024,
     endYear: null
   },
@@ -2511,7 +2511,7 @@ const variants = [
     assetId: "ast_mississippi",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 2021,
     endYear: null
   },
@@ -2521,7 +2521,7 @@ const variants = [
     assetId: "ast_missouri",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1913,
     endYear: null
   },
@@ -2531,7 +2531,7 @@ const variants = [
     assetId: "ast_montana",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1981,
     endYear: null
   },
@@ -2541,7 +2541,7 @@ const variants = [
     assetId: "ast_nebraska",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1925,
     endYear: null
   },
@@ -2551,7 +2551,7 @@ const variants = [
     assetId: "ast_nevada",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1991,
     endYear: null
   },
@@ -2561,7 +2561,7 @@ const variants = [
     assetId: "ast_new_hampshire",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1909,
     endYear: null
   },
@@ -2571,7 +2571,7 @@ const variants = [
     assetId: "ast_new_jersey",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1896,
     endYear: null
   },
@@ -2581,7 +2581,7 @@ const variants = [
     assetId: "ast_new_mexico",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1925,
     endYear: null
   },
@@ -2591,7 +2591,7 @@ const variants = [
     assetId: "ast_new_york",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 2020,
     endYear: null
   },
@@ -2601,7 +2601,7 @@ const variants = [
     assetId: "ast_north_carolina",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1885,
     endYear: null
   },
@@ -2611,7 +2611,7 @@ const variants = [
     assetId: "ast_north_dakota",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1911,
     endYear: null
   },
@@ -2621,7 +2621,7 @@ const variants = [
     assetId: "ast_ohio",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1902,
     endYear: null
   },
@@ -2631,7 +2631,7 @@ const variants = [
     assetId: "ast_oklahoma",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1941,
     endYear: null
   },
@@ -2641,7 +2641,7 @@ const variants = [
     assetId: "ast_oregon_obverse",
     displayName: "Obverse",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision", "obverse"],
+    tags: ["official", "current", "obverse"],
     startYear: 1925,
     endYear: null,
 	relatedVariants: {
@@ -2654,7 +2654,7 @@ const variants = [
     assetId: "ast_oregon_reverse",
     displayName: "Reverse",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision", "reverse"],
+    tags: ["official", "current", "reverse"],
     startYear: 1925,
     endYear: null,
 	relatedVariants: {
@@ -2667,7 +2667,7 @@ const variants = [
     assetId: "ast_pennsylvania",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1907,
     endYear: null
   },
@@ -2677,7 +2677,7 @@ const variants = [
     assetId: "ast_rhode_island",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1897,
     endYear: null
   },
@@ -2687,7 +2687,7 @@ const variants = [
     assetId: "ast_south_carolina",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1861,
     endYear: null
   },
@@ -2697,7 +2697,7 @@ const variants = [
     assetId: "ast_south_dakota",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1992,
     endYear: null
   },
@@ -2707,7 +2707,7 @@ const variants = [
     assetId: "ast_tennessee",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1905,
     endYear: null
   },
@@ -2717,7 +2717,7 @@ const variants = [
     assetId: "ast_texas",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1839,
     endYear: null
   },
@@ -2727,7 +2727,7 @@ const variants = [
     assetId: "ast_utah",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 2024,
     endYear: null
   },
@@ -2737,7 +2737,7 @@ const variants = [
     assetId: "ast_vermont",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1923,
     endYear: null
   },
@@ -2747,7 +2747,7 @@ const variants = [
     assetId: "ast_virginia",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1912,
     endYear: null
   },
@@ -2757,7 +2757,7 @@ const variants = [
     assetId: "ast_washington",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1923,
     endYear: null
   },
@@ -2767,7 +2767,7 @@ const variants = [
     assetId: "ast_west_virginia",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1929,
     endYear: null
   },
@@ -2777,7 +2777,7 @@ const variants = [
     assetId: "ast_wisconsin",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1981,
     endYear: null
   },
@@ -2787,7 +2787,7 @@ const variants = [
     assetId: "ast_wyoming",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1917,
     endYear: null
   },
@@ -3729,7 +3729,7 @@ const variants = [
     assetId: "ast_auvergne_rhone_alpes",
     displayName: "Regional Flag",
     aliases: ["Flag of Auvergne-Rhône-Alpes", "Flag of Auvergne-Rhone-Alpes"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3743,7 +3743,7 @@ const variants = [
       "Flag of Bourgogne-Franche-Comte",
 	  "Flag of Burgundy-Franche-Comte"
     ],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3757,7 +3757,7 @@ const variants = [
       "Gwenn-ha-du",
       "Flag of Bretagne"
     ],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3767,7 +3767,7 @@ const variants = [
     assetId: "ast_centre_val_de_loire_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Centre-Val de Loire"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3777,7 +3777,7 @@ const variants = [
     assetId: "ast_corsica_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Corsica", "Flag of Corse"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3787,7 +3787,7 @@ const variants = [
     assetId: "ast_grand_est_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Grand Est"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3797,7 +3797,7 @@ const variants = [
     assetId: "ast_hauts_de_france_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Hauts-de-France"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3807,7 +3807,7 @@ const variants = [
     assetId: "ast_ile_de_france_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Île-de-France", "Flag of Ile-de-France"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3817,7 +3817,7 @@ const variants = [
     assetId: "ast_normandy_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Normandy", "Flag of Normandie"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3827,7 +3827,7 @@ const variants = [
     assetId: "ast_nouvelle_aquitaine_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Nouvelle-Aquitaine"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3837,7 +3837,7 @@ const variants = [
     assetId: "ast_occitanie_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Occitania", "Flag of Occitanie"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3847,7 +3847,7 @@ const variants = [
     assetId: "ast_pays_de_la_loire_current",
     displayName: "Regional Flag",
     aliases: ["Flag of Pays de la Loire"],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3861,7 +3861,7 @@ const variants = [
       "Flag of Provence-Alpes-Cote d'Azur",
       "Flag of PACA"
     ],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -3875,7 +3875,7 @@ const variants = [
     assetId: "ast_centre_val_de_loire_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Centre-Val de Loire"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_france_centre_val_de_loire_current"
@@ -3886,7 +3886,7 @@ const variants = [
     assetId: "ast_grand_est_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Grand Est"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_france_grand_est_current"
@@ -3897,7 +3897,7 @@ const variants = [
     assetId: "ast_hauts_de_france_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Hauts-de-France"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_france_hauts_de_france_current"
@@ -3908,7 +3908,7 @@ const variants = [
     assetId: "ast_occitanie_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Occitania", "Flag of Occitanie"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_france_occitania_current"
@@ -3919,7 +3919,7 @@ const variants = [
     assetId: "ast_pays_de_la_loire_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Pays de la Loire"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_france_pays_de_la_loire_current"
@@ -4079,7 +4079,7 @@ const variants = [
     assetId: "ast_hong_kong_current",
     displayName: "Regional Flag",
     aliases: ["Bauhinia Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1997,
     endYear: null
   },
@@ -4106,7 +4106,7 @@ const variants = [
     assetId: "ast_hokkaido_current",
     displayName: "Prefectural Flag",
     aliases: ["Hokkaido Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4116,7 +4116,7 @@ const variants = [
     assetId: "ast_aomori_current",
     displayName: "Prefectural Flag",
     aliases: ["Aomori Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4126,7 +4126,7 @@ const variants = [
     assetId: "ast_iwate_current",
     displayName: "Prefectural Flag",
     aliases: ["Iwate Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4136,7 +4136,7 @@ const variants = [
     assetId: "ast_miyagi_current",
     displayName: "Prefectural Flag",
     aliases: ["Miyagi Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4146,7 +4146,7 @@ const variants = [
     assetId: "ast_akita_current",
     displayName: "Prefectural Flag",
     aliases: ["Akita Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4156,7 +4156,7 @@ const variants = [
     assetId: "ast_yamagata_current",
     displayName: "Prefectural Flag",
     aliases: ["Yamagata Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4166,7 +4166,7 @@ const variants = [
     assetId: "ast_fukushima_current",
     displayName: "Prefectural Flag",
     aliases: ["Fukushima Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4176,7 +4176,7 @@ const variants = [
     assetId: "ast_ibaraki_current",
     displayName: "Prefectural Flag",
     aliases: ["Ibaraki Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4186,7 +4186,7 @@ const variants = [
     assetId: "ast_tochigi_current",
     displayName: "Prefectural Flag",
     aliases: ["Tochigi Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4196,7 +4196,7 @@ const variants = [
     assetId: "ast_gunma_current",
     displayName: "Prefectural Flag",
     aliases: ["Gunma Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4206,7 +4206,7 @@ const variants = [
     assetId: "ast_saitama_current",
     displayName: "Prefectural Flag",
     aliases: ["Saitama Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4216,7 +4216,7 @@ const variants = [
     assetId: "ast_chiba_current",
     displayName: "Prefectural Flag",
     aliases: ["Chiba Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4226,7 +4226,7 @@ const variants = [
     assetId: "ast_tokyo_metropolis_current",
     displayName: "Metropolitan Flag",
     aliases: ["Tokyo Flag", "Tokyo Metropolis Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4236,7 +4236,7 @@ const variants = [
     assetId: "ast_kanagawa_current",
     displayName: "Prefectural Flag",
     aliases: ["Kanagawa Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4246,7 +4246,7 @@ const variants = [
     assetId: "ast_niigata_current",
     displayName: "Prefectural Flag",
     aliases: ["Niigata Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4256,7 +4256,7 @@ const variants = [
     assetId: "ast_toyama_current",
     displayName: "Prefectural Flag",
     aliases: ["Toyama Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4266,7 +4266,7 @@ const variants = [
     assetId: "ast_ishikawa_current",
     displayName: "Prefectural Flag",
     aliases: ["Ishikawa Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4276,7 +4276,7 @@ const variants = [
     assetId: "ast_fukui_current",
     displayName: "Prefectural Flag",
     aliases: ["Fukui Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4286,7 +4286,7 @@ const variants = [
     assetId: "ast_yamanashi_current",
     displayName: "Prefectural Flag",
     aliases: ["Yamanashi Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4296,7 +4296,7 @@ const variants = [
     assetId: "ast_nagano_current",
     displayName: "Prefectural Flag",
     aliases: ["Nagano Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4306,7 +4306,7 @@ const variants = [
     assetId: "ast_gifu_current",
     displayName: "Prefectural Flag",
     aliases: ["Gifu Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4316,7 +4316,7 @@ const variants = [
     assetId: "ast_shizuoka_current",
     displayName: "Prefectural Flag",
     aliases: ["Shizuoka Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4326,7 +4326,7 @@ const variants = [
     assetId: "ast_aichi_current",
     displayName: "Prefectural Flag",
     aliases: ["Aichi Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4336,7 +4336,7 @@ const variants = [
     assetId: "ast_mie_current",
     displayName: "Prefectural Flag",
     aliases: ["Mie Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4346,7 +4346,7 @@ const variants = [
     assetId: "ast_shiga_current",
     displayName: "Prefectural Flag",
     aliases: ["Shiga Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4356,7 +4356,7 @@ const variants = [
     assetId: "ast_kyoto_current",
     displayName: "Prefectural Flag",
     aliases: ["Kyoto Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4366,7 +4366,7 @@ const variants = [
     assetId: "ast_osaka_current",
     displayName: "Prefectural Flag",
     aliases: ["Osaka Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4376,7 +4376,7 @@ const variants = [
     assetId: "ast_hyogo_current",
     displayName: "Prefectural Flag",
     aliases: ["Hyogo Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4386,7 +4386,7 @@ const variants = [
     assetId: "ast_nara_current",
     displayName: "Prefectural Flag",
     aliases: ["Nara Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4396,7 +4396,7 @@ const variants = [
     assetId: "ast_wakayama_current",
     displayName: "Prefectural Flag",
     aliases: ["Wakayama Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4406,7 +4406,7 @@ const variants = [
     assetId: "ast_tottori_current",
     displayName: "Prefectural Flag",
     aliases: ["Tottori Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4416,7 +4416,7 @@ const variants = [
     assetId: "ast_shimane_current",
     displayName: "Prefectural Flag",
     aliases: ["Shimane Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4426,7 +4426,7 @@ const variants = [
     assetId: "ast_okayama_current",
     displayName: "Prefectural Flag",
     aliases: ["Okayama Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4436,7 +4436,7 @@ const variants = [
     assetId: "ast_hiroshima_current",
     displayName: "Prefectural Flag",
     aliases: ["Hiroshima Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4446,7 +4446,7 @@ const variants = [
     assetId: "ast_yamaguchi_current",
     displayName: "Prefectural Flag",
     aliases: ["Yamaguchi Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4456,7 +4456,7 @@ const variants = [
     assetId: "ast_tokushima_current",
     displayName: "Prefectural Flag",
     aliases: ["Tokushima Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4466,7 +4466,7 @@ const variants = [
     assetId: "ast_kagawa_current",
     displayName: "Prefectural Flag",
     aliases: ["Kagawa Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4476,7 +4476,7 @@ const variants = [
     assetId: "ast_ehime_current",
     displayName: "Prefectural Flag",
     aliases: ["Ehime Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4486,7 +4486,7 @@ const variants = [
     assetId: "ast_kochi_current",
     displayName: "Prefectural Flag",
     aliases: ["Kochi Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4496,7 +4496,7 @@ const variants = [
     assetId: "ast_fukuoka_current",
     displayName: "Prefectural Flag",
     aliases: ["Fukuoka Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4506,7 +4506,7 @@ const variants = [
     assetId: "ast_saga_current",
     displayName: "Prefectural Flag",
     aliases: ["Saga Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4516,7 +4516,7 @@ const variants = [
     assetId: "ast_nagasaki_current",
     displayName: "Prefectural Flag",
     aliases: ["Nagasaki Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4526,7 +4526,7 @@ const variants = [
     assetId: "ast_kumamoto_current",
     displayName: "Prefectural Flag",
     aliases: ["Kumamoto Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4536,7 +4536,7 @@ const variants = [
     assetId: "ast_oita_current",
     displayName: "Prefectural Flag",
     aliases: ["Oita Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4546,7 +4546,7 @@ const variants = [
     assetId: "ast_miyazaki_current",
     displayName: "Prefectural Flag",
     aliases: ["Miyazaki Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4556,7 +4556,7 @@ const variants = [
     assetId: "ast_kagoshima_current",
     displayName: "Prefectural Flag",
     aliases: ["Kagoshima Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4566,7 +4566,7 @@ const variants = [
     assetId: "ast_okinawa_current",
     displayName: "Prefectural Flag",
     aliases: ["Okinawa Prefecture Flag"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -4579,7 +4579,7 @@ const variants = [
       "Macau Regional Flag",
       "Lotus Flag"
     ],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1999,
     endYear: null
   },
@@ -5076,7 +5076,7 @@ const variants = [
     assetId: "ast_aland_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1954,
     endYear: null
   },
@@ -5129,7 +5129,7 @@ const variants = [
     assetId: "ast_burgenland_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Burgenland", "State Flag of Burgenland"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5139,7 +5139,7 @@ const variants = [
     assetId: "ast_burgenland_civil_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Burgenland"],
-    tags: ["official", "current", "civil", "first_level_subdivision"],
+    tags: ["official", "current", "civil"],
     startYear: null,
     endYear: null
   },
@@ -5149,7 +5149,7 @@ const variants = [
     assetId: "ast_carinthia_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Carinthia", "State Flag of Carinthia"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5159,7 +5159,7 @@ const variants = [
     assetId: "ast_carinthia_civil_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Carinthia"],
-    tags: ["official", "current", "civil", "first_level_subdivision"],
+    tags: ["official", "current", "civil"],
     startYear: null,
     endYear: null
   },
@@ -5169,7 +5169,7 @@ const variants = [
     assetId: "ast_lower_austria_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Lower Austria", "State Flag of Lower Austria"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5179,7 +5179,7 @@ const variants = [
     assetId: "ast_lower_austria_civil_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Lower Austria"],
-    tags: ["official", "current", "civil", "first_level_subdivision"],
+    tags: ["official", "current", "civil"],
     startYear: null,
     endYear: null
   },
@@ -5189,7 +5189,7 @@ const variants = [
     assetId: "ast_salzburg_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Salzburg", "State Flag of Salzburg"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5199,7 +5199,7 @@ const variants = [
     assetId: "ast_salzburg_vienna_vorarlberg_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Salzburg"],
-    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    tags: ["official", "current", "civil", "ambiguous_quiz_visual"],
     quizVisualGroupId: "red_white_horizontal_bicolour_dark",
     startYear: null,
     endYear: null
@@ -5210,7 +5210,7 @@ const variants = [
     assetId: "ast_styria_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Styria", "State Flag of Styria"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5220,7 +5220,7 @@ const variants = [
     assetId: "ast_styria_civil_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Styria"],
-    tags: ["official", "current", "civil", "first_level_subdivision"],
+    tags: ["official", "current", "civil"],
     startYear: null,
     endYear: null
   },
@@ -5230,7 +5230,7 @@ const variants = [
     assetId: "ast_tyrol_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Tyrol", "State Flag of Tyrol", "Flag of Tirol"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5240,7 +5240,7 @@ const variants = [
     assetId: "ast_tyrol_upper_austria_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Tyrol", "Civil Flag of Tirol"],
-    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    tags: ["official", "current", "civil", "ambiguous_quiz_visual"],
     quizVisualGroupId: "white_red_horizontal_bicolour",
     startYear: null,
     endYear: null
@@ -5251,7 +5251,7 @@ const variants = [
     assetId: "ast_upper_austria_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Upper Austria", "State Flag of Upper Austria"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5261,7 +5261,7 @@ const variants = [
     assetId: "ast_tyrol_upper_austria_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Upper Austria"],
-    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    tags: ["official", "current", "civil", "ambiguous_quiz_visual"],
     quizVisualGroupId: "white_red_horizontal_bicolour",
     startYear: null,
     endYear: null
@@ -5272,7 +5272,7 @@ const variants = [
     assetId: "ast_vienna_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Vienna", "State Flag of Vienna", "Flag of Wien"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5282,7 +5282,7 @@ const variants = [
     assetId: "ast_salzburg_vienna_vorarlberg_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Vienna", "Civil Flag of Wien"],
-    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    tags: ["official", "current", "civil", "ambiguous_quiz_visual"],
     quizVisualGroupId: "red_white_horizontal_bicolour_dark",
     startYear: null,
     endYear: null
@@ -5293,7 +5293,7 @@ const variants = [
     assetId: "ast_vorarlberg_state_current",
     displayName: "State Flag",
     aliases: ["Flag of Vorarlberg", "State Flag of Vorarlberg"],
-    tags: ["official", "current", "state", "first_level_subdivision"],
+    tags: ["official", "current", "state"],
     startYear: null,
     endYear: null
   },
@@ -5303,7 +5303,7 @@ const variants = [
     assetId: "ast_salzburg_vienna_vorarlberg_current",
     displayName: "Civil Flag",
     aliases: ["State Colours", "Civil Flag of Vorarlberg"],
-    tags: ["official", "current", "civil", "first_level_subdivision", "ambiguous_quiz_visual"],
+    tags: ["official", "current", "civil", "ambiguous_quiz_visual"],
     quizVisualGroupId: "red_white_horizontal_bicolour_dark",
     startYear: null,
     endYear: null
@@ -5447,7 +5447,7 @@ const variants = [
     assetId: "ast_baden_wurttemberg_current",
     displayName: "Official Flag",
     aliases: ["Flag of Baden-Württemberg", "Flag of Baden-Wuerttemberg"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5457,7 +5457,7 @@ const variants = [
     assetId: "ast_bavaria_current_lozengy",
     displayName: "Lozengy State Flag",
     aliases: ["Lozenge Flag", "Diamond Flag", "Rautenflagge"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null,
     relatedVariants: {
@@ -5470,7 +5470,7 @@ const variants = [
     assetId: "ast_bavaria_current_striped",
     displayName: "Striped State Flag",
     aliases: ["Stripe Flag", "Streifenflagge"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null,
     relatedVariants: {
@@ -5483,7 +5483,7 @@ const variants = [
     assetId: "ast_berlin_current",
     displayName: "Official Flag",
     aliases: ["Flag of Berlin"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5493,7 +5493,7 @@ const variants = [
     assetId: "ast_brandenburg_current",
     displayName: "Official Flag",
     aliases: ["Flag of Brandenburg"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5503,7 +5503,7 @@ const variants = [
     assetId: "ast_bremen_current",
     displayName: "Official Flag",
     aliases: ["Flag of Bremen"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5513,7 +5513,7 @@ const variants = [
     assetId: "ast_hamburg_current",
     displayName: "Official Flag",
     aliases: ["Flag of Hamburg"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5523,7 +5523,7 @@ const variants = [
     assetId: "ast_hesse_current",
     displayName: "Official Flag",
     aliases: ["Flag of Hesse", "Flag of Hessen"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5533,7 +5533,7 @@ const variants = [
     assetId: "ast_lower_saxony_current",
     displayName: "Official Flag",
     aliases: ["Flag of Lower Saxony", "Flag of Niedersachsen"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5543,7 +5543,7 @@ const variants = [
     assetId: "ast_mecklenburg_western_pomerania_current",
     displayName: "Official Flag",
     aliases: ["Flag of Mecklenburg-Vorpommern", "Flag of Mecklenburg-Western Pomerania"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5553,7 +5553,7 @@ const variants = [
     assetId: "ast_north_rhine_westphalia_current",
     displayName: "Official Flag",
     aliases: ["Flag of North Rhine-Westphalia", "Flag of Nordrhein-Westfalen"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5563,7 +5563,7 @@ const variants = [
     assetId: "ast_rhineland_palatinate_current",
     displayName: "Official Flag",
     aliases: ["Flag of Rhineland-Palatinate", "Flag of Rheinland-Pfalz"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5573,7 +5573,7 @@ const variants = [
     assetId: "ast_saarland_current",
     displayName: "Official Flag",
     aliases: ["Flag of Saarland"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5583,7 +5583,7 @@ const variants = [
     assetId: "ast_saxony_current",
     displayName: "Official Flag",
     aliases: ["Flag of Saxony", "Flag of Sachsen"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5593,7 +5593,7 @@ const variants = [
     assetId: "ast_saxony_anhalt_current",
     displayName: "Official Flag",
     aliases: ["Flag of Saxony-Anhalt", "Flag of Sachsen-Anhalt"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5603,7 +5603,7 @@ const variants = [
     assetId: "ast_schleswig_holstein_current",
     displayName: "Official Flag",
     aliases: ["Flag of Schleswig-Holstein"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5613,7 +5613,7 @@ const variants = [
     assetId: "ast_thuringia_current",
     displayName: "Official Flag",
     aliases: ["Flag of Thuringia", "Flag of Thüringen"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -5727,7 +5727,7 @@ const variants = [
     assetId: "ast_abruzzo_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5737,7 +5737,7 @@ const variants = [
     assetId: "ast_aosta_valley_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5747,7 +5747,7 @@ const variants = [
     assetId: "ast_apulia_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5757,7 +5757,7 @@ const variants = [
     assetId: "ast_basilicata_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5767,7 +5767,7 @@ const variants = [
     assetId: "ast_calabria_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5777,7 +5777,7 @@ const variants = [
     assetId: "ast_campania_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5787,7 +5787,7 @@ const variants = [
     assetId: "ast_emilia_romagna_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5797,7 +5797,7 @@ const variants = [
     assetId: "ast_friuli_venezia_giulia_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5807,7 +5807,7 @@ const variants = [
     assetId: "ast_lazio_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5817,7 +5817,7 @@ const variants = [
     assetId: "ast_liguria_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5827,7 +5827,7 @@ const variants = [
     assetId: "ast_lombardy_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5837,7 +5837,7 @@ const variants = [
     assetId: "ast_marche_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5847,7 +5847,7 @@ const variants = [
     assetId: "ast_molise_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5857,7 +5857,7 @@ const variants = [
     assetId: "ast_piedmont_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5867,7 +5867,7 @@ const variants = [
     assetId: "ast_sardinia_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5877,7 +5877,7 @@ const variants = [
     assetId: "ast_sicily_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5887,7 +5887,7 @@ const variants = [
     assetId: "ast_trentino_alto_south_tyrol_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5897,7 +5897,7 @@ const variants = [
     assetId: "ast_tuscany_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5907,7 +5907,7 @@ const variants = [
     assetId: "ast_umbria_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5917,7 +5917,7 @@ const variants = [
     assetId: "ast_veneto_current",
     displayName: "Regional Flag",
     aliases: [],
-    tags: ["current", "first_level_subdivision"],
+    tags: ["current"],
     startYear: null,
     endYear: null
   },
@@ -5932,7 +5932,7 @@ const variants = [
     assetId: "ast_apulia_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Apulia"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_italy_apulia_current"
@@ -5943,7 +5943,7 @@ const variants = [
     assetId: "ast_calabria_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Calabria"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_italy_calabria_current"
@@ -5954,7 +5954,7 @@ const variants = [
     assetId: "ast_emilia_romagna_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Emilia-Romagna", "Flag of Emilia Romagna"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_italy_emilia_romagna_current"
@@ -5965,7 +5965,7 @@ const variants = [
     assetId: "ast_lazio_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Lazio"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_italy_lazio_current"
@@ -5976,7 +5976,7 @@ const variants = [
     assetId: "ast_molise_current_text_removed",
     displayName: "Regional Flag - Text Removed",
     aliases: ["Flag of Molise"],
-    tags: ["quiz", "text_removed", "current", "first_level_subdivision"],
+    tags: ["quiz", "text_removed", "current"],
     startYear: null,
     endYear: null,
     baseVariantId: "var_italy_molise_current"
@@ -6329,7 +6329,7 @@ const variants = [
     assetId: "ast_andalucia_current",
     displayName: "Official Flag",
     aliases: ["Arbonaida"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1982,
     endYear: null
   },
@@ -6339,7 +6339,7 @@ const variants = [
     assetId: "ast_aragon_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1984,
     endYear: null
   },
@@ -6349,7 +6349,7 @@ const variants = [
     assetId: "ast_asturias_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1990,
     endYear: null
   },
@@ -6359,7 +6359,7 @@ const variants = [
     assetId: "ast_balearic_islands_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1983,
     endYear: null
   },
@@ -6369,7 +6369,7 @@ const variants = [
     assetId: "ast_basque_country_current",
     displayName: "Official Flag",
     aliases: ["Ikurriña"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1977,
     endYear: null
   },
@@ -6379,7 +6379,7 @@ const variants = [
     assetId: "ast_canary_islands_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1982,
     endYear: null
   },
@@ -6389,7 +6389,7 @@ const variants = [
     assetId: "ast_cantabria_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1984,
     endYear: null
   },
@@ -6399,7 +6399,7 @@ const variants = [
     assetId: "ast_castilla_la_mancha_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1982,
     endYear: null
   },
@@ -6409,7 +6409,7 @@ const variants = [
     assetId: "ast_castilla_y_leon_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1983,
     endYear: null
   },
@@ -6419,7 +6419,7 @@ const variants = [
     assetId: "ast_catalonia_current",
     displayName: "Official Flag",
     aliases: ["Senyera"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1979,
     endYear: null
   },
@@ -6429,7 +6429,7 @@ const variants = [
     assetId: "ast_ceuta_current",
     displayName: "Official Flag",
     aliases: ["Flag of Saint Vincent"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1995,
     endYear: null
   },
@@ -6439,7 +6439,7 @@ const variants = [
     assetId: "ast_extremadura_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1985,
     endYear: null
   },
@@ -6449,7 +6449,7 @@ const variants = [
     assetId: "ast_galicia_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1984,
     endYear: null
   },
@@ -6459,7 +6459,7 @@ const variants = [
     assetId: "ast_la_rioja_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1979,
     endYear: null
   },
@@ -6469,7 +6469,7 @@ const variants = [
     assetId: "ast_madrid_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1983,
     endYear: null
   },
@@ -6479,7 +6479,7 @@ const variants = [
     assetId: "ast_melilla_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1995,
     endYear: null
   },
@@ -6489,7 +6489,7 @@ const variants = [
     assetId: "ast_murcia_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1979,
     endYear: null
   },
@@ -6499,7 +6499,7 @@ const variants = [
     assetId: "ast_navarra_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1981,
     endYear: null
   },
@@ -6509,7 +6509,7 @@ const variants = [
     assetId: "ast_valencia_current",
     displayName: "Official Flag",
     aliases: ["Senyera Coronada"],
-    tags: ["official", "current", "first_level_subdivision"],
+    tags: ["official", "current"],
     startYear: 1984,
     endYear: null
   },
@@ -6595,7 +6595,7 @@ const variants = [
     assetId: "ast_bedfordshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6605,7 +6605,7 @@ const variants = [
     assetId: "ast_berkshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6615,7 +6615,7 @@ const variants = [
     assetId: "ast_buckinghamshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6625,7 +6625,7 @@ const variants = [
     assetId: "ast_cambridgeshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6635,7 +6635,7 @@ const variants = [
     assetId: "ast_cheshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6645,7 +6645,7 @@ const variants = [
     assetId: "ast_city_of_london_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6655,7 +6655,7 @@ const variants = [
     assetId: "ast_cornwall_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6665,7 +6665,7 @@ const variants = [
     assetId: "ast_cumbria_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6675,7 +6675,7 @@ const variants = [
     assetId: "ast_derbyshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6685,7 +6685,7 @@ const variants = [
     assetId: "ast_devon_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6695,7 +6695,7 @@ const variants = [
     assetId: "ast_dorset_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6705,7 +6705,7 @@ const variants = [
     assetId: "ast_county_durham_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6715,7 +6715,7 @@ const variants = [
     assetId: "ast_east_riding_of_yorkshire",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6725,7 +6725,7 @@ const variants = [
     assetId: "ast_east_sussex_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -6735,7 +6735,7 @@ const variants = [
     assetId: "ast_essex_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6745,7 +6745,7 @@ const variants = [
     assetId: "ast_gloucestershire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6755,7 +6755,7 @@ const variants = [
     assetId: "ast_greater_london_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -6765,7 +6765,7 @@ const variants = [
     assetId: "ast_greater_manchester_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -6775,7 +6775,7 @@ const variants = [
     assetId: "ast_hampshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6785,7 +6785,7 @@ const variants = [
     assetId: "ast_herefordshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6795,7 +6795,7 @@ const variants = [
     assetId: "ast_hertfordshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6805,7 +6805,7 @@ const variants = [
     assetId: "ast_isle_of_wight_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6815,7 +6815,7 @@ const variants = [
     assetId: "ast_kent_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6825,7 +6825,7 @@ const variants = [
     assetId: "ast_lancashire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6835,7 +6835,7 @@ const variants = [
     assetId: "ast_leicestershire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6845,7 +6845,7 @@ const variants = [
     assetId: "ast_lincolnshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6855,7 +6855,7 @@ const variants = [
     assetId: "ast_merseyside_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -6865,7 +6865,7 @@ const variants = [
     assetId: "ast_norfolk_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6875,7 +6875,7 @@ const variants = [
     assetId: "ast_north_yorkshire_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -6885,7 +6885,7 @@ const variants = [
     assetId: "ast_northamptonshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6895,7 +6895,7 @@ const variants = [
     assetId: "ast_northumberland_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6905,7 +6905,7 @@ const variants = [
     assetId: "ast_nottinghamshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6915,7 +6915,7 @@ const variants = [
     assetId: "ast_oxfordshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6925,7 +6925,7 @@ const variants = [
     assetId: "ast_rutland_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6935,7 +6935,7 @@ const variants = [
     assetId: "ast_shropshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6945,7 +6945,7 @@ const variants = [
     assetId: "ast_somerset_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6955,7 +6955,7 @@ const variants = [
     assetId: "ast_south_yorkshire_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -6965,7 +6965,7 @@ const variants = [
     assetId: "ast_staffordshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6975,7 +6975,7 @@ const variants = [
     assetId: "ast_suffolk_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6985,7 +6985,7 @@ const variants = [
     assetId: "ast_surrey_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -6995,7 +6995,7 @@ const variants = [
     assetId: "ast_tyne_and_wear_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -7005,7 +7005,7 @@ const variants = [
     assetId: "ast_warwickshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -7015,7 +7015,7 @@ const variants = [
     assetId: "ast_west_midlands_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -7025,7 +7025,7 @@ const variants = [
     assetId: "ast_west_sussex_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -7035,7 +7035,7 @@ const variants = [
     assetId: "ast_west_yorkshire_unofficial",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["unofficial", "current", "second_level_subdivision"],
+    tags: ["unofficial", "current"],
     startYear: null,
     endYear: null
   },
@@ -7045,7 +7045,7 @@ const variants = [
     assetId: "ast_wiltshire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },
@@ -7055,7 +7055,7 @@ const variants = [
     assetId: "ast_worcestershire_current",
     displayName: "Ceremonial County Flag",
     aliases: [],
-    tags: ["official", "current", "second_level_subdivision"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
   },

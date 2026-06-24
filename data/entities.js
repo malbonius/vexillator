@@ -2341,7 +2341,7 @@ const entities = [
     aliases: ["Washington, D.C.", "Washington DC", "DC"],
     entityType: "geographic",
     parentIds: ["ent_united_states"],
-    tags: ["federal_district", "subdivision", "current"],
+    tags: ["first_level_subdivision", "subdivision", "current"],
     defaultVariantId: "var_district_of_columbia"
   },
   {
@@ -7254,7 +7254,7 @@ const entities = [
   aliases: ["League of Arab States", "LAS"],
   entityType: "organisation",
   parentIds: ["ent_international_organisations"],
-  tags: ["organisation", "international_organisation", "regional_organisation", "current"],
+  tags: ["organisation", "international_organisation", "current"],
   defaultVariantId: "var_arab_league_current"
 },
 {

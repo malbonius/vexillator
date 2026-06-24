@@ -67,9 +67,6 @@ const tagRegistry = Object.freeze({
     // Flag use and form
     "national",
 	"civil",
-	"first_level_subdivision",
-	"second_level_subdivision",
-	"third_level_subdivision",
     "state",
     "war",
 	"ensign",
