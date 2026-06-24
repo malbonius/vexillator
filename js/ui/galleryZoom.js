@@ -133,6 +133,15 @@ function openGalleryZoom() {
     return;
   }
 
+  /*
+    While zoom is open, lock the document behind it.
+
+    This prevents mobile browsers from scrolling the Gallery, Entity page or
+    quiz screen underneath the overlay.
+  */
+  document.documentElement.classList.add("zoom-open");
+  document.body.classList.add("zoom-open");
+
   overlay.classList.remove("hidden");
 }
 
@@ -932,6 +941,12 @@ function closeGalleryZoom() {
     appState.galleryZoom.sourceMode === "entity";
 
   overlay.classList.add("hidden");
+
+  /*
+    Re-enable normal page scrolling after the zoom overlay closes.
+  */
+  document.documentElement.classList.remove("zoom-open");
+  document.body.classList.remove("zoom-open");
   
   /*
     Related-variant inspection is temporary and must never change the Gallery
