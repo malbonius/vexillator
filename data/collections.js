@@ -38,9 +38,10 @@ const collections = [
   },
   {
     id: "col_recognised_sovereign_states",
-    name: "Recognised Sovereign States",
+    name: "Recognised Sovereign and Self-Governing States",
     type: "dynamic",
     target: "entity",
+    notes: "Recognised current states and self-governing associated states. Disputed entities are excluded so partially recognised disputed cases can remain in the disputed status collections.",
     rules: {
       all: [
         {
@@ -54,6 +55,11 @@ const collections = [
         },
         {
           hasTag: "recognised"
+        },
+        {
+          not: {
+            hasTag: "disputed"
+          }
         },
         {
           hasDefaultVariant: true

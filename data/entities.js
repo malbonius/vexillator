@@ -4010,7 +4010,7 @@ const entities = [
       "sovereign",
       "country",
       "current",
-      "unrecognised",
+      "partially_recognised",
       "disputed"
     ],
     defaultVariantId: "var_abkhazia_current"
@@ -4116,7 +4116,7 @@ const entities = [
       "sovereign",
       "country",
       "current",
-      "unrecognised",
+      "partially_recognised",
       "disputed"
     ],
     defaultVariantId: "var_south_ossetia_current"
@@ -4955,7 +4955,7 @@ const entities = [
       "sovereign",
       "country",
       "current",
-      "recognised",
+      "partially_recognised",
       "disputed"
     ],
     defaultVariantId: "var_kosovo_current"
@@ -5060,7 +5060,7 @@ const entities = [
       "sovereign",
       "country",
       "current",
-      "unrecognised",
+      "partially_recognised",
       "disputed"
     ],
     defaultVariantId: "var_northern_cyprus_current"

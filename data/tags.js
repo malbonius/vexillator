@@ -41,6 +41,7 @@ const tagRegistry = Object.freeze({
     "current",
     "historical",
     "recognised",
+    "partially_recognised",
     "unrecognised",
     "disputed",
     "former_state",
