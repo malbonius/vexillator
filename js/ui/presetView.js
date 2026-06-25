@@ -1023,6 +1023,20 @@ function getQuizSnapshotPresetAvailableQuestionCount(preset) {
   return generateQuizSnapshotPresetQuestions(preset).length;
 }
 
+function shuffleQuizSnapshotQuestions(questions) {
+  const shuffledQuestions = [...questions];
+
+  for (let index = shuffledQuestions.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    const currentQuestion = shuffledQuestions[index];
+
+    shuffledQuestions[index] = shuffledQuestions[swapIndex];
+    shuffledQuestions[swapIndex] = currentQuestion;
+  }
+
+  return shuffledQuestions;
+}
+
 function getQuizSnapshotPresetMetaText(preset) {
   const payload = normaliseQuizSnapshotPresetPayload(preset?.payload ?? {});
   const availableQuestionCount =
@@ -1035,7 +1049,7 @@ function getQuizSnapshotPresetMetaText(preset) {
       : "quiz-mode neutral";
 
   return (
-    `Saved quiz set · exact order · ${sourceText} · ` +
+    `Saved quiz set · shuffled on replay · ${sourceText} · ` +
     `${payload.questionCount} saved ` +
     `${payload.questionCount === 1 ? "question" : "questions"} · ` +
     `${availableQuestionCount} currently available`
@@ -1043,7 +1057,9 @@ function getQuizSnapshotPresetMetaText(preset) {
 }
 
 function startQuizSnapshotPresetQuiz(preset, targetMode) {
-  const questions = generateQuizSnapshotPresetQuestions(preset);
+  const questions = shuffleQuizSnapshotQuestions(
+    generateQuizSnapshotPresetQuestions(preset)
+  );
 
   if (questions.length === 0) {
     window.alert(
@@ -1457,7 +1473,7 @@ function getQuizPresetGroups({
     },
     {
       title: "Saved quiz sets",
-      note: "Exact question sets saved from quiz result screens.",
+      note: "Saved quiz question pools from result screens, shuffled on replay.",
       presets: sortPresetsByName(quizSnapshotPresets)
     }
   ];
