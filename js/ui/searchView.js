@@ -57,128 +57,506 @@ function renderSearchResults(query) {
 }
 
 /*
+  Search ranking priorities.
+
+  Lower numbers appear first. These ranks are deliberately tiered rather than
+  purely alphabetical so exact user intent is never buried by broad contains
+  matches once the database becomes large.
+*/
+const searchTypeOrder = {
+  entity: 0,
+  variant: 1,
+  collection: 2,
+  group: 3
+};
+
+/*
   Searches the current data index.
 
-  This is intentionally simple for V1.
-  Later we can add ranking, fuzzy matching, filters and keyboard navigation.
+  Ranking rules favour:
+  - complete entity matches;
+  - complete variant matches;
+  - complete collection and CollectionGroup matches;
+  - prefix / word-start matches;
+  - partial contains matches;
+  - low-priority metadata matches such as IDs and tags.
 */
 function searchVexillator(normalisedQuery) {
   const results = [];
+  const directlyMatchedEntityIds = new Set();
 
-  searchEntities(normalisedQuery, results);
+  searchEntities(
+    normalisedQuery,
+    results,
+    directlyMatchedEntityIds
+  );
+
   searchVariants(normalisedQuery, results);
   searchCollections(normalisedQuery, results);
   searchCollectionGroups(normalisedQuery, results);
+  searchUpwardContextEntities(
+    results,
+    directlyMatchedEntityIds
+  );
 
-  /*
-    Sort by type first, then by label.
-    This keeps results predictable.
-  */
-  results.sort((a, b) => {
-    const typeCompare = a.type.localeCompare(b.type);
-
-    if (typeCompare !== 0) {
-      return typeCompare;
-    }
-
-    return a.label.localeCompare(b.label);
-  });
+  results.sort(compareSearchResults);
 
   return results;
 }
 
 /*
-  Entity search:
-  matches entity name, aliases, ID and tags.
-*/
-function searchEntities(normalisedQuery, results) {
-  Object.values(dataIndex.entitiesById).forEach(entity => {
-    const searchableText = [
-      entity.id,
-      entity.name,
-      ...entity.aliases,
-      entity.entityType,
-      ...entity.tags
-    ].join(" ");
+  Sorts search results by explicit match rank first, then by broad result type,
+  then alphabetically.
 
-    if (normaliseSearchText(searchableText).includes(normalisedQuery)) {
-      results.push({
-        type: "entity",
-        id: entity.id,
-        label: entity.name,
-        meta: `Tags: ${entity.tags.join(", ") || "none"}`
-      });
+  This means a complete entity match for "France" appears before France variants,
+  collections or groups, regardless of their display names.
+*/
+function compareSearchResults(resultA, resultB) {
+  const rankCompare =
+    (resultA.searchRank ?? 999) -
+    (resultB.searchRank ?? 999);
+
+  if (rankCompare !== 0) {
+    return rankCompare;
+  }
+
+  const typeCompare =
+    (searchTypeOrder[resultA.type] ?? 99) -
+    (searchTypeOrder[resultB.type] ?? 99);
+
+  if (typeCompare !== 0) {
+    return typeCompare;
+  }
+
+  return resultA.label.localeCompare(resultB.label);
+}
+
+/*
+  Finds the best match among several searchable fields.
+
+  Each field controls its own ranking tiers. For example, an exact entity-name
+  match is stronger than an exact tag match, even though both are "exact" text
+  comparisons.
+*/
+function getBestSearchFieldMatch(normalisedQuery, fields) {
+  let bestMatch = null;
+
+  fields.forEach(field => {
+    const normalisedValue = normaliseSearchText(field.value);
+
+    if (!normalisedValue) {
+      return;
     }
+
+    const matchRank = getSearchFieldMatchRank(
+      normalisedQuery,
+      normalisedValue,
+      field
+    );
+
+    if (matchRank === null) {
+      return;
+    }
+
+    if (
+      !bestMatch ||
+      matchRank < bestMatch.rank ||
+      (
+        matchRank === bestMatch.rank &&
+        normalisedValue.length < bestMatch.valueLength
+      )
+    ) {
+      bestMatch = {
+        rank: matchRank,
+        valueLength: normalisedValue.length,
+        source: field.source ?? "matched text"
+      };
+    }
+  });
+
+  return bestMatch;
+}
+
+/*
+  Returns the rank for one searchable field, or null when the field does not
+  match the query.
+
+  Prefix matches and word-start matches share the same rank. This lets "west"
+  find "West Yorkshire" and "york" find it as a useful high-quality match.
+*/
+function getSearchFieldMatchRank(
+  normalisedQuery,
+  normalisedValue,
+  field
+) {
+  if (
+    typeof field.exactRank === "number" &&
+    normalisedValue === normalisedQuery
+  ) {
+    return field.exactRank;
+  }
+
+  if (
+    typeof field.prefixRank === "number" &&
+    normalisedValue.startsWith(normalisedQuery)
+  ) {
+    return field.prefixRank;
+  }
+
+  if (
+    typeof field.prefixRank === "number" &&
+    searchValueHasWordStartingWith(normalisedValue, normalisedQuery)
+  ) {
+    return field.prefixRank;
+  }
+
+  if (
+    typeof field.containsRank === "number" &&
+    normalisedValue.includes(normalisedQuery)
+  ) {
+    return field.containsRank;
+  }
+
+  return null;
+}
+
+/*
+  Word-start matching catches useful queries such as:
+  - "york" for "West Yorkshire";
+  - "south" for "South Africa";
+  - "states" for "United States".
+*/
+function searchValueHasWordStartingWith(normalisedValue, normalisedQuery) {
+  return normalisedValue
+    .split(/[^a-z0-9]+/)
+    .some(word => word.startsWith(normalisedQuery));
+}
+
+/*
+  Converts aliases into searchable field definitions.
+*/
+function createAliasSearchFields(
+  aliases,
+  {
+    exactRank,
+    prefixRank,
+    containsRank,
+    source
+  }
+) {
+  return aliases.map(alias => {
+    return {
+      value: alias,
+      exactRank,
+      prefixRank,
+      containsRank,
+      source
+    };
   });
 }
 
 /*
+  Converts metadata values into exact-only low-priority searchable fields.
+
+  Metadata remains searchable for precise terms such as tags or IDs, but partial
+  metadata matches are intentionally avoided. Without this, broad queries such
+  as "France" can match every ID containing "france" and flood Search with
+  child regions or subdivisions.
+*/
+function createMetadataSearchFields(values, rank, source) {
+  return values.map(value => {
+    return {
+      value,
+      exactRank: rank,
+      source
+    };
+  });
+}
+
+/*
+  Entity search:
+  strongest matches are entity names and aliases.
+  IDs, entity type and tags remain searchable but rank lower.
+*/
+function searchEntities(
+  normalisedQuery,
+  results,
+  directlyMatchedEntityIds
+) {
+  Object.values(dataIndex.entitiesById).forEach(entity => {
+    const fields = [
+      {
+        value: entity.name,
+        exactRank: 0,
+        prefixRank: 10,
+        containsRank: 20,
+        source: "entity name"
+      },
+      ...createAliasSearchFields(entity.aliases, {
+        exactRank: 1,
+        prefixRank: 10,
+        containsRank: 20,
+        source: "entity alias"
+      }),
+      ...createMetadataSearchFields(
+        [
+          entity.id,
+          entity.entityType,
+          ...entity.tags
+        ],
+        50,
+        "entity metadata"
+      )
+    ];
+
+    const match = getBestSearchFieldMatch(normalisedQuery, fields);
+
+    if (!match) {
+      return;
+    }
+
+    if (match.rank < 50) {
+      directlyMatchedEntityIds.add(entity.id);
+    }
+
+    results.push({
+      type: "entity",
+      id: entity.id,
+      label: entity.name,
+      meta: `Tags: ${entity.tags.join(", ") || "none"}`,
+      searchRank: match.rank,
+      matchSource: match.source
+    });
+  });
+}
+
+/*
+  Returns whether an entity result is already present.
+*/
+function searchResultsAlreadyContainEntity(results, entityId) {
+  return results.some(result => {
+    return result.type === "entity" && result.id === entityId;
+  });
+}
+
+/*
+  Adds low-priority upward context for directly matched entities.
+
+  This deliberately moves only upwards:
+  - parent entities;
+  - administering entities;
+  - composite entities the match is constituent of;
+  - membership group entities.
+
+  It does not expand downwards into children, administered entities,
+  constituents or members, because broad searches such as "France" should not
+  flood results with every region or subdivision.
+*/
+function searchUpwardContextEntities(
+  results,
+  directlyMatchedEntityIds
+) {
+  directlyMatchedEntityIds.forEach(entityId => {
+    const entity = dataIndex.entitiesById[entityId];
+
+    if (!entity) {
+      return;
+    }
+
+    const contextEntries = [
+      ...createEntityContextEntries(
+        entity.parentIds,
+        "Parent context"
+      ),
+      ...createEntityContextEntries(
+        entity.administeringEntityIds ?? [],
+        "Administered by context"
+      ),
+      ...createEntityContextEntries(
+        entity.constituentOfEntityIds ?? [],
+        "Constituent of context"
+      ),
+      ...createMembershipContextEntries(entity)
+    ];
+
+    contextEntries.forEach(contextEntry => {
+      const contextEntity =
+        dataIndex.entitiesById[contextEntry.entityId];
+
+      if (
+        !contextEntity ||
+        searchResultsAlreadyContainEntity(
+          results,
+          contextEntity.id
+        )
+      ) {
+        return;
+      }
+
+      results.push({
+        type: "entity",
+        id: contextEntity.id,
+        label: contextEntity.name,
+        meta: contextEntry.label,
+        searchRank: 70,
+        matchSource: "upward context"
+      });
+    });
+  });
+}
+
+/*
+  Converts a list of entity IDs into contextual search entries.
+*/
+function createEntityContextEntries(entityIds, label) {
+  return entityIds.map(entityId => {
+    return {
+      entityId,
+      label
+    };
+  });
+}
+
+/*
+  Returns membership group entities for one directly matched entity.
+*/
+function createMembershipContextEntries(entity) {
+  const memberships =
+    dataIndex.entityMembershipsByMemberEntityId?.[entity.id] ?? [];
+
+  return memberships
+    .filter(membership => membership?.status === "current")
+    .map(membership => {
+      return {
+        entityId: membership.groupEntityId,
+        label: "Membership context"
+      };
+    });
+}
+
+/*
   Variant search:
-  matches variant ID, display name, tags, and the parent entity name.
+  direct variant names and aliases rank highest.
+
+  Parent entity names and aliases also match variants, but after direct variant
+  matches. This means searching "France" still shows French variants near the
+  top without allowing them to beat the exact France entity result.
 */
 function searchVariants(normalisedQuery, results) {
   Object.values(dataIndex.variantsById).forEach(variant => {
     const entity = dataIndex.entitiesById[variant.entityId];
 
-    const searchableText = [
-      variant.id,
-      variant.displayName,
-      ...variant.aliases,
-      ...variant.tags,
-      entity ? entity.name : "",
-      entity ? entity.id : "",
-      ...(entity ? entity.aliases : [])
-    ].join(" ");
+    const fields = [
+      {
+        value: variant.displayName,
+        exactRank: 2,
+        prefixRank: 11,
+        containsRank: 21,
+        source: "variant name"
+      },
+      ...createAliasSearchFields(variant.aliases, {
+        exactRank: 3,
+        prefixRank: 11,
+        containsRank: 21,
+        source: "variant alias"
+      }),
+      {
+        value: entity ? entity.name : "",
+        exactRank: 4,
+        prefixRank: 11,
+        containsRank: 21,
+        source: "parent entity name"
+      },
+      ...createAliasSearchFields(entity ? entity.aliases : [], {
+        exactRank: 4,
+        prefixRank: 11,
+        containsRank: 21,
+        source: "parent entity alias"
+      }),
+      ...createMetadataSearchFields(
+        [
+          variant.id,
+          ...variant.tags,
+          entity ? entity.id : ""
+        ],
+        51,
+        "variant metadata"
+      )
+    ];
 
-    if (normaliseSearchText(searchableText).includes(normalisedQuery)) {
-      results.push({
-        type: "variant",
-        id: variant.id,
-        label: entity ? `${entity.name} - ${variant.displayName}` : variant.displayName,
-        meta: [
-            variant.aliases.length > 0 ?
-            `Aliases: ${variant.aliases.join(", ")}` :
-            null,
-            `Tags: ${variant.tags.join(", ") || "none"}`
-          ]
-          .filter(Boolean)
-          .join(" · ")
-      });
+    const match = getBestSearchFieldMatch(normalisedQuery, fields);
+
+    if (!match) {
+      return;
     }
+
+    results.push({
+      type: "variant",
+      id: variant.id,
+      label: entity ? `${entity.name} - ${variant.displayName}` : variant.displayName,
+      meta: [
+          variant.aliases.length > 0 ?
+          `Aliases: ${variant.aliases.join(", ")}` :
+          null,
+          `Tags: ${variant.tags.join(", ") || "none"}`
+        ]
+        .filter(Boolean)
+        .join(" · "),
+      searchRank: match.rank,
+      matchSource: match.source
+    });
   });
 }
 
 /*
   Collection search:
-  matches collection ID and collection name.
+  collection names rank above low-priority collection metadata.
 */
 function searchCollections(normalisedQuery, results) {
   Object.values(dataIndex.collectionsById)
     .filter(isUserFacingCollection)
     .forEach(collection => {
-      const searchableText = [
-        collection.id,
-        collection.name,
-        collection.type,
-        collection.target
-      ].join(" ");
+      const fields = [
+        {
+          value: collection.name,
+          exactRank: 5,
+          prefixRank: 12,
+          containsRank: 22,
+          source: "collection name"
+        },
+        ...createMetadataSearchFields(
+          [
+            collection.id,
+            collection.type,
+            collection.target
+          ],
+          52,
+          "collection metadata"
+        )
+      ];
 
-      if (normaliseSearchText(searchableText).includes(normalisedQuery)) {
-        results.push({
-          type: "collection",
-          id: collection.id,
-          label: collection.name,
-          meta:
-            `${collection.type} collection targeting ` +
-            `${collection.target}`
-        });
+      const match = getBestSearchFieldMatch(normalisedQuery, fields);
+
+      if (!match) {
+        return;
       }
+
+      results.push({
+        type: "collection",
+        id: collection.id,
+        label: collection.name,
+        meta:
+          `${collection.type} collection targeting ` +
+          `${collection.target}`,
+        searchRank: match.rank,
+        matchSource: match.source
+      });
     });
 }
 
 /*
   CollectionGroup search:
-  matches group ID and group name.
+  group names rank above low-priority group IDs.
 */
 function searchCollectionGroups(normalisedQuery, results) {
   Object.values(dataIndex.collectionGroupsById)
@@ -186,28 +564,44 @@ function searchCollectionGroups(normalisedQuery, results) {
       return collectionGroupHasUserFacingContent(group.id);
     })
     .forEach(group => {
-      const searchableText = [
-        group.id,
-        group.name
-      ].join(" ");
+      const fields = [
+        {
+          value: group.name,
+          exactRank: 6,
+          prefixRank: 13,
+          containsRank: 23,
+          source: "collection group name"
+        },
+        ...createMetadataSearchFields(
+          [group.id],
+          53,
+          "collection group metadata"
+        )
+      ];
 
-      if (normaliseSearchText(searchableText).includes(normalisedQuery)) {
-        const visibleDirectCollectionCount =
-          group.collectionIds.filter(collectionId => {
-            return isUserFacingCollection(
-              dataIndex.collectionsById[collectionId]
-            );
-          }).length;
+      const match = getBestSearchFieldMatch(normalisedQuery, fields);
 
-        results.push({
-          type: "group",
-          id: group.id,
-          label: group.name,
-          meta:
-            `${visibleDirectCollectionCount} direct ` +
-            `collection(s)`
-        });
+      if (!match) {
+        return;
       }
+
+      const visibleDirectCollectionCount =
+        group.collectionIds.filter(collectionId => {
+          return isUserFacingCollection(
+            dataIndex.collectionsById[collectionId]
+          );
+        }).length;
+
+      results.push({
+        type: "group",
+        id: group.id,
+        label: group.name,
+        meta:
+          `${visibleDirectCollectionCount} direct ` +
+          `collection(s)`,
+        searchRank: match.rank,
+        matchSource: match.source
+      });
     });
 }
 
