@@ -783,11 +783,16 @@ function getEntityDetailSectionExpanded(
   entityId,
   defaultExpanded = false
 ) {
-  const sectionStates =
+  if (!appState.entityDetailDisclosureStates) {
+    appState.entityDetailDisclosureStates = {};
+  }
+
+  let sectionStates =
     appState.entityDetailDisclosureStates[sectionKey];
 
   if (!(sectionStates instanceof Map)) {
-    return defaultExpanded;
+    sectionStates = new Map();
+    appState.entityDetailDisclosureStates[sectionKey] = sectionStates;
   }
 
   return sectionStates.has(entityId)
@@ -806,11 +811,16 @@ function toggleEntityDetailSection(
   entityId,
   currentExpanded
 ) {
-  const sectionStates =
+  if (!appState.entityDetailDisclosureStates) {
+    appState.entityDetailDisclosureStates = {};
+  }
+
+  let sectionStates =
     appState.entityDetailDisclosureStates[sectionKey];
 
   if (!(sectionStates instanceof Map)) {
-    return;
+    sectionStates = new Map();
+    appState.entityDetailDisclosureStates[sectionKey] = sectionStates;
   }
 
   sectionStates.set(entityId, !currentExpanded);
@@ -2892,15 +2902,38 @@ childrenSectionElement.appendChild(childrenHeaderElement);
 
   The heading count includes every variant shown below, while the bulk actions
   deliberately affect only normal variants and exclude text_removed variants.
+
+  When the default hero already shows the only normal visual variant, collapse
+  this full list by default so the page does not repeat the same flag
+  immediately below the summary. User disclosure choices still override this
+  default during the current session.
 */
+const shouldCollapseSingleDefaultVariantSection = Boolean(
+  defaultVariantHeroElement &&
+  selectableEntityVariants.length === 1 &&
+  !appState.entityView.focusedVariantId
+);
+
+const variantsSectionExpanded =
+  getEntityDetailSectionExpanded(
+    "entityVariants",
+    entity.id,
+    !shouldCollapseSingleDefaultVariantSection
+  );
+
 const variantsHeaderElement = document.createElement("div");
 variantsHeaderElement.className = "entity-section-header";
 
-const variantsHeadingElement = document.createElement("h3");
-variantsHeadingElement.textContent =
-  `Variants (${entityVariants.length})`;
+const variantsDisclosureButton =
+  createEntityDetailDisclosureButton({
+    label: "Variants",
+    count: entityVariants.length,
+    expanded: variantsSectionExpanded,
+    sectionKey: "entityVariants",
+    entityId: entity.id
+  });
 
-variantsHeaderElement.appendChild(variantsHeadingElement);
+variantsHeaderElement.appendChild(variantsDisclosureButton);
 
 const variantSelectionActions =
   createVariantGroupSelectionActions(selectableEntityVariants);
@@ -2911,6 +2944,7 @@ if (variantSelectionActions) {
 
 entityViewElement.appendChild(variantsHeaderElement);
 
+if (variantsSectionExpanded) {
   if (entityVariants.length === 0) {
     const noVariantsElement = document.createElement("p");
     noVariantsElement.className = "empty-message";
@@ -3124,6 +3158,7 @@ entityViewElement.appendChild(variantsHeaderElement);
 
     entityViewElement.appendChild(variantsElement);
   }
+}
 
   const bottomHistoryNavigationElement =
     createEntityHistoryNavigationElement(
