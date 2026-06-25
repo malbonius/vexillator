@@ -591,7 +591,10 @@ function renderMembershipMembersSection(entity, memberEntities) {
           "entity-member-button"
         : "entity-administered-button entity-member-button";
 
-      memberButton.textContent = memberEntity.name;
+      appendEntityNavigationButtonContent(
+        memberButton,
+        memberEntity
+      );
 
       memberButton.addEventListener("click", () => {
         openEntityView(memberEntity.id);
