@@ -68,18 +68,14 @@ function getEntitySelectionGroupDisplayLabel(entityGroup) {
 
 /*
   Adds a small decorative preview of an entity's default variant to an Entity
-  Detail navigation button.
+  Detail navigation button when one is available.
 
-  Structural entities without a valid default variant keep an empty thumbnail
-  slot so labels remain aligned. The button itself remains the only interactive
-  control; the image is deliberately hidden from assistive technology because
-  the adjacent entity name already labels the destination.
+  Structural entities without a valid default variant receive no thumbnail
+  element, so their labels use the full button width. The button itself remains
+  the only interactive control; the image is deliberately hidden from assistive
+  technology because the adjacent entity name already labels the destination.
 */
 function appendEntityNavigationButtonContent(button, entity) {
-  const thumbnailElement = document.createElement("span");
-  thumbnailElement.className = "entity-navigation-thumbnail";
-  thumbnailElement.setAttribute("aria-hidden", "true");
-
   const defaultVariant =
     typeof entity?.defaultVariantId === "string"
       ? dataIndex.variantsById[entity.defaultVariantId]
@@ -91,6 +87,10 @@ function appendEntityNavigationButtonContent(button, entity) {
       : null;
 
   if (asset?.path) {
+    const thumbnailElement = document.createElement("span");
+    thumbnailElement.className = "entity-navigation-thumbnail";
+    thumbnailElement.setAttribute("aria-hidden", "true");
+
     const imageElement = document.createElement("img");
     imageElement.className = "entity-navigation-thumbnail-image";
     imageElement.src = asset.path;
@@ -99,17 +99,13 @@ function appendEntityNavigationButtonContent(button, entity) {
     imageElement.decoding = "async";
 
     thumbnailElement.appendChild(imageElement);
-  } else {
-    thumbnailElement.classList.add(
-      "entity-navigation-thumbnail-empty"
-    );
+    button.appendChild(thumbnailElement);
   }
 
   const labelElement = document.createElement("span");
   labelElement.className = "entity-navigation-button-label";
   labelElement.textContent = entity?.name ?? "Unknown entity";
 
-  button.appendChild(thumbnailElement);
   button.appendChild(labelElement);
 }
 
