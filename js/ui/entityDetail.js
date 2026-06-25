@@ -65,6 +65,54 @@ function getEntitySelectionGroupDisplayLabel(entityGroup) {
     );
 }
 
+
+/*
+  Adds a small decorative preview of an entity's default variant to an Entity
+  Detail navigation button.
+
+  Structural entities without a valid default variant keep an empty thumbnail
+  slot so labels remain aligned. The button itself remains the only interactive
+  control; the image is deliberately hidden from assistive technology because
+  the adjacent entity name already labels the destination.
+*/
+function appendEntityNavigationButtonContent(button, entity) {
+  const thumbnailElement = document.createElement("span");
+  thumbnailElement.className = "entity-navigation-thumbnail";
+  thumbnailElement.setAttribute("aria-hidden", "true");
+
+  const defaultVariant =
+    typeof entity?.defaultVariantId === "string"
+      ? dataIndex.variantsById[entity.defaultVariantId]
+      : null;
+
+  const asset =
+    defaultVariant && defaultVariant.entityId === entity?.id
+      ? dataIndex.assetsById[defaultVariant.assetId]
+      : null;
+
+  if (asset?.path) {
+    const imageElement = document.createElement("img");
+    imageElement.className = "entity-navigation-thumbnail-image";
+    imageElement.src = asset.path;
+    imageElement.alt = "";
+    imageElement.loading = "lazy";
+    imageElement.decoding = "async";
+
+    thumbnailElement.appendChild(imageElement);
+  } else {
+    thumbnailElement.classList.add(
+      "entity-navigation-thumbnail-empty"
+    );
+  }
+
+  const labelElement = document.createElement("span");
+  labelElement.className = "entity-navigation-button-label";
+  labelElement.textContent = entity?.name ?? "Unknown entity";
+
+  button.appendChild(thumbnailElement);
+  button.appendChild(labelElement);
+}
+
 /*
   Reads the presentation-only relationship configuration for one entity.
 */
@@ -1110,7 +1158,10 @@ function renderConfiguredEntityRelationshipSection(
               "entity-child-button-compact"
             : "entity-child-button";
 
-          entityButton.textContent = relatedEntity.name;
+          appendEntityNavigationButtonContent(
+            entityButton,
+            relatedEntity
+          );
 
           entityButton.addEventListener("click", () => {
             openEntityView(relatedEntity.id);
@@ -2270,8 +2321,10 @@ if (
               : "entity-administered-button " +
                 "entity-constituent-button";
 
-          constituentButton.textContent =
-            constituentEntity.name;
+          appendEntityNavigationButtonContent(
+            constituentButton,
+            constituentEntity
+          );
 
           constituentButton.addEventListener("click", () => {
             openEntityView(constituentEntity.id);
@@ -2468,8 +2521,10 @@ administeredSectionElement.appendChild(
                   "entity-administered-button-compact"
                 : "entity-administered-button";
 
-            administeredButton.textContent =
-              administeredEntity.name;
+            appendEntityNavigationButtonContent(
+              administeredButton,
+              administeredEntity
+            );
 
             administeredButton.addEventListener("click", () => {
               openEntityView(administeredEntity.id);
@@ -2665,7 +2720,10 @@ childrenSectionElement.appendChild(childrenHeaderElement);
             ? "entity-child-button entity-child-button-compact"
             : "entity-child-button";
 
-          childButton.textContent = childEntity.name;
+          appendEntityNavigationButtonContent(
+            childButton,
+            childEntity
+          );
 
           childButton.addEventListener("click", () => {
             openEntityView(childEntity.id);
