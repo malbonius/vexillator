@@ -1251,6 +1251,61 @@ function openPreviousEntityView() {
 }
 
 /*
+  Creates a contextual Entity Detail back-navigation control.
+
+  The same helper is used at the top and bottom of the page so long mobile
+  Entity Detail pages do not force the user to scroll back to the top.
+*/
+function createEntityHistoryNavigationElement(
+  previousHistoryEntry,
+  positionLabel = "top"
+) {
+  if (!previousHistoryEntry) {
+    return null;
+  }
+
+  const previousEntity =
+    dataIndex.entitiesById[
+      previousHistoryEntry.entityId
+    ];
+
+  if (!previousEntity) {
+    return null;
+  }
+
+  const historyNavigationElement =
+    document.createElement("nav");
+
+  historyNavigationElement.className =
+    "entity-history-navigation";
+
+  historyNavigationElement.setAttribute(
+    "aria-label",
+    positionLabel === "bottom"
+      ? "Entity navigation history, bottom"
+      : "Entity navigation history"
+  );
+
+  const backButton =
+    document.createElement("button");
+
+  backButton.type = "button";
+  backButton.className = "entity-back-button";
+  backButton.textContent =
+    `← Back to ${previousEntity.name}`;
+
+  backButton.addEventListener("click", () => {
+    openPreviousEntityView();
+  });
+
+  historyNavigationElement.appendChild(
+    backButton
+  );
+
+  return historyNavigationElement;
+}
+
+/*
   Renders the currently active entity.
 
   The first pass shows:
@@ -1455,44 +1510,15 @@ function renderEntityView() {
   const previousHistoryEntry =
     getPreviousEntityHistoryEntry();
 
-  if (previousHistoryEntry) {
-    const previousEntity =
-      dataIndex.entitiesById[
-        previousHistoryEntry.entityId
-      ];
+  const historyNavigationElement =
+    createEntityHistoryNavigationElement(
+      previousHistoryEntry
+    );
 
-    if (previousEntity) {
-      const historyNavigationElement =
-        document.createElement("nav");
-
-      historyNavigationElement.className =
-        "entity-history-navigation";
-
-      historyNavigationElement.setAttribute(
-        "aria-label",
-        "Entity navigation history"
-      );
-
-      const backButton =
-        document.createElement("button");
-
-      backButton.type = "button";
-      backButton.className = "entity-back-button";
-      backButton.textContent =
-        `← Back to ${previousEntity.name}`;
-
-      backButton.addEventListener("click", () => {
-        openPreviousEntityView();
-      });
-
-      historyNavigationElement.appendChild(
-        backButton
-      );
-
-      entityViewElement.appendChild(
-        historyNavigationElement
-      );
-    }
+  if (historyNavigationElement) {
+    entityViewElement.appendChild(
+      historyNavigationElement
+    );
   }
 
   const headingElement = document.createElement("h2");
@@ -2985,5 +3011,17 @@ entityViewElement.appendChild(variantsHeaderElement);
     });
 
     entityViewElement.appendChild(variantsElement);
+  }
+
+  const bottomHistoryNavigationElement =
+    createEntityHistoryNavigationElement(
+      previousHistoryEntry,
+      "bottom"
+    );
+
+  if (bottomHistoryNavigationElement) {
+    entityViewElement.appendChild(
+      bottomHistoryNavigationElement
+    );
   }
 }
