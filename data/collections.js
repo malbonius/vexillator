@@ -3040,6 +3040,252 @@ const collections = [
       ]
     }
   },
+  /*
+    Venezuelan regional study collections.
+
+    These preserve the former regional groupings without using structural
+    entities in the geographic hierarchy.
+  */
+  {
+    id: "col_venezuela_andean_region_flags",
+    name: "Venezuelan Andean Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_andean_region_flags_barinas",
+        collectionId: "col_venezuela_andean_region_flags",
+        entityId: "ent_venezuela_barinas",
+        galleryVariantId: "var_barinas_current",
+        quizVariantId: "var_barinas_current"
+      },
+      {
+        id: "mem_venezuela_andean_region_flags_merida",
+        collectionId: "col_venezuela_andean_region_flags",
+        entityId: "ent_venezuela_merida",
+        galleryVariantId: "var_merida_current",
+        quizVariantId: "var_merida_current"
+      },
+      {
+        id: "mem_venezuela_andean_region_flags_trujillo",
+        collectionId: "col_venezuela_andean_region_flags",
+        entityId: "ent_venezuela_trujillo",
+        galleryVariantId: "var_trujillo_current",
+        quizVariantId: "var_trujillo_current"
+      },
+      {
+        id: "mem_venezuela_andean_region_flags_tachira",
+        collectionId: "col_venezuela_andean_region_flags",
+        entityId: "ent_venezuela_tachira",
+        galleryVariantId: "var_tachira_current",
+        quizVariantId: "var_tachira_current"
+      }
+    ]
+  },
+  {
+    id: "col_venezuela_capital_region_flags",
+    name: "Venezuelan Capital Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_capital_region_flags_caracas",
+        collectionId: "col_venezuela_capital_region_flags",
+        entityId: "ent_venezuela_caracas",
+        galleryVariantId: "var_caracas_current",
+        quizVariantId: "var_caracas_current"
+      },
+      {
+        id: "mem_venezuela_capital_region_flags_la_guaira",
+        collectionId: "col_venezuela_capital_region_flags",
+        entityId: "ent_venezuela_la_guaira",
+        galleryVariantId: "var_la_guaira_current",
+        quizVariantId: "var_la_guaira_current"
+      },
+      {
+        id: "mem_venezuela_capital_region_flags_miranda",
+        collectionId: "col_venezuela_capital_region_flags",
+        entityId: "ent_venezuela_miranda",
+        galleryVariantId: "var_miranda_current",
+        quizVariantId: "var_miranda_current"
+      }
+    ]
+  },
+  {
+    id: "col_venezuela_central_region_flags",
+    name: "Venezuelan Central Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_central_region_flags_aragua",
+        collectionId: "col_venezuela_central_region_flags",
+        entityId: "ent_venezuela_aragua",
+        galleryVariantId: "var_aragua_current",
+        quizVariantId: "var_aragua_current"
+      },
+      {
+        id: "mem_venezuela_central_region_flags_carabobo",
+        collectionId: "col_venezuela_central_region_flags",
+        entityId: "ent_venezuela_carabobo",
+        galleryVariantId: "var_carabobo_current",
+        quizVariantId: "var_carabobo_current"
+      },
+      {
+        id: "mem_venezuela_central_region_flags_cojedes",
+        collectionId: "col_venezuela_central_region_flags",
+        entityId: "ent_venezuela_cojedes",
+        galleryVariantId: "var_cojedes_current",
+        quizVariantId: "var_cojedes_current"
+      }
+    ]
+  },
+  {
+    id: "col_venezuela_central_western_region_flags",
+    name: "Venezuelan Central-Western Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_central_western_region_flags_falcon",
+        collectionId: "col_venezuela_central_western_region_flags",
+        entityId: "ent_venezuela_falcon",
+        galleryVariantId: "var_falcon_current",
+        quizVariantId: "var_falcon_current"
+      },
+      {
+        id: "mem_venezuela_central_western_region_flags_lara",
+        collectionId: "col_venezuela_central_western_region_flags",
+        entityId: "ent_venezuela_lara",
+        galleryVariantId: "var_lara_current",
+        quizVariantId: "var_lara_current"
+      },
+      {
+        id: "mem_venezuela_central_western_region_flags_portuguesa",
+        collectionId: "col_venezuela_central_western_region_flags",
+        entityId: "ent_venezuela_portuguesa",
+        galleryVariantId: "var_portuguesa_current",
+        quizVariantId: "var_portuguesa_current"
+      },
+      {
+        id: "mem_venezuela_central_western_region_flags_yaracuy",
+        collectionId: "col_venezuela_central_western_region_flags",
+        entityId: "ent_venezuela_yaracuy",
+        galleryVariantId: "var_yaracuy_current",
+        quizVariantId: "var_yaracuy_current"
+      }
+    ]
+  },
+  {
+    id: "col_venezuela_guayana_region_flags",
+    name: "Venezuelan Guayana Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_guayana_region_flags_amazonas",
+        collectionId: "col_venezuela_guayana_region_flags",
+        entityId: "ent_venezuela_amazonas",
+        galleryVariantId: "var_amazonas_current",
+        quizVariantId: "var_amazonas_current"
+      },
+      {
+        id: "mem_venezuela_guayana_region_flags_bolivar",
+        collectionId: "col_venezuela_guayana_region_flags",
+        entityId: "ent_venezuela_bolivar",
+        galleryVariantId: "var_bolivar_current",
+        quizVariantId: "var_bolivar_current"
+      },
+      {
+        id: "mem_venezuela_guayana_region_flags_delta_amacuro",
+        collectionId: "col_venezuela_guayana_region_flags",
+        entityId: "ent_venezuela_delta_amacuro",
+        galleryVariantId: "var_delta_amacuro_current",
+        quizVariantId: "var_delta_amacuro_current"
+      }
+    ]
+  },
+  {
+    id: "col_venezuela_insular_region_flags",
+    name: "Venezuelan Insular Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_insular_region_flags_nueva_esparta",
+        collectionId: "col_venezuela_insular_region_flags",
+        entityId: "ent_venezuela_nueva_esparta",
+        galleryVariantId: "var_nueva_esparta_current",
+        quizVariantId: "var_nueva_esparta_current"
+      }
+    ]
+  },
+  {
+    id: "col_venezuela_llanos_region_flags",
+    name: "Venezuelan Llanos Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_llanos_region_flags_apure",
+        collectionId: "col_venezuela_llanos_region_flags",
+        entityId: "ent_venezuela_apure",
+        galleryVariantId: "var_apure_current",
+        quizVariantId: "var_apure_current"
+      },
+      {
+        id: "mem_venezuela_llanos_region_flags_guarico",
+        collectionId: "col_venezuela_llanos_region_flags",
+        entityId: "ent_venezuela_guarico",
+        galleryVariantId: "var_guarico_current",
+        quizVariantId: "var_guarico_current"
+      }
+    ]
+  },
+  {
+    id: "col_venezuela_northeastern_region_flags",
+    name: "Venezuelan Northeastern Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_northeastern_region_flags_anzoategui",
+        collectionId: "col_venezuela_northeastern_region_flags",
+        entityId: "ent_venezuela_anzoategui",
+        galleryVariantId: "var_anzoategui_current",
+        quizVariantId: "var_anzoategui_current"
+      },
+      {
+        id: "mem_venezuela_northeastern_region_flags_monagas",
+        collectionId: "col_venezuela_northeastern_region_flags",
+        entityId: "ent_venezuela_monagas",
+        galleryVariantId: "var_monagas_current",
+        quizVariantId: "var_monagas_current"
+      },
+      {
+        id: "mem_venezuela_northeastern_region_flags_sucre",
+        collectionId: "col_venezuela_northeastern_region_flags",
+        entityId: "ent_venezuela_sucre",
+        galleryVariantId: "var_sucre_current",
+        quizVariantId: "var_sucre_current"
+      }
+    ]
+  },
+  {
+    id: "col_venezuela_zulian_region_flags",
+    name: "Venezuelan Zulian Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_venezuela_zulian_region_flags_zulia",
+        collectionId: "col_venezuela_zulian_region_flags",
+        entityId: "ent_venezuela_zulia",
+        galleryVariantId: "var_zulia_current",
+        quizVariantId: "var_zulia_current"
+      }
+    ]
+  },
   {
     id: "col_federated_states_micronesia_states",
     name: "States of the Federated States of Micronesia",

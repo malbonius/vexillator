@@ -1789,99 +1789,18 @@ const entities = [
   },
 
   /*
-    Venezuela regions and subdivisions.
+    Venezuelan states and the Capital District.
 
-    These regional entities deliberately mirror the maintained asset-folder
-    groupings so Venezuelan flags can be browsed and studied in smaller sets.
-    They are structural navigation entities only and do not have flags.
+    Regional study groupings are modelled as collections rather than
+    structural geographic entities, so all first-level subdivisions are
+    direct children of Venezuela.
   */
-  {
-    id: "ent_venezuela_andean_region",
-    name: "Andean Region",
-    aliases: [],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
-  {
-    id: "ent_venezuela_capital_region",
-    name: "Capital Region",
-    aliases: [],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
-  {
-    id: "ent_venezuela_central_region",
-    name: "Central Region",
-    aliases: [],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
-  {
-    id: "ent_venezuela_central_western_region",
-    name: "Central-Western Region",
-    aliases: [],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
-  {
-    id: "ent_venezuela_guayana_region",
-    name: "Guayana Region",
-    aliases: ["Guiana Region"],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
-  {
-    id: "ent_venezuela_insular_region",
-    name: "Insular Region",
-    aliases: [],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
-  {
-    id: "ent_venezuela_llanos_region",
-    name: "Llanos Region",
-    aliases: [],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
-  {
-    id: "ent_venezuela_northeastern_region",
-    name: "Northeastern Region",
-    aliases: [],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
-  {
-    id: "ent_venezuela_zulian_region",
-    name: "Zulian Region",
-    aliases: [],
-    entityType: "geographic",
-    parentIds: ["ent_venezuela"],
-    tags: ["region", "current"],
-    defaultVariantId: null
-  },
   {
     id: "ent_venezuela_amazonas",
     name: "Amazonas",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_guayana_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_amazonas_current"
   },
@@ -1890,7 +1809,7 @@ const entities = [
     name: "Anzoátegui",
     aliases: ["Anzoategui"],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_northeastern_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_anzoategui_current"
   },
@@ -1899,7 +1818,7 @@ const entities = [
     name: "Apure",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_llanos_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_apure_current"
   },
@@ -1908,7 +1827,7 @@ const entities = [
     name: "Aragua",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_central_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_aragua_current"
   },
@@ -1917,7 +1836,7 @@ const entities = [
     name: "Barinas",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_andean_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_barinas_current"
   },
@@ -1926,7 +1845,7 @@ const entities = [
     name: "Bolívar",
     aliases: ["Bolivar"],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_guayana_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_bolivar_current"
   },
@@ -1935,7 +1854,7 @@ const entities = [
     name: "Carabobo",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_central_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_carabobo_current"
   },
@@ -1944,7 +1863,7 @@ const entities = [
     name: "Caracas",
     aliases: ["Capital District", "Distrito Capital"],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_capital_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_caracas_current"
   },
@@ -1953,7 +1872,7 @@ const entities = [
     name: "Cojedes",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_central_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_cojedes_current"
   },
@@ -1962,7 +1881,7 @@ const entities = [
     name: "Delta Amacuro",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_guayana_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_delta_amacuro_current"
   },
@@ -1971,7 +1890,7 @@ const entities = [
     name: "Falcón",
     aliases: ["Falcon"],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_central_western_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_falcon_current"
   },
@@ -1980,7 +1899,7 @@ const entities = [
     name: "Guárico",
     aliases: ["Guarico"],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_llanos_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_guarico_current"
   },
@@ -1989,7 +1908,7 @@ const entities = [
     name: "La Guaira",
     aliases: ["Vargas"],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_capital_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_la_guaira_current"
   },
@@ -1998,7 +1917,7 @@ const entities = [
     name: "Lara",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_central_western_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_lara_current"
   },
@@ -2007,7 +1926,7 @@ const entities = [
     name: "Mérida",
     aliases: ["Merida"],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_andean_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_merida_current"
   },
@@ -2016,7 +1935,7 @@ const entities = [
     name: "Miranda",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_capital_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_miranda_current"
   },
@@ -2025,7 +1944,7 @@ const entities = [
     name: "Monagas",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_northeastern_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_monagas_current"
   },
@@ -2034,7 +1953,7 @@ const entities = [
     name: "Nueva Esparta",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_insular_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_nueva_esparta_current"
   },
@@ -2043,7 +1962,7 @@ const entities = [
     name: "Portuguesa",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_central_western_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_portuguesa_current"
   },
@@ -2052,7 +1971,7 @@ const entities = [
     name: "Sucre",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_northeastern_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_sucre_current"
   },
@@ -2061,7 +1980,7 @@ const entities = [
     name: "Táchira",
     aliases: ["Tachira"],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_andean_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_tachira_current"
   },
@@ -2070,7 +1989,7 @@ const entities = [
     name: "Trujillo",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_andean_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_trujillo_current"
   },
@@ -2079,7 +1998,7 @@ const entities = [
     name: "Yaracuy",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_central_western_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_yaracuy_current"
   },
@@ -2088,7 +2007,7 @@ const entities = [
     name: "Zulia",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_venezuela_zulian_region"],
+    parentIds: ["ent_venezuela"],
     tags: ["subdivision", "first_level_subdivision", "current"],
     defaultVariantId: "var_zulia_current"
   },
@@ -3209,7 +3128,7 @@ const entities = [
   },
   /*
     Japan prefecture regions.
-  */
+  */,
   {
     id: "ent_japan_hokkaido_region",
     name: "Hokkaido Region",
@@ -3285,7 +3204,7 @@ const entities = [
 
   /*
     Japanese prefectures.
-  */
+  */,
   {
     id: "ent_japan_hokkaido",
     name: "Hokkaido",
@@ -4749,10 +4668,10 @@ const entities = [
     parentIds: ["ent_southern_europe"],
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_italy_current"
-  },
+  },,
   /*
     Italy and its current regions.
-  */
+  */,
   {
     id: "ent_italy_abruzzo",
     name: "Abruzzo",

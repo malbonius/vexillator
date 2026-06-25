@@ -75,6 +75,23 @@ const collectionGroups = [
     ]
   },
 
+  {
+    id: "grp_venezuela_regions",
+    name: "Venezuelan Regions",
+    parentGroupIds: ["grp_venezuela"],
+    collectionIds: [
+      "col_venezuela_andean_region_flags",
+      "col_venezuela_capital_region_flags",
+      "col_venezuela_central_region_flags",
+      "col_venezuela_central_western_region_flags",
+      "col_venezuela_guayana_region_flags",
+      "col_venezuela_insular_region_flags",
+      "col_venezuela_llanos_region_flags",
+      "col_venezuela_northeastern_region_flags",
+      "col_venezuela_zulian_region_flags"
+    ]
+  },
+
   /*
     North America.
   */
