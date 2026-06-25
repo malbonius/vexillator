@@ -203,6 +203,10 @@ function updateRandomQuizSummaryAndControls() {
 
   syncRandomQuizQuestionCountInput(maximumQuestionCount);
   updateRandomQuizStartButtonState();
+
+  if (typeof renderPresetViews === "function") {
+    renderPresetViews();
+  }
 }
 
 function syncRandomQuizQuestionCountInput(maximumQuestionCount) {

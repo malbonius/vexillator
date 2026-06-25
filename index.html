@@ -375,7 +375,7 @@
           <summary>Presets</summary>
 
           <p class="panel-note">
-            Load a saved selection preset into this typing quiz.
+            Load a saved selection preset, or start from a saved Random Quiz filter preset.
           </p>
 
           <div id="typingPresetView">
@@ -415,7 +415,7 @@
           <summary>Presets</summary>
 
           <p class="panel-note">
-            Load a saved selection preset into this multiple-choice quiz.
+            Load a saved selection preset, or start from a saved Random Quiz filter preset.
           </p>
 
           <div id="multipleChoicePresetView">
@@ -450,6 +450,41 @@
         <p class="panel-note">
           Build a temporary quiz pool from the database without changing Current Selection.
         </p>
+
+        <details class="mode-utility-section presets-section random-quiz-presets-section">
+          <summary>Presets</summary>
+
+          <p class="panel-note">
+            Save the current Random Quiz filters or load a saved random-filter preset.
+          </p>
+
+          <div class="preset-save-controls">
+            <label for="randomQuizPresetNameInput">
+              Preset name
+            </label>
+
+            <input
+              id="randomQuizPresetNameInput"
+              type="text"
+              placeholder="e.g. African territories practice"
+              autocomplete="off"
+            >
+
+            <button id="saveRandomQuizFilterPresetButton" type="button">
+              Save random quiz filters
+            </button>
+          </div>
+
+          <p
+            id="randomQuizPresetStatus"
+            class="preset-status panel-note"
+            aria-live="polite"
+          ></p>
+
+          <div id="randomQuizPresetsView">
+            No random-filter presets saved yet.
+          </div>
+        </details>
 
         <div class="random-quiz-builder">
           <section class="random-quiz-section">

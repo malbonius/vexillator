@@ -3,21 +3,28 @@
 
   Shared user preset UI.
 
-  Phase 1 supports Current Selection presets only. These presets save the
-  selected collections, grouped entity sources, direct entities and direct
-  variants. They are deliberately quiz-mode neutral: the same saved selection
-  can be loaded into Typing Quiz or Multiple-Choice Quiz.
+  Phase 1 added Current Selection presets. Phase 2 adds Random Quiz filter
+  presets. Presets stay quiz-mode neutral: a saved selection or random filter
+  setup can be used with Typing Quiz or Multiple-Choice Quiz.
 */
 
 const SELECTION_PRESET_KIND = "selection";
+const RANDOM_FILTER_PRESET_KIND = "random_filter";
 
 function setupPresetView() {
-  const saveButton = document.getElementById(
+  const saveSelectionButton = document.getElementById(
     "saveSelectionPresetButton"
   );
+  const saveRandomFilterButton = document.getElementById(
+    "saveRandomQuizFilterPresetButton"
+  );
 
-  saveButton?.addEventListener("click", () => {
+  saveSelectionButton?.addEventListener("click", () => {
     saveCurrentSelectionPresetFromUi();
+  });
+
+  saveRandomFilterButton?.addEventListener("click", () => {
+    saveRandomQuizFilterPresetFromUi();
   });
 
   renderPresetViews();
@@ -112,6 +119,16 @@ function setSelectionPresetStatus(message) {
   }
 }
 
+function setRandomQuizPresetStatus(message) {
+  const statusElement = document.getElementById(
+    "randomQuizPresetStatus"
+  );
+
+  if (statusElement) {
+    statusElement.textContent = message;
+  }
+}
+
 function saveCurrentSelectionPresetFromUi() {
   if (!hasActiveCurrentSelection()) {
     setSelectionPresetStatus(
@@ -188,7 +205,7 @@ function normaliseStoredEntityGroup(entityGroup) {
 
 function applySelectionPreset(preset) {
   if (!preset || preset.kind !== SELECTION_PRESET_KIND) {
-    console.warn("Only selection presets can be applied in this phase.", preset);
+    console.warn("Only selection presets can be applied here.", preset);
     return false;
   }
 
@@ -270,6 +287,212 @@ function loadSelectionPreset(preset, options = {}) {
       startMultipleChoiceQuiz();
     }
   }
+}
+
+function buildRandomQuizFilterPresetPayload() {
+  const questionCountInput = document.getElementById(
+    "randomQuizQuestionCountInput"
+  );
+  const requestedQuestionCount = Number(questionCountInput?.value);
+  const hasFixedQuestionCount =
+    appState.randomQuiz.questionCountTouched &&
+    Number.isFinite(requestedQuestionCount) &&
+    requestedQuestionCount >= 1;
+
+  return {
+    regionEntityIds: Array.from(appState.randomQuiz.regionEntityIds),
+    typeKeys: Array.from(appState.randomQuiz.typeKeys),
+    includeDisputed: appState.randomQuiz.includeDisputed === true,
+    questionCountMode: hasFixedQuestionCount ? "fixed" : "maximum",
+    questionCount: hasFixedQuestionCount
+      ? Math.floor(requestedQuestionCount)
+      : null
+  };
+}
+
+function saveRandomQuizFilterPresetFromUi() {
+  const nameInput = document.getElementById(
+    "randomQuizPresetNameInput"
+  );
+
+  const presetName = sanitisePresetName(nameInput?.value);
+
+  const preset = createUserPreset({
+    name: presetName,
+    kind: RANDOM_FILTER_PRESET_KIND,
+    payload: buildRandomQuizFilterPresetPayload(),
+    quizModePreference: null
+  });
+
+  if (!preset) {
+    setRandomQuizPresetStatus("Random Quiz preset could not be saved.");
+    return;
+  }
+
+  if (nameInput) {
+    nameInput.value = "";
+  }
+
+  setRandomQuizPresetStatus(`Saved “${preset.name}”.`);
+  renderPresetViews();
+}
+
+function normaliseRandomFilterPresetPayload(payload) {
+  if (!payload || typeof payload !== "object") {
+    payload = {};
+  }
+
+  const availableTypeKeys = new Set(
+    getRandomQuizAvailableTypeOptions().map(option => option.key)
+  );
+
+  const regionEntityIds = Array.isArray(payload.regionEntityIds)
+    ? payload.regionEntityIds.filter(entityId => {
+        return Boolean(dataIndex.entitiesById[entityId]);
+      })
+    : [];
+
+  const typeKeys = Array.isArray(payload.typeKeys)
+    ? payload.typeKeys.filter(typeKey => {
+        return availableTypeKeys.has(typeKey);
+      })
+    : [];
+
+  const rawQuestionCount = Number(payload.questionCount);
+  const hasFixedQuestionCount =
+    payload.questionCountMode === "fixed" &&
+    Number.isFinite(rawQuestionCount) &&
+    rawQuestionCount >= 1;
+
+  return {
+    regionEntityIds,
+    typeKeys,
+    includeDisputed: payload.includeDisputed === true,
+    questionCountMode: hasFixedQuestionCount ? "fixed" : "maximum",
+    questionCount: hasFixedQuestionCount
+      ? Math.floor(rawQuestionCount)
+      : null
+  };
+}
+
+function getRandomFilterPresetAvailableQuestionCount(preset) {
+  const payload = normaliseRandomFilterPresetPayload(
+    preset?.payload ?? {}
+  );
+
+  return countRandomQuizQuestions({
+      regionEntityIds: payload.regionEntityIds,
+      typeKeys: payload.typeKeys,
+      includeDisputed: payload.includeDisputed
+    },
+    dataIndex
+  );
+}
+
+function getRandomFilterPresetMetaText(preset) {
+  const payload = normaliseRandomFilterPresetPayload(
+    preset?.payload ?? {}
+  );
+  const availableQuestionCount =
+    getRandomFilterPresetAvailableQuestionCount(preset);
+  const scopeCount = payload.regionEntityIds.length;
+  const typeCount = payload.typeKeys.length;
+  const questionCountText = payload.questionCountMode === "fixed"
+    ? `fixed ${payload.questionCount} question limit`
+    : "maximum questions";
+  const disputedText = payload.includeDisputed
+    ? "includes disputed"
+    : "excludes disputed";
+
+  return (
+    `Random filter preset · ${scopeCount} ` +
+    `${scopeCount === 1 ? "scope" : "scopes"} · ` +
+    `${typeCount} ${typeCount === 1 ? "type" : "types"} · ` +
+    `${availableQuestionCount} matching quiz ` +
+    `${availableQuestionCount === 1 ? "question" : "questions"} · ` +
+    `${questionCountText} · ${disputedText}`
+  );
+}
+
+function applyRandomFilterPreset(preset) {
+  if (!preset || preset.kind !== RANDOM_FILTER_PRESET_KIND) {
+    console.warn("Only random filter presets can be applied here.", preset);
+    return false;
+  }
+
+  const payload = normaliseRandomFilterPresetPayload(preset.payload);
+
+  appState.randomQuiz.regionEntityIds = new Set(payload.regionEntityIds);
+  appState.randomQuiz.typeKeys = new Set(payload.typeKeys);
+  appState.randomQuiz.includeDisputed = payload.includeDisputed;
+  appState.randomQuiz.questionCountTouched = false;
+
+  const includeDisputedInput = document.getElementById(
+    "randomQuizIncludeDisputedInput"
+  );
+
+  if (includeDisputedInput) {
+    includeDisputedInput.checked = payload.includeDisputed;
+  }
+
+  if (typeof renderRandomQuizFilterOptions === "function") {
+    renderRandomQuizFilterOptions();
+  }
+
+  if (typeof updateRandomQuizSummaryAndControls === "function") {
+    updateRandomQuizSummaryAndControls();
+  }
+
+  if (payload.questionCountMode === "fixed") {
+    const questionCountInput = document.getElementById(
+      "randomQuizQuestionCountInput"
+    );
+
+    if (questionCountInput) {
+      questionCountInput.value = payload.questionCount;
+    }
+
+    appState.randomQuiz.questionCountTouched = true;
+
+    if (typeof syncRandomQuizQuestionCountInput === "function") {
+      syncRandomQuizQuestionCountInput(
+        appState.randomQuiz.lastMaximumQuestionCount
+      );
+    }
+
+    if (typeof updateRandomQuizStartButtonState === "function") {
+      updateRandomQuizStartButtonState();
+    }
+  }
+
+  return true;
+}
+
+function loadRandomFilterPreset(preset, options = {}) {
+  const {
+    targetMode = "randomQuiz",
+    startQuiz = false
+  } = options;
+
+  const applied = applyRandomFilterPreset(preset);
+
+  if (!applied) {
+    return;
+  }
+
+  setRandomQuizPresetStatus(`Loaded “${preset.name}”.`);
+
+  if (startQuiz && targetMode === "typing") {
+    startRandomQuiz("typing");
+    return;
+  }
+
+  if (startQuiz && targetMode === "multipleChoice") {
+    startRandomQuiz("multiple_choice");
+    return;
+  }
+
+  showModePanel("randomQuiz");
 }
 
 function createPresetActionButton(label, handler) {
@@ -369,7 +592,97 @@ function createSelectionPresetCard(preset, context) {
   return itemElement;
 }
 
-function renderPresetList(containerElement, presets, context) {
+function createRandomFilterPresetCard(preset, context) {
+  const itemElement = document.createElement("div");
+  itemElement.className = "preset-item";
+
+  const titleElement = document.createElement("p");
+  titleElement.className = "preset-title";
+  titleElement.textContent = preset.name;
+
+  const metaElement = document.createElement("p");
+  metaElement.className = "preset-meta";
+  metaElement.textContent = getRandomFilterPresetMetaText(preset);
+
+  const actionsElement = document.createElement("div");
+  actionsElement.className = "preset-actions";
+
+  if (context === "typing") {
+    actionsElement.appendChild(
+      createPresetActionButton("Apply filters", () => {
+        loadRandomFilterPreset(preset, {
+          targetMode: "randomQuiz"
+        });
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Start Typing", () => {
+        loadRandomFilterPreset(preset, {
+          targetMode: "typing",
+          startQuiz: true
+        });
+      })
+    );
+  } else if (context === "multipleChoice") {
+    actionsElement.appendChild(
+      createPresetActionButton("Apply filters", () => {
+        loadRandomFilterPreset(preset, {
+          targetMode: "randomQuiz"
+        });
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Start Multiple-Choice", () => {
+        loadRandomFilterPreset(preset, {
+          targetMode: "multipleChoice",
+          startQuiz: true
+        });
+      })
+    );
+  } else {
+    actionsElement.appendChild(
+      createPresetActionButton("Apply filters", () => {
+        loadRandomFilterPreset(preset, {
+          targetMode: "randomQuiz"
+        });
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Delete", () => {
+        const shouldDelete = window.confirm(
+          `Delete preset “${preset.name}”?`
+        );
+
+        if (!shouldDelete) {
+          return;
+        }
+
+        deleteUserPreset(preset.id);
+        setRandomQuizPresetStatus(`Deleted “${preset.name}”.`);
+        renderPresetViews();
+      })
+    );
+  }
+
+  itemElement.appendChild(titleElement);
+  itemElement.appendChild(metaElement);
+  itemElement.appendChild(actionsElement);
+
+  return itemElement;
+}
+
+function createPresetCard(preset, context) {
+  if (preset.kind === RANDOM_FILTER_PRESET_KIND) {
+    return createRandomFilterPresetCard(preset, context);
+  }
+
+  return createSelectionPresetCard(preset, context);
+}
+
+function renderPresetList(containerElement, presets, context, emptyMessage) {
   if (!containerElement) {
     return;
   }
@@ -377,7 +690,7 @@ function renderPresetList(containerElement, presets, context) {
   if (presets.length === 0) {
     containerElement.innerHTML = `
       <p class="empty-message">
-        No selection presets saved yet.
+        ${emptyMessage}
       </p>
     `;
     return;
@@ -390,50 +703,93 @@ function renderPresetList(containerElement, presets, context) {
 
   presets.forEach(preset => {
     listElement.appendChild(
-      createSelectionPresetCard(preset, context)
+      createPresetCard(preset, context)
     );
   });
 
   containerElement.appendChild(listElement);
 }
 
+function sortPresetsByName(presets) {
+  return presets.slice().sort((a, b) => {
+    return a.name.localeCompare(b.name);
+  });
+}
+
+function getRandomPresetSavePlaceholder() {
+  const scopeCount = appState.randomQuiz.regionEntityIds.size;
+  const typeCount = appState.randomQuiz.typeKeys.size;
+
+  if (scopeCount === 0 && typeCount === 0) {
+    return appState.randomQuiz.includeDisputed
+      ? "Whole database including disputed"
+      : "Whole current database";
+  }
+
+  return `${scopeCount} scope${scopeCount === 1 ? "" : "s"}, ` +
+    `${typeCount} type${typeCount === 1 ? "" : "s"}`;
+}
+
 function renderPresetViews() {
   const selectionPresets = getUserPresetsByKind(SELECTION_PRESET_KIND);
+  const randomFilterPresets = getUserPresetsByKind(RANDOM_FILTER_PRESET_KIND);
+  const quizUsablePresets = sortPresetsByName([
+    ...selectionPresets,
+    ...randomFilterPresets
+  ]);
 
-  const saveButton = document.getElementById(
+  const saveSelectionButton = document.getElementById(
     "saveSelectionPresetButton"
   );
 
-  if (saveButton) {
-    saveButton.disabled = !hasActiveCurrentSelection();
+  if (saveSelectionButton) {
+    saveSelectionButton.disabled = !hasActiveCurrentSelection();
   }
 
   const selectionSourceCount = getCurrentSelectionSourceCount();
-  const saveNameInput = document.getElementById(
+  const saveSelectionNameInput = document.getElementById(
     "selectionPresetNameInput"
   );
 
-  if (saveNameInput) {
-    saveNameInput.placeholder = selectionSourceCount > 0
+  if (saveSelectionNameInput) {
+    saveSelectionNameInput.placeholder = selectionSourceCount > 0
       ? `${selectionSourceCount} source selection`
       : "Build a selection before saving";
+  }
+
+  const saveRandomNameInput = document.getElementById(
+    "randomQuizPresetNameInput"
+  );
+
+  if (saveRandomNameInput) {
+    saveRandomNameInput.placeholder = getRandomPresetSavePlaceholder();
   }
 
   renderPresetList(
     document.getElementById("selectionPresetsView"),
     selectionPresets,
-    "selection"
+    "selection",
+    "No selection presets saved yet."
+  );
+
+  renderPresetList(
+    document.getElementById("randomQuizPresetsView"),
+    randomFilterPresets,
+    "randomQuiz",
+    "No random-filter presets saved yet."
   );
 
   renderPresetList(
     document.getElementById("typingPresetView"),
-    selectionPresets,
-    "typing"
+    quizUsablePresets,
+    "typing",
+    "No presets saved yet."
   );
 
   renderPresetList(
     document.getElementById("multipleChoicePresetView"),
-    selectionPresets,
-    "multipleChoice"
+    quizUsablePresets,
+    "multipleChoice",
+    "No presets saved yet."
   );
 }
