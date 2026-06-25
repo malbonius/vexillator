@@ -2857,6 +2857,10 @@ const assets = [
     path: "assets/flags/geography/south_america/venezuela/national/venezuela_state.svg"
   },
   {
+    id: "ast_venezuela_state_text_removed",
+    path: "assets/flags/geography/south_america/venezuela/national/venezuela_state_text_removed.svg"
+  },
+  {
     id: "ast_vermont",
     path: "assets/flags/geography/northern_america/united_states/states/vermont/vermont.svg"
   },

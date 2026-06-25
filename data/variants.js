@@ -2060,6 +2060,18 @@ const variants = [
     baseVariantId: "var_aragua_current"
   },
   {
+    id: "var_venezuela_state_quiz",
+    entityId: "ent_venezuela",
+    assetId: "ast_venezuela_state_text_removed",
+    displayName: "State and War Flag",
+    aliases: [],
+    tags: ["official", "current", "state", "war", "quiz", "text_removed"],
+    startYear: 2006,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_venezuela_state"
+  },
+  {
     id: "var_bolivia_state_quiz",
     entityId: "ent_bolivia",
     assetId: "ast_bolivia_state_text_removed",
