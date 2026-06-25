@@ -3273,3 +3273,71 @@ html.theme-dark {
   outline-offset: 3px;
 }
 
+
+/*
+  Random Quiz theme fixes.
+
+  These overrides sit after the main theme layer so the Random Quiz builder uses
+  the same light/dark variables as the rest of Vexillator.
+*/
+.random-quiz-section {
+  border-color: var(--border-soft);
+  background: var(--surface-bg-soft);
+  color: var(--text-main);
+}
+
+.random-quiz-filter-group {
+  border-color: var(--border-soft);
+  background: var(--surface-bg);
+  color: var(--text-main);
+}
+
+.random-quiz-filter-group[open] {
+  background: var(--surface-bg-soft);
+}
+
+.random-quiz-filter-group-summary {
+  color: var(--text-main);
+}
+
+.random-quiz-filter-group-summary:hover {
+  background: var(--button-hover-bg);
+}
+
+.random-quiz-filter-group > .random-quiz-option-grid {
+  border-top-color: var(--border-soft);
+}
+
+.random-quiz-checkbox {
+  border-color: var(--border-soft);
+  background: var(--surface-bg);
+  color: var(--text-main);
+}
+
+.random-quiz-checkbox:hover {
+  border-color: var(--accent);
+  background: var(--button-hover-bg);
+}
+
+.random-quiz-checkbox input {
+  accent-color: var(--accent);
+}
+
+.random-quiz-match-summary {
+  color: var(--text-main);
+}
+
+.random-quiz-actions button {
+  border-color: var(--border-strong);
+  background: var(--button-bg);
+  color: var(--text-main);
+}
+
+.random-quiz-actions button:hover:not(:disabled) {
+  border-color: var(--accent);
+  background: var(--button-hover-bg);
+}
+
+.random-quiz-actions button:disabled {
+  color: var(--text-subtle);
+}
