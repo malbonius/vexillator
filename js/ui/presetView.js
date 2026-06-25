@@ -339,7 +339,7 @@ function saveRandomQuizFilterPresetFromUi() {
   });
 
   if (!preset) {
-    setRandomQuizPresetStatus("Random Quiz preset could not be saved.");
+    setRandomQuizPresetStatus("Quiz Builder preset could not be saved.");
     return;
   }
 
@@ -442,7 +442,7 @@ function getRandomFilterPresetMetaText(preset) {
     : "excludes disputed";
 
   return (
-    `Random filter preset · ${ruleCount} ` +
+    `Quiz Builder preset · ${ruleCount} ` +
     `${ruleCount === 1 ? "include rule" : "include rules"} · ` +
     `${scopeCount} ${scopeCount === 1 ? "area selection" : "area selections"} · ` +
     `${typeCount} ${typeCount === 1 ? "type selection" : "type selections"} · ` +
@@ -454,7 +454,7 @@ function getRandomFilterPresetMetaText(preset) {
 
 function applyRandomFilterPreset(preset) {
   if (!preset || preset.kind !== RANDOM_FILTER_PRESET_KIND) {
-    console.warn("Only random filter presets can be applied here.", preset);
+    console.warn("Only Quiz Builder presets can be applied here.", preset);
     return false;
   }
 
@@ -1286,7 +1286,7 @@ function createRandomFilterPresetCard(preset, context) {
 
   if (context === "typing") {
     actionsElement.appendChild(
-      createPresetActionButton("Apply filters", () => {
+      createPresetActionButton("Open Builder", () => {
         loadRandomFilterPreset(preset, {
           targetMode: "randomQuiz"
         });
@@ -1303,7 +1303,7 @@ function createRandomFilterPresetCard(preset, context) {
     );
   } else if (context === "multipleChoice") {
     actionsElement.appendChild(
-      createPresetActionButton("Apply filters", () => {
+      createPresetActionButton("Open Builder", () => {
         loadRandomFilterPreset(preset, {
           targetMode: "randomQuiz"
         });
@@ -1320,7 +1320,7 @@ function createRandomFilterPresetCard(preset, context) {
     );
   } else {
     actionsElement.appendChild(
-      createPresetActionButton("Apply filters", () => {
+      createPresetActionButton("Load preset", () => {
         loadRandomFilterPreset(preset, {
           targetMode: "randomQuiz"
         });
@@ -1560,8 +1560,8 @@ function getQuizPresetGroups({
       presets: sortPresetsByName(selectionPresets)
     },
     {
-      title: "Random Quiz filter presets",
-      note: "Saved Random Quiz scope, type and disputed settings.",
+      title: "Quiz Builder presets",
+      note: "Saved Quiz Builder include rules, entity types and disputed settings.",
       presets: sortPresetsByName(randomFilterPresets)
     },
     {
@@ -1735,7 +1735,7 @@ function renderPresetViews() {
     document.getElementById("randomQuizPresetsView"),
     randomFilterPresets,
     "randomQuiz",
-    "No random-filter presets saved yet."
+    "No Quiz Builder presets saved yet."
   );
 
   renderPresetList(
