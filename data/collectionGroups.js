@@ -399,6 +399,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_spain",
+    name: "Spain",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_spain_autonomous_communities_and_cities"
+    ]
+  },
+  {
     id: "grp_italy",
     name: "Italy",
     parentGroupIds: ["grp_southern_europe"],

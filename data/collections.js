@@ -41,7 +41,6 @@ const collections = [
     name: "Recognised Sovereign and Self-Governing States",
     type: "dynamic",
     target: "entity",
-    notes: "Recognised current states and self-governing associated states. Disputed entities are excluded so partially recognised disputed cases can remain in the disputed status collections.",
     rules: {
       all: [
         {
@@ -2859,6 +2858,37 @@ const collections = [
         }
       ]
     }
+  },
+  {
+    id: "col_spain_autonomous_communities_and_cities",
+    name: "Spanish Autonomous Community and City Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes Spain's autonomous communities plus the autonomous cities of Ceuta and Melilla. Canary Islands, Ceuta and Melilla are included explicitly because they are geographically modelled under Northern Africa while remaining constituent parts of Spain.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_spain"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "autonomous"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    },
+    includeEntityIds: [
+      "ent_canary_islands",
+      "ent_ceuta",
+      "ent_melilla"
+    ]
   },
   {
     id: "col_france_current_regions",
