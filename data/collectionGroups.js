@@ -639,6 +639,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_nato",
+    name: "NATO",
+    parentGroupIds: ["grp_european_atlantic_organisations"],
+    collectionIds: [
+      "col_nato_member_state_flags"
+    ]
+  },
+  {
     id: "grp_treaty_systems",
     name: "Treaty Systems",
     parentGroupIds: ["grp_international_organisations"],

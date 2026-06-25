@@ -421,5 +421,265 @@ const entityMemberships = Object.freeze([
     startYear: 1945,
     endYear: null,
     notes: "Joined as North Yemen; current membership is represented by Yemen."
+  }),
+
+  /*
+    NATO member states.
+  */
+  Object.freeze({
+    id: "mem_albania_nato",
+    memberEntityId: "ent_albania",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2009,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_belgium_nato",
+    memberEntityId: "ent_belgium",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bulgaria_nato",
+    memberEntityId: "ent_bulgaria",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2004,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_canada_nato",
+    memberEntityId: "ent_canada",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_croatia_nato",
+    memberEntityId: "ent_croatia",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2009,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_czechia_nato",
+    memberEntityId: "ent_czechia",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1999,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_denmark_nato",
+    memberEntityId: "ent_denmark",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_estonia_nato",
+    memberEntityId: "ent_estonia",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2004,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_finland_nato",
+    memberEntityId: "ent_finland",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2023,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_france_nato",
+    memberEntityId: "ent_france",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_germany_nato",
+    memberEntityId: "ent_germany",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1955,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_greece_nato",
+    memberEntityId: "ent_greece",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1952,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_hungary_nato",
+    memberEntityId: "ent_hungary",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1999,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_iceland_nato",
+    memberEntityId: "ent_iceland",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_italy_nato",
+    memberEntityId: "ent_italy",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_latvia_nato",
+    memberEntityId: "ent_latvia",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2004,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_lithuania_nato",
+    memberEntityId: "ent_lithuania",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2004,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_luxembourg_nato",
+    memberEntityId: "ent_luxembourg",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_montenegro_nato",
+    memberEntityId: "ent_montenegro",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2017,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_netherlands_nato",
+    memberEntityId: "ent_netherlands",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_north_macedonia_nato",
+    memberEntityId: "ent_north_macedonia",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2020,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_norway_nato",
+    memberEntityId: "ent_norway",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_poland_nato",
+    memberEntityId: "ent_poland",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1999,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_portugal_nato",
+    memberEntityId: "ent_portugal",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_romania_nato",
+    memberEntityId: "ent_romania",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2004,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_slovakia_nato",
+    memberEntityId: "ent_slovakia",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2004,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_slovenia_nato",
+    memberEntityId: "ent_slovenia",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2004,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_spain_nato",
+    memberEntityId: "ent_spain",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1982,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_sweden_nato",
+    memberEntityId: "ent_sweden",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 2024,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_turkey_nato",
+    memberEntityId: "ent_turkey",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1952,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_united_kingdom_nato",
+    memberEntityId: "ent_united_kingdom",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_united_states_nato",
+    memberEntityId: "ent_united_states",
+    groupEntityId: "ent_nato",
+    status: "current",
+    startYear: 1949,
+    endYear: null
   })
 ]);

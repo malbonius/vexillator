@@ -521,6 +521,24 @@ const collections = [
     }
   },
   {
+    id: "col_nato_member_state_flags",
+    name: "NATO Member State Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection. NATO membership is stored in entityMemberships.js so cross-regional NATO members can remain geographically modelled by their actual regions.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_nato",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_asian_sovereign",
     name: "Recognised Asian Sovereign States",
     type: "dynamic",
