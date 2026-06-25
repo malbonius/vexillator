@@ -284,16 +284,71 @@ function createRandomQuizCheckbox(options) {
 }
 
 function getRandomQuizRuleSummaryText(rule, ruleIndex) {
-  const scopeCount = rule.regionEntityIds.size;
-  const typeCount = rule.typeKeys.size;
-  const scopeText = scopeCount === 0
-    ? "all areas"
-    : `${scopeCount} ${scopeCount === 1 ? "area" : "areas"}`;
-  const typeText = typeCount === 0
-    ? "all current types"
-    : `${typeCount} ${typeCount === 1 ? "type" : "types"}`;
+  const scopeText = getRandomQuizRuleScopeSummary(rule);
+  const typeText = getRandomQuizRuleTypeSummary(rule);
 
-  return `Include rule ${ruleIndex + 1} — ${scopeText} · ${typeText}`;
+  return `Include rule ${ruleIndex + 1} — ${scopeText} + ${typeText}`;
+}
+
+function getRandomQuizRuleScopeSummary(rule) {
+  const selectedIds = Array.from(rule.regionEntityIds);
+
+  if (selectedIds.length === 0) {
+    return "All areas";
+  }
+
+  const availableOptionsById = new Map(
+    getRandomQuizAvailableRegionOptions(dataIndex).map(option => {
+      return [option.id, option.label];
+    })
+  );
+
+  const labels = selectedIds.map(entityId => {
+    return availableOptionsById.get(entityId) ||
+      dataIndex.entitiesById[entityId]?.name ||
+      entityId;
+  });
+
+  return formatRandomQuizRuleSummaryLabels(labels, "area", "areas");
+}
+
+function getRandomQuizRuleTypeSummary(rule) {
+  const selectedKeys = Array.from(rule.typeKeys);
+
+  if (selectedKeys.length === 0) {
+    return "All current types";
+  }
+
+  const availableOptionsByKey = new Map(
+    getRandomQuizAvailableTypeOptions().map(option => {
+      return [option.key, option.label];
+    })
+  );
+
+  const labels = selectedKeys.map(typeKey => {
+    return availableOptionsByKey.get(typeKey) || typeKey;
+  });
+
+  return formatRandomQuizRuleSummaryLabels(labels, "type", "types");
+}
+
+function formatRandomQuizRuleSummaryLabels(
+  labels,
+  singularNoun,
+  pluralNoun
+) {
+  const sortedLabels = labels.slice().sort((firstLabel, secondLabel) => {
+    return firstLabel.localeCompare(secondLabel);
+  });
+
+  if (sortedLabels.length <= 2) {
+    return sortedLabels.join(", ");
+  }
+
+  const remainingCount = sortedLabels.length - 2;
+  const noun = remainingCount === 1 ? singularNoun : pluralNoun;
+
+  return `${sortedLabels.slice(0, 2).join(", ")} and ${remainingCount} more ${noun}`;
 }
 
 function updateRandomQuizRuleSummary(rule, ruleIndex) {
