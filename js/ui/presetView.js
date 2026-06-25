@@ -10,6 +10,7 @@
 
 const SELECTION_PRESET_KIND = "selection";
 const RANDOM_FILTER_PRESET_KIND = "random_filter";
+const STATS_RULE_PRESET_KIND = "stats_rule";
 
 function setupPresetView() {
   const saveSelectionButton = document.getElementById(
@@ -18,6 +19,9 @@ function setupPresetView() {
   const saveRandomFilterButton = document.getElementById(
     "saveRandomQuizFilterPresetButton"
   );
+  const saveStatsRuleButton = document.getElementById(
+    "saveStatsRulePresetButton"
+  );
 
   saveSelectionButton?.addEventListener("click", () => {
     saveCurrentSelectionPresetFromUi();
@@ -25,6 +29,10 @@ function setupPresetView() {
 
   saveRandomFilterButton?.addEventListener("click", () => {
     saveRandomQuizFilterPresetFromUi();
+  });
+
+  saveStatsRuleButton?.addEventListener("click", () => {
+    saveStatsRulePresetFromUi();
   });
 
   renderPresetViews();
@@ -495,6 +503,325 @@ function loadRandomFilterPreset(preset, options = {}) {
   showModePanel("randomQuiz");
 }
 
+
+function setStatsPresetStatus(message) {
+  const statusElement = document.getElementById(
+    "statsPresetStatus"
+  );
+
+  if (statusElement) {
+    statusElement.textContent = message;
+  }
+}
+
+function getStatsRuleControlValue(elementId, fallbackValue) {
+  const element = document.getElementById(elementId);
+  return element ? element.value : fallbackValue;
+}
+
+function getCurrentStatsRulePresetPayload() {
+  const rawLimit = Number(
+    getStatsRuleControlValue("statsPresetLimitInput", 30)
+  );
+
+  return normaliseStatsRulePresetPayload({
+    targetType: getStatsRuleControlValue("statsTargetTypeFilter", "all"),
+    mode: getStatsRuleControlValue("statsModeFilter", "all"),
+    minimumSeen: getStatsRuleControlValue("statsMinimumSeenFilter", 0),
+    sort: getStatsRuleControlValue("statsSortSelect", "weakest"),
+    limit: Number.isFinite(rawLimit) ? rawLimit : 30
+  });
+}
+
+function saveStatsRulePresetFromUi() {
+  const nameInput = document.getElementById(
+    "statsPresetNameInput"
+  );
+
+  const presetName = sanitisePresetName(nameInput?.value);
+
+  const preset = createUserPreset({
+    name: presetName,
+    kind: STATS_RULE_PRESET_KIND,
+    payload: getCurrentStatsRulePresetPayload(),
+    quizModePreference: null
+  });
+
+  if (!preset) {
+    setStatsPresetStatus("Stats rule preset could not be saved.");
+    return;
+  }
+
+  if (nameInput) {
+    nameInput.value = "";
+  }
+
+  setStatsPresetStatus(`Saved “${preset.name}”.`);
+  renderPresetViews();
+}
+
+function normaliseStatsRulePresetPayload(payload) {
+  if (!payload || typeof payload !== "object") {
+    payload = {};
+  }
+
+  const validTargetTypes = new Set(["all", "entity", "variant"]);
+  const validModes = new Set(["all", "typing", "multiple_choice"]);
+  const validSorts = new Set([
+    "weakest",
+    "strongest",
+    "most_seen",
+    "least_seen",
+    "slowest",
+    "recently_incorrect",
+    "alphabetical"
+  ]);
+
+  const targetType = validTargetTypes.has(payload.targetType)
+    ? payload.targetType
+    : "all";
+
+  const mode = validModes.has(payload.mode)
+    ? payload.mode
+    : "all";
+
+  const rawMinimumSeen = Number(payload.minimumSeen);
+  const minimumSeen = Number.isFinite(rawMinimumSeen)
+    ? Math.max(0, Math.floor(rawMinimumSeen))
+    : 0;
+
+  const sort = validSorts.has(payload.sort)
+    ? payload.sort
+    : "weakest";
+
+  const rawLimit = Number(payload.limit);
+  const limit = Number.isFinite(rawLimit)
+    ? Math.max(1, Math.floor(rawLimit))
+    : 30;
+
+  return {
+    targetType,
+    mode,
+    minimumSeen,
+    sort,
+    limit
+  };
+}
+
+function getStatsRulePresetResolvedTargets(presetOrPayload) {
+  const payload = normaliseStatsRulePresetPayload(
+    presetOrPayload?.payload ?? presetOrPayload ?? {}
+  );
+
+  const filteredStats = filterStats(
+    getAllStats(),
+    payload.targetType,
+    payload.mode,
+    payload.minimumSeen
+  );
+
+  const sortedStats = sortStats(filteredStats, payload.sort);
+  const entityIds = [];
+  const variantIds = [];
+  const seenTargetKeys = new Set();
+
+  sortedStats.forEach(stat => {
+    if (seenTargetKeys.size >= payload.limit) {
+      return;
+    }
+
+    if (stat.targetType !== "entity" && stat.targetType !== "variant") {
+      return;
+    }
+
+    const targetKey = `${stat.targetType}|${stat.targetId}`;
+
+    if (seenTargetKeys.has(targetKey)) {
+      return;
+    }
+
+    if (stat.targetType === "entity") {
+      if (!dataIndex.entitiesById[stat.targetId]) {
+        return;
+      }
+
+      entityIds.push(stat.targetId);
+    }
+
+    if (stat.targetType === "variant") {
+      if (!dataIndex.variantsById[stat.targetId]) {
+        return;
+      }
+
+      variantIds.push(stat.targetId);
+    }
+
+    seenTargetKeys.add(targetKey);
+  });
+
+  return {
+    payload,
+    matchingStatCount: filteredStats.length,
+    selectedTargetCount: seenTargetKeys.size,
+    entityIds,
+    variantIds
+  };
+}
+
+function generateStatsRulePresetQuestions(preset) {
+  const resolvedTargets = getStatsRulePresetResolvedTargets(preset);
+
+  return generateQuizQuestions({
+      entityIds: resolvedTargets.entityIds,
+      variantIds: resolvedTargets.variantIds,
+      questionCount: resolvedTargets.payload.limit
+    },
+    dataIndex
+  );
+}
+
+function getStatsRulePresetAvailableQuestionCount(preset) {
+  return generateStatsRulePresetQuestions(preset).length;
+}
+
+function formatStatsRulePresetTargetType(targetType) {
+  if (targetType === "entity") {
+    return "entities";
+  }
+
+  if (targetType === "variant") {
+    return "variants";
+  }
+
+  return "all targets";
+}
+
+function formatStatsRulePresetMode(mode) {
+  if (mode === "typing") {
+    return "typing stats";
+  }
+
+  if (mode === "multiple_choice") {
+    return "multiple-choice stats";
+  }
+
+  return "all quiz modes";
+}
+
+function formatStatsRulePresetSort(sort) {
+  if (sort === "strongest") {
+    return "strongest first";
+  }
+
+  if (sort === "most_seen") {
+    return "most seen";
+  }
+
+  if (sort === "least_seen") {
+    return "least seen";
+  }
+
+  if (sort === "slowest") {
+    return "slowest average time";
+  }
+
+  if (sort === "recently_incorrect") {
+    return "recently incorrect";
+  }
+
+  if (sort === "alphabetical") {
+    return "alphabetical";
+  }
+
+  return "weakest first";
+}
+
+function getStatsRulePresetMetaText(preset) {
+  const resolvedTargets = getStatsRulePresetResolvedTargets(preset);
+  const payload = resolvedTargets.payload;
+  const availableQuestionCount = getStatsRulePresetAvailableQuestionCount(preset);
+
+  return (
+    `Stats rule preset · ${formatStatsRulePresetSort(payload.sort)} · ` +
+    `${formatStatsRulePresetTargetType(payload.targetType)} · ` +
+    `${formatStatsRulePresetMode(payload.mode)} · ` +
+    `seen ${payload.minimumSeen}+ · ` +
+    `top ${payload.limit} target${payload.limit === 1 ? "" : "s"} · ` +
+    `${resolvedTargets.matchingStatCount} matching stat ` +
+    `${resolvedTargets.matchingStatCount === 1 ? "record" : "records"} · ` +
+    `${availableQuestionCount} matching quiz ` +
+    `${availableQuestionCount === 1 ? "question" : "questions"}`
+  );
+}
+
+function applyStatsRulePresetToStatsPage(preset) {
+  if (!preset || preset.kind !== STATS_RULE_PRESET_KIND) {
+    console.warn("Only stats rule presets can be applied here.", preset);
+    return false;
+  }
+
+  const payload = normaliseStatsRulePresetPayload(preset.payload);
+
+  const targetTypeFilter = document.getElementById("statsTargetTypeFilter");
+  const modeFilter = document.getElementById("statsModeFilter");
+  const minimumSeenFilter = document.getElementById("statsMinimumSeenFilter");
+  const sortSelect = document.getElementById("statsSortSelect");
+  const limitInput = document.getElementById("statsPresetLimitInput");
+
+  if (targetTypeFilter) {
+    targetTypeFilter.value = payload.targetType;
+  }
+
+  if (modeFilter) {
+    modeFilter.value = payload.mode;
+  }
+
+  if (minimumSeenFilter) {
+    minimumSeenFilter.value = String(payload.minimumSeen);
+  }
+
+  if (sortSelect) {
+    sortSelect.value = payload.sort;
+  }
+
+  if (limitInput) {
+    limitInput.value = String(payload.limit);
+  }
+
+  renderStatsView();
+  renderPresetViews();
+  showModePanel("stats");
+  setStatsPresetStatus(`Applied “${preset.name}”.`);
+
+  return true;
+}
+
+function startStatsRulePresetQuiz(preset, targetMode) {
+  if (!preset || preset.kind !== STATS_RULE_PRESET_KIND) {
+    return;
+  }
+
+  const questions = generateStatsRulePresetQuestions(preset);
+
+  if (questions.length === 0) {
+    setStatsPresetStatus(
+      `No quiz questions currently match “${preset.name}”.`
+    );
+    return;
+  }
+
+  if (targetMode === "typing") {
+    showModePanel("typing");
+    startTypingQuizFromQuestions(questions);
+    return;
+  }
+
+  if (targetMode === "multipleChoice") {
+    showModePanel("multipleChoice");
+    startMultipleChoiceQuizFromQuestions(questions);
+  }
+}
+
 function createPresetActionButton(label, handler) {
   const button = document.createElement("button");
 
@@ -674,9 +1001,96 @@ function createRandomFilterPresetCard(preset, context) {
   return itemElement;
 }
 
+
+function createStatsRulePresetCard(preset, context) {
+  const itemElement = document.createElement("div");
+  itemElement.className = "preset-item";
+
+  const titleElement = document.createElement("p");
+  titleElement.className = "preset-title";
+  titleElement.textContent = preset.name;
+
+  const metaElement = document.createElement("p");
+  metaElement.className = "preset-meta";
+  metaElement.textContent = getStatsRulePresetMetaText(preset);
+
+  const actionsElement = document.createElement("div");
+  actionsElement.className = "preset-actions";
+
+  if (context === "typing") {
+    actionsElement.appendChild(
+      createPresetActionButton("View rule", () => {
+        applyStatsRulePresetToStatsPage(preset);
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Start Typing", () => {
+        startStatsRulePresetQuiz(preset, "typing");
+      })
+    );
+  } else if (context === "multipleChoice") {
+    actionsElement.appendChild(
+      createPresetActionButton("View rule", () => {
+        applyStatsRulePresetToStatsPage(preset);
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Start Multiple-Choice", () => {
+        startStatsRulePresetQuiz(preset, "multipleChoice");
+      })
+    );
+  } else {
+    actionsElement.appendChild(
+      createPresetActionButton("Apply rule", () => {
+        applyStatsRulePresetToStatsPage(preset);
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Start Typing", () => {
+        startStatsRulePresetQuiz(preset, "typing");
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Start Multiple-Choice", () => {
+        startStatsRulePresetQuiz(preset, "multipleChoice");
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Delete", () => {
+        const shouldDelete = window.confirm(
+          `Delete preset “${preset.name}”?`
+        );
+
+        if (!shouldDelete) {
+          return;
+        }
+
+        deleteUserPreset(preset.id);
+        setStatsPresetStatus(`Deleted “${preset.name}”.`);
+        renderPresetViews();
+      })
+    );
+  }
+
+  itemElement.appendChild(titleElement);
+  itemElement.appendChild(metaElement);
+  itemElement.appendChild(actionsElement);
+
+  return itemElement;
+}
+
 function createPresetCard(preset, context) {
   if (preset.kind === RANDOM_FILTER_PRESET_KIND) {
     return createRandomFilterPresetCard(preset, context);
+  }
+
+  if (preset.kind === STATS_RULE_PRESET_KIND) {
+    return createStatsRulePresetCard(preset, context);
   }
 
   return createSelectionPresetCard(preset, context);
@@ -730,12 +1144,24 @@ function getRandomPresetSavePlaceholder() {
     `${typeCount} type${typeCount === 1 ? "" : "s"}`;
 }
 
+
+function getStatsPresetSavePlaceholder() {
+  const payload = getCurrentStatsRulePresetPayload();
+
+  return `${formatStatsRulePresetSort(payload.sort)} · ` +
+    `${formatStatsRulePresetTargetType(payload.targetType)} · ` +
+    `${formatStatsRulePresetMode(payload.mode)} · ` +
+    `seen ${payload.minimumSeen}+`;
+}
+
 function renderPresetViews() {
   const selectionPresets = getUserPresetsByKind(SELECTION_PRESET_KIND);
   const randomFilterPresets = getUserPresetsByKind(RANDOM_FILTER_PRESET_KIND);
+  const statsRulePresets = getUserPresetsByKind(STATS_RULE_PRESET_KIND);
   const quizUsablePresets = sortPresetsByName([
     ...selectionPresets,
-    ...randomFilterPresets
+    ...randomFilterPresets,
+    ...statsRulePresets
   ]);
 
   const saveSelectionButton = document.getElementById(
@@ -765,6 +1191,14 @@ function renderPresetViews() {
     saveRandomNameInput.placeholder = getRandomPresetSavePlaceholder();
   }
 
+  const saveStatsNameInput = document.getElementById(
+    "statsPresetNameInput"
+  );
+
+  if (saveStatsNameInput) {
+    saveStatsNameInput.placeholder = getStatsPresetSavePlaceholder();
+  }
+
   renderPresetList(
     document.getElementById("selectionPresetsView"),
     selectionPresets,
@@ -777,6 +1211,13 @@ function renderPresetViews() {
     randomFilterPresets,
     "randomQuiz",
     "No random-filter presets saved yet."
+  );
+
+  renderPresetList(
+    document.getElementById("statsRulePresetsView"),
+    statsRulePresets,
+    "stats",
+    "No stats-rule presets saved yet."
   );
 
   renderPresetList(

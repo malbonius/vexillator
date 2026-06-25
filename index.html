@@ -375,7 +375,7 @@
           <summary>Presets</summary>
 
           <p class="panel-note">
-            Load a saved selection preset, or start from a saved Random Quiz filter preset.
+            Load a saved selection preset, start from a saved Random Quiz filter preset, or practise a saved Stats rule.
           </p>
 
           <div id="typingPresetView">
@@ -415,7 +415,7 @@
           <summary>Presets</summary>
 
           <p class="panel-note">
-            Load a saved selection preset, or start from a saved Random Quiz filter preset.
+            Load a saved selection preset, start from a saved Random Quiz filter preset, or practise a saved Stats rule.
           </p>
 
           <div id="multipleChoicePresetView">
@@ -642,6 +642,53 @@
             </select>
           </div>
         </div>
+
+        <details class="mode-utility-section presets-section stats-presets-section">
+          <summary>Presets</summary>
+
+          <p class="panel-note">
+            Save the current Stats filters and sort order as a smart preset. The rule is recalculated from your latest stats whenever you use it.
+          </p>
+
+          <div class="preset-save-controls">
+            <label for="statsPresetNameInput">
+              Preset name
+            </label>
+
+            <input
+              id="statsPresetNameInput"
+              type="text"
+              placeholder="e.g. Weak flags, seen 3+ times"
+              autocomplete="off"
+            >
+
+            <label for="statsPresetLimitInput">
+              Practice limit
+            </label>
+
+            <input
+              id="statsPresetLimitInput"
+              type="number"
+              min="1"
+              max="500"
+              value="30"
+            >
+
+            <button id="saveStatsRulePresetButton" type="button">
+              Save stats rule
+            </button>
+          </div>
+
+          <p
+            id="statsPresetStatus"
+            class="preset-status panel-note"
+            aria-live="polite"
+          ></p>
+
+          <div id="statsRulePresetsView">
+            No stats-rule presets saved yet.
+          </div>
+        </details>
 
         <details class="mode-utility-section stats-management-section">
           <summary>Stats Management</summary>

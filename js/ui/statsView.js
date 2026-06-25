@@ -61,6 +61,7 @@ function setupStatsView() {
   */
   refreshButton.addEventListener("click", () => {
     renderStatsView();
+    refreshStatsPresetViewsIfAvailable();
   });
 
   /*
@@ -115,6 +116,7 @@ function setupStatsView() {
 
       alert(result.message);
       renderStatsView();
+      refreshStatsPresetViewsIfAvailable();
 
       /*
         Clear the file input so the same file can be selected again later
@@ -140,6 +142,7 @@ function setupStatsView() {
 
     clearAllStats();
     renderStatsView();
+    refreshStatsPresetViewsIfAvailable();
   });
 
   /*
@@ -155,8 +158,15 @@ function setupStatsView() {
 
     control.addEventListener("change", () => {
       renderStatsView();
+      refreshStatsPresetViewsIfAvailable();
     });
   });
+}
+
+function refreshStatsPresetViewsIfAvailable() {
+  if (typeof renderPresetViews === "function") {
+    renderPresetViews();
+  }
 }
 
 /*
