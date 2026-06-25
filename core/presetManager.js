@@ -174,3 +174,30 @@ function deleteUserPreset(presetId) {
 
   return remainingPresets.length !== presets.length;
 }
+
+function renameUserPreset(presetId, nextName) {
+  const presets = getUserPresets();
+  const presetIndex = presets.findIndex(preset => {
+    return preset.id === presetId;
+  });
+
+  if (presetIndex === -1) {
+    return null;
+  }
+
+  const renamedPreset = normaliseUserPreset({
+    ...presets[presetIndex],
+    name: sanitisePresetName(nextName),
+    updatedAt: new Date().toISOString()
+  });
+
+  if (!renamedPreset) {
+    return null;
+  }
+
+  const nextPresets = presets.slice();
+  nextPresets[presetIndex] = renamedPreset;
+  writeUserPresets(nextPresets);
+
+  return renamedPreset;
+}

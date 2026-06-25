@@ -1090,6 +1090,58 @@ function createPresetActionButton(label, handler) {
   return button;
 }
 
+function setPresetRenameStatus(preset, message) {
+  if (preset.kind === SELECTION_PRESET_KIND) {
+    setSelectionPresetStatus(message);
+    return;
+  }
+
+  if (preset.kind === RANDOM_FILTER_PRESET_KIND) {
+    setRandomQuizPresetStatus(message);
+    return;
+  }
+
+  if (preset.kind === STATS_RULE_PRESET_KIND) {
+    setStatsPresetStatus(message);
+  }
+}
+
+function renamePresetFromUi(preset) {
+  const nextName = window.prompt(
+    "Rename preset",
+    preset.name
+  );
+
+  if (nextName === null) {
+    return;
+  }
+
+  const renamedPreset = renameUserPreset(
+    preset.id,
+    nextName
+  );
+
+  if (!renamedPreset) {
+    window.alert("Preset could not be renamed.");
+    return;
+  }
+
+  setPresetRenameStatus(
+    renamedPreset,
+    `Renamed “${preset.name}” to “${renamedPreset.name}”.`
+  );
+
+  renderPresetViews();
+}
+
+function appendRenamePresetAction(actionsElement, preset) {
+  actionsElement.appendChild(
+    createPresetActionButton("Rename", () => {
+      renamePresetFromUi(preset);
+    })
+  );
+}
+
 function createSelectionPresetCard(preset, context) {
   const itemElement = document.createElement("div");
   itemElement.className = "preset-item";
@@ -1169,6 +1221,8 @@ function createSelectionPresetCard(preset, context) {
       })
     );
   }
+
+  appendRenamePresetAction(actionsElement, preset);
 
   itemElement.appendChild(titleElement);
   itemElement.appendChild(metaElement);
@@ -1251,6 +1305,8 @@ function createRandomFilterPresetCard(preset, context) {
       })
     );
   }
+
+  appendRenamePresetAction(actionsElement, preset);
 
   itemElement.appendChild(titleElement);
   itemElement.appendChild(metaElement);
@@ -1335,6 +1391,8 @@ function createStatsRulePresetCard(preset, context) {
     );
   }
 
+  appendRenamePresetAction(actionsElement, preset);
+
   itemElement.appendChild(titleElement);
   itemElement.appendChild(metaElement);
   itemElement.appendChild(actionsElement);
@@ -1397,6 +1455,8 @@ function createQuizSnapshotPresetCard(preset, context) {
       renderPresetViews();
     })
   );
+
+  appendRenamePresetAction(actionsElement, preset);
 
   itemElement.appendChild(titleElement);
   itemElement.appendChild(metaElement);
