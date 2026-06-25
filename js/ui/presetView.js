@@ -11,6 +11,7 @@
 const SELECTION_PRESET_KIND = "selection";
 const RANDOM_FILTER_PRESET_KIND = "random_filter";
 const STATS_RULE_PRESET_KIND = "stats_rule";
+const QUIZ_SNAPSHOT_PRESET_KIND = "quiz_snapshot";
 
 function setupPresetView() {
   const saveSelectionButton = document.getElementById(
@@ -822,6 +823,247 @@ function startStatsRulePresetQuiz(preset, targetMode) {
   }
 }
 
+function normaliseQuizSnapshotQuestion(rawQuestion) {
+  if (!rawQuestion || typeof rawQuestion !== "object") {
+    return null;
+  }
+
+  const displayedVariantId =
+    typeof rawQuestion.displayedVariantId === "string" &&
+    dataIndex.variantsById[rawQuestion.displayedVariantId]
+      ? rawQuestion.displayedVariantId
+      : null;
+
+  if (!displayedVariantId) {
+    return null;
+  }
+
+  const displayedVariant = dataIndex.variantsById[displayedVariantId];
+
+  const assetId =
+    typeof rawQuestion.assetId === "string" &&
+    dataIndex.assetsById[rawQuestion.assetId]
+      ? rawQuestion.assetId
+      : displayedVariant.assetId;
+
+  if (!assetId || !dataIndex.assetsById[assetId]) {
+    return null;
+  }
+
+  const revealVariantId =
+    typeof rawQuestion.revealVariantId === "string" &&
+    dataIndex.variantsById[rawQuestion.revealVariantId]
+      ? rawQuestion.revealVariantId
+      : displayedVariantId;
+
+  const acceptedEntityIds = Array.isArray(rawQuestion.acceptedEntityIds)
+    ? rawQuestion.acceptedEntityIds.filter(entityId => {
+        return Boolean(dataIndex.entitiesById[entityId]);
+      })
+    : [];
+
+  const primaryEntityId =
+    typeof rawQuestion.primaryEntityId === "string" &&
+    dataIndex.entitiesById[rawQuestion.primaryEntityId]
+      ? rawQuestion.primaryEntityId
+      : acceptedEntityIds[0] || null;
+
+  if (!primaryEntityId) {
+    return null;
+  }
+
+  if (!acceptedEntityIds.includes(primaryEntityId)) {
+    acceptedEntityIds.unshift(primaryEntityId);
+  }
+
+  const quizVisualGroupId =
+    typeof rawQuestion.quizVisualGroupId === "string"
+      ? rawQuestion.quizVisualGroupId
+      : displayedVariant.quizVisualGroupId || null;
+
+  return {
+    memberId: null,
+    collectionId: null,
+    primaryEntityId,
+    displayedVariantId,
+    revealVariantId,
+    assetId,
+    quizVisualGroupId,
+    acceptedEntityIds: [...new Set(acceptedEntityIds)]
+  };
+}
+
+function normaliseQuizSnapshotPresetPayload(payload) {
+  if (!payload || typeof payload !== "object") {
+    payload = {};
+  }
+
+  const questions = Array.isArray(payload.questions)
+    ? payload.questions
+        .map(normaliseQuizSnapshotQuestion)
+        .filter(Boolean)
+    : [];
+
+  return {
+    questions,
+    questionCount: questions.length
+  };
+}
+
+function buildQuizSnapshotPresetPayload(questions) {
+  return normaliseQuizSnapshotPresetPayload({
+    questions
+  });
+}
+
+function getDefaultQuizSnapshotPresetName(sourceQuizMode, questionCount) {
+  if (sourceQuizMode === "multiple_choice") {
+    return `Multiple-choice quiz set (${questionCount} questions)`;
+  }
+
+  if (sourceQuizMode === "typing") {
+    return `Typing quiz set (${questionCount} questions)`;
+  }
+
+  return `Saved quiz set (${questionCount} questions)`;
+}
+
+function saveQuizSnapshotPresetFromQuestions(options = {}) {
+  const questions = Array.isArray(options.questions)
+    ? options.questions
+    : [];
+
+  const payload = buildQuizSnapshotPresetPayload(questions);
+
+  if (payload.questions.length === 0) {
+    window.alert("This quiz set could not be saved because it has no valid questions.");
+    return null;
+  }
+
+  const sourceQuizMode =
+    options.sourceQuizMode === "typing" ||
+    options.sourceQuizMode === "multiple_choice"
+      ? options.sourceQuizMode
+      : null;
+
+  const defaultName = typeof options.defaultName === "string"
+    ? options.defaultName
+    : getDefaultQuizSnapshotPresetName(
+        sourceQuizMode,
+        payload.questions.length
+      );
+
+  const chosenName = window.prompt(
+    "Name this saved quiz set",
+    defaultName
+  );
+
+  if (chosenName === null) {
+    return null;
+  }
+
+  const preset = createUserPreset({
+    name: sanitisePresetName(chosenName),
+    kind: QUIZ_SNAPSHOT_PRESET_KIND,
+    payload,
+    quizModePreference: sourceQuizMode
+  });
+
+  if (preset) {
+    renderPresetViews();
+  }
+
+  return preset;
+}
+
+function generateQuizSnapshotPresetQuestions(preset) {
+  if (!preset || preset.kind !== QUIZ_SNAPSHOT_PRESET_KIND) {
+    return [];
+  }
+
+  const payload = normaliseQuizSnapshotPresetPayload(preset.payload);
+  const questions = payload.questions.map(question => ({
+    ...question,
+    acceptedEntityIds: [...question.acceptedEntityIds]
+  }));
+
+  attachQuizVisualGroupMetadata(questions, dataIndex);
+
+  const quizEntityIds = new Set();
+
+  questions.forEach(question => {
+    (question.acceptedEntityIds || []).forEach(entityId => {
+      quizEntityIds.add(entityId);
+    });
+  });
+
+  const allowsVariantOnlyAnswers = quizEntityIds.size === 1;
+
+  questions.forEach(question => {
+    question.answerLabel = getQuizQuestionAnswerLabel(
+      question,
+      questions,
+      dataIndex
+    );
+
+    question.needsVariantAnswer = questionNeedsVariantLabel(
+      question,
+      questions
+    );
+
+    question.allowsVariantOnlyAnswers = allowsVariantOnlyAnswers;
+  });
+
+  attachQuizVisualGroupLabels(questions, dataIndex);
+
+  return questions;
+}
+
+function getQuizSnapshotPresetAvailableQuestionCount(preset) {
+  return generateQuizSnapshotPresetQuestions(preset).length;
+}
+
+function getQuizSnapshotPresetMetaText(preset) {
+  const payload = normaliseQuizSnapshotPresetPayload(preset?.payload ?? {});
+  const availableQuestionCount =
+    getQuizSnapshotPresetAvailableQuestionCount(preset);
+
+  const sourceText = preset.quizModePreference === "typing"
+    ? "saved from typing"
+    : preset.quizModePreference === "multiple_choice"
+      ? "saved from multiple-choice"
+      : "quiz-mode neutral";
+
+  return (
+    `Saved quiz set · exact order · ${sourceText} · ` +
+    `${payload.questionCount} saved ` +
+    `${payload.questionCount === 1 ? "question" : "questions"} · ` +
+    `${availableQuestionCount} currently available`
+  );
+}
+
+function startQuizSnapshotPresetQuiz(preset, targetMode) {
+  const questions = generateQuizSnapshotPresetQuestions(preset);
+
+  if (questions.length === 0) {
+    window.alert(
+      `No quiz questions currently match “${preset.name}”.`
+    );
+    return;
+  }
+
+  if (targetMode === "typing") {
+    showModePanel("typing");
+    startTypingQuizFromQuestions(questions);
+    return;
+  }
+
+  if (targetMode === "multipleChoice") {
+    showModePanel("multipleChoice");
+    startMultipleChoiceQuizFromQuestions(questions);
+  }
+}
+
 function createPresetActionButton(label, handler) {
   const button = document.createElement("button");
 
@@ -1084,7 +1326,74 @@ function createStatsRulePresetCard(preset, context) {
   return itemElement;
 }
 
+function createQuizSnapshotPresetCard(preset, context) {
+  const itemElement = document.createElement("div");
+  itemElement.className = "preset-item";
+
+  const titleElement = document.createElement("p");
+  titleElement.className = "preset-title";
+  titleElement.textContent = preset.name;
+
+  const metaElement = document.createElement("p");
+  metaElement.className = "preset-meta";
+  metaElement.textContent = getQuizSnapshotPresetMetaText(preset);
+
+  const actionsElement = document.createElement("div");
+  actionsElement.className = "preset-actions";
+
+  if (context === "typing") {
+    actionsElement.appendChild(
+      createPresetActionButton("Start Typing", () => {
+        startQuizSnapshotPresetQuiz(preset, "typing");
+      })
+    );
+  } else if (context === "multipleChoice") {
+    actionsElement.appendChild(
+      createPresetActionButton("Start Multiple-Choice", () => {
+        startQuizSnapshotPresetQuiz(preset, "multipleChoice");
+      })
+    );
+  } else {
+    actionsElement.appendChild(
+      createPresetActionButton("Start Typing", () => {
+        startQuizSnapshotPresetQuiz(preset, "typing");
+      })
+    );
+
+    actionsElement.appendChild(
+      createPresetActionButton("Start Multiple-Choice", () => {
+        startQuizSnapshotPresetQuiz(preset, "multipleChoice");
+      })
+    );
+  }
+
+  actionsElement.appendChild(
+    createPresetActionButton("Delete", () => {
+      const shouldDelete = window.confirm(
+        `Delete saved quiz set “${preset.name}”?`
+      );
+
+      if (!shouldDelete) {
+        return;
+      }
+
+      deleteUserPreset(preset.id);
+      renderPresetViews();
+    })
+  );
+
+  itemElement.appendChild(titleElement);
+  itemElement.appendChild(metaElement);
+  itemElement.appendChild(actionsElement);
+
+  return itemElement;
+}
+
 function createPresetCard(preset, context) {
+  if (preset.kind === QUIZ_SNAPSHOT_PRESET_KIND) {
+    return createQuizSnapshotPresetCard(preset, context);
+  }
+
   if (preset.kind === RANDOM_FILTER_PRESET_KIND) {
     return createRandomFilterPresetCard(preset, context);
   }
@@ -1127,7 +1436,8 @@ function renderPresetList(containerElement, presets, context, emptyMessage) {
 function getQuizPresetGroups({
   selectionPresets,
   randomFilterPresets,
-  statsRulePresets
+  statsRulePresets,
+  quizSnapshotPresets
 }) {
   return [
     {
@@ -1144,6 +1454,11 @@ function getQuizPresetGroups({
       title: "Stats smart presets",
       note: "Rules that recalculate from current stats, such as weak or slow flags.",
       presets: sortPresetsByName(statsRulePresets)
+    },
+    {
+      title: "Saved quiz sets",
+      note: "Exact question sets saved from quiz result screens.",
+      presets: sortPresetsByName(quizSnapshotPresets)
     }
   ];
 }
@@ -1240,10 +1555,12 @@ function renderPresetViews() {
   const selectionPresets = getUserPresetsByKind(SELECTION_PRESET_KIND);
   const randomFilterPresets = getUserPresetsByKind(RANDOM_FILTER_PRESET_KIND);
   const statsRulePresets = getUserPresetsByKind(STATS_RULE_PRESET_KIND);
+  const quizSnapshotPresets = getUserPresetsByKind(QUIZ_SNAPSHOT_PRESET_KIND);
   const quizPresetGroups = getQuizPresetGroups({
     selectionPresets,
     randomFilterPresets,
-    statsRulePresets
+    statsRulePresets,
+    quizSnapshotPresets
   });
 
   const saveSelectionButton = document.getElementById(

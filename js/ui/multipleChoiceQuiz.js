@@ -410,6 +410,9 @@ function renderMultipleChoiceResult() {
   scoreElement.textContent =
     `Score: ${quizState.score} / ${quizState.questions.length}`;
 
+  const actionsElement = document.createElement("div");
+  actionsElement.className = "quiz-result-actions";
+
   const restartButton = document.createElement("button");
   restartButton.type = "button";
   restartButton.textContent = "Start New Multiple-Choice Quiz";
@@ -418,9 +421,36 @@ function renderMultipleChoiceResult() {
     startMultipleChoiceQuiz();
   });
 
+  actionsElement.appendChild(restartButton);
+
+  const snapshotStatusElement = document.createElement("p");
+  snapshotStatusElement.className = "quiz-result-status panel-note";
+
+  if (typeof saveQuizSnapshotPresetFromQuestions === "function") {
+    const saveSnapshotButton = document.createElement("button");
+    saveSnapshotButton.type = "button";
+    saveSnapshotButton.textContent = "Save This Quiz Set";
+
+    saveSnapshotButton.addEventListener("click", () => {
+      const preset = saveQuizSnapshotPresetFromQuestions({
+        questions: quizState.questions,
+        sourceQuizMode: "multiple_choice",
+        defaultName:
+          `Multiple-choice quiz set (${quizState.questions.length} questions)`
+      });
+
+      if (preset) {
+        snapshotStatusElement.textContent = `Saved “${preset.name}”.`;
+      }
+    });
+
+    actionsElement.appendChild(saveSnapshotButton);
+  }
+
   resultElement.appendChild(titleElement);
   resultElement.appendChild(scoreElement);
-  resultElement.appendChild(restartButton);
+  resultElement.appendChild(actionsElement);
+  resultElement.appendChild(snapshotStatusElement);
 
   quizViewElement.appendChild(resultElement);
 }

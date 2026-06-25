@@ -2313,6 +2313,31 @@ body.shell-drawer-open {
   background: #fff;
 }
 
+.quiz-result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.quiz-result-actions button {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border-strong, #bbb);
+  border-radius: 0.35rem;
+  background: var(--button-bg, #f8f8f8);
+  color: var(--text-main, #222);
+  cursor: pointer;
+  font: inherit;
+}
+
+.quiz-result-actions button:hover {
+  background: var(--button-hover-bg, #eeeeee);
+}
+
+.quiz-result-status {
+  margin: 0.75rem 0 0;
+}
+
 /* Stats summary cards */
 .stats-summary-grid {
   display: grid;
