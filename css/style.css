@@ -2975,3 +2975,53 @@ html.theme-dark .theme-toggle-moon::before {
     transparent 50% 100%
   );
 }
+
+/*
+  Quiz progression action.
+
+  This is used for Next Question and Show Result in both quiz modes. It keeps
+  the same physical size as the normal quiz action buttons, but uses a stronger
+  colour treatment so the next step is clearer.
+*/
+:root {
+  --quiz-next-bg: #2563eb;
+  --quiz-next-hover-bg: #1d4ed8;
+  --quiz-next-text: #ffffff;
+}
+
+html.theme-dark {
+  --quiz-next-bg: #60a5fa;
+  --quiz-next-hover-bg: #93c5fd;
+  --quiz-next-text: #0f172a;
+}
+
+.quiz-answer-area .quiz-next-button,
+.multiple-choice-options .quiz-next-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.55rem;
+  border: 1px solid var(--quiz-next-bg);
+  border-radius: 0.35rem;
+  background: var(--quiz-next-bg);
+  color: var(--quiz-next-text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.quiz-answer-area .quiz-next-button:hover,
+.multiple-choice-options .quiz-next-button:hover {
+  border-color: var(--quiz-next-hover-bg);
+  background: var(--quiz-next-hover-bg);
+}
+
+.quiz-answer-area .quiz-next-button:focus-visible,
+.multiple-choice-options .quiz-next-button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+

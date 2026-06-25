@@ -321,6 +321,7 @@ function renderMultipleChoiceFeedback(selectedOption, allOptions) {
 
   const nextButton = document.createElement("button");
   nextButton.type = "button";
+  nextButton.className = "quiz-next-button";
   nextButton.textContent = isLastMultipleChoiceQuestion() ?
     "Show Result" :
     "Next Question";

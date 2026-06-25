@@ -297,6 +297,7 @@ function renderTypingQuizFeedback(result) {
 
   const nextButton = document.createElement("button");
   nextButton.type = "button";
+  nextButton.className = "quiz-next-button";
   nextButton.textContent = isLastTypingQuizQuestion() ?
     "Show Result" :
     "Next Question";
