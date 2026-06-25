@@ -997,6 +997,17 @@ const variants = [
   },
 
   {
+    id: "var_organisation_of_islamic_cooperation_current",
+    entityId: "ent_organisation_of_islamic_cooperation",
+    assetId: "ast_oic_current",
+    displayName: "Organisation Flag",
+    aliases: ["Flag of the Organisation of Islamic Cooperation", "OIC Flag"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
     id: "var_european_union_current",
     entityId: "ent_european_union",
     assetId: "ast_eu_current",

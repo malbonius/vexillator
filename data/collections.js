@@ -3200,6 +3200,25 @@ const collections = [
     }
   },
 
+  {
+    id: "col_oic_member_state_flags",
+    name: "Organisation of Islamic Cooperation Member State Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection. OIC membership is stored in entityMemberships.js so cross-regional OIC members can remain geographically modelled by their actual regions. Observer states and candidate states are not included.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_organisation_of_islamic_cooperation",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
   /*
     Internal regression collections.
   */

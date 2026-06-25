@@ -680,6 +680,15 @@ const collectionGroups = [
     ]
   },
 
+  {
+    id: "grp_organisation_of_islamic_cooperation",
+    name: "Organisation of Islamic Cooperation",
+    parentGroupIds: ["grp_international_organisations"],
+    collectionIds: [
+      "col_oic_member_state_flags"
+    ]
+  },
+
   /*
     Antarctica.
   */

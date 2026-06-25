@@ -7258,6 +7258,15 @@ const entities = [
   defaultVariantId: "var_arab_league_current"
 },
 {
+  id: "ent_organisation_of_islamic_cooperation",
+  name: "Organisation of Islamic Cooperation",
+  aliases: ["OIC", "Organization of Islamic Cooperation", "Organisation of the Islamic Conference", "Organization of the Islamic Conference"],
+  entityType: "organisation",
+  parentIds: ["ent_international_organisations"],
+  tags: ["organisation", "international_organisation", "religious", "current"],
+  defaultVariantId: "var_organisation_of_islamic_cooperation_current"
+},
+{
   id: "ent_european_union",
   name: "European Union",
   aliases: ["EU"],

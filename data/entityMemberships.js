@@ -681,5 +681,462 @@ const entityMemberships = Object.freeze([
     status: "current",
     startYear: 1949,
     endYear: null
+  }),
+  Object.freeze({
+    id: "mem_afghanistan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_afghanistan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_albania_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_albania",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1992,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_algeria_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_algeria",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_azerbaijan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_azerbaijan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1992,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bahrain_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_bahrain",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1972,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bangladesh_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_bangladesh",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1974,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_benin_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_benin",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1983,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_brunei_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_brunei",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1984,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_burkina_faso_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_burkina_faso",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1974,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cameroon_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_cameroon",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1974,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_chad_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_chad",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_comoros_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_comoros",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1976,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cote_d_ivoire_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_cote_d_ivoire",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 2001,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_djibouti_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_djibouti",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1978,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_egypt_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_egypt",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_gabon_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_gabon",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1974,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_gambia_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_gambia",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1974,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_guinea_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_guinea",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_guinea_bissau_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_guinea_bissau",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1974,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_guyana_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_guyana",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1998,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_indonesia_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_indonesia",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_iran_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_iran",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_iraq_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_iraq",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1975,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_jordan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_jordan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_kazakhstan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_kazakhstan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1995,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_kuwait_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_kuwait",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_kyrgyzstan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_kyrgyzstan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1992,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_lebanon_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_lebanon",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_libya_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_libya",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_malaysia_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_malaysia",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_maldives_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_maldives",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1976,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mali_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_mali",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mauritania_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_mauritania",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_morocco_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_morocco",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mozambique_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_mozambique",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1994,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_niger_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_niger",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_nigeria_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_nigeria",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1986,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_oman_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_oman",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1972,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_pakistan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_pakistan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_palestine_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_palestine",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_qatar_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_qatar",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1972,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_saudi_arabia_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_saudi_arabia",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_senegal_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_senegal",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_sierra_leone_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_sierra_leone",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1972,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_somalia_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_somalia",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_sudan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_sudan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_suriname_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_suriname",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1996,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_syria_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_syria",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1972,
+    endYear: null,
+    notes: "Suspended from 2012 to 2025; current membership is represented here."
+  }),
+  Object.freeze({
+    id: "mem_tajikistan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_tajikistan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1992,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_togo_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_togo",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1997,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_tunisia_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_tunisia",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_turkey_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_turkey",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_turkmenistan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_turkmenistan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1992,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_united_arab_emirates_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_united_arab_emirates",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1972,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_uganda_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_uganda",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1974,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_uzbekistan_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_uzbekistan",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1996,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_yemen_organisation_of_islamic_cooperation",
+    memberEntityId: "ent_yemen",
+    groupEntityId: "ent_organisation_of_islamic_cooperation",
+    status: "current",
+    startYear: 1969,
+    endYear: null
   })
 ]);
