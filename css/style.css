@@ -3434,3 +3434,42 @@ html.theme-dark {
   flex-wrap: wrap;
   gap: 0.45rem;
 }
+
+
+/*
+  Grouped preset lists on quiz pages.
+
+  The quiz pages can now show selection presets, Random Quiz filters and
+  Stats smart rules together. Grouping keeps each preset type quick to scan.
+*/
+.preset-grouped-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.preset-group {
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid var(--border-soft, #dddddd);
+  border-radius: 0.5rem;
+  background: var(--surface-bg, #ffffff);
+  color: var(--text-main, #222222);
+}
+
+.preset-group-heading {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.preset-group-note {
+  margin: -0.25rem 0 0;
+  color: var(--text-subtle, #666666);
+  font-size: 0.86rem;
+}
+
+.preset-group .preset-list {
+  margin-top: 0.15rem;
+}

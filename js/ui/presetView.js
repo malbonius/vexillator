@@ -1124,6 +1124,88 @@ function renderPresetList(containerElement, presets, context, emptyMessage) {
   containerElement.appendChild(listElement);
 }
 
+function getQuizPresetGroups({
+  selectionPresets,
+  randomFilterPresets,
+  statsRulePresets
+}) {
+  return [
+    {
+      title: "Current Selection presets",
+      note: "Saved manual selections from Browse, Entity Detail or Search.",
+      presets: sortPresetsByName(selectionPresets)
+    },
+    {
+      title: "Random Quiz filter presets",
+      note: "Saved Random Quiz scope, type and disputed settings.",
+      presets: sortPresetsByName(randomFilterPresets)
+    },
+    {
+      title: "Stats smart presets",
+      note: "Rules that recalculate from current stats, such as weak or slow flags.",
+      presets: sortPresetsByName(statsRulePresets)
+    }
+  ];
+}
+
+function renderGroupedQuizPresetList(
+  containerElement,
+  presetGroups,
+  context,
+  emptyMessage
+) {
+  if (!containerElement) {
+    return;
+  }
+
+  const nonEmptyGroups = presetGroups.filter(group => {
+    return Array.isArray(group.presets) && group.presets.length > 0;
+  });
+
+  if (nonEmptyGroups.length === 0) {
+    containerElement.innerHTML = `
+      <p class="empty-message">
+        ${emptyMessage}
+      </p>
+    `;
+    return;
+  }
+
+  containerElement.innerHTML = "";
+
+  const groupedListElement = document.createElement("div");
+  groupedListElement.className = "preset-grouped-list";
+
+  nonEmptyGroups.forEach(group => {
+    const groupElement = document.createElement("section");
+    groupElement.className = "preset-group";
+
+    const headingElement = document.createElement("h4");
+    headingElement.className = "preset-group-heading";
+    headingElement.textContent = group.title;
+
+    const noteElement = document.createElement("p");
+    noteElement.className = "preset-group-note";
+    noteElement.textContent = group.note;
+
+    const listElement = document.createElement("div");
+    listElement.className = "preset-list";
+
+    group.presets.forEach(preset => {
+      listElement.appendChild(
+        createPresetCard(preset, context)
+      );
+    });
+
+    groupElement.appendChild(headingElement);
+    groupElement.appendChild(noteElement);
+    groupElement.appendChild(listElement);
+    groupedListElement.appendChild(groupElement);
+  });
+
+  containerElement.appendChild(groupedListElement);
+}
+
 function sortPresetsByName(presets) {
   return presets.slice().sort((a, b) => {
     return a.name.localeCompare(b.name);
@@ -1158,11 +1240,11 @@ function renderPresetViews() {
   const selectionPresets = getUserPresetsByKind(SELECTION_PRESET_KIND);
   const randomFilterPresets = getUserPresetsByKind(RANDOM_FILTER_PRESET_KIND);
   const statsRulePresets = getUserPresetsByKind(STATS_RULE_PRESET_KIND);
-  const quizUsablePresets = sortPresetsByName([
-    ...selectionPresets,
-    ...randomFilterPresets,
-    ...statsRulePresets
-  ]);
+  const quizPresetGroups = getQuizPresetGroups({
+    selectionPresets,
+    randomFilterPresets,
+    statsRulePresets
+  });
 
   const saveSelectionButton = document.getElementById(
     "saveSelectionPresetButton"
@@ -1220,16 +1302,16 @@ function renderPresetViews() {
     "No stats-rule presets saved yet."
   );
 
-  renderPresetList(
+  renderGroupedQuizPresetList(
     document.getElementById("typingPresetView"),
-    quizUsablePresets,
+    quizPresetGroups,
     "typing",
     "No presets saved yet."
   );
 
-  renderPresetList(
+  renderGroupedQuizPresetList(
     document.getElementById("multipleChoicePresetView"),
-    quizUsablePresets,
+    quizPresetGroups,
     "multipleChoice",
     "No presets saved yet."
   );
