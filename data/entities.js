@@ -3209,7 +3209,7 @@ const entities = [
   },
   /*
     Japan prefecture regions.
-  */,
+  */
   {
     id: "ent_japan_hokkaido_region",
     name: "Hokkaido Region",
@@ -3285,7 +3285,7 @@ const entities = [
 
   /*
     Japanese prefectures.
-  */,
+  */
   {
     id: "ent_japan_hokkaido",
     name: "Hokkaido",
@@ -4749,10 +4749,10 @@ const entities = [
     parentIds: ["ent_southern_europe"],
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_italy_current"
-  },,
+  },
   /*
     Italy and its current regions.
-  */,
+  */
   {
     id: "ent_italy_abruzzo",
     name: "Abruzzo",
