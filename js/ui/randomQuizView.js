@@ -1,60 +1,229 @@
 /*
   Random Quiz UI.
 
-  This page owns the shared Random Quiz filters. It can start either quiz
-  presentation from the same temporary entity/default-variant pool.
+  Every include rule owns its own scope and entity-type filters. The resulting
+  temporary quiz pool is the deduplicated union of all rules, so unrelated
+  scope/type combinations do not form an accidental cross-product.
 */
 
+let randomQuizRuleIdCounter = 1;
+let randomQuizRuleToOpenId = null;
+
 function setupRandomQuizView() {
+  ensureRandomQuizRulesState();
   renderRandomQuizFilterOptions();
   bindRandomQuizControls();
   updateRandomQuizSummaryAndControls();
 }
 
-function renderRandomQuizFilterOptions() {
-  const regionOptionsElement = document.getElementById(
-    "randomQuizRegionOptions"
-  );
-  const typeOptionsElement = document.getElementById(
-    "randomQuizTypeOptions"
-  );
+function createRandomQuizRuleState(options = {}) {
+  randomQuizRuleIdCounter += 1;
 
-  if (!regionOptionsElement || !typeOptionsElement) {
+  return {
+    id: typeof options.id === "string" && options.id.length > 0
+      ? options.id
+      : `random_quiz_rule_${Date.now()}_${randomQuizRuleIdCounter}`,
+    regionEntityIds: new Set(
+      Array.isArray(options.regionEntityIds)
+        ? options.regionEntityIds
+        : []
+    ),
+    typeKeys: new Set(
+      Array.isArray(options.typeKeys)
+        ? options.typeKeys
+        : []
+    )
+  };
+}
+
+function ensureRandomQuizRulesState() {
+  if (!appState.randomQuiz || typeof appState.randomQuiz !== "object") {
     return;
   }
 
-  regionOptionsElement.innerHTML = "";
-  typeOptionsElement.innerHTML = "";
+  /*
+    This also supports a live page that still has the old global Set fields,
+    although a normal reload will use the new appState shape directly.
+  */
+  if (
+    !Array.isArray(appState.randomQuiz.rules) ||
+    appState.randomQuiz.rules.length === 0
+  ) {
+    const legacyRegionIds = appState.randomQuiz.regionEntityIds instanceof Set
+      ? Array.from(appState.randomQuiz.regionEntityIds)
+      : [];
+    const legacyTypeKeys = appState.randomQuiz.typeKeys instanceof Set
+      ? Array.from(appState.randomQuiz.typeKeys)
+      : [];
 
-  getRandomQuizAvailableRegionGroups(dataIndex).forEach(group => {
-    regionOptionsElement.appendChild(
-      createRandomQuizRegionGroupElement(group)
+    appState.randomQuiz.rules = [
+      createRandomQuizRuleState({
+        regionEntityIds: legacyRegionIds,
+        typeKeys: legacyTypeKeys
+      })
+    ];
+  }
+
+  appState.randomQuiz.rules = appState.randomQuiz.rules.map(rule => {
+    if (
+      rule &&
+      typeof rule.id === "string" &&
+      rule.regionEntityIds instanceof Set &&
+      rule.typeKeys instanceof Set
+    ) {
+      return rule;
+    }
+
+    const regionEntityIds = rule?.regionEntityIds instanceof Set
+      ? Array.from(rule.regionEntityIds)
+      : Array.isArray(rule?.regionEntityIds)
+        ? rule.regionEntityIds
+        : [];
+    const typeKeys = rule?.typeKeys instanceof Set
+      ? Array.from(rule.typeKeys)
+      : Array.isArray(rule?.typeKeys)
+        ? rule.typeKeys
+        : [];
+
+    return createRandomQuizRuleState({
+      id: rule?.id,
+      regionEntityIds,
+      typeKeys
+    });
+  });
+}
+
+function renderRandomQuizFilterOptions() {
+  const rulesViewElement = document.getElementById(
+    "randomQuizRulesView"
+  );
+
+  if (!rulesViewElement) {
+    return;
+  }
+
+  ensureRandomQuizRulesState();
+  rulesViewElement.innerHTML = "";
+
+  appState.randomQuiz.rules.forEach((rule, ruleIndex) => {
+    rulesViewElement.appendChild(
+      createRandomQuizRuleElement(rule, ruleIndex)
     );
   });
+
+  randomQuizRuleToOpenId = null;
+}
+
+function createRandomQuizRuleElement(rule, ruleIndex) {
+  const ruleElement = document.createElement("details");
+  ruleElement.className = "random-quiz-rule";
+  ruleElement.dataset.ruleId = rule.id;
+  ruleElement.open = randomQuizRuleToOpenId === rule.id ||
+    (appState.randomQuiz.rules.length === 1 && ruleIndex === 0);
+
+  const summaryElement = document.createElement("summary");
+  summaryElement.className = "random-quiz-rule-summary";
+  summaryElement.id = `randomQuizRuleSummary_${rule.id}`;
+  summaryElement.textContent = getRandomQuizRuleSummaryText(
+    rule,
+    ruleIndex
+  );
+
+  const contentElement = document.createElement("div");
+  contentElement.className = "random-quiz-rule-content";
+
+  const actionsElement = document.createElement("div");
+  actionsElement.className = "random-quiz-rule-actions";
+
+  const removeButton = document.createElement("button");
+  removeButton.type = "button";
+  removeButton.textContent = appState.randomQuiz.rules.length === 1
+    ? "Clear this rule"
+    : "Remove this rule";
+  removeButton.addEventListener("click", () => {
+    removeRandomQuizRule(rule.id);
+  });
+
+  actionsElement.appendChild(removeButton);
+
+  const filterGridElement = document.createElement("div");
+  filterGridElement.className = "random-quiz-rule-filter-grid";
+
+  const scopeSectionElement = document.createElement("section");
+  scopeSectionElement.className = "random-quiz-rule-filter-section";
+
+  const scopeHeadingElement = document.createElement("h4");
+  scopeHeadingElement.textContent = "Scope / area";
+
+  const scopeNoteElement = document.createElement("p");
+  scopeNoteElement.className = "panel-note";
+  scopeNoteElement.textContent =
+    "Leave empty for the whole database. Multiple areas inside this rule are combined.";
+
+  const scopeGroupsElement = document.createElement("div");
+  scopeGroupsElement.className = "random-quiz-scope-groups";
+
+  getRandomQuizAvailableRegionGroups(dataIndex).forEach(group => {
+    scopeGroupsElement.appendChild(
+      createRandomQuizRegionGroupElement(group, rule, ruleIndex)
+    );
+  });
+
+  scopeSectionElement.appendChild(scopeHeadingElement);
+  scopeSectionElement.appendChild(scopeNoteElement);
+  scopeSectionElement.appendChild(scopeGroupsElement);
+
+  const typeSectionElement = document.createElement("section");
+  typeSectionElement.className = "random-quiz-rule-filter-section";
+
+  const typeHeadingElement = document.createElement("h4");
+  typeHeadingElement.textContent = "Entity types";
+
+  const typeNoteElement = document.createElement("p");
+  typeNoteElement.className = "panel-note";
+  typeNoteElement.textContent =
+    "Leave empty for all current entity types. Multiple types inside this rule are combined.";
+
+  const typeOptionsElement = document.createElement("div");
+  typeOptionsElement.className = "random-quiz-option-grid";
 
   getRandomQuizAvailableTypeOptions().forEach(option => {
     typeOptionsElement.appendChild(
       createRandomQuizCheckbox({
-        inputName: "randomQuizType",
+        inputName: `randomQuizType_${rule.id}`,
         value: option.key,
         label: option.label,
-        checked: appState.randomQuiz.typeKeys.has(option.key),
+        checked: rule.typeKeys.has(option.key),
         onChange: event => {
           updateRandomQuizSetFromCheckbox(
-            appState.randomQuiz.typeKeys,
+            rule.typeKeys,
             option.key,
             event.target.checked
           );
 
-          appState.randomQuiz.questionCountTouched = false;
-          updateRandomQuizSummaryAndControls();
+          handleRandomQuizRuleChange(rule, ruleIndex);
         }
       })
     );
   });
+
+  typeSectionElement.appendChild(typeHeadingElement);
+  typeSectionElement.appendChild(typeNoteElement);
+  typeSectionElement.appendChild(typeOptionsElement);
+
+  filterGridElement.appendChild(scopeSectionElement);
+  filterGridElement.appendChild(typeSectionElement);
+
+  contentElement.appendChild(actionsElement);
+  contentElement.appendChild(filterGridElement);
+
+  ruleElement.appendChild(summaryElement);
+  ruleElement.appendChild(contentElement);
+
+  return ruleElement;
 }
 
-function createRandomQuizRegionGroupElement(group) {
+function createRandomQuizRegionGroupElement(group, rule, ruleIndex) {
   const groupElement = document.createElement("details");
   groupElement.className = "random-quiz-filter-group";
   groupElement.open = group.openByDefault === true;
@@ -71,19 +240,18 @@ function createRandomQuizRegionGroupElement(group) {
   group.options.forEach(option => {
     optionsElement.appendChild(
       createRandomQuizCheckbox({
-        inputName: "randomQuizRegion",
+        inputName: `randomQuizRegion_${rule.id}`,
         value: option.id,
         label: option.label,
-        checked: appState.randomQuiz.regionEntityIds.has(option.id),
+        checked: rule.regionEntityIds.has(option.id),
         onChange: event => {
           updateRandomQuizSetFromCheckbox(
-            appState.randomQuiz.regionEntityIds,
+            rule.regionEntityIds,
             option.id,
             event.target.checked
           );
 
-          appState.randomQuiz.questionCountTouched = false;
-          updateRandomQuizSummaryAndControls();
+          handleRandomQuizRuleChange(rule, ruleIndex);
         }
       })
     );
@@ -115,7 +283,65 @@ function createRandomQuizCheckbox(options) {
   return labelElement;
 }
 
+function getRandomQuizRuleSummaryText(rule, ruleIndex) {
+  const scopeCount = rule.regionEntityIds.size;
+  const typeCount = rule.typeKeys.size;
+  const scopeText = scopeCount === 0
+    ? "all areas"
+    : `${scopeCount} ${scopeCount === 1 ? "area" : "areas"}`;
+  const typeText = typeCount === 0
+    ? "all current types"
+    : `${typeCount} ${typeCount === 1 ? "type" : "types"}`;
+
+  return `Include rule ${ruleIndex + 1} — ${scopeText} · ${typeText}`;
+}
+
+function updateRandomQuizRuleSummary(rule, ruleIndex) {
+  const summaryElement = document.getElementById(
+    `randomQuizRuleSummary_${rule.id}`
+  );
+
+  if (summaryElement) {
+    summaryElement.textContent = getRandomQuizRuleSummaryText(
+      rule,
+      ruleIndex
+    );
+  }
+}
+
+function handleRandomQuizRuleChange(rule, ruleIndex) {
+  appState.randomQuiz.questionCountTouched = false;
+  updateRandomQuizRuleSummary(rule, ruleIndex);
+  updateRandomQuizSummaryAndControls();
+}
+
+function addRandomQuizRule() {
+  const newRule = createRandomQuizRuleState();
+  appState.randomQuiz.rules.push(newRule);
+  randomQuizRuleToOpenId = newRule.id;
+  appState.randomQuiz.questionCountTouched = false;
+  renderRandomQuizFilterOptions();
+  updateRandomQuizSummaryAndControls();
+}
+
+function removeRandomQuizRule(ruleId) {
+  if (appState.randomQuiz.rules.length === 1) {
+    appState.randomQuiz.rules = [createRandomQuizRuleState()];
+  } else {
+    appState.randomQuiz.rules = appState.randomQuiz.rules.filter(rule => {
+      return rule.id !== ruleId;
+    });
+  }
+
+  appState.randomQuiz.questionCountTouched = false;
+  renderRandomQuizFilterOptions();
+  updateRandomQuizSummaryAndControls();
+}
+
 function bindRandomQuizControls() {
+  const addRuleButton = document.getElementById(
+    "addRandomQuizRuleButton"
+  );
   const includeDisputedInput = document.getElementById(
     "randomQuizIncludeDisputedInput"
   );
@@ -131,6 +357,10 @@ function bindRandomQuizControls() {
   const clearFiltersButton = document.getElementById(
     "clearRandomQuizFiltersButton"
   );
+
+  addRuleButton?.addEventListener("click", () => {
+    addRandomQuizRule();
+  });
 
   includeDisputedInput?.addEventListener("change", event => {
     appState.randomQuiz.includeDisputed = event.target.checked;
@@ -166,9 +396,13 @@ function updateRandomQuizSetFromCheckbox(targetSet, value, isChecked) {
 }
 
 function getRandomQuizFiltersFromState() {
+  ensureRandomQuizRulesState();
+
   return {
-    regionEntityIds: Array.from(appState.randomQuiz.regionEntityIds),
-    typeKeys: Array.from(appState.randomQuiz.typeKeys),
+    rules: appState.randomQuiz.rules.map(rule => ({
+      regionEntityIds: Array.from(rule.regionEntityIds),
+      typeKeys: Array.from(rule.typeKeys)
+    })),
     includeDisputed: appState.randomQuiz.includeDisputed
   };
 }
@@ -184,9 +418,6 @@ function updateRandomQuizSummaryAndControls() {
 
   const summaryElement = document.getElementById(
     "randomQuizMatchSummary"
-  );
-  const questionCountInput = document.getElementById(
-    "randomQuizQuestionCountInput"
   );
   const emptyMessageElement = document.getElementById(
     "randomQuizEmptyMessage"
@@ -306,8 +537,7 @@ function startRandomQuiz(mode) {
 }
 
 function clearRandomQuizFilters() {
-  appState.randomQuiz.regionEntityIds.clear();
-  appState.randomQuiz.typeKeys.clear();
+  appState.randomQuiz.rules = [createRandomQuizRuleState()];
   appState.randomQuiz.includeDisputed = false;
   appState.randomQuiz.questionCountTouched = false;
 

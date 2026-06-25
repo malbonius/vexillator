@@ -146,8 +146,20 @@ const appState = {
     It deliberately does not add matching entities to Current Selection.
   */
   randomQuiz: {
-    regionEntityIds: new Set(),
-    typeKeys: new Set(),
+    /*
+      Every include rule owns its own area and entity-type filters.
+
+      The final temporary pool is the union of all rules, so users can combine
+      combinations such as French subdivisions with Western European sovereign
+      states without creating an unwanted cross-product.
+    */
+    rules: [
+      {
+        id: "random_quiz_rule_1",
+        regionEntityIds: new Set(),
+        typeKeys: new Set()
+      }
+    ],
     includeDisputed: false,
     questionCountTouched: false,
     lastMaximumQuestionCount: 0

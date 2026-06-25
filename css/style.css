@@ -3498,3 +3498,130 @@ html.theme-dark {
 .preset-group .preset-list {
   margin-top: 0.15rem;
 }
+
+/*
+  Random Quiz include rules.
+
+  Each rule keeps its own scope/type pairing. The outer rule cards are
+  collapsible so several independent rules remain practical on smaller screens.
+*/
+.random-quiz-section-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.random-quiz-section-heading > div {
+  min-width: 0;
+}
+
+.random-quiz-section-heading h3 {
+  margin-bottom: 0;
+}
+
+.random-quiz-add-rule-button,
+.random-quiz-rule-actions button {
+  flex: 0 0 auto;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.35rem;
+  background: var(--button-bg);
+  color: var(--text-main);
+  cursor: pointer;
+  font: inherit;
+}
+
+.random-quiz-add-rule-button:hover,
+.random-quiz-rule-actions button:hover {
+  border-color: var(--accent);
+  background: var(--button-hover-bg);
+}
+
+.random-quiz-rules {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.random-quiz-rule {
+  min-width: 0;
+  border: 1px solid var(--border-soft);
+  border-radius: 0.5rem;
+  background: var(--surface-bg);
+  color: var(--text-main);
+}
+
+.random-quiz-rule[open] {
+  background: var(--surface-bg-soft);
+}
+
+.random-quiz-rule-summary {
+  padding: 0.7rem 0.8rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.random-quiz-rule-summary:hover {
+  background: var(--button-hover-bg);
+}
+
+.random-quiz-rule-content {
+  padding: 0.8rem;
+  border-top: 1px solid var(--border-soft);
+}
+
+.random-quiz-rule-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.7rem;
+}
+
+.random-quiz-rule-filter-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(14rem, 0.65fr);
+  gap: 0.8rem;
+}
+
+.random-quiz-rule-filter-section {
+  min-width: 0;
+  padding: 0.7rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 0.45rem;
+  background: var(--surface-bg);
+}
+
+.random-quiz-rule-filter-section h4 {
+  margin: 0;
+}
+
+.random-quiz-scope-groups {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 850px) {
+  .random-quiz-section-heading {
+    display: grid;
+  }
+
+  .random-quiz-add-rule-button {
+    justify-self: start;
+  }
+
+  .random-quiz-rule-filter-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .random-quiz-add-rule-button,
+  .random-quiz-rule-actions button {
+    width: 100%;
+  }
+
+  .random-quiz-rule-actions {
+    display: grid;
+  }
+}

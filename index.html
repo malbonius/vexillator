@@ -455,7 +455,7 @@
           <summary>Presets</summary>
 
           <p class="panel-note">
-            Save the current Random Quiz filters or load a saved random-filter preset.
+            Save the current Random Quiz rules and settings or load a saved random-filter preset.
           </p>
 
           <div class="preset-save-controls">
@@ -488,28 +488,27 @@
 
         <div class="random-quiz-builder">
           <section class="random-quiz-section">
-            <h3>Scope / area</h3>
+            <div class="random-quiz-section-heading">
+              <div>
+                <h3>Include rules</h3>
 
-            <p class="panel-note">
-              Leave this empty to include the whole database. Multiple scopes are combined.
-            </p>
+                <p class="panel-note">
+                  Each rule combines its own areas and entity types. Results from all rules are added together and duplicate quiz questions are removed.
+                </p>
+              </div>
+
+              <button
+                id="addRandomQuizRuleButton"
+                class="random-quiz-add-rule-button"
+                type="button"
+              >
+                Add another rule
+              </button>
+            </div>
 
             <div
-              id="randomQuizRegionOptions"
-              class="random-quiz-option-grid"
-            ></div>
-          </section>
-
-          <section class="random-quiz-section">
-            <h3>Entity types</h3>
-
-            <p class="panel-note">
-              Leave this empty to include all current entity types. Multiple types are combined.
-            </p>
-
-            <div
-              id="randomQuizTypeOptions"
-              class="random-quiz-option-grid"
+              id="randomQuizRulesView"
+              class="random-quiz-rules"
             ></div>
           </section>
 
@@ -564,7 +563,7 @@
               </button>
 
               <button id="clearRandomQuizFiltersButton" type="button">
-                Clear random quiz filters
+                Clear all rules and filters
               </button>
             </div>
 
@@ -573,7 +572,7 @@
               class="empty-message"
               hidden
             >
-              No flags match these filters. Remove one or more filters.
+              No flags match these rules. Adjust or remove one or more rule filters.
             </p>
           </section>
         </div>

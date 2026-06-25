@@ -373,14 +373,43 @@ const RANDOM_QUIZ_TYPE_OPTIONS = [
   }
 ];
 
-function normaliseRandomQuizFilters(filters = {}) {
+function normaliseRandomQuizRule(rule = {}) {
+  const regionEntityIds = Array.isArray(rule.regionEntityIds)
+    ? rule.regionEntityIds.filter(value => typeof value === "string")
+    : [];
+  const typeKeys = Array.isArray(rule.typeKeys)
+    ? rule.typeKeys.filter(value => typeof value === "string")
+    : [];
+
   return {
-    regionEntityIds: Array.isArray(filters.regionEntityIds)
-      ? filters.regionEntityIds
-      : [],
-    typeKeys: Array.isArray(filters.typeKeys)
-      ? filters.typeKeys
-      : [],
+    regionEntityIds: Array.from(new Set(regionEntityIds)),
+    typeKeys: Array.from(new Set(typeKeys))
+  };
+}
+
+function normaliseRandomQuizFilters(filters = {}) {
+  /*
+    Legacy Random Quiz presets stored one global area array and one global type
+    array. Treat that old shape as one include rule so existing presets remain
+    usable after the rule-based refactor.
+  */
+  const hasRuleArray = Array.isArray(filters.rules) &&
+    filters.rules.length > 0;
+  const rawRules = hasRuleArray
+    ? filters.rules
+    : [
+        {
+          regionEntityIds: Array.isArray(filters.regionEntityIds)
+            ? filters.regionEntityIds
+            : [],
+          typeKeys: Array.isArray(filters.typeKeys)
+            ? filters.typeKeys
+            : []
+        }
+      ];
+
+  return {
+    rules: rawRules.map(rule => normaliseRandomQuizRule(rule)),
     includeDisputed: filters.includeDisputed === true
   };
 }
@@ -471,19 +500,25 @@ function entityMatchesRandomQuizFilters(entity, filters, index) {
     return false;
   }
 
-  if (!entityMatchesRandomQuizRegion(entity, filters, index)) {
-    return false;
-  }
-
-  if (!entityMatchesRandomQuizType(entity, filters)) {
-    return false;
-  }
-
   if (!filters.includeDisputed && entityHasAnyTag(entity, ["disputed"])) {
     return false;
   }
 
-  const historicalTypeSelected = filters.typeKeys.includes("historical");
+  return filters.rules.some(rule => {
+    return entityMatchesRandomQuizRule(entity, rule, index);
+  });
+}
+
+function entityMatchesRandomQuizRule(entity, rule, index) {
+  if (!entityMatchesRandomQuizRegion(entity, rule, index)) {
+    return false;
+  }
+
+  if (!entityMatchesRandomQuizType(entity, rule)) {
+    return false;
+  }
+
+  const historicalTypeSelected = rule.typeKeys.includes("historical");
 
   if (
     !historicalTypeSelected &&
@@ -502,23 +537,23 @@ function entityMatchesRandomQuizFilters(entity, filters, index) {
   return true;
 }
 
-function entityMatchesRandomQuizRegion(entity, filters, index) {
-  if (filters.regionEntityIds.length === 0) {
+function entityMatchesRandomQuizRegion(entity, rule, index) {
+  if (rule.regionEntityIds.length === 0) {
     return true;
   }
 
-  return filters.regionEntityIds.some(regionEntityId => {
+  return rule.regionEntityIds.some(regionEntityId => {
     return entity.id === regionEntityId ||
       entityHasAncestor(entity.id, regionEntityId, index);
   });
 }
 
-function entityMatchesRandomQuizType(entity, filters) {
-  if (filters.typeKeys.length === 0) {
+function entityMatchesRandomQuizType(entity, rule) {
+  if (rule.typeKeys.length === 0) {
     return true;
   }
 
-  return filters.typeKeys.some(typeKey => {
+  return rule.typeKeys.some(typeKey => {
     const typeOption = RANDOM_QUIZ_TYPE_OPTIONS.find(option => {
       return option.key === typeKey;
     });

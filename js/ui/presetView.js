@@ -307,11 +307,16 @@ function buildRandomQuizFilterPresetPayload() {
     appState.randomQuiz.questionCountTouched &&
     Number.isFinite(requestedQuestionCount) &&
     requestedQuestionCount >= 1;
+  const filters = typeof getRandomQuizFiltersFromState === "function"
+    ? getRandomQuizFiltersFromState()
+    : { rules: [], includeDisputed: false };
 
   return {
-    regionEntityIds: Array.from(appState.randomQuiz.regionEntityIds),
-    typeKeys: Array.from(appState.randomQuiz.typeKeys),
-    includeDisputed: appState.randomQuiz.includeDisputed === true,
+    rules: filters.rules.map(rule => ({
+      regionEntityIds: rule.regionEntityIds.slice(),
+      typeKeys: rule.typeKeys.slice()
+    })),
+    includeDisputed: filters.includeDisputed === true,
     questionCountMode: hasFixedQuestionCount ? "fixed" : "maximum",
     questionCount: hasFixedQuestionCount
       ? Math.floor(requestedQuestionCount)
@@ -355,17 +360,37 @@ function normaliseRandomFilterPresetPayload(payload) {
     getRandomQuizAvailableTypeOptions().map(option => option.key)
   );
 
-  const regionEntityIds = Array.isArray(payload.regionEntityIds)
-    ? payload.regionEntityIds.filter(entityId => {
-        return Boolean(dataIndex.entitiesById[entityId]);
-      })
-    : [];
+  /*
+    Legacy presets used top-level regionEntityIds/typeKeys. Convert that shape
+    into one include rule when read, so old localStorage data continues to work.
+  */
+  const rawRules = Array.isArray(payload.rules) && payload.rules.length > 0
+    ? payload.rules
+    : [
+        {
+          regionEntityIds: payload.regionEntityIds,
+          typeKeys: payload.typeKeys
+        }
+      ];
 
-  const typeKeys = Array.isArray(payload.typeKeys)
-    ? payload.typeKeys.filter(typeKey => {
-        return availableTypeKeys.has(typeKey);
-      })
-    : [];
+  const rules = rawRules.map(rule => {
+    const regionEntityIds = Array.isArray(rule?.regionEntityIds)
+      ? Array.from(new Set(rule.regionEntityIds.filter(entityId => {
+          return Boolean(dataIndex.entitiesById[entityId]);
+        })))
+      : [];
+
+    const typeKeys = Array.isArray(rule?.typeKeys)
+      ? Array.from(new Set(rule.typeKeys.filter(typeKey => {
+          return availableTypeKeys.has(typeKey);
+        })))
+      : [];
+
+    return {
+      regionEntityIds,
+      typeKeys
+    };
+  });
 
   const rawQuestionCount = Number(payload.questionCount);
   const hasFixedQuestionCount =
@@ -374,8 +399,7 @@ function normaliseRandomFilterPresetPayload(payload) {
     rawQuestionCount >= 1;
 
   return {
-    regionEntityIds,
-    typeKeys,
+    rules,
     includeDisputed: payload.includeDisputed === true,
     questionCountMode: hasFixedQuestionCount ? "fixed" : "maximum",
     questionCount: hasFixedQuestionCount
@@ -390,8 +414,7 @@ function getRandomFilterPresetAvailableQuestionCount(preset) {
   );
 
   return countRandomQuizQuestions({
-      regionEntityIds: payload.regionEntityIds,
-      typeKeys: payload.typeKeys,
+      rules: payload.rules,
       includeDisputed: payload.includeDisputed
     },
     dataIndex
@@ -404,8 +427,13 @@ function getRandomFilterPresetMetaText(preset) {
   );
   const availableQuestionCount =
     getRandomFilterPresetAvailableQuestionCount(preset);
-  const scopeCount = payload.regionEntityIds.length;
-  const typeCount = payload.typeKeys.length;
+  const ruleCount = payload.rules.length;
+  const scopeCount = payload.rules.reduce((total, rule) => {
+    return total + rule.regionEntityIds.length;
+  }, 0);
+  const typeCount = payload.rules.reduce((total, rule) => {
+    return total + rule.typeKeys.length;
+  }, 0);
   const questionCountText = payload.questionCountMode === "fixed"
     ? `fixed ${payload.questionCount} question limit`
     : "maximum questions";
@@ -414,9 +442,10 @@ function getRandomFilterPresetMetaText(preset) {
     : "excludes disputed";
 
   return (
-    `Random filter preset · ${scopeCount} ` +
-    `${scopeCount === 1 ? "scope" : "scopes"} · ` +
-    `${typeCount} ${typeCount === 1 ? "type" : "types"} · ` +
+    `Random filter preset · ${ruleCount} ` +
+    `${ruleCount === 1 ? "include rule" : "include rules"} · ` +
+    `${scopeCount} ${scopeCount === 1 ? "area selection" : "area selections"} · ` +
+    `${typeCount} ${typeCount === 1 ? "type selection" : "type selections"} · ` +
     `${availableQuestionCount} matching quiz ` +
     `${availableQuestionCount === 1 ? "question" : "questions"} · ` +
     `${questionCountText} · ${disputedText}`
@@ -431,8 +460,17 @@ function applyRandomFilterPreset(preset) {
 
   const payload = normaliseRandomFilterPresetPayload(preset.payload);
 
-  appState.randomQuiz.regionEntityIds = new Set(payload.regionEntityIds);
-  appState.randomQuiz.typeKeys = new Set(payload.typeKeys);
+  appState.randomQuiz.rules = payload.rules.map(rule => {
+    if (typeof createRandomQuizRuleState === "function") {
+      return createRandomQuizRuleState(rule);
+    }
+
+    return {
+      id: `random_quiz_rule_${Date.now()}_${Math.random()}`,
+      regionEntityIds: new Set(rule.regionEntityIds),
+      typeKeys: new Set(rule.typeKeys)
+    };
+  });
   appState.randomQuiz.includeDisputed = payload.includeDisputed;
   appState.randomQuiz.questionCountTouched = false;
 
@@ -1604,19 +1642,31 @@ function sortPresetsByName(presets) {
 }
 
 function getRandomPresetSavePlaceholder() {
-  const scopeCount = appState.randomQuiz.regionEntityIds.size;
-  const typeCount = appState.randomQuiz.typeKeys.size;
+  const filters = typeof getRandomQuizFiltersFromState === "function"
+    ? getRandomQuizFiltersFromState()
+    : { rules: [], includeDisputed: false };
+  const ruleCount = filters.rules.length;
+  const scopeCount = filters.rules.reduce((total, rule) => {
+    return total + rule.regionEntityIds.length;
+  }, 0);
+  const typeCount = filters.rules.reduce((total, rule) => {
+    return total + rule.typeKeys.length;
+  }, 0);
 
-  if (scopeCount === 0 && typeCount === 0) {
-    return appState.randomQuiz.includeDisputed
+  if (
+    ruleCount === 1 &&
+    scopeCount === 0 &&
+    typeCount === 0
+  ) {
+    return filters.includeDisputed
       ? "Whole database including disputed"
       : "Whole current database";
   }
 
-  return `${scopeCount} scope${scopeCount === 1 ? "" : "s"}, ` +
-    `${typeCount} type${typeCount === 1 ? "" : "s"}`;
+  return `${ruleCount} include rule${ruleCount === 1 ? "" : "s"}, ` +
+    `${scopeCount} area selection${scopeCount === 1 ? "" : "s"}, ` +
+    `${typeCount} type selection${typeCount === 1 ? "" : "s"}`;
 }
-
 
 function getStatsPresetSavePlaceholder() {
   const payload = getCurrentStatsRulePresetPayload();
