@@ -1305,6 +1305,97 @@ function createEntityHistoryNavigationElement(
   return historyNavigationElement;
 }
 
+
+/*
+  Creates the default-variant hero used at the top of Entity Detail pages.
+
+  This is only a presentation shortcut for the entity's existing
+  defaultVariantId. It does not create a new data concept or change selection,
+  gallery, quiz or stats behaviour.
+*/
+function createEntityDefaultVariantHeroElement(
+  entity,
+  defaultVariant,
+  entityZoomItems
+) {
+  if (
+    !entity ||
+    !defaultVariant ||
+    defaultVariant.entityId !== entity.id
+  ) {
+    return null;
+  }
+
+  const asset = dataIndex.assetsById[defaultVariant.assetId];
+
+  const heroElement = document.createElement("aside");
+  heroElement.className = "entity-default-variant-hero";
+
+  const headingElement = document.createElement("h3");
+  headingElement.className = "entity-default-variant-heading";
+  headingElement.textContent = defaultVariant.displayName;
+
+  heroElement.appendChild(headingElement);
+
+  const zoomIndex = entityZoomItems.findIndex(item => {
+    return item.galleryVariantId === defaultVariant.id;
+  });
+
+  const imageButton = document.createElement("button");
+  imageButton.type = "button";
+  imageButton.className = "entity-default-variant-zoom-button";
+  imageButton.setAttribute(
+    "aria-label",
+    `View ${entity.name} - ${defaultVariant.displayName} in zoom viewer`
+  );
+
+  if (zoomIndex < 0) {
+    imageButton.disabled = true;
+  }
+
+  imageButton.addEventListener("click", () => {
+    if (zoomIndex < 0) {
+      return;
+    }
+
+    setGalleryZoomContext(
+      "entity",
+      entityZoomItems,
+      zoomIndex
+    );
+
+    appState.entityView.focusedVariantId = defaultVariant.id;
+
+    showGalleryZoomOverlay(zoomIndex);
+  });
+
+  if (asset) {
+    const imageElement = document.createElement("img");
+    imageElement.className = "entity-default-variant-image";
+    imageElement.src = asset.path;
+    imageElement.alt = `${entity.name} - ${defaultVariant.displayName}`;
+
+    imageButton.appendChild(imageElement);
+  } else {
+    const missingImageElement = document.createElement("span");
+    missingImageElement.className = "entity-default-variant-missing-image";
+    missingImageElement.textContent = "No image available";
+
+    imageButton.appendChild(missingImageElement);
+  }
+
+  heroElement.appendChild(imageButton);
+
+  const labelElement = document.createElement("p");
+  labelElement.className = "entity-default-variant-label";
+  labelElement.textContent =
+    `Default variant: ${defaultVariant.displayName}`;
+
+  heroElement.appendChild(labelElement);
+
+  return heroElement;
+}
+
 /*
   Renders the currently active entity.
 
@@ -1521,9 +1612,30 @@ function renderEntityView() {
     );
   }
 
+  const summaryElement = document.createElement("section");
+  summaryElement.className = "entity-detail-summary";
+
+  const summaryInfoElement = document.createElement("div");
+  summaryInfoElement.className = "entity-detail-summary-main";
+
+  summaryElement.appendChild(summaryInfoElement);
+
+  const defaultVariantHeroElement =
+    createEntityDefaultVariantHeroElement(
+      entity,
+      defaultVariant,
+      entityZoomItems
+    );
+
+  if (defaultVariantHeroElement) {
+    summaryElement.appendChild(defaultVariantHeroElement);
+  }
+
+  entityViewElement.appendChild(summaryElement);
+
   const headingElement = document.createElement("h2");
   headingElement.textContent = entity.name;
-  entityViewElement.appendChild(headingElement);
+  summaryInfoElement.appendChild(headingElement);
 
   /*
   Add or remove the entity itself as a direct working-pool source.
@@ -1580,7 +1692,7 @@ function renderEntityView() {
       }
     });
 
-    entityViewElement.appendChild(entityActionButton);
+    summaryInfoElement.appendChild(entityActionButton);
   }
 
   /*
@@ -1593,20 +1705,20 @@ function renderEntityView() {
     unavailableElement.textContent =
       "This entity has no default flag and cannot be added directly.";
 
-    entityViewElement.appendChild(unavailableElement);
+    summaryInfoElement.appendChild(unavailableElement);
   }
 
   const typeElement = document.createElement("p");
   typeElement.className = "entity-detail-meta";
   typeElement.textContent = `Entity type: ${entity.entityType}`;
-  entityViewElement.appendChild(typeElement);
+  summaryInfoElement.appendChild(typeElement);
 
   const aliasesElement = document.createElement("p");
   aliasesElement.className = "entity-detail-meta";
   aliasesElement.textContent = entity.aliases.length > 0 ?
     `Aliases: ${entity.aliases.join(", ")}` :
     "Aliases: none";
-  entityViewElement.appendChild(aliasesElement);
+  summaryInfoElement.appendChild(aliasesElement);
 
   /*
     Show the complete hierarchy path or paths leading to this entity.
@@ -1669,7 +1781,7 @@ function renderEntityView() {
     });
 
     contextSectionElement.appendChild(pathsElement);
-    entityViewElement.appendChild(contextSectionElement);
+    summaryInfoElement.appendChild(contextSectionElement);
   }
 
   /*
@@ -1711,7 +1823,7 @@ function renderEntityView() {
     parentsElement.appendChild(parentLinksElement);
   }
 
-  entityViewElement.appendChild(parentsElement);
+  summaryInfoElement.appendChild(parentsElement);
     /*
     Show political or administrative relationships separately.
 
@@ -1768,7 +1880,7 @@ function renderEntityView() {
       administrationLinksElement
     );
 
-    entityViewElement.appendChild(
+    summaryInfoElement.appendChild(
       administrationElement
     );
   }
@@ -1834,7 +1946,7 @@ if (constituentOfEntities.length > 0) {
     constituentOfLinksElement
   );
 
-  entityViewElement.appendChild(
+  summaryInfoElement.appendChild(
     constituentOfElement
   );
 }
@@ -1846,7 +1958,7 @@ if (constituentOfEntities.length > 0) {
     );
 
   if (memberOfSectionElement) {
-    entityViewElement.appendChild(
+    summaryInfoElement.appendChild(
       memberOfSectionElement
     );
   }
@@ -1857,7 +1969,7 @@ if (constituentOfEntities.length > 0) {
   tagsElement.textContent = entity.tags.length > 0 ?
     `Tags: ${entity.tags.join(", ")}` :
     "Tags: none";
-  entityViewElement.appendChild(tagsElement);
+  summaryInfoElement.appendChild(tagsElement);
   
   /*
   Show flags belonging to another entity that officially represent the

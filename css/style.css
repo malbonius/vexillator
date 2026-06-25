@@ -1048,6 +1048,102 @@ body.shell-drawer-open {
 
 
 /*
+  Entity Detail summary with default flag hero.
+
+  The hero is a shortcut to the entity's existing default variant. It keeps the
+  main entity information and the most important flag visible together on wider
+  screens, then stacks cleanly on narrower screens.
+*/
+.entity-detail-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(13rem, 20rem);
+  gap: 1rem;
+  align-items: start;
+  margin-bottom: 1.25rem;
+}
+
+.entity-detail-summary-main {
+  min-width: 0;
+}
+
+.entity-default-variant-hero {
+  padding: 0.75rem;
+  border: 1px solid var(--border-soft, #ddd);
+  border-radius: 0.5rem;
+  background: var(--surface-bg-soft, #fafafa);
+  color: var(--text-main, #222);
+}
+
+.entity-default-variant-heading {
+  margin: 0 0 0.65rem;
+  font-size: 1rem;
+}
+
+.entity-default-variant-zoom-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 130px;
+  padding: 0.75rem;
+  border: 1px solid var(--border-soft, #ddd);
+  border-radius: 0.45rem;
+  background: var(--surface-bg-muted, #f8f8f8);
+  cursor: zoom-in;
+  font: inherit;
+}
+
+.entity-default-variant-zoom-button:hover:not(:disabled) {
+  border-color: var(--accent, #2563eb);
+  background: var(--button-hover-bg, #eeeeee);
+}
+
+.entity-default-variant-zoom-button:focus-visible {
+  outline: 3px solid var(--accent, #2563eb);
+  outline-offset: 3px;
+}
+
+.entity-default-variant-zoom-button:disabled {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.entity-default-variant-image {
+  display: block;
+  width: 100%;
+  height: clamp(120px, 16vw, 180px);
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border: 1px solid var(--border-soft, #ddd);
+}
+
+.entity-default-variant-missing-image {
+  display: block;
+  padding: 2rem 1rem;
+  color: var(--text-subtle, #666);
+  text-align: center;
+}
+
+.entity-default-variant-label {
+  margin: 0.65rem 0 0;
+  color: var(--text-subtle, #666);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 760px) {
+  .entity-detail-summary {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .entity-default-variant-image {
+    height: clamp(120px, 40vw, 170px);
+    max-height: 170px;
+  }
+}
+
+
+/*
   External flags that officially represent the current entity.
 
   These cards are informational and deliberately have no selection controls.
