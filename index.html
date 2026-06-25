@@ -371,15 +371,15 @@
           Start a typing quiz from the current selection.
         </p>
 
-        <details class="mode-utility-section quiz-presets-section">
-          <summary>Quiz Presets</summary>
+        <details class="mode-utility-section presets-section">
+          <summary>Presets</summary>
 
           <p class="panel-note">
-            Load a saved typing-quiz setup.
+            Load a saved selection preset into this typing quiz.
           </p>
 
-          <div id="typingQuizPresetsView">
-            No typing quiz presets loaded.
+          <div id="typingPresetView">
+            No selection presets saved yet.
           </div>
         </details>
 
@@ -411,15 +411,15 @@
           Start a multiple-choice quiz from the current selection.
         </p>
 
-        <details class="mode-utility-section quiz-presets-section">
-          <summary>Quiz Presets</summary>
+        <details class="mode-utility-section presets-section">
+          <summary>Presets</summary>
 
           <p class="panel-note">
-            Load a saved multiple-choice setup.
+            Load a saved selection preset into this multiple-choice quiz.
           </p>
 
-          <div id="multipleChoiceQuizPresetsView">
-            No multiple-choice presets loaded.
+          <div id="multipleChoicePresetView">
+            No selection presets saved yet.
           </div>
         </details>
 
@@ -723,6 +723,41 @@
       </button>
     </div>
 
+    <details class="mode-utility-section presets-section selection-presets-section">
+      <summary>Presets</summary>
+
+      <p class="panel-note">
+        Save the current selection or load a saved selection preset.
+      </p>
+
+      <div class="preset-save-controls">
+        <label for="selectionPresetNameInput">
+          Preset name
+        </label>
+
+        <input
+          id="selectionPresetNameInput"
+          type="text"
+          placeholder="e.g. UK counties practice"
+          autocomplete="off"
+        >
+
+        <button id="saveSelectionPresetButton" type="button">
+          Save current selection
+        </button>
+      </div>
+
+      <p
+        id="selectionPresetStatus"
+        class="preset-status panel-note"
+        aria-live="polite"
+      ></p>
+
+      <div id="selectionPresetsView">
+        No selection presets saved yet.
+      </div>
+    </details>
+
     <div id="currentSelection">
       No selections made.
     </div>
@@ -838,6 +873,7 @@
   <script src="core/randomQuizBuilder.js"></script>
   <script src="core/answerChecker.js"></script>
   <script src="core/statsManager.js"></script>
+  <script src="core/presetManager.js"></script>
 
   <!-- Shared application state. -->
   <script src="js/state/appState.js"></script>
@@ -852,6 +888,7 @@
   <script src="js/ui/statsView.js"></script>
   <script src="js/ui/searchView.js"></script>
   <script src="js/ui/entityDetail.js"></script>
+  <script src="js/ui/presetView.js"></script>
 
   <!-- Main application entry point. -->
   <script src="js/main.js"></script>

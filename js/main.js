@@ -984,10 +984,10 @@ setupBrowseModeButtons();
 setupMultipleChoiceQuiz();
 setupRandomQuizView();
 setupStatsView();
+setupPresetView();
 setupGalleryZoomViewer();
 
 renderStatsView();
-renderQuizPresets();
 
 /*
   Shows whether the data passed validation.
@@ -1039,6 +1039,10 @@ function refreshAfterSelectionChange(options = {}) {
     full available quiz pool.
   */
   updateQuizQuestionCountInputsToMaximum();
+
+  if (typeof renderPresetViews === "function") {
+    renderPresetViews();
+  }
 
   /*
     After changing collection selection, show the gallery so the user can
