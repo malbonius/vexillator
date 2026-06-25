@@ -102,6 +102,25 @@ function startTypingQuiz() {
     return;
   }
 
+  startTypingQuizFromQuestions(questions);
+}
+
+/*
+  Starts a typing quiz from a prepared question list.
+
+  Random Quiz uses this path so it can build a temporary pool without
+  touching Current Selection.
+*/
+function startTypingQuizFromQuestions(questions) {
+  if (!Array.isArray(questions) || questions.length === 0) {
+    const quizViewElement = document.getElementById("typingQuizView");
+
+    quizViewElement.innerHTML =
+      `<p class="empty-message">No quiz questions are available.</p>`;
+
+    return;
+  }
+
   appState.typingQuiz = {
     questions,
     currentQuestionIndex: 0,

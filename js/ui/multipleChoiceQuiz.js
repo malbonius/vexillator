@@ -126,6 +126,28 @@ function startMultipleChoiceQuiz() {
     return;
   }
 
+  startMultipleChoiceQuizFromQuestions(questions);
+}
+
+/*
+  Starts a multiple-choice quiz from a prepared question list.
+
+  Random Quiz uses this path so it can build a temporary pool without
+  touching Current Selection.
+*/
+function startMultipleChoiceQuizFromQuestions(questions) {
+  if (!Array.isArray(questions) || questions.length === 0) {
+    const quizViewElement = document.getElementById("multipleChoiceQuizView");
+
+    quizViewElement.innerHTML = `
+      <p class="empty-message">
+        No quiz questions are available.
+      </p>
+    `;
+
+    return;
+  }
+
   appState.multipleChoiceQuiz = {
     questions,
     currentQuestionIndex: 0,

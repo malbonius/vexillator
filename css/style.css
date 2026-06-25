@@ -2017,6 +2017,144 @@ body.shell-drawer-open {
   background: #eee;
 }
 
+
+/*
+  Random Quiz builder.
+
+  This mode creates a temporary entity/default-variant quiz pool. It must not
+  look like Current Selection, because it deliberately does not alter it.
+*/
+.random-quiz-builder {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.random-quiz-section {
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #fafafa;
+}
+
+.random-quiz-section h3 {
+  margin-top: 0;
+}
+
+.random-quiz-option-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 13rem), 1fr)
+  );
+  gap: 0.45rem 0.65rem;
+  margin-top: 0.75rem;
+}
+
+#randomQuizRegionOptions.random-quiz-option-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.6rem;
+}
+
+.random-quiz-filter-group {
+  min-width: 0;
+  border: 1px solid #ddd;
+  border-radius: 0.45rem;
+  background: #fff;
+}
+
+.random-quiz-filter-group[open] {
+  background: #fdfdfd;
+}
+
+.random-quiz-filter-group-summary {
+  padding: 0.55rem 0.65rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.random-quiz-filter-group-summary:hover {
+  background: #f8f8f8;
+}
+
+.random-quiz-filter-group > .random-quiz-option-grid {
+  margin: 0;
+  padding: 0.65rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.random-quiz-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
+  min-width: 0;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.35rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.random-quiz-checkbox:hover {
+  border-color: #2563eb;
+  background: #f8f8f8;
+}
+
+.random-quiz-checkbox input {
+  flex: 0 0 auto;
+  margin-top: 0.2rem;
+}
+
+.random-quiz-checkbox span {
+  min-width: 0;
+}
+
+.random-quiz-match-summary {
+  margin: 0.25rem 0 0.75rem;
+  font-weight: 700;
+}
+
+.random-quiz-question-controls {
+  max-width: 16rem;
+}
+
+.random-quiz-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.random-quiz-actions button {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  cursor: pointer;
+  font: inherit;
+}
+
+.random-quiz-actions button:hover:not(:disabled) {
+  background: #eeeeee;
+  border-color: #2563eb;
+}
+
+.random-quiz-actions button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+@media (max-width: 500px) {
+  .random-quiz-question-controls {
+    max-width: none;
+  }
+
+  .random-quiz-actions {
+    display: grid;
+  }
+}
+
 /* Quiz controls */
 .quiz-controls {
   display: grid;

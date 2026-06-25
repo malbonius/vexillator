@@ -273,6 +273,14 @@
         <button
           class="mode-tab"
           type="button"
+          data-mode-tab="randomQuiz"
+        >
+          Random Quiz
+        </button>
+
+        <button
+          class="mode-tab"
+          type="button"
           data-mode-tab="stats"
         >
           Stats
@@ -433,6 +441,106 @@
 
         <div id="multipleChoiceQuizView">
           Build a selection, then start a quiz.
+        </div>
+      </div>
+
+      <div class="mode-panel" id="randomQuizModePanel">
+        <h2>Random Quiz</h2>
+
+        <p class="panel-note">
+          Build a temporary quiz pool from the database without changing Current Selection.
+        </p>
+
+        <div class="random-quiz-builder">
+          <section class="random-quiz-section">
+            <h3>Scope / area</h3>
+
+            <p class="panel-note">
+              Leave this empty to include the whole database. Multiple scopes are combined.
+            </p>
+
+            <div
+              id="randomQuizRegionOptions"
+              class="random-quiz-option-grid"
+            ></div>
+          </section>
+
+          <section class="random-quiz-section">
+            <h3>Entity types</h3>
+
+            <p class="panel-note">
+              Leave this empty to include all current entity types. Multiple types are combined.
+            </p>
+
+            <div
+              id="randomQuizTypeOptions"
+              class="random-quiz-option-grid"
+            ></div>
+          </section>
+
+          <section class="random-quiz-section">
+            <h3>Special cases</h3>
+
+            <div class="random-quiz-option-grid">
+              <label class="random-quiz-checkbox">
+                <input
+                  id="randomQuizIncludeDisputedInput"
+                  type="checkbox"
+                >
+                <span>Include disputed entities</span>
+              </label>
+            </div>
+          </section>
+
+          <section class="random-quiz-section random-quiz-start-section">
+            <h3>Start quiz</h3>
+
+            <p
+              id="randomQuizMatchSummary"
+              class="random-quiz-match-summary"
+              aria-live="polite"
+            >
+              Matching quiz questions: 0
+            </p>
+
+            <div class="quiz-controls random-quiz-question-controls">
+              <label for="randomQuizQuestionCountInput">Questions</label>
+
+              <input
+                id="randomQuizQuestionCountInput"
+                type="number"
+                min="1"
+                max="100"
+                value="10"
+              >
+            </div>
+
+            <p class="panel-note">
+              Random Quiz uses a temporary pool and does not change Current Selection.
+            </p>
+
+            <div class="random-quiz-actions">
+              <button id="startRandomTypingQuizButton" type="button">
+                Start Typing Quiz
+              </button>
+
+              <button id="startRandomMultipleChoiceQuizButton" type="button">
+                Start Multiple-Choice Quiz
+              </button>
+
+              <button id="clearRandomQuizFiltersButton" type="button">
+                Clear random quiz filters
+              </button>
+            </div>
+
+            <p
+              id="randomQuizEmptyMessage"
+              class="empty-message"
+              hidden
+            >
+              No flags match these filters. Remove one or more filters.
+            </p>
+          </section>
         </div>
       </div>
 
@@ -727,6 +835,7 @@
   <script src="core/collectionResolver.js"></script>
   <script src="core/workingPoolResolver.js"></script>
   <script src="core/quizGenerator.js"></script>
+  <script src="core/randomQuizBuilder.js"></script>
   <script src="core/answerChecker.js"></script>
   <script src="core/statsManager.js"></script>
 
@@ -739,6 +848,7 @@
   <script src="js/ui/galleryZoom.js"></script>
   <script src="js/ui/typingQuiz.js"></script>
   <script src="js/ui/multipleChoiceQuiz.js"></script>
+  <script src="js/ui/randomQuizView.js"></script>
   <script src="js/ui/statsView.js"></script>
   <script src="js/ui/searchView.js"></script>
   <script src="js/ui/entityDetail.js"></script>

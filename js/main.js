@@ -706,6 +706,7 @@ function updateCurrentModeTitle(modeName) {
     gallery: "Gallery",
     typing: "Typing Quiz",
     multipleChoice: "Multiple-Choice",
+    randomQuiz: "Random Quiz",
     stats: "Stats"
   };
 
@@ -981,6 +982,7 @@ setupSearch();
 setupTypingQuiz();
 setupBrowseModeButtons();
 setupMultipleChoiceQuiz();
+setupRandomQuizView();
 setupStatsView();
 setupGalleryZoomViewer();
 
@@ -1485,6 +1487,7 @@ function startLoadedQuizPreset(preset) {
   - Gallery
   - Typing Quiz
   - Multiple-Choice Quiz
+  - Random Quiz
   - Stats
 */
 function setupModeTabs() {
@@ -1524,6 +1527,7 @@ function showModePanel(modeName) {
     gallery: "galleryModePanel",
     typing: "typingModePanel",
     multipleChoice: "multipleChoiceModePanel",
+    randomQuiz: "randomQuizModePanel",
     stats: "statsModePanel"
   };
 

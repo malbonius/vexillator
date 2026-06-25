@@ -140,6 +140,20 @@ const appState = {
   },
 
   /*
+    Random Quiz builder state.
+
+    The builder creates a temporary entity/default-variant quiz pool.
+    It deliberately does not add matching entities to Current Selection.
+  */
+  randomQuiz: {
+    regionEntityIds: new Set(),
+    typeKeys: new Set(),
+    includeDisputed: false,
+    questionCountTouched: false,
+    lastMaximumQuestionCount: 0
+  },
+
+  /*
   Entity detail state.
 
   activeEntityId identifies the entity currently being viewed.
