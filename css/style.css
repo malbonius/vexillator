@@ -623,6 +623,46 @@ body.shell-drawer-open {
 }
 
 /*
+  Mobile portrait Browse drawer polish.
+
+  The drawer header, close button, Collection/Entities tabs and active scoped
+  filter stay visible while the long browser tree scrolls independently.
+  This is intentionally limited to phone portrait so desktop pinned Browse and
+  wider drawer behaviour remain unchanged.
+*/
+@media (max-width: 600px) and (orientation: portrait) {
+  body.shell-browse-open .browse-panel {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .browse-panel .drawer-header,
+  .browse-panel .browser-mode-tabs,
+  .browse-panel #collectionBrowserFilterContainer,
+  .browse-panel #entityBrowserFilterContainer {
+    flex: 0 0 auto;
+  }
+
+  .browse-panel .drawer-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .browse-panel .browser-mode-tabs {
+    margin-top: 0;
+  }
+
+  .browse-panel #browseView {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding-right: 0.25rem;
+  }
+}
+
+/*
   Allow panels and active mode content to shrink within their grid columns
   instead of forcing the overall layout wider.
 */
