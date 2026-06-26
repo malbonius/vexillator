@@ -8,331 +8,61 @@
   pools can be added later without changing Current Selection semantics.
 */
 
-const RANDOM_QUIZ_REGION_OPTIONS = [
-  {
-    id: "ent_africa",
-    label: "Africa"
-  },
-  {
-    id: "ent_northern_africa",
-    label: "Northern Africa"
-  },
-  {
-    id: "ent_eastern_africa",
-    label: "Eastern Africa"
-  },
-  {
-    id: "ent_middle_africa",
-    label: "Middle Africa"
-  },
-  {
-    id: "ent_southern_africa",
-    label: "Southern Africa"
-  },
-  {
-    id: "ent_western_africa",
-    label: "Western Africa"
-  },
-  {
-    id: "ent_asia",
-    label: "Asia"
-  },
-  {
-    id: "ent_central_asia",
-    label: "Central Asia"
-  },
-  {
-    id: "ent_eastern_asia",
-    label: "Eastern Asia"
-  },
-  {
-    id: "ent_south_eastern_asia",
-    label: "South-eastern Asia"
-  },
-  {
-    id: "ent_southern_asia",
-    label: "Southern Asia"
-  },
-  {
-    id: "ent_western_asia",
-    label: "Western Asia"
-  },
-  {
-    id: "ent_europe",
-    label: "Europe"
-  },
-  {
-    id: "ent_eastern_europe",
-    label: "Eastern Europe"
-  },
-  {
-    id: "ent_northern_europe",
-    label: "Northern Europe"
-  },
-  {
-    id: "ent_southern_europe",
-    label: "Southern Europe"
-  },
-  {
-    id: "ent_western_europe",
-    label: "Western Europe"
-  },
-  {
-    id: "ent_north_america",
-    label: "North America"
-  },
-  {
-    id: "ent_northern_america",
-    label: "Northern America"
-  },
-  {
-    id: "ent_central_america",
-    label: "Central America"
-  },
-  {
-    id: "ent_caribbean",
-    label: "Caribbean"
-  },
-  {
-    id: "ent_south_america",
-    label: "South America"
-  },
-  {
-    id: "ent_oceania",
-    label: "Oceania"
-  },
-  {
-    id: "ent_antarctica",
-    label: "Antarctica"
-  },
-  {
-    id: "ent_austria",
-    label: "Austria"
-  },
-  {
-    id: "ent_france",
-    label: "France"
-  },
-  {
-    id: "ent_germany",
-    label: "Germany"
-  },
-  {
-    id: "ent_italy",
-    label: "Italy"
-  },
-  {
-    id: "ent_spain",
-    label: "Spain"
-  },
-  {
-    id: "ent_united_kingdom",
-    label: "United Kingdom"
-  },
-  {
-    id: "ent_england",
-    label: "England"
-  },
-  {
-    id: "ent_scotland",
-    label: "Scotland"
-  },
-  {
-    id: "ent_wales",
-    label: "Wales"
-  },
-  {
-    id: "ent_japan",
-    label: "Japan"
-  },
-  {
-    id: "ent_canada",
-    label: "Canada"
-  },
-  {
-    id: "ent_united_states",
-    label: "United States"
-  },
-  {
-    id: "ent_venezuela",
-    label: "Venezuela"
-  },
-  {
-    id: "ent_australia",
-    label: "Australia"
-  },
-  {
-    id: "ent_federated_states_of_micronesia",
-    label: "Federated States of Micronesia"
-  },
-  {
-    id: "ent_international_organisations",
-    label: "International organisations"
-  },
-  {
-    id: "ent_united_nations_system",
-    label: "United Nations system and related bodies"
-  },
-  {
-    id: "ent_european_atlantic_organisations",
-    label: "European and Atlantic organisations"
-  },
-  {
-    id: "ent_sporting_organisations",
-    label: "Sporting organisations"
-  },
-  {
-    id: "ent_treaty_systems",
-    label: "Treaty systems"
-  },
-  {
-    id: "ent_international_police_cooperation",
-    label: "International police cooperation"
-  },
-  {
-    id: "ent_kingdom_of_denmark",
-    label: "Kingdom of Denmark"
-  },
-  {
-    id: "ent_kingdom_of_the_netherlands",
-    label: "Kingdom of the Netherlands"
-  }
+const RANDOM_QUIZ_BROAD_GEOGRAPHY_IDS = [
+  "ent_africa",
+  "ent_asia",
+  "ent_europe",
+  "ent_north_america",
+  "ent_south_america",
+  "ent_oceania",
+  "ent_antarctica"
 ];
 
 /*
-  Scope filters are grouped for presentation only.
-
-  They still resolve through the same entity IDs and do not create a new
-  geography, membership or organisation model. Broad geography, detailed
-  datasets and non-geographic entities stay separate so the Random Quiz panel
-  does not become a massive undifferentiated wall of checkboxes.
+  These are stable backbone scope IDs, not dataset-by-dataset additions.
+  Detailed country / subdivision datasets are discovered dynamically from
+  entities that have quizzable descendants.
 */
-const RANDOM_QUIZ_REGION_GROUPS = [
-  {
-    id: "broad_geography",
-    label: "Broad geography",
-    optionIds: [
-      "ent_africa",
-      "ent_asia",
-      "ent_europe",
-      "ent_north_america",
-      "ent_south_america",
-      "ent_oceania",
-      "ent_antarctica"
-    ],
-    openByDefault: true
-  },
-  {
-    id: "african_subregions",
-    label: "African subregions",
-    optionIds: [
-      "ent_northern_africa",
-      "ent_eastern_africa",
-      "ent_middle_africa",
-      "ent_southern_africa",
-      "ent_western_africa"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "asian_subregions",
-    label: "Asian subregions",
-    optionIds: [
-      "ent_central_asia",
-      "ent_eastern_asia",
-      "ent_south_eastern_asia",
-      "ent_southern_asia",
-      "ent_western_asia"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "european_subregions",
-    label: "European subregions",
-    optionIds: [
-      "ent_eastern_europe",
-      "ent_northern_europe",
-      "ent_southern_europe",
-      "ent_western_europe"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "north_america_and_caribbean",
-    label: "North America and Caribbean subregions",
-    optionIds: [
-      "ent_northern_america",
-      "ent_central_america",
-      "ent_caribbean"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "european_detailed_datasets",
-    label: "Detailed European datasets",
-    optionIds: [
-      "ent_austria",
-      "ent_france",
-      "ent_germany",
-      "ent_italy",
-      "ent_spain",
-      "ent_united_kingdom",
-      "ent_england",
-      "ent_scotland",
-      "ent_wales"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "asian_detailed_datasets",
-    label: "Detailed Asian datasets",
-    optionIds: [
-      "ent_japan"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "north_american_detailed_datasets",
-    label: "Detailed North American datasets",
-    optionIds: [
-      "ent_canada",
-      "ent_united_states"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "south_american_detailed_datasets",
-    label: "Detailed South American datasets",
-    optionIds: [
-      "ent_venezuela"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "oceanian_detailed_datasets",
-    label: "Detailed Oceanian datasets",
-    optionIds: [
-      "ent_australia",
-      "ent_federated_states_of_micronesia"
-    ],
-    openByDefault: false
-  },
-  {
-    id: "non_geographic_entities",
-    label: "Non-geographic entities",
-    optionIds: [
-      "ent_international_organisations",
-      "ent_united_nations_system",
-      "ent_european_atlantic_organisations",
-      "ent_sporting_organisations",
-      "ent_treaty_systems",
-      "ent_international_police_cooperation",
-      "ent_kingdom_of_denmark",
-      "ent_kingdom_of_the_netherlands"
-    ],
-    openByDefault: false
-  }
-];
+const RANDOM_QUIZ_SUBREGION_IDS_BY_BROAD_GEOGRAPHY_ID = Object.freeze({
+  ent_africa: Object.freeze([
+    "ent_northern_africa",
+    "ent_eastern_africa",
+    "ent_middle_africa",
+    "ent_southern_africa",
+    "ent_western_africa"
+  ]),
+  ent_asia: Object.freeze([
+    "ent_central_asia",
+    "ent_eastern_asia",
+    "ent_south_eastern_asia",
+    "ent_southern_asia",
+    "ent_western_asia"
+  ]),
+  ent_europe: Object.freeze([
+    "ent_eastern_europe",
+    "ent_northern_europe",
+    "ent_southern_europe",
+    "ent_western_europe"
+  ]),
+  ent_north_america: Object.freeze([
+    "ent_northern_america",
+    "ent_central_america",
+    "ent_caribbean"
+  ])
+});
+
+const RANDOM_QUIZ_DETAILED_DATASET_ADJECTIVES_BY_BROAD_GEOGRAPHY_ID = Object.freeze({
+  ent_africa: "African",
+  ent_asia: "Asian",
+  ent_europe: "European",
+  ent_north_america: "North American",
+  ent_south_america: "South American",
+  ent_oceania: "Oceanian",
+  ent_antarctica: "Antarctic"
+});
+
+
+const randomQuizRegionGroupCacheByIndex = new WeakMap();
 
 const RANDOM_QUIZ_TYPE_OPTIONS = [
   {
@@ -347,7 +77,6 @@ const RANDOM_QUIZ_TYPE_OPTIONS = [
     tagsAny: [
       "territory",
       "dependency",
-      "dependent_territory",
       "overseas"
     ]
   },
@@ -415,32 +144,221 @@ function normaliseRandomQuizFilters(filters = {}) {
 }
 
 function getRandomQuizAvailableRegionOptions(index) {
-  return RANDOM_QUIZ_REGION_OPTIONS.filter(option => {
-    return index.entitiesById[option.id];
+  return getRandomQuizAvailableRegionGroups(index).flatMap(group => {
+    return group.options;
   });
 }
 
 function getRandomQuizAvailableRegionGroups(index) {
-  const availableOptionsById = new Map(
-    getRandomQuizAvailableRegionOptions(index).map(option => {
-      return [option.id, option];
-    })
-  );
+  if (!index || !index.entitiesById) {
+    return [];
+  }
 
-  return RANDOM_QUIZ_REGION_GROUPS
-    .map(group => {
-      return {
-        ...group,
-        options: group.optionIds
-          .map(optionId => {
-            return availableOptionsById.get(optionId);
-          })
-          .filter(Boolean)
-      };
-    })
-    .filter(group => {
-      return group.options.length > 0;
+  const cachedGroups = randomQuizRegionGroupCacheByIndex.get(index);
+
+  if (cachedGroups) {
+    return cachedGroups;
+  }
+
+  const usedOptionIds = new Set();
+  const groups = [];
+
+  const broadOptions = RANDOM_QUIZ_BROAD_GEOGRAPHY_IDS
+    .map(entityId => createRandomQuizRegionOption(entityId, index))
+    .filter(Boolean);
+
+  addRandomQuizRegionGroup(groups, usedOptionIds, {
+    id: "broad_geography",
+    label: "Broad geography",
+    options: broadOptions,
+    openByDefault: true,
+    sortOptions: false
+  });
+
+  broadOptions.forEach(broadOption => {
+    const subregionIds = RANDOM_QUIZ_SUBREGION_IDS_BY_BROAD_GEOGRAPHY_ID[
+      broadOption.id
+    ] || [];
+
+    const subregionOptions = subregionIds
+      .map(entityId => createRandomQuizRegionOption(entityId, index))
+      .filter(Boolean);
+
+    addRandomQuizRegionGroup(groups, usedOptionIds, {
+      id: `subregions_${broadOption.id}`,
+      label: `${broadOption.label} subregions`,
+      options: subregionOptions,
+      openByDefault: false,
+      sortOptions: false
     });
+  });
+
+  broadOptions.forEach(broadOption => {
+    const adjective = RANDOM_QUIZ_DETAILED_DATASET_ADJECTIVES_BY_BROAD_GEOGRAPHY_ID[
+      broadOption.id
+    ] || broadOption.label;
+
+    const detailedOptions = getRandomQuizDetailedGeographicOptions(
+      broadOption.id,
+      index,
+      usedOptionIds
+    );
+
+    addRandomQuizRegionGroup(groups, usedOptionIds, {
+      id: `detailed_${broadOption.id}`,
+      label: `Detailed ${adjective} datasets`,
+      options: detailedOptions,
+      openByDefault: false
+    });
+  });
+
+  addRandomQuizRegionGroup(groups, usedOptionIds, {
+    id: "non_geographic_entities",
+    label: "Non-geographic entities",
+    options: getRandomQuizNonGeographicOptions(index, usedOptionIds),
+    openByDefault: false
+  });
+
+  randomQuizRegionGroupCacheByIndex.set(index, groups);
+
+  return groups;
+}
+
+function addRandomQuizRegionGroup(groups, usedOptionIds, group) {
+  const filteredOptions = group.options
+    .filter(option => {
+      return option && !usedOptionIds.has(option.id);
+    });
+
+  const options = group.sortOptions === false
+    ? filteredOptions
+    : filteredOptions.sort(compareRandomQuizRegionOptions);
+
+  if (options.length === 0) {
+    return;
+  }
+
+  options.forEach(option => {
+    usedOptionIds.add(option.id);
+  });
+
+  groups.push({
+    id: group.id,
+    label: group.label,
+    options,
+    openByDefault: group.openByDefault === true
+  });
+}
+
+function createRandomQuizRegionOption(entityId, index) {
+  const entity = index.entitiesById[entityId];
+
+  if (!entity) {
+    return null;
+  }
+
+  if (!entityHasUsefulRandomQuizScope(entity.id, index)) {
+    return null;
+  }
+
+  return {
+    id: entity.id,
+    label: entity.name || entity.id
+  };
+}
+
+function getRandomQuizDetailedGeographicOptions(
+  broadEntityId,
+  index,
+  usedOptionIds
+) {
+  return Object.values(index.entitiesById)
+    .filter(entity => {
+      return entity && entity.entityType === "geographic";
+    })
+    .filter(entity => {
+      return !usedOptionIds.has(entity.id);
+    })
+    .filter(entity => {
+      return !RANDOM_QUIZ_BROAD_GEOGRAPHY_IDS.includes(entity.id);
+    })
+    .filter(entity => {
+      return entityHasAncestor(entity.id, broadEntityId, index);
+    })
+    .filter(entity => {
+      return !entityHasAnyTag(entity, ["region"]);
+    })
+    .filter(entity => {
+      return entityHasQuizzableSubdivisionDescendant(entity.id, index);
+    })
+    .map(entity => ({
+      id: entity.id,
+      label: entity.name || entity.id
+    }));
+}
+
+function getRandomQuizNonGeographicOptions(index, usedOptionIds) {
+  return Object.values(index.entitiesById)
+    .filter(entity => {
+      return entity && entity.id !== "ent_world";
+    })
+    .filter(entity => {
+      return !usedOptionIds.has(entity.id);
+    })
+    .filter(entity => {
+      return entity.entityType !== "geographic";
+    })
+    .filter(entity => {
+      return entityHasQuizzableDescendant(entity.id, index) ||
+        entityHasAnyTag(entity, ["composite_state"]);
+    })
+    .map(entity => ({
+      id: entity.id,
+      label: entity.name || entity.id
+    }));
+}
+
+function compareRandomQuizRegionOptions(firstOption, secondOption) {
+  return firstOption.label.localeCompare(secondOption.label);
+}
+
+function entityHasUsefulRandomQuizScope(entityId, index) {
+  const entity = index.entitiesById[entityId];
+
+  if (!entity) {
+    return false;
+  }
+
+  return entityHasQuizzableDefaultVariant(entity, index) ||
+    entityHasQuizzableDescendant(entityId, index);
+}
+
+function entityHasQuizzableSubdivisionDescendant(entityId, index) {
+  return Object.values(index.entitiesById).some(candidateEntity => {
+    if (!candidateEntity || candidateEntity.id === entityId) {
+      return false;
+    }
+
+    return entityHasAncestor(candidateEntity.id, entityId, index) &&
+      entityHasQuizzableDefaultVariant(candidateEntity, index) &&
+      entityHasAnyTag(candidateEntity, [
+        "subdivision",
+        "first_level_subdivision",
+        "county",
+        "former_subdivision"
+      ]);
+  });
+}
+
+function entityHasQuizzableDescendant(entityId, index) {
+  return Object.values(index.entitiesById).some(candidateEntity => {
+    if (!candidateEntity || candidateEntity.id === entityId) {
+      return false;
+    }
+
+    return entityHasAncestor(candidateEntity.id, entityId, index) &&
+      entityHasQuizzableDefaultVariant(candidateEntity, index);
+  });
 }
 
 function getRandomQuizAvailableTypeOptions() {
