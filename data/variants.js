@@ -6224,7 +6224,8 @@ const variants = [
     assetId: "ast_monaco_current",
     displayName: "National Flag",
     aliases: [],
-    tags: ["official", "current", "national", "civil"],
+    tags: ["official", "current", "national", "civil", "ambiguous_quiz_visual"],
+	quizVisualGroupId: "red_white_horizontal_bicolour_square",
     startYear: 1881,
     endYear: null
   },
@@ -6618,7 +6619,8 @@ const variants = [
     aliases: [
       "Flag of Solothurn"
     ],
-    tags: ["official", "current"],
+    tags: ["official", "current", "ambiguous_quiz_visual"],
+	quizVisualGroupId: "red_white_horizontal_bicolour_square",
     startYear: null,
     endYear: null
   },
