@@ -5008,6 +5008,245 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_poland_current"
   },
+  /*
+    Polish voivodeships.
+
+    These are direct first-level subdivision children of Poland.
+  */
+  {
+    id: "ent_poland_greater_poland",
+    name: "Greater Poland",
+    aliases: [
+      "Greater Poland Voivodeship",
+      "Wielkopolskie Voivodeship",
+      "Wielkopolskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_greater_poland_current"
+  },
+  {
+    id: "ent_poland_holy_cross",
+    name: "Holy Cross",
+    aliases: [
+      "Holy Cross Voivodeship",
+      "Świętokrzyskie Voivodeship",
+      "Swietokrzyskie Voivodeship",
+      "Świętokrzyskie",
+      "Swietokrzyskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_holy_cross_current"
+  },
+  {
+    id: "ent_poland_kuyavian_pomeranian",
+    name: "Kuyavian-Pomeranian",
+    aliases: [
+      "Kuyavian-Pomeranian Voivodeship",
+      "Kuyavian Pomeranian",
+      "Kujawsko-Pomorskie Voivodeship",
+      "Kujawsko-Pomorskie",
+      "Kujawsko Pomorskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_kuyavian_pomeranian_current"
+  },
+  {
+    id: "ent_poland_lesser_poland",
+    name: "Lesser Poland",
+    aliases: [
+      "Lesser Poland Voivodeship",
+      "Małopolskie Voivodeship",
+      "Malopolskie Voivodeship",
+      "Małopolskie",
+      "Malopolskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_lesser_poland_current"
+  },
+  {
+    id: "ent_poland_lodz",
+    name: "Łódź",
+    aliases: [
+      "Lodz",
+      "Łódź Voivodeship",
+      "Lodz Voivodeship",
+      "Łódzkie Voivodeship",
+      "Lodzkie Voivodeship",
+      "Łódzkie",
+      "Lodzkie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_lodz_current"
+  },
+  {
+    id: "ent_poland_lower_silesian",
+    name: "Lower Silesian",
+    aliases: [
+      "Lower Silesian Voivodeship",
+      "Lower Silesia",
+      "Dolnośląskie Voivodeship",
+      "Dolnoslaskie Voivodeship",
+      "Dolnośląskie",
+      "Dolnoslaskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_lower_silesian_current"
+  },
+  {
+    id: "ent_poland_lublin",
+    name: "Lublin",
+    aliases: [
+      "Lublin Voivodeship",
+      "Lubelskie Voivodeship",
+      "Lubelskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_lublin_current"
+  },
+  {
+    id: "ent_poland_lubusz",
+    name: "Lubusz",
+    aliases: [
+      "Lubusz Voivodeship",
+      "Lubuskie Voivodeship",
+      "Lubuskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_lubusz_current"
+  },
+  {
+    id: "ent_poland_masovian",
+    name: "Masovian",
+    aliases: [
+      "Masovian Voivodeship",
+      "Mazovian Voivodeship",
+      "Masovia",
+      "Mazovia",
+      "Mazowieckie Voivodeship",
+      "Mazowieckie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_masovian_current"
+  },
+  {
+    id: "ent_poland_opole",
+    name: "Opole",
+    aliases: [
+      "Opole Voivodeship",
+      "Opolskie Voivodeship",
+      "Opolskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_opole_current"
+  },
+  {
+    id: "ent_poland_podlaskie",
+    name: "Podlaskie",
+    aliases: [
+      "Podlaskie Voivodeship",
+      "Podlasie Voivodeship",
+      "Podlasie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_podlaskie_current"
+  },
+  {
+    id: "ent_poland_pomeranian",
+    name: "Pomeranian",
+    aliases: [
+      "Pomeranian Voivodeship",
+      "Pomerania",
+      "Pomorskie Voivodeship",
+      "Pomorskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_pomeranian_current"
+  },
+  {
+    id: "ent_poland_silesian",
+    name: "Silesian",
+    aliases: [
+      "Silesian Voivodeship",
+      "Silesia",
+      "Śląskie Voivodeship",
+      "Slaskie Voivodeship",
+      "Śląskie",
+      "Slaskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_silesian_current"
+  },
+  {
+    id: "ent_poland_subcarpathian",
+    name: "Subcarpathian",
+    aliases: [
+      "Subcarpathian Voivodeship",
+      "Podkarpackie Voivodeship",
+      "Podkarpackie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_subcarpathian_current"
+  },
+  {
+    id: "ent_poland_warmian_masurian",
+    name: "Warmian-Masurian",
+    aliases: [
+      "Warmian-Masurian Voivodeship",
+      "Warmian Masurian",
+      "Warmia-Masuria",
+      "Warmia and Masuria",
+      "Warmińsko-Mazurskie Voivodeship",
+      "Warminsko-Mazurskie Voivodeship",
+      "Warmińsko-Mazurskie",
+      "Warminsko-Mazurskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_warmian_masurian_current"
+  },
+  {
+    id: "ent_poland_west_pomeranian",
+    name: "West Pomeranian",
+    aliases: [
+      "West Pomeranian Voivodeship",
+      "Western Pomerania",
+      "Zachodniopomorskie Voivodeship",
+      "Zachodniopomorskie"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_poland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_poland_west_pomeranian_current"
+  },
   {
     id: "ent_portugal",
     name: "Portugal",

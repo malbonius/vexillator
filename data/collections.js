@@ -2922,6 +2922,28 @@ const collections = [
     }
   },
   {
+    id: "col_poland_voivodeships",
+    name: "Polish Voivodeship Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_poland"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_spain_autonomous_communities_and_cities",
     name: "Spanish Autonomous Community and City Flags",
     type: "dynamic",

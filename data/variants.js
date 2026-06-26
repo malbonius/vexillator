@@ -6300,6 +6300,233 @@ const variants = [
     startYear: 1919,
     endYear: null
   },
+  /*
+    Polish voivodeships.
+  */
+  {
+    id: "var_poland_greater_poland_current",
+    entityId: "ent_poland_greater_poland",
+    assetId: "ast_greater_poland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Greater Poland",
+      "Flag of Greater Poland Voivodeship",
+      "Flag of Wielkopolskie Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_holy_cross_current",
+    entityId: "ent_poland_holy_cross",
+    assetId: "ast_holy_cross_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Holy Cross",
+      "Flag of Holy Cross Voivodeship",
+      "Flag of Świętokrzyskie Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_kuyavian_pomeranian_current",
+    entityId: "ent_poland_kuyavian_pomeranian",
+    assetId: "ast_kuyavian_pomeranian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kuyavian-Pomeranian",
+      "Flag of Kuyavian-Pomeranian Voivodeship",
+      "Flag of Kuyavian Pomeranian"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_lesser_poland_current",
+    entityId: "ent_poland_lesser_poland",
+    assetId: "ast_lesser_poland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Lesser Poland",
+      "Flag of Lesser Poland Voivodeship",
+      "Flag of Małopolskie Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_lodz_current",
+    entityId: "ent_poland_lodz",
+    assetId: "ast_lodz_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Łódź",
+      "Flag of Łódź Voivodeship",
+      "Flag of Lodz"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_lower_silesian_current",
+    entityId: "ent_poland_lower_silesian",
+    assetId: "ast_lower_silesian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Lower Silesian",
+      "Flag of Lower Silesian Voivodeship",
+      "Flag of Lower Silesia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_lublin_current",
+    entityId: "ent_poland_lublin",
+    assetId: "ast_lublin_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Lublin",
+      "Flag of Lublin Voivodeship",
+      "Flag of Lubelskie Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_lubusz_current",
+    entityId: "ent_poland_lubusz",
+    assetId: "ast_lubusz_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Lubusz",
+      "Flag of Lubusz Voivodeship",
+      "Flag of Lubuskie Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_masovian_current",
+    entityId: "ent_poland_masovian",
+    assetId: "ast_masovian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Masovian",
+      "Flag of Masovian Voivodeship",
+      "Flag of Mazovian Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_opole_current",
+    entityId: "ent_poland_opole",
+    assetId: "ast_opole_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Opole",
+      "Flag of Opole Voivodeship",
+      "Flag of Opolskie Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_podlaskie_current",
+    entityId: "ent_poland_podlaskie",
+    assetId: "ast_podlaskie_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Podlaskie",
+      "Flag of Podlaskie Voivodeship",
+      "Flag of Podlasie Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_pomeranian_current",
+    entityId: "ent_poland_pomeranian",
+    assetId: "ast_pomeranian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Pomeranian",
+      "Flag of Pomeranian Voivodeship",
+      "Flag of Pomerania"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_silesian_current",
+    entityId: "ent_poland_silesian",
+    assetId: "ast_silesian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Silesian",
+      "Flag of Silesian Voivodeship",
+      "Flag of Silesia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_subcarpathian_current",
+    entityId: "ent_poland_subcarpathian",
+    assetId: "ast_subcarpathian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Subcarpathian",
+      "Flag of Subcarpathian Voivodeship",
+      "Flag of Podkarpackie Voivodeship"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_warmian_masurian_current",
+    entityId: "ent_poland_warmian_masurian",
+    assetId: "ast_warmian_masurian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Warmian-Masurian",
+      "Flag of Warmian-Masurian Voivodeship",
+      "Flag of Warmian Masurian"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_poland_west_pomeranian_current",
+    entityId: "ent_poland_west_pomeranian",
+    assetId: "ast_west_pomeranian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of West Pomeranian",
+      "Flag of West Pomeranian Voivodeship",
+      "Flag of Western Pomerania"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_portugal_current",
     entityId: "ent_portugal",

@@ -351,6 +351,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_poland",
+    name: "Poland",
+    parentGroupIds: ["grp_eastern_europe"],
+    collectionIds: [
+      "col_poland_voivodeships"
+    ]
+  },
+  {
     id: "grp_northern_europe",
     name: "Northern Europe",
     parentGroupIds: ["grp_europe"],
