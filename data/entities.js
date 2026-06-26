@@ -5356,6 +5356,122 @@ const entities = [
     defaultVariantId: "var_netherlands_current"
   },
   /*
+    Dutch provinces.
+
+    These are direct first-level subdivision children of the European
+    Netherlands. The Caribbean Netherlands remains geographically under the
+    Caribbean and is linked politically through administration.
+  */
+  {
+    id: "ent_netherlands_drenthe",
+    name: "Drenthe",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_drenthe_current"
+  },
+  {
+    id: "ent_netherlands_flevoland",
+    name: "Flevoland",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_flevoland_current"
+  },
+  {
+    id: "ent_netherlands_friesland",
+    name: "Friesland",
+    aliases: ["Fryslân", "Fryslan"],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_friesland_current"
+  },
+  {
+    id: "ent_netherlands_gelderland",
+    name: "Gelderland",
+    aliases: ["Guelders"],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_gelderland_current"
+  },
+  {
+    id: "ent_netherlands_groningen",
+    name: "Groningen",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_groningen_current"
+  },
+  {
+    id: "ent_netherlands_limburg",
+    name: "Limburg",
+    aliases: ["Limburg (Netherlands)", "Dutch Limburg"],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_limburg_current"
+  },
+  {
+    id: "ent_netherlands_north_brabant",
+    name: "North Brabant",
+    aliases: ["Noord-Brabant", "Noord Brabant"],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_north_brabant_current"
+  },
+  {
+    id: "ent_netherlands_north_holland",
+    name: "North Holland",
+    aliases: ["Noord-Holland", "Noord Holland"],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_north_holland_current"
+  },
+  {
+    id: "ent_netherlands_overijssel",
+    name: "Overijssel",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_overijssel_current"
+  },
+  {
+    id: "ent_netherlands_south_holland",
+    name: "South Holland",
+    aliases: ["Zuid-Holland", "Zuid Holland"],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_south_holland_current"
+  },
+  {
+    id: "ent_netherlands_utrecht",
+    name: "Utrecht",
+    aliases: ["Province of Utrecht"],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_utrecht_current"
+  },
+  {
+    id: "ent_netherlands_zeeland",
+    name: "Zeeland",
+    aliases: ["Zeeland Province"],
+    entityType: "geographic",
+    parentIds: ["ent_netherlands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_netherlands_zeeland_current"
+  },
+
+  /*
     Spain and its autonomous communities and cities.
   */
   {

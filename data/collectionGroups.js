@@ -416,6 +416,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_netherlands",
+    name: "Netherlands",
+    parentGroupIds: ["grp_western_europe"],
+    collectionIds: [
+      "col_netherlands_provinces"
+    ]
+  },
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],

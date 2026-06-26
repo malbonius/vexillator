@@ -3991,6 +3991,130 @@ const variants = [
     endYear: null
   },
   /*
+    Dutch provinces.
+  */
+  {
+    id: "var_netherlands_drenthe_current",
+    entityId: "ent_netherlands_drenthe",
+    assetId: "ast_drenthe_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Drenthe"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_flevoland_current",
+    entityId: "ent_netherlands_flevoland",
+    assetId: "ast_flevoland_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Flevoland"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_friesland_current",
+    entityId: "ent_netherlands_friesland",
+    assetId: "ast_friesland_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Friesland", "Flag of Fryslân"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_gelderland_current",
+    entityId: "ent_netherlands_gelderland",
+    assetId: "ast_gelderland_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Gelderland"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_groningen_current",
+    entityId: "ent_netherlands_groningen",
+    assetId: "ast_groningen_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Groningen"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_limburg_current",
+    entityId: "ent_netherlands_limburg",
+    assetId: "ast_limburg_netherlands_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Limburg", "Flag of Dutch Limburg"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_north_brabant_current",
+    entityId: "ent_netherlands_north_brabant",
+    assetId: "ast_north_brabant_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of North Brabant", "Flag of Noord-Brabant"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_north_holland_current",
+    entityId: "ent_netherlands_north_holland",
+    assetId: "ast_north_holland_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of North Holland", "Flag of Noord-Holland"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_overijssel_current",
+    entityId: "ent_netherlands_overijssel",
+    assetId: "ast_overijssel_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Overijssel"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_south_holland_current",
+    entityId: "ent_netherlands_south_holland",
+    assetId: "ast_south_holland_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of South Holland", "Flag of Zuid-Holland"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_utrecht_current",
+    entityId: "ent_netherlands_utrecht",
+    assetId: "ast_utrecht_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Utrecht"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_netherlands_zeeland_current",
+    entityId: "ent_netherlands_zeeland",
+    assetId: "ast_zeeland_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Zeeland"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
     Asia and transcontinental European edge cases.
   */
   {
