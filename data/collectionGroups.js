@@ -424,6 +424,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_switzerland",
+    name: "Switzerland",
+    parentGroupIds: ["grp_western_europe"],
+    collectionIds: [
+      "col_switzerland_cantons"
+    ]
+  },
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],

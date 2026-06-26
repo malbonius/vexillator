@@ -6400,6 +6400,325 @@ const variants = [
     startYear: 1889,
     endYear: null
   },
+  /*
+    Swiss cantons.
+  */
+  {
+    id: "var_switzerland_aargau_current",
+    entityId: "ent_switzerland_aargau",
+    assetId: "ast_aargau_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Aargau"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_appenzell_ausserrhoden_current",
+    entityId: "ent_switzerland_appenzell_ausserrhoden",
+    assetId: "ast_appenzell_ausserrhoden_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Appenzell Ausserrhoden"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_appenzell_innerrhoden_current",
+    entityId: "ent_switzerland_appenzell_innerrhoden",
+    assetId: "ast_appenzell_innerrhoden_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Appenzell Innerrhoden"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_basel_landschaft_current",
+    entityId: "ent_switzerland_basel_landschaft",
+    assetId: "ast_basel_landschaft_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Basel-Landschaft"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_basel_stadt_current",
+    entityId: "ent_switzerland_basel_stadt",
+    assetId: "ast_basel_stadt_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Basel-Stadt"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_bern_current",
+    entityId: "ent_switzerland_bern",
+    assetId: "ast_bern_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Bern",
+      "Flag of Berne"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_fribourg_current",
+    entityId: "ent_switzerland_fribourg",
+    assetId: "ast_fribourg_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Fribourg"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_geneva_current",
+    entityId: "ent_switzerland_geneva",
+    assetId: "ast_geneva_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Geneva"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_glarus_current",
+    entityId: "ent_switzerland_glarus",
+    assetId: "ast_glarus_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Glarus"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_grisons_current",
+    entityId: "ent_switzerland_grisons",
+    assetId: "ast_grisons_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Grisons",
+      "Flag of Graubünden"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_jura_current",
+    entityId: "ent_switzerland_jura",
+    assetId: "ast_jura_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Jura"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_lucerne_current",
+    entityId: "ent_switzerland_lucerne",
+    assetId: "ast_lucerne_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Lucerne"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_neuchatel_current",
+    entityId: "ent_switzerland_neuchatel",
+    assetId: "ast_neuchatel_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Neuchâtel",
+      "Flag of Neuchatel"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_nidwalden_current",
+    entityId: "ent_switzerland_nidwalden",
+    assetId: "ast_nidwalden_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Nidwalden"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_obwalden_current",
+    entityId: "ent_switzerland_obwalden",
+    assetId: "ast_obwalden_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Obwalden"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_schaffhausen_current",
+    entityId: "ent_switzerland_schaffhausen",
+    assetId: "ast_schaffhausen_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Schaffhausen"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_schwyz_current",
+    entityId: "ent_switzerland_schwyz",
+    assetId: "ast_schwyz_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Schwyz"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_solothurn_current",
+    entityId: "ent_switzerland_solothurn",
+    assetId: "ast_solothurn_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Solothurn"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_st_gallen_current",
+    entityId: "ent_switzerland_st_gallen",
+    assetId: "ast_st_gallen_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of St. Gallen"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_thurgau_current",
+    entityId: "ent_switzerland_thurgau",
+    assetId: "ast_thurgau_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Thurgau"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_ticino_current",
+    entityId: "ent_switzerland_ticino",
+    assetId: "ast_ticino_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Ticino"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_uri_current",
+    entityId: "ent_switzerland_uri",
+    assetId: "ast_uri_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Uri"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_valais_current",
+    entityId: "ent_switzerland_valais",
+    assetId: "ast_valais_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Valais"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_vaud_current",
+    entityId: "ent_switzerland_vaud",
+    assetId: "ast_vaud_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Vaud"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_zug_current",
+    entityId: "ent_switzerland_zug",
+    assetId: "ast_zug_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Zug"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_switzerland_zurich_current",
+    entityId: "ent_switzerland_zurich",
+    assetId: "ast_zurich_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Zürich",
+      "Flag of Zurich"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_transnistria_current_obverse",
     entityId: "ent_transnistria",

@@ -2900,6 +2900,28 @@ const collections = [
     }
   },
   {
+    id: "col_switzerland_cantons",
+    name: "Swiss Cantonal Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_switzerland"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_spain_autonomous_communities_and_cities",
     name: "Spanish Autonomous Community and City Flags",
     type: "dynamic",

@@ -5108,6 +5108,326 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_switzerland_current"
   },
+  /*
+    Swiss cantons.
+
+    These are direct first-level subdivision children of Switzerland.
+  */
+  {
+    id: "ent_switzerland_aargau",
+    name: "Aargau",
+    aliases: [
+      "Canton of Aargau"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_aargau_current"
+  },
+  {
+    id: "ent_switzerland_appenzell_ausserrhoden",
+    name: "Appenzell Ausserrhoden",
+    aliases: [
+      "Canton of Appenzell Ausserrhoden",
+      "Appenzell Outer Rhodes"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_appenzell_ausserrhoden_current"
+  },
+  {
+    id: "ent_switzerland_appenzell_innerrhoden",
+    name: "Appenzell Innerrhoden",
+    aliases: [
+      "Canton of Appenzell Innerrhoden",
+      "Appenzell Inner Rhodes"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_appenzell_innerrhoden_current"
+  },
+  {
+    id: "ent_switzerland_basel_landschaft",
+    name: "Basel-Landschaft",
+    aliases: [
+      "Canton of Basel-Landschaft",
+      "Basel-Country",
+      "Basel Landschaft"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_basel_landschaft_current"
+  },
+  {
+    id: "ent_switzerland_basel_stadt",
+    name: "Basel-Stadt",
+    aliases: [
+      "Canton of Basel-Stadt",
+      "Basel-City",
+      "Basel Stadt"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_basel_stadt_current"
+  },
+  {
+    id: "ent_switzerland_bern",
+    name: "Bern",
+    aliases: [
+      "Berne",
+      "Canton of Bern",
+      "Canton of Berne"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_bern_current"
+  },
+  {
+    id: "ent_switzerland_fribourg",
+    name: "Fribourg",
+    aliases: [
+      "Freiburg",
+      "Canton of Fribourg",
+      "Canton of Freiburg"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_fribourg_current"
+  },
+  {
+    id: "ent_switzerland_geneva",
+    name: "Geneva",
+    aliases: [
+      "Genève",
+      "Geneve",
+      "Canton of Geneva"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_geneva_current"
+  },
+  {
+    id: "ent_switzerland_glarus",
+    name: "Glarus",
+    aliases: [
+      "Canton of Glarus"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_glarus_current"
+  },
+  {
+    id: "ent_switzerland_grisons",
+    name: "Grisons",
+    aliases: [
+      "Graubünden",
+      "Graubunden",
+      "Grigioni",
+      "Grischun",
+      "Canton of Grisons"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_grisons_current"
+  },
+  {
+    id: "ent_switzerland_jura",
+    name: "Jura",
+    aliases: [
+      "Canton of Jura"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_jura_current"
+  },
+  {
+    id: "ent_switzerland_lucerne",
+    name: "Lucerne",
+    aliases: [
+      "Luzern",
+      "Canton of Lucerne",
+      "Canton of Luzern"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_lucerne_current"
+  },
+  {
+    id: "ent_switzerland_neuchatel",
+    name: "Neuchâtel",
+    aliases: [
+      "Neuchatel",
+      "Canton of Neuchâtel",
+      "Canton of Neuchatel"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_neuchatel_current"
+  },
+  {
+    id: "ent_switzerland_nidwalden",
+    name: "Nidwalden",
+    aliases: [
+      "Canton of Nidwalden"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_nidwalden_current"
+  },
+  {
+    id: "ent_switzerland_obwalden",
+    name: "Obwalden",
+    aliases: [
+      "Canton of Obwalden"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_obwalden_current"
+  },
+  {
+    id: "ent_switzerland_schaffhausen",
+    name: "Schaffhausen",
+    aliases: [
+      "Canton of Schaffhausen"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_schaffhausen_current"
+  },
+  {
+    id: "ent_switzerland_schwyz",
+    name: "Schwyz",
+    aliases: [
+      "Canton of Schwyz"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_schwyz_current"
+  },
+  {
+    id: "ent_switzerland_solothurn",
+    name: "Solothurn",
+    aliases: [
+      "Soleure",
+      "Canton of Solothurn"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_solothurn_current"
+  },
+  {
+    id: "ent_switzerland_st_gallen",
+    name: "St. Gallen",
+    aliases: [
+      "Saint Gallen",
+      "St Gallen",
+      "Sankt Gallen",
+      "Canton of St. Gallen"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_st_gallen_current"
+  },
+  {
+    id: "ent_switzerland_thurgau",
+    name: "Thurgau",
+    aliases: [
+      "Canton of Thurgau"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_thurgau_current"
+  },
+  {
+    id: "ent_switzerland_ticino",
+    name: "Ticino",
+    aliases: [
+      "Tessin",
+      "Canton of Ticino"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_ticino_current"
+  },
+  {
+    id: "ent_switzerland_uri",
+    name: "Uri",
+    aliases: [
+      "Canton of Uri"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_uri_current"
+  },
+  {
+    id: "ent_switzerland_valais",
+    name: "Valais",
+    aliases: [
+      "Wallis",
+      "Canton of Valais",
+      "Canton of Wallis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_valais_current"
+  },
+  {
+    id: "ent_switzerland_vaud",
+    name: "Vaud",
+    aliases: [
+      "Canton of Vaud"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_vaud_current"
+  },
+  {
+    id: "ent_switzerland_zug",
+    name: "Zug",
+    aliases: [
+      "Canton of Zug"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_zug_current"
+  },
+  {
+    id: "ent_switzerland_zurich",
+    name: "Zürich",
+    aliases: [
+      "Zurich",
+      "Canton of Zürich",
+      "Canton of Zurich"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_switzerland"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_switzerland_zurich_current"
+  },
   {
     id: "ent_transnistria",
     name: "Transnistria",
