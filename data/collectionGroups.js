@@ -400,6 +400,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_latvia",
+    name: "Latvia",
+    parentGroupIds: ["grp_northern_europe"],
+    collectionIds: [
+      "col_latvia_state_cities"
+    ]
+  },
+  {
     id: "grp_united_kingdom",
     name: "United Kingdom",
     parentGroupIds: ["grp_northern_europe"],

@@ -3133,6 +3133,29 @@ const collections = [
     }
   },
   {
+    id: "col_latvia_state_cities",
+    name: "Latvian State City Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_latvia"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_germany_lander",
     name: "German Länder Flags",
     type: "dynamic",

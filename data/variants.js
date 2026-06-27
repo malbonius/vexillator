@@ -7016,6 +7016,89 @@ const variants = [
     startYear: 1990,
     endYear: null
   },
+,
+  {
+    id: "var_latvia_daugavpils_current",
+    entityId: "ent_latvia_daugavpils",
+    assetId: "ast_daugavpils_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Daugavpils"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_latvia_jelgava_current",
+    entityId: "ent_latvia_jelgava",
+    assetId: "ast_jelgava_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Jelgava"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_latvia_jurmala_current",
+    entityId: "ent_latvia_jurmala",
+    assetId: "ast_jurmala_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Jūrmala",
+      "Flag of Jurmala"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_latvia_liepaja_current",
+    entityId: "ent_latvia_liepaja",
+    assetId: "ast_liepaja_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Liepāja",
+      "Flag of Liepaja"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_latvia_rezekne_current",
+    entityId: "ent_latvia_rezekne",
+    assetId: "ast_rezekne_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Rēzekne",
+      "Flag of Rezekne"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_latvia_riga_current",
+    entityId: "ent_latvia_riga",
+    assetId: "ast_riga_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Riga",
+      "Flag of Rīga"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_latvia_ventspils_current",
+    entityId: "ent_latvia_ventspils",
+    assetId: "ast_ventspils_current",
+    displayName: "Official Flag",
+    aliases: ["Flag of Ventspils"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_liechtenstein_current",
     entityId: "ent_liechtenstein",

@@ -5686,6 +5686,103 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_latvia_current"
   },
+,
+  {
+    id: "ent_latvia_daugavpils",
+    name: "Daugavpils",
+    aliases: [
+      "Daugavpils State City",
+      "Daugavpils valstspilsēta"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_latvia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_latvia_daugavpils_current"
+  },
+  {
+    id: "ent_latvia_jelgava",
+    name: "Jelgava",
+    aliases: [
+      "Jelgava State City",
+      "Jelgava valstspilsēta"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_latvia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_latvia_jelgava_current"
+  },
+  {
+    id: "ent_latvia_jurmala",
+    name: "Jūrmala",
+    aliases: [
+      "Jurmala",
+      "Jūrmala State City",
+      "Jurmala State City",
+      "Jūrmalas valstspilsēta",
+      "Jurmala valstspilsēta"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_latvia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_latvia_jurmala_current"
+  },
+  {
+    id: "ent_latvia_liepaja",
+    name: "Liepāja",
+    aliases: [
+      "Liepaja",
+      "Liepāja State City",
+      "Liepaja State City",
+      "Liepājas valstspilsēta",
+      "Liepajas valstspilsēta"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_latvia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_latvia_liepaja_current"
+  },
+  {
+    id: "ent_latvia_rezekne",
+    name: "Rēzekne",
+    aliases: [
+      "Rezekne",
+      "Rēzekne State City",
+      "Rezekne State City",
+      "Rēzeknes valstspilsēta",
+      "Rezeknes valstspilsēta"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_latvia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_latvia_rezekne_current"
+  },
+  {
+    id: "ent_latvia_riga",
+    name: "Riga",
+    aliases: [
+      "Rīga",
+      "Riga State City",
+      "Rīga State City",
+      "Rīgas valstspilsēta",
+      "Rigas valstspilsēta"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_latvia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_latvia_riga_current"
+  },
+  {
+    id: "ent_latvia_ventspils",
+    name: "Ventspils",
+    aliases: [
+      "Ventspils State City",
+      "Ventspils valstspilsēta"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_latvia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_latvia_ventspils_current"
+  },
   {
     id: "ent_liechtenstein",
     name: "Liechtenstein",
