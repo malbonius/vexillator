@@ -557,6 +557,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/denmark/regioner/capital_region_of_denmark_current.svg"
   },
   {
+    id: "ast_capital_region_of_denmark_current_text_removed",
+    path: "assets/flags/geography/europe/northern_europe/denmark/regioner/capital_region_of_denmark_current_text_removed.svg"
+  },
+  {
     id: "ast_carabobo_current",
     path: "assets/flags/geography/south_america/venezuela/region/central_region/carabobo_current.svg"
   },
@@ -759,6 +763,10 @@ const assets = [
   {
     id: "ast_czechia_current",
     path: "assets/flags/geography/europe/eastern_europe/czechia/national/czechia_current.svg"
+  },
+  {
+    id: "ast_daugavpils_current",
+    path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/daugavpils_current.svg"
   },
   {
     id: "ast_delaware",
@@ -1473,6 +1481,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/estonia/counties/jarva_current.svg"
   },
   {
+    id: "ast_jelgava_current",
+    path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/jelgava_current.svg"
+  },
+  {
     id: "ast_jersey_current",
     path: "assets/flags/geography/europe/northern_europe/channel_islands/jersey/national/jersey_current.svg"
   },
@@ -1495,6 +1507,10 @@ const assets = [
   {
     id: "ast_jura_current",
     path: "assets/flags/geography/europe/western_europe/switzerland/cantons/jura_current.svg"
+  },
+  {
+    id: "ast_jurmala_current",
+    path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/jurmala_current.svg"
   },
   {
     id: "ast_kagawa_current",
@@ -1679,6 +1695,10 @@ const assets = [
   {
     id: "ast_liege_current",
     path: "assets/flags/geography/europe/western_europe/belgium/regions/wallonia/liege_current.svg"
+  },
+  {
+    id: "ast_liepaja_current",
+    path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/liepaja_current.svg"
   },
   {
     id: "ast_liguria_current",
@@ -2565,6 +2585,10 @@ const assets = [
     path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/non_sovereign/reunion/reunion_unofficial.svg"
   },
   {
+    id: "ast_rezekne_current",
+    path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/rezekne_current.svg"
+  },
+  {
     id: "ast_rhineland_palatinate_current",
     path: "assets/flags/geography/europe/western_europe/germany/lander/rhineland_palatinate_current.svg"
   },
@@ -2575,6 +2599,10 @@ const assets = [
   {
     id: "ast_rhone_alpes_current",
     path: "assets/flags/geography/europe/western_europe/france/regions/pre-2016/rhone_alpes/rhone_alpes_current.svg"
+  },
+  {
+    id: "ast_riga_current",
+    path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/riga_current.svg"
   },
   {
     id: "ast_romania_current",
@@ -2973,6 +3001,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/denmark/regioner/syddanmark_current.svg"
   },
   {
+    id: "ast_syddanmark_current_text_removed",
+    path: "assets/flags/geography/europe/northern_europe/denmark/regioner/syddanmark_current_text_removed.svg"
+  },
+  {
     id: "ast_syria_current",
     path: "assets/flags/geography/asia/western_asia/syria/national/syria_current.svg"
   },
@@ -3263,6 +3295,10 @@ const assets = [
   {
     id: "ast_venezuela_state_text_removed",
     path: "assets/flags/geography/south_america/venezuela/national/venezuela_state_text_removed.svg"
+  },
+  {
+    id: "ast_ventspils_current",
+    path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/ventspils_current.svg"
   },
   {
     id: "ast_vermont",
