@@ -3179,6 +3179,32 @@ const collections = [
   },
 
   {
+    id: "col_norway_counties",
+    name: "Norwegian County Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_norway"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "county"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_sweden_counties",
     name: "Swedish County Flags",
     type: "dynamic",

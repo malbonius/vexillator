@@ -6039,6 +6039,190 @@ const entities = [
     defaultVariantId: "var_norway_current"
   },
   {
+    id: "ent_norway_agder_county",
+    name: "Agder County",
+    aliases: [
+      "Agder",
+      "Agder fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_agder_county_current"
+  },
+  {
+    id: "ent_norway_akershus_county",
+    name: "Akershus County",
+    aliases: [
+      "Akershus",
+      "Akershus fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_akershus_county_current"
+  },
+  {
+    id: "ent_norway_buskerud_county",
+    name: "Buskerud County",
+    aliases: [
+      "Buskerud",
+      "Buskerud fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_buskerud_county_current"
+  },
+  {
+    id: "ent_norway_finnmark_county",
+    name: "Finnmark County",
+    aliases: [
+      "Finnmark",
+      "Finnmark fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_finnmark_county_current"
+  },
+  {
+    id: "ent_norway_innlandet_county",
+    name: "Innlandet County",
+    aliases: [
+      "Innlandet",
+      "Innlandet fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_innlandet_county_current"
+  },
+  {
+    id: "ent_norway_more_og_romsdal_county",
+    name: "Møre og Romsdal County",
+    aliases: [
+      "Møre og Romsdal",
+      "Møre og Romsdal fylke",
+      "More og Romsdal"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_more_og_romsdal_county_current"
+  },
+  {
+    id: "ent_norway_nordland_county",
+    name: "Nordland County",
+    aliases: [
+      "Nordland",
+      "Nordland fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_nordland_county_current"
+  },
+  {
+    id: "ent_norway_oslo_county",
+    name: "Oslo County",
+    aliases: [
+      "Oslo",
+      "Oslo fylke",
+      "Oslo kommune"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_oslo_county_current"
+  },
+  {
+    id: "ent_norway_ostfold_county",
+    name: "Østfold County",
+    aliases: [
+      "Østfold",
+      "Østfold fylke",
+      "Ostfold"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_ostfold_county_current"
+  },
+  {
+    id: "ent_norway_rogaland_county",
+    name: "Rogaland County",
+    aliases: [
+      "Rogaland",
+      "Rogaland fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_rogaland_county_current"
+  },
+  {
+    id: "ent_norway_telemark_county",
+    name: "Telemark County",
+    aliases: [
+      "Telemark",
+      "Telemark fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_telemark_county_current"
+  },
+  {
+    id: "ent_norway_troms_county",
+    name: "Troms County",
+    aliases: [
+      "Troms",
+      "Troms fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_troms_county_current"
+  },
+  {
+    id: "ent_norway_trondelag_county",
+    name: "Trøndelag County",
+    aliases: [
+      "Trøndelag",
+      "Trøndelag fylke",
+      "Trondelag"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_trondelag_county_current"
+  },
+  {
+    id: "ent_norway_vestfold_county",
+    name: "Vestfold County",
+    aliases: [
+      "Vestfold",
+      "Vestfold fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_vestfold_county_current"
+  },
+  {
+    id: "ent_norway_vestland_county",
+    name: "Vestland County",
+    aliases: [
+      "Vestland",
+      "Vestland fylke"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_norway"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_norway_vestland_county_current"
+  },
+  {
     id: "ent_poland",
     name: "Poland",
     aliases: [

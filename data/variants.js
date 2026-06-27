@@ -7382,6 +7382,202 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_norway_agder_county_current",
+    entityId: "ent_norway_agder_county",
+    assetId: "ast_agder_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Agder County",
+      "Flag of Agder fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_akershus_county_current",
+    entityId: "ent_norway_akershus_county",
+    assetId: "ast_akershus_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Akershus County",
+      "Flag of Akershus fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_buskerud_county_current",
+    entityId: "ent_norway_buskerud_county",
+    assetId: "ast_buskerud_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Buskerud County",
+      "Flag of Buskerud fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_finnmark_county_current",
+    entityId: "ent_norway_finnmark_county",
+    assetId: "ast_finnmark_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Finnmark County",
+      "Flag of Finnmark fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_innlandet_county_current",
+    entityId: "ent_norway_innlandet_county",
+    assetId: "ast_innlandet_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Innlandet County",
+      "Flag of Innlandet fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_more_og_romsdal_county_current",
+    entityId: "ent_norway_more_og_romsdal_county",
+    assetId: "ast_more_og_romsdal_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Møre og Romsdal County",
+      "Flag of Møre og Romsdal fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_nordland_county_current",
+    entityId: "ent_norway_nordland_county",
+    assetId: "ast_nordland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Nordland County",
+      "Flag of Nordland fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_oslo_county_current",
+    entityId: "ent_norway_oslo_county",
+    assetId: "ast_oslo_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Oslo County",
+      "Flag of Oslo fylke",
+      "Flag of Oslo kommune"
+    ],
+    tags: ["official", "current", "non_quizzable"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_ostfold_county_current",
+    entityId: "ent_norway_ostfold_county",
+    assetId: "ast_ostfold_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Østfold County",
+      "Flag of Østfold fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_rogaland_county_current",
+    entityId: "ent_norway_rogaland_county",
+    assetId: "ast_rogaland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Rogaland County",
+      "Flag of Rogaland fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_telemark_county_current",
+    entityId: "ent_norway_telemark_county",
+    assetId: "ast_telemark_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Telemark County",
+      "Flag of Telemark fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_troms_county_current",
+    entityId: "ent_norway_troms_county",
+    assetId: "ast_troms_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Troms County",
+      "Flag of Troms fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_trondelag_county_current",
+    entityId: "ent_norway_trondelag_county",
+    assetId: "ast_trondelag_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Trøndelag County",
+      "Flag of Trøndelag fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_vestfold_county_current",
+    entityId: "ent_norway_vestfold_county",
+    assetId: "ast_vestfold_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Vestfold County",
+      "Flag of Vestfold fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_norway_vestland_county_current",
+    entityId: "ent_norway_vestland_county",
+    assetId: "ast_vestland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Vestland County",
+      "Flag of Vestland fylke"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_poland_current",
     entityId: "ent_poland",
     assetId: "ast_poland_current",
