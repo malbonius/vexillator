@@ -5525,6 +5525,219 @@ const variants = [
     startYear: 1993,
     endYear: null
   },
+  /*
+    Czech regions.
+  */
+  {
+    id: "var_czechia_central_bohemian_current",
+    entityId: "ent_czechia_central_bohemian",
+    assetId: "ast_central_bohemian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Central Bohemian",
+      "Flag of Central Bohemian Region",
+      "Flag of Středočeský Region",
+      "Flag of Stredocesky Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_hradec_kralove_current",
+    entityId: "ent_czechia_hradec_kralove",
+    assetId: "ast_hradec_kralove_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Hradec Králové",
+      "Flag of Hradec Kralove",
+      "Flag of Hradec Králové Region",
+      "Flag of Hradec Kralove Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_karlovy_vary_current",
+    entityId: "ent_czechia_karlovy_vary",
+    assetId: "ast_karlovy_vary_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Karlovy Vary",
+      "Flag of Karlovy Vary Region",
+      "Flag of Carlsbad Region",
+      "Flag of Karlovarský Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_liberec_current",
+    entityId: "ent_czechia_liberec",
+    assetId: "ast_liberec_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Liberec",
+      "Flag of Liberec Region",
+      "Flag of Liberecký Region",
+      "Flag of Liberecky Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_moravian_silesian_current",
+    entityId: "ent_czechia_moravian_silesian",
+    assetId: "ast_moravian_silesian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Moravian-Silesian",
+      "Flag of Moravian Silesian",
+      "Flag of Moravian-Silesian Region",
+      "Flag of Moravian Silesian Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_olomouc_current",
+    entityId: "ent_czechia_olomouc",
+    assetId: "ast_olomouc_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Olomouc",
+      "Flag of Olomouc Region",
+      "Flag of Olomoucký Region",
+      "Flag of Olomoucky Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_pardubice_current",
+    entityId: "ent_czechia_pardubice",
+    assetId: "ast_pardubice_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Pardubice",
+      "Flag of Pardubice Region",
+      "Flag of Pardubický Region",
+      "Flag of Pardubicky Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_plzen_current",
+    entityId: "ent_czechia_plzen",
+    assetId: "ast_plzen_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Plzeň",
+      "Flag of Plzen",
+      "Flag of Pilsen",
+      "Flag of Plzeň Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_prague_current",
+    entityId: "ent_czechia_prague",
+    assetId: "ast_prague_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Prague",
+      "Flag of Capital City of Prague",
+      "Flag of Prague Region",
+      "Flag of Praha"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_south_bohemian_current",
+    entityId: "ent_czechia_south_bohemian",
+    assetId: "ast_south_bohemian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of South Bohemian",
+      "Flag of South Bohemian Region",
+      "Flag of South Bohemia",
+      "Flag of Jihočeský Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_south_moravian_current",
+    entityId: "ent_czechia_south_moravian",
+    assetId: "ast_south_moravian_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of South Moravian",
+      "Flag of South Moravian Region",
+      "Flag of South Moravia",
+      "Flag of Jihomoravský Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_usti_nad_labem_current",
+    entityId: "ent_czechia_usti_nad_labem",
+    assetId: "ast_usti_nad_labem_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Ústí nad Labem",
+      "Flag of Usti nad Labem",
+      "Flag of Ústí nad Labem Region",
+      "Flag of Usti nad Labem Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_vysocina_current",
+    entityId: "ent_czechia_vysocina",
+    assetId: "ast_vysocina_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Vysočina",
+      "Flag of Vysocina",
+      "Flag of Vysočina Region",
+      "Flag of Vysocina Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_czechia_zlin_current",
+    entityId: "ent_czechia_zlin",
+    assetId: "ast_zlin_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Zlín",
+      "Flag of Zlin",
+      "Flag of Zlín Region",
+      "Flag of Zlin Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_estonia_current",
     entityId: "ent_estonia",

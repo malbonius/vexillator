@@ -4404,6 +4404,236 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_czechia_current"
   },
+  /*
+    Czech regions.
+
+    These are direct first-level subdivision children of Czechia.
+  */
+  {
+    id: "ent_czechia_central_bohemian",
+    name: "Central Bohemian",
+    aliases: [
+      "Central Bohemian Region",
+      "Středočeský Region",
+      "Stredocesky Region",
+      "Středočeský kraj",
+      "Stredocesky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_central_bohemian_current"
+  },
+  {
+    id: "ent_czechia_hradec_kralove",
+    name: "Hradec Králové",
+    aliases: [
+      "Hradec Kralove",
+      "Hradec Králové Region",
+      "Hradec Kralove Region",
+      "Královéhradecký Region",
+      "Kralovehradecky Region",
+      "Královéhradecký kraj",
+      "Kralovehradecky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_hradec_kralove_current"
+  },
+  {
+    id: "ent_czechia_karlovy_vary",
+    name: "Karlovy Vary",
+    aliases: [
+      "Karlovy Vary Region",
+      "Carlsbad Region",
+      "Karlovarský Region",
+      "Karlovarsky Region",
+      "Karlovarský kraj",
+      "Karlovarsky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_karlovy_vary_current"
+  },
+  {
+    id: "ent_czechia_liberec",
+    name: "Liberec",
+    aliases: [
+      "Liberec Region",
+      "Liberecký Region",
+      "Liberecky Region",
+      "Liberecký kraj",
+      "Liberecky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_liberec_current"
+  },
+  {
+    id: "ent_czechia_moravian_silesian",
+    name: "Moravian-Silesian",
+    aliases: [
+      "Moravian Silesian",
+      "Moravian-Silesian Region",
+      "Moravian Silesian Region",
+      "Moravskoslezský Region",
+      "Moravskoslezsky Region",
+      "Moravskoslezský kraj",
+      "Moravskoslezsky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_moravian_silesian_current"
+  },
+  {
+    id: "ent_czechia_olomouc",
+    name: "Olomouc",
+    aliases: [
+      "Olomouc Region",
+      "Olomoucký Region",
+      "Olomoucky Region",
+      "Olomoucký kraj",
+      "Olomoucky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_olomouc_current"
+  },
+  {
+    id: "ent_czechia_pardubice",
+    name: "Pardubice",
+    aliases: [
+      "Pardubice Region",
+      "Pardubický Region",
+      "Pardubicky Region",
+      "Pardubický kraj",
+      "Pardubicky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_pardubice_current"
+  },
+  {
+    id: "ent_czechia_plzen",
+    name: "Plzeň",
+    aliases: [
+      "Plzen",
+      "Pilsen",
+      "Plzeň Region",
+      "Plzen Region",
+      "Pilsen Region",
+      "Plzeňský Region",
+      "Plzensky Region",
+      "Plzeňský kraj",
+      "Plzensky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_plzen_current"
+  },
+  {
+    id: "ent_czechia_prague",
+    name: "Prague",
+    aliases: [
+      "Capital City of Prague",
+      "Prague Region",
+      "Praha",
+      "Hlavní město Praha",
+      "Hlavni mesto Praha"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_prague_current"
+  },
+  {
+    id: "ent_czechia_south_bohemian",
+    name: "South Bohemian",
+    aliases: [
+      "South Bohemian Region",
+      "South Bohemia",
+      "Jihočeský Region",
+      "Jihocesky Region",
+      "Jihočeský kraj",
+      "Jihocesky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_south_bohemian_current"
+  },
+  {
+    id: "ent_czechia_south_moravian",
+    name: "South Moravian",
+    aliases: [
+      "South Moravian Region",
+      "South Moravia",
+      "Jihomoravský Region",
+      "Jihomoravsky Region",
+      "Jihomoravský kraj",
+      "Jihomoravsky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_south_moravian_current"
+  },
+  {
+    id: "ent_czechia_usti_nad_labem",
+    name: "Ústí nad Labem",
+    aliases: [
+      "Usti nad Labem",
+      "Ústí nad Labem Region",
+      "Usti nad Labem Region",
+      "Ústecký Region",
+      "Ustecky Region",
+      "Ústecký kraj",
+      "Ustecky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_usti_nad_labem_current"
+  },
+  {
+    id: "ent_czechia_vysocina",
+    name: "Vysočina",
+    aliases: [
+      "Vysocina",
+      "Vysočina Region",
+      "Vysocina Region",
+      "Kraj Vysočina",
+      "Kraj Vysocina"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_vysocina_current"
+  },
+  {
+    id: "ent_czechia_zlin",
+    name: "Zlín",
+    aliases: [
+      "Zlin",
+      "Zlín Region",
+      "Zlin Region",
+      "Zlínský Region",
+      "Zlinsky Region",
+      "Zlínský kraj",
+      "Zlinsky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_czechia"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_czechia_zlin_current"
+  },
   {
     id: "ent_estonia",
     name: "Estonia",

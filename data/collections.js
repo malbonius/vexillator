@@ -2922,6 +2922,28 @@ const collections = [
     }
   },
   {
+    id: "col_czechia_regions",
+    name: "Czech Regional Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_czechia"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_poland_voivodeships",
     name: "Polish Voivodeship Flags",
     type: "dynamic",
