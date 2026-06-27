@@ -392,6 +392,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_finland",
+    name: "Finland",
+    parentGroupIds: ["grp_northern_europe"],
+    collectionIds: [
+      "col_finland_regions"
+    ]
+  },
+  {
     id: "grp_united_kingdom",
     name: "United Kingdom",
     parentGroupIds: ["grp_northern_europe"],

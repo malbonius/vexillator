@@ -6275,6 +6275,165 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_finland_central_finland_current",
+    entityId: "ent_finland_central_finland",
+    assetId: "ast_central_finland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Central Finland",
+      "Keski-Suomi Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_central_ostrobothnia_current",
+    entityId: "ent_finland_central_ostrobothnia",
+    assetId: "ast_central_ostrobothnia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Central Ostrobothnia",
+      "Keski-Pohjanmaa Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_kainuu_current",
+    entityId: "ent_finland_kainuu",
+    assetId: "ast_kainuu_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kainuu"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_kanta_hame_current",
+    entityId: "ent_finland_kanta_hame",
+    assetId: "ast_kanta_hame_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kanta-Häme",
+      "Flag of Kanta-Hame",
+      "Flag of Tavastia Proper"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_north_karelia_current",
+    entityId: "ent_finland_north_karelia",
+    assetId: "ast_north_karelia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of North Karelia",
+      "Pohjois-Karjala Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_north_savo_current",
+    entityId: "ent_finland_north_savo",
+    assetId: "ast_north_savo_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of North Savo",
+      "Flag of Northern Savonia",
+      "Pohjois-Savo Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_paijat_hame_current",
+    entityId: "ent_finland_paijat_hame",
+    assetId: "ast_paijat_hame_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Päijät-Häme",
+      "Flag of Paijat-Hame",
+      "Flag of Päijänne Tavastia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_pirkanmaa_current",
+    entityId: "ent_finland_pirkanmaa",
+    assetId: "ast_pirkanmaa_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Pirkanmaa",
+      "Flag of Tampere Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_satakunta_current",
+    entityId: "ent_finland_satakunta",
+    assetId: "ast_satakunta_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Satakunta"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_south_ostrobothnia_current",
+    entityId: "ent_finland_south_ostrobothnia",
+    assetId: "ast_south_ostrobothnia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of South Ostrobothnia",
+      "Flag of Southern Ostrobothnia",
+      "Etelä-Pohjanmaa Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_south_savo_current",
+    entityId: "ent_finland_south_savo",
+    assetId: "ast_south_savo_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of South Savo",
+      "Flag of Southern Savonia",
+      "Etelä-Savo Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_finland_uusimaa_current",
+    entityId: "ent_finland_uusimaa",
+    assetId: "ast_uusimaa_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Uusimaa",
+      "Flag of Helsinki-Uusimaa"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_germany_current",
     entityId: "ent_germany",
     assetId: "ast_germany_current",

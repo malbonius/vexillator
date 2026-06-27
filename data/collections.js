@@ -1001,6 +1001,28 @@ const collections = [
     }
   },
   {
+    id: "col_finland_regions",
+    name: "Finnish Regional Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_finland"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_southern_europe_flags",
     name: "Southern European Flags",
     type: "dynamic",

@@ -5088,6 +5088,160 @@ const entities = [
     defaultVariantId: "var_finland_current"
   },
   {
+    id: "ent_finland_central_finland",
+    name: "Central Finland",
+    aliases: [
+      "Keski-Suomi",
+      "Mellersta Finland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_central_finland_current"
+  },
+  {
+    id: "ent_finland_central_ostrobothnia",
+    name: "Central Ostrobothnia",
+    aliases: [
+      "Keski-Pohjanmaa",
+      "Mellersta Österbotten",
+      "Mellersta Osterbotten"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_central_ostrobothnia_current"
+  },
+  {
+    id: "ent_finland_kainuu",
+    name: "Kainuu",
+    aliases: [
+      "Kajanaland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_kainuu_current"
+  },
+  {
+    id: "ent_finland_kanta_hame",
+    name: "Kanta-Häme",
+    aliases: [
+      "Kanta-Hame",
+      "Tavastia Proper",
+      "Egentliga Tavastland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_kanta_hame_current"
+  },
+  {
+    id: "ent_finland_north_karelia",
+    name: "North Karelia",
+    aliases: [
+      "Pohjois-Karjala",
+      "Norra Karelen"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_north_karelia_current"
+  },
+  {
+    id: "ent_finland_north_savo",
+    name: "North Savo",
+    aliases: [
+      "Northern Savonia",
+      "Pohjois-Savo",
+      "Norra Savolax"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_north_savo_current"
+  },
+  {
+    id: "ent_finland_paijat_hame",
+    name: "Päijät-Häme",
+    aliases: [
+      "Paijat-Hame",
+      "Päijänne Tavastia",
+      "Paijanne Tavastia",
+      "Päijänne-Tavastia",
+      "Paijanne-Tavastia",
+      "Päijät-Häme Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_paijat_hame_current"
+  },
+  {
+    id: "ent_finland_pirkanmaa",
+    name: "Pirkanmaa",
+    aliases: [
+      "Tampere Region",
+      "Birkaland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_pirkanmaa_current"
+  },
+  {
+    id: "ent_finland_satakunta",
+    name: "Satakunta",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_satakunta_current"
+  },
+  {
+    id: "ent_finland_south_ostrobothnia",
+    name: "South Ostrobothnia",
+    aliases: [
+      "Southern Ostrobothnia",
+      "Etelä-Pohjanmaa",
+      "Etela-Pohjanmaa",
+      "Södra Österbotten",
+      "Sodra Osterbotten"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_south_ostrobothnia_current"
+  },
+  {
+    id: "ent_finland_south_savo",
+    name: "South Savo",
+    aliases: [
+      "Southern Savonia",
+      "Etelä-Savo",
+      "Etela-Savo",
+      "Södra Savolax",
+      "Sodra Savolax"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_south_savo_current"
+  },
+  {
+    id: "ent_finland_uusimaa",
+    name: "Uusimaa",
+    aliases: [
+      "Nyland",
+      "Helsinki-Uusimaa",
+      "Helsinki Uusimaa"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_finland"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_finland_uusimaa_current"
+  },
+  {
     id: "ent_germany",
     name: "Germany",
     aliases: [
