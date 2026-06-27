@@ -417,6 +417,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_monaco",
+    name: "Monaco",
+    parentGroupIds: ["grp_western_europe"],
+    collectionIds: [
+      "col_monaco_municipality"
+    ]
+  },
+  {
     id: "grp_france",
     name: "France",
     parentGroupIds: ["grp_western_europe"],

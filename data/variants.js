@@ -6604,6 +6604,20 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_municipality_of_monaco_current",
+    entityId: "ent_municipality_of_monaco",
+    assetId: "ast_municipality_of_monaco_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of the Municipality of Monaco",
+      "Municipal Flag of Monaco",
+      "Flag of the Commune of Monaco"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_montenegro_current",
     entityId: "ent_montenegro",
     assetId: "ast_montenegro_current",

@@ -2902,6 +2902,29 @@ const collections = [
     }
   },
   {
+    id: "col_monaco_municipality",
+    name: "Municipality of Monaco Flag",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes Monaco's single municipality as a flag-bearing first-level subdivision beneath the sovereign entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_monaco"
+        },
+        {
+          hasTag: "subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_netherlands_provinces",
     name: "Dutch Provincial Flags",
     type: "dynamic",
