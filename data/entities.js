@@ -4824,7 +4824,6 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_estonia_current"
   },
-,
   {
     id: "ent_estonia_harju",
     name: "Harju",
@@ -5055,8 +5054,7 @@ const entities = [
     parentIds: ["ent_estonia"],
     tags: ["subdivision", "first_level_subdivision", "county", "current"],
     defaultVariantId: "var_estonia_voru_current"
-  }
-,
+  },
   {
     id: "ent_faroe_islands",
     name: "Faroe Islands",
@@ -5686,7 +5684,6 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_latvia_current"
   },
-,
   {
     id: "ent_latvia_daugavpils",
     name: "Daugavpils",
@@ -5800,6 +5797,144 @@ const entities = [
     parentIds: ["ent_northern_europe"],
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_lithuania_current"
+  },
+  {
+    id: "ent_lithuania_alytus_county",
+    name: "Alytus County",
+    aliases: [
+      "Alytaus County",
+      "Alytaus apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_alytus_county_current"
+  },
+  {
+    id: "ent_lithuania_kaunas_county",
+    name: "Kaunas County",
+    aliases: [
+      "Kauno County",
+      "Kauno apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_kaunas_county_current"
+  },
+  {
+    id: "ent_lithuania_klaipeda_county",
+    name: "Klaipėda County",
+    aliases: [
+      "Klaipeda County",
+      "Klaipėdos County",
+      "Klaipedos County",
+      "Klaipėdos apskritis",
+      "Klaipedos apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_klaipeda_county_current"
+  },
+  {
+    id: "ent_lithuania_marijampole_county",
+    name: "Marijampolė County",
+    aliases: [
+      "Marijampole County",
+      "Marijampolės County",
+      "Marijampoles County",
+      "Marijampolės apskritis",
+      "Marijampoles apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_marijampole_county_current"
+  },
+  {
+    id: "ent_lithuania_panevezys_county",
+    name: "Panevėžys County",
+    aliases: [
+      "Panevezys County",
+      "Panevėžio County",
+      "Panevezio County",
+      "Panevėžio apskritis",
+      "Panevezio apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_panevezys_county_current"
+  },
+  {
+    id: "ent_lithuania_siauliai_county",
+    name: "Šiauliai County",
+    aliases: [
+      "Siauliai County",
+      "Šiaulių County",
+      "Siauliu County",
+      "Šiaulių apskritis",
+      "Siauliu apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_siauliai_county_current"
+  },
+  {
+    id: "ent_lithuania_taurage_county",
+    name: "Tauragė County",
+    aliases: [
+      "Taurage County",
+      "Tauragės County",
+      "Taurages County",
+      "Tauragės apskritis",
+      "Taurages apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_taurage_county_current"
+  },
+  {
+    id: "ent_lithuania_telsiai_county",
+    name: "Telšiai County",
+    aliases: [
+      "Telsiai County",
+      "Telšių County",
+      "Telsiu County",
+      "Telšių apskritis",
+      "Telsiu apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_telsiai_county_current"
+  },
+  {
+    id: "ent_lithuania_utena_county",
+    name: "Utena County",
+    aliases: [
+      "Utenos County",
+      "Utenos apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_utena_county_current"
+  },
+  {
+    id: "ent_lithuania_vilnius_county",
+    name: "Vilnius County",
+    aliases: [
+      "Vilniaus County",
+      "Vilniaus apskritis"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_lithuania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_lithuania_vilnius_county_current"
   },
   {
     id: "ent_luxembourg",

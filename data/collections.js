@@ -3156,6 +3156,29 @@ const collections = [
   },
 
   {
+    id: "col_lithuania_counties",
+    name: "Lithuanian County Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_lithuania"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_germany_lander",
     name: "German Länder Flags",
     type: "dynamic",

@@ -408,6 +408,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_lithuania",
+    name: "Lithuania",
+    parentGroupIds: ["grp_northern_europe"],
+    collectionIds: [
+      "col_lithuania_counties"
+    ]
+  },
+  {
     id: "grp_united_kingdom",
     name: "United Kingdom",
     parentGroupIds: ["grp_northern_europe"],

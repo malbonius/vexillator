@@ -5990,7 +5990,6 @@ const variants = [
     startYear: 1990,
     endYear: null
   },
-,
   {
     id: "var_estonia_harju_current",
     entityId: "ent_estonia_harju",
@@ -6242,8 +6241,7 @@ const variants = [
     tags: ["official", "current"],
     startYear: null,
     endYear: null
-  }
-,
+  },
   {
     id: "var_faroe_islands_current",
     entityId: "ent_faroe_islands",
@@ -7016,7 +7014,6 @@ const variants = [
     startYear: 1990,
     endYear: null
   },
-,
   {
     id: "var_latvia_daugavpils_current",
     entityId: "ent_latvia_daugavpils",
@@ -7137,6 +7134,146 @@ const variants = [
     aliases: ["Vytis Flag"],
     tags: ["official", "current", "national", "state"],
     startYear: 2004,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_alytus_county_current",
+    entityId: "ent_lithuania_alytus_county",
+    assetId: "ast_alytus_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Alytus County",
+      "Flag of Alytaus County",
+      "Flag of Alytaus apskritis"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_kaunas_county_current",
+    entityId: "ent_lithuania_kaunas_county",
+    assetId: "ast_kaunas_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kaunas County",
+      "Flag of Kauno County",
+      "Flag of Kauno apskritis"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_klaipeda_county_current",
+    entityId: "ent_lithuania_klaipeda_county",
+    assetId: "ast_klaipeda_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Klaipėda County",
+      "Flag of Klaipeda County",
+      "Flag of Klaipėdos County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_marijampole_county_current",
+    entityId: "ent_lithuania_marijampole_county",
+    assetId: "ast_marijampole_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Marijampolė County",
+      "Flag of Marijampole County",
+      "Flag of Marijampolės County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_panevezys_county_current",
+    entityId: "ent_lithuania_panevezys_county",
+    assetId: "ast_panevezys_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Panevėžys County",
+      "Flag of Panevezys County",
+      "Flag of Panevėžio County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_siauliai_county_current",
+    entityId: "ent_lithuania_siauliai_county",
+    assetId: "ast_siauliai_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Šiauliai County",
+      "Flag of Siauliai County",
+      "Flag of Šiaulių County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_taurage_county_current",
+    entityId: "ent_lithuania_taurage_county",
+    assetId: "ast_taurage_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Tauragė County",
+      "Flag of Taurage County",
+      "Flag of Tauragės County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_telsiai_county_current",
+    entityId: "ent_lithuania_telsiai_county",
+    assetId: "ast_telsiai_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Telšiai County",
+      "Flag of Telsiai County",
+      "Flag of Telšių County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_utena_county_current",
+    entityId: "ent_lithuania_utena_county",
+    assetId: "ast_utena_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Utena County",
+      "Flag of Utenos County",
+      "Flag of Utenos apskritis"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_lithuania_vilnius_county_current",
+    entityId: "ent_lithuania_vilnius_county",
+    assetId: "ast_vilnius_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Vilnius County",
+      "Flag of Vilniaus County",
+      "Flag of Vilniaus apskritis"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
     endYear: null
   },
   {
