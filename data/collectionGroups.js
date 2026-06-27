@@ -374,6 +374,23 @@ const collectionGroups = [
       "col_northern_europe_flags"
     ]
   },
+
+  {
+    id: "grp_denmark",
+    name: "Denmark",
+    parentGroupIds: ["grp_northern_europe"],
+    collectionIds: [
+      "col_denmark_regions"
+    ]
+  },
+  {
+    id: "grp_estonia",
+    name: "Estonia",
+    parentGroupIds: ["grp_northern_europe"],
+    collectionIds: [
+      "col_estonia_counties"
+    ]
+  },
   {
     id: "grp_united_kingdom",
     name: "United Kingdom",

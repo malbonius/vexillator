@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="400">
 <defs>
 <linearGradient id="grad" gradientUnits="userSpaceOnUse" x1="82.288653" y1="167.23437" x2="195.41663" y2="268.60437">
@@ -8,5 +8,7 @@
 </linearGradient>
 </defs>
 <rect fill="#0e3e5a" width="600" height="400"/>
-<path fill="url(#grad)" stroke="#fff" stroke-width="2" d="m35 120v160h51.7548v-53.4453h56.4905v53.4453h51.7548v-160h-51.7548v54.6077h-56.4905v-54.6077h-51.7548z" transform="translate(185 0)"/>
+<path fill="url(#grad)" stroke="#fff" stroke-width="2" d="m35 120v160h51.7548v-53.4453h56.4905v53.4453h51.7548v-160h-51.7548v54.6077h-56.4905v-54.6077h-51.7548z"/>
+
+
 </svg>

@@ -3703,6 +3703,97 @@ const variants = [
     startYear: 1625,
     endYear: null
   },
+
+  {
+    id: "var_denmark_capital_region_current",
+    entityId: "ent_denmark_capital_region",
+    assetId: "ast_capital_region_of_denmark_current",
+    displayName: "Official Regional Logo",
+    aliases: [
+      "Capital Region of Denmark Flag",
+      "Region Hovedstaden Logo"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_denmark_capital_region_current_text_removed",
+    entityId: "ent_denmark_capital_region",
+    assetId: "ast_capital_region_of_denmark_current_text_removed",
+    displayName: "Official Regional Logo",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_denmark_capital_region_current"
+  },
+  {
+    id: "var_denmark_midtjylland_current",
+    entityId: "ent_denmark_midtjylland",
+    assetId: "ast_midtjylland_current",
+    displayName: "Official Regional Logo",
+    aliases: [
+      "Central Denmark Region Flag",
+      "Region Midtjylland Logo"
+    ],
+    tags: ["official", "current", "non_quizzable"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_denmark_nordjylland_current",
+    entityId: "ent_denmark_nordjylland",
+    assetId: "ast_nordjylland_current",
+    displayName: "Official Regional Logo",
+    aliases: [
+      "North Denmark Region Flag",
+      "Region Nordjylland Logo"
+    ],
+    tags: ["official", "current", "non_quizzable"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_denmark_sjaelland_current",
+    entityId: "ent_denmark_sjaelland",
+    assetId: "ast_sjaelland_current",
+    displayName: "Official Regional Logo",
+    aliases: [
+      "Region Zealand Flag",
+      "Region Sjælland Logo",
+      "Region Sjaelland Logo"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_denmark_syddanmark_current",
+    entityId: "ent_denmark_syddanmark",
+    assetId: "ast_syddanmark_current",
+    displayName: "Official Regional Logo",
+    aliases: [
+      "Region of Southern Denmark Flag",
+      "Region Syddanmark Logo"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_denmark_syddanmark_current_text_removed",
+    entityId: "ent_denmark_syddanmark",
+    assetId: "ast_syddanmark_current_text_removed",
+    displayName: "Official Regional Logo",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_denmark_syddanmark_current"
+  },
   {
     id: "var_france_current",
     entityId: "ent_france",
@@ -5899,6 +5990,260 @@ const variants = [
     startYear: 1990,
     endYear: null
   },
+,
+  {
+    id: "var_estonia_harju_current",
+    entityId: "ent_estonia_harju",
+    assetId: "ast_harju_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Harju",
+      "Flag of Harju County",
+      "Flag of Harju maakond",
+      "Flag of Harjumaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_hiiu_current",
+    entityId: "ent_estonia_hiiu",
+    assetId: "ast_hiiu_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Hiiu",
+      "Flag of Hiiu County",
+      "Flag of Hiiu maakond",
+      "Flag of Hiiumaa",
+      "Flag of Hiiumaa County"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_ida_viru_current",
+    entityId: "ent_estonia_ida_viru",
+    assetId: "ast_ida_viru_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Ida-Viru",
+      "Flag of Ida-Viru County",
+      "Flag of Ida Viru County",
+      "Flag of Ida-Viru maakond",
+      "Flag of Ida-Virumaa",
+      "Flag of Ida Virumaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_jarva_current",
+    entityId: "ent_estonia_jarva",
+    assetId: "ast_jarva_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Järva",
+      "Flag of Järva County",
+      "Flag of Jarva County",
+      "Flag of Järva maakond",
+      "Flag of Jarva maakond",
+      "Flag of Järvamaa",
+      "Flag of Jarvamaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_jogeva_current",
+    entityId: "ent_estonia_jogeva",
+    assetId: "ast_jogeva_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Jõgeva",
+      "Flag of Jõgeva County",
+      "Flag of Jogeva County",
+      "Flag of Jõgeva maakond",
+      "Flag of Jogeva maakond",
+      "Flag of Jõgevamaa",
+      "Flag of Jogevamaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_laane_current",
+    entityId: "ent_estonia_laane",
+    assetId: "ast_laane_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Lääne",
+      "Flag of Lääne County",
+      "Flag of Laane County",
+      "Flag of Lääne maakond",
+      "Flag of Laane maakond",
+      "Flag of Läänemaa",
+      "Flag of Laanemaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_laane_viru_current",
+    entityId: "ent_estonia_laane_viru",
+    assetId: "ast_laane_viru_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Lääne-Viru",
+      "Flag of Lääne-Viru County",
+      "Flag of Laane-Viru County",
+      "Flag of Lääne Viru County",
+      "Flag of Laane Viru County",
+      "Flag of Lääne-Viru maakond",
+      "Flag of Laane-Viru maakond",
+      "Flag of Lääne-Virumaa",
+      "Flag of Laane-Virumaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_parnu_current",
+    entityId: "ent_estonia_parnu",
+    assetId: "ast_parnu_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Pärnu",
+      "Flag of Pärnu County",
+      "Flag of Parnu County",
+      "Flag of Pärnu maakond",
+      "Flag of Parnu maakond",
+      "Flag of Pärnumaa",
+      "Flag of Parnumaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_polva_current",
+    entityId: "ent_estonia_polva",
+    assetId: "ast_polva_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Põlva",
+      "Flag of Põlva County",
+      "Flag of Polva County",
+      "Flag of Põlva maakond",
+      "Flag of Polva maakond",
+      "Flag of Põlvamaa",
+      "Flag of Polvamaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_rapla_current",
+    entityId: "ent_estonia_rapla",
+    assetId: "ast_rapla_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Rapla",
+      "Flag of Rapla County",
+      "Flag of Rapla maakond",
+      "Flag of Raplamaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_saare_current",
+    entityId: "ent_estonia_saare",
+    assetId: "ast_saare_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Saare",
+      "Flag of Saare County",
+      "Flag of Saare maakond",
+      "Flag of Saaremaa",
+      "Flag of Saaremaa County"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_tartu_current",
+    entityId: "ent_estonia_tartu",
+    assetId: "ast_tartu_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Tartu",
+      "Flag of Tartu County",
+      "Flag of Tartu maakond",
+      "Flag of Tartumaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_valga_current",
+    entityId: "ent_estonia_valga",
+    assetId: "ast_valga_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Valga",
+      "Flag of Valga County",
+      "Flag of Valga maakond",
+      "Flag of Valgamaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_viljandi_current",
+    entityId: "ent_estonia_viljandi",
+    assetId: "ast_viljandi_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Viljandi",
+      "Flag of Viljandi County",
+      "Flag of Viljandi maakond",
+      "Flag of Viljandimaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_estonia_voru_current",
+    entityId: "ent_estonia_voru",
+    assetId: "ast_voru_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Võru",
+      "Flag of Võru County",
+      "Flag of Voru County",
+      "Flag of Võru maakond",
+      "Flag of Voru maakond",
+      "Flag of Võrumaa",
+      "Flag of Vorumaa"
+  ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  }
+,
   {
     id: "var_faroe_islands_current",
     entityId: "ent_faroe_islands",

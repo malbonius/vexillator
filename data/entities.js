@@ -4824,6 +4824,239 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_estonia_current"
   },
+,
+  {
+    id: "ent_estonia_harju",
+    name: "Harju",
+    aliases: [
+      "Harju County",
+      "Harju maakond",
+      "Harjumaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_harju_current"
+  },
+  {
+    id: "ent_estonia_hiiu",
+    name: "Hiiu",
+    aliases: [
+      "Hiiu County",
+      "Hiiu maakond",
+      "Hiiumaa",
+      "Hiiumaa County"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_hiiu_current"
+  },
+  {
+    id: "ent_estonia_ida_viru",
+    name: "Ida-Viru",
+    aliases: [
+      "Ida-Viru County",
+      "Ida Viru County",
+      "Ida-Viru maakond",
+      "Ida-Virumaa",
+      "Ida Virumaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_ida_viru_current"
+  },
+  {
+    id: "ent_estonia_jarva",
+    name: "Järva",
+    aliases: [
+      "Jarva",
+      "Järva County",
+      "Jarva County",
+      "Järva maakond",
+      "Jarva maakond",
+      "Järvamaa",
+      "Jarvamaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_jarva_current"
+  },
+  {
+    id: "ent_estonia_jogeva",
+    name: "Jõgeva",
+    aliases: [
+      "Jogeva",
+      "Jõgeva County",
+      "Jogeva County",
+      "Jõgeva maakond",
+      "Jogeva maakond",
+      "Jõgevamaa",
+      "Jogevamaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_jogeva_current"
+  },
+  {
+    id: "ent_estonia_laane",
+    name: "Lääne",
+    aliases: [
+      "Laane",
+      "Lääne County",
+      "Laane County",
+      "Lääne maakond",
+      "Laane maakond",
+      "Läänemaa",
+      "Laanemaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_laane_current"
+  },
+  {
+    id: "ent_estonia_laane_viru",
+    name: "Lääne-Viru",
+    aliases: [
+      "Laane-Viru",
+      "Lääne Viru",
+      "Laane Viru",
+      "Lääne-Viru County",
+      "Laane-Viru County",
+      "Lääne Viru County",
+      "Laane Viru County",
+      "Lääne-Viru maakond",
+      "Laane-Viru maakond",
+      "Lääne-Virumaa",
+      "Laane-Virumaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_laane_viru_current"
+  },
+  {
+    id: "ent_estonia_parnu",
+    name: "Pärnu",
+    aliases: [
+      "Parnu",
+      "Pärnu County",
+      "Parnu County",
+      "Pärnu maakond",
+      "Parnu maakond",
+      "Pärnumaa",
+      "Parnumaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_parnu_current"
+  },
+  {
+    id: "ent_estonia_polva",
+    name: "Põlva",
+    aliases: [
+      "Polva",
+      "Põlva County",
+      "Polva County",
+      "Põlva maakond",
+      "Polva maakond",
+      "Põlvamaa",
+      "Polvamaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_polva_current"
+  },
+  {
+    id: "ent_estonia_rapla",
+    name: "Rapla",
+    aliases: [
+      "Rapla County",
+      "Rapla maakond",
+      "Raplamaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_rapla_current"
+  },
+  {
+    id: "ent_estonia_saare",
+    name: "Saare",
+    aliases: [
+      "Saare County",
+      "Saare maakond",
+      "Saaremaa",
+      "Saaremaa County"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_saare_current"
+  },
+  {
+    id: "ent_estonia_tartu",
+    name: "Tartu",
+    aliases: [
+      "Tartu County",
+      "Tartu maakond",
+      "Tartumaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_tartu_current"
+  },
+  {
+    id: "ent_estonia_valga",
+    name: "Valga",
+    aliases: [
+      "Valga County",
+      "Valga maakond",
+      "Valgamaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_valga_current"
+  },
+  {
+    id: "ent_estonia_viljandi",
+    name: "Viljandi",
+    aliases: [
+      "Viljandi County",
+      "Viljandi maakond",
+      "Viljandimaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_viljandi_current"
+  },
+  {
+    id: "ent_estonia_voru",
+    name: "Võru",
+    aliases: [
+      "Voru",
+      "Võru County",
+      "Voru County",
+      "Võru maakond",
+      "Voru maakond",
+      "Võrumaa",
+      "Vorumaa"
+  ],
+    entityType: "geographic",
+    parentIds: ["ent_estonia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_estonia_voru_current"
+  }
+,
   {
     id: "ent_faroe_islands",
     name: "Faroe Islands",
@@ -6148,6 +6381,79 @@ const entities = [
       "recognised"
     ],
     defaultVariantId: "var_denmark_current"
+  },
+
+
+  /*
+    Denmark and its current regions.
+  */
+  {
+    id: "ent_denmark_capital_region",
+    name: "Capital Region of Denmark",
+    aliases: [
+      "Region Hovedstaden",
+      "Hovedstaden",
+      "Capital Region",
+      "Danish Capital Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_denmark"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_denmark_capital_region_current"
+  },
+  {
+    id: "ent_denmark_midtjylland",
+    name: "Central Denmark Region",
+    aliases: [
+      "Region Midtjylland",
+      "Midtjylland",
+      "Central Jutland Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_denmark"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_denmark_midtjylland_current"
+  },
+  {
+    id: "ent_denmark_nordjylland",
+    name: "North Denmark Region",
+    aliases: [
+      "Region Nordjylland",
+      "Nordjylland",
+      "North Jutland Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_denmark"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_denmark_nordjylland_current"
+  },
+  {
+    id: "ent_denmark_sjaelland",
+    name: "Region Zealand",
+    aliases: [
+      "Region Sjælland",
+      "Region Sjaelland",
+      "Sjælland",
+      "Sjaelland",
+      "Zealand Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_denmark"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_denmark_sjaelland_current"
+  },
+  {
+    id: "ent_denmark_syddanmark",
+    name: "Region of Southern Denmark",
+    aliases: [
+      "Region Syddanmark",
+      "Syddanmark",
+      "Southern Denmark Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_denmark"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_denmark_syddanmark_current"
   },
   {
     id: "ent_france",
