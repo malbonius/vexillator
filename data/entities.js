@@ -6375,6 +6375,285 @@ const entities = [
     defaultVariantId: "var_sweden_current"
   },
   {
+    id: "ent_sweden_blekinge_county",
+    name: "Blekinge County",
+    aliases: [
+      "Blekinge län",
+      "Blekinge"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_blekinge_county_current"
+  },
+  {
+    id: "ent_sweden_dalarna_county",
+    name: "Dalarna County",
+    aliases: [
+      "Dalarnas län",
+      "Dalarna"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_dalarna_county_current"
+  },
+  {
+    id: "ent_sweden_gavleborg_county",
+    name: "Gävleborg County",
+    aliases: [
+      "Gavleborg County",
+      "Gävleborgs län",
+      "Gavleborgs lan",
+      "Gävleborg"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_gavleborg_county_current"
+  },
+  {
+    id: "ent_sweden_gotland_county",
+    name: "Gotland County",
+    aliases: [
+      "Gotlands län",
+      "Gotland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_gotland_county_current"
+  },
+  {
+    id: "ent_sweden_halland_county",
+    name: "Halland County",
+    aliases: [
+      "Hallands län",
+      "Halland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_halland_county_current"
+  },
+  {
+    id: "ent_sweden_jamtland_county",
+    name: "Jämtland County",
+    aliases: [
+      "Jamtland County",
+      "Jämtlands län",
+      "Jamtlands lan",
+      "Jämtland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_jamtland_county_current"
+  },
+  {
+    id: "ent_sweden_jonkoping_county",
+    name: "Jönköping County",
+    aliases: [
+      "Jonkoping County",
+      "Jönköpings län",
+      "Jonkopings lan",
+      "Jönköping"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_jonkoping_county_current"
+  },
+  {
+    id: "ent_sweden_kalmar_county",
+    name: "Kalmar County",
+    aliases: [
+      "Kalmar län",
+      "Kalmar"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_kalmar_county_current"
+  },
+  {
+    id: "ent_sweden_kronoberg_county",
+    name: "Kronoberg County",
+    aliases: [
+      "Kronobergs län",
+      "Kronoberg"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_kronoberg_county_current"
+  },
+  {
+    id: "ent_sweden_norrbotten_county",
+    name: "Norrbotten County",
+    aliases: [
+      "Norrbottens län",
+      "Norrbotten"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_norrbotten_county_current"
+  },
+  {
+    id: "ent_sweden_orebro_county",
+    name: "Örebro County",
+    aliases: [
+      "Orebro County",
+      "Örebro län",
+      "Orebro lan",
+      "Örebro"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_orebro_county_current"
+  },
+  {
+    id: "ent_sweden_ostergotland_county",
+    name: "Östergötland County",
+    aliases: [
+      "Ostergotland County",
+      "Östergötlands län",
+      "Ostergotlands lan",
+      "Östergötland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_ostergotland_county_current"
+  },
+  {
+    id: "ent_sweden_skane_county",
+    name: "Skåne County",
+    aliases: [
+      "Skane County",
+      "Skåne län",
+      "Skane lan",
+      "Scania County",
+      "Scania"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_skane_county_current"
+  },
+  {
+    id: "ent_sweden_sodermanland_county",
+    name: "Södermanland County",
+    aliases: [
+      "Sodermanland County",
+      "Södermanlands län",
+      "Sodermanlands lan",
+      "Sörmland",
+      "Sormland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_sodermanland_county_current"
+  },
+  {
+    id: "ent_sweden_stockholm_county",
+    name: "Stockholm County",
+    aliases: [
+      "Stockholms län",
+      "Stockholm"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_stockholm_county_current"
+  },
+  {
+    id: "ent_sweden_uppsala_county",
+    name: "Uppsala County",
+    aliases: [
+      "Uppsala län",
+      "Uppsala"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_uppsala_county_current"
+  },
+  {
+    id: "ent_sweden_varmland_county",
+    name: "Värmland County",
+    aliases: [
+      "Varmland County",
+      "Värmlands län",
+      "Varmlands lan",
+      "Värmland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_varmland_county_current"
+  },
+  {
+    id: "ent_sweden_vasterbotten_county",
+    name: "Västerbotten County",
+    aliases: [
+      "Vasterbotten County",
+      "Västerbottens län",
+      "Vasterbottens lan",
+      "Västerbotten"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_vasterbotten_county_current"
+  },
+  {
+    id: "ent_sweden_vasternorrland_county",
+    name: "Västernorrland County",
+    aliases: [
+      "Vasternorrland County",
+      "Västernorrlands län",
+      "Vasternorrlands lan",
+      "Västernorrland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_vasternorrland_county_current"
+  },
+  {
+    id: "ent_sweden_vastmanland_county",
+    name: "Västmanland County",
+    aliases: [
+      "Vastmanland County",
+      "Västmanlands län",
+      "Vastmanlands lan",
+      "Västmanland"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_vastmanland_county_current"
+  },
+  {
+    id: "ent_sweden_vastra_gotaland_county",
+    name: "Västra Götaland County",
+    aliases: [
+      "Vastra Gotaland County",
+      "Västra Götalands län",
+      "Vastra Gotalands lan",
+      "Västra Götaland",
+      "West Sweden County"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_sweden"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_sweden_vastra_gotaland_county_current"
+  },
+  {
     id: "ent_switzerland",
     name: "Switzerland",
     aliases: [

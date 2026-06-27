@@ -3179,6 +3179,32 @@ const collections = [
   },
 
   {
+    id: "col_sweden_counties",
+    name: "Swedish County Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_sweden"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "county"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_germany_lander",
     name: "German Länder Flags",
     type: "dynamic",

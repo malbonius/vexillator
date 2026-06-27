@@ -7721,6 +7721,308 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_sweden_blekinge_county_current",
+    entityId: "ent_sweden_blekinge_county",
+    assetId: "ast_blekinge_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Blekinge County",
+      "Flag of Blekinge län"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_dalarna_county_current",
+    entityId: "ent_sweden_dalarna_county",
+    assetId: "ast_dalarna_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Dalarna County",
+      "Flag of Dalarnas län"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_gavleborg_county_current",
+    entityId: "ent_sweden_gavleborg_county",
+    assetId: "ast_gavleborg_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Gävleborg County",
+      "Flag of Gävleborgs län",
+      "Flag of Gavleborgs lan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_gotland_county_current",
+    entityId: "ent_sweden_gotland_county",
+    assetId: "ast_gotland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Gotland County",
+      "Flag of Gotlands län",
+      "Flag of Gotland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_halland_county_current",
+    entityId: "ent_sweden_halland_county",
+    assetId: "ast_halland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Halland County",
+      "Flag of Hallands län",
+      "Flag of Halland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_jamtland_county_current",
+    entityId: "ent_sweden_jamtland_county",
+    assetId: "ast_jamtland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Jämtland County",
+      "Flag of Jamtland County",
+      "Flag of Jämtlands län",
+      "Flag of Jamtlands lan",
+      "Flag of Jämtland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_jonkoping_county_current",
+    entityId: "ent_sweden_jonkoping_county",
+    assetId: "ast_jonkoping_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Jönköping County",
+      "Flag of Jönköpings län",
+      "Flag of Jonkopings lan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_kalmar_county_current",
+    entityId: "ent_sweden_kalmar_county",
+    assetId: "ast_kalmar_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kalmar County",
+      "Flag of Kalmar län"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_kronoberg_county_current",
+    entityId: "ent_sweden_kronoberg_county",
+    assetId: "ast_kronoberg_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kronoberg County",
+      "Flag of Kronobergs län"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_norrbotten_county_current",
+    entityId: "ent_sweden_norrbotten_county",
+    assetId: "ast_norrbotten_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Norrbotten County",
+      "Flag of Norrbottens län"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_orebro_county_current",
+    entityId: "ent_sweden_orebro_county",
+    assetId: "ast_orebro_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Örebro County",
+      "Flag of Örebro län",
+      "Flag of Orebro lan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_ostergotland_county_current",
+    entityId: "ent_sweden_ostergotland_county",
+    assetId: "ast_ostergotland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Östergötland County",
+      "Flag of Ostergotland County",
+      "Flag of Östergötlands län",
+      "Flag of Ostergotlands lan",
+      "Flag of Östergötland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_skane_county_current",
+    entityId: "ent_sweden_skane_county",
+    assetId: "ast_skane_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Skåne County",
+      "Flag of Skåne län",
+      "Flag of Skane lan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_sodermanland_county_current",
+    entityId: "ent_sweden_sodermanland_county",
+    assetId: "ast_sodermanland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Södermanland County",
+      "Flag of Sodermanland County",
+      "Flag of Södermanlands län",
+      "Flag of Sodermanlands lan",
+      "Flag of Sörmland",
+      "Flag of Sormland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_stockholm_county_current",
+    entityId: "ent_sweden_stockholm_county",
+    assetId: "ast_stockholm_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Stockholm County",
+      "Flag of Stockholms län"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_uppsala_county_current",
+    entityId: "ent_sweden_uppsala_county",
+    assetId: "ast_uppsala_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Uppsala County",
+      "Flag of Uppsala län"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_varmland_county_current",
+    entityId: "ent_sweden_varmland_county",
+    assetId: "ast_varmland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Värmland County",
+      "Flag of Varmland County",
+      "Flag of Värmlands län",
+      "Flag of Varmlands lan",
+      "Flag of Värmland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_vasterbotten_county_current",
+    entityId: "ent_sweden_vasterbotten_county",
+    assetId: "ast_vasterbotten_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Västerbotten County",
+      "Flag of Västerbottens län",
+      "Flag of Vasterbottens lan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_vasternorrland_county_current",
+    entityId: "ent_sweden_vasternorrland_county",
+    assetId: "ast_vasternorrland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Västernorrland County",
+      "Flag of Vasternorrland County",
+      "Flag of Västernorrlands län",
+      "Flag of Vasternorrlands lan",
+      "Flag of Västernorrland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_vastmanland_county_current",
+    entityId: "ent_sweden_vastmanland_county",
+    assetId: "ast_vastmanland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Västmanland County",
+      "Flag of Vastmanland County",
+      "Flag of Västmanlands län",
+      "Flag of Vastmanlands lan",
+      "Flag of Västmanland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_sweden_vastra_gotaland_county_current",
+    entityId: "ent_sweden_vastra_gotaland_county",
+    assetId: "ast_vastra_gotaland_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Västra Götaland County",
+      "Flag of Vastra Gotaland County",
+      "Flag of Västra Götalands län",
+      "Flag of Vastra Gotalands lan",
+      "Flag of Västra Götaland"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_switzerland_current",
     entityId: "ent_switzerland",
     assetId: "ast_switzerland_current",

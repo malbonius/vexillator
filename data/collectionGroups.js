@@ -416,6 +416,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_sweden",
+    name: "Sweden",
+    parentGroupIds: ["grp_northern_europe"],
+    collectionIds: [
+      "col_sweden_counties"
+    ]
+  },
+  {
     id: "grp_united_kingdom",
     name: "United Kingdom",
     parentGroupIds: ["grp_northern_europe"],
