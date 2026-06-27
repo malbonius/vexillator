@@ -5475,6 +5475,157 @@ const variants = [
     startYear: 1831,
     endYear: null
   },
+
+  /*
+    Belgium regional and provincial flags.
+  */
+  {
+    id: "var_belgium_brussels_capital_region_current",
+    entityId: "ent_belgium_brussels_capital_region",
+    assetId: "ast_brussels_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Brussels-Capital Region",
+      "Flag of Brussels"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_antwerp_current",
+    entityId: "ent_belgium_antwerp",
+    assetId: "ast_antwerp_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Antwerp",
+      "Flag of the Province of Antwerp"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_east_flanders_current",
+    entityId: "ent_belgium_east_flanders",
+    assetId: "ast_east_flanders_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of East Flanders",
+      "Flag of the Province of East Flanders"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_flemish_brabant_current",
+    entityId: "ent_belgium_flemish_brabant",
+    assetId: "ast_flemish_brabant_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Flemish Brabant",
+      "Flag of the Province of Flemish Brabant"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_limburg_current",
+    entityId: "ent_belgium_limburg",
+    assetId: "ast_limburg_belgium_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Limburg",
+      "Flag of Belgian Limburg",
+      "Flag of the Province of Limburg"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_west_flanders_current",
+    entityId: "ent_belgium_west_flanders",
+    assetId: "ast_west_flanders_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of West Flanders",
+      "Flag of the Province of West Flanders"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_hainaut_current",
+    entityId: "ent_belgium_hainaut",
+    assetId: "ast_hainaut_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Hainaut",
+      "Flag of the Province of Hainaut"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_liege_current",
+    entityId: "ent_belgium_liege",
+    assetId: "ast_liege_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Liège",
+      "Flag of Liege",
+      "Flag of the Province of Liège",
+      "Flag of the Province of Liege"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_luxembourg_current",
+    entityId: "ent_belgium_luxembourg",
+    assetId: "ast_luxembourg_region_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Luxembourg",
+      "Flag of Belgian Luxembourg",
+      "Flag of the Province of Luxembourg"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_namur_current",
+    entityId: "ent_belgium_namur",
+    assetId: "ast_namur_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Namur",
+      "Flag of the Province of Namur"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belgium_walloon_brabant_current",
+    entityId: "ent_belgium_walloon_brabant",
+    assetId: "ast_walloon_brabant_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Walloon Brabant",
+      "Flag of the Province of Walloon Brabant"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_bosnia_and_herzegovina_current",
     entityId: "ent_bosnia_and_herzegovina",

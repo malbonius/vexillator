@@ -2877,6 +2877,30 @@ const collections = [
       ]
     }
   },
+
+  {
+    id: "col_belgium_subnational_flags",
+    name: "Belgian Regional and Provincial Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes the flagged Brussels-Capital Region and the ten Belgian provinces. Flanders and Wallonia are structural first-level regions in entities.js but are not included here until their own flag assets are added.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_belgium"
+        },
+        {
+          hasTag: "subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
   {
     id: "col_netherlands_provinces",
     name: "Dutch Provincial Flags",

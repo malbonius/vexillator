@@ -407,6 +407,15 @@ const collectionGroups = [
   },
 
 
+
+  {
+    id: "grp_belgium",
+    name: "Belgium",
+    parentGroupIds: ["grp_western_europe"],
+    collectionIds: [
+      "col_belgium_subnational_flags"
+    ]
+  },
   {
     id: "grp_france",
     name: "France",
