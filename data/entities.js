@@ -3128,7 +3128,7 @@ const entities = [
   },
   /*
     Japan prefecture regions.
-  */,
+  */
   {
     id: "ent_japan_hokkaido_region",
     name: "Hokkaido Region",
@@ -3204,7 +3204,7 @@ const entities = [
 
   /*
     Japanese prefectures.
-  */,
+  */
   {
     id: "ent_japan_hokkaido",
     name: "Hokkaido",
@@ -4348,6 +4348,88 @@ const entities = [
     defaultVariantId: "var_belarus_current"
   },
   {
+    id: "ent_belarus_brest_region",
+    name: "Brest Region",
+    aliases: [
+      "Brest Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_belarus"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_belarus_brest_region_current"
+  },
+  {
+    id: "ent_belarus_city_of_minsk",
+    name: "City of Minsk",
+    aliases: [
+      "Minsk City",
+      "Minsk"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_belarus"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_belarus_city_of_minsk_current"
+  },
+  {
+    id: "ent_belarus_gomel_region",
+    name: "Gomel Region",
+    aliases: [
+      "Gomel Oblast",
+      "Homiel Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_belarus"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_belarus_gomel_region_current"
+  },
+  {
+    id: "ent_belarus_grodno_region",
+    name: "Grodno Region",
+    aliases: [
+      "Grodno Oblast",
+      "Hrodna Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_belarus"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_belarus_grodno_region_current"
+  },
+  {
+    id: "ent_belarus_minsk_region",
+    name: "Minsk Region",
+    aliases: [
+      "Minsk Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_belarus"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_belarus_minsk_region_current"
+  },
+  {
+    id: "ent_belarus_mogilev_region",
+    name: "Mogilev Region",
+    aliases: [
+      "Mogilev Oblast",
+      "Mahilyow Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_belarus"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_belarus_mogilev_region_current"
+  },
+  {
+    id: "ent_belarus_vitebsk_region",
+    name: "Vitebsk Region",
+    aliases: [
+      "Vitebsk Oblast",
+      "Viciebsk Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_belarus"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_belarus_vitebsk_region_current"
+  },
+  {
     id: "ent_belgium",
     name: "Belgium",
     aliases: ["Kingdom of Belgium"],
@@ -5464,10 +5546,10 @@ const entities = [
     parentIds: ["ent_southern_europe"],
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_italy_current"
-  },,
+  },
   /*
     Italy and its current regions.
-  */,
+  */
   {
     id: "ent_italy_abruzzo",
     name: "Abruzzo",

@@ -5557,6 +5557,96 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_belarus_brest_region_current",
+    entityId: "ent_belarus_brest_region",
+    assetId: "ast_brest_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Brest Region",
+      "Flag of Brest Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belarus_city_of_minsk_current",
+    entityId: "ent_belarus_city_of_minsk",
+    assetId: "ast_city_of_minsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of City of Minsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belarus_gomel_region_current",
+    entityId: "ent_belarus_gomel_region",
+    assetId: "ast_gomel_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Gomel Region",
+      "Flag of Gomel Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belarus_grodno_region_current",
+    entityId: "ent_belarus_grodno_region",
+    assetId: "ast_grodno_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Grodno Region",
+      "Flag of Grodno Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belarus_minsk_region_current",
+    entityId: "ent_belarus_minsk_region",
+    assetId: "ast_minsk_oblast_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Minsk Region",
+      "Flag of Minsk Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belarus_mogilev_region_current",
+    entityId: "ent_belarus_mogilev_region",
+    assetId: "ast_mogilev_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Mogilev Region",
+      "Flag of Mogilev Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_belarus_vitebsk_region_current",
+    entityId: "ent_belarus_vitebsk_region",
+    assetId: "ast_vitebsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Vitebsk Region",
+      "Flag of Vitebsk Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_belgium_current",
     entityId: "ent_belgium",
     assetId: "ast_belgium_current",
@@ -6733,7 +6823,7 @@ const variants = [
   },
   /*
     Italy current regional variants.
-  */,
+  */
   {
     id: "var_italy_abruzzo_current",
     entityId: "ent_italy_abruzzo",

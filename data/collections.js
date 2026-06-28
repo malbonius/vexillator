@@ -3036,6 +3036,29 @@ const collections = [
     }
   },
   {
+    id: "col_belarus_first_level_subdivisions",
+    name: "Belarusian First-Level Subdivision Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes the six Belarusian regions/oblasts and the City of Minsk as current first-level subdivisions.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_belarus"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_czechia_regions",
     name: "Czech Regional Flags",
     type: "dynamic",

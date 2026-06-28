@@ -351,6 +351,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_belarus",
+    name: "Belarus",
+    parentGroupIds: ["grp_eastern_europe"],
+    collectionIds: [
+      "col_belarus_first_level_subdivisions"
+    ]
+  },
+  {
     id: "grp_czechia",
     name: "Czechia",
     parentGroupIds: ["grp_eastern_europe"],

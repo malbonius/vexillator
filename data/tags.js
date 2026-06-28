@@ -23,12 +23,13 @@ const tagRegistry = Object.freeze({
 	"overseas",
 	"region",
 	"autonomous",
+	"city",
+	"municipality",
 	
 	/*  unused tags 
 	"state",
     "province",	
 	"district",
-	"municipality",
     "department",
     "dependent_territory",
 	"constituent_country",
