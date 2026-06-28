@@ -4367,7 +4367,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_belarus"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_belarus_city_of_minsk_current"
   },
   {
@@ -4813,7 +4813,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_czechia"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_czechia_prague_current"
   },
   {
@@ -5375,7 +5375,7 @@ const entities = [
     aliases: ["Free Hanseatic City of Bremen", "Freie Hansestadt Bremen"],
     entityType: "geographic",
     parentIds: ["ent_germany"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_germany_bremen_current"
   },
   {
@@ -5384,7 +5384,7 @@ const entities = [
     aliases: ["Free and Hanseatic City of Hamburg", "Freie und Hansestadt Hamburg"],
     entityType: "geographic",
     parentIds: ["ent_germany"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_germany_hamburg_current"
   },
   {
@@ -5775,7 +5775,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_latvia"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_latvia_daugavpils_current"
   },
   {
@@ -5787,7 +5787,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_latvia"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_latvia_jelgava_current"
   },
   {
@@ -5802,7 +5802,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_latvia"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_latvia_jurmala_current"
   },
   {
@@ -5817,7 +5817,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_latvia"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_latvia_liepaja_current"
   },
   {
@@ -5832,7 +5832,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_latvia"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_latvia_rezekne_current"
   },
   {
@@ -5847,7 +5847,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_latvia"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_latvia_riga_current"
   },
   {
@@ -5859,7 +5859,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_latvia"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_latvia_ventspils_current"
   },
   {
@@ -7886,6 +7886,7 @@ const entities = [
     tags: [
       "subdivision",
       "first_level_subdivision",
+      "city",
       "autonomous",
       "overseas",
       "current",
@@ -7966,6 +7967,7 @@ const entities = [
     tags: [
       "subdivision",
       "first_level_subdivision",
+      "city",
       "autonomous",
       "overseas",
       "current",
@@ -8286,7 +8288,7 @@ const entities = [
     aliases: ["Square Mile"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "city", "current", "subdivision"],
     defaultVariantId: "var_city_of_london_current"
   },
   {
