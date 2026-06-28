@@ -7572,9 +7572,21 @@ const variants = [
       "Flag of Oslo fylke",
       "Flag of Oslo kommune"
     ],
-    tags: ["official", "current", "non_quizzable"],
+    tags: ["official", "current"],
     startYear: null,
     endYear: null
+  },
+  {
+    id: "var_norway_oslo_county_current_text_removed",
+    entityId: "ent_norway_oslo_county",
+    assetId: "ast_oslo_current_text_removed",
+    displayName: "Official Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_norway_oslo_county_current"
   },
   {
     id: "var_norway_ostfold_county_current",
