@@ -6066,7 +6066,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_monaco"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
     defaultVariantId: "var_municipality_of_monaco_current"
   },
   {
