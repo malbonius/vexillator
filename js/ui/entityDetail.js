@@ -38,7 +38,7 @@ function createEntitySelectionGroupId(
 */
 function getEntitySelectionGroupTypeLabel(groupType) {
   const labelsByType = {
-    child_entities: "Child Entities",
+    child_entities: "Includes",
     administered_entities: "Administered Entities",
     constituent_entities: "Constituent Entities",
     membership_members: "Members",
@@ -1462,7 +1462,6 @@ function createEntityDefaultVariantHeroElement(
   The first pass shows:
   - entity identity;
   - aliases;
-  - tags;
   - parents;
   - all variants belonging to the entity.
 */
@@ -1853,7 +1852,7 @@ function renderEntityView() {
 
   const parentsLabelElement = document.createElement("span");
   parentsLabelElement.className = "entity-detail-meta";
-  parentsLabelElement.textContent = "Parents:";
+  parentsLabelElement.textContent = "Part of:";
 
   parentsElement.appendChild(parentsLabelElement);
 
@@ -2023,13 +2022,6 @@ if (constituentOfEntities.length > 0) {
     );
   }
 
-
-  const tagsElement = document.createElement("p");
-  tagsElement.className = "entity-detail-meta";
-  tagsElement.textContent = entity.tags.length > 0 ?
-    `Tags: ${entity.tags.join(", ")}` :
-    "Tags: none";
-  summaryInfoElement.appendChild(tagsElement);
   
   /*
   Show flags belonging to another entity that officially represent the
@@ -2633,7 +2625,7 @@ childrenHeaderElement.className = "entity-section-header";
 
 const childDisclosureButton =
   createEntityDetailDisclosureButton({
-    label: "Child Entities",
+    label: "Includes",
     count: childEntities.length,
     expanded: isChildSectionExpanded,
     sectionKey: "childEntities",
@@ -2672,11 +2664,11 @@ childrenSectionElement.appendChild(childrenHeaderElement);
         childFilterInput.type = "search";
         childFilterInput.className = "entity-child-filter";
         childFilterInput.placeholder =
-          `Filter ${childEntities.length} child entities`;
+          `Filter ${childEntities.length} included entities`;
 
         childFilterInput.setAttribute(
           "aria-label",
-          `Filter child entities of ${entity.name}`
+          `Filter entities included in ${entity.name}`
         );
 
         childrenSectionElement.appendChild(childFilterInput);
@@ -2694,7 +2686,7 @@ childrenSectionElement.appendChild(childrenHeaderElement);
         "empty-message entity-child-no-matches";
 
       noMatchesElement.textContent =
-        "No matching child entities.";
+        "No matching included entities.";
 
       noMatchesElement.hidden = true;
 
@@ -3148,14 +3140,6 @@ if (variantsSectionExpanded) {
 
         bodyElement.appendChild(yearElement);
       }
-
-      const variantTagsElement = document.createElement("p");
-      variantTagsElement.className = "entity-variant-meta";
-      variantTagsElement.textContent = variant.tags.length > 0 ?
-        `Tags: ${variant.tags.join(", ")}` :
-        "Tags: none";
-
-      bodyElement.appendChild(variantTagsElement);
 
       /*
   Explain how quiz-safe text-removed variants behave in the working pool.
