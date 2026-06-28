@@ -879,11 +879,6 @@ if (renditionButton) {
       entityMetaParts.push(yearsText);
     }
 
-    if (variant && variant.tags.length > 0) {
-      entityMetaParts.push(
-        `Tags: ${variant.tags.join(", ")}`
-      );
-    }
 
     if (variant?.tags.includes("text_removed")) {
       entityMetaParts.push(
