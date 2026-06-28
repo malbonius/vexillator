@@ -1446,12 +1446,6 @@ function createEntityDefaultVariantHeroElement(
 
   heroElement.appendChild(imageButton);
 
-  const labelElement = document.createElement("p");
-  labelElement.className = "entity-default-variant-label";
-  labelElement.textContent =
-    `Default variant: ${defaultVariant.displayName}`;
-
-  heroElement.appendChild(labelElement);
 
   return heroElement;
 }
