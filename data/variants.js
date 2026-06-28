@@ -6762,6 +6762,442 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_hungary_bacs_kiskun_current",
+    entityId: "ent_hungary_bacs_kiskun",
+    assetId: "ast_bacs_kiskun_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Bács-Kiskun County",
+      "Bács-Kiskun County Flag",
+      "Flag of Bács-Kiskun vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_baranya_current",
+    entityId: "ent_hungary_baranya",
+    assetId: "ast_baranya_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Baranya County",
+      "Baranya County Flag",
+      "Flag of Baranya vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_baranya_current_text_removed",
+    entityId: "ent_hungary_baranya",
+    assetId: "ast_baranya_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_baranya_current"
+  },
+  {
+    id: "var_hungary_bekes_current",
+    entityId: "ent_hungary_bekes",
+    assetId: "ast_bekes_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Békés County",
+      "Békés County Flag",
+      "Flag of Békés vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_bekes_current_text_removed",
+    entityId: "ent_hungary_bekes",
+    assetId: "ast_bekes_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_bekes_current"
+  },
+  {
+    id: "var_hungary_borsod_abauj_zemplen_current",
+    entityId: "ent_hungary_borsod_abauj_zemplen",
+    assetId: "ast_borsod_abauj_zemplen_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Borsod-Abaúj-Zemplén County",
+      "Borsod-Abaúj-Zemplén County Flag",
+      "Flag of Borsod-Abaúj-Zemplén vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_budapest_city_current",
+    entityId: "ent_hungary_budapest_city",
+    assetId: "ast_budapest_current",
+    displayName: "Official City Flag",
+    aliases: [
+      "Flag of Budapest",
+      "Budapest City Flag",
+      "Flag of Budapest főváros"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_csongrad_csanad_current",
+    entityId: "ent_hungary_csongrad_csanad",
+    assetId: "ast_csonrad_csanad_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Csongrád-Csanád County",
+      "Csongrád-Csanád County Flag",
+      "Flag of Csongrád-Csanád vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_csongrad_csanad_current_text_removed",
+    entityId: "ent_hungary_csongrad_csanad",
+    assetId: "ast_csonrad_csanad_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_csongrad_csanad_current"
+  },
+  {
+    id: "var_hungary_fejer_current",
+    entityId: "ent_hungary_fejer",
+    assetId: "ast_fejer_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Fejér County",
+      "Fejér County Flag",
+      "Flag of Fejér vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_fejer_current_text_removed",
+    entityId: "ent_hungary_fejer",
+    assetId: "ast_fejer_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_fejer_current"
+  },
+  {
+    id: "var_hungary_gyor_moson_sopron_current",
+    entityId: "ent_hungary_gyor_moson_sopron",
+    assetId: "ast_gyor_moson_sopron_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Győr-Moson-Sopron County",
+      "Győr-Moson-Sopron County Flag",
+      "Flag of Győr-Moson-Sopron vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_hajdu_bihar_current",
+    entityId: "ent_hungary_hajdu_bihar",
+    assetId: "ast_hajdu_bihar_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Hajdú-Bihar County",
+      "Hajdú-Bihar County Flag",
+      "Flag of Hajdú-Bihar vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_heves_current",
+    entityId: "ent_hungary_heves",
+    assetId: "ast_heves_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Heves County",
+      "Heves County Flag",
+      "Flag of Heves vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_jasz_nagykun_szolnok_current",
+    entityId: "ent_hungary_jasz_nagykun_szolnok",
+    assetId: "ast_jasz_nagykun_szolnok_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Jász-Nagykun-Szolnok County",
+      "Jász-Nagykun-Szolnok County Flag",
+      "Flag of Jász-Nagykun-Szolnok vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_jasz_nagykun_szolnok_current_text_removed",
+    entityId: "ent_hungary_jasz_nagykun_szolnok",
+    assetId: "ast_jasz_nagykun_szolnok_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_jasz_nagykun_szolnok_current"
+  },
+  {
+    id: "var_hungary_komarom_esztergom_current",
+    entityId: "ent_hungary_komarom_esztergom",
+    assetId: "ast_komarom_esztergom_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Komárom-Esztergom County",
+      "Komárom-Esztergom County Flag",
+      "Flag of Komárom-Esztergom vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_komarom_esztergom_current_text_removed",
+    entityId: "ent_hungary_komarom_esztergom",
+    assetId: "ast_komarom_esztergom_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_komarom_esztergom_current"
+  },
+  {
+    id: "var_hungary_nograd_current",
+    entityId: "ent_hungary_nograd",
+    assetId: "ast_nograd_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Nógrád County",
+      "Nógrád County Flag",
+      "Flag of Nógrád vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_nograd_current_text_removed",
+    entityId: "ent_hungary_nograd",
+    assetId: "ast_nograd_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_nograd_current"
+  },
+  {
+    id: "var_hungary_pest_current",
+    entityId: "ent_hungary_pest",
+    assetId: "ast_pest_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Pest County",
+      "Pest County Flag",
+      "Flag of Pest vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_pest_current_text_removed",
+    entityId: "ent_hungary_pest",
+    assetId: "ast_pest_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_pest_current"
+  },
+  {
+    id: "var_hungary_somogy_current",
+    entityId: "ent_hungary_somogy",
+    assetId: "ast_somogy_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Somogy County",
+      "Somogy County Flag",
+      "Flag of Somogy vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_somogy_current_text_removed",
+    entityId: "ent_hungary_somogy",
+    assetId: "ast_somogy_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_somogy_current"
+  },
+  {
+    id: "var_hungary_szabolcs_szatmar_bereg_current",
+    entityId: "ent_hungary_szabolcs_szatmar_bereg",
+    assetId: "ast_szabolcs_szatmar_bereg_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Szabolcs-Szatmár-Bereg County",
+      "Szabolcs-Szatmár-Bereg County Flag",
+      "Flag of Szabolcs-Szatmár-Bereg vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_szabolcs_szatmar_bereg_current_text_removed",
+    entityId: "ent_hungary_szabolcs_szatmar_bereg",
+    assetId: "ast_szabolcs_szatmar_bereg_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_szabolcs_szatmar_bereg_current"
+  },
+  {
+    id: "var_hungary_tolna_current",
+    entityId: "ent_hungary_tolna",
+    assetId: "ast_tolna_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Tolna County",
+      "Tolna County Flag",
+      "Flag of Tolna vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_tolna_current_text_removed",
+    entityId: "ent_hungary_tolna",
+    assetId: "ast_tolna_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_tolna_current"
+  },
+  {
+    id: "var_hungary_vas_current",
+    entityId: "ent_hungary_vas",
+    assetId: "ast_vas_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Vas County",
+      "Vas County Flag",
+      "Flag of Vas vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_vas_current_text_removed",
+    entityId: "ent_hungary_vas",
+    assetId: "ast_vas_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_vas_current"
+  },
+  {
+    id: "var_hungary_veszprem_current",
+    entityId: "ent_hungary_veszprem",
+    assetId: "ast_veszprem_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Veszprém County",
+      "Veszprém County Flag",
+      "Flag of Veszprém vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_zala_current",
+    entityId: "ent_hungary_zala",
+    assetId: "ast_zala_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Zala County",
+      "Zala County Flag",
+      "Flag of Zala vármegye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hungary_zala_current_text_removed",
+    entityId: "ent_hungary_zala",
+    assetId: "ast_zala_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_hungary_zala_current"
+  },
+  {
     id: "var_iceland_current",
     entityId: "ent_iceland",
     assetId: "ast_iceland_current",

@@ -5515,6 +5515,359 @@ const entities = [
     defaultVariantId: "var_hungary_current"
   },
   {
+    id: "ent_hungary_bacs_kiskun",
+    name: "Bács-Kiskun County",
+    aliases: [
+      "Bács-Kiskun",
+      "Bacs-Kiskun",
+      "Bács-Kiskun vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_bacs_kiskun_current"
+  },
+  {
+    id: "ent_hungary_baranya",
+    name: "Baranya County",
+    aliases: [
+      "Baranya",
+      "Baranya vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_baranya_current"
+  },
+  {
+    id: "ent_hungary_bekes",
+    name: "Békés County",
+    aliases: [
+      "Békés",
+      "Bekes",
+      "Békés vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_bekes_current"
+  },
+  {
+    id: "ent_hungary_borsod_abauj_zemplen",
+    name: "Borsod-Abaúj-Zemplén County",
+    aliases: [
+      "Borsod-Abaúj-Zemplén",
+      "Borsod-Abauj-Zemplen",
+      "Borsod-Abaúj-Zemplén vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_borsod_abauj_zemplen_current"
+  },
+  {
+    id: "ent_hungary_budapest_city",
+    name: "Budapest",
+    aliases: [
+      "Budapest főváros",
+      "City of Budapest",
+      "Capital City of Budapest"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "city",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_budapest_city_current"
+  },
+  {
+    id: "ent_hungary_csongrad_csanad",
+    name: "Csongrád-Csanád County",
+    aliases: [
+      "Csongrád-Csanád",
+      "Csongrad-Csanad",
+      "Csongrád-Csanád vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_csongrad_csanad_current"
+  },
+  {
+    id: "ent_hungary_fejer",
+    name: "Fejér County",
+    aliases: [
+      "Fejér",
+      "Fejer",
+      "Fejér vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_fejer_current"
+  },
+  {
+    id: "ent_hungary_gyor_moson_sopron",
+    name: "Győr-Moson-Sopron County",
+    aliases: [
+      "Győr-Moson-Sopron",
+      "Gyor-Moson-Sopron",
+      "Győr-Moson-Sopron vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_gyor_moson_sopron_current"
+  },
+  {
+    id: "ent_hungary_hajdu_bihar",
+    name: "Hajdú-Bihar County",
+    aliases: [
+      "Hajdú-Bihar",
+      "Hajdu-Bihar",
+      "Hajdú-Bihar vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_hajdu_bihar_current"
+  },
+  {
+    id: "ent_hungary_heves",
+    name: "Heves County",
+    aliases: [
+      "Heves",
+      "Heves vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_heves_current"
+  },
+  {
+    id: "ent_hungary_jasz_nagykun_szolnok",
+    name: "Jász-Nagykun-Szolnok County",
+    aliases: [
+      "Jász-Nagykun-Szolnok",
+      "Jasz-Nagykun-Szolnok",
+      "Jász-Nagykun-Szolnok vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_jasz_nagykun_szolnok_current"
+  },
+  {
+    id: "ent_hungary_komarom_esztergom",
+    name: "Komárom-Esztergom County",
+    aliases: [
+      "Komárom-Esztergom",
+      "Komarom-Esztergom",
+      "Komárom-Esztergom vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_komarom_esztergom_current"
+  },
+  {
+    id: "ent_hungary_nograd",
+    name: "Nógrád County",
+    aliases: [
+      "Nógrád",
+      "Nograd",
+      "Nógrád vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_nograd_current"
+  },
+  {
+    id: "ent_hungary_pest",
+    name: "Pest County",
+    aliases: [
+      "Pest",
+      "Pest vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_pest_current"
+  },
+  {
+    id: "ent_hungary_somogy",
+    name: "Somogy County",
+    aliases: [
+      "Somogy",
+      "Somogy vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_somogy_current"
+  },
+  {
+    id: "ent_hungary_szabolcs_szatmar_bereg",
+    name: "Szabolcs-Szatmár-Bereg County",
+    aliases: [
+      "Szabolcs-Szatmár-Bereg",
+      "Szabolcs-Szatmar-Bereg",
+      "Szabolcs-Szatmár-Bereg vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_szabolcs_szatmar_bereg_current"
+  },
+  {
+    id: "ent_hungary_tolna",
+    name: "Tolna County",
+    aliases: [
+      "Tolna",
+      "Tolna vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_tolna_current"
+  },
+  {
+    id: "ent_hungary_vas",
+    name: "Vas County",
+    aliases: [
+      "Vas",
+      "Vas vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_vas_current"
+  },
+  {
+    id: "ent_hungary_veszprem",
+    name: "Veszprém County",
+    aliases: [
+      "Veszprém",
+      "Veszprem",
+      "Veszprém vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_veszprem_current"
+  },
+  {
+    id: "ent_hungary_zala",
+    name: "Zala County",
+    aliases: [
+      "Zala",
+      "Zala vármegye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_hungary"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "county",
+      "current"
+    ],
+    defaultVariantId: "var_hungary_zala_current"
+  },
+  {
     id: "ent_iceland",
     name: "Iceland",
     aliases: ["Republic of Iceland"],

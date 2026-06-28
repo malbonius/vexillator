@@ -301,6 +301,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/baranya_current.svg"
   },
   {
+    id: "ast_baranya_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/baranya_current_text_removed.svg"
+  },
+  {
     id: "ast_barbados_current",
     path: "assets/flags/geography/caribbean/barbados/barbados_current.svg"
   },
@@ -347,6 +351,10 @@ const assets = [
   {
     id: "ast_bekes_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/bekes_current.svg"
+  },
+  {
+    id: "ast_bekes_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/bekes_current_text_removed.svg"
   },
   {
     id: "ast_belarus_current",
@@ -789,6 +797,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/csonrad_csanad_current.svg"
   },
   {
+    id: "ast_csonrad_csanad_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/csonrad_csanad_current_text_removed.svg"
+  },
+  {
     id: "ast_cuba_current",
     path: "assets/flags/geography/caribbean/cuba/cuba_current.svg"
   },
@@ -1015,6 +1027,10 @@ const assets = [
   {
     id: "ast_fejer_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/fejer_current.svg"
+  },
+  {
+    id: "ast_fejer_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/fejer_current_text_removed.svg"
   },
   {
     id: "ast_fifa_current",
@@ -1593,6 +1609,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/jasz_nagykun_szolnok_current.svg"
   },
   {
+    id: "ast_jasz_nagykun_szolnok_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/jasz_nagykun_szolnok_current_text_removed.svg"
+  },
+  {
     id: "ast_jelgava_current",
     path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/jelgava_current.svg"
   },
@@ -1711,6 +1731,10 @@ const assets = [
   {
     id: "ast_komarom_esztergom_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/komarom_esztergom_current.svg"
+  },
+  {
+    id: "ast_komarom_esztergom_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/komarom_esztergom_current_text_removed.svg"
   },
   {
     id: "ast_kosovo_current",
@@ -2333,6 +2357,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/nograd_current.svg"
   },
   {
+    id: "ast_nograd_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/nograd_current_text_removed.svg"
+  },
+  {
     id: "ast_nord_pas_de_calais_current",
     path: "assets/flags/geography/europe/western_europe/france/regions/pre-2016/nord_pas_de_calais/nord_pas_de_calais_current.svg"
   },
@@ -2663,6 +2691,10 @@ const assets = [
   {
     id: "ast_pest_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/pest_current.svg"
+  },
+  {
+    id: "ast_pest_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/pest_current_text_removed.svg"
   },
   {
     id: "ast_philippines_current",
@@ -3077,6 +3109,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/somogy_current.svg"
   },
   {
+    id: "ast_somogy_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/somogy_current_text_removed.svg"
+  },
+  {
     id: "ast_south_africa_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/southern_africa/south_africa/national/south_africa_current.svg"
   },
@@ -3229,6 +3265,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/szabolcs_szatmar_bereg_current.svg"
   },
   {
+    id: "ast_szabolcs_szatmar_bereg_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/szabolcs_szatmar_bereg_current_text_removed.svg"
+  },
+  {
     id: "ast_tachira_current",
     path: "assets/flags/geography/south_america/venezuela/region/andean_region/tachira_current.svg"
   },
@@ -3323,6 +3363,10 @@ const assets = [
   {
     id: "ast_tolna_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/tolna_current.svg"
+  },
+  {
+    id: "ast_tolna_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/tolna_current_text_removed.svg"
   },
   {
     id: "ast_tonga_current",
@@ -3531,6 +3575,10 @@ const assets = [
   {
     id: "ast_vas_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/vas_current.svg"
+  },
+  {
+    id: "ast_vas_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/vas_current_text_removed.svg"
   },
   {
     id: "ast_vasterbotten_current",
@@ -3791,6 +3839,10 @@ const assets = [
   {
     id: "ast_zala_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/zala_current.svg"
+  },
+  {
+    id: "ast_zala_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/hungary/counties/zala_current_text_removed.svg"
   },
   {
     id: "ast_zambia_current",

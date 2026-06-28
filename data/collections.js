@@ -3059,6 +3059,29 @@ const collections = [
     }
   },
   {
+    id: "col_hungary_first_level_subdivisions",
+    name: "Hungarian County and Capital City Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes the 19 Hungarian counties and Budapest as current first-level subdivisions.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_hungary"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_czechia_regions",
     name: "Czech Regional Flags",
     type: "dynamic",
