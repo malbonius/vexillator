@@ -366,6 +366,29 @@ const collectionGroups = [
       "col_hungary_first_level_subdivisions"
     ]
   },
+
+  {
+    id: "grp_russia",
+    name: "Russia",
+    parentGroupIds: ["grp_eastern_europe"],
+    collectionIds: [
+      "col_russia_first_level_subdivisions",
+      "col_russia_central_region_flags",
+      "col_russia_northwestern_region_flags",
+      "col_russia_southern_region_flags",
+      "col_russia_north_caucasian_region_flags",
+      "col_russia_volga_region_flags",
+      "col_russia_ural_region_flags",
+      "col_russia_siberian_region_flags",
+      "col_russia_far_eastern_region_flags",
+      "col_russian_oblast_flags",
+      "col_russian_republic_flags",
+      "col_russian_krai_flags",
+      "col_russian_autonomous_okrug_flags",
+      "col_russian_autonomous_oblast_flags",
+      "col_russian_federal_city_flags"
+    ]
+  },
   {
     id: "grp_czechia",
     name: "Czechia",

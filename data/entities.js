@@ -4021,6 +4021,1175 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_russia_current"
   },
+
+
+  /*
+    Russian federal subjects.
+  */
+  {
+    id: "ent_russia_belgorod",
+    name: "Belgorod Oblast",
+    aliases: ["Belgorod"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_belgorod_current"
+  },
+  {
+    id: "ent_russia_bryansk",
+    name: "Bryansk Oblast",
+    aliases: ["Bryansk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_bryansk_current"
+  },
+  {
+    id: "ent_russia_ivanovo",
+    name: "Ivanovo Oblast",
+    aliases: ["Ivanovo"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_ivanovo_current"
+  },
+  {
+    id: "ent_russia_kaluga",
+    name: "Kaluga Oblast",
+    aliases: ["Kaluga"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kaluga_current"
+  },
+  {
+    id: "ent_russia_kostroma",
+    name: "Kostroma Oblast",
+    aliases: ["Kostroma"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kostroma_current"
+  },
+  {
+    id: "ent_russia_kursk",
+    name: "Kursk Oblast",
+    aliases: ["Kursk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kursk_current"
+  },
+  {
+    id: "ent_russia_lipetsk",
+    name: "Lipetsk Oblast",
+    aliases: ["Lipetsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_lipetsk_current"
+  },
+  {
+    id: "ent_russia_moscow",
+    name: "Moscow",
+    aliases: ["Federal City of Moscow"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "city",
+      "current"
+    ],
+    defaultVariantId: "var_russia_moscow_current"
+  },
+  {
+    id: "ent_russia_moscow_oblast",
+    name: "Moscow Oblast",
+    aliases: ["Moscow Region"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_moscow_oblast_current"
+  },
+  {
+    id: "ent_russia_oryol",
+    name: "Oryol Oblast",
+    aliases: [
+      "Orel Oblast",
+      "Oryol"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_oryol_current"
+  },
+  {
+    id: "ent_russia_ryazan",
+    name: "Ryazan Oblast",
+    aliases: ["Ryazan"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_ryazan_current"
+  },
+  {
+    id: "ent_russia_smolensk",
+    name: "Smolensk Oblast",
+    aliases: ["Smolensk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_smolensk_current"
+  },
+  {
+    id: "ent_russia_tambov",
+    name: "Tambov Oblast",
+    aliases: ["Tambov"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_tambov_current"
+  },
+  {
+    id: "ent_russia_tula",
+    name: "Tula Oblast",
+    aliases: ["Tula"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_tula_current"
+  },
+  {
+    id: "ent_russia_tver",
+    name: "Tver Oblast",
+    aliases: ["Tver"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_tver_current"
+  },
+  {
+    id: "ent_russia_vladimir",
+    name: "Vladimir Oblast",
+    aliases: ["Vladimir"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_vladimir_current"
+  },
+  {
+    id: "ent_russia_voronezh",
+    name: "Voronezh Oblast",
+    aliases: ["Voronezh"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_voronezh_current"
+  },
+  {
+    id: "ent_russia_yaroslavl",
+    name: "Yaroslavl Oblast",
+    aliases: ["Yaroslavl"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_yaroslavl_current"
+  },
+  {
+    id: "ent_russia_amur",
+    name: "Amur Oblast",
+    aliases: ["Amur"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_amur_current"
+  },
+  {
+    id: "ent_russia_buryatia",
+    name: "Republic of Buryatia",
+    aliases: ["Buryatia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_buryatia_current"
+  },
+  {
+    id: "ent_russia_chukotka",
+    name: "Chukotka Autonomous Okrug",
+    aliases: ["Chukotka"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_chukotka_current"
+  },
+  {
+    id: "ent_russia_jewish_autonomous_oblast",
+    name: "Jewish Autonomous Oblast",
+    aliases: ["Yevrey Autonomous Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_jewish_autonomous_oblast_current"
+  },
+  {
+    id: "ent_russia_kamchatka",
+    name: "Kamchatka Krai",
+    aliases: ["Kamchatka"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kamchatka_current"
+  },
+  {
+    id: "ent_russia_khabarovsk",
+    name: "Khabarovsk Krai",
+    aliases: ["Khabarovsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_khabarovsk_current"
+  },
+  {
+    id: "ent_russia_magadan",
+    name: "Magadan Oblast",
+    aliases: ["Magadan"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_magadan_current"
+  },
+  {
+    id: "ent_russia_primorsky",
+    name: "Primorsky Krai",
+    aliases: ["Primorye"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_primorsky_current"
+  },
+  {
+    id: "ent_russia_sakha",
+    name: "Sakha Republic",
+    aliases: [
+      "Yakutia",
+      "Republic of Sakha"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_sakha_current"
+  },
+  {
+    id: "ent_russia_sakhalin",
+    name: "Sakhalin Oblast",
+    aliases: ["Sakhalin"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_sakhalin_current"
+  },
+  {
+    id: "ent_russia_zabaykalsky",
+    name: "Zabaykalsky Krai",
+    aliases: [
+      "Transbaikal Krai",
+      "Zabaykalye"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_zabaykalsky_current"
+  },
+  {
+    id: "ent_russia_chechen_republic",
+    name: "Chechen Republic",
+    aliases: ["Chechnya"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_chechen_republic_current"
+  },
+  {
+    id: "ent_russia_dagestan",
+    name: "Republic of Dagestan",
+    aliases: ["Dagestan"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_dagestan_current"
+  },
+  {
+    id: "ent_russia_ingushetia",
+    name: "Republic of Ingushetia",
+    aliases: ["Ingushetia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_ingushetia_current"
+  },
+  {
+    id: "ent_russia_kabardino_balkaria",
+    name: "Kabardino-Balkarian Republic",
+    aliases: ["Kabardino-Balkaria"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kabardino_balkaria_current"
+  },
+  {
+    id: "ent_russia_karachay_cherkessia",
+    name: "Karachay-Cherkess Republic",
+    aliases: ["Karachay-Cherkessia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_karachay_cherkessia_current"
+  },
+  {
+    id: "ent_russia_north_ossetia",
+    name: "Republic of North Ossetia-Alania",
+    aliases: [
+      "North Ossetia",
+      "North Ossetia-Alania"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_north_ossetia_current"
+  },
+  {
+    id: "ent_russia_stavropol",
+    name: "Stavropol Krai",
+    aliases: ["Stavropol"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_stavropol_current"
+  },
+  {
+    id: "ent_russia_arkhangelsk",
+    name: "Arkhangelsk Oblast",
+    aliases: ["Arkhangelsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_arkhangelsk_current"
+  },
+  {
+    id: "ent_russia_kaliningrad",
+    name: "Kaliningrad Oblast",
+    aliases: ["Kaliningrad"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kaliningrad_current"
+  },
+  {
+    id: "ent_russia_karelia",
+    name: "Republic of Karelia",
+    aliases: ["Karelia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_karelia_current"
+  },
+  {
+    id: "ent_russia_komi",
+    name: "Komi Republic",
+    aliases: ["Republic of Komi"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_komi_current"
+  },
+  {
+    id: "ent_russia_leningrad",
+    name: "Leningrad Oblast",
+    aliases: ["Leningrad"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_leningrad_current"
+  },
+  {
+    id: "ent_russia_murmansk",
+    name: "Murmansk Oblast",
+    aliases: ["Murmansk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_murmansk_current"
+  },
+  {
+    id: "ent_russia_nenets",
+    name: "Nenets Autonomous Okrug",
+    aliases: ["Nenetsia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_nenets_current"
+  },
+  {
+    id: "ent_russia_novgorod",
+    name: "Novgorod Oblast",
+    aliases: ["Novgorod"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_novgorod_current"
+  },
+  {
+    id: "ent_russia_pskov",
+    name: "Pskov Oblast",
+    aliases: ["Pskov"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_pskov_current"
+  },
+  {
+    id: "ent_russia_saint_petersburg",
+    name: "Saint Petersburg",
+    aliases: [
+      "St Petersburg",
+      "Federal City of Saint Petersburg"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "city",
+      "current"
+    ],
+    defaultVariantId: "var_russia_saint_petersburg_current"
+  },
+  {
+    id: "ent_russia_vologda",
+    name: "Vologda Oblast",
+    aliases: ["Vologda"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_vologda_current"
+  },
+  {
+    id: "ent_russia_altai",
+    name: "Altai Krai",
+    aliases: ["Altai Territory"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_altai_current"
+  },
+  {
+    id: "ent_russia_altai_republic",
+    name: "Altai Republic",
+    aliases: ["Republic of Altai"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_altai_republic_current"
+  },
+  {
+    id: "ent_russia_irkutsk",
+    name: "Irkutsk Oblast",
+    aliases: ["Irkutsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_irkutsk_current"
+  },
+  {
+    id: "ent_russia_kemerovo",
+    name: "Kemerovo Oblast",
+    aliases: [
+      "Kuzbass",
+      "Kemerovo Oblast-Kuzbass"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kemerovo_current"
+  },
+  {
+    id: "ent_russia_khakassia",
+    name: "Republic of Khakassia",
+    aliases: ["Khakassia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_khakassia_current"
+  },
+  {
+    id: "ent_russia_krasnoyarsk",
+    name: "Krasnoyarsk Krai",
+    aliases: ["Krasnoyarsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_krasnoyarsk_current"
+  },
+  {
+    id: "ent_russia_novosibirsk",
+    name: "Novosibirsk Oblast",
+    aliases: ["Novosibirsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_novosibirsk_current"
+  },
+  {
+    id: "ent_russia_omsk",
+    name: "Omsk Oblast",
+    aliases: ["Omsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_omsk_current"
+  },
+  {
+    id: "ent_russia_tomsk",
+    name: "Tomsk Oblast",
+    aliases: ["Tomsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_tomsk_current"
+  },
+  {
+    id: "ent_russia_tuva",
+    name: "Tuva Republic",
+    aliases: [
+      "Tyva Republic",
+      "Republic of Tuva"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_tuva_current"
+  },
+  {
+    id: "ent_russia_adygea",
+    name: "Republic of Adygea",
+    aliases: ["Adygea"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_adygea_current"
+  },
+  {
+    id: "ent_russia_astrakhan",
+    name: "Astrakhan Oblast",
+    aliases: ["Astrakhan"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_astrakhan_current"
+  },
+  {
+    id: "ent_russia_crimea",
+    name: "Republic of Crimea",
+    aliases: ["Crimea"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current",
+      "disputed"
+    ],
+    defaultVariantId: "var_russia_crimea_current"
+  },
+  {
+    id: "ent_russia_kalmykia",
+    name: "Republic of Kalmykia",
+    aliases: ["Kalmykia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kalmykia_current"
+  },
+  {
+    id: "ent_russia_krasnodar",
+    name: "Krasnodar Krai",
+    aliases: ["Krasnodar"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_krasnodar_current"
+  },
+  {
+    id: "ent_russia_rostov",
+    name: "Rostov Oblast",
+    aliases: ["Rostov"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_rostov_current"
+  },
+  {
+    id: "ent_russia_sevastopol",
+    name: "Sevastopol",
+    aliases: ["Federal City of Sevastopol"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "city",
+      "current",
+      "disputed"
+    ],
+    defaultVariantId: "var_russia_sevastopol_current"
+  },
+  {
+    id: "ent_russia_volgograd",
+    name: "Volgograd Oblast",
+    aliases: ["Volgograd"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_volgograd_current"
+  },
+  {
+    id: "ent_russia_chelyabinsk",
+    name: "Chelyabinsk Oblast",
+    aliases: ["Chelyabinsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_chelyabinsk_current"
+  },
+  {
+    id: "ent_russia_kurgan",
+    name: "Kurgan Oblast",
+    aliases: ["Kurgan"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kurgan_current"
+  },
+  {
+    id: "ent_russia_sverdlovsk",
+    name: "Sverdlovsk Oblast",
+    aliases: ["Sverdlovsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_sverdlovsk_current"
+  },
+  {
+    id: "ent_russia_tyumen",
+    name: "Tyumen Oblast",
+    aliases: ["Tyumen"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_tyumen_current"
+  },
+  {
+    id: "ent_russia_yamalo_nenets",
+    name: "Yamalo-Nenets Autonomous Okrug",
+    aliases: [
+      "Yamal-Nenets Autonomous Okrug",
+      "Yamalia"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_yamalo_nenets_current"
+  },
+  {
+    id: "ent_russia_yugra",
+    name: "Khanty-Mansi Autonomous Okrug – Yugra",
+    aliases: [
+      "Yugra",
+      "Khanty-Mansi Autonomous Okrug"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_yugra_current"
+  },
+  {
+    id: "ent_russia_bashkortostan",
+    name: "Republic of Bashkortostan",
+    aliases: ["Bashkortostan"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_bashkortostan_current"
+  },
+  {
+    id: "ent_russia_chuvashia",
+    name: "Chuvash Republic",
+    aliases: ["Chuvashia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_chuvashia_current"
+  },
+  {
+    id: "ent_russia_kirov",
+    name: "Kirov Oblast",
+    aliases: ["Kirov"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_kirov_current"
+  },
+  {
+    id: "ent_russia_mari_el",
+    name: "Mari El Republic",
+    aliases: ["Republic of Mari El"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_mari_el_current"
+  },
+  {
+    id: "ent_russia_mordovia",
+    name: "Republic of Mordovia",
+    aliases: ["Mordovia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_mordovia_current"
+  },
+  {
+    id: "ent_russia_nizhny_novgorod",
+    name: "Nizhny Novgorod Oblast",
+    aliases: ["Nizhny Novgorod"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_nizhny_novgorod_current"
+  },
+  {
+    id: "ent_russia_orenburg",
+    name: "Orenburg Oblast",
+    aliases: ["Orenburg"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_orenburg_current"
+  },
+  {
+    id: "ent_russia_penza",
+    name: "Penza Oblast",
+    aliases: ["Penza"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_penza_current"
+  },
+  {
+    id: "ent_russia_perm",
+    name: "Perm Krai",
+    aliases: ["Perm"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_perm_current"
+  },
+  {
+    id: "ent_russia_samara",
+    name: "Samara Oblast",
+    aliases: ["Samara"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_samara_current"
+  },
+  {
+    id: "ent_russia_saratov",
+    name: "Saratov Oblast",
+    aliases: ["Saratov"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_saratov_current"
+  },
+  {
+    id: "ent_russia_tatarstan",
+    name: "Republic of Tatarstan",
+    aliases: ["Tatarstan"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_tatarstan_current"
+  },
+  {
+    id: "ent_russia_udmurtia",
+    name: "Udmurt Republic",
+    aliases: ["Udmurtia"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current"
+    ],
+    defaultVariantId: "var_russia_udmurtia_current"
+  },
+  {
+    id: "ent_russia_ulyanovsk",
+    name: "Ulyanovsk Oblast",
+    aliases: ["Ulyanovsk"],
+    entityType: "geographic",
+    parentIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "current"
+    ],
+    defaultVariantId: "var_russia_ulyanovsk_current"
+  },
   {
     id: "ent_south_ossetia",
     name: "South Ossetia",

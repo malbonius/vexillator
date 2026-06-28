@@ -3809,6 +3809,1336 @@ const collections = [
         }
       ]
     }
+  },,
+
+
+  /*
+    Russian federal subjects by region and subject type.
+  */
+  {
+    id: "col_russia_first_level_subdivisions",
+    name: "Russian Federal Subject Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes current Russian federal-subject entries represented in the dataset, including disputed Crimea and Sevastopol.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_russia"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_russia_central_region_flags",
+    name: "Russian Central Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russia_central_region_flags_belgorod",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_belgorod",
+        galleryVariantId: "var_russia_belgorod_current",
+        quizVariantId: "var_russia_belgorod_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_bryansk",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_bryansk",
+        galleryVariantId: "var_russia_bryansk_current",
+        quizVariantId: "var_russia_bryansk_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_ivanovo",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_ivanovo",
+        galleryVariantId: "var_russia_ivanovo_current",
+        quizVariantId: "var_russia_ivanovo_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_kaluga",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_kaluga",
+        galleryVariantId: "var_russia_kaluga_current",
+        quizVariantId: "var_russia_kaluga_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_kostroma",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_kostroma",
+        galleryVariantId: "var_russia_kostroma_current",
+        quizVariantId: "var_russia_kostroma_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_kursk",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_kursk",
+        galleryVariantId: "var_russia_kursk_current",
+        quizVariantId: "var_russia_kursk_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_lipetsk",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_lipetsk",
+        galleryVariantId: "var_russia_lipetsk_current",
+        quizVariantId: "var_russia_lipetsk_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_moscow",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_moscow",
+        galleryVariantId: "var_russia_moscow_current",
+        quizVariantId: "var_russia_moscow_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_moscow_oblast",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_moscow_oblast",
+        galleryVariantId: "var_russia_moscow_oblast_current",
+        quizVariantId: "var_russia_moscow_oblast_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_oryol",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_oryol",
+        galleryVariantId: "var_russia_oryol_current",
+        quizVariantId: "var_russia_oryol_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_ryazan",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_ryazan",
+        galleryVariantId: "var_russia_ryazan_current",
+        quizVariantId: "var_russia_ryazan_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_smolensk",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_smolensk",
+        galleryVariantId: "var_russia_smolensk_current",
+        quizVariantId: "var_russia_smolensk_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_tambov",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_tambov",
+        galleryVariantId: "var_russia_tambov_current",
+        quizVariantId: "var_russia_tambov_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_tula",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_tula",
+        galleryVariantId: "var_russia_tula_current",
+        quizVariantId: "var_russia_tula_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_tver",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_tver",
+        galleryVariantId: "var_russia_tver_current",
+        quizVariantId: "var_russia_tver_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_vladimir",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_vladimir",
+        galleryVariantId: "var_russia_vladimir_current",
+        quizVariantId: "var_russia_vladimir_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_voronezh",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_voronezh",
+        galleryVariantId: "var_russia_voronezh_current",
+        quizVariantId: "var_russia_voronezh_current"
+      },
+      {
+        id: "mem_russia_central_region_flags_yaroslavl",
+        collectionId: "col_russia_central_region_flags",
+        entityId: "ent_russia_yaroslavl",
+        galleryVariantId: "var_russia_yaroslavl_current",
+        quizVariantId: "var_russia_yaroslavl_current"
+      }
+    ]
+  },
+  {
+    id: "col_russia_northwestern_region_flags",
+    name: "Russian Northwestern Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russia_northwestern_region_flags_arkhangelsk",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_arkhangelsk",
+        galleryVariantId: "var_russia_arkhangelsk_current",
+        quizVariantId: "var_russia_arkhangelsk_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_kaliningrad",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_kaliningrad",
+        galleryVariantId: "var_russia_kaliningrad_current",
+        quizVariantId: "var_russia_kaliningrad_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_karelia",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_karelia",
+        galleryVariantId: "var_russia_karelia_current",
+        quizVariantId: "var_russia_karelia_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_komi",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_komi",
+        galleryVariantId: "var_russia_komi_current",
+        quizVariantId: "var_russia_komi_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_leningrad",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_leningrad",
+        galleryVariantId: "var_russia_leningrad_current",
+        quizVariantId: "var_russia_leningrad_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_murmansk",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_murmansk",
+        galleryVariantId: "var_russia_murmansk_current",
+        quizVariantId: "var_russia_murmansk_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_nenets",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_nenets",
+        galleryVariantId: "var_russia_nenets_current",
+        quizVariantId: "var_russia_nenets_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_novgorod",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_novgorod",
+        galleryVariantId: "var_russia_novgorod_current",
+        quizVariantId: "var_russia_novgorod_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_pskov",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_pskov",
+        galleryVariantId: "var_russia_pskov_current",
+        quizVariantId: "var_russia_pskov_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_saint_petersburg",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_saint_petersburg",
+        galleryVariantId: "var_russia_saint_petersburg_current",
+        quizVariantId: "var_russia_saint_petersburg_current"
+      },
+      {
+        id: "mem_russia_northwestern_region_flags_vologda",
+        collectionId: "col_russia_northwestern_region_flags",
+        entityId: "ent_russia_vologda",
+        galleryVariantId: "var_russia_vologda_current",
+        quizVariantId: "var_russia_vologda_current"
+      }
+    ]
+  },
+  {
+    id: "col_russia_southern_region_flags",
+    name: "Russian Southern Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russia_southern_region_flags_adygea",
+        collectionId: "col_russia_southern_region_flags",
+        entityId: "ent_russia_adygea",
+        galleryVariantId: "var_russia_adygea_current",
+        quizVariantId: "var_russia_adygea_current"
+      },
+      {
+        id: "mem_russia_southern_region_flags_astrakhan",
+        collectionId: "col_russia_southern_region_flags",
+        entityId: "ent_russia_astrakhan",
+        galleryVariantId: "var_russia_astrakhan_current",
+        quizVariantId: "var_russia_astrakhan_current"
+      },
+      {
+        id: "mem_russia_southern_region_flags_crimea",
+        collectionId: "col_russia_southern_region_flags",
+        entityId: "ent_russia_crimea",
+        galleryVariantId: "var_russia_crimea_current",
+        quizVariantId: "var_russia_crimea_current"
+      },
+      {
+        id: "mem_russia_southern_region_flags_kalmykia",
+        collectionId: "col_russia_southern_region_flags",
+        entityId: "ent_russia_kalmykia",
+        galleryVariantId: "var_russia_kalmykia_current",
+        quizVariantId: "var_russia_kalmykia_current"
+      },
+      {
+        id: "mem_russia_southern_region_flags_krasnodar",
+        collectionId: "col_russia_southern_region_flags",
+        entityId: "ent_russia_krasnodar",
+        galleryVariantId: "var_russia_krasnodar_current",
+        quizVariantId: "var_russia_krasnodar_current"
+      },
+      {
+        id: "mem_russia_southern_region_flags_rostov",
+        collectionId: "col_russia_southern_region_flags",
+        entityId: "ent_russia_rostov",
+        galleryVariantId: "var_russia_rostov_current",
+        quizVariantId: "var_russia_rostov_current"
+      },
+      {
+        id: "mem_russia_southern_region_flags_sevastopol",
+        collectionId: "col_russia_southern_region_flags",
+        entityId: "ent_russia_sevastopol",
+        galleryVariantId: "var_russia_sevastopol_current",
+        quizVariantId: "var_russia_sevastopol_current"
+      },
+      {
+        id: "mem_russia_southern_region_flags_volgograd",
+        collectionId: "col_russia_southern_region_flags",
+        entityId: "ent_russia_volgograd",
+        galleryVariantId: "var_russia_volgograd_current",
+        quizVariantId: "var_russia_volgograd_current"
+      }
+    ]
+  },
+  {
+    id: "col_russia_north_caucasian_region_flags",
+    name: "Russian North Caucasian Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russia_north_caucasian_region_flags_chechen_republic",
+        collectionId: "col_russia_north_caucasian_region_flags",
+        entityId: "ent_russia_chechen_republic",
+        galleryVariantId: "var_russia_chechen_republic_current",
+        quizVariantId: "var_russia_chechen_republic_current"
+      },
+      {
+        id: "mem_russia_north_caucasian_region_flags_dagestan",
+        collectionId: "col_russia_north_caucasian_region_flags",
+        entityId: "ent_russia_dagestan",
+        galleryVariantId: "var_russia_dagestan_current",
+        quizVariantId: "var_russia_dagestan_current"
+      },
+      {
+        id: "mem_russia_north_caucasian_region_flags_ingushetia",
+        collectionId: "col_russia_north_caucasian_region_flags",
+        entityId: "ent_russia_ingushetia",
+        galleryVariantId: "var_russia_ingushetia_current",
+        quizVariantId: "var_russia_ingushetia_current"
+      },
+      {
+        id: "mem_russia_north_caucasian_region_flags_kabardino_balkaria",
+        collectionId: "col_russia_north_caucasian_region_flags",
+        entityId: "ent_russia_kabardino_balkaria",
+        galleryVariantId: "var_russia_kabardino_balkaria_current",
+        quizVariantId: "var_russia_kabardino_balkaria_current"
+      },
+      {
+        id: "mem_russia_north_caucasian_region_flags_karachay_cherkessia",
+        collectionId: "col_russia_north_caucasian_region_flags",
+        entityId: "ent_russia_karachay_cherkessia",
+        galleryVariantId: "var_russia_karachay_cherkessia_current",
+        quizVariantId: "var_russia_karachay_cherkessia_current"
+      },
+      {
+        id: "mem_russia_north_caucasian_region_flags_north_ossetia",
+        collectionId: "col_russia_north_caucasian_region_flags",
+        entityId: "ent_russia_north_ossetia",
+        galleryVariantId: "var_russia_north_ossetia_current",
+        quizVariantId: "var_russia_north_ossetia_current"
+      },
+      {
+        id: "mem_russia_north_caucasian_region_flags_stavropol",
+        collectionId: "col_russia_north_caucasian_region_flags",
+        entityId: "ent_russia_stavropol",
+        galleryVariantId: "var_russia_stavropol_current",
+        quizVariantId: "var_russia_stavropol_current"
+      }
+    ]
+  },
+  {
+    id: "col_russia_volga_region_flags",
+    name: "Russian Volga Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russia_volga_region_flags_bashkortostan",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_bashkortostan",
+        galleryVariantId: "var_russia_bashkortostan_current",
+        quizVariantId: "var_russia_bashkortostan_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_chuvashia",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_chuvashia",
+        galleryVariantId: "var_russia_chuvashia_current",
+        quizVariantId: "var_russia_chuvashia_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_kirov",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_kirov",
+        galleryVariantId: "var_russia_kirov_current",
+        quizVariantId: "var_russia_kirov_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_mari_el",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_mari_el",
+        galleryVariantId: "var_russia_mari_el_current",
+        quizVariantId: "var_russia_mari_el_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_mordovia",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_mordovia",
+        galleryVariantId: "var_russia_mordovia_current",
+        quizVariantId: "var_russia_mordovia_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_nizhny_novgorod",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_nizhny_novgorod",
+        galleryVariantId: "var_russia_nizhny_novgorod_current",
+        quizVariantId: "var_russia_nizhny_novgorod_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_orenburg",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_orenburg",
+        galleryVariantId: "var_russia_orenburg_current",
+        quizVariantId: "var_russia_orenburg_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_penza",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_penza",
+        galleryVariantId: "var_russia_penza_current",
+        quizVariantId: "var_russia_penza_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_perm",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_perm",
+        galleryVariantId: "var_russia_perm_current",
+        quizVariantId: "var_russia_perm_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_samara",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_samara",
+        galleryVariantId: "var_russia_samara_current",
+        quizVariantId: "var_russia_samara_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_saratov",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_saratov",
+        galleryVariantId: "var_russia_saratov_current",
+        quizVariantId: "var_russia_saratov_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_tatarstan",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_tatarstan",
+        galleryVariantId: "var_russia_tatarstan_current",
+        quizVariantId: "var_russia_tatarstan_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_udmurtia",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_udmurtia",
+        galleryVariantId: "var_russia_udmurtia_current",
+        quizVariantId: "var_russia_udmurtia_current"
+      },
+      {
+        id: "mem_russia_volga_region_flags_ulyanovsk",
+        collectionId: "col_russia_volga_region_flags",
+        entityId: "ent_russia_ulyanovsk",
+        galleryVariantId: "var_russia_ulyanovsk_current",
+        quizVariantId: "var_russia_ulyanovsk_current"
+      }
+    ]
+  },
+  {
+    id: "col_russia_ural_region_flags",
+    name: "Russian Ural Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russia_ural_region_flags_chelyabinsk",
+        collectionId: "col_russia_ural_region_flags",
+        entityId: "ent_russia_chelyabinsk",
+        galleryVariantId: "var_russia_chelyabinsk_current",
+        quizVariantId: "var_russia_chelyabinsk_current"
+      },
+      {
+        id: "mem_russia_ural_region_flags_kurgan",
+        collectionId: "col_russia_ural_region_flags",
+        entityId: "ent_russia_kurgan",
+        galleryVariantId: "var_russia_kurgan_current",
+        quizVariantId: "var_russia_kurgan_current"
+      },
+      {
+        id: "mem_russia_ural_region_flags_sverdlovsk",
+        collectionId: "col_russia_ural_region_flags",
+        entityId: "ent_russia_sverdlovsk",
+        galleryVariantId: "var_russia_sverdlovsk_current",
+        quizVariantId: "var_russia_sverdlovsk_current"
+      },
+      {
+        id: "mem_russia_ural_region_flags_tyumen",
+        collectionId: "col_russia_ural_region_flags",
+        entityId: "ent_russia_tyumen",
+        galleryVariantId: "var_russia_tyumen_current",
+        quizVariantId: "var_russia_tyumen_current"
+      },
+      {
+        id: "mem_russia_ural_region_flags_yamalo_nenets",
+        collectionId: "col_russia_ural_region_flags",
+        entityId: "ent_russia_yamalo_nenets",
+        galleryVariantId: "var_russia_yamalo_nenets_current",
+        quizVariantId: "var_russia_yamalo_nenets_current"
+      },
+      {
+        id: "mem_russia_ural_region_flags_yugra",
+        collectionId: "col_russia_ural_region_flags",
+        entityId: "ent_russia_yugra",
+        galleryVariantId: "var_russia_yugra_current",
+        quizVariantId: "var_russia_yugra_current"
+      }
+    ]
+  },
+  {
+    id: "col_russia_siberian_region_flags",
+    name: "Russian Siberian Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russia_siberian_region_flags_altai",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_altai",
+        galleryVariantId: "var_russia_altai_current",
+        quizVariantId: "var_russia_altai_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_altai_republic",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_altai_republic",
+        galleryVariantId: "var_russia_altai_republic_current",
+        quizVariantId: "var_russia_altai_republic_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_irkutsk",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_irkutsk",
+        galleryVariantId: "var_russia_irkutsk_current",
+        quizVariantId: "var_russia_irkutsk_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_kemerovo",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_kemerovo",
+        galleryVariantId: "var_russia_kemerovo_current",
+        quizVariantId: "var_russia_kemerovo_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_khakassia",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_khakassia",
+        galleryVariantId: "var_russia_khakassia_current",
+        quizVariantId: "var_russia_khakassia_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_krasnoyarsk",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_krasnoyarsk",
+        galleryVariantId: "var_russia_krasnoyarsk_current",
+        quizVariantId: "var_russia_krasnoyarsk_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_novosibirsk",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_novosibirsk",
+        galleryVariantId: "var_russia_novosibirsk_current",
+        quizVariantId: "var_russia_novosibirsk_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_omsk",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_omsk",
+        galleryVariantId: "var_russia_omsk_current",
+        quizVariantId: "var_russia_omsk_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_tomsk",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_tomsk",
+        galleryVariantId: "var_russia_tomsk_current",
+        quizVariantId: "var_russia_tomsk_current"
+      },
+      {
+        id: "mem_russia_siberian_region_flags_tuva",
+        collectionId: "col_russia_siberian_region_flags",
+        entityId: "ent_russia_tuva",
+        galleryVariantId: "var_russia_tuva_current",
+        quizVariantId: "var_russia_tuva_current"
+      }
+    ]
+  },
+  {
+    id: "col_russia_far_eastern_region_flags",
+    name: "Russian Far Eastern Region Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russia_far_eastern_region_flags_amur",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_amur",
+        galleryVariantId: "var_russia_amur_current",
+        quizVariantId: "var_russia_amur_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_buryatia",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_buryatia",
+        galleryVariantId: "var_russia_buryatia_current",
+        quizVariantId: "var_russia_buryatia_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_chukotka",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_chukotka",
+        galleryVariantId: "var_russia_chukotka_current",
+        quizVariantId: "var_russia_chukotka_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_jewish_autonomous_oblast",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_jewish_autonomous_oblast",
+        galleryVariantId: "var_russia_jewish_autonomous_oblast_current",
+        quizVariantId: "var_russia_jewish_autonomous_oblast_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_kamchatka",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_kamchatka",
+        galleryVariantId: "var_russia_kamchatka_current",
+        quizVariantId: "var_russia_kamchatka_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_khabarovsk",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_khabarovsk",
+        galleryVariantId: "var_russia_khabarovsk_current",
+        quizVariantId: "var_russia_khabarovsk_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_magadan",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_magadan",
+        galleryVariantId: "var_russia_magadan_current",
+        quizVariantId: "var_russia_magadan_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_primorsky",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_primorsky",
+        galleryVariantId: "var_russia_primorsky_current",
+        quizVariantId: "var_russia_primorsky_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_sakha",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_sakha",
+        galleryVariantId: "var_russia_sakha_current",
+        quizVariantId: "var_russia_sakha_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_sakhalin",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_sakhalin",
+        galleryVariantId: "var_russia_sakhalin_current",
+        quizVariantId: "var_russia_sakhalin_current"
+      },
+      {
+        id: "mem_russia_far_eastern_region_flags_zabaykalsky",
+        collectionId: "col_russia_far_eastern_region_flags",
+        entityId: "ent_russia_zabaykalsky",
+        galleryVariantId: "var_russia_zabaykalsky_current",
+        quizVariantId: "var_russia_zabaykalsky_current"
+      }
+    ]
+  },
+  {
+    id: "col_russian_oblast_flags",
+    name: "Russian Oblast Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russian_oblast_flags_belgorod",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_belgorod",
+        galleryVariantId: "var_russia_belgorod_current",
+        quizVariantId: "var_russia_belgorod_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_bryansk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_bryansk",
+        galleryVariantId: "var_russia_bryansk_current",
+        quizVariantId: "var_russia_bryansk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_ivanovo",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_ivanovo",
+        galleryVariantId: "var_russia_ivanovo_current",
+        quizVariantId: "var_russia_ivanovo_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_kaluga",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_kaluga",
+        galleryVariantId: "var_russia_kaluga_current",
+        quizVariantId: "var_russia_kaluga_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_kostroma",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_kostroma",
+        galleryVariantId: "var_russia_kostroma_current",
+        quizVariantId: "var_russia_kostroma_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_kursk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_kursk",
+        galleryVariantId: "var_russia_kursk_current",
+        quizVariantId: "var_russia_kursk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_lipetsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_lipetsk",
+        galleryVariantId: "var_russia_lipetsk_current",
+        quizVariantId: "var_russia_lipetsk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_moscow_oblast",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_moscow_oblast",
+        galleryVariantId: "var_russia_moscow_oblast_current",
+        quizVariantId: "var_russia_moscow_oblast_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_oryol",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_oryol",
+        galleryVariantId: "var_russia_oryol_current",
+        quizVariantId: "var_russia_oryol_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_ryazan",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_ryazan",
+        galleryVariantId: "var_russia_ryazan_current",
+        quizVariantId: "var_russia_ryazan_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_smolensk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_smolensk",
+        galleryVariantId: "var_russia_smolensk_current",
+        quizVariantId: "var_russia_smolensk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_tambov",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_tambov",
+        galleryVariantId: "var_russia_tambov_current",
+        quizVariantId: "var_russia_tambov_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_tula",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_tula",
+        galleryVariantId: "var_russia_tula_current",
+        quizVariantId: "var_russia_tula_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_tver",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_tver",
+        galleryVariantId: "var_russia_tver_current",
+        quizVariantId: "var_russia_tver_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_vladimir",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_vladimir",
+        galleryVariantId: "var_russia_vladimir_current",
+        quizVariantId: "var_russia_vladimir_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_voronezh",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_voronezh",
+        galleryVariantId: "var_russia_voronezh_current",
+        quizVariantId: "var_russia_voronezh_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_yaroslavl",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_yaroslavl",
+        galleryVariantId: "var_russia_yaroslavl_current",
+        quizVariantId: "var_russia_yaroslavl_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_amur",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_amur",
+        galleryVariantId: "var_russia_amur_current",
+        quizVariantId: "var_russia_amur_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_magadan",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_magadan",
+        galleryVariantId: "var_russia_magadan_current",
+        quizVariantId: "var_russia_magadan_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_sakhalin",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_sakhalin",
+        galleryVariantId: "var_russia_sakhalin_current",
+        quizVariantId: "var_russia_sakhalin_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_arkhangelsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_arkhangelsk",
+        galleryVariantId: "var_russia_arkhangelsk_current",
+        quizVariantId: "var_russia_arkhangelsk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_kaliningrad",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_kaliningrad",
+        galleryVariantId: "var_russia_kaliningrad_current",
+        quizVariantId: "var_russia_kaliningrad_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_leningrad",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_leningrad",
+        galleryVariantId: "var_russia_leningrad_current",
+        quizVariantId: "var_russia_leningrad_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_murmansk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_murmansk",
+        galleryVariantId: "var_russia_murmansk_current",
+        quizVariantId: "var_russia_murmansk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_novgorod",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_novgorod",
+        galleryVariantId: "var_russia_novgorod_current",
+        quizVariantId: "var_russia_novgorod_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_pskov",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_pskov",
+        galleryVariantId: "var_russia_pskov_current",
+        quizVariantId: "var_russia_pskov_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_vologda",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_vologda",
+        galleryVariantId: "var_russia_vologda_current",
+        quizVariantId: "var_russia_vologda_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_irkutsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_irkutsk",
+        galleryVariantId: "var_russia_irkutsk_current",
+        quizVariantId: "var_russia_irkutsk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_kemerovo",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_kemerovo",
+        galleryVariantId: "var_russia_kemerovo_current",
+        quizVariantId: "var_russia_kemerovo_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_novosibirsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_novosibirsk",
+        galleryVariantId: "var_russia_novosibirsk_current",
+        quizVariantId: "var_russia_novosibirsk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_omsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_omsk",
+        galleryVariantId: "var_russia_omsk_current",
+        quizVariantId: "var_russia_omsk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_tomsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_tomsk",
+        galleryVariantId: "var_russia_tomsk_current",
+        quizVariantId: "var_russia_tomsk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_astrakhan",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_astrakhan",
+        galleryVariantId: "var_russia_astrakhan_current",
+        quizVariantId: "var_russia_astrakhan_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_rostov",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_rostov",
+        galleryVariantId: "var_russia_rostov_current",
+        quizVariantId: "var_russia_rostov_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_volgograd",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_volgograd",
+        galleryVariantId: "var_russia_volgograd_current",
+        quizVariantId: "var_russia_volgograd_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_chelyabinsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_chelyabinsk",
+        galleryVariantId: "var_russia_chelyabinsk_current",
+        quizVariantId: "var_russia_chelyabinsk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_kurgan",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_kurgan",
+        galleryVariantId: "var_russia_kurgan_current",
+        quizVariantId: "var_russia_kurgan_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_sverdlovsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_sverdlovsk",
+        galleryVariantId: "var_russia_sverdlovsk_current",
+        quizVariantId: "var_russia_sverdlovsk_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_tyumen",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_tyumen",
+        galleryVariantId: "var_russia_tyumen_current",
+        quizVariantId: "var_russia_tyumen_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_kirov",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_kirov",
+        galleryVariantId: "var_russia_kirov_current",
+        quizVariantId: "var_russia_kirov_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_nizhny_novgorod",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_nizhny_novgorod",
+        galleryVariantId: "var_russia_nizhny_novgorod_current",
+        quizVariantId: "var_russia_nizhny_novgorod_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_orenburg",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_orenburg",
+        galleryVariantId: "var_russia_orenburg_current",
+        quizVariantId: "var_russia_orenburg_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_penza",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_penza",
+        galleryVariantId: "var_russia_penza_current",
+        quizVariantId: "var_russia_penza_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_samara",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_samara",
+        galleryVariantId: "var_russia_samara_current",
+        quizVariantId: "var_russia_samara_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_saratov",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_saratov",
+        galleryVariantId: "var_russia_saratov_current",
+        quizVariantId: "var_russia_saratov_current"
+      },
+      {
+        id: "mem_russian_oblast_flags_ulyanovsk",
+        collectionId: "col_russian_oblast_flags",
+        entityId: "ent_russia_ulyanovsk",
+        galleryVariantId: "var_russia_ulyanovsk_current",
+        quizVariantId: "var_russia_ulyanovsk_current"
+      }
+    ]
+  },
+  {
+    id: "col_russian_republic_flags",
+    name: "Russian Republic Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russian_republic_flags_buryatia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_buryatia",
+        galleryVariantId: "var_russia_buryatia_current",
+        quizVariantId: "var_russia_buryatia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_sakha",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_sakha",
+        galleryVariantId: "var_russia_sakha_current",
+        quizVariantId: "var_russia_sakha_current"
+      },
+      {
+        id: "mem_russian_republic_flags_chechen_republic",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_chechen_republic",
+        galleryVariantId: "var_russia_chechen_republic_current",
+        quizVariantId: "var_russia_chechen_republic_current"
+      },
+      {
+        id: "mem_russian_republic_flags_dagestan",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_dagestan",
+        galleryVariantId: "var_russia_dagestan_current",
+        quizVariantId: "var_russia_dagestan_current"
+      },
+      {
+        id: "mem_russian_republic_flags_ingushetia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_ingushetia",
+        galleryVariantId: "var_russia_ingushetia_current",
+        quizVariantId: "var_russia_ingushetia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_kabardino_balkaria",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_kabardino_balkaria",
+        galleryVariantId: "var_russia_kabardino_balkaria_current",
+        quizVariantId: "var_russia_kabardino_balkaria_current"
+      },
+      {
+        id: "mem_russian_republic_flags_karachay_cherkessia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_karachay_cherkessia",
+        galleryVariantId: "var_russia_karachay_cherkessia_current",
+        quizVariantId: "var_russia_karachay_cherkessia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_north_ossetia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_north_ossetia",
+        galleryVariantId: "var_russia_north_ossetia_current",
+        quizVariantId: "var_russia_north_ossetia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_karelia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_karelia",
+        galleryVariantId: "var_russia_karelia_current",
+        quizVariantId: "var_russia_karelia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_komi",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_komi",
+        galleryVariantId: "var_russia_komi_current",
+        quizVariantId: "var_russia_komi_current"
+      },
+      {
+        id: "mem_russian_republic_flags_altai_republic",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_altai_republic",
+        galleryVariantId: "var_russia_altai_republic_current",
+        quizVariantId: "var_russia_altai_republic_current"
+      },
+      {
+        id: "mem_russian_republic_flags_khakassia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_khakassia",
+        galleryVariantId: "var_russia_khakassia_current",
+        quizVariantId: "var_russia_khakassia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_tuva",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_tuva",
+        galleryVariantId: "var_russia_tuva_current",
+        quizVariantId: "var_russia_tuva_current"
+      },
+      {
+        id: "mem_russian_republic_flags_adygea",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_adygea",
+        galleryVariantId: "var_russia_adygea_current",
+        quizVariantId: "var_russia_adygea_current"
+      },
+      {
+        id: "mem_russian_republic_flags_crimea",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_crimea",
+        galleryVariantId: "var_russia_crimea_current",
+        quizVariantId: "var_russia_crimea_current"
+      },
+      {
+        id: "mem_russian_republic_flags_kalmykia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_kalmykia",
+        galleryVariantId: "var_russia_kalmykia_current",
+        quizVariantId: "var_russia_kalmykia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_bashkortostan",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_bashkortostan",
+        galleryVariantId: "var_russia_bashkortostan_current",
+        quizVariantId: "var_russia_bashkortostan_current"
+      },
+      {
+        id: "mem_russian_republic_flags_chuvashia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_chuvashia",
+        galleryVariantId: "var_russia_chuvashia_current",
+        quizVariantId: "var_russia_chuvashia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_mari_el",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_mari_el",
+        galleryVariantId: "var_russia_mari_el_current",
+        quizVariantId: "var_russia_mari_el_current"
+      },
+      {
+        id: "mem_russian_republic_flags_mordovia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_mordovia",
+        galleryVariantId: "var_russia_mordovia_current",
+        quizVariantId: "var_russia_mordovia_current"
+      },
+      {
+        id: "mem_russian_republic_flags_tatarstan",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_tatarstan",
+        galleryVariantId: "var_russia_tatarstan_current",
+        quizVariantId: "var_russia_tatarstan_current"
+      },
+      {
+        id: "mem_russian_republic_flags_udmurtia",
+        collectionId: "col_russian_republic_flags",
+        entityId: "ent_russia_udmurtia",
+        galleryVariantId: "var_russia_udmurtia_current",
+        quizVariantId: "var_russia_udmurtia_current"
+      }
+    ]
+  },
+  {
+    id: "col_russian_krai_flags",
+    name: "Russian Krai Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russian_krai_flags_kamchatka",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_kamchatka",
+        galleryVariantId: "var_russia_kamchatka_current",
+        quizVariantId: "var_russia_kamchatka_current"
+      },
+      {
+        id: "mem_russian_krai_flags_khabarovsk",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_khabarovsk",
+        galleryVariantId: "var_russia_khabarovsk_current",
+        quizVariantId: "var_russia_khabarovsk_current"
+      },
+      {
+        id: "mem_russian_krai_flags_primorsky",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_primorsky",
+        galleryVariantId: "var_russia_primorsky_current",
+        quizVariantId: "var_russia_primorsky_current"
+      },
+      {
+        id: "mem_russian_krai_flags_zabaykalsky",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_zabaykalsky",
+        galleryVariantId: "var_russia_zabaykalsky_current",
+        quizVariantId: "var_russia_zabaykalsky_current"
+      },
+      {
+        id: "mem_russian_krai_flags_stavropol",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_stavropol",
+        galleryVariantId: "var_russia_stavropol_current",
+        quizVariantId: "var_russia_stavropol_current"
+      },
+      {
+        id: "mem_russian_krai_flags_altai",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_altai",
+        galleryVariantId: "var_russia_altai_current",
+        quizVariantId: "var_russia_altai_current"
+      },
+      {
+        id: "mem_russian_krai_flags_krasnoyarsk",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_krasnoyarsk",
+        galleryVariantId: "var_russia_krasnoyarsk_current",
+        quizVariantId: "var_russia_krasnoyarsk_current"
+      },
+      {
+        id: "mem_russian_krai_flags_krasnodar",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_krasnodar",
+        galleryVariantId: "var_russia_krasnodar_current",
+        quizVariantId: "var_russia_krasnodar_current"
+      },
+      {
+        id: "mem_russian_krai_flags_perm",
+        collectionId: "col_russian_krai_flags",
+        entityId: "ent_russia_perm",
+        galleryVariantId: "var_russia_perm_current",
+        quizVariantId: "var_russia_perm_current"
+      }
+    ]
+  },
+  {
+    id: "col_russian_autonomous_okrug_flags",
+    name: "Russian Autonomous Okrug Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russian_autonomous_okrug_flags_chukotka",
+        collectionId: "col_russian_autonomous_okrug_flags",
+        entityId: "ent_russia_chukotka",
+        galleryVariantId: "var_russia_chukotka_current",
+        quizVariantId: "var_russia_chukotka_current"
+      },
+      {
+        id: "mem_russian_autonomous_okrug_flags_nenets",
+        collectionId: "col_russian_autonomous_okrug_flags",
+        entityId: "ent_russia_nenets",
+        galleryVariantId: "var_russia_nenets_current",
+        quizVariantId: "var_russia_nenets_current"
+      },
+      {
+        id: "mem_russian_autonomous_okrug_flags_yamalo_nenets",
+        collectionId: "col_russian_autonomous_okrug_flags",
+        entityId: "ent_russia_yamalo_nenets",
+        galleryVariantId: "var_russia_yamalo_nenets_current",
+        quizVariantId: "var_russia_yamalo_nenets_current"
+      },
+      {
+        id: "mem_russian_autonomous_okrug_flags_yugra",
+        collectionId: "col_russian_autonomous_okrug_flags",
+        entityId: "ent_russia_yugra",
+        galleryVariantId: "var_russia_yugra_current",
+        quizVariantId: "var_russia_yugra_current"
+      }
+    ]
+  },
+  {
+    id: "col_russian_autonomous_oblast_flags",
+    name: "Russian Autonomous Oblast Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russian_autonomous_oblast_flags_jewish_autonomous_oblast",
+        collectionId: "col_russian_autonomous_oblast_flags",
+        entityId: "ent_russia_jewish_autonomous_oblast",
+        galleryVariantId: "var_russia_jewish_autonomous_oblast_current",
+        quizVariantId: "var_russia_jewish_autonomous_oblast_current"
+      }
+    ]
+  },
+  {
+    id: "col_russian_federal_city_flags",
+    name: "Russian Federal City Flags",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_russian_federal_city_flags_moscow",
+        collectionId: "col_russian_federal_city_flags",
+        entityId: "ent_russia_moscow",
+        galleryVariantId: "var_russia_moscow_current",
+        quizVariantId: "var_russia_moscow_current"
+      },
+      {
+        id: "mem_russian_federal_city_flags_saint_petersburg",
+        collectionId: "col_russian_federal_city_flags",
+        entityId: "ent_russia_saint_petersburg",
+        galleryVariantId: "var_russia_saint_petersburg_current",
+        quizVariantId: "var_russia_saint_petersburg_current"
+      },
+      {
+        id: "mem_russian_federal_city_flags_sevastopol",
+        collectionId: "col_russian_federal_city_flags",
+        entityId: "ent_russia_sevastopol",
+        galleryVariantId: "var_russia_sevastopol_current",
+        quizVariantId: "var_russia_sevastopol_current"
+      }
+    ]
   },
 
   /*

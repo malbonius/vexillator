@@ -5136,6 +5136,1116 @@ const variants = [
     startYear: 1993,
     endYear: null
   },
+
+
+  /*
+    Russian federal subject flags.
+  */
+  {
+    id: "var_russia_belgorod_current",
+    entityId: "ent_russia_belgorod",
+    assetId: "ast_belgorod_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Belgorod Oblast",
+      "Flag of Belgorod"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_bryansk_current",
+    entityId: "ent_russia_bryansk",
+    assetId: "ast_bryansk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Bryansk Oblast",
+      "Flag of Bryansk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_ivanovo_current",
+    entityId: "ent_russia_ivanovo",
+    assetId: "ast_ivanovo_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Ivanovo Oblast",
+      "Flag of Ivanovo"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kaluga_current",
+    entityId: "ent_russia_kaluga",
+    assetId: "ast_kaluga_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kaluga Oblast",
+      "Flag of Kaluga"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kostroma_current",
+    entityId: "ent_russia_kostroma",
+    assetId: "ast_kostroma_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kostroma Oblast",
+      "Flag of Kostroma"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kursk_current",
+    entityId: "ent_russia_kursk",
+    assetId: "ast_kursk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kursk Oblast",
+      "Flag of Kursk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_lipetsk_current",
+    entityId: "ent_russia_lipetsk",
+    assetId: "ast_lipetsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Lipetsk Oblast",
+      "Flag of Lipetsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_moscow_current",
+    entityId: "ent_russia_moscow",
+    assetId: "ast_moscow_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Moscow",
+      "Flag of Federal City of Moscow"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_moscow_oblast_current",
+    entityId: "ent_russia_moscow_oblast",
+    assetId: "ast_moscow_oblast_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Moscow Oblast",
+      "Flag of Moscow Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_oryol_current",
+    entityId: "ent_russia_oryol",
+    assetId: "ast_oryol_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Oryol Oblast",
+      "Flag of Orel Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_ryazan_current",
+    entityId: "ent_russia_ryazan",
+    assetId: "ast_ryazan_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Ryazan Oblast",
+      "Flag of Ryazan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_smolensk_current",
+    entityId: "ent_russia_smolensk",
+    assetId: "ast_smolensk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Smolensk Oblast",
+      "Flag of Smolensk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_tambov_current",
+    entityId: "ent_russia_tambov",
+    assetId: "ast_tambov_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Tambov Oblast",
+      "Flag of Tambov"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_tula_current",
+    entityId: "ent_russia_tula",
+    assetId: "ast_tula_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Tula Oblast",
+      "Flag of Tula"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_tver_current",
+    entityId: "ent_russia_tver",
+    assetId: "ast_tver_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Tver Oblast",
+      "Flag of Tver"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_vladimir_current",
+    entityId: "ent_russia_vladimir",
+    assetId: "ast_vladimir_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Vladimir Oblast",
+      "Flag of Vladimir"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_voronezh_current",
+    entityId: "ent_russia_voronezh",
+    assetId: "ast_voronezh_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Voronezh Oblast",
+      "Flag of Voronezh"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_yaroslavl_current",
+    entityId: "ent_russia_yaroslavl",
+    assetId: "ast_yaroslavl_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Yaroslavl Oblast",
+      "Flag of Yaroslavl"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_amur_current",
+    entityId: "ent_russia_amur",
+    assetId: "ast_amur_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Amur Oblast",
+      "Flag of Amur"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_buryatia_current",
+    entityId: "ent_russia_buryatia",
+    assetId: "ast_buryatia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Buryatia",
+      "Flag of Buryatia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_chukotka_current",
+    entityId: "ent_russia_chukotka",
+    assetId: "ast_chukotka_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Chukotka Autonomous Okrug",
+      "Flag of Chukotka"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_jewish_autonomous_oblast_current",
+    entityId: "ent_russia_jewish_autonomous_oblast",
+    assetId: "ast_jewish_autonomous_oblast_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Jewish Autonomous Oblast",
+      "Flag of Yevrey Autonomous Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kamchatka_current",
+    entityId: "ent_russia_kamchatka",
+    assetId: "ast_kamchatka_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kamchatka Krai",
+      "Flag of Kamchatka"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_khabarovsk_current",
+    entityId: "ent_russia_khabarovsk",
+    assetId: "ast_khabarovsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Khabarovsk Krai",
+      "Flag of Khabarovsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_magadan_current",
+    entityId: "ent_russia_magadan",
+    assetId: "ast_magadan_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Magadan Oblast",
+      "Flag of Magadan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_primorsky_current",
+    entityId: "ent_russia_primorsky",
+    assetId: "ast_primorsky_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Primorsky Krai",
+      "Flag of Primorye"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_sakha_current",
+    entityId: "ent_russia_sakha",
+    assetId: "ast_sakha_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Sakha Republic",
+      "Flag of Yakutia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_sakhalin_current",
+    entityId: "ent_russia_sakhalin",
+    assetId: "ast_sakhalin_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Sakhalin Oblast",
+      "Flag of Sakhalin"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_zabaykalsky_current",
+    entityId: "ent_russia_zabaykalsky",
+    assetId: "ast_zabaykalsky_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Zabaykalsky Krai",
+      "Flag of Transbaikal Krai"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_chechen_republic_current",
+    entityId: "ent_russia_chechen_republic",
+    assetId: "ast_chechen_republic_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Chechen Republic",
+      "Flag of Chechnya"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_dagestan_current",
+    entityId: "ent_russia_dagestan",
+    assetId: "ast_dagestan_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Dagestan",
+      "Flag of Dagestan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_ingushetia_current",
+    entityId: "ent_russia_ingushetia",
+    assetId: "ast_ingushetia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Ingushetia",
+      "Flag of Ingushetia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kabardino_balkaria_current",
+    entityId: "ent_russia_kabardino_balkaria",
+    assetId: "ast_kabardino_balkaria_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kabardino-Balkarian Republic",
+      "Flag of Kabardino-Balkaria"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_karachay_cherkessia_current",
+    entityId: "ent_russia_karachay_cherkessia",
+    assetId: "ast_karachay_cherkessia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Karachay-Cherkess Republic",
+      "Flag of Karachay-Cherkessia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_north_ossetia_current",
+    entityId: "ent_russia_north_ossetia",
+    assetId: "ast_north_ossetia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of North Ossetia-Alania",
+      "Flag of North Ossetia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_stavropol_current",
+    entityId: "ent_russia_stavropol",
+    assetId: "ast_stavropol_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Stavropol Krai",
+      "Flag of Stavropol"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_arkhangelsk_current",
+    entityId: "ent_russia_arkhangelsk",
+    assetId: "ast_arkhangelsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Arkhangelsk Oblast",
+      "Flag of Arkhangelsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kaliningrad_current",
+    entityId: "ent_russia_kaliningrad",
+    assetId: "ast_kaliningrad_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kaliningrad Oblast",
+      "Flag of Kaliningrad"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_karelia_current",
+    entityId: "ent_russia_karelia",
+    assetId: "ast_karelia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Karelia",
+      "Flag of Karelia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_komi_current",
+    entityId: "ent_russia_komi",
+    assetId: "ast_komi_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Komi Republic",
+      "Flag of Republic of Komi"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_leningrad_current",
+    entityId: "ent_russia_leningrad",
+    assetId: "ast_leningrad_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Leningrad Oblast",
+      "Flag of Leningrad"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_murmansk_current",
+    entityId: "ent_russia_murmansk",
+    assetId: "ast_murmansk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Murmansk Oblast",
+      "Flag of Murmansk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_nenets_current",
+    entityId: "ent_russia_nenets",
+    assetId: "ast_nenets_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Nenets Autonomous Okrug",
+      "Flag of Nenetsia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_novgorod_current",
+    entityId: "ent_russia_novgorod",
+    assetId: "ast_novgorod_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Novgorod Oblast",
+      "Flag of Novgorod"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_pskov_current",
+    entityId: "ent_russia_pskov",
+    assetId: "ast_pskov_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Pskov Oblast",
+      "Flag of Pskov"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_saint_petersburg_current",
+    entityId: "ent_russia_saint_petersburg",
+    assetId: "ast_saint_petersburg_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Saint Petersburg",
+      "Flag of St Petersburg"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_vologda_current",
+    entityId: "ent_russia_vologda",
+    assetId: "ast_vologda_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Vologda Oblast",
+      "Flag of Vologda"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_altai_current",
+    entityId: "ent_russia_altai",
+    assetId: "ast_altai_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Altai Krai",
+      "Flag of Altai Territory"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_altai_republic_current",
+    entityId: "ent_russia_altai_republic",
+    assetId: "ast_altai_republic_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Altai Republic",
+      "Flag of Republic of Altai"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_irkutsk_current",
+    entityId: "ent_russia_irkutsk",
+    assetId: "ast_irkutsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Irkutsk Oblast",
+      "Flag of Irkutsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kemerovo_current",
+    entityId: "ent_russia_kemerovo",
+    assetId: "ast_kemerovo_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kemerovo Oblast",
+      "Flag of Kuzbass"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_khakassia_current",
+    entityId: "ent_russia_khakassia",
+    assetId: "ast_khakassia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Khakassia",
+      "Flag of Khakassia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_krasnoyarsk_current",
+    entityId: "ent_russia_krasnoyarsk",
+    assetId: "ast_krasnoyarsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Krasnoyarsk Krai",
+      "Flag of Krasnoyarsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_novosibirsk_current",
+    entityId: "ent_russia_novosibirsk",
+    assetId: "ast_novosibirsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Novosibirsk Oblast",
+      "Flag of Novosibirsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_omsk_current",
+    entityId: "ent_russia_omsk",
+    assetId: "ast_omsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Omsk Oblast",
+      "Flag of Omsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_tomsk_current",
+    entityId: "ent_russia_tomsk",
+    assetId: "ast_tomsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Tomsk Oblast",
+      "Flag of Tomsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_tuva_current",
+    entityId: "ent_russia_tuva",
+    assetId: "ast_tuva_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Tuva Republic",
+      "Flag of Tyva Republic"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_adygea_current",
+    entityId: "ent_russia_adygea",
+    assetId: "ast_adygea_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Adygea",
+      "Flag of Adygea"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_astrakhan_current",
+    entityId: "ent_russia_astrakhan",
+    assetId: "ast_astrakhan_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Astrakhan Oblast",
+      "Flag of Astrakhan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_crimea_current",
+    entityId: "ent_russia_crimea",
+    assetId: "ast_crimea_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Crimea",
+      "Flag of Crimea"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kalmykia_current",
+    entityId: "ent_russia_kalmykia",
+    assetId: "ast_kalmykia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Kalmykia",
+      "Flag of Kalmykia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_krasnodar_current",
+    entityId: "ent_russia_krasnodar",
+    assetId: "ast_krasnodar_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Krasnodar Krai",
+      "Flag of Krasnodar"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_rostov_current",
+    entityId: "ent_russia_rostov",
+    assetId: "ast_rostov_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Rostov Oblast",
+      "Flag of Rostov"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_sevastopol_current",
+    entityId: "ent_russia_sevastopol",
+    assetId: "ast_sevastopol_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Sevastopol",
+      "Flag of Federal City of Sevastopol"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_volgograd_current",
+    entityId: "ent_russia_volgograd",
+    assetId: "ast_volgograd_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Volgograd Oblast",
+      "Flag of Volgograd"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_chelyabinsk_current",
+    entityId: "ent_russia_chelyabinsk",
+    assetId: "ast_chelyabinsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Chelyabinsk Oblast",
+      "Flag of Chelyabinsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kurgan_current",
+    entityId: "ent_russia_kurgan",
+    assetId: "ast_kurgan_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kurgan Oblast",
+      "Flag of Kurgan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_sverdlovsk_current",
+    entityId: "ent_russia_sverdlovsk",
+    assetId: "ast_sverdlovsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Sverdlovsk Oblast",
+      "Flag of Sverdlovsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_tyumen_current",
+    entityId: "ent_russia_tyumen",
+    assetId: "ast_tyumen_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Tyumen Oblast",
+      "Flag of Tyumen"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_yamalo_nenets_current",
+    entityId: "ent_russia_yamalo_nenets",
+    assetId: "ast_yamalo_nenets_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Yamalo-Nenets Autonomous Okrug",
+      "Flag of Yamal-Nenets Autonomous Okrug"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_yugra_current",
+    entityId: "ent_russia_yugra",
+    assetId: "ast_yugra_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Khanty-Mansi Autonomous Okrug – Yugra",
+      "Flag of Yugra"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_bashkortostan_current",
+    entityId: "ent_russia_bashkortostan",
+    assetId: "ast_bashkortostan_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Bashkortostan",
+      "Flag of Bashkortostan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_chuvashia_current",
+    entityId: "ent_russia_chuvashia",
+    assetId: "ast_chuvashia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Chuvash Republic",
+      "Flag of Chuvashia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_kirov_current",
+    entityId: "ent_russia_kirov",
+    assetId: "ast_kirov_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Kirov Oblast",
+      "Flag of Kirov"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_mari_el_current",
+    entityId: "ent_russia_mari_el",
+    assetId: "ast_mari_el_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Mari El Republic",
+      "Flag of Republic of Mari El"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_mordovia_current",
+    entityId: "ent_russia_mordovia",
+    assetId: "ast_mordovia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Mordovia",
+      "Flag of Mordovia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_nizhny_novgorod_current",
+    entityId: "ent_russia_nizhny_novgorod",
+    assetId: "ast_nizhny_novgorod_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Nizhny Novgorod Oblast",
+      "Flag of Nizhny Novgorod"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_orenburg_current",
+    entityId: "ent_russia_orenburg",
+    assetId: "ast_orenburg_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Orenburg Oblast",
+      "Flag of Orenburg"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_penza_current",
+    entityId: "ent_russia_penza",
+    assetId: "ast_penza_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Penza Oblast",
+      "Flag of Penza"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_perm_current",
+    entityId: "ent_russia_perm",
+    assetId: "ast_perm_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Perm Krai",
+      "Flag of Perm"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_samara_current",
+    entityId: "ent_russia_samara",
+    assetId: "ast_samara_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Samara Oblast",
+      "Flag of Samara"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_saratov_current",
+    entityId: "ent_russia_saratov",
+    assetId: "ast_saratov_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Saratov Oblast",
+      "Flag of Saratov"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_tatarstan_current",
+    entityId: "ent_russia_tatarstan",
+    assetId: "ast_tatarstan_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Republic of Tatarstan",
+      "Flag of Tatarstan"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_udmurtia_current",
+    entityId: "ent_russia_udmurtia",
+    assetId: "ast_udmurtia_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Udmurt Republic",
+      "Flag of Udmurtia"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_russia_ulyanovsk_current",
+    entityId: "ent_russia_ulyanovsk",
+    assetId: "ast_ulyanovsk_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Ulyanovsk Oblast",
+      "Flag of Ulyanovsk"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_south_ossetia_current",
     entityId: "ent_south_ossetia",
