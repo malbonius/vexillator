@@ -43,15 +43,17 @@ function setupGalleryZoomViewer() {
   );
 
   /*
-    Keep a click fallback for browsers that do not produce PointerEvents.
-    The pointer handler marks events it has already handled to prevent double
-    execution.
+    Keep a click fallback only for browsers without PointerEvent support.
+    On modern browsers, handling pointerdown and then the later click would
+    run navigation twice, making the left/right buttons appear to skip.
   */
-  document.addEventListener(
-    "click",
-    handleGalleryZoomClickFallback,
-    true
-  );
+  if (!window.PointerEvent) {
+    document.addEventListener(
+      "click",
+      handleGalleryZoomClickFallback,
+      true
+    );
+  }
 
   document.addEventListener("keydown", event => {
     if (!isGalleryZoomOpen()) {

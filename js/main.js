@@ -993,7 +993,23 @@ setupSearch();
 setupTypingQuiz();
 setupBrowseModeButtons();
 setupMultipleChoiceQuiz();
-setupRandomQuizView();
+
+/*
+  Quiz Builder is an optional split UI module.
+
+  If js/ui/randomQuizView.js fails to load, or its setup function has been
+  renamed accidentally, the rest of the application should still initialise.
+  The missing setup is still reported in the console so the module can be
+  repaired directly.
+*/
+if (typeof setupRandomQuizView === "function") {
+  setupRandomQuizView();
+} else {
+  console.error(
+    "setupRandomQuizView is not defined. Check js/ui/randomQuizView.js."
+  );
+}
+
 setupStatsView();
 setupPresetView();
 
