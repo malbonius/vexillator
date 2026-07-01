@@ -18,7 +18,7 @@ const assets = [
   },
   {
     id: "ast_abkhazia_current",
-    path: "assets/flags/geography/asia/western_asia/abkhazia/abkhazia_current.svg"
+    path: "assets/flags/geography/asia/western_asia/georgia/abkhazia/abkhazia_current.svg"
   },
   {
     id: "ast_abruzzo_current",
@@ -3466,7 +3466,7 @@ const assets = [
   },
   {
     id: "ast_south_ossetia_current",
-    path: "assets/flags/geography/asia/western_asia/south_ossetia/south_ossetia_current.svg"
+    path: "assets/flags/geography/asia/western_asia/georgia/south_ossetia/south_ossetia_current.svg"
   },
   {
     id: "ast_south_ostrobothnia_current",

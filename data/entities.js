@@ -3924,14 +3924,8 @@ const entities = [
       "Apsny"
     ],
     entityType: "geographic",
-    parentIds: ["ent_western_asia"],
-    tags: [
-      "sovereign",
-      "country",
-      "current",
-      "partially_recognised",
-      "disputed"
-    ],
+    parentIds: ["ent_georgia"],
+    tags: ["current", "disputed"],
     defaultVariantId: "var_abkhazia_current"
   },
   {
@@ -5199,14 +5193,8 @@ const entities = [
       "Tskhinvali Region"
     ],
     entityType: "geographic",
-    parentIds: ["ent_western_asia"],
-    tags: [
-      "sovereign",
-      "country",
-      "current",
-      "partially_recognised",
-      "disputed"
-    ],
+    parentIds: ["ent_georgia"],
+    tags: ["current", "disputed"],
     defaultVariantId: "var_south_ossetia_current"
   },
   {
