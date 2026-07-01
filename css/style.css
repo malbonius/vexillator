@@ -483,7 +483,7 @@ body.shell-selection-open .selection-drawer {
 /*
   Shared overlay behind open shell drawers.
 
-  The zoom viewer remains above drawers because its existing z-index is 1000.
+  The zoom viewer remains above drawers and shell UI using a high modal z-index.
 */
 .shell-backdrop {
   position: fixed;
@@ -2746,13 +2746,25 @@ body.zoom-open {
 .zoom-overlay {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+
+  /*
+    Keep zoom above every app shell layer on desktop as well as mobile.
+    Drawers and the shell backdrop live below this, but a larger modal layer
+    avoids desktop stacking-context edge cases when Browse is open or pinned.
+  */
+  z-index: 10000;
+
   display: flex;
   align-items: center;
   justify-content: center;
   padding: clamp(0.4rem, 2vw, 1rem);
   background: rgba(0, 0, 0, 0.75);
   overscroll-behavior: contain;
+  pointer-events: auto;
+}
+
+body.zoom-open .shell-backdrop {
+  pointer-events: none;
 }
 
 /* Shared hidden utility */
@@ -2779,6 +2791,7 @@ body.zoom-open {
   background: white;
   overflow: auto;
   overscroll-behavior: contain;
+  pointer-events: auto;
 }
 
 /* Opens the Entity detail page from the zoom viewer */
@@ -2922,6 +2935,13 @@ body.zoom-open {
 .zoom-nav-button:hover,
 .zoom-close-button:hover {
   background: #eee;
+}
+
+.zoom-close-button,
+.zoom-nav-button,
+.zoom-related-button,
+.zoom-entity-button {
+  pointer-events: auto;
 }
 
 /*
