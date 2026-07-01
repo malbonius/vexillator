@@ -60,8 +60,8 @@ const collectionGroups = [
     name: "South America",
     parentGroupIds: ["grp_geography"],
     collectionIds: [
-      "col_south_american_flags",
       "col_south_american_sovereign",
+      "col_south_american_flags",
       "col_south_american_dependents"
     ]
   },
@@ -100,8 +100,8 @@ const collectionGroups = [
     name: "North America",
     parentGroupIds: ["grp_geography"],
     collectionIds: [
-      "col_north_american_flags",
       "col_north_america_countries",
+      "col_north_american_flags",
       "col_north_america_dependents"
     ]
   },
@@ -110,6 +110,7 @@ const collectionGroups = [
     name: "Northern America",
     parentGroupIds: ["grp_north_america"],
     collectionIds: [
+      "col_northern_america_sovereign",
       "col_northern_america_flags"
     ]
   },
@@ -250,8 +251,8 @@ const collectionGroups = [
     name: "Central America",
     parentGroupIds: ["grp_north_america"],
     collectionIds: [
-      "col_central_america_flags",
-      "col_central_america_sovereign"
+      "col_central_america_sovereign",
+      "col_central_america_flags"
     ]
   },
   {
@@ -259,8 +260,8 @@ const collectionGroups = [
     name: "Caribbean",
     parentGroupIds: ["grp_north_america"],
     collectionIds: [
-      "col_caribbean_flags",
       "col_caribbean_sovereign",
+      "col_caribbean_flags",
       "col_caribbean_dependents"
     ]
   },
@@ -273,8 +274,8 @@ const collectionGroups = [
     name: "Africa",
     parentGroupIds: ["grp_geography"],
     collectionIds: [
-      "col_african_flags",
       "col_african_sovereign",
+      "col_african_flags",
       "col_african_dependents"
     ]
   },
@@ -283,6 +284,7 @@ const collectionGroups = [
     name: "Northern Africa",
     parentGroupIds: ["grp_africa"],
     collectionIds: [
+      "col_northern_africa_sovereign",
       "col_northern_africa_flags"
     ]
   },
@@ -291,6 +293,7 @@ const collectionGroups = [
     name: "Eastern Africa",
     parentGroupIds: ["grp_africa"],
     collectionIds: [
+      "col_eastern_africa_sovereign",
       "col_eastern_africa_flags"
     ]
   },
@@ -299,6 +302,7 @@ const collectionGroups = [
     name: "Middle Africa",
     parentGroupIds: ["grp_africa"],
     collectionIds: [
+      "col_middle_africa_sovereign",
       "col_middle_africa_flags"
     ]
   },
@@ -307,6 +311,7 @@ const collectionGroups = [
     name: "Southern Africa",
     parentGroupIds: ["grp_africa"],
     collectionIds: [
+      "col_southern_africa_sovereign",
       "col_southern_africa_flags"
     ]
   },
@@ -315,6 +320,7 @@ const collectionGroups = [
     name: "Western Africa",
     parentGroupIds: ["grp_africa"],
     collectionIds: [
+      "col_western_africa_sovereign",
       "col_western_africa_flags"
     ]
   },
@@ -327,8 +333,8 @@ const collectionGroups = [
     name: "Europe",
     parentGroupIds: ["grp_geography"],
     collectionIds: [
-      "col_european_flags",
       "col_european_sovereign",
+      "col_european_flags",
       "col_european_dependents",
       "col_europe_first_level_subdivisions"
     ]
@@ -347,6 +353,7 @@ const collectionGroups = [
     name: "Eastern Europe",
     parentGroupIds: ["grp_europe"],
     collectionIds: [
+      "col_eastern_europe_sovereign",
       "col_eastern_europe_flags"
     ]
   },
@@ -410,6 +417,7 @@ const collectionGroups = [
     name: "Northern Europe",
     parentGroupIds: ["grp_europe"],
     collectionIds: [
+      "col_northern_europe_sovereign",
       "col_northern_europe_flags"
     ]
   },
@@ -491,6 +499,7 @@ const collectionGroups = [
     name: "Southern Europe",
     parentGroupIds: ["grp_europe"],
     collectionIds: [
+      "col_southern_europe_sovereign",
       "col_southern_europe_flags"
     ]
   },
@@ -499,6 +508,7 @@ const collectionGroups = [
     name: "Western Europe",
     parentGroupIds: ["grp_europe"],
     collectionIds: [
+      "col_western_europe_sovereign",
       "col_western_europe_flags"
     ]
   },
@@ -587,8 +597,8 @@ const collectionGroups = [
     name: "Asia",
     parentGroupIds: ["grp_geography"],
     collectionIds: [
-      "col_asian_flags",
-      "col_asian_sovereign"
+      "col_asian_sovereign",
+      "col_asian_flags"
     ]
   },
   {
@@ -596,6 +606,7 @@ const collectionGroups = [
     name: "Central Asia",
     parentGroupIds: ["grp_asia"],
     collectionIds: [
+      "col_central_asia_sovereign",
       "col_central_asia_flags"
     ]
   },
@@ -604,6 +615,7 @@ const collectionGroups = [
     name: "Eastern Asia",
     parentGroupIds: ["grp_asia"],
     collectionIds: [
+      "col_eastern_asia_sovereign",
       "col_eastern_asia_flags"
     ]
   },
@@ -687,6 +699,7 @@ const collectionGroups = [
     name: "South-Eastern Asia",
     parentGroupIds: ["grp_asia"],
     collectionIds: [
+      "col_south_eastern_asia_sovereign",
       "col_south_eastern_asia_flags"
     ]
   },
@@ -695,6 +708,7 @@ const collectionGroups = [
     name: "Southern Asia",
     parentGroupIds: ["grp_asia"],
     collectionIds: [
+      "col_southern_asia_sovereign",
       "col_southern_asia_flags"
     ]
   },
@@ -703,6 +717,7 @@ const collectionGroups = [
     name: "Western Asia",
     parentGroupIds: ["grp_asia"],
     collectionIds: [
+      "col_western_asia_sovereign",
       "col_western_asia_flags"
     ]
   },
@@ -715,8 +730,8 @@ const collectionGroups = [
     name: "Oceania",
     parentGroupIds: ["grp_geography"],
     collectionIds: [
-      "col_oceanian_flags",
       "col_oceanian_sovereign",
+      "col_oceanian_flags",
       "col_oceanian_dependents"
     ]
   },
@@ -725,6 +740,7 @@ const collectionGroups = [
     name: "Australia and New Zealand",
     parentGroupIds: ["grp_oceania"],
     collectionIds: [
+      "col_australia_and_new_zealand_sovereign",
       "col_australia_and_new_zealand_flags"
     ]
   },
@@ -745,6 +761,7 @@ const collectionGroups = [
     name: "Melanesia",
     parentGroupIds: ["grp_oceania"],
     collectionIds: [
+      "col_melanesia_sovereign",
       "col_melanesia_flags"
     ]
   },
@@ -753,6 +770,7 @@ const collectionGroups = [
     name: "Micronesia",
     parentGroupIds: ["grp_oceania"],
     collectionIds: [
+      "col_micronesia_sovereign",
       "col_micronesia_flags"
     ]
   },
@@ -770,6 +788,7 @@ const collectionGroups = [
     name: "Polynesia",
     parentGroupIds: ["grp_oceania"],
     collectionIds: [
+      "col_polynesia_sovereign",
       "col_polynesia_flags"
     ]
   },

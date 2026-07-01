@@ -7,262 +7,123 @@
 */
 
 function setupGalleryZoomViewer() {
+
   const overlay = document.getElementById("galleryZoomOverlay");
+  const closeButton = document.getElementById("closeGalleryZoomButton");
+  const previousButton = document.getElementById("previousGalleryZoomButton");
+  const nextButton = document.getElementById("nextGalleryZoomButton");
+  const viewEntityButton = document.getElementById(
+    "viewGalleryZoomEntityButton"
+  );
+  const reverseButton = document.getElementById(
+    "galleryZoomReverseButton"
+  );
+  const alternativeButton = document.getElementById(
+  "galleryZoomAlternativeButton"
+  );
+  const renditionButton = document.getElementById(
+    "galleryZoomRenditionButton"
+  );
 
-  if (!overlay) {
+  if (!overlay || !closeButton) {
     return;
   }
 
-  /*
-    Keep the overlay at the end of <body> without changing it into a native
-    dialog. This preserves the previous mobile behaviour while avoiding any
-    desktop stacking-context surprises from the app shell.
-  */
-  if (overlay.parentElement !== document.body) {
-    document.body.appendChild(overlay);
+  closeButton.addEventListener("click", () => {
+    closeGalleryZoom();
+  });
+
+
+  if (previousButton) {
+    previousButton.addEventListener("click", () => {
+      moveGalleryZoom(-1);
+    });
   }
 
-  if (overlay.dataset.galleryZoomInitialised === "true") {
-    return;
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      moveGalleryZoom(1);
+    });
   }
 
-  overlay.dataset.galleryZoomInitialised = "true";
+  if (alternativeButton) {
+  alternativeButton.addEventListener("click", () => {
+    cycleGalleryZoomRelatedVariants("alternatives");
+    });
+  }
+
+  if (renditionButton) {
+    renditionButton.addEventListener("click", () => {
+      cycleGalleryZoomRenditions();
+    });
+  }
+
+  if (reverseButton) {
+    reverseButton.addEventListener("click", () => {
+      cycleGalleryZoomRelatedVariants("reverses");
+    });
+  }
 
   /*
-    Pointer events are routed at document level while zoom is open.
+    Open the entity represented by the currently displayed zoom item.
 
-    This is more robust than relying only on button-local click listeners:
-    if a desktop shell layer, image layer or browser quirk receives the normal
-    click target, the coordinate-based router can still work out whether the
-    pointer was over a zoom control, inside the viewer, or outside the viewer.
+    If the item has a specific variant, focus that variant on the Entity page.
   */
-  document.addEventListener(
-    "pointerdown",
-    handleGalleryZoomPointerDown,
-    true
-  );
+  if (viewEntityButton) {
+    viewEntityButton.addEventListener("click", () => {
+      const currentItem =
+        appState.galleryZoom.items[appState.galleryZoom.currentIndex];
+
+      if (!currentItem) {
+        return;
+      }
+
+      closeGalleryZoom();
+
+      openEntityView(
+        currentItem.entityId,
+        currentItem.galleryVariantId
+      );
+    });
+  }
 
   /*
-    Keep a click fallback for browsers that do not produce PointerEvents.
-    The pointer handler marks events it has already handled to prevent double
-    execution.
+    Clicking the dark overlay outside the viewer closes the zoom.
   */
-  document.addEventListener(
-    "click",
-    handleGalleryZoomClickFallback,
-    true
-  );
+  overlay.addEventListener("click", event => {
+    if (event.target === overlay) {
+      closeGalleryZoom();
+    }
+  });
 
+  /*
+    Keyboard controls only work while the zoom overlay is open.
+  */
   document.addEventListener("keydown", event => {
-    if (!isGalleryZoomOpen()) {
+    if (overlay.classList.contains("hidden")) {
       return;
     }
 
     if (event.key === "Escape") {
-      event.preventDefault();
       closeGalleryZoom();
-      return;
     }
 
+        /*
+      Quiz zoom contains only the current image, so left/right navigation is
+      deliberately disabled.
+    */
     if (appState.galleryZoom.sourceMode === "quiz") {
       return;
     }
 
     if (event.key === "ArrowLeft") {
-      event.preventDefault();
       moveGalleryZoom(-1);
-      return;
     }
 
     if (event.key === "ArrowRight") {
-      event.preventDefault();
       moveGalleryZoom(1);
     }
   });
-}
-
-function isGalleryZoomOpen() {
-  const overlay = document.getElementById("galleryZoomOverlay");
-
-  return Boolean(
-    overlay &&
-    !overlay.classList.contains("hidden")
-  );
-}
-
-function handleGalleryZoomPointerDown(event) {
-  if (!isGalleryZoomOpen()) {
-    return;
-  }
-
-  const handled = routeGalleryZoomPointerEvent(event);
-
-  if (handled) {
-    event.__galleryZoomHandled = true;
-  }
-}
-
-function handleGalleryZoomClickFallback(event) {
-  if (event.__galleryZoomHandled) {
-    return;
-  }
-
-  if (!isGalleryZoomOpen()) {
-    return;
-  }
-
-  routeGalleryZoomPointerEvent(event);
-}
-
-function routeGalleryZoomPointerEvent(event) {
-  const overlay = document.getElementById("galleryZoomOverlay");
-  const viewer = overlay?.querySelector(".zoom-viewer");
-
-  if (!overlay || !viewer) {
-    return false;
-  }
-
-  const commandId = getGalleryZoomCommandAtPoint(
-    event.clientX,
-    event.clientY,
-    overlay
-  );
-
-  if (commandId) {
-    stopGalleryZoomEvent(event);
-    runGalleryZoomCommand(commandId);
-    return true;
-  }
-
-  if (isPointInsideElement(event.clientX, event.clientY, viewer)) {
-    return false;
-  }
-
-  stopGalleryZoomEvent(event);
-  closeGalleryZoom();
-  return true;
-}
-
-function stopGalleryZoomEvent(event) {
-  event.preventDefault();
-  event.stopPropagation();
-
-  if (typeof event.stopImmediatePropagation === "function") {
-    event.stopImmediatePropagation();
-  }
-}
-
-function getGalleryZoomCommandAtPoint(x, y, overlay) {
-  const commandIds = [
-    "closeGalleryZoomButton",
-    "previousGalleryZoomButton",
-    "nextGalleryZoomButton",
-    "viewGalleryZoomEntityButton",
-    "galleryZoomReverseButton",
-    "galleryZoomAlternativeButton",
-    "galleryZoomRenditionButton"
-  ];
-
-  if (typeof document.elementsFromPoint === "function") {
-    const elementsAtPoint = document.elementsFromPoint(x, y);
-
-    for (const element of elementsAtPoint) {
-      const commandElement = element.closest?.(
-        commandIds.map(id => `#${id}`).join(",")
-      );
-
-      if (
-        commandElement &&
-        overlay.contains(commandElement) &&
-        isGalleryZoomCommandUsable(commandElement)
-      ) {
-        return commandElement.id;
-      }
-    }
-  }
-
-  for (const commandId of commandIds) {
-    const commandElement = document.getElementById(commandId);
-
-    if (
-      commandElement &&
-      overlay.contains(commandElement) &&
-      isGalleryZoomCommandUsable(commandElement) &&
-      isPointInsideElement(x, y, commandElement)
-    ) {
-      return commandId;
-    }
-  }
-
-  return null;
-}
-
-function isGalleryZoomCommandUsable(element) {
-  return Boolean(
-    element &&
-    !element.hidden &&
-    !element.disabled &&
-    element.getAttribute("aria-hidden") !== "true"
-  );
-}
-
-function isPointInsideElement(x, y, element) {
-  const rect = element.getBoundingClientRect();
-
-  return (
-    x >= rect.left &&
-    x <= rect.right &&
-    y >= rect.top &&
-    y <= rect.bottom
-  );
-}
-
-function runGalleryZoomCommand(commandId) {
-  if (commandId === "closeGalleryZoomButton") {
-    closeGalleryZoom();
-    return;
-  }
-
-  if (commandId === "previousGalleryZoomButton") {
-    moveGalleryZoom(-1);
-    return;
-  }
-
-  if (commandId === "nextGalleryZoomButton") {
-    moveGalleryZoom(1);
-    return;
-  }
-
-  if (commandId === "galleryZoomAlternativeButton") {
-    cycleGalleryZoomRelatedVariants("alternatives");
-    return;
-  }
-
-  if (commandId === "galleryZoomRenditionButton") {
-    cycleGalleryZoomRenditions();
-    return;
-  }
-
-  if (commandId === "galleryZoomReverseButton") {
-    cycleGalleryZoomRelatedVariants("reverses");
-    return;
-  }
-
-  if (commandId === "viewGalleryZoomEntityButton") {
-    const currentItem =
-      appState.galleryZoom.items[appState.galleryZoom.currentIndex];
-
-    if (!currentItem) {
-      return;
-    }
-
-    closeGalleryZoom();
-
-    openEntityView(
-      currentItem.entityId,
-      currentItem.galleryVariantId
-    );
-  }
 }
 
 function openGalleryZoom() {
@@ -272,23 +133,16 @@ function openGalleryZoom() {
     return;
   }
 
-  if (overlay.parentElement !== document.body) {
-    document.body.appendChild(overlay);
-  }
+  /*
+    While zoom is open, lock the document behind it.
 
-  overlay.classList.remove("hidden");
-  overlay.removeAttribute("aria-hidden");
-
+    This prevents mobile browsers from scrolling the Gallery, Entity page or
+    quiz screen underneath the overlay.
+  */
   document.documentElement.classList.add("zoom-open");
   document.body.classList.add("zoom-open");
 
-  window.requestAnimationFrame(() => {
-    if (isGalleryZoomOpen()) {
-      document.getElementById("closeGalleryZoomButton")?.focus({
-        preventScroll: true
-      });
-    }
-  });
+  overlay.classList.remove("hidden");
 }
 
 /*
@@ -1075,8 +929,6 @@ function closeGalleryZoom() {
   const overlay = document.getElementById("galleryZoomOverlay");
 
   if (!overlay) {
-    document.documentElement.classList.remove("zoom-open");
-    document.body.classList.remove("zoom-open");
     return;
   }
 
@@ -1084,16 +936,28 @@ function closeGalleryZoom() {
     appState.galleryZoom.sourceMode === "entity";
 
   overlay.classList.add("hidden");
-  overlay.setAttribute("aria-hidden", "true");
 
+  /*
+    Re-enable normal page scrolling after the zoom overlay closes.
+  */
   document.documentElement.classList.remove("zoom-open");
   document.body.classList.remove("zoom-open");
-
+  
+  /*
+    Related-variant inspection is temporary and must never change the Gallery
+    or Entity Detail item that originally opened zoom.
+  */
   appState.galleryZoom.activeRelatedType = null;
   appState.galleryZoom.activeRelatedVariantId = null;
-  appState.galleryZoom.activeAssetId = null;
+  appState.galleryZoom.activeAssetId = null;  
   appState.galleryZoom.activeRelatedSourceVariantId = null;
 
+  /*
+    Re-render Entity Detail so the variant last viewed in zoom receives the
+    existing focused styling.
+
+    Gallery zoom does not need to re-render Entity Detail.
+  */
   if (
     wasEntityZoom &&
     appState.entityView.activeEntityId
