@@ -332,7 +332,7 @@ const collections = [
   */
   {
     id: "col_south_american_sovereign",
-    name: "South American Sovereign Nations",
+    name: "Recognised South American Sovereign States",
     type: "dynamic",
     target: "entity",
     rules: {
@@ -360,7 +360,7 @@ const collections = [
   },
   {
     id: "col_north_america_countries",
-    name: "North American Sovereign Nations",
+    name: "Recognised North American Sovereign States",
     type: "dynamic",
     target: "entity",
     rules: {
@@ -388,7 +388,7 @@ const collections = [
   },
   {
     id: "col_central_america_sovereign",
-    name: "Central American Sovereign Nations",
+    name: "Recognised Central American Sovereign States",
     type: "dynamic",
     target: "entity",
     rules: {
@@ -416,7 +416,7 @@ const collections = [
   },
   {
     id: "col_caribbean_sovereign",
-    name: "Caribbean Sovereign Nations",
+    name: "Recognised Caribbean Sovereign States",
     type: "dynamic",
     target: "entity",
     rules: {
@@ -444,7 +444,7 @@ const collections = [
   },
   {
     id: "col_african_sovereign",
-    name: "African Sovereign Nations",
+    name: "Recognised African Sovereign States",
     type: "dynamic",
     target: "entity",
     rules: {
@@ -472,7 +472,7 @@ const collections = [
   },
   {
     id: "col_european_sovereign",
-    name: "European Sovereign Nations",
+    name: "Recognised European Sovereign States",
     type: "dynamic",
     target: "entity",
     notes: "Hybrid dynamic European-context sovereign collection: strict geographic Europe plus Cyprus.",
@@ -540,7 +540,7 @@ const collections = [
   },
   {
     id: "col_asian_sovereign",
-    name: "Asian Sovereign Nations",
+    name: "Recognised Asian Sovereign States",
     type: "dynamic",
     target: "entity",
     rules: {
@@ -568,549 +568,13 @@ const collections = [
   },
   {
     id: "col_oceanian_sovereign",
-    name: "Oceanian Sovereign Nations",
+    name: "Recognised Oceanian Sovereign States",
     type: "dynamic",
     target: "entity",
     rules: {
       all: [
         {
           hasAncestor: "ent_oceania"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-
-  /*
-    Subregion sovereign-nation collections.
-  */
-  {
-    id: "col_northern_america_sovereign",
-    name: "Northern American Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_northern_america"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_northern_africa_sovereign",
-    name: "Northern African Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_northern_africa"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_eastern_africa_sovereign",
-    name: "Eastern African Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_eastern_africa"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_middle_africa_sovereign",
-    name: "Middle African Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_middle_africa"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_southern_africa_sovereign",
-    name: "Southern African Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_southern_africa"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_western_africa_sovereign",
-    name: "Western African Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_western_africa"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_eastern_europe_sovereign",
-    name: "Eastern European Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_eastern_europe"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_northern_europe_sovereign",
-    name: "Northern European Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_northern_europe"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_southern_europe_sovereign",
-    name: "Southern European Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_southern_europe"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_western_europe_sovereign",
-    name: "Western European Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_western_europe"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_central_asia_sovereign",
-    name: "Central Asian Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_central_asia"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_eastern_asia_sovereign",
-    name: "Eastern Asian Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_eastern_asia"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_south_eastern_asia_sovereign",
-    name: "South-Eastern Asian Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_south_eastern_asia"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_southern_asia_sovereign",
-    name: "Southern Asian Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_southern_asia"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_western_asia_sovereign",
-    name: "Western Asian Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_western_asia"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_australia_and_new_zealand_sovereign",
-    name: "Australia and New Zealand Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_australia_and_new_zealand"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_melanesia_sovereign",
-    name: "Melanesian Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_melanesia"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_micronesia_sovereign",
-    name: "Micronesian Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_micronesia"
-        },
-        {
-          hasTag: "sovereign"
-        },
-        {
-          hasTag: "country"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasTag: "recognised"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
-  },
-  {
-    id: "col_polynesia_sovereign",
-    name: "Polynesian Sovereign Nations",
-    type: "dynamic",
-    target: "entity",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_polynesia"
         },
         {
           hasTag: "sovereign"
