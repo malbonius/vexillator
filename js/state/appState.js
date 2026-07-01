@@ -111,10 +111,15 @@ const appState = {
 
     gallerySortMode controls the order of items in the combined gallery and
     within each grouped source section.
+
+    galleryRandomSortSeed and galleryRandomSortSignature keep Random order
+    stable while the same Gallery pool is re-rendered.
   */
   galleryDetailsMode: "full",
   galleryOrganisationMode: "combined",
   gallerySortMode: "name_asc",
+  galleryRandomSortSeed: null,
+  galleryRandomSortSignature: null,
   galleryRenderLimit: GALLERY_INITIAL_RENDER_LIMIT,
 
   /*

@@ -31,6 +31,114 @@ function getGalleryVisibleItemCount(totalItemCount) {
 }
 
 /*
+  Ensures the Random order option exists even if the HTML select has not yet
+  been updated.
+*/
+function ensureGallerySortSelectOptions(sortSelect) {
+  if (!sortSelect) {
+    return;
+  }
+
+  const hasRandomOption = Array.from(sortSelect.options).some(option => {
+    return option.value === "random";
+  });
+
+  if (hasRandomOption) {
+    return;
+  }
+
+  const randomOption = document.createElement("option");
+  randomOption.value = "random";
+  randomOption.textContent = "Random order";
+
+  sortSelect.appendChild(randomOption);
+}
+
+/*
+  Clears the remembered Random order.
+
+  This is used when the user deliberately changes sort mode so returning to
+  Random order creates a fresh shuffle.
+*/
+function resetGalleryRandomOrder() {
+  appState.galleryRandomSortSeed = null;
+  appState.galleryRandomSortSignature = null;
+}
+
+/*
+  Creates a stable signature for the current resolved Gallery pool.
+
+  Random order should remain steady while the same pool is simply re-rendered,
+  but should refresh when the selected content changes.
+*/
+function createGalleryRandomOrderSignature(members) {
+  return members
+    .map(member => {
+      return [
+        member.sourceType ?? "",
+        member.sourceId ?? "",
+        member.collectionId ?? "",
+        member.entityId ?? "",
+        member.variantId ?? "",
+        member.galleryVariantId ?? "",
+        member.quizVariantId ?? ""
+      ].join("::");
+    })
+    .sort()
+    .join("||");
+}
+
+/*
+  Prepares the current Random order seed.
+
+  The seed is refreshed only when Random order is newly selected or when the
+  resolved Gallery pool changes. Detail-mode changes, zoom interactions and
+  render batching do not reshuffle the same pool.
+*/
+function prepareGalleryRandomOrder(members) {
+  if (appState.gallerySortMode !== "random") {
+    return;
+  }
+
+  const signature = createGalleryRandomOrderSignature(members);
+
+  if (
+    appState.galleryRandomSortSeed &&
+    appState.galleryRandomSortSignature === signature
+  ) {
+    return;
+  }
+
+  appState.galleryRandomSortSeed = `${Date.now()}_${Math.random()}`;
+  appState.galleryRandomSortSignature = signature;
+}
+
+/*
+  Deterministic 32-bit hash used to sort items into a seeded pseudo-random
+  order.
+
+  Using a seeded hash rather than Math.random() inside Array.sort keeps Random
+  order stable between normal re-renders.
+*/
+function hashGalleryRandomSortValue(value) {
+  let hash = 2166136261;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return hash >>> 0;
+}
+
+function getGalleryRandomSortKey(galleryItem) {
+  return [
+    galleryItem.entityId ?? "",
+    galleryItem.galleryVariantId ?? ""
+  ].join("::");
+}
+
+/*
   Creates controls for progressively rendering more Gallery cards.
 
   The full Working Pool remains available to quiz modes; this controls only
@@ -103,7 +211,7 @@ function createGalleryRenderLimitControls(
   → resolved WorkingPoolMembers
   → gallery variant
   → deduplicated gallery items
-  → alphabetically sorted flag cards
+  → sorted flag cards
 
   Important:
   We deduplicate by gallery variant ID, not by asset ID.
@@ -161,6 +269,8 @@ function renderGallery() {
 
     return;
   }
+
+  prepareGalleryRandomOrder(members);
 
   /*
     Existing gallery-specific deduplication remains downstream.
@@ -637,13 +747,20 @@ function setupGalleryControls() {
   }
 
   if (sortSelect) {
+    ensureGallerySortSelectOptions(sortSelect);
+
     sortSelect.value =
       appState.gallerySortMode;
 
     sortSelect.addEventListener("change", () => {
+      if (appState.gallerySortMode === sortSelect.value) {
+        return;
+      }
+
       appState.gallerySortMode =
         sortSelect.value;
 
+      resetGalleryRandomOrder();
       resetGalleryRenderLimit();
       renderGallery();
     });
@@ -696,8 +813,8 @@ function sortGalleryItems(galleryItems) {
     const variantNameB = variantB?.displayName || "";
 
     /*
-      Stable alphabetical fallback used after year comparisons and when dates
-      are equal or unavailable.
+      Stable alphabetical fallback used after year comparisons, when dates are
+      equal or unavailable, and to break rare Random order hash ties.
     */
     function compareNames() {
       const entityCompare = compareEntitiesAlphabetically(
@@ -710,6 +827,24 @@ function sortGalleryItems(galleryItems) {
       }
 
       return variantNameA.localeCompare(variantNameB);
+    }
+
+    if (appState.gallerySortMode === "random") {
+      const seed = appState.galleryRandomSortSeed ?? "";
+
+      const randomValueA = hashGalleryRandomSortValue(
+        `${seed}::${getGalleryRandomSortKey(itemA)}`
+      );
+
+      const randomValueB = hashGalleryRandomSortValue(
+        `${seed}::${getGalleryRandomSortKey(itemB)}`
+      );
+
+      if (randomValueA !== randomValueB) {
+        return randomValueA - randomValueB;
+      }
+
+      return compareNames();
     }
 
     if (appState.gallerySortMode === "name_desc") {
@@ -758,7 +893,6 @@ function sortGalleryItems(galleryItems) {
     return compareNames();
   });
 }
-
 /*
   Builds deduplicated gallery items from resolved WorkingPoolMembers.
 
