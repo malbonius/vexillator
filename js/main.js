@@ -966,22 +966,20 @@ function setupApplicationShell() {
 showSystemStatus(dataIndex);
 setupThemeToggle();
 setupApplicationShell();
-
-/*
-  Set up zoom before the rest of the optional UI modules.
-
-  Gallery, Entity Detail and Quiz can open the shared zoom viewer without
-  needing this setup, but the close, outside-click and keyboard handlers live
-  here. Keeping it early prevents an unrelated later setup error from leaving
-  users trapped in zoom.
-*/
-setupGalleryZoomViewer();
-
 renderBrowseView();
 renderCurrentSelection();
 renderGallery();
 
 setupModeTabs();
+
+/*
+  Wire the shared zoom viewer before optional feature modules.
+
+  This keeps Gallery, Entity Detail and Quiz zoom controls functional even if
+  another mode fails during startup.
+*/
+setupGalleryZoomViewer();
+
 /*
   Sets up Gallery organisation, sorting and detail controls.
 
@@ -994,19 +992,11 @@ setupTypingQuiz();
 setupBrowseModeButtons();
 setupMultipleChoiceQuiz();
 
-/*
-  Quiz Builder is an optional split UI module.
-
-  If js/ui/randomQuizView.js fails to load, or its setup function has been
-  renamed accidentally, the rest of the application should still initialise.
-  The missing setup is still reported in the console so the module can be
-  repaired directly.
-*/
 if (typeof setupRandomQuizView === "function") {
   setupRandomQuizView();
 } else {
   console.error(
-    "setupRandomQuizView is not defined. Check js/ui/randomQuizView.js."
+    "setupRandomQuizView is not available. Check js/ui/randomQuizView.js."
   );
 }
 
