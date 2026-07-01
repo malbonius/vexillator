@@ -966,6 +966,17 @@ function setupApplicationShell() {
 showSystemStatus(dataIndex);
 setupThemeToggle();
 setupApplicationShell();
+
+/*
+  Set up zoom before the rest of the optional UI modules.
+
+  Gallery, Entity Detail and Quiz can open the shared zoom viewer without
+  needing this setup, but the close, outside-click and keyboard handlers live
+  here. Keeping it early prevents an unrelated later setup error from leaving
+  users trapped in zoom.
+*/
+setupGalleryZoomViewer();
+
 renderBrowseView();
 renderCurrentSelection();
 renderGallery();
@@ -985,7 +996,6 @@ setupMultipleChoiceQuiz();
 setupRandomQuizView();
 setupStatsView();
 setupPresetView();
-setupGalleryZoomViewer();
 
 renderStatsView();
 
