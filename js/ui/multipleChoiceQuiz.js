@@ -30,19 +30,29 @@ function isMultipleChoiceQuizMobileViewport() {
   ).matches;
 }
 
-function getMultipleChoiceQuizScrollBehavior() {
+function isMultipleChoiceQuizLandscapeLayoutViewport() {
   return window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches ?
-    "auto" :
-    "smooth";
+    "(max-height: 520px) and (orientation: landscape)"
+  ).matches;
+}
+
+function getMultipleChoiceQuizScrollBehavior() {
+  /*
+    Mobile quiz repositioning should feel like alignment, not animation.
+    Smooth scrolling after feedback was visually jarring on small screens.
+  */
+  return "auto";
 }
 
 function scrollMultipleChoiceQuizElementIntoView(
   element,
   block = "start"
 ) {
-  if (!element || !isMultipleChoiceQuizMobileViewport()) {
+  if (
+    !element ||
+    !isMultipleChoiceQuizMobileViewport() ||
+    isMultipleChoiceQuizLandscapeLayoutViewport()
+  ) {
     return;
   }
 
@@ -52,6 +62,58 @@ function scrollMultipleChoiceQuizElementIntoView(
       block,
       inline: "nearest"
     });
+  }, 50);
+}
+
+function alignMultipleChoiceQuizCardForLandscape(element) {
+  if (
+    !element ||
+    !isMultipleChoiceQuizMobileViewport() ||
+    !isMultipleChoiceQuizLandscapeLayoutViewport()
+  ) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    element.scrollIntoView({
+      behavior: "auto",
+      block: "center",
+      inline: "nearest"
+    });
+  }, 50);
+}
+
+function focusMultipleChoiceQuizNextButton(nextButton, cardElement) {
+  if (!nextButton) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    if (isMultipleChoiceQuizMobileViewport()) {
+      if (isMultipleChoiceQuizLandscapeLayoutViewport() && cardElement) {
+        cardElement.scrollIntoView({
+          behavior: "auto",
+          block: "center",
+          inline: "nearest"
+        });
+      }
+
+      nextButton.scrollIntoView({
+        behavior: "auto",
+        block: isMultipleChoiceQuizLandscapeLayoutViewport() ? "nearest" : "center",
+        inline: "nearest"
+      });
+
+      try {
+        nextButton.focus({ preventScroll: true });
+      } catch (error) {
+        nextButton.focus();
+      }
+
+      return;
+    }
+
+    nextButton.focus();
   }, 50);
 }
 
@@ -247,7 +309,11 @@ function renderMultipleChoiceQuestion() {
 
   quizViewElement.appendChild(cardElement);
 
-  scrollMultipleChoiceQuizElementIntoView(cardElement, "start");
+  if (isMultipleChoiceQuizLandscapeLayoutViewport()) {
+    alignMultipleChoiceQuizCardForLandscape(cardElement);
+  } else {
+    scrollMultipleChoiceQuizElementIntoView(cardElement, "start");
+  }
 }
 
 /*
@@ -365,11 +431,7 @@ function renderMultipleChoiceFeedback(selectedOption, allOptions) {
 
   optionsElement.appendChild(nextButton);
 
-  if (isMultipleChoiceQuizMobileViewport()) {
-    scrollMultipleChoiceQuizElementIntoView(nextButton, "center");
-  } else {
-    nextButton.focus();
-  }
+  focusMultipleChoiceQuizNextButton(nextButton, cardElement);
 }
 
 /*

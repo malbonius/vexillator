@@ -1,609 +1,489 @@
 /*
-  Random Quiz UI.
+  Multiple-choice quiz UI.
 
-  Every include rule owns its own scope and entity-type filters. The resulting
-  temporary quiz pool is the deduplicated union of all rules, so unrelated
-  scope/type combinations do not form an accidental cross-product.
+  This file owns the multiple-choice quiz start, question rendering,
+  answer handling, feedback and result display. Shared quiz helpers still
+  live in main.js for now because they are also used by Typing Quiz and
+  other views.
 */
 
-let randomQuizRuleIdCounter = 1;
-let randomQuizRuleToOpenId = null;
+/*
+  Sets up the multiple-choice quiz start button.
+*/
+function setupMultipleChoiceQuiz() {
+  const startButton = document.getElementById("startMultipleChoiceQuizButton");
 
-function setupRandomQuizView() {
-  ensureRandomQuizRulesState();
-  renderRandomQuizFilterOptions();
-  bindRandomQuizControls();
-  updateRandomQuizSummaryAndControls();
+  startButton.addEventListener("click", () => {
+    startMultipleChoiceQuiz();
+  });
 }
 
-function createRandomQuizRuleState(options = {}) {
-  randomQuizRuleIdCounter += 1;
+/*
+  Mobile quiz screens need deliberate scroll behaviour.
 
-  return {
-    id: typeof options.id === "string" && options.id.length > 0
-      ? options.id
-      : `random_quiz_rule_${Date.now()}_${randomQuizRuleIdCounter}`,
-    regionEntityIds: new Set(
-      Array.isArray(options.regionEntityIds)
-        ? options.regionEntityIds
-        : []
-    ),
-    typeKeys: new Set(
-      Array.isArray(options.typeKeys)
-        ? options.typeKeys
-        : []
-    )
-  };
+  Multiple-choice does not summon the keyboard, but moving between questions
+  should still bring the flag and options back into the useful viewport area.
+*/
+function isMultipleChoiceQuizMobileViewport() {
+  return window.matchMedia(
+    "(max-width: 700px), (pointer: coarse)"
+  ).matches;
 }
 
-function ensureRandomQuizRulesState() {
-  if (!appState.randomQuiz || typeof appState.randomQuiz !== "object") {
+function isMultipleChoiceQuizLandscapeLayoutViewport() {
+  return window.matchMedia(
+    "(max-height: 520px) and (orientation: landscape)"
+  ).matches;
+}
+
+function getMultipleChoiceQuizScrollBehavior() {
+  return window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches ?
+    "auto" :
+    "smooth";
+}
+
+function scrollMultipleChoiceQuizElementIntoView(
+  element,
+  block = "start"
+) {
+  if (
+    !element ||
+    !isMultipleChoiceQuizMobileViewport() ||
+    isMultipleChoiceQuizLandscapeLayoutViewport()
+  ) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    element.scrollIntoView({
+      behavior: getMultipleChoiceQuizScrollBehavior(),
+      block,
+      inline: "nearest"
+    });
+  }, 50);
+}
+
+function alignMultipleChoiceQuizCardForLandscape(element) {
+  if (
+    !element ||
+    !isMultipleChoiceQuizMobileViewport() ||
+    !isMultipleChoiceQuizLandscapeLayoutViewport()
+  ) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    element.scrollIntoView({
+      behavior: "auto",
+      block: "center",
+      inline: "nearest"
+    });
+  }, 50);
+}
+
+/*
+  Starts a new multiple-choice quiz from the current working pool.
+*/
+function startMultipleChoiceQuiz() {
+  const quizViewElement = document.getElementById("multipleChoiceQuizView");
+
+  /*
+    A quiz can now come from selected collections, directly selected entities
+    or directly selected variants.
+  */
+  const hasActiveSelection =
+    appState.selectedCollectionIds.size > 0 ||
+    appState.selectedEntityGroups.size > 0 ||
+    appState.selectedEntityIds.size > 0 ||
+    appState.selectedVariantIds.size > 0;
+
+  if (!hasActiveSelection) {
+    quizViewElement.innerHTML = `
+      <p class="empty-message">
+        Select one or more collections, entities or variants before starting a quiz.
+      </p>
+    `;
+
+    return;
+  }
+
+  const questionCountInput = document.getElementById(
+    "multipleChoiceQuestionCountInput"
+  );
+
+  /*
+    Read the requested question count directly from the input.
+
+    Do not use || 10 here because 0 is meaningful when the current
+    selection produces no quizable questions.
+  */
+  const requestedQuestionCount = Number(questionCountInput.value);
+
+  if (requestedQuestionCount < 1) {
+    quizViewElement.innerHTML = `
+      <p class="empty-message">
+        No quiz questions are available from the current selection.
+      </p>
+    `;
+
     return;
   }
 
   /*
-    This also supports a live page that still has the old global Set fields,
-    although a normal reload will use the new appState shape directly.
+    Pass every supported selection source to the quiz generator.
   */
-  if (
-    !Array.isArray(appState.randomQuiz.rules) ||
-    appState.randomQuiz.rules.length === 0
-  ) {
-    const legacyRegionIds = appState.randomQuiz.regionEntityIds instanceof Set
-      ? Array.from(appState.randomQuiz.regionEntityIds)
-      : [];
-    const legacyTypeKeys = appState.randomQuiz.typeKeys instanceof Set
-      ? Array.from(appState.randomQuiz.typeKeys)
-      : [];
-
-    appState.randomQuiz.rules = [
-      createRandomQuizRuleState({
-        regionEntityIds: legacyRegionIds,
-        typeKeys: legacyTypeKeys
-      })
-    ];
-  }
-
-  appState.randomQuiz.rules = appState.randomQuiz.rules.map(rule => {
-    if (
-      rule &&
-      typeof rule.id === "string" &&
-      rule.regionEntityIds instanceof Set &&
-      rule.typeKeys instanceof Set
-    ) {
-      return rule;
-    }
-
-    const regionEntityIds = rule?.regionEntityIds instanceof Set
-      ? Array.from(rule.regionEntityIds)
-      : Array.isArray(rule?.regionEntityIds)
-        ? rule.regionEntityIds
-        : [];
-    const typeKeys = rule?.typeKeys instanceof Set
-      ? Array.from(rule.typeKeys)
-      : Array.isArray(rule?.typeKeys)
-        ? rule.typeKeys
-        : [];
-
-    return createRandomQuizRuleState({
-      id: rule?.id,
-      regionEntityIds,
-      typeKeys
-    });
-  });
-}
-
-function renderRandomQuizFilterOptions() {
-  const rulesViewElement = document.getElementById(
-    "randomQuizRulesView"
-  );
-
-  if (!rulesViewElement) {
-    return;
-  }
-
-  ensureRandomQuizRulesState();
-  rulesViewElement.innerHTML = "";
-
-  appState.randomQuiz.rules.forEach((rule, ruleIndex) => {
-    rulesViewElement.appendChild(
-      createRandomQuizRuleElement(rule, ruleIndex)
-    );
-  });
-
-  randomQuizRuleToOpenId = null;
-}
-
-function createRandomQuizRuleElement(rule, ruleIndex) {
-  const ruleElement = document.createElement("details");
-  ruleElement.className = "random-quiz-rule";
-  ruleElement.dataset.ruleId = rule.id;
-  ruleElement.open = randomQuizRuleToOpenId === rule.id ||
-    (appState.randomQuiz.rules.length === 1 && ruleIndex === 0);
-
-  const summaryElement = document.createElement("summary");
-  summaryElement.className = "random-quiz-rule-summary";
-  summaryElement.id = `randomQuizRuleSummary_${rule.id}`;
-  summaryElement.textContent = getRandomQuizRuleSummaryText(
-    rule,
-    ruleIndex
-  );
-
-  const contentElement = document.createElement("div");
-  contentElement.className = "random-quiz-rule-content";
-
-  const actionsElement = document.createElement("div");
-  actionsElement.className = "random-quiz-rule-actions";
-
-  const removeButton = document.createElement("button");
-  removeButton.type = "button";
-  removeButton.textContent = appState.randomQuiz.rules.length === 1
-    ? "Clear this rule"
-    : "Remove this rule";
-  removeButton.addEventListener("click", () => {
-    removeRandomQuizRule(rule.id);
-  });
-
-  actionsElement.appendChild(removeButton);
-
-  const filterGridElement = document.createElement("div");
-  filterGridElement.className = "random-quiz-rule-filter-grid";
-
-  const scopeSectionElement = document.createElement("section");
-  scopeSectionElement.className = "random-quiz-rule-filter-section";
-
-  const scopeHeadingElement = document.createElement("h4");
-  scopeHeadingElement.textContent = "Scope / area";
-
-  const scopeNoteElement = document.createElement("p");
-  scopeNoteElement.className = "panel-note";
-  scopeNoteElement.textContent =
-    "Leave empty for the whole database. Multiple areas inside this rule are combined.";
-
-  const scopeGroupsElement = document.createElement("div");
-  scopeGroupsElement.className = "random-quiz-scope-groups";
-
-  getRandomQuizAvailableRegionGroups(dataIndex).forEach(group => {
-    scopeGroupsElement.appendChild(
-      createRandomQuizRegionGroupElement(group, rule, ruleIndex)
-    );
-  });
-
-  scopeSectionElement.appendChild(scopeHeadingElement);
-  scopeSectionElement.appendChild(scopeNoteElement);
-  scopeSectionElement.appendChild(scopeGroupsElement);
-
-  const typeSectionElement = document.createElement("section");
-  typeSectionElement.className = "random-quiz-rule-filter-section";
-
-  const typeHeadingElement = document.createElement("h4");
-  typeHeadingElement.textContent = "Entity types";
-
-  const typeNoteElement = document.createElement("p");
-  typeNoteElement.className = "panel-note";
-  typeNoteElement.textContent =
-    "Leave empty for all current entity types. Multiple types inside this rule are combined.";
-
-  const typeOptionsElement = document.createElement("div");
-  typeOptionsElement.className = "random-quiz-option-grid";
-
-  getRandomQuizAvailableTypeOptions().forEach(option => {
-    typeOptionsElement.appendChild(
-      createRandomQuizCheckbox({
-        inputName: `randomQuizType_${rule.id}`,
-        value: option.key,
-        label: option.label,
-        checked: rule.typeKeys.has(option.key),
-        onChange: event => {
-          updateRandomQuizSetFromCheckbox(
-            rule.typeKeys,
-            option.key,
-            event.target.checked
-          );
-
-          handleRandomQuizRuleChange(rule, ruleIndex);
-        }
-      })
-    );
-  });
-
-  typeSectionElement.appendChild(typeHeadingElement);
-  typeSectionElement.appendChild(typeNoteElement);
-  typeSectionElement.appendChild(typeOptionsElement);
-
-  filterGridElement.appendChild(scopeSectionElement);
-  filterGridElement.appendChild(typeSectionElement);
-
-  contentElement.appendChild(actionsElement);
-  contentElement.appendChild(filterGridElement);
-
-  ruleElement.appendChild(summaryElement);
-  ruleElement.appendChild(contentElement);
-
-  return ruleElement;
-}
-
-function createRandomQuizRegionGroupElement(group, rule, ruleIndex) {
-  const groupElement = document.createElement("details");
-  groupElement.className = "random-quiz-filter-group";
-  groupElement.open = group.openByDefault === true;
-
-  const summaryElement = document.createElement("summary");
-  summaryElement.className = "random-quiz-filter-group-summary";
-  summaryElement.textContent = `${group.label} (${group.options.length})`;
-
-  groupElement.appendChild(summaryElement);
-
-  const optionsElement = document.createElement("div");
-  optionsElement.className = "random-quiz-option-grid";
-
-  group.options.forEach(option => {
-    optionsElement.appendChild(
-      createRandomQuizCheckbox({
-        inputName: `randomQuizRegion_${rule.id}`,
-        value: option.id,
-        label: option.label,
-        checked: rule.regionEntityIds.has(option.id),
-        onChange: event => {
-          updateRandomQuizSetFromCheckbox(
-            rule.regionEntityIds,
-            option.id,
-            event.target.checked
-          );
-
-          handleRandomQuizRuleChange(rule, ruleIndex);
-        }
-      })
-    );
-  });
-
-  groupElement.appendChild(optionsElement);
-
-  return groupElement;
-}
-
-function createRandomQuizCheckbox(options) {
-  const labelElement = document.createElement("label");
-  labelElement.className = "random-quiz-checkbox";
-
-  const inputElement = document.createElement("input");
-  inputElement.type = "checkbox";
-  inputElement.name = options.inputName;
-  inputElement.value = options.value;
-  inputElement.checked = options.checked;
-
-  inputElement.addEventListener("change", options.onChange);
-
-  const textElement = document.createElement("span");
-  textElement.textContent = options.label;
-
-  labelElement.appendChild(inputElement);
-  labelElement.appendChild(textElement);
-
-  return labelElement;
-}
-
-function getRandomQuizRuleSummaryText(rule, ruleIndex) {
-  const scopeText = getRandomQuizRuleScopeSummary(rule);
-  const typeText = getRandomQuizRuleTypeSummary(rule);
-
-  return `Include rule ${ruleIndex + 1} — ${scopeText} + ${typeText}`;
-}
-
-function getRandomQuizRuleScopeSummary(rule) {
-  const selectedIds = Array.from(rule.regionEntityIds);
-
-  if (selectedIds.length === 0) {
-    return "All areas";
-  }
-
-  const availableOptionsById = new Map(
-    getRandomQuizAvailableRegionOptions(dataIndex).map(option => {
-      return [option.id, option.label];
-    })
-  );
-
-  const labels = selectedIds.map(entityId => {
-    return availableOptionsById.get(entityId) ||
-      dataIndex.entitiesById[entityId]?.name ||
-      entityId;
-  });
-
-  return formatRandomQuizRuleSummaryLabels(labels, "area", "areas");
-}
-
-function getRandomQuizRuleTypeSummary(rule) {
-  const selectedKeys = Array.from(rule.typeKeys);
-
-  if (selectedKeys.length === 0) {
-    return "All current types";
-  }
-
-  const availableOptionsByKey = new Map(
-    getRandomQuizAvailableTypeOptions().map(option => {
-      return [option.key, option.label];
-    })
-  );
-
-  const labels = selectedKeys.map(typeKey => {
-    return availableOptionsByKey.get(typeKey) || typeKey;
-  });
-
-  return formatRandomQuizRuleSummaryLabels(labels, "type", "types");
-}
-
-function formatRandomQuizRuleSummaryLabels(
-  labels,
-  singularNoun,
-  pluralNoun
-) {
-  const sortedLabels = labels.slice().sort((firstLabel, secondLabel) => {
-    return firstLabel.localeCompare(secondLabel);
-  });
-
-  if (sortedLabels.length <= 2) {
-    return sortedLabels.join(", ");
-  }
-
-  const remainingCount = sortedLabels.length - 2;
-  const noun = remainingCount === 1 ? singularNoun : pluralNoun;
-
-  return `${sortedLabels.slice(0, 2).join(", ")} and ${remainingCount} more ${noun}`;
-}
-
-function updateRandomQuizRuleSummary(rule, ruleIndex) {
-  const summaryElement = document.getElementById(
-    `randomQuizRuleSummary_${rule.id}`
-  );
-
-  if (summaryElement) {
-    summaryElement.textContent = getRandomQuizRuleSummaryText(
-      rule,
-      ruleIndex
-    );
-  }
-}
-
-function handleRandomQuizRuleChange(rule, ruleIndex) {
-  appState.randomQuiz.questionCountTouched = false;
-  updateRandomQuizRuleSummary(rule, ruleIndex);
-  updateRandomQuizSummaryAndControls();
-}
-
-function addRandomQuizRule() {
-  const newRule = createRandomQuizRuleState();
-  appState.randomQuiz.rules.push(newRule);
-  randomQuizRuleToOpenId = newRule.id;
-  appState.randomQuiz.questionCountTouched = false;
-  renderRandomQuizFilterOptions();
-  updateRandomQuizSummaryAndControls();
-}
-
-function removeRandomQuizRule(ruleId) {
-  if (appState.randomQuiz.rules.length === 1) {
-    appState.randomQuiz.rules = [createRandomQuizRuleState()];
-  } else {
-    appState.randomQuiz.rules = appState.randomQuiz.rules.filter(rule => {
-      return rule.id !== ruleId;
-    });
-  }
-
-  appState.randomQuiz.questionCountTouched = false;
-  renderRandomQuizFilterOptions();
-  updateRandomQuizSummaryAndControls();
-}
-
-function bindRandomQuizControls() {
-  const addRuleButton = document.getElementById(
-    "addRandomQuizRuleButton"
-  );
-  const includeDisputedInput = document.getElementById(
-    "randomQuizIncludeDisputedInput"
-  );
-  const questionCountInput = document.getElementById(
-    "randomQuizQuestionCountInput"
-  );
-  const startTypingButton = document.getElementById(
-    "startRandomTypingQuizButton"
-  );
-  const startMultipleChoiceButton = document.getElementById(
-    "startRandomMultipleChoiceQuizButton"
-  );
-  const clearFiltersButton = document.getElementById(
-    "clearRandomQuizFiltersButton"
-  );
-
-  addRuleButton?.addEventListener("click", () => {
-    addRandomQuizRule();
-  });
-
-  includeDisputedInput?.addEventListener("change", event => {
-    appState.randomQuiz.includeDisputed = event.target.checked;
-    appState.randomQuiz.questionCountTouched = false;
-    updateRandomQuizSummaryAndControls();
-  });
-
-  questionCountInput?.addEventListener("input", () => {
-    appState.randomQuiz.questionCountTouched = true;
-    updateRandomQuizStartButtonState();
-  });
-
-  startTypingButton?.addEventListener("click", () => {
-    startRandomQuiz("typing");
-  });
-
-  startMultipleChoiceButton?.addEventListener("click", () => {
-    startRandomQuiz("multiple_choice");
-  });
-
-  clearFiltersButton?.addEventListener("click", () => {
-    clearRandomQuizFilters();
-  });
-}
-
-function updateRandomQuizSetFromCheckbox(targetSet, value, isChecked) {
-  if (isChecked) {
-    targetSet.add(value);
-    return;
-  }
-
-  targetSet.delete(value);
-}
-
-function getRandomQuizFiltersFromState() {
-  ensureRandomQuizRulesState();
-
-  return {
-    rules: appState.randomQuiz.rules.map(rule => ({
-      regionEntityIds: Array.from(rule.regionEntityIds),
-      typeKeys: Array.from(rule.typeKeys)
-    })),
-    includeDisputed: appState.randomQuiz.includeDisputed
-  };
-}
-
-function updateRandomQuizSummaryAndControls() {
-  const filters = getRandomQuizFiltersFromState();
-  const maximumQuestionCount = countRandomQuizQuestions(
-    filters,
-    dataIndex
-  );
-
-  appState.randomQuiz.lastMaximumQuestionCount = maximumQuestionCount;
-
-  const summaryElement = document.getElementById(
-    "randomQuizMatchSummary"
-  );
-  const emptyMessageElement = document.getElementById(
-    "randomQuizEmptyMessage"
-  );
-
-  if (summaryElement) {
-    summaryElement.textContent =
-      `Matching quiz questions: ${maximumQuestionCount}`;
-  }
-
-  if (emptyMessageElement) {
-    emptyMessageElement.hidden = maximumQuestionCount !== 0;
-  }
-
-  syncRandomQuizQuestionCountInput(maximumQuestionCount);
-  updateRandomQuizStartButtonState();
-
-  if (typeof renderPresetViews === "function") {
-    renderPresetViews();
-  }
-}
-
-function syncRandomQuizQuestionCountInput(maximumQuestionCount) {
-  const questionCountInput = document.getElementById(
-    "randomQuizQuestionCountInput"
-  );
-
-  if (!questionCountInput) {
-    return;
-  }
-
-  if (maximumQuestionCount === 0) {
-    questionCountInput.value = 0;
-    questionCountInput.max = 0;
-    questionCountInput.disabled = true;
-    return;
-  }
-
-  questionCountInput.disabled = false;
-  questionCountInput.max = maximumQuestionCount;
-
-  const currentValue = Number(questionCountInput.value);
-
-  if (
-    !appState.randomQuiz.questionCountTouched ||
-    !Number.isFinite(currentValue) ||
-    currentValue < 1
-  ) {
-    questionCountInput.value = maximumQuestionCount;
-    return;
-  }
-
-  if (currentValue > maximumQuestionCount) {
-    questionCountInput.value = maximumQuestionCount;
-  }
-}
-
-function updateRandomQuizStartButtonState() {
-  const maximumQuestionCount = appState.randomQuiz.lastMaximumQuestionCount;
-  const questionCountInput = document.getElementById(
-    "randomQuizQuestionCountInput"
-  );
-  const startTypingButton = document.getElementById(
-    "startRandomTypingQuizButton"
-  );
-  const startMultipleChoiceButton = document.getElementById(
-    "startRandomMultipleChoiceQuizButton"
-  );
-
-  const requestedQuestionCount = Number(questionCountInput?.value);
-  const canStart = maximumQuestionCount > 0 &&
-    Number.isFinite(requestedQuestionCount) &&
-    requestedQuestionCount >= 1;
-
-  if (startTypingButton) {
-    startTypingButton.disabled = !canStart;
-  }
-
-  if (startMultipleChoiceButton) {
-    startMultipleChoiceButton.disabled = !canStart;
-  }
-}
-
-function startRandomQuiz(mode) {
-  const questionCountInput = document.getElementById(
-    "randomQuizQuestionCountInput"
-  );
-  const requestedQuestionCount = Number(questionCountInput?.value);
-
-  if (!Number.isFinite(requestedQuestionCount) || requestedQuestionCount < 1) {
-    updateRandomQuizSummaryAndControls();
-    return;
-  }
-
-  const questions = generateRandomQuizQuestions({
-      filters: getRandomQuizFiltersFromState(),
+  const questions = generateQuizQuestions({
+      collectionIds: Array.from(appState.selectedCollectionIds),
+      entityGroups: Array.from(appState.selectedEntityGroups.values()),
+      entityIds: Array.from(appState.selectedEntityIds),
+      variantIds: Array.from(appState.selectedVariantIds),
       questionCount: requestedQuestionCount
     },
     dataIndex
   );
 
   if (questions.length === 0) {
-    updateRandomQuizSummaryAndControls();
+    quizViewElement.innerHTML = `
+      <p class="empty-message">
+        No quiz questions could be generated from the current selection.
+      </p>
+    `;
+
     return;
   }
 
-  if (mode === "typing") {
-    showModePanel("typing");
-    startTypingQuizFromQuestions(questions);
-    return;
-  }
-
-  if (mode === "multiple_choice") {
-    showModePanel("multipleChoice");
-    startMultipleChoiceQuizFromQuestions(questions);
-  }
+  startMultipleChoiceQuizFromQuestions(questions);
 }
 
-function clearRandomQuizFilters() {
-  appState.randomQuiz.rules = [createRandomQuizRuleState()];
-  appState.randomQuiz.includeDisputed = false;
-  appState.randomQuiz.questionCountTouched = false;
+/*
+  Starts a multiple-choice quiz from a prepared question list.
 
-  const includeDisputedInput = document.getElementById(
-    "randomQuizIncludeDisputedInput"
+  Random Quiz uses this path so it can build a temporary pool without
+  touching Current Selection.
+*/
+function startMultipleChoiceQuizFromQuestions(questions) {
+  if (!Array.isArray(questions) || questions.length === 0) {
+    const quizViewElement = document.getElementById("multipleChoiceQuizView");
+
+    quizViewElement.innerHTML = `
+      <p class="empty-message">
+        No quiz questions are available.
+      </p>
+    `;
+
+    return;
+  }
+
+  appState.multipleChoiceQuiz = {
+    questions,
+    currentQuestionIndex: 0,
+    score: 0,
+    hasAnsweredCurrentQuestion: false,
+    questionStartedAt: null
+  };
+
+  renderMultipleChoiceQuestion();
+}
+
+/*
+  Renders the current multiple-choice question.
+*/
+function renderMultipleChoiceQuestion() {
+  const quizViewElement = document.getElementById("multipleChoiceQuizView");
+  const quizState = appState.multipleChoiceQuiz;
+
+  const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+
+  if (!currentQuestion) {
+    renderMultipleChoiceResult();
+    return;
+  }
+
+  /*
+    Start timing this question as soon as it is rendered.
+  */
+  quizState.questionStartedAt = Date.now();
+
+  const variant = dataIndex.variantsById[currentQuestion.displayedVariantId];
+  const asset = dataIndex.assetsById[currentQuestion.assetId];
+
+  const options = buildMultipleChoiceOptions(
+    currentQuestion,
+    quizState.questions,
+    dataIndex,
+    4
   );
 
-  if (includeDisputedInput) {
-    includeDisputedInput.checked = false;
+  quizViewElement.innerHTML = "";
+
+  const cardElement = document.createElement("div");
+  cardElement.className = "quiz-card";
+
+  const progressElement = document.createElement("p");
+  progressElement.className = "quiz-progress";
+  progressElement.textContent =
+    `Question ${quizState.currentQuestionIndex + 1} of ${quizState.questions.length}`;
+
+  const imageWrapper = document.createElement("div");
+  imageWrapper.className = "quiz-image-wrapper";
+    imageWrapper.classList.add("quiz-image-zoom-trigger");
+  imageWrapper.tabIndex = 0;
+  imageWrapper.setAttribute("role", "button");
+  imageWrapper.setAttribute(
+    "aria-label",
+    "Open current quiz flag in zoom viewer"
+  );
+
+  const imageElement = document.createElement("img");
+  imageElement.className = "quiz-image";
+  imageElement.src = asset.path;
+  imageElement.alt = `Multiple-choice flag question: ${variant.displayName}`;
+
+  imageWrapper.appendChild(imageElement);
+    imageWrapper.addEventListener("click", () => {
+    openQuizImageZoom(imageElement);
+  });
+
+  imageWrapper.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openQuizImageZoom(imageElement);
+    }
+  });
+
+  const optionsElement = document.createElement("div");
+  optionsElement.className = "multiple-choice-options";
+
+  options.forEach(option => {
+    const optionButton = document.createElement("button");
+    optionButton.type = "button";
+    optionButton.className = "multiple-choice-option";
+    optionButton.textContent = option.label;
+
+    optionButton.addEventListener("click", () => {
+      submitMultipleChoiceAnswer(option, options);
+    });
+
+    optionsElement.appendChild(optionButton);
+  });
+
+  cardElement.appendChild(progressElement);
+  cardElement.appendChild(imageWrapper);
+  cardElement.appendChild(optionsElement);
+
+  quizViewElement.appendChild(cardElement);
+
+  if (isMultipleChoiceQuizLandscapeLayoutViewport()) {
+    alignMultipleChoiceQuizCardForLandscape(cardElement);
+  } else {
+    scrollMultipleChoiceQuizElementIntoView(cardElement, "start");
+  }
+}
+
+/*
+  Handles a selected multiple-choice answer.
+*/
+function submitMultipleChoiceAnswer(selectedOption, allOptions) {
+  const quizState = appState.multipleChoiceQuiz;
+
+  if (quizState.hasAnsweredCurrentQuestion) {
+    return;
   }
 
-  renderRandomQuizFilterOptions();
-  updateRandomQuizSummaryAndControls();
+  const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+
+  if (!currentQuestion) {
+    return;
+  }
+
+  const responseTimeSeconds = quizState.questionStartedAt ?
+    (Date.now() - quizState.questionStartedAt) / 1000 :
+    null;
+
+  if (selectedOption.isCorrect) {
+    quizState.score += 1;
+  }
+
+  /*
+    Record multiple-choice stats.
+
+    recordQuizAnswer already knows how to update all accepted entities for
+    combined shared-asset questions.
+  */
+  recordQuizAnswer({
+    mode: "multiple_choice",
+    question: currentQuestion,
+    wasCorrect: selectedOption.isCorrect,
+    responseTimeSeconds
+  });
+
+  renderStatsView();
+
+  quizState.hasAnsweredCurrentQuestion = true;
+
+  renderMultipleChoiceFeedback(selectedOption, allOptions);
 }
+
+/*
+  Shows correct/incorrect feedback for multiple-choice.
+*/
+function renderMultipleChoiceFeedback(selectedOption, allOptions) {
+  const quizViewElement = document.getElementById("multipleChoiceQuizView");
+  const cardElement = quizViewElement.querySelector(".quiz-card");
+
+  const quizState = appState.multipleChoiceQuiz;
+  const currentQuestion = quizState.questions[quizState.currentQuestionIndex];
+
+  revealQuizQuestionImage(cardElement, currentQuestion);
+
+  const optionButtons = cardElement.querySelectorAll(".multiple-choice-option");
+
+  optionButtons.forEach(button => {
+    button.disabled = true;
+
+    const matchingOption = allOptions.find(option => {
+      return option.label === button.textContent;
+    });
+
+    if (!matchingOption) {
+      return;
+    }
+
+    if (matchingOption.isCorrect) {
+      button.classList.add("correct");
+    }
+
+    if (matchingOption === selectedOption && !matchingOption.isCorrect) {
+      button.classList.add("incorrect");
+    }
+  });
+
+  const feedbackElement = document.createElement("p");
+  feedbackElement.className = selectedOption.isCorrect ?
+    "quiz-feedback correct" :
+    "quiz-feedback incorrect";
+
+  const correctOption = allOptions.find(option => option.isCorrect);
+
+  if (selectedOption.isCorrect) {
+    feedbackElement.textContent = `Correct: ${selectedOption.label}`;
+  } else {
+    feedbackElement.textContent = `Incorrect. Correct answer: ${correctOption.label}`;
+  }
+
+  const nextButton = document.createElement("button");
+  nextButton.type = "button";
+  nextButton.className = "quiz-next-button";
+  nextButton.textContent = isLastMultipleChoiceQuestion() ?
+    "Show Result" :
+    "Next Question";
+
+  nextButton.addEventListener("click", () => {
+    goToNextMultipleChoiceQuestion();
+  });
+
+  const optionsElement = cardElement.querySelector(".multiple-choice-options");
+  optionsElement.appendChild(feedbackElement);
+
+  const visualGroupNoteElement = createQuizVisualGroupNoteElement(
+    currentQuestion
+  );
+
+  if (visualGroupNoteElement) {
+    optionsElement.appendChild(visualGroupNoteElement);
+  }
+
+  optionsElement.appendChild(nextButton);
+
+  if (isMultipleChoiceQuizMobileViewport()) {
+    scrollMultipleChoiceQuizElementIntoView(nextButton, "center");
+  } else {
+    nextButton.focus();
+  }
+}
+
+/*
+  Moves to the next multiple-choice question.
+*/
+function goToNextMultipleChoiceQuestion() {
+  appState.multipleChoiceQuiz.currentQuestionIndex += 1;
+  appState.multipleChoiceQuiz.hasAnsweredCurrentQuestion = false;
+
+  renderMultipleChoiceQuestion();
+}
+
+/*
+  Checks whether the current multiple-choice question is the last one.
+*/
+function isLastMultipleChoiceQuestion() {
+  const quizState = appState.multipleChoiceQuiz;
+
+  return quizState.currentQuestionIndex >= quizState.questions.length - 1;
+}
+
+/*
+  Shows the final multiple-choice score.
+*/
+function renderMultipleChoiceResult() {
+  const quizViewElement = document.getElementById("multipleChoiceQuizView");
+  const quizState = appState.multipleChoiceQuiz;
+
+  quizViewElement.innerHTML = "";
+
+  const resultElement = document.createElement("div");
+  resultElement.className = "quiz-result";
+
+  const titleElement = document.createElement("h3");
+  titleElement.textContent = "Multiple-choice quiz complete";
+
+  const scoreElement = document.createElement("p");
+  scoreElement.textContent =
+    `Score: ${quizState.score} / ${quizState.questions.length}`;
+
+  const actionsElement = document.createElement("div");
+  actionsElement.className = "quiz-result-actions";
+
+  const restartButton = document.createElement("button");
+  restartButton.type = "button";
+  restartButton.textContent = "Start New Multiple-Choice Quiz";
+
+  restartButton.addEventListener("click", () => {
+    startMultipleChoiceQuiz();
+  });
+
+  actionsElement.appendChild(restartButton);
+
+  const snapshotStatusElement = document.createElement("p");
+  snapshotStatusElement.className = "quiz-result-status panel-note";
+
+  if (typeof saveQuizSnapshotPresetFromQuestions === "function") {
+    const saveSnapshotButton = document.createElement("button");
+    saveSnapshotButton.type = "button";
+    saveSnapshotButton.textContent = "Save This Quiz Set";
+
+    saveSnapshotButton.addEventListener("click", () => {
+      const preset = saveQuizSnapshotPresetFromQuestions({
+        questions: quizState.questions,
+        sourceQuizMode: "multiple_choice",
+        defaultName:
+          `Multiple-choice quiz set (${quizState.questions.length} questions)`
+      });
+
+      if (preset) {
+        snapshotStatusElement.textContent = `Saved “${preset.name}”.`;
+      }
+    });
+
+    actionsElement.appendChild(saveSnapshotButton);
+  }
+
+  resultElement.appendChild(titleElement);
+  resultElement.appendChild(scoreElement);
+  resultElement.appendChild(actionsElement);
+  resultElement.appendChild(snapshotStatusElement);
+
+  quizViewElement.appendChild(resultElement);
+}
+

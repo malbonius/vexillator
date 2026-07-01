@@ -29,16 +29,26 @@ function isTypingQuizMobileViewport() {
   ).matches;
 }
 
-function getTypingQuizScrollBehavior() {
+function isTypingQuizLandscapeLayoutViewport() {
   return window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches ?
-    "auto" :
-    "smooth";
+    "(max-height: 520px) and (orientation: landscape)"
+  ).matches;
+}
+
+function getTypingQuizScrollBehavior() {
+  /*
+    Mobile quiz repositioning should feel like alignment, not animation.
+    Smooth scrolling after feedback was visually jarring on small screens.
+  */
+  return "auto";
 }
 
 function scrollTypingQuizElementIntoView(element, block = "start") {
-  if (!element || !isTypingQuizMobileViewport()) {
+  if (
+    !element ||
+    !isTypingQuizMobileViewport() ||
+    isTypingQuizLandscapeLayoutViewport()
+  ) {
     return;
   }
 
@@ -48,6 +58,58 @@ function scrollTypingQuizElementIntoView(element, block = "start") {
       block,
       inline: "nearest"
     });
+  }, 50);
+}
+
+function alignTypingQuizCardForLandscape(element) {
+  if (
+    !element ||
+    !isTypingQuizMobileViewport() ||
+    !isTypingQuizLandscapeLayoutViewport()
+  ) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    element.scrollIntoView({
+      behavior: "auto",
+      block: "center",
+      inline: "nearest"
+    });
+  }, 50);
+}
+
+function focusTypingQuizNextButton(nextButton, cardElement) {
+  if (!nextButton) {
+    return;
+  }
+
+  window.setTimeout(() => {
+    if (isTypingQuizMobileViewport()) {
+      if (isTypingQuizLandscapeLayoutViewport() && cardElement) {
+        cardElement.scrollIntoView({
+          behavior: "auto",
+          block: "center",
+          inline: "nearest"
+        });
+      }
+
+      nextButton.scrollIntoView({
+        behavior: "auto",
+        block: isTypingQuizLandscapeLayoutViewport() ? "nearest" : "center",
+        inline: "nearest"
+      });
+
+      try {
+        nextButton.focus({ preventScroll: true });
+      } catch (error) {
+        nextButton.focus();
+      }
+
+      return;
+    }
+
+    nextButton.focus();
   }, 50);
 }
 
@@ -231,7 +293,9 @@ function renderTypingQuizQuestion() {
 
   quizViewElement.appendChild(cardElement);
 
-  if (isTypingQuizMobileViewport()) {
+  if (isTypingQuizLandscapeLayoutViewport()) {
+    alignTypingQuizCardForLandscape(cardElement);
+  } else if (isTypingQuizMobileViewport()) {
     scrollTypingQuizElementIntoView(cardElement, "start");
   } else {
     answerInput.focus();
@@ -372,7 +436,7 @@ function renderTypingQuizFeedback(result) {
 
   answerArea.appendChild(nextButton);
 
-  scrollTypingQuizElementIntoView(nextButton, "center");
+  focusTypingQuizNextButton(nextButton, cardElement);
 
     /*
     Register the feedback-stage Enter handler after the original submission

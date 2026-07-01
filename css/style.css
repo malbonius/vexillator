@@ -2352,6 +2352,68 @@ body.shell-drawer-open {
   }
 }
 
+/*
+  Mobile landscape quiz layout.
+
+  Landscape phones have limited vertical height but useful horizontal space.
+  Keep the flag visible on the left and answer controls on the right so the
+  user does not have to scroll between the prompt and the interaction area.
+*/
+@media (max-height: 520px) and (orientation: landscape) {
+  .quiz-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(14rem, 0.95fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    align-items: stretch;
+    max-height: calc(100dvh - 6.75rem);
+    overflow: hidden;
+    scroll-margin-top: 4rem;
+  }
+
+  .quiz-progress {
+    grid-column: 1 / -1;
+    padding: 0.45rem 0.65rem;
+  }
+
+  .quiz-image-wrapper {
+    grid-column: 1;
+    grid-row: 2;
+    min-height: 0;
+    height: 100%;
+    padding: 0.5rem;
+  }
+
+  .quiz-image {
+    height: clamp(135px, 54dvh, 260px);
+    max-height: clamp(135px, 54dvh, 260px);
+  }
+
+  .quiz-answer-area,
+  .multiple-choice-options {
+    grid-column: 2;
+    grid-row: 2;
+    align-content: start;
+    gap: 0.4rem;
+    min-height: 0;
+    max-height: 100%;
+    padding: 0.55rem;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .quiz-answer-area input,
+  .quiz-answer-area button,
+  .multiple-choice-option {
+    min-height: 2.35rem;
+    padding: 0.45rem 0.55rem;
+  }
+
+  .quiz-feedback {
+    padding: 0.55rem;
+    font-size: 0.95rem;
+  }
+}
+
 /* Final quiz result */
 .quiz-result {
   padding: 1rem;
