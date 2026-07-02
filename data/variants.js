@@ -7052,6 +7052,83 @@ const variants = [
     startYear: null,
     endYear: null
   },
+
+  /*
+    Bulgarian provincial text-removed quiz-safe variants.
+  */
+  {
+    id: "var_bulgaria_dobrich_province_current_text_removed",
+    entityId: "ent_bulgaria_dobrich_province",
+    assetId: "ast_dobrich_current_text_removed",
+    displayName: "Official Provincial Flag - Text Removed",
+    aliases: ["Flag of Dobrich Province", "Dobrich Province Flag", "Flag of Dobrich Oblast"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_bulgaria_dobrich_province_current"
+  },
+  {
+    id: "var_bulgaria_lovech_province_current_text_removed",
+    entityId: "ent_bulgaria_lovech_province",
+    assetId: "ast_lovech_current_text_removed",
+    displayName: "Official Provincial Flag - Text Removed",
+    aliases: ["Flag of Lovech Province", "Lovech Province Flag", "Flag of Lovech Oblast"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_bulgaria_lovech_province_current"
+  },
+  {
+    id: "var_bulgaria_razgrad_province_current_text_removed",
+    entityId: "ent_bulgaria_razgrad_province",
+    assetId: "ast_razgrad_current_text_removed",
+    displayName: "Official Provincial Flag - Text Removed",
+    aliases: ["Flag of Razgrad Province", "Razgrad Province Flag", "Flag of Razgrad Oblast"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_bulgaria_razgrad_province_current"
+  },
+  {
+    id: "var_bulgaria_shumen_province_current_text_removed",
+    entityId: "ent_bulgaria_shumen_province",
+    assetId: "ast_shumen_current_text_removed",
+    displayName: "Official Provincial Flag - Text Removed",
+    aliases: ["Flag of Shumen Province", "Shumen Province Flag", "Flag of Shumen Oblast"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_bulgaria_shumen_province_current"
+  },
+  {
+    id: "var_bulgaria_silistra_province_current_text_removed",
+    entityId: "ent_bulgaria_silistra_province",
+    assetId: "ast_silistra_current_text_removed",
+    displayName: "Official Provincial Flag - Text Removed",
+    aliases: ["Flag of Silistra Province", "Silistra Province Flag", "Flag of Silistra Oblast"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_bulgaria_silistra_province_current"
+  },
+  {
+    id: "var_bulgaria_varna_province_current_text_removed",
+    entityId: "ent_bulgaria_varna_province",
+    assetId: "ast_varna_current_text_removed",
+    displayName: "Official Provincial Flag - Text Removed",
+    aliases: ["Flag of Varna Province", "Varna Province Flag", "Flag of Varna Oblast"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_bulgaria_varna_province_current"
+  },
+
   {
     id: "var_croatia_current",
     entityId: "ent_croatia",
