@@ -7373,6 +7373,18 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_greece_current"
   },
+  /*
+    Greek regional flags.
+  */
+  {
+    id: "ent_greece_greek_macedonia_region",
+    name: "Greek Macedonia",
+    aliases: ["Macedonia (Greece)", "Greek Macedonia Region"],
+    entityType: "geographic",
+    parentIds: ["ent_greece"],
+    tags: ["region", "current"],
+    defaultVariantId: "var_greece_greek_macedonia_region_current"
+  },
   {
     id: "ent_hungary",
     name: "Hungary",
@@ -8256,6 +8268,36 @@ const entities = [
     parentIds: ["ent_southern_europe"],
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_malta_current"
+  },
+  /*
+    Maltese regional flags.
+  */
+  {
+    id: "ent_malta_gozo_region",
+    name: "Gozo Region",
+    aliases: ["Gozo"],
+    entityType: "geographic",
+    parentIds: ["ent_malta"],
+    tags: ["region", "current"],
+    defaultVariantId: "var_malta_gozo_region_current"
+  },
+  {
+    id: "ent_malta_northern_region",
+    name: "Northern Region",
+    aliases: ["Northern Region of Malta"],
+    entityType: "geographic",
+    parentIds: ["ent_malta"],
+    tags: ["region", "current"],
+    defaultVariantId: "var_malta_northern_region_current"
+  },
+  {
+    id: "ent_malta_southern_region",
+    name: "Southern Region",
+    aliases: ["Southern Region of Malta"],
+    entityType: "geographic",
+    parentIds: ["ent_malta"],
+    tags: ["region", "current"],
+    defaultVariantId: "var_malta_southern_region_current"
   },
   {
     id: "ent_moldova",

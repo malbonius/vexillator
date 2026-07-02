@@ -1421,6 +1421,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/sweden/counties/gotland_current.svg"
   },
   {
+    id: "ast_gozo_current",
+    path: "assets/flags/geography/europe/southern_europe/malta/regions/gozo_current.svg"
+  },
+  {
     id: "ast_grand_est_current",
     path: "assets/flags/geography/europe/western_europe/france/regions/grand_est_current.svg"
   },
@@ -1447,6 +1451,10 @@ const assets = [
   {
     id: "ast_greece_current",
     path: "assets/flags/geography/europe/southern_europe/greece/national/greece_current.svg"
+  },
+  {
+    id: "ast_greek_macedonia_current",
+    path: "assets/flags/geography/europe/southern_europe/greece/regions/greek_macedonia_current.svg"
   },
   {
     id: "ast_greenland_current",
@@ -2949,6 +2957,10 @@ const assets = [
     path: "assets/flags/geography/oceania/micronesian_region/northern_mariana_islands/national/northern_mariana_islands_current.svg"
   },
   {
+    id: "ast_northern_region_current",
+    path: "assets/flags/geography/europe/southern_europe/malta/regions/northern_region_current.svg"
+  },
+  {
     id: "ast_northern_territory_current",
     path: "assets/flags/geography/oceania/australia_and_new_zealand/australia/territories/internal/northern_territory_current.svg"
   },
@@ -3847,6 +3859,10 @@ const assets = [
   {
     id: "ast_south_yorkshire_unofficial",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/unofficial/south_yorkshire_unofficial.svg"
+  },
+  {
+    id: "ast_southern_region_current",
+    path: "assets/flags/geography/europe/southern_europe/malta/regions/southern_region_current.svg"
   },
   {
     id: "ast_spain_civil",

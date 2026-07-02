@@ -8790,6 +8790,19 @@ const variants = [
     startYear: 1978,
     endYear: null
   },
+  /*
+    Greek regional flags.
+  */
+  {
+    id: "var_greece_greek_macedonia_region_current",
+    entityId: "ent_greece_greek_macedonia_region",
+    assetId: "ast_greek_macedonia_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Greek Macedonia", "Flag of Macedonia (Greece)"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_hungary_current",
     entityId: "ent_hungary",
@@ -9869,6 +9882,39 @@ const variants = [
     aliases: [],
     tags: ["official", "current", "national"],
     startYear: 1964,
+    endYear: null
+  },
+  /*
+    Maltese regional flags.
+  */
+  {
+    id: "var_malta_gozo_region_current",
+    entityId: "ent_malta_gozo_region",
+    assetId: "ast_gozo_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Gozo", "Gozo Region Flag", "Flag of Gozo Region"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_malta_northern_region_current",
+    entityId: "ent_malta_northern_region",
+    assetId: "ast_northern_region_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Northern Region", "Northern Region Flag", "Flag of Northern Region of Malta"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_malta_southern_region_current",
+    entityId: "ent_malta_southern_region",
+    assetId: "ast_southern_region_current",
+    displayName: "Regional Flag",
+    aliases: ["Flag of Southern Region", "Southern Region Flag", "Flag of Southern Region of Malta"],
+    tags: ["current"],
+    startYear: null,
     endYear: null
   },
   {

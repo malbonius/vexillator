@@ -643,6 +643,23 @@ const collectionGroups = [
   },
 
   {
+    id: "grp_greece",
+    name: "Greece",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_greece_regions"
+    ]
+  },
+  {
+    id: "grp_malta",
+    name: "Malta",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_malta_regions"
+    ]
+  },
+
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],

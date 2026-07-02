@@ -3692,6 +3692,53 @@ const collections = [
   },
 
   {
+    id: "col_greece_regions",
+    name: "Greek Regional Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes current selectable Greek regional flags with available assets.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_greece"
+        },
+        {
+          hasTag: "region"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_malta_regions",
+    name: "Maltese Regional Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes current selectable Maltese regional flags with available assets.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_malta"
+        },
+        {
+          hasTag: "region"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_bulgaria_first_level_subdivisions",
     name: "Bulgarian Provincial Flags",
     type: "dynamic",
