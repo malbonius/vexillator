@@ -8233,6 +8233,104 @@ const entities = [
     defaultVariantId: "var_slovakia_current"
   },
   {
+    id: "ent_slovakia_banska_bystrica_region",
+    name: "Banská Bystrica Region",
+    aliases: [
+      "Banska Bystrica Region",
+      "Banskobystrický kraj",
+      "Banskobystricky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_slovakia"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_slovakia_banska_bystrica_region_current"
+  },
+  {
+    id: "ent_slovakia_bratislava_region",
+    name: "Bratislava Region",
+    aliases: [
+      "Bratislavský kraj",
+      "Bratislavsky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_slovakia"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_slovakia_bratislava_region_current"
+  },
+  {
+    id: "ent_slovakia_kosice_region",
+    name: "Košice Region",
+    aliases: [
+      "Kosice Region",
+      "Košický kraj",
+      "Kosicky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_slovakia"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_slovakia_kosice_region_current"
+  },
+  {
+    id: "ent_slovakia_nitra_region",
+    name: "Nitra Region",
+    aliases: ["Nitriansky kraj"],
+    entityType: "geographic",
+    parentIds: ["ent_slovakia"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_slovakia_nitra_region_current"
+  },
+  {
+    id: "ent_slovakia_presov_region",
+    name: "Prešov Region",
+    aliases: [
+      "Presov Region",
+      "Prešovský kraj",
+      "Presovsky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_slovakia"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_slovakia_presov_region_current"
+  },
+  {
+    id: "ent_slovakia_trencin_region",
+    name: "Trenčín Region",
+    aliases: [
+      "Trencin Region",
+      "Trenčiansky kraj",
+      "Trenciansky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_slovakia"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_slovakia_trencin_region_current"
+  },
+  {
+    id: "ent_slovakia_trnava_region",
+    name: "Trnava Region",
+    aliases: [
+      "Trnavský kraj",
+      "Trnavsky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_slovakia"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_slovakia_trnava_region_current"
+  },
+  {
+    id: "ent_slovakia_zilina_region",
+    name: "Žilina Region",
+    aliases: [
+      "Zilina Region",
+      "Žilinský kraj",
+      "Zilinsky kraj"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_slovakia"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_slovakia_zilina_region_current"
+  },
+  {
     id: "ent_slovenia",
     name: "Slovenia",
     aliases: ["Republic of Slovenia"],

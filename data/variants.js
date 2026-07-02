@@ -9722,6 +9722,130 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_slovakia_banska_bystrica_region_current",
+    entityId: "ent_slovakia_banska_bystrica_region",
+    assetId: "ast_banska_bystrica_current",
+    displayName: "Official Regional Flag",
+    aliases: [
+      "Flag of Banská Bystrica Region",
+      "Banská Bystrica Region Flag",
+      "Flag of Banska Bystrica Region",
+      "Flag of Banskobystrický kraj",
+      "Flag of Banskobystricky kraj"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_slovakia_bratislava_region_current",
+    entityId: "ent_slovakia_bratislava_region",
+    assetId: "ast_bratislava_kraj_current",
+    displayName: "Official Regional Flag",
+    aliases: [
+      "Flag of Bratislava Region",
+      "Bratislava Region Flag",
+      "Flag of Bratislavský kraj",
+      "Flag of Bratislavsky kraj"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_slovakia_kosice_region_current",
+    entityId: "ent_slovakia_kosice_region",
+    assetId: "ast_kosice_current",
+    displayName: "Official Regional Flag",
+    aliases: [
+      "Flag of Košice Region",
+      "Košice Region Flag",
+      "Flag of Kosice Region",
+      "Flag of Košický kraj",
+      "Flag of Kosicky kraj"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_slovakia_nitra_region_current",
+    entityId: "ent_slovakia_nitra_region",
+    assetId: "ast_nitra_current",
+    displayName: "Official Regional Flag",
+    aliases: [
+      "Flag of Nitra Region",
+      "Nitra Region Flag",
+      "Flag of Nitriansky kraj"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_slovakia_presov_region_current",
+    entityId: "ent_slovakia_presov_region",
+    assetId: "ast_presov_current",
+    displayName: "Official Regional Flag",
+    aliases: [
+      "Flag of Prešov Region",
+      "Prešov Region Flag",
+      "Flag of Presov Region",
+      "Flag of Prešovský kraj",
+      "Flag of Presovsky kraj"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_slovakia_trencin_region_current",
+    entityId: "ent_slovakia_trencin_region",
+    assetId: "ast_trencin_current",
+    displayName: "Official Regional Flag",
+    aliases: [
+      "Flag of Trenčín Region",
+      "Trenčín Region Flag",
+      "Flag of Trencin Region",
+      "Flag of Trenčiansky kraj",
+      "Flag of Trenciansky kraj"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_slovakia_trnava_region_current",
+    entityId: "ent_slovakia_trnava_region",
+    assetId: "ast_trnava_current",
+    displayName: "Official Regional Flag",
+    aliases: [
+      "Flag of Trnava Region",
+      "Trnava Region Flag",
+      "Flag of Trnavský kraj",
+      "Flag of Trnavsky kraj"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_slovakia_zilina_region_current",
+    entityId: "ent_slovakia_zilina_region",
+    assetId: "ast_zilina_current",
+    displayName: "Official Regional Flag",
+    aliases: [
+      "Flag of Žilina Region",
+      "Žilina Region Flag",
+      "Flag of Zilina Region",
+      "Flag of Žilinský kraj",
+      "Flag of Zilinsky kraj"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_slovenia_current",
     entityId: "ent_slovenia",
     assetId: "ast_slovenia_current",

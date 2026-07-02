@@ -3641,6 +3641,29 @@ const collections = [
     }
   },
   {
+    id: "col_slovakia_regions",
+    name: "Slovak Regional Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes the currently available Slovak self-governing regions, or kraje, as first-level subdivisions.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_slovakia"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_czechia_regions",
     name: "Czech Regional Flags",
     type: "dynamic",

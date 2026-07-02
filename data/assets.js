@@ -329,6 +329,10 @@ const assets = [
     path: "assets/flags/geography/asia/southern_asia/bangladesh/national/bangladesh_current.svg"
   },
   {
+    id: "ast_banska_bystrica_current",
+    path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/banska_bystrica_current.svg"
+  },
+  {
     id: "ast_baranya_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/baranya_current.svg"
   },
@@ -499,6 +503,10 @@ const assets = [
   {
     id: "ast_braso_current",
     path: "assets/flags/geography/europe/eastern_europe/romania/counties/centru/braso_current.png"
+  },
+  {
+    id: "ast_bratislava_kraj_current",
+    path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/bratislava_kraj_current.svg"
   },
   {
     id: "ast_brazil_current",
@@ -1909,6 +1917,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/northwestern/komi_current.svg"
   },
   {
+    id: "ast_kosice_current",
+    path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/kosice_current.svg"
+  },
+  {
     id: "ast_kosovo_current",
     path: "assets/flags/geography/europe/southern_europe/kosovo/kosovo_current.svg"
   },
@@ -2585,6 +2597,10 @@ const assets = [
     path: "assets/flags/geography/asia/eastern_asia/japan/prefectures/chubu/niigata_current.svg"
   },
   {
+    id: "ast_nitra_current",
+    path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/nitra_current.svg"
+  },
+  {
     id: "ast_niue_current",
     path: "assets/flags/geography/oceania/polynesia/niue/national/niue_current.svg"
   },
@@ -3039,6 +3055,10 @@ const assets = [
   {
     id: "ast_prague_current",
     path: "assets/flags/geography/europe/eastern_europe/czechia/regions/prague_current.svg"
+  },
+  {
+    id: "ast_presov_current",
+    path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/presov_current.svg"
   },
   {
     id: "ast_primorsky_current",
@@ -3733,6 +3753,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/transnistria/transnistria_current_reverse.svg"
   },
   {
+    id: "ast_trencin_current",
+    path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/trencin_current.svg"
+  },
+  {
     id: "ast_trentino_alto_south_tyrol_current",
     path: "assets/flags/geography/europe/southern_europe/italy/regions/trentino_alto/trentino_alto_south_tyrol_current.svg"
   },
@@ -3751,6 +3775,10 @@ const assets = [
   {
     id: "ast_tristan_da_cunha_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/western_africa/saint_helena_ascension_tristan/tristan_da_cunha/tristan_da_cunha_current.svg"
+  },
+  {
+    id: "ast_trnava_current",
+    path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/trnava_current.svg"
   },
   {
     id: "ast_troms_current",
@@ -4263,6 +4291,10 @@ const assets = [
   {
     id: "ast_zeeland_current",
     path: "assets/flags/geography/europe/western_europe/netherlands/provinces/zeeland_current.svg"
+  },
+  {
+    id: "ast_zilina_current",
+    path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/zilina_current.svg"
   },
   {
     id: "ast_zimbabwe_current",

@@ -384,6 +384,15 @@ const collectionGroups = [
   },
 
   {
+    id: "grp_slovakia",
+    name: "Slovakia",
+    parentGroupIds: ["grp_eastern_europe"],
+    collectionIds: [
+      "col_slovakia_regions"
+    ]
+  },
+
+  {
     id: "grp_russia",
     name: "Russia",
     parentGroupIds: ["grp_eastern_europe"],
