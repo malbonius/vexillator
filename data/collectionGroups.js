@@ -821,6 +821,15 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_nordic_council",
+    name: "Nordic Council",
+    parentGroupIds: ["grp_european_atlantic_organisations"],
+    collectionIds: [
+      "col_nordic_council_flag",
+      "col_nordic_council_member_flags"
+    ]
+  },
+  {
     id: "grp_nato",
     name: "NATO",
     parentGroupIds: ["grp_european_atlantic_organisations"],

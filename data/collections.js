@@ -4252,6 +4252,87 @@ const collections = [
     }
   },
   {
+    id: "col_nordic_council_flag",
+    name: "Nordic Council Flag",
+    type: "manual",
+    target: "entity",
+    members: [
+      {
+        id: "mem_nordic_council_flag",
+        collectionId: "col_nordic_council_flag",
+        entityId: "ent_nordic_council",
+        galleryVariantId: "var_nordic_council_current",
+        quizVariantId: "var_nordic_council_current"
+      }
+    ]
+  },
+  {
+    id: "col_nordic_council_member_flags",
+    name: "Nordic Council Member Flags",
+    type: "manual",
+    target: "entity",
+    notes: "Nordic Council membership-style browsing set: the five Nordic sovereign states plus the Faroe Islands, Greenland and Åland.",
+    members: [
+      {
+        id: "mem_nordic_council_denmark",
+        collectionId: "col_nordic_council_member_flags",
+        entityId: "ent_denmark",
+        galleryVariantId: "var_denmark_current",
+        quizVariantId: "var_denmark_current"
+      },
+      {
+        id: "mem_nordic_council_finland",
+        collectionId: "col_nordic_council_member_flags",
+        entityId: "ent_finland",
+        galleryVariantId: "var_finland_current",
+        quizVariantId: "var_finland_current"
+      },
+      {
+        id: "mem_nordic_council_iceland",
+        collectionId: "col_nordic_council_member_flags",
+        entityId: "ent_iceland",
+        galleryVariantId: "var_iceland_current",
+        quizVariantId: "var_iceland_current"
+      },
+      {
+        id: "mem_nordic_council_norway",
+        collectionId: "col_nordic_council_member_flags",
+        entityId: "ent_norway",
+        galleryVariantId: "var_norway_current",
+        quizVariantId: "var_norway_current"
+      },
+      {
+        id: "mem_nordic_council_sweden",
+        collectionId: "col_nordic_council_member_flags",
+        entityId: "ent_sweden",
+        galleryVariantId: "var_sweden_current",
+        quizVariantId: "var_sweden_current"
+      },
+      {
+        id: "mem_nordic_council_faroe_islands",
+        collectionId: "col_nordic_council_member_flags",
+        entityId: "ent_faroe_islands",
+        galleryVariantId: "var_faroe_islands_current",
+        quizVariantId: "var_faroe_islands_current"
+      },
+      {
+        id: "mem_nordic_council_greenland",
+        collectionId: "col_nordic_council_member_flags",
+        entityId: "ent_greenland",
+        galleryVariantId: "var_greenland_current",
+        quizVariantId: "var_greenland_current"
+      },
+      {
+        id: "mem_nordic_council_aland",
+        collectionId: "col_nordic_council_member_flags",
+        entityId: "ent_aland",
+        galleryVariantId: "var_aland_current",
+        quizVariantId: "var_aland_current"
+      }
+    ]
+  },
+
+  {
     id: "col_treaty_system_flags",
     name: "Treaty System Flags",
     type: "dynamic",

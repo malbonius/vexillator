@@ -454,6 +454,45 @@ const entityRelationshipGroups = Object.freeze({
     unmatchedLabel: "Other Australian Relationships"
   }),
 
+  ent_nordic_council: Object.freeze({
+    id: "nordic_council_members",
+    label: "Member Countries and Autonomous Areas",
+    relationshipTypes: [],
+    entityIds: [
+      "ent_denmark",
+      "ent_finland",
+      "ent_iceland",
+      "ent_norway",
+      "ent_sweden",
+      "ent_faroe_islands",
+      "ent_greenland",
+      "ent_aland"
+    ],
+    groups: Object.freeze([
+      Object.freeze({
+        id: "sovereign_states",
+        label: "Sovereign States",
+        entityIds: [
+          "ent_denmark",
+          "ent_finland",
+          "ent_iceland",
+          "ent_norway",
+          "ent_sweden"
+        ]
+      }),
+      Object.freeze({
+        id: "autonomous_areas",
+        label: "Autonomous Areas",
+        entityIds: [
+          "ent_faroe_islands",
+          "ent_greenland",
+          "ent_aland"
+        ]
+      })
+    ]),
+    unmatchedLabel: "Other Nordic Council Relationships"
+  }),
+
   ent_spain: Object.freeze({
     id: "spain_autonomous_subdivisions",
     label: "Autonomous Subdivisions",

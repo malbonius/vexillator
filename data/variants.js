@@ -1019,6 +1019,17 @@ const variants = [
   },
 
   {
+    id: "var_nordic_council_current",
+    entityId: "ent_nordic_council",
+    assetId: "ast_nordic_council_current",
+    displayName: "Nordic Council Flag",
+    aliases: ["Nordic cooperation flag", "Swan flag"],
+    tags: ["organisation", "current"],
+    startYear: 2016,
+    endYear: null
+  },
+
+  {
     id: "var_nato_current",
     entityId: "ent_nato",
     assetId: "ast_nato_current",

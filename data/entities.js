@@ -11051,6 +11051,15 @@ const entities = [
   defaultVariantId: "var_nato_current"
 },
 {
+  id: "ent_nordic_council",
+  name: "Nordic Council",
+  aliases: ["Nordisk Råd", "Nordic Council and Nordic Council of Ministers", "Nordic Cooperation", "Nordic Co-operation"],
+  entityType: "organisation",
+  parentIds: ["ent_european_atlantic_organisations"],
+  tags: ["organisation", "international_organisation", "current"],
+  defaultVariantId: "var_nordic_council_current"
+},
+{
   id: "ent_antarctic_treaty_system",
   name: "Antarctic Treaty System",
   aliases: ["Antarctic Treaty"],

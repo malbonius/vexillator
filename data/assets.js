@@ -2597,6 +2597,10 @@ const assets = [
     path: "assets/flags/geography/europe/western_europe/france/regions/pre-2016/nord_pas_de_calais/nord_pas_de_calais_current.svg"
   },
   {
+    id: "ast_nordic_council_current",
+    path: "assets/flags/international_organisations/nordic_council/nordic_council_current.svg"
+  },
+  {
     id: "ast_nordjylland_current",
     path: "assets/flags/geography/europe/northern_europe/denmark/regioner/nordjylland_current.svg"
   },
