@@ -6423,6 +6423,212 @@ const variants = [
     startYear: 1992,
     endYear: null
   },
+
+
+  /*
+    Albanian counties.
+  */
+  {
+    id: "var_albania_berat_county_current",
+    entityId: "ent_albania_berat_county",
+    assetId: "ast_berat_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Berat County", "Berat County Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_diber_county_current",
+    entityId: "ent_albania_diber_county",
+    assetId: "ast_diber_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Dibër County", "Dibër County Flag", "Flag of Diber County"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_durres_county_current",
+    entityId: "ent_albania_durres_county",
+    assetId: "ast_durres_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Durrës County", "Durrës County Flag", "Flag of Durres County"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_elbasan_county_current",
+    entityId: "ent_albania_elbasan_county",
+    assetId: "ast_elbasan_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Elbasan County", "Elbasan County Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_fier_county_current",
+    entityId: "ent_albania_fier_county",
+    assetId: "ast_fier_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Fier County", "Fier County Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_gjirokaster_county_current",
+    entityId: "ent_albania_gjirokaster_county",
+    assetId: "ast_gjirokaster_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Gjirokastër County", "Gjirokastër County Flag", "Flag of Gjirokaster County"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_korce_county_current",
+    entityId: "ent_albania_korce_county",
+    assetId: "ast_korce_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Korçë County", "Korçë County Flag", "Flag of Korce County"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_kukes_county_current",
+    entityId: "ent_albania_kukes_county",
+    assetId: "ast_kukes_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Kukës County", "Kukës County Flag", "Flag of Kukes County"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_lezhe_county_current",
+    entityId: "ent_albania_lezhe_county",
+    assetId: "ast_lezhe_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Lezhë County", "Lezhë County Flag", "Flag of Lezhe County"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_shkoder_county_current",
+    entityId: "ent_albania_shkoder_county",
+    assetId: "ast_shkoder_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Shkodër County", "Shkodër County Flag", "Flag of Shkoder County"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_tirana_county_current",
+    entityId: "ent_albania_tirana_county",
+    assetId: "ast_tirana_county_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Tirana County", "Tirana County Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_albania_vlore_county_current",
+    entityId: "ent_albania_vlore_county",
+    assetId: "ast_vlore_current",
+    displayName: "Official County Flag",
+    aliases: ["Flag of Vlorë County", "Vlorë County Flag", "Flag of Vlore County"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Albanian county text-removed quiz-safe variants.
+  */
+  {
+    id: "var_albania_diber_county_current_text_removed",
+    entityId: "ent_albania_diber_county",
+    assetId: "ast_diber_current_text_removed",
+    displayName: "Official County Flag - Text Removed",
+    aliases: ["Flag of Dibër County", "Dibër County Flag", "Flag of Diber County"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_albania_diber_county_current"
+  },
+  {
+    id: "var_albania_durres_county_current_text_removed",
+    entityId: "ent_albania_durres_county",
+    assetId: "ast_durres_current_text_removed",
+    displayName: "Official County Flag - Text Removed",
+    aliases: ["Flag of Durrës County", "Durrës County Flag", "Flag of Durres County"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_albania_durres_county_current"
+  },
+  {
+    id: "var_albania_elbasan_county_current_text_removed",
+    entityId: "ent_albania_elbasan_county",
+    assetId: "ast_elbasan_current_text_removed",
+    displayName: "Official County Flag - Text Removed",
+    aliases: ["Flag of Elbasan County", "Elbasan County Flag"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_albania_elbasan_county_current"
+  },
+  {
+    id: "var_albania_fier_county_current_text_removed",
+    entityId: "ent_albania_fier_county",
+    assetId: "ast_fier_current_text_removed",
+    displayName: "Official County Flag - Text Removed",
+    aliases: ["Flag of Fier County", "Fier County Flag"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_albania_fier_county_current"
+  },
+  {
+    id: "var_albania_lezhe_county_current_text_removed",
+    entityId: "ent_albania_lezhe_county",
+    assetId: "ast_lezhe_current_text_removed",
+    displayName: "Official County Flag - Text Removed",
+    aliases: ["Flag of Lezhë County", "Lezhë County Flag", "Flag of Lezhe County"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_albania_lezhe_county_current"
+  },
+  {
+    id: "var_albania_shkoder_county_current_text_removed",
+    entityId: "ent_albania_shkoder_county",
+    assetId: "ast_shkoder_current_text_removed",
+    displayName: "Official County Flag - Text Removed",
+    aliases: ["Flag of Shkodër County", "Shkodër County Flag", "Flag of Shkoder County"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_albania_shkoder_county_current"
+  },
+  {
+    id: "var_albania_vlore_county_current_text_removed",
+    entityId: "ent_albania_vlore_county",
+    assetId: "ast_vlore_current_text_removed",
+    displayName: "Official County Flag - Text Removed",
+    aliases: ["Flag of Vlorë County", "Vlorë County Flag", "Flag of Vlore County"],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_albania_vlore_county_current"
+  },
   {
     id: "var_andorra_current",
     entityId: "ent_andorra",

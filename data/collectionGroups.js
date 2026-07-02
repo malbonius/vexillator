@@ -610,6 +610,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_albania",
+    name: "Albania",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_albania_counties"
+    ]
+  },
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],

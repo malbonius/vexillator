@@ -3595,6 +3595,32 @@ const collections = [
     }
   },
   {
+    id: "col_albania_counties",
+    name: "Albanian County Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes the 12 current Albanian counties as first-level subdivisions.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_albania"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "county"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_bulgaria_first_level_subdivisions",
     name: "Bulgarian Provincial Flags",
     type: "dynamic",

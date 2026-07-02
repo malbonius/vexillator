@@ -5367,6 +5367,114 @@ const entities = [
     defaultVariantId: "var_albania_current"
   },
   {
+    id: "ent_albania_berat_county",
+    name: "Berat County",
+    aliases: ["Qarku i Beratit"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_berat_county_current"
+  },
+  {
+    id: "ent_albania_diber_county",
+    name: "Dibër County",
+    aliases: ["Diber County", "Dibra County", "Qarku i Dibrës"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_diber_county_current"
+  },
+  {
+    id: "ent_albania_durres_county",
+    name: "Durrës County",
+    aliases: ["Durres County", "Qarku i Durrësit"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_durres_county_current"
+  },
+  {
+    id: "ent_albania_elbasan_county",
+    name: "Elbasan County",
+    aliases: ["Qarku i Elbasanit"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_elbasan_county_current"
+  },
+  {
+    id: "ent_albania_fier_county",
+    name: "Fier County",
+    aliases: ["Qarku i Fierit"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_fier_county_current"
+  },
+  {
+    id: "ent_albania_gjirokaster_county",
+    name: "Gjirokastër County",
+    aliases: ["Gjirokaster County", "Qarku i Gjirokastrës"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_gjirokaster_county_current"
+  },
+  {
+    id: "ent_albania_korce_county",
+    name: "Korçë County",
+    aliases: ["Korce County", "Qarku i Korçës"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_korce_county_current"
+  },
+  {
+    id: "ent_albania_kukes_county",
+    name: "Kukës County",
+    aliases: ["Kukes County", "Qarku i Kukësit"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_kukes_county_current"
+  },
+  {
+    id: "ent_albania_lezhe_county",
+    name: "Lezhë County",
+    aliases: ["Lezhe County", "Qarku i Lezhës"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_lezhe_county_current"
+  },
+  {
+    id: "ent_albania_shkoder_county",
+    name: "Shkodër County",
+    aliases: ["Shkoder County", "Qarku i Shkodrës"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_shkoder_county_current"
+  },
+  {
+    id: "ent_albania_tirana_county",
+    name: "Tirana County",
+    aliases: ["Qarku i Tiranës"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_tirana_county_current"
+  },
+  {
+    id: "ent_albania_vlore_county",
+    name: "Vlorë County",
+    aliases: ["Vlore County", "Qarku i Vlorës"],
+    entityType: "geographic",
+    parentIds: ["ent_albania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_albania_vlore_county_current"
+  },
+  {
     id: "ent_andorra",
     name: "Andorra",
     aliases: ["Principality of Andorra"],
