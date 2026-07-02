@@ -6640,6 +6640,140 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_andorra_andorra_la_vella_parish_current",
+    entityId: "ent_andorra_andorra_la_vella_parish",
+    assetId: "ast_andorra_la_vella_current",
+    displayName: "Parish Flag",
+    aliases: ["Flag of Andorra la Vella Parish", "Andorra la Vella Parish Flag", "Flag of Andorra la Vella"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null,
+    relatedVariants: {
+      alternatives: ["var_andorra_andorra_la_vella_parish_current_alt"]
+    }
+  },
+  {
+    id: "var_andorra_andorra_la_vella_parish_current_alt",
+    entityId: "ent_andorra_andorra_la_vella_parish",
+    assetId: "ast_andorra_la_vella_current_alt",
+    displayName: "Alternative Parish Flag",
+    aliases: ["Alternative Flag of Andorra la Vella Parish", "Alternative Andorra la Vella Parish Flag", "Alternative Flag of Andorra la Vella"],
+    tags: ["current", "alternative"],
+    startYear: null,
+    endYear: null,
+    relatedVariants: {
+      alternatives: ["var_andorra_andorra_la_vella_parish_current"]
+    }
+  },
+  {
+    id: "var_andorra_canillo_parish_current",
+    entityId: "ent_andorra_canillo_parish",
+    assetId: "ast_canillo_current",
+    displayName: "Hypothetical Parish Flag",
+    aliases: ["Flag of Canillo Parish", "Canillo Parish Flag", "Hypothetical Flag of Canillo"],
+    tags: ["unofficial", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_andorra_encamp_parish_current",
+    entityId: "ent_andorra_encamp_parish",
+    assetId: "ast_encamp_current",
+    displayName: "Hypothetical Parish Flag",
+    aliases: ["Flag of Encamp Parish", "Encamp Parish Flag", "Hypothetical Flag of Encamp"],
+    tags: ["unofficial", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_andorra_escaldes_engordany_parish_current",
+    entityId: "ent_andorra_escaldes_engordany_parish",
+    assetId: "ast_escaldes_engordany_current",
+    displayName: "Hypothetical Parish Flag",
+    aliases: ["Flag of Escaldes-Engordany Parish", "Escaldes-Engordany Parish Flag", "Hypothetical Flag of Escaldes-Engordany"],
+    tags: ["unofficial", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_andorra_la_massana_parish_current",
+    entityId: "ent_andorra_la_massana_parish",
+    assetId: "ast_la_massana_current",
+    displayName: "Hypothetical Parish Flag",
+    aliases: ["Flag of La Massana Parish", "La Massana Parish Flag", "Hypothetical Flag of La Massana"],
+    tags: ["unofficial", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_andorra_ordino_parish_current",
+    entityId: "ent_andorra_ordino_parish",
+    assetId: "ast_ordino_current",
+    displayName: "Hypothetical Parish Flag",
+    aliases: ["Flag of Ordino Parish", "Ordino Parish Flag", "Hypothetical Flag of Ordino"],
+    tags: ["unofficial", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_andorra_sant_julia_de_loria_parish_current",
+    entityId: "ent_andorra_sant_julia_de_loria_parish",
+    assetId: "ast_san_julian_de_loria_current",
+    displayName: "Hypothetical Parish Flag",
+    aliases: ["Flag of Sant Julià de Lòria Parish", "Sant Julià de Lòria Parish Flag", "Flag of Sant Julia de Loria Parish", "Hypothetical Flag of Sant Julià de Lòria", "Hypothetical Flag of San Julián de Loria"],
+    tags: ["unofficial", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  /*
+    Andorra parish text-removed quiz-safe variants.
+  */
+  {
+    id: "var_andorra_andorra_la_vella_parish_current_text_removed",
+    entityId: "ent_andorra_andorra_la_vella_parish",
+    assetId: "ast_andorra_la_vella_current_text_removed",
+    displayName: "Parish Flag",
+    aliases: [],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_andorra_andorra_la_vella_parish_current"
+  },
+  {
+    id: "var_andorra_escaldes_engordany_parish_current_text_removed",
+    entityId: "ent_andorra_escaldes_engordany_parish",
+    assetId: "ast_escaldes_engordany_current_text_removed",
+    displayName: "Hypothetical Parish Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_andorra_escaldes_engordany_parish_current"
+  },
+  {
+    id: "var_andorra_la_massana_parish_current_text_removed",
+    entityId: "ent_andorra_la_massana_parish",
+    assetId: "ast_la_massana_current_text_removed",
+    displayName: "Hypothetical Parish Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_andorra_la_massana_parish_current"
+  },
+  {
+    id: "var_andorra_ordino_parish_current_text_removed",
+    entityId: "ent_andorra_ordino_parish",
+    assetId: "ast_ordino_current_text_removed",
+    displayName: "Hypothetical Parish Flag",
+    aliases: [],
+    tags: ["unofficial", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    baseVariantId: "var_andorra_ordino_parish_current"
+  },
+  {
     id: "var_austria_current",
     entityId: "ent_austria",
     assetId: "ast_austria_current",

@@ -618,6 +618,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_andorra",
+    name: "Andorra",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_andorra_parishes"
+    ]
+  },
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],

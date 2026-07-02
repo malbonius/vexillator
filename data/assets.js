@@ -129,6 +129,18 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/andorra/national/andorra_current.svg"
   },
   {
+    id: "ast_andorra_la_vella_current",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/andorra_la_vella_current.svg"
+  },
+  {
+    id: "ast_andorra_la_vella_current_alt",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/andorra_la_vella_current_alt.svg"
+  },
+  {
+    id: "ast_andorra_la_vella_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/andorra_la_vella_current_text_removed.svg"
+  },
+  {
     id: "ast_anglesey_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/wales/counties/anglesey_current.svg"
   },
@@ -669,6 +681,10 @@ const assets = [
     path: "assets/flags/geography/africa/northern_africa/dependencies_territories/canary_islands/canary_islands_current.svg"
   },
   {
+    id: "ast_canillo_current",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/canillo_current.svg"
+  },
+  {
     id: "ast_cantabria_current",
     path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/cantabria_current.svg"
   },
@@ -1117,6 +1133,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/italy/regions/emilia_romagna/emilia_romagna_current_text_removed.svg"
   },
   {
+    id: "ast_encamp_current",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/encamp_current.svg"
+  },
+  {
     id: "ast_england_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/national/england_current.svg"
   },
@@ -1127,6 +1147,14 @@ const assets = [
   {
     id: "ast_eritrea_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/eritrea/national/eritrea_current.svg"
+  },
+  {
+    id: "ast_escaldes_engordany_current",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/escaldes_engordany_current.svg"
+  },
+  {
+    id: "ast_escaldes_engordany_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/escaldes_engordany_current_text_removed.svg"
   },
   {
     id: "ast_essex_current",
@@ -2089,6 +2117,14 @@ const assets = [
     path: "assets/flags/geography/south_america/venezuela/region/capital_region/la_guaira_current.svg"
   },
   {
+    id: "ast_la_massana_current",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/la_massana_current.svg"
+  },
+  {
+    id: "ast_la_massana_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/la_massana_current_text_removed.svg"
+  },
+  {
     id: "ast_la_rioja_current",
     path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/la_rioja_current.svg"
   },
@@ -2977,6 +3013,14 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/poland/voivodeships/opole_current.svg"
   },
   {
+    id: "ast_ordino_current",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/ordino_current.svg"
+  },
+  {
+    id: "ast_ordino_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/ordino_current_text_removed.svg"
+  },
+  {
     id: "ast_orebro_current",
     path: "assets/flags/geography/europe/northern_europe/sweden/counties/orebro_current.svg"
   },
@@ -3435,6 +3479,10 @@ const assets = [
   {
     id: "ast_samoa_current",
     path: "assets/flags/geography/oceania/polynesia/samoa/national/samoa_current.svg"
+  },
+  {
+    id: "ast_san_julian_de_loria_current",
+    path: "assets/flags/geography/europe/southern_europe/andorra/parishes/san_julian_de_loria_current.svg"
   },
   {
     id: "ast_san_marino_civil",

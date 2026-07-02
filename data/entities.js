@@ -5484,6 +5484,69 @@ const entities = [
     defaultVariantId: "var_andorra_current"
   },
   {
+    id: "ent_andorra_andorra_la_vella_parish",
+    name: "Andorra la Vella Parish",
+    aliases: ["Andorra la Vella", "Parròquia d'Andorra la Vella", "Parroquia de Andorra la Vella"],
+    entityType: "geographic",
+    parentIds: ["ent_andorra"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_andorra_andorra_la_vella_parish_current"
+  },
+  {
+    id: "ent_andorra_canillo_parish",
+    name: "Canillo Parish",
+    aliases: ["Canillo", "Parròquia de Canillo", "Parroquia de Canillo"],
+    entityType: "geographic",
+    parentIds: ["ent_andorra"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_andorra_canillo_parish_current"
+  },
+  {
+    id: "ent_andorra_encamp_parish",
+    name: "Encamp Parish",
+    aliases: ["Encamp", "Parròquia d'Encamp", "Parroquia de Encamp"],
+    entityType: "geographic",
+    parentIds: ["ent_andorra"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_andorra_encamp_parish_current"
+  },
+  {
+    id: "ent_andorra_escaldes_engordany_parish",
+    name: "Escaldes-Engordany Parish",
+    aliases: ["Escaldes-Engordany", "Escaldes Engordany", "Parròquia d'Escaldes-Engordany", "Parroquia de Escaldes-Engordany"],
+    entityType: "geographic",
+    parentIds: ["ent_andorra"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_andorra_escaldes_engordany_parish_current"
+  },
+  {
+    id: "ent_andorra_la_massana_parish",
+    name: "La Massana Parish",
+    aliases: ["La Massana", "Parròquia de la Massana", "Parroquia de La Massana"],
+    entityType: "geographic",
+    parentIds: ["ent_andorra"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_andorra_la_massana_parish_current"
+  },
+  {
+    id: "ent_andorra_ordino_parish",
+    name: "Ordino Parish",
+    aliases: ["Ordino", "Parròquia d'Ordino", "Parroquia de Ordino"],
+    entityType: "geographic",
+    parentIds: ["ent_andorra"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_andorra_ordino_parish_current"
+  },
+  {
+    id: "ent_andorra_sant_julia_de_loria_parish",
+    name: "Sant Julià de Lòria Parish",
+    aliases: ["Sant Julia de Loria Parish", "Sant Julià de Lòria", "Sant Julia de Loria", "San Julián de Loria", "San Julian de Loria", "Parròquia de Sant Julià de Lòria"],
+    entityType: "geographic",
+    parentIds: ["ent_andorra"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_andorra_sant_julia_de_loria_parish_current"
+  },
+  {
     id: "ent_austria",
     name: "Austria",
     aliases: ["Republic of Austria"],

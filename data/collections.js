@@ -3621,6 +3621,29 @@ const collections = [
     }
   },
   {
+    id: "col_andorra_parishes",
+    name: "Andorran Parish Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes the seven current Andorran parishes. Parish flag status is treated conservatively: hypothetical designs are tagged as unofficial at variant level.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_andorra"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_bulgaria_first_level_subdivisions",
     name: "Bulgarian Provincial Flags",
     type: "dynamic",
