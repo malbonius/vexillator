@@ -3595,6 +3595,29 @@ const collections = [
     }
   },
   {
+    id: "col_bulgaria_first_level_subdivisions",
+    name: "Bulgarian Provincial Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes the currently available Bulgarian provincial flags. Provinces without sufficiently high-quality source artwork are intentionally omitted until rebuilt or replaced.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_bulgaria"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_hungary_first_level_subdivisions",
     name: "Hungarian County and Capital City Flags",
     type: "dynamic",

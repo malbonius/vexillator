@@ -366,6 +366,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_bulgaria",
+    name: "Bulgaria",
+    parentGroupIds: ["grp_eastern_europe"],
+    collectionIds: [
+      "col_bulgaria_first_level_subdivisions"
+    ]
+  },
+  {
     id: "grp_hungary",
     name: "Hungary",
     parentGroupIds: ["grp_eastern_europe"],

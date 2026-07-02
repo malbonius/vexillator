@@ -5768,6 +5768,123 @@ const entities = [
     defaultVariantId: "var_bulgaria_current"
   },
   {
+    id: "ent_bulgaria_dobrich_province",
+    name: "Dobrich Province",
+    aliases: ["Dobrich Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_dobrich_province_current"
+  },
+  {
+    id: "ent_bulgaria_gabrovo_province",
+    name: "Gabrovo Province",
+    aliases: ["Gabrovo Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_gabrovo_province_current"
+  },
+  {
+    id: "ent_bulgaria_kyustendil_province",
+    name: "Kyustendil Province",
+    aliases: ["Kyustendil Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_kyustendil_province_current"
+  },
+  {
+    id: "ent_bulgaria_lovech_province",
+    name: "Lovech Province",
+    aliases: ["Lovech Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_lovech_province_current"
+  },
+  {
+    id: "ent_bulgaria_montana_province",
+    name: "Montana Province",
+    aliases: ["Montana Oblast", "Montana Province, Bulgaria"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_montana_province_current"
+  },
+  {
+    id: "ent_bulgaria_pernik_province",
+    name: "Pernik Province",
+    aliases: ["Pernik Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_pernik_province_current"
+  },
+  {
+    id: "ent_bulgaria_plovdiv_province",
+    name: "Plovdiv Province",
+    aliases: ["Plovdiv Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_plovdiv_province_current"
+  },
+  {
+    id: "ent_bulgaria_razgrad_province",
+    name: "Razgrad Province",
+    aliases: ["Razgrad Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_razgrad_province_current"
+  },
+  {
+    id: "ent_bulgaria_shumen_province",
+    name: "Shumen Province",
+    aliases: ["Shumen Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_shumen_province_current"
+  },
+  {
+    id: "ent_bulgaria_silistra_province",
+    name: "Silistra Province",
+    aliases: ["Silistra Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_silistra_province_current"
+  },
+  {
+    id: "ent_bulgaria_sofia_province",
+    name: "Sofia Province",
+    aliases: ["Sofia Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_sofia_province_current"
+  },
+  {
+    id: "ent_bulgaria_stara_zagora_province",
+    name: "Stara Zagora Province",
+    aliases: ["Stara Zagora Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_stara_zagora_province_current"
+  },
+  {
+    id: "ent_bulgaria_varna_province",
+    name: "Varna Province",
+    aliases: ["Varna Oblast"],
+    entityType: "geographic",
+    parentIds: ["ent_bulgaria"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bulgaria_varna_province_current"
+  },
+  {
     id: "ent_croatia",
     name: "Croatia",
     aliases: ["Republic of Croatia"],

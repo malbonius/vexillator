@@ -6923,6 +6923,136 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_bulgaria_dobrich_province_current",
+    entityId: "ent_bulgaria_dobrich_province",
+    assetId: "ast_dobrich_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Dobrich Province", "Dobrich Province Flag", "Flag of Dobrich Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_gabrovo_province_current",
+    entityId: "ent_bulgaria_gabrovo_province",
+    assetId: "ast_gabrovo_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Gabrovo Province", "Gabrovo Province Flag", "Flag of Gabrovo Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_kyustendil_province_current",
+    entityId: "ent_bulgaria_kyustendil_province",
+    assetId: "ast_kyustendil_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Kyustendil Province", "Kyustendil Province Flag", "Flag of Kyustendil Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_lovech_province_current",
+    entityId: "ent_bulgaria_lovech_province",
+    assetId: "ast_lovech_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Lovech Province", "Lovech Province Flag", "Flag of Lovech Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_montana_province_current",
+    entityId: "ent_bulgaria_montana_province",
+    assetId: "ast_montana_bulgaria_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Montana Province", "Montana Province Flag", "Flag of Montana Oblast", "Flag of Montana Province, Bulgaria"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_pernik_province_current",
+    entityId: "ent_bulgaria_pernik_province",
+    assetId: "ast_pernik_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Pernik Province", "Pernik Province Flag", "Flag of Pernik Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_plovdiv_province_current",
+    entityId: "ent_bulgaria_plovdiv_province",
+    assetId: "ast_plovdiv_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Plovdiv Province", "Plovdiv Province Flag", "Flag of Plovdiv Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_razgrad_province_current",
+    entityId: "ent_bulgaria_razgrad_province",
+    assetId: "ast_razgrad_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Razgrad Province", "Razgrad Province Flag", "Flag of Razgrad Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_shumen_province_current",
+    entityId: "ent_bulgaria_shumen_province",
+    assetId: "ast_shumen_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Shumen Province", "Shumen Province Flag", "Flag of Shumen Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_silistra_province_current",
+    entityId: "ent_bulgaria_silistra_province",
+    assetId: "ast_silistra_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Silistra Province", "Silistra Province Flag", "Flag of Silistra Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_sofia_province_current",
+    entityId: "ent_bulgaria_sofia_province",
+    assetId: "ast_sofia_province_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Sofia Province", "Sofia Province Flag", "Flag of Sofia Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_stara_zagora_province_current",
+    entityId: "ent_bulgaria_stara_zagora_province",
+    assetId: "ast_stara_zagora_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Stara Zagora Province", "Stara Zagora Province Flag", "Flag of Stara Zagora Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bulgaria_varna_province_current",
+    entityId: "ent_bulgaria_varna_province",
+    assetId: "ast_varna_current",
+    displayName: "Official Provincial Flag",
+    aliases: ["Flag of Varna Province", "Varna Province Flag", "Flag of Varna Oblast"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_croatia_current",
     entityId: "ent_croatia",
     assetId: "ast_croatia_current",
