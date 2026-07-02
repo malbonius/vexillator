@@ -6243,6 +6243,281 @@ const entities = [
     defaultVariantId: "var_croatia_current"
   },
   {
+    id: "ent_croatia_bjelovar_bilogora_county",
+    name: "Bjelovar-Bilogora County",
+    aliases: [
+      "Bjelovar Bilogora County",
+      "Bjelovarsko-bilogorska županija",
+      "Bjelovarsko-bilogorska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_bjelovar_bilogora_county_current"
+  },
+  {
+    id: "ent_croatia_brod_posavina_county",
+    name: "Brod-Posavina County",
+    aliases: [
+      "Brod Posavina County",
+      "Brodsko-posavska županija",
+      "Brodsko-posavska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_brod_posavina_county_current"
+  },
+  {
+    id: "ent_croatia_dubrovnik_neretva_county",
+    name: "Dubrovnik-Neretva County",
+    aliases: [
+      "Dubrovnik Neretva County",
+      "Dubrovačko-neretvanska županija",
+      "Dubrovacko-neretvanska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_dubrovnik_neretva_county_current"
+  },
+  {
+    id: "ent_croatia_istria_county",
+    name: "Istria County",
+    aliases: [
+      "Istarska županija",
+      "Istarska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_istria_county_current"
+  },
+  {
+    id: "ent_croatia_karlovac_county",
+    name: "Karlovac County",
+    aliases: [
+      "Karlovačka županija",
+      "Karlovacka zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_karlovac_county_current"
+  },
+  {
+    id: "ent_croatia_koprivnica_krizevci_county",
+    name: "Koprivnica-Križevci County",
+    aliases: [
+      "Koprivnica-Krizevci County",
+      "Koprivnica Križevci County",
+      "Koprivnica Krizevci County",
+      "Koprivničko-križevačka županija",
+      "Koprivnicko-krizevacka zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_koprivnica_krizevci_county_current"
+  },
+  {
+    id: "ent_croatia_krapina_zagorje_county",
+    name: "Krapina-Zagorje County",
+    aliases: [
+      "Krapina Zagorje County",
+      "Krapinsko-zagorska županija",
+      "Krapinsko-zagorska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_krapina_zagorje_county_current"
+  },
+  {
+    id: "ent_croatia_lika_senj_county",
+    name: "Lika-Senj County",
+    aliases: [
+      "Lika Senj County",
+      "Ličko-senjska županija",
+      "Licko-senjska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_lika_senj_county_current"
+  },
+  {
+    id: "ent_croatia_medimurje_county",
+    name: "Međimurje County",
+    aliases: [
+      "Medimurje County",
+      "Međimurska županija",
+      "Medimurska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_medimurje_county_current"
+  },
+  {
+    id: "ent_croatia_osijek_baranja_county",
+    name: "Osijek-Baranja County",
+    aliases: [
+      "Osijek Baranja County",
+      "Osječko-baranjska županija",
+      "Osjecko-baranjska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_osijek_baranja_county_current"
+  },
+  {
+    id: "ent_croatia_pozega_slavonia_county",
+    name: "Požega-Slavonia County",
+    aliases: [
+      "Pozega-Slavonia County",
+      "Požega Slavonia County",
+      "Pozega Slavonia County",
+      "Požeško-slavonska županija",
+      "Pozesko-slavonska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_pozega_slavonia_county_current"
+  },
+  {
+    id: "ent_croatia_primorje_gorski_kotar_county",
+    name: "Primorje-Gorski Kotar County",
+    aliases: [
+      "Primorje Gorski Kotar County",
+      "Primorsko-goranska županija",
+      "Primorsko-goranska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_primorje_gorski_kotar_county_current"
+  },
+  {
+    id: "ent_croatia_sibenik_knin_county",
+    name: "Šibenik-Knin County",
+    aliases: [
+      "Sibenik-Knin County",
+      "Šibenik Knin County",
+      "Sibenik Knin County",
+      "Šibensko-kninska županija",
+      "Sibensko-kninska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_sibenik_knin_county_current"
+  },
+  {
+    id: "ent_croatia_sisak_moslavina_county",
+    name: "Sisak-Moslavina County",
+    aliases: [
+      "Sisak Moslavina County",
+      "Sisačko-moslavačka županija",
+      "Sisacko-moslavacka zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_sisak_moslavina_county_current"
+  },
+  {
+    id: "ent_croatia_split_dalmatia_county",
+    name: "Split-Dalmatia County",
+    aliases: [
+      "Split Dalmatia County",
+      "Splitsko-dalmatinska županija",
+      "Splitsko-dalmatinska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_split_dalmatia_county_current"
+  },
+  {
+    id: "ent_croatia_varazdin_county",
+    name: "Varaždin County",
+    aliases: [
+      "Varazdin County",
+      "Varaždinska županija",
+      "Varazdinska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_varazdin_county_current"
+  },
+  {
+    id: "ent_croatia_virovitica_podravina_county",
+    name: "Virovitica-Podravina County",
+    aliases: [
+      "Virovitica Podravina County",
+      "Virovitičko-podravska županija",
+      "Viroviticko-podravska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_virovitica_podravina_county_current"
+  },
+  {
+    id: "ent_croatia_vukovar_syrmia_county",
+    name: "Vukovar-Syrmia County",
+    aliases: [
+      "Vukovar-Srijem County",
+      "Vukovar Syrmia County",
+      "Vukovarsko-srijemska županija",
+      "Vukovarsko-srijemska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_vukovar_syrmia_county_current"
+  },
+  {
+    id: "ent_croatia_zadar_county",
+    name: "Zadar County",
+    aliases: [
+      "Zadarska županija",
+      "Zadarska zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_zadar_county_current"
+  },
+  {
+    id: "ent_croatia_zagreb_city",
+    name: "City of Zagreb",
+    aliases: [
+      "Zagreb City",
+      "Grad Zagreb"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "city", "capital_city", "current"],
+    defaultVariantId: "var_croatia_zagreb_city_current"
+  },
+  {
+    id: "ent_croatia_zagreb_county_county",
+    name: "Zagreb County",
+    aliases: [
+      "Zagrebačka županija",
+      "Zagrebacka zupanija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_croatia"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_croatia_zagreb_county_county_current"
+  },
+  {
     id: "ent_cyprus",
     name: "Cyprus",
     aliases: ["Republic of Cyprus"],

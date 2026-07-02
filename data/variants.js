@@ -7588,6 +7588,304 @@ const variants = [
     startYear: 1990,
     endYear: null
   },
+
+  /*
+    Croatian counties and the City of Zagreb.
+  */
+  {
+    id: "var_croatia_bjelovar_bilogora_county_current",
+    entityId: "ent_croatia_bjelovar_bilogora_county",
+    assetId: "ast_bjelovar_bilogora_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Bjelovar-Bilogora County",
+      "Bjelovar-Bilogora County Flag",
+      "Flag of Bjelovar Bilogora County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_brod_posavina_county_current",
+    entityId: "ent_croatia_brod_posavina_county",
+    assetId: "ast_brod_posavina_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Brod-Posavina County",
+      "Brod-Posavina County Flag",
+      "Flag of Brod Posavina County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_dubrovnik_neretva_county_current",
+    entityId: "ent_croatia_dubrovnik_neretva_county",
+    assetId: "ast_dubrovnik_neretva_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Dubrovnik-Neretva County",
+      "Dubrovnik-Neretva County Flag",
+      "Flag of Dubrovnik Neretva County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_istria_county_current",
+    entityId: "ent_croatia_istria_county",
+    assetId: "ast_istria_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Istria County",
+      "Istria County Flag",
+      "Flag of Istarska županija"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_karlovac_county_current",
+    entityId: "ent_croatia_karlovac_county",
+    assetId: "ast_karlovac_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Karlovac County",
+      "Karlovac County Flag",
+      "Flag of Karlovačka županija"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_koprivnica_krizevci_county_current",
+    entityId: "ent_croatia_koprivnica_krizevci_county",
+    assetId: "ast_koprivnica_krizevci_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Koprivnica-Križevci County",
+      "Koprivnica-Križevci County Flag",
+      "Flag of Koprivnica-Krizevci County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_krapina_zagorje_county_current",
+    entityId: "ent_croatia_krapina_zagorje_county",
+    assetId: "ast_krapina_zagorje_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Krapina-Zagorje County",
+      "Krapina-Zagorje County Flag",
+      "Flag of Krapina Zagorje County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_lika_senj_county_current",
+    entityId: "ent_croatia_lika_senj_county",
+    assetId: "ast_lika_senj_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Lika-Senj County",
+      "Lika-Senj County Flag",
+      "Flag of Lika Senj County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_medimurje_county_current",
+    entityId: "ent_croatia_medimurje_county",
+    assetId: "ast_medimurje_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Međimurje County",
+      "Međimurje County Flag",
+      "Flag of Medimurje County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_osijek_baranja_county_current",
+    entityId: "ent_croatia_osijek_baranja_county",
+    assetId: "ast_osijek_baranja_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Osijek-Baranja County",
+      "Osijek-Baranja County Flag",
+      "Flag of Osijek Baranja County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_pozega_slavonia_county_current",
+    entityId: "ent_croatia_pozega_slavonia_county",
+    assetId: "ast_pozega_slavonia_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Požega-Slavonia County",
+      "Požega-Slavonia County Flag",
+      "Flag of Pozega-Slavonia County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_primorje_gorski_kotar_county_current",
+    entityId: "ent_croatia_primorje_gorski_kotar_county",
+    assetId: "ast_primorje_gorski_kotar_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Primorje-Gorski Kotar County",
+      "Primorje-Gorski Kotar County Flag",
+      "Flag of Primorje Gorski Kotar County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_sibenik_knin_county_current",
+    entityId: "ent_croatia_sibenik_knin_county",
+    assetId: "ast_sibenik_knin_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Šibenik-Knin County",
+      "Šibenik-Knin County Flag",
+      "Flag of Sibenik-Knin County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_sisak_moslavina_county_current",
+    entityId: "ent_croatia_sisak_moslavina_county",
+    assetId: "ast_sisak_moslavina_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Sisak-Moslavina County",
+      "Sisak-Moslavina County Flag",
+      "Flag of Sisak Moslavina County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_split_dalmatia_county_current",
+    entityId: "ent_croatia_split_dalmatia_county",
+    assetId: "ast_split_dalmatia_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Split-Dalmatia County",
+      "Split-Dalmatia County Flag",
+      "Flag of Split Dalmatia County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_varazdin_county_current",
+    entityId: "ent_croatia_varazdin_county",
+    assetId: "ast_varazdin_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Varaždin County",
+      "Varaždin County Flag",
+      "Flag of Varazdin County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_virovitica_podravina_county_current",
+    entityId: "ent_croatia_virovitica_podravina_county",
+    assetId: "ast_virovitica_podravina_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Virovitica-Podravina County",
+      "Virovitica-Podravina County Flag",
+      "Flag of Virovitica Podravina County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_vukovar_syrmia_county_current",
+    entityId: "ent_croatia_vukovar_syrmia_county",
+    assetId: "ast_vukovar_syrmia_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Vukovar-Syrmia County",
+      "Vukovar-Syrmia County Flag",
+      "Flag of Vukovar-Srijem County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_zadar_county_current",
+    entityId: "ent_croatia_zadar_county",
+    assetId: "ast_zadar_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Zadar County",
+      "Zadar County Flag",
+      "Flag of Zadarska županija"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_zagreb_city_current",
+    entityId: "ent_croatia_zagreb_city",
+    assetId: "ast_zagreb_city_current",
+    displayName: "Official City Flag",
+    aliases: [
+      "Flag of City of Zagreb",
+      "City of Zagreb Flag",
+      "Flag of Zagreb"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_croatia_zagreb_county_county_current",
+    entityId: "ent_croatia_zagreb_county_county",
+    assetId: "ast_zagreb_county_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Zagreb County",
+      "Zagreb County Flag",
+      "Flag of Zagrebačka županija"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_cyprus_current",
     entityId: "ent_cyprus",

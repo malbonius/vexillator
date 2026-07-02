@@ -634,6 +634,15 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_croatia",
+    name: "Croatia",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_croatia_counties_and_city"
+    ]
+  },
+
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],

@@ -3668,6 +3668,30 @@ const collections = [
     }
   },
   {
+    id: "col_croatia_counties_and_city",
+    name: "Croatian County and Capital City Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes Croatia's 20 counties and the City of Zagreb as current first-level subdivisions.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_croatia"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_bulgaria_first_level_subdivisions",
     name: "Bulgarian Provincial Flags",
     type: "dynamic",
