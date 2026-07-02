@@ -5920,19 +5920,6 @@ const variants = [
     endYear: null
   },
   {
-    id: "var_russia_crimea_current",
-    entityId: "ent_russia_crimea",
-    assetId: "ast_crimea_current",
-    displayName: "Official Flag",
-    aliases: [
-      "Flag of Republic of Crimea",
-      "Flag of Crimea"
-    ],
-    tags: ["official", "current"],
-    startYear: null,
-    endYear: null
-  },
-  {
     id: "var_russia_kalmykia_current",
     entityId: "ent_russia_kalmykia",
     assetId: "ast_kalmykia_current",
@@ -5966,19 +5953,6 @@ const variants = [
     aliases: [
       "Flag of Rostov Oblast",
       "Flag of Rostov"
-    ],
-    tags: ["official", "current"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_russia_sevastopol_current",
-    entityId: "ent_russia_sevastopol",
-    assetId: "ast_sevastopol_current",
-    displayName: "Official Flag",
-    aliases: [
-      "Flag of Sevastopol",
-      "Flag of Federal City of Sevastopol"
     ],
     tags: ["official", "current"],
     startYear: null,
@@ -10531,6 +10505,399 @@ const variants = [
     aliases: [],
     tags: ["official", "current", "national"],
     startYear: 1992,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_cherkasy_current",
+    entityId: "ent_ukraine_cherkasy",
+    assetId: "ast_cherkasy_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Cherkasy Oblast",
+      "Cherkasy Oblast Flag",
+      "Flag of Cherkasy Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_chernihiv_current",
+    entityId: "ent_ukraine_chernihiv",
+    assetId: "ast_chernihiv_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Chernihiv Oblast",
+      "Chernihiv Oblast Flag",
+      "Flag of Chernihiv Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_chernivtsi_current",
+    entityId: "ent_ukraine_chernivtsi",
+    assetId: "ast_chernivitsi_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Chernivtsi Oblast",
+      "Chernivtsi Oblast Flag",
+      "Flag of Chernivtsi Region",
+      "Flag of Chernivitsi Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_crimea_current",
+    entityId: "ent_ukraine_crimea",
+    assetId: "ast_crimea_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Autonomous Republic of Crimea",
+      "Autonomous Republic of Crimea Flag",
+      "Flag of Crimea",
+      "Flag of Republic of Crimea"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_dnipropetrovsk_current",
+    entityId: "ent_ukraine_dnipropetrovsk",
+    assetId: "ast_dnipropetrovsk_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Dnipropetrovsk Oblast",
+      "Dnipropetrovsk Oblast Flag",
+      "Flag of Dnipropetrovsk Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_donetsk_current",
+    entityId: "ent_ukraine_donetsk",
+    assetId: "ast_donetsk_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Donetsk Oblast",
+      "Donetsk Oblast Flag",
+      "Flag of Donetsk Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_ivano_frankivsk_current",
+    entityId: "ent_ukraine_ivano_frankivsk",
+    assetId: "ast_ivano_frankivst_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Ivano-Frankivsk Oblast",
+      "Ivano-Frankivsk Oblast Flag",
+      "Flag of Ivano-Frankivsk Region",
+      "Flag of Ivano Frankivsk Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_kharkiv_current",
+    entityId: "ent_ukraine_kharkiv",
+    assetId: "ast_kharkiv_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Kharkiv Oblast",
+      "Kharkiv Oblast Flag",
+      "Flag of Kharkiv Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_kherson_current",
+    entityId: "ent_ukraine_kherson",
+    assetId: "ast_kherson_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Kherson Oblast",
+      "Kherson Oblast Flag",
+      "Flag of Kherson Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_khmelnytskyi_current",
+    entityId: "ent_ukraine_khmelnytskyi",
+    assetId: "ast_khmelnytskyi_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Khmelnytskyi Oblast",
+      "Khmelnytskyi Oblast Flag",
+      "Flag of Khmelnytskyi Region",
+      "Flag of Khmelnytsky Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_kirovohrad_current",
+    entityId: "ent_ukraine_kirovohrad",
+    assetId: "ast_kirovohrad_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Kirovohrad Oblast",
+      "Kirovohrad Oblast Flag",
+      "Flag of Kirovohrad Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_kyiv_city_current",
+    entityId: "ent_ukraine_kyiv_city",
+    assetId: "ast_kyiv_city_current",
+    displayName: "Official City Flag",
+    aliases: [
+      "Flag of Kyiv City",
+      "Kyiv City Flag",
+      "Flag of Kyiv",
+      "Flag of Kyiv City Municipality",
+      "Flag of Kiev City"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_kyiv_oblast_current",
+    entityId: "ent_ukraine_kyiv_oblast",
+    assetId: "ast_kyiv_oblast_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Kyiv Oblast",
+      "Kyiv Oblast Flag",
+      "Flag of Kyiv Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_luhansk_current",
+    entityId: "ent_ukraine_luhansk",
+    assetId: "ast_luhansk_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Luhansk Oblast",
+      "Luhansk Oblast Flag",
+      "Flag of Luhansk Region",
+      "Flag of Lugansk Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_lviv_current",
+    entityId: "ent_ukraine_lviv",
+    assetId: "ast_lviv_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Lviv Oblast",
+      "Lviv Oblast Flag",
+      "Flag of Lviv Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_mykolaiv_current",
+    entityId: "ent_ukraine_mykolaiv",
+    assetId: "ast_mykolaiv_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Mykolaiv Oblast",
+      "Mykolaiv Oblast Flag",
+      "Flag of Mykolaiv Region",
+      "Flag of Nikolaev Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_odesa_current",
+    entityId: "ent_ukraine_odesa",
+    assetId: "ast_odesa_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Odesa Oblast",
+      "Odesa Oblast Flag",
+      "Flag of Odesa Region",
+      "Flag of Odessa Oblast",
+      "Flag of Odessa Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_poltava_current",
+    entityId: "ent_ukraine_poltava",
+    assetId: "ast_poltava_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Poltava Oblast",
+      "Poltava Oblast Flag",
+      "Flag of Poltava Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_rivne_current",
+    entityId: "ent_ukraine_rivne",
+    assetId: "ast_rivne_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Rivne Oblast",
+      "Rivne Oblast Flag",
+      "Flag of Rivne Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_sumy_current",
+    entityId: "ent_ukraine_sumy",
+    assetId: "ast_sumy_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Sumy Oblast",
+      "Sumy Oblast Flag",
+      "Flag of Sumy Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_ternopil_current",
+    entityId: "ent_ukraine_ternopil",
+    assetId: "ast_ternopil_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Ternopil Oblast",
+      "Ternopil Oblast Flag",
+      "Flag of Ternopil Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_sevastopol_current",
+    entityId: "ent_ukraine_sevastopol",
+    assetId: "ast_sevastopol_current",
+    displayName: "Official City Flag",
+    aliases: [
+      "Flag of Sevastopol",
+      "Sevastopol Flag",
+      "Flag of Sevastopol City",
+      "Flag of Federal City of Sevastopol"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_vinnytsia_current",
+    entityId: "ent_ukraine_vinnytsia",
+    assetId: "ast_vinnytskoyi_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Vinnytsia Oblast",
+      "Vinnytsia Oblast Flag",
+      "Flag of Vinnytsia Region",
+      "Flag of Vinnytskoyi Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_volyn_current",
+    entityId: "ent_ukraine_volyn",
+    assetId: "ast_volyn_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Volyn Oblast",
+      "Volyn Oblast Flag",
+      "Flag of Volyn Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_zakarpattia_current",
+    entityId: "ent_ukraine_zakarpattia",
+    assetId: "ast_zakarpattia_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Zakarpattia Oblast",
+      "Zakarpattia Oblast Flag",
+      "Flag of Zakarpattia Region",
+      "Flag of Transcarpathian Oblast"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_zaporizhzhia_current",
+    entityId: "ent_ukraine_zaporizhzhia",
+    assetId: "ast_zaporizhia_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Zaporizhzhia Oblast",
+      "Zaporizhzhia Oblast Flag",
+      "Flag of Zaporizhzhia Region",
+      "Flag of Zaporizhia Oblast",
+      "Flag of Zaporizhia Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_ukraine_zhytomyr_current",
+    entityId: "ent_ukraine_zhytomyr",
+    assetId: "ast_zhytomyr_current",
+    displayName: "Official Oblast Flag",
+    aliases: [
+      "Flag of Zhytomyr Oblast",
+      "Zhytomyr Oblast Flag",
+      "Flag of Zhytomyr Region"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
     endYear: null
   },
   {

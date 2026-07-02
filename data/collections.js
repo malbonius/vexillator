@@ -4475,6 +4475,246 @@ const collections = [
   },,
 
 
+  {
+    id: "col_ukraine_first_level_subdivisions",
+    name: "Ukrainian First-Level Subdivision Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes Ukrainian first-level subdivisions represented in the dataset. Crimea and Sevastopol are geographically modelled under Ukraine and marked as disputed with Russian administration/claim metadata.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_ukraine"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_ukraine_oblast_flags",
+    name: "Ukrainian Oblast Flags",
+    type: "manual",
+    target: "entity",
+    notes: "Includes the Ukrainian oblast flags currently represented in the dataset.",
+    members: [
+      {
+        id: "mem_ukraine_oblast_flags_cherkasy",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_cherkasy",
+        galleryVariantId: "var_ukraine_cherkasy_current",
+        quizVariantId: "var_ukraine_cherkasy_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_chernihiv",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_chernihiv",
+        galleryVariantId: "var_ukraine_chernihiv_current",
+        quizVariantId: "var_ukraine_chernihiv_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_chernivtsi",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_chernivtsi",
+        galleryVariantId: "var_ukraine_chernivtsi_current",
+        quizVariantId: "var_ukraine_chernivtsi_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_dnipropetrovsk",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_dnipropetrovsk",
+        galleryVariantId: "var_ukraine_dnipropetrovsk_current",
+        quizVariantId: "var_ukraine_dnipropetrovsk_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_donetsk",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_donetsk",
+        galleryVariantId: "var_ukraine_donetsk_current",
+        quizVariantId: "var_ukraine_donetsk_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_ivano_frankivsk",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_ivano_frankivsk",
+        galleryVariantId: "var_ukraine_ivano_frankivsk_current",
+        quizVariantId: "var_ukraine_ivano_frankivsk_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_kharkiv",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_kharkiv",
+        galleryVariantId: "var_ukraine_kharkiv_current",
+        quizVariantId: "var_ukraine_kharkiv_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_kherson",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_kherson",
+        galleryVariantId: "var_ukraine_kherson_current",
+        quizVariantId: "var_ukraine_kherson_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_khmelnytskyi",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_khmelnytskyi",
+        galleryVariantId: "var_ukraine_khmelnytskyi_current",
+        quizVariantId: "var_ukraine_khmelnytskyi_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_kirovohrad",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_kirovohrad",
+        galleryVariantId: "var_ukraine_kirovohrad_current",
+        quizVariantId: "var_ukraine_kirovohrad_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_kyiv_oblast",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_kyiv_oblast",
+        galleryVariantId: "var_ukraine_kyiv_oblast_current",
+        quizVariantId: "var_ukraine_kyiv_oblast_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_luhansk",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_luhansk",
+        galleryVariantId: "var_ukraine_luhansk_current",
+        quizVariantId: "var_ukraine_luhansk_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_lviv",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_lviv",
+        galleryVariantId: "var_ukraine_lviv_current",
+        quizVariantId: "var_ukraine_lviv_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_mykolaiv",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_mykolaiv",
+        galleryVariantId: "var_ukraine_mykolaiv_current",
+        quizVariantId: "var_ukraine_mykolaiv_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_odesa",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_odesa",
+        galleryVariantId: "var_ukraine_odesa_current",
+        quizVariantId: "var_ukraine_odesa_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_poltava",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_poltava",
+        galleryVariantId: "var_ukraine_poltava_current",
+        quizVariantId: "var_ukraine_poltava_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_rivne",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_rivne",
+        galleryVariantId: "var_ukraine_rivne_current",
+        quizVariantId: "var_ukraine_rivne_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_sumy",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_sumy",
+        galleryVariantId: "var_ukraine_sumy_current",
+        quizVariantId: "var_ukraine_sumy_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_ternopil",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_ternopil",
+        galleryVariantId: "var_ukraine_ternopil_current",
+        quizVariantId: "var_ukraine_ternopil_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_vinnytsia",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_vinnytsia",
+        galleryVariantId: "var_ukraine_vinnytsia_current",
+        quizVariantId: "var_ukraine_vinnytsia_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_volyn",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_volyn",
+        galleryVariantId: "var_ukraine_volyn_current",
+        quizVariantId: "var_ukraine_volyn_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_zakarpattia",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_zakarpattia",
+        galleryVariantId: "var_ukraine_zakarpattia_current",
+        quizVariantId: "var_ukraine_zakarpattia_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_zaporizhzhia",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_zaporizhzhia",
+        galleryVariantId: "var_ukraine_zaporizhzhia_current",
+        quizVariantId: "var_ukraine_zaporizhzhia_current"
+      },
+      {
+        id: "mem_ukraine_oblast_flags_zhytomyr",
+        collectionId: "col_ukraine_oblast_flags",
+        entityId: "ent_ukraine_zhytomyr",
+        galleryVariantId: "var_ukraine_zhytomyr_current",
+        quizVariantId: "var_ukraine_zhytomyr_current"
+      }
+    ]
+  },
+  {
+    id: "col_ukraine_autonomous_republic_flags",
+    name: "Ukrainian Autonomous Republic Flag",
+    type: "manual",
+    target: "entity",
+    notes: "Includes the Autonomous Republic of Crimea. The entity is geographically modelled under Ukraine and marked as disputed with Russian administration/claim metadata.",
+    members: [
+      {
+        id: "mem_ukraine_autonomous_republic_flags_crimea",
+        collectionId: "col_ukraine_autonomous_republic_flags",
+        entityId: "ent_ukraine_crimea",
+        galleryVariantId: "var_ukraine_crimea_current",
+        quizVariantId: "var_ukraine_crimea_current"
+      }
+    ]
+  },
+  {
+    id: "col_ukraine_special_city_flags",
+    name: "Ukrainian Special City Flags",
+    type: "manual",
+    target: "entity",
+    notes: "Includes Kyiv and Sevastopol as first-level cities with special status represented in the dataset. Sevastopol is geographically modelled under Ukraine and marked as disputed with Russian administration/claim metadata.",
+    members: [
+      {
+        id: "mem_ukraine_special_city_flags_kyiv_city",
+        collectionId: "col_ukraine_special_city_flags",
+        entityId: "ent_ukraine_kyiv_city",
+        galleryVariantId: "var_ukraine_kyiv_city_current",
+        quizVariantId: "var_ukraine_kyiv_city_current"
+      },
+      {
+        id: "mem_ukraine_special_city_flags_sevastopol",
+        collectionId: "col_ukraine_special_city_flags",
+        entityId: "ent_ukraine_sevastopol",
+        galleryVariantId: "var_ukraine_sevastopol_current",
+        quizVariantId: "var_ukraine_sevastopol_current"
+      }
+    ]
+  },
+
   /*
     Russian federal subjects by region and subject type.
   */
@@ -4483,11 +4723,18 @@ const collections = [
     name: "Russian Federal Subject Flags",
     type: "dynamic",
     target: "entity",
-    notes: "Includes current Russian federal-subject entries represented in the dataset, including disputed Crimea and Sevastopol.",
+    notes: "Includes current Russian federal-subject entries represented in the dataset. Disputed Crimea and Sevastopol are geographically modelled under Ukraine but remain included here through Russian administration/claim metadata.",
     rules: {
       all: [
         {
-          hasAncestor: "ent_russia"
+          any: [
+            {
+              hasAncestor: "ent_russia"
+            },
+            {
+              administeredBy: "ent_russia"
+            }
+          ]
         },
         {
           hasTag: "first_level_subdivision"
@@ -4743,9 +4990,9 @@ const collections = [
       {
         id: "mem_russia_southern_region_flags_crimea",
         collectionId: "col_russia_southern_region_flags",
-        entityId: "ent_russia_crimea",
-        galleryVariantId: "var_russia_crimea_current",
-        quizVariantId: "var_russia_crimea_current"
+        entityId: "ent_ukraine_crimea",
+        galleryVariantId: "var_ukraine_crimea_current",
+        quizVariantId: "var_ukraine_crimea_current"
       },
       {
         id: "mem_russia_southern_region_flags_kalmykia",
@@ -4771,9 +5018,9 @@ const collections = [
       {
         id: "mem_russia_southern_region_flags_sevastopol",
         collectionId: "col_russia_southern_region_flags",
-        entityId: "ent_russia_sevastopol",
-        galleryVariantId: "var_russia_sevastopol_current",
-        quizVariantId: "var_russia_sevastopol_current"
+        entityId: "ent_ukraine_sevastopol",
+        galleryVariantId: "var_ukraine_sevastopol_current",
+        quizVariantId: "var_ukraine_sevastopol_current"
       },
       {
         id: "mem_russia_southern_region_flags_volgograd",
@@ -5597,9 +5844,9 @@ const collections = [
       {
         id: "mem_russian_republic_flags_crimea",
         collectionId: "col_russian_republic_flags",
-        entityId: "ent_russia_crimea",
-        galleryVariantId: "var_russia_crimea_current",
-        quizVariantId: "var_russia_crimea_current"
+        entityId: "ent_ukraine_crimea",
+        galleryVariantId: "var_ukraine_crimea_current",
+        quizVariantId: "var_ukraine_crimea_current"
       },
       {
         id: "mem_russian_republic_flags_kalmykia",
@@ -5797,9 +6044,9 @@ const collections = [
       {
         id: "mem_russian_federal_city_flags_sevastopol",
         collectionId: "col_russian_federal_city_flags",
-        entityId: "ent_russia_sevastopol",
-        galleryVariantId: "var_russia_sevastopol_current",
-        quizVariantId: "var_russia_sevastopol_current"
+        entityId: "ent_ukraine_sevastopol",
+        galleryVariantId: "var_ukraine_sevastopol_current",
+        quizVariantId: "var_ukraine_sevastopol_current"
       }
     ]
   },

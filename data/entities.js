@@ -4828,21 +4828,6 @@ const entities = [
     defaultVariantId: "var_russia_astrakhan_current"
   },
   {
-    id: "ent_russia_crimea",
-    name: "Republic of Crimea",
-    aliases: ["Crimea"],
-    entityType: "geographic",
-    parentIds: ["ent_russia"],
-    tags: [
-      "subdivision",
-      "first_level_subdivision",
-      "autonomous",
-      "current",
-      "disputed"
-    ],
-    defaultVariantId: "var_russia_crimea_current"
-  },
-  {
     id: "ent_russia_kalmykia",
     name: "Republic of Kalmykia",
     aliases: ["Kalmykia"],
@@ -4881,21 +4866,6 @@ const entities = [
       "current"
     ],
     defaultVariantId: "var_russia_rostov_current"
-  },
-  {
-    id: "ent_russia_sevastopol",
-    name: "Sevastopol",
-    aliases: ["Federal City of Sevastopol"],
-    entityType: "geographic",
-    parentIds: ["ent_russia"],
-    tags: [
-      "subdivision",
-      "first_level_subdivision",
-      "city",
-      "current",
-      "disputed"
-    ],
-    defaultVariantId: "var_russia_sevastopol_current"
   },
   {
     id: "ent_russia_volgograd",
@@ -9008,6 +8978,431 @@ const entities = [
     parentIds: ["ent_eastern_europe"],
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_ukraine_current"
+  },
+  {
+    id: "ent_ukraine_cherkasy",
+    name: "Cherkasy Oblast",
+    aliases: ["Cherkasy Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_cherkasy_current"
+  },
+  {
+    id: "ent_ukraine_chernihiv",
+    name: "Chernihiv Oblast",
+    aliases: ["Chernihiv Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_chernihiv_current"
+  },
+  {
+    id: "ent_ukraine_chernivtsi",
+    name: "Chernivtsi Oblast",
+    aliases: [
+      "Chernivtsi Region",
+      "Chernivitsi Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_chernivtsi_current"
+  },
+  {
+    id: "ent_ukraine_crimea",
+    name: "Autonomous Republic of Crimea",
+    aliases: [
+      "Crimea",
+      "Republic of Crimea"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    administeringEntityIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "current",
+      "disputed"
+    ],
+    defaultVariantId: "var_ukraine_crimea_current"
+  },
+  {
+    id: "ent_ukraine_dnipropetrovsk",
+    name: "Dnipropetrovsk Oblast",
+    aliases: ["Dnipropetrovsk Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_dnipropetrovsk_current"
+  },
+  {
+    id: "ent_ukraine_donetsk",
+    name: "Donetsk Oblast",
+    aliases: ["Donetsk Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current",
+      "disputed"
+    ],
+    defaultVariantId: "var_ukraine_donetsk_current"
+  },
+  {
+    id: "ent_ukraine_ivano_frankivsk",
+    name: "Ivano-Frankivsk Oblast",
+    aliases: [
+      "Ivano-Frankivsk Region",
+      "Ivano Frankivsk Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_ivano_frankivsk_current"
+  },
+  {
+    id: "ent_ukraine_kharkiv",
+    name: "Kharkiv Oblast",
+    aliases: ["Kharkiv Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_kharkiv_current"
+  },
+  {
+    id: "ent_ukraine_kherson",
+    name: "Kherson Oblast",
+    aliases: ["Kherson Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current",
+      "disputed"
+    ],
+    defaultVariantId: "var_ukraine_kherson_current"
+  },
+  {
+    id: "ent_ukraine_khmelnytskyi",
+    name: "Khmelnytskyi Oblast",
+    aliases: [
+      "Khmelnytskyi Region",
+      "Khmelnytsky Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_khmelnytskyi_current"
+  },
+  {
+    id: "ent_ukraine_kirovohrad",
+    name: "Kirovohrad Oblast",
+    aliases: ["Kirovohrad Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_kirovohrad_current"
+  },
+  {
+    id: "ent_ukraine_kyiv_city",
+    name: "Kyiv City",
+    aliases: [
+      "Kyiv",
+      "Kyiv City Municipality",
+      "Kiev City"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "city",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_kyiv_city_current"
+  },
+  {
+    id: "ent_ukraine_kyiv_oblast",
+    name: "Kyiv Oblast",
+    aliases: ["Kyiv Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_kyiv_oblast_current"
+  },
+  {
+    id: "ent_ukraine_luhansk",
+    name: "Luhansk Oblast",
+    aliases: [
+      "Luhansk Region",
+      "Lugansk Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current",
+      "disputed"
+    ],
+    defaultVariantId: "var_ukraine_luhansk_current"
+  },
+  {
+    id: "ent_ukraine_lviv",
+    name: "Lviv Oblast",
+    aliases: ["Lviv Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_lviv_current"
+  },
+  {
+    id: "ent_ukraine_mykolaiv",
+    name: "Mykolaiv Oblast",
+    aliases: [
+      "Mykolaiv Region",
+      "Nikolaev Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_mykolaiv_current"
+  },
+  {
+    id: "ent_ukraine_odesa",
+    name: "Odesa Oblast",
+    aliases: [
+      "Odesa Region",
+      "Odessa Oblast",
+      "Odessa Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_odesa_current"
+  },
+  {
+    id: "ent_ukraine_poltava",
+    name: "Poltava Oblast",
+    aliases: ["Poltava Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_poltava_current"
+  },
+  {
+    id: "ent_ukraine_rivne",
+    name: "Rivne Oblast",
+    aliases: ["Rivne Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_rivne_current"
+  },
+  {
+    id: "ent_ukraine_sumy",
+    name: "Sumy Oblast",
+    aliases: ["Sumy Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_sumy_current"
+  },
+  {
+    id: "ent_ukraine_ternopil",
+    name: "Ternopil Oblast",
+    aliases: ["Ternopil Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_ternopil_current"
+  },
+  {
+    id: "ent_ukraine_sevastopol",
+    name: "Sevastopol",
+    aliases: [
+      "Sevastopol City",
+      "Federal City of Sevastopol"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    administeringEntityIds: ["ent_russia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "city",
+      "current",
+      "disputed"
+    ],
+    defaultVariantId: "var_ukraine_sevastopol_current"
+  },
+  {
+    id: "ent_ukraine_vinnytsia",
+    name: "Vinnytsia Oblast",
+    aliases: [
+      "Vinnytsia Region",
+      "Vinnytskoyi Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_vinnytsia_current"
+  },
+  {
+    id: "ent_ukraine_volyn",
+    name: "Volyn Oblast",
+    aliases: ["Volyn Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_volyn_current"
+  },
+  {
+    id: "ent_ukraine_zakarpattia",
+    name: "Zakarpattia Oblast",
+    aliases: [
+      "Zakarpattia Region",
+      "Transcarpathian Oblast"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_zakarpattia_current"
+  },
+  {
+    id: "ent_ukraine_zaporizhzhia",
+    name: "Zaporizhzhia Oblast",
+    aliases: [
+      "Zaporizhzhia Region",
+      "Zaporizhia Oblast",
+      "Zaporizhia Region"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current",
+      "disputed"
+    ],
+    defaultVariantId: "var_ukraine_zaporizhzhia_current"
+  },
+  {
+    id: "ent_ukraine_zhytomyr",
+    name: "Zhytomyr Oblast",
+    aliases: ["Zhytomyr Region"],
+    entityType: "geographic",
+    parentIds: ["ent_ukraine"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "region",
+      "current"
+    ],
+    defaultVariantId: "var_ukraine_zhytomyr_current"
   },
   {
     id: "ent_vatican_city",

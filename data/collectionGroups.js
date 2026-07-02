@@ -393,6 +393,18 @@ const collectionGroups = [
   },
 
   {
+    id: "grp_ukraine",
+    name: "Ukraine",
+    parentGroupIds: ["grp_eastern_europe"],
+    collectionIds: [
+      "col_ukraine_first_level_subdivisions",
+      "col_ukraine_oblast_flags",
+      "col_ukraine_autonomous_republic_flags",
+      "col_ukraine_special_city_flags"
+    ]
+  },
+
+  {
     id: "grp_russia",
     name: "Russia",
     parentGroupIds: ["grp_eastern_europe"],
