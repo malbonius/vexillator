@@ -1581,6 +1581,10 @@ const assets = [
     path: "assets/flags/international_organisations/united_nations_system/ilo_current.svg"
   },
   {
+    id: "ast_ilo_current_text_removed",
+    path: "assets/flags/international_organisations/united_nations_system/ilo_current_text_removed.svg"
+  },
+  {
     id: "ast_imo_current",
     path: "assets/flags/international_organisations/united_nations_system/imo_current.svg"
   },
@@ -1679,6 +1683,10 @@ const assets = [
   {
     id: "ast_itu_current",
     path: "assets/flags/international_organisations/united_nations_system/itu_current.svg"
+  },
+  {
+    id: "ast_itu_current_text_removed",
+    path: "assets/flags/international_organisations/united_nations_system/itu_current_text_removed.svg"
   },
   {
     id: "ast_ivanovo_current",
@@ -3833,8 +3841,16 @@ const assets = [
     path: "assets/flags/international_organisations/united_nations_system/unesco_current.svg"
   },
   {
+    id: "ast_unesco_current_text_removed",
+    path: "assets/flags/international_organisations/united_nations_system/unesco_current_text_removed.svg"
+  },
+  {
     id: "ast_unicef_current",
     path: "assets/flags/international_organisations/united_nations_system/unicef_current.svg"
+  },
+  {
+    id: "ast_unicef_current_text_removed",
+    path: "assets/flags/international_organisations/united_nations_system/unicef_current_text_removed.svg"
   },
   {
     id: "ast_united_arab_emirates_current",
@@ -4147,6 +4163,10 @@ const assets = [
   {
     id: "ast_wfp_current",
     path: "assets/flags/international_organisations/united_nations_system/wfp_current.svg"
+  },
+  {
+    id: "ast_wfp_current_text_removed",
+    path: "assets/flags/international_organisations/united_nations_system/wfp_current_text_removed.svg"
   },
   {
     id: "ast_who_current",

@@ -12001,6 +12001,71 @@ const variants = [
   endYear: null,
   // The real variant represented by this technical quiz image.
     baseVariantId: "var_lihou_current"
-}
+},
+
+  {
+    id: "var_international_labour_organization_current_text_removed",
+    entityId: "ent_international_labour_organization",
+    assetId: "ast_ilo_current_text_removed",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_international_labour_organization_current"
+  },
+
+  {
+    id: "var_international_telecommunication_union_current_text_removed",
+    entityId: "ent_international_telecommunication_union",
+    assetId: "ast_itu_current_text_removed",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_international_telecommunication_union_current"
+  },
+
+  {
+    id: "var_unesco_current_text_removed",
+    entityId: "ent_unesco",
+    assetId: "ast_unesco_current_text_removed",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_unesco_current"
+  },
+
+  {
+    id: "var_unicef_current_text_removed",
+    entityId: "ent_unicef",
+    assetId: "ast_unicef_current_text_removed",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_unicef_current"
+  },
+
+  {
+    id: "var_world_food_programme_current_text_removed",
+    entityId: "ent_world_food_programme",
+    assetId: "ast_wfp_current_text_removed",
+    displayName: "Organisation Flag",
+    aliases: [],
+    tags: ["organisation", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_world_food_programme_current"
+  }
 
 ];
