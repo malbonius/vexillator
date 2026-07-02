@@ -977,6 +977,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/albania/counties/diber_current.svg"
   },
   {
+    id: "ast_diber_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/albania/counties/diber_current_text_removed.svg"
+  },
+  {
     id: "ast_djibouti_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/djibouti/national/djibouti_current.svg"
   },
@@ -1049,6 +1053,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/albania/counties/durres_current.svg"
   },
   {
+    id: "ast_durres_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/albania/counties/durres_current_text_removed.svg"
+  },
+  {
     id: "ast_east_flanders_current",
     path: "assets/flags/geography/europe/western_europe/belgium/regions/flanders/east_flanders_current.svg"
   },
@@ -1095,6 +1103,10 @@ const assets = [
   {
     id: "ast_elbasan_current",
     path: "assets/flags/geography/europe/southern_europe/albania/counties/elbasan_current.svg"
+  },
+  {
+    id: "ast_elbasan_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/albania/counties/elbasan_current_text_removed.svg"
   },
   {
     id: "ast_emilia_romagna_current",
@@ -1175,6 +1187,10 @@ const assets = [
   {
     id: "ast_fier_current",
     path: "assets/flags/geography/europe/southern_europe/albania/counties/fier_current.svg"
+  },
+  {
+    id: "ast_fier_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/albania/counties/fier_current_text_removed.svg"
   },
   {
     id: "ast_fifa_current",
@@ -2139,6 +2155,10 @@ const assets = [
   {
     id: "ast_lezhe_current",
     path: "assets/flags/geography/europe/southern_europe/albania/counties/lezhe_current.svg"
+  },
+  {
+    id: "ast_lezhe_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/albania/counties/lezhe_current_text_removed.svg"
   },
   {
     id: "ast_liberec_current",
@@ -3521,6 +3541,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/albania/counties/shkoder_current.svg"
   },
   {
+    id: "ast_shkoder_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/albania/counties/shkoder_current_text_removed.svg"
+  },
+  {
     id: "ast_shropshire_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/shropshire_current.svg"
   },
@@ -4291,6 +4315,10 @@ const assets = [
   {
     id: "ast_vlore_current",
     path: "assets/flags/geography/europe/southern_europe/albania/counties/vlore_current.svg"
+  },
+  {
+    id: "ast_vlore_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/albania/counties/vlore_current_text_removed.svg"
   },
   {
     id: "ast_volgograd_current",
