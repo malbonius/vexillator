@@ -473,6 +473,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/romania/counties/nord_vest/bihor_current.svg"
   },
   {
+    id: "ast_bjelovar_bilogora_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/bjelovar_bilogora_current.svg"
+  },
+  {
     id: "ast_blekinge_current",
     path: "assets/flags/geography/europe/northern_europe/sweden/counties/blekinge_current.svg"
   },
@@ -503,6 +507,10 @@ const assets = [
   {
     id: "ast_bosnia_and_herzegovina_current",
     path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/national/bosnia_and_herzegovina_current.svg"
+  },
+  {
+    id: "ast_bosnian_podrinje_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/bosnian_podrinje_current.svg"
   },
   {
     id: "ast_botswana_current",
@@ -575,6 +583,10 @@ const assets = [
   {
     id: "ast_brittany_current",
     path: "assets/flags/geography/europe/western_europe/france/regions/brittany_current.svg"
+  },
+  {
+    id: "ast_brod_posavina_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/brod_posavina_current.svg"
   },
   {
     id: "ast_brunei_current",
@@ -743,6 +755,10 @@ const assets = [
   {
     id: "ast_central_bohemian_current",
     path: "assets/flags/geography/europe/eastern_europe/czechia/regions/central_bohemian_current.svg"
+  },
+  {
+    id: "ast_central_bosnia_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/central_bosnia_current.svg"
   },
   {
     id: "ast_central_finland_current",
@@ -1063,6 +1079,10 @@ const assets = [
   {
     id: "ast_drenthe_current",
     path: "assets/flags/geography/europe/western_europe/netherlands/provinces/drenthe_current.svg"
+  },
+  {
+    id: "ast_dubrovnik_neretva_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/dubrovnik_neretva_current.svg"
   },
   {
     id: "ast_durres_current",
@@ -1573,6 +1593,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/hertfordshire_current.svg"
   },
   {
+    id: "ast_herzegovina_neretva_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/herzegovina_neretva_current.svg"
+  },
+  {
     id: "ast_hesse_current",
     path: "assets/flags/geography/europe/western_europe/germany/lander/hesse_current.svg"
   },
@@ -1773,6 +1797,10 @@ const assets = [
     path: "assets/flags/geography/asia/western_asia/israel/national/israel_current.svg"
   },
   {
+    id: "ast_istria_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/istria_current.svg"
+  },
+  {
     id: "ast_italy_civil",
     path: "assets/flags/geography/europe/southern_europe/italy/national/italy_civil.svg"
   },
@@ -1949,6 +1977,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/northwestern/karelia_current.svg"
   },
   {
+    id: "ast_karlovac_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/karlovac_current.svg"
+  },
+  {
     id: "ast_karlovy_vary_current",
     path: "assets/flags/geography/europe/eastern_europe/czechia/regions/karlovy_vary_current.svg"
   },
@@ -2037,6 +2069,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/northwestern/komi_current.svg"
   },
   {
+    id: "ast_koprivnica_krizevci_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/koprivnica_krizevci_current.svg"
+  },
+  {
     id: "ast_korce_current",
     path: "assets/flags/geography/europe/southern_europe/albania/counties/korce_current.svg"
   },
@@ -2055,6 +2091,10 @@ const assets = [
   {
     id: "ast_kostroma_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/central/kostroma_current.svg"
+  },
+  {
+    id: "ast_krapina_zagorje_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/krapina_zagorje_current.svg"
   },
   {
     id: "ast_krasnodar_current",
@@ -2235,6 +2275,10 @@ const assets = [
   {
     id: "ast_lihou_current_text_removed",
     path: "assets/flags/geography/europe/northern_europe/channel_islands/lihou/lihou_current_text_removed.svg"
+  },
+  {
+    id: "ast_lika_senj_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/lika_senj_current.svg"
   },
   {
     id: "ast_limburg_belgium_current",
@@ -2443,6 +2487,10 @@ const assets = [
   {
     id: "ast_mecklenburg_western_pomerania_current",
     path: "assets/flags/geography/europe/western_europe/germany/lander/mecklenburg_western_pomerania_current.svg"
+  },
+  {
+    id: "ast_medimurje_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/medimurje_current.svg"
   },
   {
     id: "ast_melilla_current",
@@ -3053,6 +3101,10 @@ const assets = [
     path: "assets/flags/geography/asia/eastern_asia/japan/prefectures/kansai/osaka_current.svg"
   },
   {
+    id: "ast_osijek_baranja_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/osijek_baranja_current.svg"
+  },
+  {
     id: "ast_oslo_current",
     path: "assets/flags/geography/europe/northern_europe/norway/counties/oslo_current.svg"
   },
@@ -3257,12 +3309,24 @@ const assets = [
     path: "assets/flags/geography/south_america/venezuela/region/central_western_region/portuguesa_current.svg"
   },
   {
+    id: "ast_posavina_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/posavina_current.svg"
+  },
+  {
+    id: "ast_pozega_slavonia_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/pozega_slavonia_current.svg"
+  },
+  {
     id: "ast_prague_current",
     path: "assets/flags/geography/europe/eastern_europe/czechia/regions/prague_current.svg"
   },
   {
     id: "ast_presov_current",
     path: "assets/flags/geography/europe/eastern_europe/slovakia/kraje/presov_current.svg"
+  },
+  {
+    id: "ast_primorje_gorski_kotar_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/primorje_gorski_kotar_current.svg"
   },
   {
     id: "ast_primorsky_current",
@@ -3319,6 +3383,10 @@ const assets = [
   {
     id: "ast_republic_of_the_congo_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/middle_africa/congo_republic/national/republic_of_the_congo_current.svg"
+  },
+  {
+    id: "ast_republika_srpska_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/republika_srpska/republika_srpska_current.svg"
   },
   {
     id: "ast_reunion_unofficial",
@@ -3497,6 +3565,10 @@ const assets = [
     path: "assets/flags/geography/africa/sub_saharan_africa/middle_africa/sao_tome_and_principe/national/sao_tome_and_principe_current.svg"
   },
   {
+    id: "ast_sarajevo_canton_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/sarajevo_canton_current.svg"
+  },
+  {
     id: "ast_saratov_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/volga/saratov_current.svg"
   },
@@ -3609,6 +3681,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/lithuania/counties/siauliai_current.svg"
   },
   {
+    id: "ast_sibenik_knin_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/sibenik_knin_current.svg"
+  },
+  {
     id: "ast_sicily_current",
     path: "assets/flags/geography/europe/southern_europe/italy/regions/sicily/sicily_current.svg"
   },
@@ -3643,6 +3719,10 @@ const assets = [
   {
     id: "ast_sint_maarten_governor",
     path: "assets/flags/geography/caribbean/sint_maarten/sint_maarten_governor.svg"
+  },
+  {
+    id: "ast_sisak_moslavina_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/sisak_moslavina_current.svg"
   },
   {
     id: "ast_sjaelland_current",
@@ -3775,6 +3855,10 @@ const assets = [
   {
     id: "ast_spain_current",
     path: "assets/flags/geography/europe/southern_europe/spain/national/spain_current.svg"
+  },
+  {
+    id: "ast_split_dalmatia_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/split_dalmatia_current.svg"
   },
   {
     id: "ast_sri_lanka_current",
@@ -4089,6 +4173,10 @@ const assets = [
     path: "assets/flags/geography/oceania/polynesia/tuvalu/national/tuvalu_current.svg"
   },
   {
+    id: "ast_tuzla_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/tuzla_current.svg"
+  },
+  {
     id: "ast_tver_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/central/tver_current.svg"
   },
@@ -4127,6 +4215,10 @@ const assets = [
   {
     id: "ast_umbria_current",
     path: "assets/flags/geography/europe/southern_europe/italy/regions/umbria/umbria_current.svg"
+  },
+  {
+    id: "ast_una_sana_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/una_sana_current.svg"
   },
   {
     id: "ast_unesco_current",
@@ -4235,6 +4327,10 @@ const assets = [
   {
     id: "ast_vanuatu_current",
     path: "assets/flags/geography/oceania/melanesia/vanuatu/national/vanuatu_current.svg"
+  },
+  {
+    id: "ast_varazdin_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/varazdin_current.svg"
   },
   {
     id: "ast_varmland_current",
@@ -4353,6 +4449,10 @@ const assets = [
     path: "assets/flags/geography/northern_america/united_states/states/virginia/virginia_text_removed.svg"
   },
   {
+    id: "ast_virovitica_podravina_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/virovitica_podravina_current.svg"
+  },
+  {
     id: "ast_vitebsk_current",
     path: "assets/flags/geography/europe/eastern_europe/belarus/regions/vitebsk_current.svg"
   },
@@ -4391,6 +4491,10 @@ const assets = [
   {
     id: "ast_voru_current",
     path: "assets/flags/geography/europe/northern_europe/estonia/counties/voru_current.svg"
+  },
+  {
+    id: "ast_vukovar_syrmia_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/vukovar_syrmia_current.svg"
   },
   {
     id: "ast_vysocina_current",
@@ -4443,6 +4547,10 @@ const assets = [
   {
     id: "ast_west_flanders_current",
     path: "assets/flags/geography/europe/western_europe/belgium/regions/flanders/west_flanders_current.svg"
+  },
+  {
+    id: "ast_west_herzegovina_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/west_herzegovina_current.svg"
   },
   {
     id: "ast_west_midlands_unofficial",
@@ -4565,6 +4673,18 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/far_eastern/zabaykalsky_current.svg"
   },
   {
+    id: "ast_zadar_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/zadar_current.svg"
+  },
+  {
+    id: "ast_zagreb_city_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/zagreb_city_current.svg"
+  },
+  {
+    id: "ast_zagreb_county_current",
+    path: "assets/flags/geography/europe/southern_europe/croatia/counties/zagreb_county_current.svg"
+  },
+  {
     id: "ast_zakarpattia_current",
     path: "assets/flags/geography/europe/eastern_europe/ukraine/oblasts/zakarpattia_current.svg"
   },
@@ -4587,6 +4707,10 @@ const assets = [
   {
     id: "ast_zeeland_current",
     path: "assets/flags/geography/europe/western_europe/netherlands/provinces/zeeland_current.svg"
+  },
+  {
+    id: "ast_zenica_doboj_current",
+    path: "assets/flags/geography/europe/southern_europe/bosnia_and_herzegovina/federation_of_bosnia_herzegovina/zenica_doboj_current.svg"
   },
   {
     id: "ast_zhytomyr_current",

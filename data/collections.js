@@ -3643,6 +3643,30 @@ const collections = [
       ]
     }
   },
+
+  {
+    id: "col_bosnia_and_herzegovina_subnational_flags",
+    name: "Bosnia and Herzegovina Subnational Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes current selectable subnational flags: Republika Srpska and Federation cantons with available flag assets. The Federation, Brčko District and Canton 10 are represented structurally where no current asset is present.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_bosnia_and_herzegovina"
+        },
+        {
+          hasTag: "subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
   {
     id: "col_bulgaria_first_level_subdivisions",
     name: "Bulgarian Provincial Flags",
@@ -4544,7 +4568,7 @@ const collections = [
         }
       ]
     }
-  },,
+  },
 
 
   {

@@ -5929,6 +5929,184 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_bosnia_and_herzegovina_current"
   },
+
+
+  /*
+    Bosnia and Herzegovina.
+
+    Bosnia and Herzegovina is modelled with its two entities and Brčko
+    District as current first-level structural subdivisions. The Federation's
+    cantons sit beneath the Federation rather than directly beneath the state.
+    Flagless structural entries remain non-selectable through defaultVariantId: null.
+  */
+  {
+    id: "ent_bosnia_and_herzegovina_federation",
+    name: "Federation of Bosnia and Herzegovina",
+    aliases: [
+      "Federation of Bosnia-Herzegovina",
+      "Federacija Bosne i Hercegovine",
+      "FBiH"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: null
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_republika_srpska",
+    name: "Republika Srpska",
+    aliases: [
+      "Republic of Srpska",
+      "RS"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_republika_srpska_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_brcko_district",
+    name: "Brčko District",
+    aliases: [
+      "Brcko District",
+      "District of Brčko",
+      "District of Brcko"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    defaultVariantId: null
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_una_sana_canton",
+    name: "Una-Sana Canton",
+    aliases: [
+      "Unsko-sanski kanton",
+      "Una-Sana County"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_una_sana_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_posavina_canton",
+    name: "Posavina Canton",
+    aliases: [
+      "Posavina County",
+      "Posavski kanton",
+      "Posavska županija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_posavina_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_tuzla_canton",
+    name: "Tuzla Canton",
+    aliases: [
+      "Tuzla County",
+      "Tuzlanski kanton"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_tuzla_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_zenica_doboj_canton",
+    name: "Zenica-Doboj Canton",
+    aliases: [
+      "Zenica-Doboj County",
+      "Zeničko-dobojski kanton",
+      "Zenicko-dobojski kanton"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_zenica_doboj_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_bosnian_podrinje_canton",
+    name: "Bosnian-Podrinje Canton Goražde",
+    aliases: [
+      "Bosnian-Podrinje Canton",
+      "Bosnian Podrinje Canton Gorazde",
+      "Bosansko-podrinjski kanton Goražde",
+      "Bosansko-podrinjski kanton Gorazde"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_bosnian_podrinje_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_central_bosnia_canton",
+    name: "Central Bosnia Canton",
+    aliases: [
+      "Central Bosnia County",
+      "Srednjobosanski kanton",
+      "Srednjobosanska županija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_central_bosnia_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_herzegovina_neretva_canton",
+    name: "Herzegovina-Neretva Canton",
+    aliases: [
+      "Herzegovina-Neretva County",
+      "Hercegovačko-neretvanski kanton",
+      "Hercegovacko-neretvanski kanton",
+      "Hercegovačko-neretvanska županija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_herzegovina_neretva_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_west_herzegovina_canton",
+    name: "West Herzegovina Canton",
+    aliases: [
+      "West Herzegovina County",
+      "Zapadnohercegovački kanton",
+      "Zapadnohercegovacki kanton",
+      "Zapadnohercegovačka županija"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_west_herzegovina_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_sarajevo_canton",
+    name: "Sarajevo Canton",
+    aliases: [
+      "Sarajevo County",
+      "Kanton Sarajevo"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: "var_bosnia_and_herzegovina_sarajevo_canton_current"
+  },
+  {
+    id: "ent_bosnia_and_herzegovina_canton_10",
+    name: "Canton 10",
+    aliases: [
+      "Herzeg-Bosnia Canton",
+      "Hercegbosanska županija",
+      "Livno Canton"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_bosnia_and_herzegovina_federation"],
+    tags: ["subdivision", "region", "current"],
+    defaultVariantId: null
+  },
   {
     id: "ent_bulgaria",
     name: "Bulgaria",

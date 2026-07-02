@@ -626,6 +626,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_bosnia_and_herzegovina",
+    name: "Bosnia and Herzegovina",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_bosnia_and_herzegovina_subnational_flags"
+    ]
+  },
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],

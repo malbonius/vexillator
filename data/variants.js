@@ -7252,6 +7252,115 @@ const variants = [
     startYear: 1998,
     endYear: null
   },
+
+
+  /*
+    Bosnia and Herzegovina subnational flags.
+  */
+  {
+    id: "var_bosnia_and_herzegovina_republika_srpska_current",
+    entityId: "ent_bosnia_and_herzegovina_republika_srpska",
+    assetId: "ast_republika_srpska_current",
+    displayName: "Official Entity Flag",
+    aliases: ["Flag of Republika Srpska", "Republika Srpska Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_una_sana_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_una_sana_canton",
+    assetId: "ast_una_sana_current",
+    displayName: "Official Cantonal Flag",
+    aliases: ["Flag of Una-Sana Canton", "Una-Sana Canton Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_posavina_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_posavina_canton",
+    assetId: "ast_posavina_current",
+    displayName: "Official Cantonal Flag",
+    aliases: ["Flag of Posavina Canton", "Posavina Canton Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_tuzla_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_tuzla_canton",
+    assetId: "ast_tuzla_current",
+    displayName: "Official Cantonal Flag",
+    aliases: ["Flag of Tuzla Canton", "Tuzla Canton Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_zenica_doboj_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_zenica_doboj_canton",
+    assetId: "ast_zenica_doboj_current",
+    displayName: "Official Cantonal Flag",
+    aliases: ["Flag of Zenica-Doboj Canton", "Zenica-Doboj Canton Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_bosnian_podrinje_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_bosnian_podrinje_canton",
+    assetId: "ast_bosnian_podrinje_current",
+    displayName: "Official Cantonal Flag",
+    aliases: [
+      "Flag of Bosnian-Podrinje Canton Goražde",
+      "Bosnian-Podrinje Canton Goražde Flag",
+      "Flag of Bosnian-Podrinje Canton Gorazde"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_central_bosnia_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_central_bosnia_canton",
+    assetId: "ast_central_bosnia_current",
+    displayName: "Official Cantonal Flag",
+    aliases: ["Flag of Central Bosnia Canton", "Central Bosnia Canton Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_herzegovina_neretva_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_herzegovina_neretva_canton",
+    assetId: "ast_herzegovina_neretva_current",
+    displayName: "Official Cantonal Flag",
+    aliases: ["Flag of Herzegovina-Neretva Canton", "Herzegovina-Neretva Canton Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_west_herzegovina_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_west_herzegovina_canton",
+    assetId: "ast_west_herzegovina_current",
+    displayName: "Official Cantonal Flag",
+    aliases: ["Flag of West Herzegovina Canton", "West Herzegovina Canton Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bosnia_and_herzegovina_sarajevo_canton_current",
+    entityId: "ent_bosnia_and_herzegovina_sarajevo_canton",
+    assetId: "ast_sarajevo_canton_current",
+    displayName: "Official Cantonal Flag",
+    aliases: ["Flag of Sarajevo Canton", "Sarajevo Canton Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_bulgaria_current",
     entityId: "ent_bulgaria",
