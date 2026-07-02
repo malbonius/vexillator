@@ -981,6 +981,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/dobrich_current.svg"
   },
   {
+    id: "ast_dobrich_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/dobrich_current_text_removed.svg"
+  },
+  {
     id: "ast_dominica_current",
     path: "assets/flags/geography/caribbean/dominica/dominica_current.svg"
   },
@@ -2189,6 +2193,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/lovech_current.svg"
   },
   {
+    id: "ast_lovech_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/lovech_current_text_removed.svg"
+  },
+  {
     id: "ast_lower_austria_civil_current",
     path: "assets/flags/geography/europe/western_europe/austria/states/lower_austria/lower_austria_civil_current.svg"
   },
@@ -3205,6 +3213,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/razgrad_current.svg"
   },
   {
+    id: "ast_razgrad_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/razgrad_current_text_removed.svg"
+  },
+  {
     id: "ast_republic_of_the_congo_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/middle_africa/congo_republic/national/republic_of_the_congo_current.svg"
   },
@@ -3477,6 +3489,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/shumen_current.svg"
   },
   {
+    id: "ast_shumen_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/shumen_current_text_removed.svg"
+  },
+  {
     id: "ast_siauliai_current",
     path: "assets/flags/geography/europe/northern_europe/lithuania/counties/siauliai_current.svg"
   },
@@ -3495,6 +3511,10 @@ const assets = [
   {
     id: "ast_silistra_current",
     path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/silistra_current.svg"
+  },
+  {
+    id: "ast_silistra_current_text_removed",
+    path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/silistra_current_text_removed.svg"
   },
   {
     id: "ast_singapore_current",
