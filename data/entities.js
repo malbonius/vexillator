@@ -8084,6 +8084,125 @@ const entities = [
     defaultVariantId: "var_romania_current"
   },
   {
+    id: "ent_romania_alba_county",
+    name: "Alba County",
+    aliases: ["Județul Alba"],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_alba_county_current"
+  },
+  {
+    id: "ent_romania_arad_county",
+    name: "Arad County",
+    aliases: ["Județul Arad"],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_arad_county_current"
+  },
+  {
+    id: "ent_romania_bihor_county",
+    name: "Bihor County",
+    aliases: ["Județul Bihor"],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_bihor_county_current"
+  },
+  {
+    id: "ent_romania_brasov_county",
+    name: "Brașov County",
+    aliases: [
+      "Brasov County",
+      "Județul Brașov",
+      "Judetul Brasov"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_brasov_county_current"
+  },
+  {
+    id: "ent_romania_bucharest",
+    name: "Bucharest",
+    aliases: [
+      "București",
+      "Municipality of Bucharest",
+      "Municipiul București"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
+    defaultVariantId: "var_romania_bucharest_current"
+  },
+  {
+    id: "ent_romania_covasna_county",
+    name: "Covasna County",
+    aliases: ["Județul Covasna"],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_covasna_county_current"
+  },
+  {
+    id: "ent_romania_giurgiu_county",
+    name: "Giurgiu County",
+    aliases: ["Județul Giurgiu"],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_giurgiu_county_current"
+  },
+  {
+    id: "ent_romania_ialomita_county",
+    name: "Ialomița County",
+    aliases: [
+      "Ialomita County",
+      "Județul Ialomița",
+      "Judetul Ialomita"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_ialomita_county_current"
+  },
+  {
+    id: "ent_romania_maramures_county",
+    name: "Maramureș County",
+    aliases: [
+      "Maramures County",
+      "Județul Maramureș",
+      "Judetul Maramures"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_maramures_county_current"
+  },
+  {
+    id: "ent_romania_mures_county",
+    name: "Mureș County",
+    aliases: [
+      "Mures County",
+      "Județul Mureș",
+      "Judetul Mures"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_mures_county_current"
+  },
+  {
+    id: "ent_romania_satu_mare_county",
+    name: "Satu Mare County",
+    aliases: ["Județul Satu Mare"],
+    entityType: "geographic",
+    parentIds: ["ent_romania"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    defaultVariantId: "var_romania_satu_mare_county_current"
+  },
+  {
     id: "ent_san_marino",
     name: "San Marino",
     aliases: [
@@ -11042,6 +11161,15 @@ const entities = [
   defaultVariantId: "var_european_union_current"
 },
 {
+  id: "ent_nordic_council",
+  name: "Nordic Council",
+  aliases: ["Nordisk Råd", "Nordic Council and Nordic Council of Ministers"],
+  entityType: "organisation",
+  parentIds: ["ent_european_atlantic_organisations"],
+  tags: ["organisation", "international_organisation", "government", "current"],
+  defaultVariantId: "var_nordic_council_current"
+},
+{
   id: "ent_nato",
   name: "NATO",
   aliases: ["North Atlantic Treaty Organization", "North Atlantic Treaty Organisation"],
@@ -11049,15 +11177,6 @@ const entities = [
   parentIds: ["ent_european_atlantic_organisations"],
   tags: ["organisation", "international_organisation", "military", "current"],
   defaultVariantId: "var_nato_current"
-},
-{
-  id: "ent_nordic_council",
-  name: "Nordic Council",
-  aliases: ["Nordisk Råd", "Nordic Council and Nordic Council of Ministers", "Nordic Cooperation", "Nordic Co-operation"],
-  entityType: "organisation",
-  parentIds: ["ent_european_atlantic_organisations"],
-  tags: ["organisation", "international_organisation", "current"],
-  defaultVariantId: "var_nordic_council_current"
 },
 {
   id: "ent_antarctic_treaty_system",

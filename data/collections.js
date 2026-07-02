@@ -3618,6 +3618,29 @@ const collections = [
     }
   },
   {
+    id: "col_romania_first_level_subdivisions",
+    name: "Romanian County and Bucharest Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes currently available Romanian county flags and the Municipality of Bucharest as first-level subdivisions.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_romania"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_czechia_regions",
     name: "Czech Regional Flags",
     type: "dynamic",

@@ -9506,6 +9506,172 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_romania_alba_county_current",
+    entityId: "ent_romania_alba_county",
+    assetId: "ast_alba_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Alba County",
+      "Alba County Flag",
+      "Flag of Județul Alba"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_arad_county_current",
+    entityId: "ent_romania_arad_county",
+    assetId: "ast_arad_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Arad County",
+      "Arad County Flag",
+      "Flag of Județul Arad"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_bihor_county_current",
+    entityId: "ent_romania_bihor_county",
+    assetId: "ast_bihor_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Bihor County",
+      "Bihor County Flag",
+      "Flag of Județul Bihor"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_brasov_county_current",
+    entityId: "ent_romania_brasov_county",
+    assetId: "ast_braso_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Brașov County",
+      "Brașov County Flag",
+      "Flag of Brasov County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_bucharest_current",
+    entityId: "ent_romania_bucharest",
+    assetId: "ast_bucharest_current",
+    displayName: "Official City Flag",
+    aliases: [
+      "Flag of Bucharest",
+      "Bucharest Flag",
+      "Flag of București"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_covasna_county_current",
+    entityId: "ent_romania_covasna_county",
+    assetId: "ast_covasna_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Covasna County",
+      "Covasna County Flag",
+      "Flag of Județul Covasna"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_giurgiu_county_current",
+    entityId: "ent_romania_giurgiu_county",
+    assetId: "ast_giurgiu_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Giurgiu County",
+      "Giurgiu County Flag",
+      "Flag of Județul Giurgiu"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_ialomita_county_current",
+    entityId: "ent_romania_ialomita_county",
+    assetId: "ast_ialomita_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Ialomița County",
+      "Ialomița County Flag",
+      "Flag of Ialomita County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_ialomita_county_current_text_removed",
+    entityId: "ent_romania_ialomita_county",
+    assetId: "ast_ialomita_current_text_removed",
+    displayName: "Official County Flag",
+    aliases: [],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_romania_ialomita_county_current"
+  },
+  {
+    id: "var_romania_maramures_county_current",
+    entityId: "ent_romania_maramures_county",
+    assetId: "ast_maramures_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Maramureș County",
+      "Maramureș County Flag",
+      "Flag of Maramures County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_mures_county_current",
+    entityId: "ent_romania_mures_county",
+    assetId: "ast_mures_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Mureș County",
+      "Mureș County Flag",
+      "Flag of Mures County"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_romania_satu_mare_county_current",
+    entityId: "ent_romania_satu_mare_county",
+    assetId: "ast_satu_mare_current",
+    displayName: "Official County Flag",
+    aliases: [
+      "Flag of Satu Mare County",
+      "Satu Mare County Flag",
+      "Flag of Județul Satu Mare"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_san_marino_current",
     entityId: "ent_san_marino",
     assetId: "ast_san_marino_current",

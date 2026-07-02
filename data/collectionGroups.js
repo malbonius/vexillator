@@ -375,6 +375,15 @@ const collectionGroups = [
   },
 
   {
+    id: "grp_romania",
+    name: "Romania",
+    parentGroupIds: ["grp_eastern_europe"],
+    collectionIds: [
+      "col_romania_first_level_subdivisions"
+    ]
+  },
+
+  {
     id: "grp_russia",
     name: "Russia",
     parentGroupIds: ["grp_eastern_europe"],
