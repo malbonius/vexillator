@@ -8278,7 +8278,7 @@ const entities = [
     aliases: ["Gozo"],
     entityType: "geographic",
     parentIds: ["ent_malta"],
-    tags: ["region", "current"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
     defaultVariantId: "var_malta_gozo_region_current"
   },
   {
@@ -8287,7 +8287,7 @@ const entities = [
     aliases: ["Northern Region of Malta"],
     entityType: "geographic",
     parentIds: ["ent_malta"],
-    tags: ["region", "current"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
     defaultVariantId: "var_malta_northern_region_current"
   },
   {
@@ -8296,7 +8296,7 @@ const entities = [
     aliases: ["Southern Region of Malta"],
     entityType: "geographic",
     parentIds: ["ent_malta"],
-    tags: ["region", "current"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current"],
     defaultVariantId: "var_malta_southern_region_current"
   },
   {
