@@ -8503,6 +8503,21 @@ const entities = [
     defaultVariantId: "var_north_macedonia_cair_city_municipality_current"
   },
   {
+    id: "ent_north_macedonia_centar_city_municipality",
+    name: "Centar Municipality",
+    aliases: ["Centar", "Centre Municipality", "Centre"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_centar_city_municipality_current"
+  },
+  {
     id: "ent_north_macedonia_suto_orizari_city_municipality",
     name: "Šuto Orizari Municipality",
     aliases: [

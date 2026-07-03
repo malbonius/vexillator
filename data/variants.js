@@ -10080,6 +10080,16 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_north_macedonia_centar_city_municipality_current",
+    entityId: "ent_north_macedonia_centar_city_municipality",
+    assetId: "ast_centar_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Centar", "Centar Municipal Flag", "Flag of Centar Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_north_macedonia_suto_orizari_city_municipality_current",
     entityId: "ent_north_macedonia_suto_orizari_city_municipality",
     assetId: "ast_suto_orizari_current",
@@ -10690,6 +10700,269 @@ const variants = [
     tags: ["current"],
     startYear: null,
     endYear: null
+  },
+  /*
+    North Macedonian text-removed quiz variants.
+  */
+  {
+    id: "var_north_macedonia_berovo_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_berovo_municipality",
+    assetId: "ast_berovo_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Berovo", "Berovo Municipal Flag", "Flag of Berovo Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_berovo_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_bogdanci_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_bogdanci_municipality",
+    assetId: "ast_bogdanci_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Bogdanci", "Bogdanci Municipal Flag", "Flag of Bogdanci Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_bogdanci_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_centar_zupa_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_centar_zupa_municipality",
+    assetId: "ast_centar_zupa_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Centar Župa", "Centar Župa Municipal Flag", "Flag of Centar Župa Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_centar_zupa_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_debarca_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_debarca_municipality",
+    assetId: "ast_debarca_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Debarca", "Debarca Municipal Flag", "Flag of Debarca Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_debarca_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_delcevo_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_delcevo_municipality",
+    assetId: "ast_delcevo_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Delčevo", "Delčevo Municipal Flag", "Flag of Delčevo Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_delcevo_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_dojran_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_dojran_municipality",
+    assetId: "ast_dojran_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Dojran", "Dojran Municipal Flag", "Flag of Dojran Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_dojran_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_gevgelija_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_gevgelija_municipality",
+    assetId: "ast_gevgelija_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Gevgelija", "Gevgelija Municipal Flag", "Flag of Gevgelija Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_gevgelija_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_karbinci_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_karbinci_municipality",
+    assetId: "ast_karbinci_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Karbinci", "Karbinci Municipal Flag", "Flag of Karbinci Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_karbinci_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_konce_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_konce_municipality",
+    assetId: "ast_konce_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Konče", "Konče Municipal Flag", "Flag of Konče Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_konce_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_kratovo_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_kratovo_municipality",
+    assetId: "ast_kratovo_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Kratovo", "Kratovo Municipal Flag", "Flag of Kratovo Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_kratovo_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_krivogastani_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_krivogastani_municipality",
+    assetId: "ast_krivogastani_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: [
+      "Flag of Krivogaštani",
+      "Krivogaštani Municipal Flag",
+      "Flag of Krivogaštani Municipality"
+    ],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_krivogastani_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_krusevo_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_krusevo_municipality",
+    assetId: "ast_krusevo_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Kruševo", "Kruševo Municipal Flag", "Flag of Kruševo Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_krusevo_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_mogila_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_mogila_municipality",
+    assetId: "ast_mogila_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Mogila", "Mogila Municipal Flag", "Flag of Mogila Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_mogila_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_novaci_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_novaci_municipality",
+    assetId: "ast_novaci_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Novaci", "Novaci Municipal Flag", "Flag of Novaci Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_novaci_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_pehcevo_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_pehcevo_municipality",
+    assetId: "ast_pehcevo_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Pehčevo", "Pehčevo Municipal Flag", "Flag of Pehčevo Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_pehcevo_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_petrovec_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_petrovec_municipality",
+    assetId: "ast_petrovec_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Petrovec", "Petrovec Municipal Flag", "Flag of Petrovec Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_petrovec_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_sopiste_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_sopiste_municipality",
+    assetId: "ast_sopiste_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Sopište", "Sopište Municipal Flag", "Flag of Sopište Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_sopiste_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_staro_nagoricane_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_staro_nagoricane_municipality",
+    assetId: "ast_staro_nagoricane_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: [
+      "Flag of Staro Nagoričane",
+      "Staro Nagoričane Municipal Flag",
+      "Flag of Staro Nagoričane Municipality"
+    ],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_staro_nagoricane_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_stip_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_stip_municipality",
+    assetId: "ast_stip_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Štip", "Štip Municipal Flag", "Flag of Štip Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_stip_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_strumica_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_strumica_municipality",
+    assetId: "ast_strumica_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Strumica", "Strumica Municipal Flag", "Flag of Strumica Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_strumica_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_veles_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_veles_municipality",
+    assetId: "ast_veles_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Veles", "Veles Municipal Flag", "Flag of Veles Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_veles_municipality_current"
   },
   {
     id: "var_north_macedonia_caska_municipality_current",
