@@ -9982,6 +9982,759 @@ const variants = [
     startYear: 1995,
     endYear: null
   },
+  /*
+    North Macedonian local-government flags.
+  */
+  {
+    id: "var_north_macedonia_city_of_skopje_current",
+    entityId: "ent_north_macedonia_city_of_skopje",
+    assetId: "ast_skopje_current",
+    displayName: "City Flag",
+    aliases: ["Flag of City of Skopje", "Flag of Skopje", "Skopje City Flag"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_aerodrom_city_municipality_current",
+    entityId: "ent_north_macedonia_aerodrom_city_municipality",
+    assetId: "ast_aerodrom_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Aerodrom", "Aerodrom Municipal Flag", "Flag of Aerodrom Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_butel_city_municipality_current",
+    entityId: "ent_north_macedonia_butel_city_municipality",
+    assetId: "ast_butel_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Butel", "Butel Municipal Flag", "Flag of Butel Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_gazi_baba_city_municipality_current",
+    entityId: "ent_north_macedonia_gazi_baba_city_municipality",
+    assetId: "ast_gazi_baba_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Gazi Baba", "Gazi Baba Municipal Flag", "Flag of Gazi Baba Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_gjorce_petrov_city_municipality_current",
+    entityId: "ent_north_macedonia_gjorce_petrov_city_municipality",
+    assetId: "ast_gjorce_petrov_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Gjorče Petrov",
+      "Gjorče Petrov Municipal Flag",
+      "Flag of Gjorče Petrov Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_karpos_city_municipality_current",
+    entityId: "ent_north_macedonia_karpos_city_municipality",
+    assetId: "ast_karpos_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Karpoš", "Karpoš Municipal Flag", "Flag of Karpoš Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_kisela_voda_city_municipality_current",
+    entityId: "ent_north_macedonia_kisela_voda_city_municipality",
+    assetId: "ast_kisela_voda_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Kisela Voda", "Kisela Voda Municipal Flag", "Flag of Kisela Voda Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_saraj_city_municipality_current",
+    entityId: "ent_north_macedonia_saraj_city_municipality",
+    assetId: "ast_saraj_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Saraj", "Saraj Municipal Flag", "Flag of Saraj Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_cair_city_municipality_current",
+    entityId: "ent_north_macedonia_cair_city_municipality",
+    assetId: "ast_cair_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Čair", "Čair Municipal Flag", "Flag of Čair Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_suto_orizari_city_municipality_current",
+    entityId: "ent_north_macedonia_suto_orizari_city_municipality",
+    assetId: "ast_suto_orizari_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Šuto Orizari",
+      "Šuto Orizari Municipal Flag",
+      "Flag of Šuto Orizari Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_aracinovo_municipality_current",
+    entityId: "ent_north_macedonia_aracinovo_municipality",
+    assetId: "ast_aracinovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Aračinovo", "Aračinovo Municipal Flag", "Flag of Aračinovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_berovo_municipality_current",
+    entityId: "ent_north_macedonia_berovo_municipality",
+    assetId: "ast_berovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Berovo", "Berovo Municipal Flag", "Flag of Berovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_bitola_municipality_current",
+    entityId: "ent_north_macedonia_bitola_municipality",
+    assetId: "ast_bitola_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Bitola", "Bitola Municipal Flag", "Flag of Bitola Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_bogdanci_municipality_current",
+    entityId: "ent_north_macedonia_bogdanci_municipality",
+    assetId: "ast_bogdanci_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Bogdanci", "Bogdanci Municipal Flag", "Flag of Bogdanci Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_bogovinje_municipality_current",
+    entityId: "ent_north_macedonia_bogovinje_municipality",
+    assetId: "ast_bogovinje_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Bogovinje", "Bogovinje Municipal Flag", "Flag of Bogovinje Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_bosilovo_municipality_current",
+    entityId: "ent_north_macedonia_bosilovo_municipality",
+    assetId: "ast_basilovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Bosilovo", "Bosilovo Municipal Flag", "Flag of Bosilovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_brvenica_municipality_current",
+    entityId: "ent_north_macedonia_brvenica_municipality",
+    assetId: "ast_brvenica_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Brvenica", "Brvenica Municipal Flag", "Flag of Brvenica Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_centar_zupa_municipality_current",
+    entityId: "ent_north_macedonia_centar_zupa_municipality",
+    assetId: "ast_centar_zupa_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Centar Župa", "Centar Župa Municipal Flag", "Flag of Centar Župa Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_debarca_municipality_current",
+    entityId: "ent_north_macedonia_debarca_municipality",
+    assetId: "ast_debarca_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Debarca", "Debarca Municipal Flag", "Flag of Debarca Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_delcevo_municipality_current",
+    entityId: "ent_north_macedonia_delcevo_municipality",
+    assetId: "ast_delcevo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Delčevo", "Delčevo Municipal Flag", "Flag of Delčevo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_demir_hisar_municipality_current",
+    entityId: "ent_north_macedonia_demir_hisar_municipality",
+    assetId: "ast_demir_hisar_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Demir Hisar", "Demir Hisar Municipal Flag", "Flag of Demir Hisar Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_demir_kapija_municipality_current",
+    entityId: "ent_north_macedonia_demir_kapija_municipality",
+    assetId: "ast_demir_kapija_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Demir Kapija",
+      "Demir Kapija Municipal Flag",
+      "Flag of Demir Kapija Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_dojran_municipality_current",
+    entityId: "ent_north_macedonia_dojran_municipality",
+    assetId: "ast_dojran_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Dojran", "Dojran Municipal Flag", "Flag of Dojran Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_dolneni_municipality_current",
+    entityId: "ent_north_macedonia_dolneni_municipality",
+    assetId: "ast_dolneni_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Dolneni", "Dolneni Municipal Flag", "Flag of Dolneni Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_gevgelija_municipality_current",
+    entityId: "ent_north_macedonia_gevgelija_municipality",
+    assetId: "ast_gevgelija_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Gevgelija", "Gevgelija Municipal Flag", "Flag of Gevgelija Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_gostivar_municipality_current",
+    entityId: "ent_north_macedonia_gostivar_municipality",
+    assetId: "ast_gostivar_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Gostivar", "Gostivar Municipal Flag", "Flag of Gostivar Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_ilinden_municipality_current",
+    entityId: "ent_north_macedonia_ilinden_municipality",
+    assetId: "ast_ilinden_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Ilinden", "Ilinden Municipal Flag", "Flag of Ilinden Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_jegunovce_municipality_current",
+    entityId: "ent_north_macedonia_jegunovce_municipality",
+    assetId: "ast_jegunovce_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Jegunovce", "Jegunovce Municipal Flag", "Flag of Jegunovce Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_karbinci_municipality_current",
+    entityId: "ent_north_macedonia_karbinci_municipality",
+    assetId: "ast_karbinci_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Karbinci", "Karbinci Municipal Flag", "Flag of Karbinci Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_kavadarci_municipality_current",
+    entityId: "ent_north_macedonia_kavadarci_municipality",
+    assetId: "ast_kavadarci_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Kavadarci", "Kavadarci Municipal Flag", "Flag of Kavadarci Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_konce_municipality_current",
+    entityId: "ent_north_macedonia_konce_municipality",
+    assetId: "ast_konce_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Konče", "Konče Municipal Flag", "Flag of Konče Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_kocani_municipality_current",
+    entityId: "ent_north_macedonia_kocani_municipality",
+    assetId: "ast_kocani_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Kočani", "Kočani Municipal Flag", "Flag of Kočani Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_kratovo_municipality_current",
+    entityId: "ent_north_macedonia_kratovo_municipality",
+    assetId: "ast_kratovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Kratovo", "Kratovo Municipal Flag", "Flag of Kratovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_kriva_palanka_municipality_current",
+    entityId: "ent_north_macedonia_kriva_palanka_municipality",
+    assetId: "ast_kriva_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Kriva Palanka",
+      "Kriva Palanka Municipal Flag",
+      "Flag of Kriva Palanka Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_krivogastani_municipality_current",
+    entityId: "ent_north_macedonia_krivogastani_municipality",
+    assetId: "ast_krivogastani_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Krivogaštani",
+      "Krivogaštani Municipal Flag",
+      "Flag of Krivogaštani Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_krusevo_municipality_current",
+    entityId: "ent_north_macedonia_krusevo_municipality",
+    assetId: "ast_krusevo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Kruševo", "Kruševo Municipal Flag", "Flag of Kruševo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_kumanovo_municipality_current",
+    entityId: "ent_north_macedonia_kumanovo_municipality",
+    assetId: "ast_kumanovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Kumanovo", "Kumanovo Municipal Flag", "Flag of Kumanovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_lipkovo_municipality_current",
+    entityId: "ent_north_macedonia_lipkovo_municipality",
+    assetId: "ast_lipkovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Lipkovo", "Lipkovo Municipal Flag", "Flag of Lipkovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_lozovo_municipality_current",
+    entityId: "ent_north_macedonia_lozovo_municipality",
+    assetId: "ast_lozovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Lozovo", "Lozovo Municipal Flag", "Flag of Lozovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_makedonska_kamenica_municipality_current",
+    entityId: "ent_north_macedonia_makedonska_kamenica_municipality",
+    assetId: "ast_makedonska_kamenica_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Makedonska Kamenica",
+      "Makedonska Kamenica Municipal Flag",
+      "Flag of Makedonska Kamenica Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_makedonski_brod_municipality_current",
+    entityId: "ent_north_macedonia_makedonski_brod_municipality",
+    assetId: "ast_makedonski_brod_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Makedonski Brod",
+      "Makedonski Brod Municipal Flag",
+      "Flag of Makedonski Brod Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_mavrovo_and_rostusa_municipality_current",
+    entityId: "ent_north_macedonia_mavrovo_and_rostusa_municipality",
+    assetId: "ast_mavrovo_and_rostusa_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Mavrovo and Rostuša",
+      "Mavrovo and Rostuša Municipal Flag",
+      "Flag of Mavrovo and Rostuša Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_mogila_municipality_current",
+    entityId: "ent_north_macedonia_mogila_municipality",
+    assetId: "ast_mogila_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Mogila", "Mogila Municipal Flag", "Flag of Mogila Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_negotino_municipality_current",
+    entityId: "ent_north_macedonia_negotino_municipality",
+    assetId: "ast_negotino_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Negotino", "Negotino Municipal Flag", "Flag of Negotino Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_novaci_municipality_current",
+    entityId: "ent_north_macedonia_novaci_municipality",
+    assetId: "ast_novaci_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Novaci", "Novaci Municipal Flag", "Flag of Novaci Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_novo_selo_municipality_current",
+    entityId: "ent_north_macedonia_novo_selo_municipality",
+    assetId: "ast_novo_selo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Novo Selo", "Novo Selo Municipal Flag", "Flag of Novo Selo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_ohrid_municipality_current",
+    entityId: "ent_north_macedonia_ohrid_municipality",
+    assetId: "ast_ohrid_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Ohrid", "Ohrid Municipal Flag", "Flag of Ohrid Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_pehcevo_municipality_current",
+    entityId: "ent_north_macedonia_pehcevo_municipality",
+    assetId: "ast_pehcevo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Pehčevo", "Pehčevo Municipal Flag", "Flag of Pehčevo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_petrovec_municipality_current",
+    entityId: "ent_north_macedonia_petrovec_municipality",
+    assetId: "ast_petrovec_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Petrovec", "Petrovec Municipal Flag", "Flag of Petrovec Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_plasnica_municipality_current",
+    entityId: "ent_north_macedonia_plasnica_municipality",
+    assetId: "ast_plasnica_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Plasnica", "Plasnica Municipal Flag", "Flag of Plasnica Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_prilep_municipality_current",
+    entityId: "ent_north_macedonia_prilep_municipality",
+    assetId: "ast_prilep_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Prilep", "Prilep Municipal Flag", "Flag of Prilep Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_radovis_municipality_current",
+    entityId: "ent_north_macedonia_radovis_municipality",
+    assetId: "ast_radovis_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Radoviš", "Radoviš Municipal Flag", "Flag of Radoviš Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_rankovce_municipality_current",
+    entityId: "ent_north_macedonia_rankovce_municipality",
+    assetId: "ast_rankovce_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Rankovce", "Rankovce Municipal Flag", "Flag of Rankovce Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_resen_municipality_current",
+    entityId: "ent_north_macedonia_resen_municipality",
+    assetId: "ast_resen_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Resen", "Resen Municipal Flag", "Flag of Resen Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_rosoman_municipality_current",
+    entityId: "ent_north_macedonia_rosoman_municipality",
+    assetId: "ast_rosoman_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Rosoman", "Rosoman Municipal Flag", "Flag of Rosoman Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_sopiste_municipality_current",
+    entityId: "ent_north_macedonia_sopiste_municipality",
+    assetId: "ast_sopiste_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Sopište", "Sopište Municipal Flag", "Flag of Sopište Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_staro_nagoricane_municipality_current",
+    entityId: "ent_north_macedonia_staro_nagoricane_municipality",
+    assetId: "ast_staro_nagoricane_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Staro Nagoričane",
+      "Staro Nagoričane Municipal Flag",
+      "Flag of Staro Nagoričane Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_strumica_municipality_current",
+    entityId: "ent_north_macedonia_strumica_municipality",
+    assetId: "ast_strumica_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Strumica", "Strumica Municipal Flag", "Flag of Strumica Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_studenicani_municipality_current",
+    entityId: "ent_north_macedonia_studenicani_municipality",
+    assetId: "ast_studenicani_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Studeničani", "Studeničani Municipal Flag", "Flag of Studeničani Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_tetovo_municipality_current",
+    entityId: "ent_north_macedonia_tetovo_municipality",
+    assetId: "ast_tetovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Tetovo", "Tetovo Municipal Flag", "Flag of Tetovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_valandovo_municipality_current",
+    entityId: "ent_north_macedonia_valandovo_municipality",
+    assetId: "ast_valandovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Valandovo", "Valandovo Municipal Flag", "Flag of Valandovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_vasilevo_municipality_current",
+    entityId: "ent_north_macedonia_vasilevo_municipality",
+    assetId: "ast_vasilevo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Vasilevo", "Vasilevo Municipal Flag", "Flag of Vasilevo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_veles_municipality_current",
+    entityId: "ent_north_macedonia_veles_municipality",
+    assetId: "ast_veles_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Veles", "Veles Municipal Flag", "Flag of Veles Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_vevcani_municipality_current",
+    entityId: "ent_north_macedonia_vevcani_municipality",
+    assetId: "ast_vevcani_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Vevčani", "Vevčani Municipal Flag", "Flag of Vevčani Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_vinica_municipality_current",
+    entityId: "ent_north_macedonia_vinica_municipality",
+    assetId: "ast_vinica_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Vinica", "Vinica Municipal Flag", "Flag of Vinica Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_zelenikovo_municipality_current",
+    entityId: "ent_north_macedonia_zelenikovo_municipality",
+    assetId: "ast_zelenikovo_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Zelenikovo", "Zelenikovo Municipal Flag", "Flag of Zelenikovo Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_zrnovci_municipality_current",
+    entityId: "ent_north_macedonia_zrnovci_municipality",
+    assetId: "ast_zrnovci_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Zrnovci", "Zrnovci Municipal Flag", "Flag of Zrnovci Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_caska_municipality_current",
+    entityId: "ent_north_macedonia_caska_municipality",
+    assetId: "ast_caska_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Čaška", "Čaška Municipal Flag", "Flag of Čaška Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_cucer_sandevo_municipality_current",
+    entityId: "ent_north_macedonia_cucer_sandevo_municipality",
+    assetId: "ast_cucer_current",
+    displayName: "Municipal Flag",
+    aliases: [
+      "Flag of Čučer-Sandevo",
+      "Čučer-Sandevo Municipal Flag",
+      "Flag of Čučer-Sandevo Municipality"
+    ],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_stip_municipality_current",
+    entityId: "ent_north_macedonia_stip_municipality",
+    assetId: "ast_stip_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Štip", "Štip Municipal Flag", "Flag of Štip Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_north_macedonia_zelino_municipality_current",
+    entityId: "ent_north_macedonia_zelino_municipality",
+    assetId: "ast_zelino_current",
+    displayName: "Municipal Flag",
+    aliases: ["Flag of Želino", "Želino Municipal Flag", "Flag of Želino Municipality"],
+    tags: ["current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_northern_cyprus_current",
     entityId: "ent_northern_cyprus",

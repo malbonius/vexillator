@@ -3739,6 +3739,248 @@ const collections = [
   },
 
   {
+    id: "col_north_macedonia_local_government_flags",
+    name: "North Macedonian Local-Government Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes available current flags for the City of Skopje and North Macedonian municipalities. Statistical regions are used as collection/group filters rather than modelled as entities.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        },
+        {
+          any: [
+            {
+              hasTag: "municipality"
+            },
+            {
+              hasTag: "city"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_city_of_skopje_flags",
+    name: "City of Skopje Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes the City of Skopje flag and available flags for municipalities within the City of Skopje.",
+    rules: {
+      all: [
+        {
+          any: [
+            {
+              entityIs: "ent_north_macedonia_city_of_skopje"
+            },
+            {
+              hasAncestor: "ent_north_macedonia_city_of_skopje"
+            }
+          ]
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_eastern_statistical_region_flags",
+    name: "North Macedonia — Eastern Statistical Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Uses the Eastern Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "statistical_region_eastern"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_northeastern_statistical_region_flags",
+    name: "North Macedonia — Northeastern Statistical Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Uses the Northeastern Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "statistical_region_northeastern"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_pelagonia_statistical_region_flags",
+    name: "North Macedonia — Pelagonia Statistical Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Uses the Pelagonia Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "statistical_region_pelagonia"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_polog_statistical_region_flags",
+    name: "North Macedonia — Polog Statistical Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Uses the Polog Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "statistical_region_polog"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_skopje_statistical_region_flags",
+    name: "North Macedonia — Skopje Statistical Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Uses the Skopje Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "statistical_region_skopje"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_southeastern_statistical_region_flags",
+    name: "North Macedonia — Southeastern Statistical Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Uses the Southeastern Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "statistical_region_southeastern"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_southwestern_statistical_region_flags",
+    name: "North Macedonia — Southwestern Statistical Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Uses the Southwestern Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "statistical_region_southwestern"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_macedonia_vardar_statistical_region_flags",
+    name: "North Macedonia — Vardar Statistical Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Uses the Vardar Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_macedonia"
+        },
+        {
+          hasTag: "statistical_region_vardar"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_bulgaria_first_level_subdivisions",
     name: "Bulgarian Provincial Flags",
     type: "dynamic",

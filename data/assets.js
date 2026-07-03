@@ -477,6 +477,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/berovo_current.svg"
   },
   {
+    id: "ast_berovo_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/berovo_current_text_removed.svg"
+  },
+  {
     id: "ast_berwickshire_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/scotland/counties/berwickshire_current.svg"
   },
@@ -503,6 +507,10 @@ const assets = [
   {
     id: "ast_bogdanci_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/bogdanci_current.svg"
+  },
+  {
+    id: "ast_bogdanci_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/bogdanci_current_text_removed.svg"
   },
   {
     id: "ast_bogovinje_current",
@@ -793,8 +801,16 @@ const assets = [
     path: "assets/flags/geography/caribbean/cayman_islands/national/cayman_islands_current.svg"
   },
   {
+    id: "ast_centar_current",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/skopje/city_of_skopje/centar_current.svg"
+  },
+  {
     id: "ast_centar_zupa_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southwestern/centar_zupa_current.svg"
+  },
+  {
+    id: "ast_centar_zupa_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southwestern/centar_zupa_current_text_removed.svg"
   },
   {
     id: "ast_central_african_republic_current",
@@ -1037,12 +1053,20 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southwestern/debarca_current.svg"
   },
   {
+    id: "ast_debarca_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southwestern/debarca_current_text_removed.svg"
+  },
+  {
     id: "ast_delaware",
     path: "assets/flags/geography/northern_america/united_states/states/delaware.svg"
   },
   {
     id: "ast_delcevo_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/delcevo_current.svg"
+  },
+  {
+    id: "ast_delcevo_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/delcevo_current_text_removed.svg"
   },
   {
     id: "ast_delta_amacuro_current",
@@ -1099,6 +1123,10 @@ const assets = [
   {
     id: "ast_dojran_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/dojran_current.svg"
+  },
+  {
+    id: "ast_dojran_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/dojran_current_text_removed.svg"
   },
   {
     id: "ast_dolneni_current",
@@ -1463,6 +1491,10 @@ const assets = [
   {
     id: "ast_gevgelija_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/gevgelija_current.svg"
+  },
+  {
+    id: "ast_gevgelija_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/gevgelija_current_text_removed.svg"
   },
   {
     id: "ast_ghana_current",
@@ -2085,6 +2117,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/karbinci_current.svg"
   },
   {
+    id: "ast_karbinci_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/karbinci_current_text_removed.svg"
+  },
+  {
     id: "ast_karelia_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/northwestern/karelia_current.svg"
   },
@@ -2201,6 +2237,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/konce_current.svg"
   },
   {
+    id: "ast_konce_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/konce_current_text_removed.svg"
+  },
+  {
     id: "ast_koprivnica_krizevci_current",
     path: "assets/flags/geography/europe/southern_europe/croatia/counties/koprivnica_krizevci_current.svg"
   },
@@ -2241,6 +2281,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/northeastern/kratovo_current.svg"
   },
   {
+    id: "ast_kratovo_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/northeastern/kratovo_current_text_removed.svg"
+  },
+  {
     id: "ast_kriva_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/northeastern/kriva_current.svg"
   },
@@ -2249,12 +2293,20 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/krivogastani_current.svg"
   },
   {
+    id: "ast_krivogastani_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/krivogastani_current_text_removed.svg"
+  },
+  {
     id: "ast_kronoberg_current",
     path: "assets/flags/geography/europe/northern_europe/sweden/counties/kronoberg_current.svg"
   },
   {
     id: "ast_krusevo_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/krusevo_current.svg"
+  },
+  {
+    id: "ast_krusevo_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/krusevo_current_text_removed.svg"
   },
   {
     id: "ast_kukes_current",
@@ -2757,6 +2809,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/mogila_current.svg"
   },
   {
+    id: "ast_mogila_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/mogila_current_text_removed.svg"
+  },
+  {
     id: "ast_mogilev_current",
     path: "assets/flags/geography/europe/eastern_europe/belarus/regions/mogilev_current.svg"
   },
@@ -3165,6 +3221,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/novaci_current.svg"
   },
   {
+    id: "ast_novaci_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/novaci_current_text_removed.svg"
+  },
+  {
     id: "ast_novgorod_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/northwestern/novgorod_current.svg"
   },
@@ -3397,6 +3457,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/pehcevo_current.svg"
   },
   {
+    id: "ast_pehcevo_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/pehcevo_current_text_removed.svg"
+  },
+  {
     id: "ast_pembrokeshire_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/wales/counties/pembrokeshire_current.svg"
   },
@@ -3439,6 +3503,10 @@ const assets = [
   {
     id: "ast_petrovec_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/skopje/petrovec_current.svg"
+  },
+  {
+    id: "ast_petrovec_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/skopje/petrovec_current_text_removed.svg"
   },
   {
     id: "ast_philippines_current",
@@ -4025,6 +4093,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/skopje/sopiste_current.svg"
   },
   {
+    id: "ast_sopiste_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/skopje/sopiste_current_text_removed.svg"
+  },
+  {
     id: "ast_south_africa_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/southern_africa/south_africa/national/south_africa_current.svg"
   },
@@ -4125,6 +4197,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/northeastern/staro_nagoricane_current.svg"
   },
   {
+    id: "ast_staro_nagoricane_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/northeastern/staro_nagoricane_current_text_removed.svg"
+  },
+  {
     id: "ast_stavropol_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/north_caucasian/stavropol_current.svg"
   },
@@ -4133,12 +4209,20 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/stip_current.svg"
   },
   {
+    id: "ast_stip_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/stip_current_text_removed.svg"
+  },
+  {
     id: "ast_stockholm_current",
     path: "assets/flags/geography/europe/northern_europe/sweden/counties/stockholm_current.svg"
   },
   {
     id: "ast_strumica_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/strumica_current.svg"
+  },
+  {
+    id: "ast_strumica_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/strumica_current_text_removed.svg"
   },
   {
     id: "ast_studenicani_current",
@@ -4655,6 +4739,10 @@ const assets = [
   {
     id: "ast_veles_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/vardar/veles_current.svg"
+  },
+  {
+    id: "ast_veles_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/vardar/veles_current_text_removed.svg"
   },
   {
     id: "ast_veneto_current",

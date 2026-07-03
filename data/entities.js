@@ -8353,6 +8353,1101 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_north_macedonia_current"
   },
+  /*
+    North Macedonian local-government flags.
+
+    Statistical regions are represented as collections/collection groups rather
+    than as entities, because they are statistical/planning groupings rather
+    than ordinary geographic or administrative flag-bearing entities.
+  */
+  {
+    id: "ent_north_macedonia_city_of_skopje",
+    name: "City of Skopje",
+    aliases: ["Skopje", "Skopje City"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "city",
+      "capital_city",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_city_of_skopje_current"
+  },
+  {
+    id: "ent_north_macedonia_aerodrom_city_municipality",
+    name: "Aerodrom Municipality",
+    aliases: ["Aerodrom"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_aerodrom_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_butel_city_municipality",
+    name: "Butel Municipality",
+    aliases: ["Butel"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_butel_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_gazi_baba_city_municipality",
+    name: "Gazi Baba Municipality",
+    aliases: ["Gazi Baba"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_gazi_baba_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_gjorce_petrov_city_municipality",
+    name: "Gjorče Petrov Municipality",
+    aliases: ["Gjorce Petrov Municipality", "Gjorče Petrov", "Gjorce Petrov"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_gjorce_petrov_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_karpos_city_municipality",
+    name: "Karpoš Municipality",
+    aliases: ["Karpos Municipality", "Karpoš", "Karpos"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_karpos_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_kisela_voda_city_municipality",
+    name: "Kisela Voda Municipality",
+    aliases: ["Kisela Voda"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_kisela_voda_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_saraj_city_municipality",
+    name: "Saraj Municipality",
+    aliases: ["Saraj"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_saraj_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_cair_city_municipality",
+    name: "Čair Municipality",
+    aliases: [
+      "Cair Municipality",
+      "Chair Municipality",
+      "Čair",
+      "Cair",
+      "Chair"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_cair_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_suto_orizari_city_municipality",
+    name: "Šuto Orizari Municipality",
+    aliases: [
+      "Suto Orizari Municipality",
+      "Šuto Orizari",
+      "Suto Orizari",
+      "Shuto Orizari"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia_city_of_skopje"],
+    tags: [
+      "subdivision",
+      "municipality",
+      "city_municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_suto_orizari_city_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_aracinovo_municipality",
+    name: "Aračinovo Municipality",
+    aliases: ["Aracinovo Municipality", "Aračinovo", "Aracinovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_aracinovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_berovo_municipality",
+    name: "Berovo Municipality",
+    aliases: ["Berovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_berovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_bitola_municipality",
+    name: "Bitola Municipality",
+    aliases: ["Bitola"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_bitola_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_bogdanci_municipality",
+    name: "Bogdanci Municipality",
+    aliases: ["Bogdanci"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_bogdanci_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_bogovinje_municipality",
+    name: "Bogovinje Municipality",
+    aliases: ["Bogovinje"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_polog"
+    ],
+    defaultVariantId: "var_north_macedonia_bogovinje_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_bosilovo_municipality",
+    name: "Bosilovo Municipality",
+    aliases: ["Basilovo Municipality", "Bosilovo", "Basilovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_bosilovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_brvenica_municipality",
+    name: "Brvenica Municipality",
+    aliases: ["Brvenica"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_polog"
+    ],
+    defaultVariantId: "var_north_macedonia_brvenica_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_centar_zupa_municipality",
+    name: "Centar Župa Municipality",
+    aliases: ["Centar Zupa Municipality", "Centar Župa", "Centar Zupa"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southwestern"
+    ],
+    defaultVariantId: "var_north_macedonia_centar_zupa_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_debarca_municipality",
+    name: "Debarca Municipality",
+    aliases: ["Debarca"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southwestern"
+    ],
+    defaultVariantId: "var_north_macedonia_debarca_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_delcevo_municipality",
+    name: "Delčevo Municipality",
+    aliases: ["Delcevo Municipality", "Delčevo", "Delcevo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_delcevo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_demir_hisar_municipality",
+    name: "Demir Hisar Municipality",
+    aliases: ["Demir Hisar"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_demir_hisar_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_demir_kapija_municipality",
+    name: "Demir Kapija Municipality",
+    aliases: ["Demir Kapija"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_vardar"
+    ],
+    defaultVariantId: "var_north_macedonia_demir_kapija_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_dojran_municipality",
+    name: "Dojran Municipality",
+    aliases: ["Dojran"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_dojran_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_dolneni_municipality",
+    name: "Dolneni Municipality",
+    aliases: ["Dolneni"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_dolneni_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_gevgelija_municipality",
+    name: "Gevgelija Municipality",
+    aliases: ["Gevgelija"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_gevgelija_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_gostivar_municipality",
+    name: "Gostivar Municipality",
+    aliases: ["Gostivar"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_polog"
+    ],
+    defaultVariantId: "var_north_macedonia_gostivar_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_ilinden_municipality",
+    name: "Ilinden Municipality",
+    aliases: ["Ilinden"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_ilinden_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_jegunovce_municipality",
+    name: "Jegunovce Municipality",
+    aliases: ["Jegunovce"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_polog"
+    ],
+    defaultVariantId: "var_north_macedonia_jegunovce_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_karbinci_municipality",
+    name: "Karbinci Municipality",
+    aliases: ["Karbinci"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_karbinci_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_kavadarci_municipality",
+    name: "Kavadarci Municipality",
+    aliases: ["Kavadarci"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_vardar"
+    ],
+    defaultVariantId: "var_north_macedonia_kavadarci_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_konce_municipality",
+    name: "Konče Municipality",
+    aliases: ["Konce Municipality", "Konče", "Konce"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_konce_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_kocani_municipality",
+    name: "Kočani Municipality",
+    aliases: ["Kocani Municipality", "Kočani", "Kocani"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_kocani_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_kratovo_municipality",
+    name: "Kratovo Municipality",
+    aliases: ["Kratovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_northeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_kratovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_kriva_palanka_municipality",
+    name: "Kriva Palanka Municipality",
+    aliases: ["Kriva Palanka", "Kriva"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_northeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_kriva_palanka_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_krivogastani_municipality",
+    name: "Krivogaštani Municipality",
+    aliases: ["Krivogastani Municipality", "Krivogaštani", "Krivogastani"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_krivogastani_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_krusevo_municipality",
+    name: "Kruševo Municipality",
+    aliases: ["Krusevo Municipality", "Kruševo", "Krusevo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_krusevo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_kumanovo_municipality",
+    name: "Kumanovo Municipality",
+    aliases: ["Kumanovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_northeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_kumanovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_lipkovo_municipality",
+    name: "Lipkovo Municipality",
+    aliases: ["Lipkovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_northeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_lipkovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_lozovo_municipality",
+    name: "Lozovo Municipality",
+    aliases: ["Lozovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_vardar"
+    ],
+    defaultVariantId: "var_north_macedonia_lozovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_makedonska_kamenica_municipality",
+    name: "Makedonska Kamenica Municipality",
+    aliases: ["Makedonska Kamenica"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_makedonska_kamenica_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_makedonski_brod_municipality",
+    name: "Makedonski Brod Municipality",
+    aliases: ["Makedonski Brod"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southwestern"
+    ],
+    defaultVariantId: "var_north_macedonia_makedonski_brod_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_mavrovo_and_rostusa_municipality",
+    name: "Mavrovo and Rostuša Municipality",
+    aliases: ["Mavrovo and Rostusa Municipality", "Mavrovo and Rostuša", "Mavrovo and Rostusa"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_polog"
+    ],
+    defaultVariantId: "var_north_macedonia_mavrovo_and_rostusa_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_mogila_municipality",
+    name: "Mogila Municipality",
+    aliases: ["Mogila"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_mogila_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_negotino_municipality",
+    name: "Negotino Municipality",
+    aliases: ["Negotino"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_vardar"
+    ],
+    defaultVariantId: "var_north_macedonia_negotino_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_novaci_municipality",
+    name: "Novaci Municipality",
+    aliases: ["Novaci"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_novaci_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_novo_selo_municipality",
+    name: "Novo Selo Municipality",
+    aliases: ["Novo Selo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_novo_selo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_ohrid_municipality",
+    name: "Ohrid Municipality",
+    aliases: ["Ohrid"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southwestern"
+    ],
+    defaultVariantId: "var_north_macedonia_ohrid_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_pehcevo_municipality",
+    name: "Pehčevo Municipality",
+    aliases: ["Pehcevo Municipality", "Pehčevo", "Pehcevo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_pehcevo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_petrovec_municipality",
+    name: "Petrovec Municipality",
+    aliases: ["Petrovec"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_petrovec_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_plasnica_municipality",
+    name: "Plasnica Municipality",
+    aliases: ["Plasnica"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southwestern"
+    ],
+    defaultVariantId: "var_north_macedonia_plasnica_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_prilep_municipality",
+    name: "Prilep Municipality",
+    aliases: ["Prilep"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_prilep_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_radovis_municipality",
+    name: "Radoviš Municipality",
+    aliases: ["Radovis Municipality", "Radoviš", "Radovis"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_radovis_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_rankovce_municipality",
+    name: "Rankovce Municipality",
+    aliases: ["Rankovce"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_northeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_rankovce_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_resen_municipality",
+    name: "Resen Municipality",
+    aliases: ["Resen"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_pelagonia"
+    ],
+    defaultVariantId: "var_north_macedonia_resen_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_rosoman_municipality",
+    name: "Rosoman Municipality",
+    aliases: ["Rosoman"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_vardar"
+    ],
+    defaultVariantId: "var_north_macedonia_rosoman_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_sopiste_municipality",
+    name: "Sopište Municipality",
+    aliases: ["Sopiste Municipality", "Sopište", "Sopiste"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_sopiste_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_staro_nagoricane_municipality",
+    name: "Staro Nagoričane Municipality",
+    aliases: ["Staro Nagoricane Municipality", "Staro Nagoričane", "Staro Nagoricane"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_northeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_staro_nagoricane_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_strumica_municipality",
+    name: "Strumica Municipality",
+    aliases: ["Strumica"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_strumica_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_studenicani_municipality",
+    name: "Studeničani Municipality",
+    aliases: ["Studenicani Municipality", "Studeničani", "Studenicani"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_studenicani_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_tetovo_municipality",
+    name: "Tetovo Municipality",
+    aliases: ["Tetovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_polog"
+    ],
+    defaultVariantId: "var_north_macedonia_tetovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_valandovo_municipality",
+    name: "Valandovo Municipality",
+    aliases: ["Valandovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_valandovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_vasilevo_municipality",
+    name: "Vasilevo Municipality",
+    aliases: ["Vasilevo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southeastern"
+    ],
+    defaultVariantId: "var_north_macedonia_vasilevo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_veles_municipality",
+    name: "Veles Municipality",
+    aliases: ["Veles"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_vardar"
+    ],
+    defaultVariantId: "var_north_macedonia_veles_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_vevcani_municipality",
+    name: "Vevčani Municipality",
+    aliases: ["Vevcani Municipality", "Vevčani", "Vevcani"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_southwestern"
+    ],
+    defaultVariantId: "var_north_macedonia_vevcani_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_vinica_municipality",
+    name: "Vinica Municipality",
+    aliases: ["Vinica"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_vinica_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_zelenikovo_municipality",
+    name: "Zelenikovo Municipality",
+    aliases: ["Zelenikovo"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_zelenikovo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_zrnovci_municipality",
+    name: "Zrnovci Municipality",
+    aliases: ["Zrnovci"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_zrnovci_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_caska_municipality",
+    name: "Čaška Municipality",
+    aliases: ["Caska Municipality", "Čaška", "Caska"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_vardar"
+    ],
+    defaultVariantId: "var_north_macedonia_caska_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_cucer_sandevo_municipality",
+    name: "Čučer-Sandevo Municipality",
+    aliases: [
+      "Cucer-Sandevo Municipality",
+      "Čučer Sandevo Municipality",
+      "Cucer Sandevo Municipality",
+      "Čučer-Sandevo",
+      "Cucer-Sandevo"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_skopje"
+    ],
+    defaultVariantId: "var_north_macedonia_cucer_sandevo_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_stip_municipality",
+    name: "Štip Municipality",
+    aliases: [
+      "Stip Municipality",
+      "Štip",
+      "Stip",
+      "Shtip"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_eastern"
+    ],
+    defaultVariantId: "var_north_macedonia_stip_municipality_current"
+  },
+  {
+    id: "ent_north_macedonia_zelino_municipality",
+    name: "Želino Municipality",
+    aliases: ["Zelino Municipality", "Želino", "Zelino"],
+    entityType: "geographic",
+    parentIds: ["ent_north_macedonia"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "municipality",
+      "current",
+      "statistical_region_polog"
+    ],
+    defaultVariantId: "var_north_macedonia_zelino_municipality_current"
+  },
   {
     id: "ent_northern_cyprus",
     name: "Northern Cyprus",

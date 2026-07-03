@@ -660,6 +660,80 @@ const collectionGroups = [
   },
 
   {
+    id: "grp_north_macedonia",
+    name: "North Macedonia",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_north_macedonia_local_government_flags",
+      "col_north_macedonia_city_of_skopje_flags"
+    ]
+  },
+  {
+    id: "grp_north_macedonia_eastern_statistical_region",
+    name: "Eastern Statistical Region",
+    parentGroupIds: ["grp_north_macedonia"],
+    collectionIds: [
+      "col_north_macedonia_eastern_statistical_region_flags"
+    ]
+  },
+  {
+    id: "grp_north_macedonia_northeastern_statistical_region",
+    name: "Northeastern Statistical Region",
+    parentGroupIds: ["grp_north_macedonia"],
+    collectionIds: [
+      "col_north_macedonia_northeastern_statistical_region_flags"
+    ]
+  },
+  {
+    id: "grp_north_macedonia_pelagonia_statistical_region",
+    name: "Pelagonia Statistical Region",
+    parentGroupIds: ["grp_north_macedonia"],
+    collectionIds: [
+      "col_north_macedonia_pelagonia_statistical_region_flags"
+    ]
+  },
+  {
+    id: "grp_north_macedonia_polog_statistical_region",
+    name: "Polog Statistical Region",
+    parentGroupIds: ["grp_north_macedonia"],
+    collectionIds: [
+      "col_north_macedonia_polog_statistical_region_flags"
+    ]
+  },
+  {
+    id: "grp_north_macedonia_skopje_statistical_region",
+    name: "Skopje Statistical Region",
+    parentGroupIds: ["grp_north_macedonia"],
+    collectionIds: [
+      "col_north_macedonia_skopje_statistical_region_flags"
+    ]
+  },
+  {
+    id: "grp_north_macedonia_southeastern_statistical_region",
+    name: "Southeastern Statistical Region",
+    parentGroupIds: ["grp_north_macedonia"],
+    collectionIds: [
+      "col_north_macedonia_southeastern_statistical_region_flags"
+    ]
+  },
+  {
+    id: "grp_north_macedonia_southwestern_statistical_region",
+    name: "Southwestern Statistical Region",
+    parentGroupIds: ["grp_north_macedonia"],
+    collectionIds: [
+      "col_north_macedonia_southwestern_statistical_region_flags"
+    ]
+  },
+  {
+    id: "grp_north_macedonia_vardar_statistical_region",
+    name: "Vardar Statistical Region",
+    parentGroupIds: ["grp_north_macedonia"],
+    collectionIds: [
+      "col_north_macedonia_vardar_statistical_region_flags"
+    ]
+  },
+
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],
