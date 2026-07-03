@@ -1093,6 +1093,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/vardar/demir_kapija_current.svg"
   },
   {
+    id: "ast_demir_kapija_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/vardar/demir_kapija_text_removed.svg"
+  },
+  {
     id: "ast_democratic_republic_of_the_congo_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/middle_africa/congo_democratic/national/democratic_republic_of_the_congo_current.svg"
   },
@@ -1143,6 +1147,10 @@ const assets = [
   {
     id: "ast_dolneni_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/dolneni_current.svg"
+  },
+  {
+    id: "ast_dolneni_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/pelagonia/dolneni_current_text_removed.svg"
   },
   {
     id: "ast_domagnano_current",
@@ -2345,6 +2353,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/northeastern/kumanovo_current.svg"
   },
   {
+    id: "ast_kumanovo_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/northeastern/kumanovo_current_text_removed.svg"
+  },
+  {
     id: "ast_kurgan_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/ural/kurgan_current.svg"
   },
@@ -2583,6 +2595,10 @@ const assets = [
   {
     id: "ast_lozovo_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/vardar/lozovo_current.svg"
+  },
+  {
+    id: "ast_lozovo_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/vardar/lozovo_current_text_removed.svg"
   },
   {
     id: "ast_lublin_current",

@@ -10965,6 +10965,58 @@ const variants = [
     baseVariantId: "var_north_macedonia_veles_municipality_current"
   },
   {
+    id: "var_north_macedonia_demir_kapija_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_demir_kapija_municipality",
+    assetId: "ast_demir_kapija_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: [
+      "Flag of Demir Kapija",
+      "Demir Kapija Municipal Flag",
+      "Flag of Demir Kapija Municipality"
+    ],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_demir_kapija_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_dolneni_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_dolneni_municipality",
+    assetId: "ast_dolneni_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Dolneni", "Dolneni Municipal Flag", "Flag of Dolneni Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_dolneni_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_kumanovo_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_kumanovo_municipality",
+    assetId: "ast_kumanovo_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Kumanovo", "Kumanovo Municipal Flag", "Flag of Kumanovo Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_kumanovo_municipality_current"
+  },
+  {
+    id: "var_north_macedonia_lozovo_municipality_current_text_removed",
+    entityId: "ent_north_macedonia_lozovo_municipality",
+    assetId: "ast_lozovo_current_text_removed",
+    displayName: "Municipal Flag - Text Removed",
+    aliases: ["Flag of Lozovo", "Lozovo Municipal Flag", "Flag of Lozovo Municipality"],
+    tags: ["current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_north_macedonia_lozovo_municipality_current"
+  },
+  {
     id: "var_north_macedonia_caska_municipality_current",
     entityId: "ent_north_macedonia_caska_municipality",
     assetId: "ast_caska_current",
