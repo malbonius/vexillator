@@ -205,7 +205,13 @@ function startMultipleChoiceQuiz() {
     return;
   }
 
-  startMultipleChoiceQuizFromQuestions(questions, distractorQuestions);
+  startMultipleChoiceQuizFromQuestions(
+    questions,
+    distractorQuestions,
+    {
+      restartHandler: startMultipleChoiceQuiz
+    }
+  );
 }
 
 /*
@@ -213,11 +219,14 @@ function startMultipleChoiceQuiz() {
 
   Random Quiz uses this path so it can build a temporary pool without
   touching Current Selection. The optional distractorQuestions argument should
-  be the full working pool behind that prepared question list.
+  be the full working pool behind that prepared question list. The optional
+  restartHandler allows generated quiz-builder sessions to restart from the
+  same captured filters instead of falling back to Current Selection.
 */
 function startMultipleChoiceQuizFromQuestions(
   questions,
-  distractorQuestions = questions
+  distractorQuestions = questions,
+  options = {}
 ) {
   if (!Array.isArray(questions) || questions.length === 0) {
     const quizViewElement = document.getElementById("multipleChoiceQuizView");
@@ -236,13 +245,19 @@ function startMultipleChoiceQuizFromQuestions(
       ? distractorQuestions
       : questions;
 
+  const restartHandler =
+    options && typeof options.restartHandler === "function"
+      ? options.restartHandler
+      : null;
+
   appState.multipleChoiceQuiz = {
     questions,
     distractorQuestions: safeDistractorQuestions,
     currentQuestionIndex: 0,
     score: 0,
     hasAnsweredCurrentQuestion: false,
-    questionStartedAt: null
+    questionStartedAt: null,
+    restartHandler
   };
 
   renderMultipleChoiceQuestion();
@@ -513,6 +528,11 @@ function renderMultipleChoiceResult() {
   restartButton.textContent = "Start New Multiple-Choice Quiz";
 
   restartButton.addEventListener("click", () => {
+    if (typeof quizState.restartHandler === "function") {
+      quizState.restartHandler();
+      return;
+    }
+
     startMultipleChoiceQuiz();
   });
 

@@ -164,16 +164,23 @@ function startTypingQuiz() {
     return;
   }
 
-  startTypingQuizFromQuestions(questions);
+  startTypingQuizFromQuestions(
+    questions,
+    {
+      restartHandler: startTypingQuiz
+    }
+  );
 }
 
 /*
   Starts a typing quiz from a prepared question list.
 
   Random Quiz uses this path so it can build a temporary pool without
-  touching Current Selection.
+  touching Current Selection. The optional restartHandler allows generated
+  quiz-builder sessions to restart from the same captured filters instead of
+  falling back to Current Selection.
 */
-function startTypingQuizFromQuestions(questions) {
+function startTypingQuizFromQuestions(questions, options = {}) {
   if (!Array.isArray(questions) || questions.length === 0) {
     const quizViewElement = document.getElementById("typingQuizView");
 
@@ -183,12 +190,18 @@ function startTypingQuizFromQuestions(questions) {
     return;
   }
 
+  const restartHandler =
+    options && typeof options.restartHandler === "function"
+      ? options.restartHandler
+      : null;
+
   appState.typingQuiz = {
     questions,
     currentQuestionIndex: 0,
     score: 0,
     hasAnsweredCurrentQuestion: false,
-    questionStartedAt: null
+    questionStartedAt: null,
+    restartHandler
   };
 
   renderTypingQuizQuestion();
@@ -499,6 +512,11 @@ function renderTypingQuizResult() {
   restartButton.textContent = "Start New Quiz";
 
   restartButton.addEventListener("click", () => {
+    if (typeof quizState.restartHandler === "function") {
+      quizState.restartHandler();
+      return;
+    }
+
     startTypingQuiz();
   });
 

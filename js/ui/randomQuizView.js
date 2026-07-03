@@ -569,15 +569,45 @@ function startRandomQuiz(mode) {
 
   const filters = getRandomQuizFiltersFromState();
 
+  startRandomQuizFromFilters(
+    mode,
+    filters,
+    requestedQuestionCount
+  );
+}
+
+function cloneRandomQuizFilters(filters) {
+  return {
+    rules: Array.isArray(filters?.rules)
+      ? filters.rules.map(rule => ({
+          regionEntityIds: Array.isArray(rule.regionEntityIds)
+            ? [...rule.regionEntityIds]
+            : [],
+          typeKeys: Array.isArray(rule.typeKeys)
+            ? [...rule.typeKeys]
+            : []
+        }))
+      : [],
+    includeDisputed: Boolean(filters?.includeDisputed)
+  };
+}
+
+function startRandomQuizFromFilters(
+  mode,
+  filters,
+  requestedQuestionCount
+) {
+  const capturedFilters = cloneRandomQuizFilters(filters);
+
   const questions = generateRandomQuizQuestions({
-      filters,
+      filters: capturedFilters,
       questionCount: requestedQuestionCount
     },
     dataIndex
   );
 
   const distractorQuestions = generateRandomQuizQuestions({
-      filters,
+      filters: capturedFilters,
       questionCount: Number.MAX_SAFE_INTEGER
     },
     dataIndex
@@ -590,13 +620,36 @@ function startRandomQuiz(mode) {
 
   if (mode === "typing") {
     showModePanel("typing");
-    startTypingQuizFromQuestions(questions);
+    startTypingQuizFromQuestions(
+      questions,
+      {
+        restartHandler: () => {
+          startRandomQuizFromFilters(
+            "typing",
+            capturedFilters,
+            requestedQuestionCount
+          );
+        }
+      }
+    );
     return;
   }
 
   if (mode === "multiple_choice") {
     showModePanel("multipleChoice");
-    startMultipleChoiceQuizFromQuestions(questions, distractorQuestions);
+    startMultipleChoiceQuizFromQuestions(
+      questions,
+      distractorQuestions,
+      {
+        restartHandler: () => {
+          startRandomQuizFromFilters(
+            "multiple_choice",
+            capturedFilters,
+            requestedQuestionCount
+          );
+        }
+      }
+    );
   }
 }
 
