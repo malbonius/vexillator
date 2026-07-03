@@ -567,9 +567,18 @@ function startRandomQuiz(mode) {
     return;
   }
 
+  const filters = getRandomQuizFiltersFromState();
+
   const questions = generateRandomQuizQuestions({
-      filters: getRandomQuizFiltersFromState(),
+      filters,
       questionCount: requestedQuestionCount
+    },
+    dataIndex
+  );
+
+  const distractorQuestions = generateRandomQuizQuestions({
+      filters,
+      questionCount: Number.MAX_SAFE_INTEGER
     },
     dataIndex
   );
@@ -587,7 +596,7 @@ function startRandomQuiz(mode) {
 
   if (mode === "multiple_choice") {
     showModePanel("multipleChoice");
-    startMultipleChoiceQuizFromQuestions(questions);
+    startMultipleChoiceQuizFromQuestions(questions, distractorQuestions);
   }
 }
 

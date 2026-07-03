@@ -167,12 +167,29 @@ function startMultipleChoiceQuiz() {
 
   /*
     Pass every supported selection source to the quiz generator.
+
+    Questions are sampled down to the requested quiz length, but
+    multiple-choice distractors should come from the full resolved working
+    pool. Otherwise, a 10-question quiz made from a 40-flag selection leaks
+    information: every wrong answer is guaranteed to be one of the 10
+    upcoming questions.
   */
+  const quizSource = {
+    collectionIds: Array.from(appState.selectedCollectionIds),
+    entityGroups: Array.from(appState.selectedEntityGroups.values()),
+    entityIds: Array.from(appState.selectedEntityIds),
+    variantIds: Array.from(appState.selectedVariantIds)
+  };
+
+  const distractorQuestions = generateQuizQuestions({
+      ...quizSource,
+      questionCount: Number.MAX_SAFE_INTEGER
+    },
+    dataIndex
+  );
+
   const questions = generateQuizQuestions({
-      collectionIds: Array.from(appState.selectedCollectionIds),
-      entityGroups: Array.from(appState.selectedEntityGroups.values()),
-      entityIds: Array.from(appState.selectedEntityIds),
-      variantIds: Array.from(appState.selectedVariantIds),
+      ...quizSource,
       questionCount: requestedQuestionCount
     },
     dataIndex
@@ -188,16 +205,20 @@ function startMultipleChoiceQuiz() {
     return;
   }
 
-  startMultipleChoiceQuizFromQuestions(questions);
+  startMultipleChoiceQuizFromQuestions(questions, distractorQuestions);
 }
 
 /*
   Starts a multiple-choice quiz from a prepared question list.
 
   Random Quiz uses this path so it can build a temporary pool without
-  touching Current Selection.
+  touching Current Selection. The optional distractorQuestions argument should
+  be the full working pool behind that prepared question list.
 */
-function startMultipleChoiceQuizFromQuestions(questions) {
+function startMultipleChoiceQuizFromQuestions(
+  questions,
+  distractorQuestions = questions
+) {
   if (!Array.isArray(questions) || questions.length === 0) {
     const quizViewElement = document.getElementById("multipleChoiceQuizView");
 
@@ -210,8 +231,14 @@ function startMultipleChoiceQuizFromQuestions(questions) {
     return;
   }
 
+  const safeDistractorQuestions =
+    Array.isArray(distractorQuestions) && distractorQuestions.length > 0
+      ? distractorQuestions
+      : questions;
+
   appState.multipleChoiceQuiz = {
     questions,
+    distractorQuestions: safeDistractorQuestions,
     currentQuestionIndex: 0,
     score: 0,
     hasAnsweredCurrentQuestion: false,
@@ -243,9 +270,15 @@ function renderMultipleChoiceQuestion() {
   const variant = dataIndex.variantsById[currentQuestion.displayedVariantId];
   const asset = dataIndex.assetsById[currentQuestion.assetId];
 
+  const distractorQuestions =
+    Array.isArray(quizState.distractorQuestions) &&
+    quizState.distractorQuestions.length > 0
+      ? quizState.distractorQuestions
+      : quizState.questions;
+
   const options = buildMultipleChoiceOptions(
     currentQuestion,
-    quizState.questions,
+    distractorQuestions,
     dataIndex,
     4
   );
