@@ -6502,7 +6502,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_croatia"],
-    tags: ["subdivision", "first_level_subdivision", "city", "capital_city", "current"],
+    tags: ["subdivision", "first_level_subdivision", "city", "current"],
     defaultVariantId: "var_croatia_zagreb_city_current"
   },
   {
@@ -8370,9 +8370,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "city",
-      "capital_city",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_city_of_skopje_current"
   },
@@ -8385,9 +8383,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_aerodrom_city_municipality_current"
   },
@@ -8400,9 +8396,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_butel_city_municipality_current"
   },
@@ -8415,9 +8409,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_gazi_baba_city_municipality_current"
   },
@@ -8430,9 +8422,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_gjorce_petrov_city_municipality_current"
   },
@@ -8445,9 +8435,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_karpos_city_municipality_current"
   },
@@ -8460,9 +8448,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_kisela_voda_city_municipality_current"
   },
@@ -8475,9 +8461,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_saraj_city_municipality_current"
   },
@@ -8496,9 +8480,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_cair_city_municipality_current"
   },
@@ -8511,9 +8493,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_centar_city_municipality_current"
   },
@@ -8531,9 +8511,7 @@ const entities = [
     tags: [
       "subdivision",
       "municipality",
-      "city_municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_suto_orizari_city_municipality_current"
   },
@@ -8547,8 +8525,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_aracinovo_municipality_current"
   },
@@ -8562,8 +8539,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_berovo_municipality_current"
   },
@@ -8577,8 +8553,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_bitola_municipality_current"
   },
@@ -8592,8 +8567,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_bogdanci_municipality_current"
   },
@@ -8607,8 +8581,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_polog"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_bogovinje_municipality_current"
   },
@@ -8622,8 +8595,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_bosilovo_municipality_current"
   },
@@ -8637,8 +8609,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_polog"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_brvenica_municipality_current"
   },
@@ -8652,8 +8623,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southwestern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_centar_zupa_municipality_current"
   },
@@ -8667,8 +8637,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southwestern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_debarca_municipality_current"
   },
@@ -8682,8 +8651,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_delcevo_municipality_current"
   },
@@ -8697,8 +8665,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_demir_hisar_municipality_current"
   },
@@ -8712,8 +8679,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_vardar"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_demir_kapija_municipality_current"
   },
@@ -8727,8 +8693,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_dojran_municipality_current"
   },
@@ -8742,8 +8707,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_dolneni_municipality_current"
   },
@@ -8757,8 +8721,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_gevgelija_municipality_current"
   },
@@ -8772,8 +8735,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_polog"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_gostivar_municipality_current"
   },
@@ -8787,8 +8749,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_ilinden_municipality_current"
   },
@@ -8802,8 +8763,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_polog"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_jegunovce_municipality_current"
   },
@@ -8817,8 +8777,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_karbinci_municipality_current"
   },
@@ -8832,8 +8791,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_vardar"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_kavadarci_municipality_current"
   },
@@ -8847,8 +8805,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_konce_municipality_current"
   },
@@ -8862,8 +8819,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_kocani_municipality_current"
   },
@@ -8877,8 +8833,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_northeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_kratovo_municipality_current"
   },
@@ -8892,8 +8847,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_northeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_kriva_palanka_municipality_current"
   },
@@ -8907,8 +8861,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_krivogastani_municipality_current"
   },
@@ -8922,8 +8875,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_krusevo_municipality_current"
   },
@@ -8937,8 +8889,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_northeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_kumanovo_municipality_current"
   },
@@ -8952,8 +8903,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_northeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_lipkovo_municipality_current"
   },
@@ -8967,8 +8917,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_vardar"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_lozovo_municipality_current"
   },
@@ -8982,8 +8931,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_makedonska_kamenica_municipality_current"
   },
@@ -8997,8 +8945,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southwestern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_makedonski_brod_municipality_current"
   },
@@ -9012,8 +8959,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_polog"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_mavrovo_and_rostusa_municipality_current"
   },
@@ -9027,8 +8973,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_mogila_municipality_current"
   },
@@ -9042,8 +8987,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_vardar"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_negotino_municipality_current"
   },
@@ -9057,8 +9001,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_novaci_municipality_current"
   },
@@ -9072,8 +9015,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_novo_selo_municipality_current"
   },
@@ -9087,8 +9029,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southwestern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_ohrid_municipality_current"
   },
@@ -9102,8 +9043,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_pehcevo_municipality_current"
   },
@@ -9117,8 +9057,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_petrovec_municipality_current"
   },
@@ -9132,8 +9071,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southwestern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_plasnica_municipality_current"
   },
@@ -9147,8 +9085,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_prilep_municipality_current"
   },
@@ -9162,8 +9099,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_radovis_municipality_current"
   },
@@ -9177,8 +9113,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_northeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_rankovce_municipality_current"
   },
@@ -9192,8 +9127,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_pelagonia"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_resen_municipality_current"
   },
@@ -9207,8 +9141,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_vardar"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_rosoman_municipality_current"
   },
@@ -9222,8 +9155,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_sopiste_municipality_current"
   },
@@ -9237,8 +9169,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_northeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_staro_nagoricane_municipality_current"
   },
@@ -9252,8 +9183,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_strumica_municipality_current"
   },
@@ -9267,8 +9197,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_studenicani_municipality_current"
   },
@@ -9282,8 +9211,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_polog"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_tetovo_municipality_current"
   },
@@ -9297,8 +9225,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_valandovo_municipality_current"
   },
@@ -9312,8 +9239,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southeastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_vasilevo_municipality_current"
   },
@@ -9327,8 +9253,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_vardar"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_veles_municipality_current"
   },
@@ -9342,8 +9267,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_southwestern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_vevcani_municipality_current"
   },
@@ -9357,8 +9281,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_vinica_municipality_current"
   },
@@ -9372,8 +9295,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_zelenikovo_municipality_current"
   },
@@ -9387,8 +9309,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_zrnovci_municipality_current"
   },
@@ -9402,8 +9323,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_vardar"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_caska_municipality_current"
   },
@@ -9423,8 +9343,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_skopje"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_cucer_sandevo_municipality_current"
   },
@@ -9443,8 +9362,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_eastern"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_stip_municipality_current"
   },
@@ -9458,8 +9376,7 @@ const entities = [
       "subdivision",
       "first_level_subdivision",
       "municipality",
-      "current",
-      "statistical_region_polog"
+      "current"
     ],
     defaultVariantId: "var_north_macedonia_zelino_municipality_current"
   },

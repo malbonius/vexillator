@@ -3795,189 +3795,581 @@ const collections = [
       ]
     }
   },
-  {
+    {
     id: "col_north_macedonia_eastern_statistical_region_flags",
     name: "North Macedonia — Eastern Statistical Region Flags",
-    type: "dynamic",
+    type: "manual",
     target: "entity",
-    notes: "Uses the Eastern Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_north_macedonia"
-        },
-        {
-          hasTag: "statistical_region_eastern"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
+    notes: "Uses the statistical region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity. Membership is listed manually so entity tags remain within the controlled tag registry.",
+    members: [
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_berovo_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_berovo_municipality",
+        galleryVariantId: "var_north_macedonia_berovo_municipality_current",
+        quizVariantId: "var_north_macedonia_berovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_delcevo_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_delcevo_municipality",
+        galleryVariantId: "var_north_macedonia_delcevo_municipality_current",
+        quizVariantId: "var_north_macedonia_delcevo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_karbinci_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_karbinci_municipality",
+        galleryVariantId: "var_north_macedonia_karbinci_municipality_current",
+        quizVariantId: "var_north_macedonia_karbinci_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_kocani_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_kocani_municipality",
+        galleryVariantId: "var_north_macedonia_kocani_municipality_current",
+        quizVariantId: "var_north_macedonia_kocani_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_makedonska_kamenica_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_makedonska_kamenica_municipality",
+        galleryVariantId: "var_north_macedonia_makedonska_kamenica_municipality_current",
+        quizVariantId: "var_north_macedonia_makedonska_kamenica_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_pehcevo_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_pehcevo_municipality",
+        galleryVariantId: "var_north_macedonia_pehcevo_municipality_current",
+        quizVariantId: "var_north_macedonia_pehcevo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_vinica_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_vinica_municipality",
+        galleryVariantId: "var_north_macedonia_vinica_municipality_current",
+        quizVariantId: "var_north_macedonia_vinica_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_zrnovci_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_zrnovci_municipality",
+        galleryVariantId: "var_north_macedonia_zrnovci_municipality_current",
+        quizVariantId: "var_north_macedonia_zrnovci_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_eastern_statistical_region_flags_stip_municipality",
+        collectionId: "col_north_macedonia_eastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_stip_municipality",
+        galleryVariantId: "var_north_macedonia_stip_municipality_current",
+        quizVariantId: "var_north_macedonia_stip_municipality_current"
+      }
+    ]
   },
-  {
+    {
     id: "col_north_macedonia_northeastern_statistical_region_flags",
     name: "North Macedonia — Northeastern Statistical Region Flags",
-    type: "dynamic",
+    type: "manual",
     target: "entity",
-    notes: "Uses the Northeastern Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_north_macedonia"
-        },
-        {
-          hasTag: "statistical_region_northeastern"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
+    notes: "Uses the statistical region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity. Membership is listed manually so entity tags remain within the controlled tag registry.",
+    members: [
+      {
+        id: "mem_north_macedonia_northeastern_statistical_region_flags_kratovo_municipality",
+        collectionId: "col_north_macedonia_northeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_kratovo_municipality",
+        galleryVariantId: "var_north_macedonia_kratovo_municipality_current",
+        quizVariantId: "var_north_macedonia_kratovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_northeastern_statistical_region_flags_kriva_palanka_municipality",
+        collectionId: "col_north_macedonia_northeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_kriva_palanka_municipality",
+        galleryVariantId: "var_north_macedonia_kriva_palanka_municipality_current",
+        quizVariantId: "var_north_macedonia_kriva_palanka_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_northeastern_statistical_region_flags_kumanovo_municipality",
+        collectionId: "col_north_macedonia_northeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_kumanovo_municipality",
+        galleryVariantId: "var_north_macedonia_kumanovo_municipality_current",
+        quizVariantId: "var_north_macedonia_kumanovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_northeastern_statistical_region_flags_lipkovo_municipality",
+        collectionId: "col_north_macedonia_northeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_lipkovo_municipality",
+        galleryVariantId: "var_north_macedonia_lipkovo_municipality_current",
+        quizVariantId: "var_north_macedonia_lipkovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_northeastern_statistical_region_flags_rankovce_municipality",
+        collectionId: "col_north_macedonia_northeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_rankovce_municipality",
+        galleryVariantId: "var_north_macedonia_rankovce_municipality_current",
+        quizVariantId: "var_north_macedonia_rankovce_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_northeastern_statistical_region_flags_staro_nagoricane_municipality",
+        collectionId: "col_north_macedonia_northeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_staro_nagoricane_municipality",
+        galleryVariantId: "var_north_macedonia_staro_nagoricane_municipality_current",
+        quizVariantId: "var_north_macedonia_staro_nagoricane_municipality_current"
+      }
+    ]
   },
-  {
+    {
     id: "col_north_macedonia_pelagonia_statistical_region_flags",
     name: "North Macedonia — Pelagonia Statistical Region Flags",
-    type: "dynamic",
+    type: "manual",
     target: "entity",
-    notes: "Uses the Pelagonia Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_north_macedonia"
-        },
-        {
-          hasTag: "statistical_region_pelagonia"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
+    notes: "Uses the statistical region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity. Membership is listed manually so entity tags remain within the controlled tag registry.",
+    members: [
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_bitola_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_bitola_municipality",
+        galleryVariantId: "var_north_macedonia_bitola_municipality_current",
+        quizVariantId: "var_north_macedonia_bitola_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_demir_hisar_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_demir_hisar_municipality",
+        galleryVariantId: "var_north_macedonia_demir_hisar_municipality_current",
+        quizVariantId: "var_north_macedonia_demir_hisar_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_dolneni_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_dolneni_municipality",
+        galleryVariantId: "var_north_macedonia_dolneni_municipality_current",
+        quizVariantId: "var_north_macedonia_dolneni_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_krivogastani_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_krivogastani_municipality",
+        galleryVariantId: "var_north_macedonia_krivogastani_municipality_current",
+        quizVariantId: "var_north_macedonia_krivogastani_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_krusevo_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_krusevo_municipality",
+        galleryVariantId: "var_north_macedonia_krusevo_municipality_current",
+        quizVariantId: "var_north_macedonia_krusevo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_mogila_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_mogila_municipality",
+        galleryVariantId: "var_north_macedonia_mogila_municipality_current",
+        quizVariantId: "var_north_macedonia_mogila_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_novaci_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_novaci_municipality",
+        galleryVariantId: "var_north_macedonia_novaci_municipality_current",
+        quizVariantId: "var_north_macedonia_novaci_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_prilep_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_prilep_municipality",
+        galleryVariantId: "var_north_macedonia_prilep_municipality_current",
+        quizVariantId: "var_north_macedonia_prilep_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_pelagonia_statistical_region_flags_resen_municipality",
+        collectionId: "col_north_macedonia_pelagonia_statistical_region_flags",
+        entityId: "ent_north_macedonia_resen_municipality",
+        galleryVariantId: "var_north_macedonia_resen_municipality_current",
+        quizVariantId: "var_north_macedonia_resen_municipality_current"
+      }
+    ]
   },
-  {
+    {
     id: "col_north_macedonia_polog_statistical_region_flags",
     name: "North Macedonia — Polog Statistical Region Flags",
-    type: "dynamic",
+    type: "manual",
     target: "entity",
-    notes: "Uses the Polog Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_north_macedonia"
-        },
-        {
-          hasTag: "statistical_region_polog"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
+    notes: "Uses the statistical region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity. Membership is listed manually so entity tags remain within the controlled tag registry.",
+    members: [
+      {
+        id: "mem_north_macedonia_polog_statistical_region_flags_bogovinje_municipality",
+        collectionId: "col_north_macedonia_polog_statistical_region_flags",
+        entityId: "ent_north_macedonia_bogovinje_municipality",
+        galleryVariantId: "var_north_macedonia_bogovinje_municipality_current",
+        quizVariantId: "var_north_macedonia_bogovinje_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_polog_statistical_region_flags_brvenica_municipality",
+        collectionId: "col_north_macedonia_polog_statistical_region_flags",
+        entityId: "ent_north_macedonia_brvenica_municipality",
+        galleryVariantId: "var_north_macedonia_brvenica_municipality_current",
+        quizVariantId: "var_north_macedonia_brvenica_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_polog_statistical_region_flags_gostivar_municipality",
+        collectionId: "col_north_macedonia_polog_statistical_region_flags",
+        entityId: "ent_north_macedonia_gostivar_municipality",
+        galleryVariantId: "var_north_macedonia_gostivar_municipality_current",
+        quizVariantId: "var_north_macedonia_gostivar_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_polog_statistical_region_flags_jegunovce_municipality",
+        collectionId: "col_north_macedonia_polog_statistical_region_flags",
+        entityId: "ent_north_macedonia_jegunovce_municipality",
+        galleryVariantId: "var_north_macedonia_jegunovce_municipality_current",
+        quizVariantId: "var_north_macedonia_jegunovce_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_polog_statistical_region_flags_mavrovo_and_rostusa_municipality",
+        collectionId: "col_north_macedonia_polog_statistical_region_flags",
+        entityId: "ent_north_macedonia_mavrovo_and_rostusa_municipality",
+        galleryVariantId: "var_north_macedonia_mavrovo_and_rostusa_municipality_current",
+        quizVariantId: "var_north_macedonia_mavrovo_and_rostusa_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_polog_statistical_region_flags_tetovo_municipality",
+        collectionId: "col_north_macedonia_polog_statistical_region_flags",
+        entityId: "ent_north_macedonia_tetovo_municipality",
+        galleryVariantId: "var_north_macedonia_tetovo_municipality_current",
+        quizVariantId: "var_north_macedonia_tetovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_polog_statistical_region_flags_zelino_municipality",
+        collectionId: "col_north_macedonia_polog_statistical_region_flags",
+        entityId: "ent_north_macedonia_zelino_municipality",
+        galleryVariantId: "var_north_macedonia_zelino_municipality_current",
+        quizVariantId: "var_north_macedonia_zelino_municipality_current"
+      }
+    ]
   },
-  {
+    {
     id: "col_north_macedonia_skopje_statistical_region_flags",
     name: "North Macedonia — Skopje Statistical Region Flags",
-    type: "dynamic",
+    type: "manual",
     target: "entity",
-    notes: "Uses the Skopje Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_north_macedonia"
-        },
-        {
-          hasTag: "statistical_region_skopje"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
+    notes: "Uses the statistical region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity. Membership is listed manually so entity tags remain within the controlled tag registry.",
+    members: [
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_aerodrom_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_aerodrom_city_municipality",
+        galleryVariantId: "var_north_macedonia_aerodrom_city_municipality_current",
+        quizVariantId: "var_north_macedonia_aerodrom_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_aracinovo_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_aracinovo_municipality",
+        galleryVariantId: "var_north_macedonia_aracinovo_municipality_current",
+        quizVariantId: "var_north_macedonia_aracinovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_butel_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_butel_city_municipality",
+        galleryVariantId: "var_north_macedonia_butel_city_municipality_current",
+        quizVariantId: "var_north_macedonia_butel_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_centar_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_centar_city_municipality",
+        galleryVariantId: "var_north_macedonia_centar_city_municipality_current",
+        quizVariantId: "var_north_macedonia_centar_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_city_of_skopje",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_city_of_skopje",
+        galleryVariantId: "var_north_macedonia_city_of_skopje_current",
+        quizVariantId: "var_north_macedonia_city_of_skopje_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_gazi_baba_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_gazi_baba_city_municipality",
+        galleryVariantId: "var_north_macedonia_gazi_baba_city_municipality_current",
+        quizVariantId: "var_north_macedonia_gazi_baba_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_gjorce_petrov_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_gjorce_petrov_city_municipality",
+        galleryVariantId: "var_north_macedonia_gjorce_petrov_city_municipality_current",
+        quizVariantId: "var_north_macedonia_gjorce_petrov_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_ilinden_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_ilinden_municipality",
+        galleryVariantId: "var_north_macedonia_ilinden_municipality_current",
+        quizVariantId: "var_north_macedonia_ilinden_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_karpos_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_karpos_city_municipality",
+        galleryVariantId: "var_north_macedonia_karpos_city_municipality_current",
+        quizVariantId: "var_north_macedonia_karpos_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_kisela_voda_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_kisela_voda_city_municipality",
+        galleryVariantId: "var_north_macedonia_kisela_voda_city_municipality_current",
+        quizVariantId: "var_north_macedonia_kisela_voda_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_petrovec_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_petrovec_municipality",
+        galleryVariantId: "var_north_macedonia_petrovec_municipality_current",
+        quizVariantId: "var_north_macedonia_petrovec_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_saraj_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_saraj_city_municipality",
+        galleryVariantId: "var_north_macedonia_saraj_city_municipality_current",
+        quizVariantId: "var_north_macedonia_saraj_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_sopiste_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_sopiste_municipality",
+        galleryVariantId: "var_north_macedonia_sopiste_municipality_current",
+        quizVariantId: "var_north_macedonia_sopiste_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_studenicani_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_studenicani_municipality",
+        galleryVariantId: "var_north_macedonia_studenicani_municipality_current",
+        quizVariantId: "var_north_macedonia_studenicani_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_zelenikovo_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_zelenikovo_municipality",
+        galleryVariantId: "var_north_macedonia_zelenikovo_municipality_current",
+        quizVariantId: "var_north_macedonia_zelenikovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_cair_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_cair_city_municipality",
+        galleryVariantId: "var_north_macedonia_cair_city_municipality_current",
+        quizVariantId: "var_north_macedonia_cair_city_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_cucer_sandevo_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_cucer_sandevo_municipality",
+        galleryVariantId: "var_north_macedonia_cucer_sandevo_municipality_current",
+        quizVariantId: "var_north_macedonia_cucer_sandevo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_skopje_statistical_region_flags_suto_orizari_city_municipality",
+        collectionId: "col_north_macedonia_skopje_statistical_region_flags",
+        entityId: "ent_north_macedonia_suto_orizari_city_municipality",
+        galleryVariantId: "var_north_macedonia_suto_orizari_city_municipality_current",
+        quizVariantId: "var_north_macedonia_suto_orizari_city_municipality_current"
+      }
+    ]
   },
-  {
+    {
     id: "col_north_macedonia_southeastern_statistical_region_flags",
     name: "North Macedonia — Southeastern Statistical Region Flags",
-    type: "dynamic",
+    type: "manual",
     target: "entity",
-    notes: "Uses the Southeastern Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_north_macedonia"
-        },
-        {
-          hasTag: "statistical_region_southeastern"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
+    notes: "Uses the statistical region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity. Membership is listed manually so entity tags remain within the controlled tag registry.",
+    members: [
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_bogdanci_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_bogdanci_municipality",
+        galleryVariantId: "var_north_macedonia_bogdanci_municipality_current",
+        quizVariantId: "var_north_macedonia_bogdanci_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_bosilovo_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_bosilovo_municipality",
+        galleryVariantId: "var_north_macedonia_bosilovo_municipality_current",
+        quizVariantId: "var_north_macedonia_bosilovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_dojran_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_dojran_municipality",
+        galleryVariantId: "var_north_macedonia_dojran_municipality_current",
+        quizVariantId: "var_north_macedonia_dojran_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_gevgelija_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_gevgelija_municipality",
+        galleryVariantId: "var_north_macedonia_gevgelija_municipality_current",
+        quizVariantId: "var_north_macedonia_gevgelija_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_konce_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_konce_municipality",
+        galleryVariantId: "var_north_macedonia_konce_municipality_current",
+        quizVariantId: "var_north_macedonia_konce_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_novo_selo_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_novo_selo_municipality",
+        galleryVariantId: "var_north_macedonia_novo_selo_municipality_current",
+        quizVariantId: "var_north_macedonia_novo_selo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_radovis_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_radovis_municipality",
+        galleryVariantId: "var_north_macedonia_radovis_municipality_current",
+        quizVariantId: "var_north_macedonia_radovis_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_strumica_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_strumica_municipality",
+        galleryVariantId: "var_north_macedonia_strumica_municipality_current",
+        quizVariantId: "var_north_macedonia_strumica_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_valandovo_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_valandovo_municipality",
+        galleryVariantId: "var_north_macedonia_valandovo_municipality_current",
+        quizVariantId: "var_north_macedonia_valandovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southeastern_statistical_region_flags_vasilevo_municipality",
+        collectionId: "col_north_macedonia_southeastern_statistical_region_flags",
+        entityId: "ent_north_macedonia_vasilevo_municipality",
+        galleryVariantId: "var_north_macedonia_vasilevo_municipality_current",
+        quizVariantId: "var_north_macedonia_vasilevo_municipality_current"
+      }
+    ]
   },
-  {
+    {
     id: "col_north_macedonia_southwestern_statistical_region_flags",
     name: "North Macedonia — Southwestern Statistical Region Flags",
-    type: "dynamic",
+    type: "manual",
     target: "entity",
-    notes: "Uses the Southwestern Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_north_macedonia"
-        },
-        {
-          hasTag: "statistical_region_southwestern"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
+    notes: "Uses the statistical region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity. Membership is listed manually so entity tags remain within the controlled tag registry.",
+    members: [
+      {
+        id: "mem_north_macedonia_southwestern_statistical_region_flags_centar_zupa_municipality",
+        collectionId: "col_north_macedonia_southwestern_statistical_region_flags",
+        entityId: "ent_north_macedonia_centar_zupa_municipality",
+        galleryVariantId: "var_north_macedonia_centar_zupa_municipality_current",
+        quizVariantId: "var_north_macedonia_centar_zupa_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southwestern_statistical_region_flags_debarca_municipality",
+        collectionId: "col_north_macedonia_southwestern_statistical_region_flags",
+        entityId: "ent_north_macedonia_debarca_municipality",
+        galleryVariantId: "var_north_macedonia_debarca_municipality_current",
+        quizVariantId: "var_north_macedonia_debarca_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southwestern_statistical_region_flags_makedonski_brod_municipality",
+        collectionId: "col_north_macedonia_southwestern_statistical_region_flags",
+        entityId: "ent_north_macedonia_makedonski_brod_municipality",
+        galleryVariantId: "var_north_macedonia_makedonski_brod_municipality_current",
+        quizVariantId: "var_north_macedonia_makedonski_brod_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southwestern_statistical_region_flags_ohrid_municipality",
+        collectionId: "col_north_macedonia_southwestern_statistical_region_flags",
+        entityId: "ent_north_macedonia_ohrid_municipality",
+        galleryVariantId: "var_north_macedonia_ohrid_municipality_current",
+        quizVariantId: "var_north_macedonia_ohrid_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southwestern_statistical_region_flags_plasnica_municipality",
+        collectionId: "col_north_macedonia_southwestern_statistical_region_flags",
+        entityId: "ent_north_macedonia_plasnica_municipality",
+        galleryVariantId: "var_north_macedonia_plasnica_municipality_current",
+        quizVariantId: "var_north_macedonia_plasnica_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_southwestern_statistical_region_flags_vevcani_municipality",
+        collectionId: "col_north_macedonia_southwestern_statistical_region_flags",
+        entityId: "ent_north_macedonia_vevcani_municipality",
+        galleryVariantId: "var_north_macedonia_vevcani_municipality_current",
+        quizVariantId: "var_north_macedonia_vevcani_municipality_current"
+      }
+    ]
   },
-  {
+    {
     id: "col_north_macedonia_vardar_statistical_region_flags",
     name: "North Macedonia — Vardar Statistical Region Flags",
-    type: "dynamic",
+    type: "manual",
     target: "entity",
-    notes: "Uses the Vardar Statistical Region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity.",
-    rules: {
-      all: [
-        {
-          hasAncestor: "ent_north_macedonia"
-        },
-        {
-          hasTag: "statistical_region_vardar"
-        },
-        {
-          hasTag: "current"
-        },
-        {
-          hasDefaultVariant: true
-        }
-      ]
-    }
+    notes: "Uses the statistical region as a collection/grouping filter only; the statistical region itself is not modelled as a flag-bearing entity. Membership is listed manually so entity tags remain within the controlled tag registry.",
+    members: [
+      {
+        id: "mem_north_macedonia_vardar_statistical_region_flags_demir_kapija_municipality",
+        collectionId: "col_north_macedonia_vardar_statistical_region_flags",
+        entityId: "ent_north_macedonia_demir_kapija_municipality",
+        galleryVariantId: "var_north_macedonia_demir_kapija_municipality_current",
+        quizVariantId: "var_north_macedonia_demir_kapija_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_vardar_statistical_region_flags_kavadarci_municipality",
+        collectionId: "col_north_macedonia_vardar_statistical_region_flags",
+        entityId: "ent_north_macedonia_kavadarci_municipality",
+        galleryVariantId: "var_north_macedonia_kavadarci_municipality_current",
+        quizVariantId: "var_north_macedonia_kavadarci_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_vardar_statistical_region_flags_lozovo_municipality",
+        collectionId: "col_north_macedonia_vardar_statistical_region_flags",
+        entityId: "ent_north_macedonia_lozovo_municipality",
+        galleryVariantId: "var_north_macedonia_lozovo_municipality_current",
+        quizVariantId: "var_north_macedonia_lozovo_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_vardar_statistical_region_flags_negotino_municipality",
+        collectionId: "col_north_macedonia_vardar_statistical_region_flags",
+        entityId: "ent_north_macedonia_negotino_municipality",
+        galleryVariantId: "var_north_macedonia_negotino_municipality_current",
+        quizVariantId: "var_north_macedonia_negotino_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_vardar_statistical_region_flags_rosoman_municipality",
+        collectionId: "col_north_macedonia_vardar_statistical_region_flags",
+        entityId: "ent_north_macedonia_rosoman_municipality",
+        galleryVariantId: "var_north_macedonia_rosoman_municipality_current",
+        quizVariantId: "var_north_macedonia_rosoman_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_vardar_statistical_region_flags_veles_municipality",
+        collectionId: "col_north_macedonia_vardar_statistical_region_flags",
+        entityId: "ent_north_macedonia_veles_municipality",
+        galleryVariantId: "var_north_macedonia_veles_municipality_current",
+        quizVariantId: "var_north_macedonia_veles_municipality_current"
+      },
+      {
+        id: "mem_north_macedonia_vardar_statistical_region_flags_caska_municipality",
+        collectionId: "col_north_macedonia_vardar_statistical_region_flags",
+        entityId: "ent_north_macedonia_caska_municipality",
+        galleryVariantId: "var_north_macedonia_caska_municipality_current",
+        quizVariantId: "var_north_macedonia_caska_municipality_current"
+      }
+    ]
   },
 
   {
