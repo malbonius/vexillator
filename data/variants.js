@@ -11895,6 +11895,143 @@ const variants = [
   },
 
   {
+    id: "var_san_marino_acquaviva_current_text_removed",
+    entityId: "ent_san_marino_acquaviva",
+    assetId: "ast_acquaviva_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of Acquaviva",
+      "Acquaviva Flag"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_acquaviva_current"
+  },
+  {
+    id: "var_san_marino_borgo_maggiore_current_text_removed",
+    entityId: "ent_san_marino_borgo_maggiore",
+    assetId: "ast_borgo_maggiore_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of Borgo Maggiore",
+      "Borgo Maggiore Flag"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_borgo_maggiore_current"
+  },
+  {
+    id: "var_san_marino_chiesanuova_current_text_removed",
+    entityId: "ent_san_marino_chiesanuova",
+    assetId: "ast_chiesanuova_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of Chiesanuova",
+      "Chiesanuova Flag"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_chiesanuova_current"
+  },
+  {
+    id: "var_san_marino_domagnano_current_text_removed",
+    entityId: "ent_san_marino_domagnano",
+    assetId: "ast_domagnano_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of Domagnano",
+      "Domagnano Flag"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_domagnano_current"
+  },
+  {
+    id: "var_san_marino_faetano_current_text_removed",
+    entityId: "ent_san_marino_faetano",
+    assetId: "ast_faetano_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of Faetano",
+      "Faetano Flag"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_faetano_current"
+  },
+  {
+    id: "var_san_marino_fiorentino_current_text_removed",
+    entityId: "ent_san_marino_fiorentino",
+    assetId: "ast_fiorentino_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of Fiorentino",
+      "Fiorentino Flag"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_fiorentino_current"
+  },
+  {
+    id: "var_san_marino_montegiardino_current_text_removed",
+    entityId: "ent_san_marino_montegiardino",
+    assetId: "ast_montegiardino_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of Montegiardino",
+      "Montegiardino Flag"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_montegiardino_current"
+  },
+  {
+    id: "var_san_marino_san_marino_city_current_text_removed",
+    entityId: "ent_san_marino_san_marino_city",
+    assetId: "ast_san_marino_city_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of City of San Marino",
+      "City of San Marino Flag",
+      "Flag of the City of San Marino"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_san_marino_city_current"
+  },
+  {
+    id: "var_san_marino_serravalle_current_text_removed",
+    entityId: "ent_san_marino_serravalle",
+    assetId: "ast_serravalle_current_text_removed",
+    displayName: "Castello Flag - Text Removed",
+    aliases: [
+      "Flag of Serravalle",
+      "Serravalle Flag"
+    ],
+    tags: ["official", "current", "quiz", "text_removed"],
+    startYear: null,
+    endYear: null,
+    // The real variant represented by this technical quiz image.
+    baseVariantId: "var_san_marino_serravalle_current"
+  },
+
+  {
     id: "var_serbia_current",
     entityId: "ent_serbia",
     assetId: "ast_serbia_current",

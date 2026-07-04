@@ -29,6 +29,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/acquaviva_current.svg"
   },
   {
+    id: "ast_acquaviva_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/acquaviva_current_text_removed.svg"
+  },
+  {
     id: "ast_adygea_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/southern/adygea_current.svg"
   },
@@ -557,6 +561,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/borgo_maggiore_current.svg"
   },
   {
+    id: "ast_borgo_maggiore_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/borgo_maggiore_current_text_removed.svg"
+  },
+  {
     id: "ast_borsod_abauj_zemplen_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/borsod_abauj_zemplen_current.svg"
   },
@@ -913,6 +921,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/chiesanuova_current.svg"
   },
   {
+    id: "ast_chiesanuova_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/chiesanuova_current_text_removed.svg"
+  },
+  {
     id: "ast_chile_current",
     path: "assets/flags/geography/south_america/chile/national/chile_current.svg"
   },
@@ -1177,6 +1189,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/domagnano_current.svg"
   },
   {
+    id: "ast_domagnano_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/domagnano_current_text_removed.svg"
+  },
+  {
     id: "ast_dominica_current",
     path: "assets/flags/geography/caribbean/dominica/dominica_current.svg"
   },
@@ -1357,6 +1373,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/faetano_current.svg"
   },
   {
+    id: "ast_faetano_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/faetano_current_text_removed.svg"
+  },
+  {
     id: "ast_falcon_current",
     path: "assets/flags/geography/south_america/venezuela/region/central_western_region/falcon_current.svg"
   },
@@ -1419,6 +1439,10 @@ const assets = [
   {
     id: "ast_fiorentino_current",
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/fiorentino_current.svg"
+  },
+  {
+    id: "ast_fiorentino_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/fiorentino_current_text_removed.svg"
   },
   {
     id: "ast_flemish_brabant_current",
@@ -2937,6 +2961,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/montegiardino_current.svg"
   },
   {
+    id: "ast_montegiardino_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/montegiardino_current_text_removed.svg"
+  },
+  {
     id: "ast_montenegro_current",
     path: "assets/flags/geography/europe/southern_europe/montenegro/national/montenegro_current.svg"
   },
@@ -3929,6 +3957,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/san_marino_city_current.svg"
   },
   {
+    id: "ast_san_marino_city_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/san_marino_city_current_text_removed.svg"
+  },
+  {
     id: "ast_san_marino_civil",
     path: "assets/flags/geography/europe/southern_europe/san_marino/national/san_marino_civil.svg"
   },
@@ -4015,6 +4047,10 @@ const assets = [
   {
     id: "ast_serravalle_current",
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/serravalle_current.svg"
+  },
+  {
+    id: "ast_serravalle_current_text_removed",
+    path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/serravalle_current_text_removed.svg"
   },
   {
     id: "ast_sevastopol_current",
