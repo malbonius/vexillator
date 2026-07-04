@@ -3638,5 +3638,2116 @@ const entityMemberships = Object.freeze([
     status: "current",
     startYear: null,
     endYear: null
+  }),
+  Object.freeze({
+    id: "mem_afghanistan_fifa",
+    memberEntityId: "ent_afghanistan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_albania_fifa",
+    memberEntityId: "ent_albania",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_algeria_fifa",
+    memberEntityId: "ent_algeria",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_american_samoa_fifa",
+    memberEntityId: "ent_american_samoa",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_andorra_fifa",
+    memberEntityId: "ent_andorra",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_angola_fifa",
+    memberEntityId: "ent_angola",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_anguilla_fifa",
+    memberEntityId: "ent_anguilla",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_antigua_and_barbuda_fifa",
+    memberEntityId: "ent_antigua_and_barbuda",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_argentina_fifa",
+    memberEntityId: "ent_argentina",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_armenia_fifa",
+    memberEntityId: "ent_armenia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_aruba_fifa",
+    memberEntityId: "ent_aruba",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_australia_fifa",
+    memberEntityId: "ent_australia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_austria_fifa",
+    memberEntityId: "ent_austria",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_azerbaijan_fifa",
+    memberEntityId: "ent_azerbaijan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bahamas_fifa",
+    memberEntityId: "ent_bahamas",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bahrain_fifa",
+    memberEntityId: "ent_bahrain",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bangladesh_fifa",
+    memberEntityId: "ent_bangladesh",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_barbados_fifa",
+    memberEntityId: "ent_barbados",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_belarus_fifa",
+    memberEntityId: "ent_belarus",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_belgium_fifa",
+    memberEntityId: "ent_belgium",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_belize_fifa",
+    memberEntityId: "ent_belize",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_benin_fifa",
+    memberEntityId: "ent_benin",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bermuda_fifa",
+    memberEntityId: "ent_bermuda",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bhutan_fifa",
+    memberEntityId: "ent_bhutan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bolivia_fifa",
+    memberEntityId: "ent_bolivia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bosnia_and_herzegovina_fifa",
+    memberEntityId: "ent_bosnia_and_herzegovina",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_botswana_fifa",
+    memberEntityId: "ent_botswana",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_brazil_fifa",
+    memberEntityId: "ent_brazil",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_british_virgin_islands_fifa",
+    memberEntityId: "ent_british_virgin_islands",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_brunei_fifa",
+    memberEntityId: "ent_brunei",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_bulgaria_fifa",
+    memberEntityId: "ent_bulgaria",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_burkina_faso_fifa",
+    memberEntityId: "ent_burkina_faso",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_burundi_fifa",
+    memberEntityId: "ent_burundi",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cambodia_fifa",
+    memberEntityId: "ent_cambodia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cameroon_fifa",
+    memberEntityId: "ent_cameroon",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_canada_fifa",
+    memberEntityId: "ent_canada",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cabo_verde_fifa",
+    memberEntityId: "ent_cabo_verde",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cayman_islands_fifa",
+    memberEntityId: "ent_cayman_islands",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_central_african_republic_fifa",
+    memberEntityId: "ent_central_african_republic",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_chad_fifa",
+    memberEntityId: "ent_chad",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_chile_fifa",
+    memberEntityId: "ent_chile",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_china_fifa",
+    memberEntityId: "ent_china",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_taiwan_fifa",
+    memberEntityId: "ent_taiwan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null,
+    notes: "FIFA member association name: Chinese Taipei. Vexillator keeps the political/geographic entity as Taiwan and uses the Chinese Taipei sporting flag for FIFA-facing representation."
+  }),
+  Object.freeze({
+    id: "mem_colombia_fifa",
+    memberEntityId: "ent_colombia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_comoros_fifa",
+    memberEntityId: "ent_comoros",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_republic_of_the_congo_fifa",
+    memberEntityId: "ent_republic_of_the_congo",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cook_islands_fifa",
+    memberEntityId: "ent_cook_islands",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_costa_rica_fifa",
+    memberEntityId: "ent_costa_rica",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_croatia_fifa",
+    memberEntityId: "ent_croatia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cuba_fifa",
+    memberEntityId: "ent_cuba",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_curacao_fifa",
+    memberEntityId: "ent_curacao",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cyprus_fifa",
+    memberEntityId: "ent_cyprus",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_czechia_fifa",
+    memberEntityId: "ent_czechia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_denmark_fifa",
+    memberEntityId: "ent_denmark",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_djibouti_fifa",
+    memberEntityId: "ent_djibouti",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_dominica_fifa",
+    memberEntityId: "ent_dominica",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_dominican_republic_fifa",
+    memberEntityId: "ent_dominican_republic",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_democratic_republic_of_the_congo_fifa",
+    memberEntityId: "ent_democratic_republic_of_the_congo",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_ecuador_fifa",
+    memberEntityId: "ent_ecuador",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_egypt_fifa",
+    memberEntityId: "ent_egypt",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_el_salvador_fifa",
+    memberEntityId: "ent_el_salvador",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_england_fifa",
+    memberEntityId: "ent_england",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_equatorial_guinea_fifa",
+    memberEntityId: "ent_equatorial_guinea",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_eritrea_fifa",
+    memberEntityId: "ent_eritrea",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_estonia_fifa",
+    memberEntityId: "ent_estonia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_eswatini_fifa",
+    memberEntityId: "ent_eswatini",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_ethiopia_fifa",
+    memberEntityId: "ent_ethiopia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_faroe_islands_fifa",
+    memberEntityId: "ent_faroe_islands",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiji_fifa",
+    memberEntityId: "ent_fiji",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_finland_fifa",
+    memberEntityId: "ent_finland",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_france_fifa",
+    memberEntityId: "ent_france",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_gabon_fifa",
+    memberEntityId: "ent_gabon",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_gambia_fifa",
+    memberEntityId: "ent_gambia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_georgia_fifa",
+    memberEntityId: "ent_georgia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_germany_fifa",
+    memberEntityId: "ent_germany",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_ghana_fifa",
+    memberEntityId: "ent_ghana",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_gibraltar_fifa",
+    memberEntityId: "ent_gibraltar",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_greece_fifa",
+    memberEntityId: "ent_greece",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_grenada_fifa",
+    memberEntityId: "ent_grenada",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_guam_fifa",
+    memberEntityId: "ent_guam",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_guatemala_fifa",
+    memberEntityId: "ent_guatemala",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_guinea_fifa",
+    memberEntityId: "ent_guinea",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_guinea_bissau_fifa",
+    memberEntityId: "ent_guinea_bissau",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_guyana_fifa",
+    memberEntityId: "ent_guyana",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_haiti_fifa",
+    memberEntityId: "ent_haiti",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_honduras_fifa",
+    memberEntityId: "ent_honduras",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_hong_kong_fifa",
+    memberEntityId: "ent_hong_kong",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_hungary_fifa",
+    memberEntityId: "ent_hungary",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_iceland_fifa",
+    memberEntityId: "ent_iceland",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_india_fifa",
+    memberEntityId: "ent_india",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_indonesia_fifa",
+    memberEntityId: "ent_indonesia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_iran_fifa",
+    memberEntityId: "ent_iran",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_iraq_fifa",
+    memberEntityId: "ent_iraq",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_israel_fifa",
+    memberEntityId: "ent_israel",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_italy_fifa",
+    memberEntityId: "ent_italy",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_cote_d_ivoire_fifa",
+    memberEntityId: "ent_cote_d_ivoire",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_jamaica_fifa",
+    memberEntityId: "ent_jamaica",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_japan_fifa",
+    memberEntityId: "ent_japan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_jordan_fifa",
+    memberEntityId: "ent_jordan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_kazakhstan_fifa",
+    memberEntityId: "ent_kazakhstan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_kenya_fifa",
+    memberEntityId: "ent_kenya",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_kosovo_fifa",
+    memberEntityId: "ent_kosovo",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_kuwait_fifa",
+    memberEntityId: "ent_kuwait",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_kyrgyzstan_fifa",
+    memberEntityId: "ent_kyrgyzstan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_laos_fifa",
+    memberEntityId: "ent_laos",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_latvia_fifa",
+    memberEntityId: "ent_latvia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_lebanon_fifa",
+    memberEntityId: "ent_lebanon",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_lesotho_fifa",
+    memberEntityId: "ent_lesotho",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_liberia_fifa",
+    memberEntityId: "ent_liberia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_libya_fifa",
+    memberEntityId: "ent_libya",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_liechtenstein_fifa",
+    memberEntityId: "ent_liechtenstein",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_lithuania_fifa",
+    memberEntityId: "ent_lithuania",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_luxembourg_fifa",
+    memberEntityId: "ent_luxembourg",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_macao_fifa",
+    memberEntityId: "ent_macao",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_madagascar_fifa",
+    memberEntityId: "ent_madagascar",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_malawi_fifa",
+    memberEntityId: "ent_malawi",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_malaysia_fifa",
+    memberEntityId: "ent_malaysia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_maldives_fifa",
+    memberEntityId: "ent_maldives",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mali_fifa",
+    memberEntityId: "ent_mali",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_malta_fifa",
+    memberEntityId: "ent_malta",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mauritania_fifa",
+    memberEntityId: "ent_mauritania",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mauritius_fifa",
+    memberEntityId: "ent_mauritius",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mexico_fifa",
+    memberEntityId: "ent_mexico",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_moldova_fifa",
+    memberEntityId: "ent_moldova",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mongolia_fifa",
+    memberEntityId: "ent_mongolia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_montenegro_fifa",
+    memberEntityId: "ent_montenegro",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_montserrat_fifa",
+    memberEntityId: "ent_montserrat",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_morocco_fifa",
+    memberEntityId: "ent_morocco",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_mozambique_fifa",
+    memberEntityId: "ent_mozambique",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_myanmar_fifa",
+    memberEntityId: "ent_myanmar",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_namibia_fifa",
+    memberEntityId: "ent_namibia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_nepal_fifa",
+    memberEntityId: "ent_nepal",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_netherlands_fifa",
+    memberEntityId: "ent_netherlands",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_new_caledonia_fifa",
+    memberEntityId: "ent_new_caledonia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_new_zealand_fifa",
+    memberEntityId: "ent_new_zealand",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_nicaragua_fifa",
+    memberEntityId: "ent_nicaragua",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_niger_fifa",
+    memberEntityId: "ent_niger",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_nigeria_fifa",
+    memberEntityId: "ent_nigeria",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_north_korea_fifa",
+    memberEntityId: "ent_north_korea",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_north_macedonia_fifa",
+    memberEntityId: "ent_north_macedonia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_northern_ireland_fifa",
+    memberEntityId: "ent_northern_ireland",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_norway_fifa",
+    memberEntityId: "ent_norway",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_oman_fifa",
+    memberEntityId: "ent_oman",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_pakistan_fifa",
+    memberEntityId: "ent_pakistan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_palestine_fifa",
+    memberEntityId: "ent_palestine",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_panama_fifa",
+    memberEntityId: "ent_panama",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_papua_new_guinea_fifa",
+    memberEntityId: "ent_papua_new_guinea",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_paraguay_fifa",
+    memberEntityId: "ent_paraguay",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_peru_fifa",
+    memberEntityId: "ent_peru",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_philippines_fifa",
+    memberEntityId: "ent_philippines",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_poland_fifa",
+    memberEntityId: "ent_poland",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_portugal_fifa",
+    memberEntityId: "ent_portugal",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_puerto_rico_fifa",
+    memberEntityId: "ent_puerto_rico",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_qatar_fifa",
+    memberEntityId: "ent_qatar",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_ireland_fifa",
+    memberEntityId: "ent_ireland",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_romania_fifa",
+    memberEntityId: "ent_romania",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_russia_fifa",
+    memberEntityId: "ent_russia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_rwanda_fifa",
+    memberEntityId: "ent_rwanda",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_saint_kitts_and_nevis_fifa",
+    memberEntityId: "ent_saint_kitts_and_nevis",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_saint_lucia_fifa",
+    memberEntityId: "ent_saint_lucia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_saint_vincand_the_grenadines_fifa",
+    memberEntityId: "ent_saint_vincent_and_the_grenadines",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_samoa_fifa",
+    memberEntityId: "ent_samoa",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_san_marino_fifa",
+    memberEntityId: "ent_san_marino",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_sao_tome_and_principe_fifa",
+    memberEntityId: "ent_sao_tome_and_principe",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_saudi_arabia_fifa",
+    memberEntityId: "ent_saudi_arabia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_scotland_fifa",
+    memberEntityId: "ent_scotland",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_senegal_fifa",
+    memberEntityId: "ent_senegal",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_serbia_fifa",
+    memberEntityId: "ent_serbia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_seychelles_fifa",
+    memberEntityId: "ent_seychelles",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_sierra_leone_fifa",
+    memberEntityId: "ent_sierra_leone",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_singapore_fifa",
+    memberEntityId: "ent_singapore",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_slovakia_fifa",
+    memberEntityId: "ent_slovakia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_slovenia_fifa",
+    memberEntityId: "ent_slovenia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_solomon_islands_fifa",
+    memberEntityId: "ent_solomon_islands",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_somalia_fifa",
+    memberEntityId: "ent_somalia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_south_africa_fifa",
+    memberEntityId: "ent_south_africa",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_south_korea_fifa",
+    memberEntityId: "ent_south_korea",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_south_sudan_fifa",
+    memberEntityId: "ent_south_sudan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_spain_fifa",
+    memberEntityId: "ent_spain",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_sri_lanka_fifa",
+    memberEntityId: "ent_sri_lanka",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_sudan_fifa",
+    memberEntityId: "ent_sudan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_suriname_fifa",
+    memberEntityId: "ent_suriname",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_sweden_fifa",
+    memberEntityId: "ent_sweden",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_switzerland_fifa",
+    memberEntityId: "ent_switzerland",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_syria_fifa",
+    memberEntityId: "ent_syria",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_tahiti_fifa",
+    memberEntityId: "ent_tahiti",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_tajikistan_fifa",
+    memberEntityId: "ent_tajikistan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_tanzania_fifa",
+    memberEntityId: "ent_tanzania",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_thailand_fifa",
+    memberEntityId: "ent_thailand",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_timor_leste_fifa",
+    memberEntityId: "ent_timor_leste",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_togo_fifa",
+    memberEntityId: "ent_togo",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_tonga_fifa",
+    memberEntityId: "ent_tonga",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_trinidad_and_tobago_fifa",
+    memberEntityId: "ent_trinidad_and_tobago",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_tunisia_fifa",
+    memberEntityId: "ent_tunisia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_turkey_fifa",
+    memberEntityId: "ent_turkey",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_turkmenistan_fifa",
+    memberEntityId: "ent_turkmenistan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_turks_and_caicos_islands_fifa",
+    memberEntityId: "ent_turks_and_caicos_islands",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_uganda_fifa",
+    memberEntityId: "ent_uganda",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_ukraine_fifa",
+    memberEntityId: "ent_ukraine",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_united_arab_emirates_fifa",
+    memberEntityId: "ent_united_arab_emirates",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_united_states_fifa",
+    memberEntityId: "ent_united_states",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_uruguay_fifa",
+    memberEntityId: "ent_uruguay",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_us_virgin_islands_fifa",
+    memberEntityId: "ent_us_virgin_islands",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_uzbekistan_fifa",
+    memberEntityId: "ent_uzbekistan",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_vanuatu_fifa",
+    memberEntityId: "ent_vanuatu",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_venezuela_fifa",
+    memberEntityId: "ent_venezuela",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_vietnam_fifa",
+    memberEntityId: "ent_vietnam",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_wales_fifa",
+    memberEntityId: "ent_wales",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_yemen_fifa",
+    memberEntityId: "ent_yemen",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_zambia_fifa",
+    memberEntityId: "ent_zambia",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_zimbabwe_fifa",
+    memberEntityId: "ent_zimbabwe",
+    groupEntityId: "ent_fifa",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
   })
 ]);

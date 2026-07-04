@@ -437,6 +437,17 @@ const variants = [
     startYear: 1984,
     endYear: null
   },
+
+  {
+    id: "var_tahiti_current",
+    entityId: "ent_tahiti",
+    assetId: "ast_tahiti_current",
+    displayName: "Island Flag",
+    aliases: [],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_niue_current",
     entityId: "ent_niue",
@@ -4887,6 +4898,17 @@ const variants = [
     ],
     tags: ["official", "current", "national"],
     startYear: 1928,
+    endYear: null
+  },
+
+  {
+    id: "var_taiwan_chinese_taipei_current",
+    entityId: "ent_taiwan",
+    assetId: "ast_chinese_taipei_current",
+    displayName: "Chinese Taipei Olympic Flag",
+    aliases: ["Chinese Taipei flag"],
+    tags: ["official", "current"],
+    startYear: null,
     endYear: null
   },
   /*

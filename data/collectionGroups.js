@@ -1041,6 +1041,15 @@ const collectionGroups = [
   },
 
   {
+    id: "grp_fifa",
+    name: "FIFA",
+    parentGroupIds: ["grp_international_sporting_organisations"],
+    collectionIds: [
+      "col_fifa_member_association_flags"
+    ]
+  },
+
+  {
     id: "grp_arab_league",
     name: "Arab League",
     parentGroupIds: ["grp_international_organisations"],

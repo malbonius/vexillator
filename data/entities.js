@@ -866,6 +866,16 @@ const entities = [
     ],
     defaultVariantId: "var_french_polynesia_current"
   },
+
+  {
+    id: "ent_tahiti",
+    name: "Tahiti",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_french_polynesia"],
+    tags: ["region", "current"],
+    defaultVariantId: "var_tahiti_current"
+  },
   {
     id: "ent_niue",
     name: "Niue",
@@ -3692,7 +3702,8 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_eastern_asia"],
     tags: ["sovereign", "country", "current", "disputed"],
-    defaultVariantId: "var_taiwan_current"
+    defaultVariantId: "var_taiwan_current",
+    officialRepresentationVariantIds: ["var_taiwan_chinese_taipei_current"]
   },
 
   /*
