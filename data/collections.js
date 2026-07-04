@@ -5362,8 +5362,9 @@ const collections = [
         id: "mem_fifa_member_association_flags_afghanistan",
         collectionId: "col_fifa_member_association_flags",
         entityId: "ent_afghanistan",
-        galleryVariantId: "var_afghanistan_current",
-        quizVariantId: "var_afghanistan_current"
+        galleryVariantId: "var_afghanistan_republic_tricolour_current",
+        quizVariantId: "var_afghanistan_republic_tricolour_current",
+        notes: "Use the Afghan Republic tricolour as Afghanistan's external representation in non-geographic FIFA-facing contexts."
       },
       {
         id: "mem_fifa_member_association_flags_albania",

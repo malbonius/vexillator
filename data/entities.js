@@ -3837,7 +3837,8 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_southern_asia"],
     tags: ["sovereign", "country", "current", "recognised"],
-    defaultVariantId: "var_afghanistan_current"
+    defaultVariantId: "var_afghanistan_current",
+    officialRepresentationVariantIds: ["var_afghanistan_republic_tricolour_current"]
   },
   {
     id: "ent_bangladesh",
