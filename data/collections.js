@@ -4509,6 +4509,30 @@ const collections = [
     }
   },
   {
+    id: "col_san_marino_castelli",
+    name: "San Marino Castelli Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes San Marino's nine castelli with available current flags.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_san_marino"
+        },
+        {
+          hasTag: "municipality"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_spain_autonomous_communities_and_cities",
     name: "Spanish Autonomous Community and City Flags",
     type: "dynamic",

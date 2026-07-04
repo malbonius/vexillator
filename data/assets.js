@@ -125,12 +125,16 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/far_eastern/amur_current.svg"
   },
   {
-    id: "ast_andalucia_current",
-    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/andalucia_current.svg"
+    id: "ast_andalucia_civil_current",
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/andalucia_civil_current.svg"
   },
   {
     id: "ast_andalucia_current_text_removed",
     path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/andalucia_current_text_removed.svg"
+  },
+  {
+    id: "ast_andalucia_state_current",
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/andalucia_state_current.svg"
   },
   {
     id: "ast_andorra_current",
@@ -281,8 +285,12 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/southern/astrakhan_current.svg"
   },
   {
-    id: "ast_asturias_current",
-    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/asturias_current.svg"
+    id: "ast_asturias_civil_current",
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/asturias_civil_current.svg"
+  },
+  {
+    id: "ast_asturias_state_current",
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/asturias_state_current.svg"
   },
   {
     id: "ast_australia_current",
@@ -749,6 +757,10 @@ const assets = [
     path: "assets/flags/geography/africa/northern_africa/dependencies_territories/canary_islands/canary_islands_current.svg"
   },
   {
+    id: "ast_canary_islands_state_current",
+    path: "assets/flags/geography/africa/northern_africa/dependencies_territories/canary_islands/canary_islands_state_current.svg"
+  },
+  {
     id: "ast_canillo_current",
     path: "assets/flags/geography/europe/southern_europe/andorra/parishes/canillo_current.svg"
   },
@@ -795,6 +807,10 @@ const assets = [
   {
     id: "ast_castilla_la_mancha_current",
     path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/castilla_la_mancha_current.svg"
+  },
+  {
+    id: "ast_castilla_la_mancha_current_alt",
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/castilla_la_mancha_current_alt.svg"
   },
   {
     id: "ast_castilla_y_leon_current",
@@ -1329,6 +1345,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/extremadura_current.svg"
   },
   {
+    id: "ast_extremadura_state_current",
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/extremadura_state_current.svg"
+  },
+  {
     id: "ast_faetano_current",
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/faetano_current.svg"
   },
@@ -1479,6 +1499,10 @@ const assets = [
   {
     id: "ast_gagauzia_current",
     path: "assets/flags/geography/europe/eastern_europe/moldova/autonomous_territory/gagauzia_current.svg"
+  },
+  {
+    id: "ast_galicia_civil_current",
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/galicia_civil_current.svg"
   },
   {
     id: "ast_galicia_current",
@@ -2403,6 +2427,10 @@ const assets = [
   {
     id: "ast_la_massana_current_text_removed",
     path: "assets/flags/geography/europe/southern_europe/andorra/parishes/la_massana_current_text_removed.svg"
+  },
+  {
+    id: "ast_la_rioja_civil_current",
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/la_rioja_civil_current.svg"
   },
   {
     id: "ast_la_rioja_current",

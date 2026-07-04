@@ -11743,6 +11743,128 @@ const variants = [
     startYear: 2011,
     endYear: null
   },
+  /*
+    San Marino castelli.
+  */
+  {
+    id: "var_san_marino_acquaviva_current",
+    entityId: "ent_san_marino_acquaviva",
+    assetId: "ast_acquaviva_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of Acquaviva",
+      "Acquaviva Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_borgo_maggiore_current",
+    entityId: "ent_san_marino_borgo_maggiore",
+    assetId: "ast_borgo_maggiore_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of Borgo Maggiore",
+      "Borgo Maggiore Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_chiesanuova_current",
+    entityId: "ent_san_marino_chiesanuova",
+    assetId: "ast_chiesanuova_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of Chiesanuova",
+      "Chiesanuova Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_domagnano_current",
+    entityId: "ent_san_marino_domagnano",
+    assetId: "ast_domagnano_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of Domagnano",
+      "Domagnano Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_faetano_current",
+    entityId: "ent_san_marino_faetano",
+    assetId: "ast_faetano_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of Faetano",
+      "Faetano Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_fiorentino_current",
+    entityId: "ent_san_marino_fiorentino",
+    assetId: "ast_fiorentino_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of Fiorentino",
+      "Fiorentino Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_montegiardino_current",
+    entityId: "ent_san_marino_montegiardino",
+    assetId: "ast_montegiardino_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of Montegiardino",
+      "Montegiardino Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_san_marino_city_current",
+    entityId: "ent_san_marino_san_marino_city",
+    assetId: "ast_san_marino_city_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of City of San Marino",
+      "City of San Marino Flag",
+      "Flag of the City of San Marino"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_san_marino_serravalle_current",
+    entityId: "ent_san_marino_serravalle",
+    assetId: "ast_serravalle_current",
+    displayName: "Castello Flag",
+    aliases: [
+      "Flag of Serravalle",
+      "Serravalle Flag"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+
   {
     id: "var_serbia_current",
     entityId: "ent_serbia",
@@ -13015,10 +13137,20 @@ const variants = [
   {
     id: "var_andalucia_current",
     entityId: "ent_andalucia",
-    assetId: "ast_andalucia_current",
-    displayName: "Official Flag",
+    assetId: "ast_andalucia_state_current",
+    displayName: "State Flag",
     aliases: ["Arbonaida"],
-    tags: ["official", "current"],
+    tags: ["official", "current", "state"],
+    startYear: 1982,
+    endYear: null
+  },
+  {
+    id: "var_andalucia_civil_current",
+    entityId: "ent_andalucia",
+    assetId: "ast_andalucia_civil_current",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "civil"],
     startYear: 1982,
     endYear: null
   },
@@ -13035,10 +13167,20 @@ const variants = [
   {
     id: "var_asturias_current",
     entityId: "ent_asturias",
-    assetId: "ast_asturias_current",
-    displayName: "Official Flag",
+    assetId: "ast_asturias_state_current",
+    displayName: "State Flag",
     aliases: [],
-    tags: ["official", "current"],
+    tags: ["official", "current", "state"],
+    startYear: 1990,
+    endYear: null
+  },
+  {
+    id: "var_asturias_civil_current",
+    entityId: "ent_asturias",
+    assetId: "ast_asturias_civil_current",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "civil"],
     startYear: 1990,
     endYear: null
   },
@@ -13068,7 +13210,17 @@ const variants = [
     assetId: "ast_canary_islands_current",
     displayName: "Official Flag",
     aliases: [],
-    tags: ["official", "current"],
+    tags: ["official", "current", "civil"],
+    startYear: 1982,
+    endYear: null
+  },
+  {
+    id: "var_canary_islands_state_current",
+    entityId: "ent_canary_islands",
+    assetId: "ast_canary_islands_state_current",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "state"],
     startYear: 1982,
     endYear: null
   },
@@ -13086,6 +13238,7 @@ const variants = [
     id: "var_castilla_la_mancha_current",
     entityId: "ent_castilla_la_mancha",
     assetId: "ast_castilla_la_mancha_current",
+    alternativeAssetIds: ["ast_castilla_la_mancha_current_alt"],
     displayName: "Official Flag",
     aliases: [],
     tags: ["official", "current"],
@@ -13133,6 +13286,16 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_extremadura_state_current",
+    entityId: "ent_extremadura",
+    assetId: "ast_extremadura_state_current",
+    displayName: "State Flag",
+    aliases: [],
+    tags: ["official", "current", "state"],
+    startYear: 1985,
+    endYear: null
+  },
+  {
     id: "var_galicia_current",
     entityId: "ent_galicia",
     assetId: "ast_galicia_current",
@@ -13143,12 +13306,32 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_galicia_civil_current",
+    entityId: "ent_galicia",
+    assetId: "ast_galicia_civil_current",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "civil"],
+    startYear: 1984,
+    endYear: null
+  },
+  {
     id: "var_la_rioja_current",
     entityId: "ent_la_rioja",
     assetId: "ast_la_rioja_current",
     displayName: "Official Flag",
     aliases: [],
     tags: ["official", "current"],
+    startYear: 1979,
+    endYear: null
+  },
+  {
+    id: "var_la_rioja_civil_current",
+    entityId: "ent_la_rioja",
+    assetId: "ast_la_rioja_civil_current",
+    displayName: "Civil Flag",
+    aliases: [],
+    tags: ["official", "current", "civil"],
     startYear: 1979,
     endYear: null
   },

@@ -9994,6 +9994,119 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_san_marino_current"
   },
+  /*
+    San Marino castelli.
+  */
+  {
+    id: "ent_san_marino_acquaviva",
+    name: "Acquaviva",
+    aliases: [
+      "Castello of Acquaviva",
+      "Acquaviva Castello"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_acquaviva_current"
+  },
+  {
+    id: "ent_san_marino_borgo_maggiore",
+    name: "Borgo Maggiore",
+    aliases: [
+      "Castello of Borgo Maggiore",
+      "Borgo Maggiore Castello"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_borgo_maggiore_current"
+  },
+  {
+    id: "ent_san_marino_chiesanuova",
+    name: "Chiesanuova",
+    aliases: [
+      "Castello of Chiesanuova",
+      "Chiesanuova Castello"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_chiesanuova_current"
+  },
+  {
+    id: "ent_san_marino_domagnano",
+    name: "Domagnano",
+    aliases: [
+      "Castello of Domagnano",
+      "Domagnano Castello"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_domagnano_current"
+  },
+  {
+    id: "ent_san_marino_faetano",
+    name: "Faetano",
+    aliases: [
+      "Castello of Faetano",
+      "Faetano Castello"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_faetano_current"
+  },
+  {
+    id: "ent_san_marino_fiorentino",
+    name: "Fiorentino",
+    aliases: [
+      "Castello of Fiorentino",
+      "Fiorentino Castello"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_fiorentino_current"
+  },
+  {
+    id: "ent_san_marino_montegiardino",
+    name: "Montegiardino",
+    aliases: [
+      "Castello of Montegiardino",
+      "Montegiardino Castello"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_montegiardino_current"
+  },
+  {
+    id: "ent_san_marino_san_marino_city",
+    name: "City of San Marino",
+    aliases: [
+      "Città di San Marino",
+      "San Marino City",
+      "Castello of the City of San Marino"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_san_marino_city_current"
+  },
+  {
+    id: "ent_san_marino_serravalle",
+    name: "Serravalle",
+    aliases: [
+      "Castello of Serravalle",
+      "Serravalle Castello"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_san_marino"],
+    tags: ["subdivision", "first_level_subdivision", "municipality", "current"],
+    defaultVariantId: "var_san_marino_serravalle_current"
+  },
+
   {
     id: "ent_serbia",
     name: "Serbia",

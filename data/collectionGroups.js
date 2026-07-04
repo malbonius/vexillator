@@ -734,6 +734,14 @@ const collectionGroups = [
   },
 
   {
+    id: "grp_san_marino",
+    name: "San Marino",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_san_marino_castelli"
+    ]
+  },
+  {
     id: "grp_spain",
     name: "Spain",
     parentGroupIds: ["grp_southern_europe"],
