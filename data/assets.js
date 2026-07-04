@@ -933,6 +933,10 @@ const assets = [
     path: "assets/flags/geography/asia/eastern_asia/china/national/china_current.svg"
   },
   {
+    id: "ast_chinese_taipei_current",
+    path: "assets/flags/geography/asia/eastern_asia/taiwan/olympic/chinese_taipei_current.svg"
+  },
+  {
     id: "ast_christmas_island_current_unofficial",
     path: "assets/flags/geography/oceania/australia_and_new_zealand/australia/territories/external/christmas_island_current_unofficial.svg"
   },
@@ -987,6 +991,10 @@ const assets = [
   {
     id: "ast_colorado",
     path: "assets/flags/geography/northern_america/united_states/states/colorado.svg"
+  },
+  {
+    id: "ast_commonwealth_current",
+    path: "assets/flags/international_organisations/commonwealth_of_nations/commonwealth_current.svg"
   },
   {
     id: "ast_comoros_current",
@@ -4431,6 +4439,10 @@ const assets = [
   {
     id: "ast_tachira_current",
     path: "assets/flags/geography/south_america/venezuela/region/andean_region/tachira_current.svg"
+  },
+  {
+    id: "ast_tahiti_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/tahiti/tahiti_current.svg"
   },
   {
     id: "ast_taiwan_current",

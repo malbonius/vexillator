@@ -5332,6 +5332,25 @@ const collections = [
 
 
   {
+    id: "col_commonwealth_member_state_flags",
+    name: "Commonwealth of Nations Member State Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection. Commonwealth membership is stored in entityMemberships.js so cross-regional Commonwealth members can remain geographically modelled by their actual regions.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_commonwealth_of_nations",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_ukraine_first_level_subdivisions",
     name: "Ukrainian First-Level Subdivision Flags",
     type: "dynamic",

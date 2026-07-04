@@ -13612,6 +13612,15 @@ const entities = [
   defaultVariantId: "var_organisation_of_islamic_cooperation_current"
 },
 {
+  id: "ent_commonwealth_of_nations",
+  name: "Commonwealth of Nations",
+  aliases: ["The Commonwealth", "Commonwealth", "British Commonwealth"],
+  entityType: "organisation",
+  parentIds: ["ent_international_organisations"],
+  tags: ["organisation", "international_organisation", "current"],
+  defaultVariantId: "var_commonwealth_of_nations_current"
+},
+{
   id: "ent_european_union",
   name: "European Union",
   aliases: ["EU"],

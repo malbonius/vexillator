@@ -1058,6 +1058,15 @@ const collectionGroups = [
     ]
   },
 
+  {
+    id: "grp_commonwealth_of_nations",
+    name: "Commonwealth of Nations",
+    parentGroupIds: ["grp_international_organisations"],
+    collectionIds: [
+      "col_commonwealth_member_state_flags"
+    ]
+  },
+
   /*
     Antarctica.
   */

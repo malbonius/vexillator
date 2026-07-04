@@ -1008,6 +1008,17 @@ const variants = [
   },
 
   {
+    id: "var_commonwealth_of_nations_current",
+    entityId: "ent_commonwealth_of_nations",
+    assetId: "ast_commonwealth_current",
+    displayName: "Organisation Flag",
+    aliases: ["Commonwealth Flag", "Flag of the Commonwealth of Nations"],
+    tags: ["organisation", "current"],
+    startYear: 2013,
+    endYear: null
+  },
+
+  {
     id: "var_european_union_current",
     entityId: "ent_european_union",
     assetId: "ast_eu_current",
