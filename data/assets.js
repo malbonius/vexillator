@@ -321,6 +321,10 @@ const assets = [
     path: "assets/flags/geography/asia/western_asia/azerbaijan/national/azerbaijan_current.svg"
   },
   {
+    id: "ast_azores_current",
+    path: "assets/flags/geography/europe/southern_europe/portugal/autonomous_regions/azores_current.svg"
+  },
+  {
     id: "ast_bacs_kiskun_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/bacs_kiskun_current.svg"
   },

@@ -9854,6 +9854,50 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_portugal_current"
   },
+
+  {
+    id: "ent_azores",
+    name: "Azores",
+    aliases: [
+      "Açores",
+      "Azores Autonomous Region",
+      "Autonomous Region of the Azores",
+      "Região Autónoma dos Açores"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_southern_europe"],
+    constituentOfEntityIds: ["ent_portugal"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "overseas",
+      "current",
+      "recognised"
+    ],
+    defaultVariantId: "var_azores_current"
+  },
+  {
+    id: "ent_madeira",
+    name: "Madeira",
+    aliases: [
+      "Madeira Autonomous Region",
+      "Autonomous Region of Madeira",
+      "Região Autónoma da Madeira"
+    ],
+    entityType: "geographic",
+    parentIds: ["ent_northern_africa"],
+    constituentOfEntityIds: ["ent_portugal"],
+    tags: [
+      "subdivision",
+      "first_level_subdivision",
+      "autonomous",
+      "overseas",
+      "current",
+      "recognised"
+    ],
+    defaultVariantId: "var_madeira_current"
+  },
   {
     id: "ent_romania",
     name: "Romania",

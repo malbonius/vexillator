@@ -734,6 +734,14 @@ const collectionGroups = [
   },
 
   {
+    id: "grp_portugal",
+    name: "Portugal",
+    parentGroupIds: ["grp_southern_europe"],
+    collectionIds: [
+      "col_portugal_autonomous_regions"
+    ]
+  },
+  {
     id: "grp_san_marino",
     name: "San Marino",
     parentGroupIds: ["grp_southern_europe"],

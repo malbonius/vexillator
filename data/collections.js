@@ -4563,6 +4563,37 @@ const collections = [
       "ent_melilla"
     ]
   },
+
+  {
+    id: "col_portugal_autonomous_regions",
+    name: "Portuguese Autonomous Region Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Includes Portugal's two autonomous regions. Azores and Madeira are geographically modelled outside mainland Portugal, so they are included explicitly while remaining constituent parts of Portugal.",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_portugal"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "autonomous"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    },
+    includeEntityIds: [
+      "ent_azores",
+      "ent_madeira"
+    ]
+  },
   {
     id: "col_france_current_regions",
     name: "French Current Regional Flags",

@@ -11546,6 +11546,35 @@ const variants = [
     startYear: 1911,
     endYear: null
   },
+
+  {
+    id: "var_azores_current",
+    entityId: "ent_azores",
+    assetId: "ast_azores_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of the Azores",
+      "Azores Flag",
+      "Bandeira dos Açores"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_madeira_current",
+    entityId: "ent_madeira",
+    assetId: "ast_madeira_current",
+    displayName: "Official Flag",
+    aliases: [
+      "Flag of Madeira",
+      "Madeira Flag",
+      "Bandeira da Madeira"
+    ],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
   {
     id: "var_romania_current",
     entityId: "ent_romania",
