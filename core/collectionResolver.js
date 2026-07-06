@@ -48,7 +48,13 @@ function resolveManualCollection(collection) {
     collectionId: member.collectionId,
     entityId: member.entityId,
     galleryVariantId: member.galleryVariantId,
-    quizVariantId: member.quizVariantId
+    quizVariantId: member.quizVariantId,
+    displayNameOverride: normaliseContextualDisplayNameOverride(
+      member.displayNameOverride
+    ),
+    answerAliases: normaliseContextualAnswerAliases(
+      member.answerAliases
+    )
   }));
 }
 
@@ -105,8 +111,19 @@ function resolveDynamicEntityCollection(collection, dataIndex) {
       return;
     }
 
+    const contextMembership = findContextualMembershipForEntity(
+      entity.id,
+      collection,
+      dataIndex
+    );
+
     resolvedMembers.push(
-      createEntityCollectionMember(entity, collection.id, dataIndex)
+      createEntityCollectionMember(
+        entity,
+        collection.id,
+        dataIndex,
+        contextMembership
+      )
     );
   });
 
@@ -249,7 +266,12 @@ function applyDynamicCollectionOverrides(
 /*
   Creates a collection member for an entity-target collection.
 */
-function createEntityCollectionMember(entity, collectionId, dataIndex) {
+function createEntityCollectionMember(
+  entity,
+  collectionId,
+  dataIndex,
+  contextMembership = null
+) {
   const defaultVariant = entity.defaultVariantId
     ? dataIndex.variantsById[entity.defaultVariantId]
     : null;
@@ -259,12 +281,38 @@ function createEntityCollectionMember(entity, collectionId, dataIndex) {
       ? defaultVariant.id
       : null;
 
+  const galleryVariantId = resolveContextualMembershipVariantId(
+    contextMembership,
+    "galleryVariantId",
+    entity,
+    dataIndex
+  ) ?? validDefaultVariantId;
+
+  const quizVariantId = resolveContextualMembershipVariantId(
+    contextMembership,
+    "quizVariantId",
+    entity,
+    dataIndex
+  ) ?? galleryVariantId;
+
+  const displayNameOverride =
+    normaliseContextualDisplayNameOverride(
+      contextMembership?.displayNameOverride
+    );
+
+  const answerAliases =
+    normaliseContextualAnswerAliases(
+      contextMembership?.answerAliases
+    );
+
   return {
     id: createDynamicMemberId(entity.id, collectionId),
     collectionId,
     entityId: entity.id,
-    galleryVariantId: validDefaultVariantId,
-    quizVariantId: validDefaultVariantId
+    galleryVariantId,
+    quizVariantId,
+    displayNameOverride,
+    answerAliases
   };
 }
 
@@ -308,7 +356,9 @@ function createVariantCollectionMember(variant, collectionId, dataIndex) {
     collectionId,
     entityId: variant.entityId,
     galleryVariantId,
-    quizVariantId: variant.id
+    quizVariantId: variant.id,
+    displayNameOverride: null,
+    answerAliases: []
   };
 }
 
@@ -316,20 +366,186 @@ function createVariantCollectionMember(variant, collectionId, dataIndex) {
   Deduplicates generated members while preserving insertion order.
 */
 function createResolvedMemberKey(member) {
+  const contextKey = createResolvedMemberContextKey(member);
+
   if (member.quizVariantId) {
-    return `variant:${member.quizVariantId}`;
+    return `variant:${member.quizVariantId}:${contextKey}`;
   }
 
   if (member.galleryVariantId) {
-    return `variant:${member.galleryVariantId}`;
+    return `variant:${member.galleryVariantId}:${contextKey}`;
   }
 
-  return `entity:${member.entityId}`;
+  return `entity:${member.entityId}:${contextKey}`;
 }
 
 /*
   Creates a stable, readable ID for a generated dynamic member.
 */
+
+/*
+  Context labels and answer aliases allow membership-driven collections to use
+  organisation-specific names without renaming the underlying entity.
+*/
+function normaliseContextualDisplayNameOverride(value) {
+  return typeof value === "string" && value.trim() !== ""
+    ? value.trim()
+    : null;
+}
+
+function normaliseContextualAnswerAliases(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  const seen = new Set();
+  const aliases = [];
+
+  value.forEach(alias => {
+    if (typeof alias !== "string" || alias.trim() === "") {
+      return;
+    }
+
+    const trimmedAlias = alias.trim();
+    const key = trimmedAlias.toLowerCase();
+
+    if (seen.has(key)) {
+      return;
+    }
+
+    seen.add(key);
+    aliases.push(trimmedAlias);
+  });
+
+  return aliases;
+}
+
+function createResolvedMemberContextKey(member) {
+  const displayName = normaliseContextualDisplayNameOverride(
+    member?.displayNameOverride
+  );
+
+  if (displayName) {
+    return `name:${displayName.toLowerCase()}`;
+  }
+
+  const aliases = normaliseContextualAnswerAliases(member?.answerAliases);
+
+  if (aliases.length > 0) {
+    return `aliases:${aliases.map(alias => alias.toLowerCase()).join("|")}`;
+  }
+
+  return "default";
+}
+
+function resolveContextualMembershipVariantId(
+  membership,
+  fieldName,
+  entity,
+  dataIndex
+) {
+  const variantId = membership?.[fieldName];
+
+  if (typeof variantId !== "string" || variantId.trim() === "") {
+    return null;
+  }
+
+  const variant = dataIndex.variantsById?.[variantId];
+
+  return variant?.entityId === entity.id
+    ? variant.id
+    : null;
+}
+
+function findContextualMembershipForEntity(entityId, collection, dataIndex) {
+  const criteria = extractMembershipCriteriaFromRules(collection?.rules);
+
+  if (!criteria) {
+    return null;
+  }
+
+  const memberships =
+    dataIndex.entityMembershipsByMemberEntityId?.[entityId] ?? [];
+
+  return memberships.find(membership => {
+    return membershipMatchesExtractedCriteria(membership, criteria);
+  }) ?? null;
+}
+
+function extractMembershipCriteriaFromRules(ruleSet) {
+  if (!ruleSet || typeof ruleSet !== "object") {
+    return null;
+  }
+
+  const criteria = {};
+
+  if (typeof ruleSet.memberOf === "string") {
+    criteria.groupEntityId = ruleSet.memberOf;
+  }
+
+  if (typeof ruleSet.relationshipType === "string") {
+    criteria.relationshipType = ruleSet.relationshipType;
+  }
+
+  if (typeof ruleSet.membershipType === "string") {
+    criteria.membershipType = ruleSet.membershipType;
+  }
+
+  if (typeof ruleSet.membershipStatus === "string") {
+    criteria.status = ruleSet.membershipStatus;
+  }
+
+  if (Array.isArray(ruleSet.all)) {
+    ruleSet.all.forEach(rule => {
+      const nestedCriteria = extractMembershipCriteriaFromRules(rule);
+
+      if (nestedCriteria) {
+        Object.assign(criteria, nestedCriteria);
+      }
+    });
+  }
+
+  return Object.keys(criteria).length > 0
+    ? criteria
+    : null;
+}
+
+function membershipMatchesExtractedCriteria(membership, criteria) {
+  if (!membership || !criteria) {
+    return false;
+  }
+
+  if (
+    criteria.groupEntityId &&
+    membership.groupEntityId !== criteria.groupEntityId
+  ) {
+    return false;
+  }
+
+  if (
+    criteria.relationshipType &&
+    membership.relationshipType !== criteria.relationshipType
+  ) {
+    return false;
+  }
+
+  if (
+    criteria.membershipType &&
+    membership.membershipType !== criteria.membershipType
+  ) {
+    return false;
+  }
+
+  if (
+    criteria.status &&
+    membership.status !== criteria.status
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
 function createDynamicMemberId(targetId, collectionId) {
   const targetSuffix = targetId.replace(/^(ent|var)_/, "");
   const collectionSuffix = collectionId.replace(/^col_/, "");

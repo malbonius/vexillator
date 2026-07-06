@@ -81,8 +81,7 @@ function createGalleryRandomOrderSignature(members) {
         member.entityId ?? "",
         member.variantId ?? "",
         member.galleryVariantId ?? "",
-        member.quizVariantId ?? "",
-        member.displayNameOverride ?? ""
+        member.quizVariantId ?? ""
       ].join("::");
     })
     .sort()
@@ -135,8 +134,7 @@ function hashGalleryRandomSortValue(value) {
 function getGalleryRandomSortKey(galleryItem) {
   return [
     galleryItem.entityId ?? "",
-    galleryItem.galleryVariantId ?? "",
-    galleryItem.displayNameOverride ?? ""
+    galleryItem.galleryVariantId ?? ""
   ].join("::");
 }
 
@@ -674,18 +672,8 @@ function entityAppearsMoreThanOnceInGallery(galleryItem, galleryItems) {
     return false;
   }
 
-  const galleryItemEntityLabel = getGalleryItemEntityDisplayName(
-    galleryItem,
-    dataIndex.entitiesById[galleryItem.entityId]
-  );
-
   const matchingItems = galleryItems.filter(item => {
-    const itemEntityLabel = getGalleryItemEntityDisplayName(
-      item,
-      dataIndex.entitiesById[item.entityId]
-    );
-
-    return itemEntityLabel === galleryItemEntityLabel;
+    return item.entityId === galleryItem.entityId;
   });
 
   return matchingItems.length > 1;
@@ -702,10 +690,7 @@ function entityAppearsMoreThanOnceInGallery(galleryItem, galleryItems) {
   - Bolivia - State Flag
 */
 function getGalleryCardTitle(galleryItem, galleryItems, entity, variant) {
-  const entityName = getGalleryItemEntityDisplayName(
-    galleryItem,
-    entity
-  );
+  const entityName = entity ? entity.name : "Unknown entity";
 
   const needsVariantName =
     entityAppearsMoreThanOnceInGallery(galleryItem, galleryItems);
@@ -808,57 +793,6 @@ function setupGalleryControls() {
   Year sorting uses the variant start year. Variants without a start year are
   placed after dated variants so unknown dates do not dominate either end.
 */
-
-function normaliseGalleryDisplayNameOverride(value) {
-  return typeof value === "string" && value.trim() !== ""
-    ? value.trim()
-    : null;
-}
-
-function normaliseGalleryAnswerAliases(value) {
-  if (!Array.isArray(value)) {
-    return [];
-  }
-
-  const seen = new Set();
-  const aliases = [];
-
-  value.forEach(alias => {
-    if (typeof alias !== "string" || alias.trim() === "") {
-      return;
-    }
-
-    const trimmedAlias = alias.trim();
-    const key = trimmedAlias.toLowerCase();
-
-    if (seen.has(key)) {
-      return;
-    }
-
-    seen.add(key);
-    aliases.push(trimmedAlias);
-  });
-
-  return aliases;
-}
-
-function getGalleryItemEntityDisplayName(galleryItem, entity) {
-  return normaliseGalleryDisplayNameOverride(
-    galleryItem?.displayNameOverride
-  ) ?? entity?.name ?? "Unknown entity";
-}
-
-function createGalleryItemDedupeKey(galleryItem) {
-  const baseKey = galleryItem.galleryVariantId || galleryItem.entityId;
-  const displayNameOverride = normaliseGalleryDisplayNameOverride(
-    galleryItem.displayNameOverride
-  );
-
-  return displayNameOverride
-    ? `${baseKey}::context:${displayNameOverride.toLowerCase()}`
-    : `${baseKey}::context:default`;
-}
-
 function sortGalleryItems(galleryItems) {
   return [...galleryItems].sort((itemA, itemB) => {
     const entityA = dataIndex.entitiesById[itemA.entityId];
@@ -872,8 +806,8 @@ function sortGalleryItems(galleryItems) {
       dataIndex.variantsById[itemB.galleryVariantId] :
       null;
 
-    const entityNameA = getGalleryItemEntityDisplayName(itemA, entityA);
-    const entityNameB = getGalleryItemEntityDisplayName(itemB, entityB);
+    const entityNameA = entityA?.name || "";
+    const entityNameB = entityB?.name || "";
 
     const variantNameA = variantA?.displayName || "";
     const variantNameB = variantB?.displayName || "";
@@ -883,7 +817,10 @@ function sortGalleryItems(galleryItems) {
       equal or unavailable, and to break rare Random order hash ties.
     */
     function compareNames() {
-      const entityCompare = entityNameA.localeCompare(entityNameB);
+      const entityCompare = compareEntitiesAlphabetically(
+        entityA ?? { name: entityNameA },
+        entityB ?? { name: entityNameB }
+      );
 
       if (entityCompare !== 0) {
         return entityCompare;
@@ -980,43 +917,24 @@ function buildDeduplicatedGalleryItems(members) {
     }
 
     const galleryVariantId = resolveGalleryVariantId(member, entity);
-    const displayNameOverride = normaliseGalleryDisplayNameOverride(
-      member.displayNameOverride
-    );
-    const answerAliases = normaliseGalleryAnswerAliases(
-      member.answerAliases
-    );
 
     /*
       If there is no gallery variant, we can still make a no-image card for
-      the entity. Context labels are part of the key so, for example, Taiwan
-      and Chinese Taipei can remain distinct when both appear together.
+      the entity, but we dedupe that by entity ID.
     */
-    const dedupeKey = createGalleryItemDedupeKey({
-      entityId: member.entityId,
-      galleryVariantId,
-      displayNameOverride
-    });
+    const dedupeKey = galleryVariantId || member.entityId;
 
     if (!itemsByKey[dedupeKey]) {
       itemsByKey[dedupeKey] = {
         entityId: member.entityId,
         galleryVariantId,
-        displayNameOverride,
-        answerAliases,
         sourceCollectionIds: new Set()
       };
     }
 
-    answerAliases.forEach(alias => {
-      if (!itemsByKey[dedupeKey].answerAliases.includes(alias)) {
-        itemsByKey[dedupeKey].answerAliases.push(alias);
-      }
-    });
-
     /*
-    Direct entity and variant selections do not have a collection source.
-    */
+	Direct entity and variant selections do not have a collection source.
+	*/
     if (member.collectionId) {
       itemsByKey[dedupeKey].sourceCollectionIds.add(member.collectionId);
     }
@@ -1026,8 +944,6 @@ function buildDeduplicatedGalleryItems(members) {
     return {
       entityId: item.entityId,
       galleryVariantId: item.galleryVariantId,
-      displayNameOverride: item.displayNameOverride,
-      answerAliases: item.answerAliases,
       sourceCollectionIds: Array.from(item.sourceCollectionIds)
     };
   });
@@ -1292,13 +1208,8 @@ function createFlagCard(galleryItem, galleryItems) {
     /*
       Keep alt text descriptive even when the visible card mode is image-only.
     */
-    const entityDisplayName = getGalleryItemEntityDisplayName(
-      galleryItem,
-      entity
-    );
-
     imageElement.alt = entity && variant ?
-      `${entityDisplayName} - ${variant.displayName}` :
+      `${entity.name} - ${variant.displayName}` :
       "Flag image";
 
     imageWrapper.appendChild(imageElement);

@@ -267,14 +267,11 @@ function validateOfficialRepresentationVariants(entity, index) {
     }
 
     /*
-      A variant belonging to this entity should be stored as one of its normal
-      variants rather than as an external official representation.
+      The referenced variant may belong to the same entity or to another
+      entity. Same-entity references are useful for context-specific external
+      representations such as Afghanistan's tricolour or Taiwan's Chinese
+      Taipei sporting flag.
     */
-    if (variant.entityId === entity.id) {
-      index.errors.push(
-        `Entity ${entity.id} uses its own variant as an official external representation: ${variantId}`
-      );
-    }
   });
 }
 
@@ -903,12 +900,6 @@ function validateEntityMemberships(membershipList, index) {
       );
     }
 
-    /*
-      relationshipType and membershipType are optional.
-      Most Vexillator collections only need memberEntityId, groupEntityId
-      and status. Use type fields only when they create meaningful
-      browse/quiz subsets.
-    */
     validateOptionalNonEmptyString(
       membership,
       "relationshipType",
@@ -957,6 +948,35 @@ function validateEntityMemberships(membershipList, index) {
       );
     }
 
+    validateOptionalNonEmptyString(
+      membership,
+      "displayNameOverride",
+      ownerLabel,
+      index.errors,
+      false
+    );
+
+    validateOptionalStringArray(
+      membership,
+      "answerAliases",
+      ownerLabel,
+      index.errors
+    );
+
+    validateOptionalMembershipVariantReference(
+      membership,
+      "galleryVariantId",
+      ownerLabel,
+      index
+    );
+
+    validateOptionalMembershipVariantReference(
+      membership,
+      "quizVariantId",
+      ownerLabel,
+      index
+    );
+
     if (
       membership.notes !== undefined &&
       typeof membership.notes !== "string"
@@ -987,6 +1007,78 @@ function validateEntityMembershipEntityReference(
   if (!index.entitiesById[entityId]) {
     index.errors.push(
       `${ownerLabel} references missing ${label}: ${entityId}`
+    );
+  }
+}
+
+
+function validateOptionalStringArray(owner, fieldName, ownerLabel, errors) {
+  const value = owner[fieldName];
+
+  if (value === undefined || value === null) {
+    return;
+  }
+
+  if (!Array.isArray(value)) {
+    errors.push(
+      `${ownerLabel} ${fieldName} must be an array when provided.`
+    );
+    return;
+  }
+
+  const seen = new Set();
+
+  value.forEach((item, index) => {
+    if (typeof item !== "string" || item.trim() === "") {
+      errors.push(
+        `${ownerLabel} ${fieldName}[${index}] must be a non-empty string.`
+      );
+      return;
+    }
+
+    const key = item.trim().toLowerCase();
+
+    if (seen.has(key)) {
+      errors.push(
+        `${ownerLabel} ${fieldName} contains a duplicate value: ${item}`
+      );
+    }
+
+    seen.add(key);
+  });
+}
+
+function validateOptionalMembershipVariantReference(
+  membership,
+  fieldName,
+  ownerLabel,
+  index
+) {
+  const variantId = membership[fieldName];
+
+  if (variantId === undefined || variantId === null) {
+    return;
+  }
+
+  if (typeof variantId !== "string" || variantId.trim() === "") {
+    index.errors.push(
+      `${ownerLabel} ${fieldName} must be a non-empty string when provided.`
+    );
+    return;
+  }
+
+  const variant = index.variantsById[variantId];
+
+  if (!variant) {
+    index.errors.push(
+      `${ownerLabel} references missing ${fieldName}: ${variantId}`
+    );
+    return;
+  }
+
+  if (variant.entityId !== membership.memberEntityId) {
+    index.errors.push(
+      `${ownerLabel} ${fieldName} must belong to ${membership.memberEntityId}.`
     );
   }
 }
@@ -1399,6 +1491,21 @@ function validateManualCollection(collection, index) {
       "quizVariantId",
       "quiz variant",
       index
+    );
+
+    validateOptionalNonEmptyString(
+      member,
+      "displayNameOverride",
+      `Collection member ${member.id}`,
+      index.errors,
+      false
+    );
+
+    validateOptionalStringArray(
+      member,
+      "answerAliases",
+      `Collection member ${member.id}`,
+      index.errors
     );
   });
 }

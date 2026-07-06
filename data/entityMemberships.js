@@ -3647,7 +3647,10 @@ const entityMemberships = Object.freeze([
     membershipType: "member_association",
     status: "current",
     startYear: null,
-    endYear: null
+    endYear: null,
+    galleryVariantId: "var_afghanistan_republic_tricolour_current",
+    quizVariantId: "var_afghanistan_republic_tricolour_current",
+    notes: "Use the Afghan Republic tricolour as Afghanistan's external representation in non-geographic FIFA-facing contexts."
   }),
   Object.freeze({
     id: "mem_albania_fifa",
@@ -4068,6 +4071,10 @@ const entityMemberships = Object.freeze([
     status: "current",
     startYear: null,
     endYear: null,
+    displayNameOverride: "Chinese Taipei",
+    galleryVariantId: "var_taiwan_chinese_taipei_current",
+    quizVariantId: "var_taiwan_chinese_taipei_current",
+    answerAliases: ["Chinese Taipei", "Taiwan"],
     notes: "FIFA member association name: Chinese Taipei. Vexillator keeps the political/geographic entity as Taiwan and uses the Chinese Taipei sporting flag for FIFA-facing representation."
   }),
   Object.freeze({
@@ -5491,14 +5498,19 @@ const entityMemberships = Object.freeze([
     endYear: null
   }),
   Object.freeze({
-    id: "mem_tahiti_fifa",
-    memberEntityId: "ent_tahiti",
+    id: "mem_french_polynesia_fifa",
+    memberEntityId: "ent_french_polynesia",
     groupEntityId: "ent_fifa",
     relationshipType: "member",
     membershipType: "member_association",
     status: "current",
     startYear: null,
-    endYear: null
+    endYear: null,
+    displayNameOverride: "Tahiti",
+    galleryVariantId: "var_french_polynesia_current",
+    quizVariantId: "var_french_polynesia_current",
+    answerAliases: ["Tahiti", "French Polynesia"],
+    notes: "FIFA member association name: Tahiti. Vexillator keeps the geographic entity as French Polynesia and uses the French Polynesian flag for FIFA-facing representation. The separate Tahiti entity remains the island child of French Polynesia."
   }),
   Object.freeze({
     id: "mem_tajikistan_fifa",

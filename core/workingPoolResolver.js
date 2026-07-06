@@ -222,7 +222,13 @@ function createCollectionWorkingPoolMember(member) {
     collectionId: member.collectionId,
     entityId: member.entityId,
     galleryVariantId: member.galleryVariantId ?? null,
-    quizVariantId: member.quizVariantId ?? null
+    quizVariantId: member.quizVariantId ?? null,
+    displayNameOverride: normaliseWorkingPoolDisplayNameOverride(
+      member.displayNameOverride
+    ),
+    answerAliases: normaliseWorkingPoolAnswerAliases(
+      member.answerAliases
+    )
   };
 }
 
@@ -239,6 +245,40 @@ function createCollectionWorkingPoolMember(member) {
   The group controls provenance only. Every member still resolves through the
   selected entity's default variant, preserving normal Gallery and quiz rules.
 */
+
+function normaliseWorkingPoolDisplayNameOverride(value) {
+  return typeof value === "string" && value.trim() !== ""
+    ? value.trim()
+    : null;
+}
+
+function normaliseWorkingPoolAnswerAliases(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  const seen = new Set();
+  const aliases = [];
+
+  value.forEach(alias => {
+    if (typeof alias !== "string" || alias.trim() === "") {
+      return;
+    }
+
+    const trimmedAlias = alias.trim();
+    const key = trimmedAlias.toLowerCase();
+
+    if (seen.has(key)) {
+      return;
+    }
+
+    seen.add(key);
+    aliases.push(trimmedAlias);
+  });
+
+  return aliases;
+}
+
 function createEntityGroupWorkingPoolMembers(entityGroup, dataIndex) {
   if (
     !entityGroup ||

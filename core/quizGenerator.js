@@ -84,15 +84,13 @@ function generateQuizQuestions(options = {}, dataIndex) {
     acceptedEntityIds are included so a shared-asset question representing
     several entities does not incorrectly count as a single-entity pool.
   */
-  const quizEntityIds = new Set();
+  const quizIdentityKeys = new Set();
 
   mergedEntries.forEach(entry => {
-    entry.acceptedEntityIds.forEach(entityId => {
-      quizEntityIds.add(entityId);
-    });
+    quizIdentityKeys.add(createQuizQuestionIdentityKey(entry));
   });
 
-  const allowsVariantOnlyAnswers = quizEntityIds.size === 1;
+  const allowsVariantOnlyAnswers = quizIdentityKeys.size === 1;
 
   /*
     4. Shuffle without mutating the merged pool.
@@ -202,6 +200,14 @@ function buildQuizEntries(members, dataIndex) {
       quizVariantId
     );
 
+    const displayNameOverride = normaliseQuizDisplayNameOverride(
+      member.displayNameOverride
+    );
+
+    const answerAliases = normaliseQuizAnswerAliases(
+      member.answerAliases
+    );
+
     entries.push({
       memberId: member.id,
       collectionId: member.collectionId || null,
@@ -210,6 +216,11 @@ function buildQuizEntries(members, dataIndex) {
       revealVariantId,
       assetId: asset.id,
       quizVisualGroupId: variant.quizVisualGroupId || null,
+      displayNameOverride,
+      acceptedDisplayNames: displayNameOverride
+        ? [displayNameOverride]
+        : [],
+      answerAliases,
 
       /*
         Shared-asset merging may add further accepted entity IDs later.
@@ -299,6 +310,8 @@ function mergeAcceptedAnswersByAsset(entries) {
       entriesByAssetId.set(entry.assetId, {
         ...entry,
         acceptedEntityIds: new Set(entry.acceptedEntityIds || []),
+        acceptedDisplayNames: new Set(entry.acceptedDisplayNames || []),
+        answerAliases: new Set(entry.answerAliases || []),
         quizVisualGroupIds: new Set(
           entry.quizVisualGroupId ? [entry.quizVisualGroupId] : []
         ),
@@ -316,6 +329,18 @@ function mergeAcceptedAnswersByAsset(entries) {
     (entry.acceptedEntityIds || []).forEach(entityId => {
       existingEntry.acceptedEntityIds.add(entityId);
     });
+
+    (entry.acceptedDisplayNames || []).forEach(displayName => {
+      existingEntry.acceptedDisplayNames.add(displayName);
+    });
+
+    (entry.answerAliases || []).forEach(alias => {
+      existingEntry.answerAliases.add(alias);
+    });
+
+    if (!existingEntry.displayNameOverride && entry.displayNameOverride) {
+      existingEntry.displayNameOverride = entry.displayNameOverride;
+    }
 
     if (entry.quizVisualGroupId) {
       existingEntry.quizVisualGroupIds.add(entry.quizVisualGroupId);
@@ -339,6 +364,10 @@ function mergeAcceptedAnswersByAsset(entries) {
       entry.quizVisualGroupIds || []
     );
 
+    const acceptedDisplayNames = Array.from(
+      entry.acceptedDisplayNames || []
+    );
+
     return {
       ...entry,
       quizVisualGroupId:
@@ -348,6 +377,10 @@ function mergeAcceptedAnswersByAsset(entries) {
           : null),
       quizVisualGroupIds,
       acceptedEntityIds: Array.from(entry.acceptedEntityIds),
+      acceptedDisplayNames,
+      displayNameOverride:
+        entry.displayNameOverride || acceptedDisplayNames[0] || null,
+      answerAliases: Array.from(entry.answerAliases || []),
       sourceMemberIds: Array.from(entry.sourceMemberIds),
       sourceCollectionIds: Array.from(entry.sourceCollectionIds)
     };
@@ -663,6 +696,99 @@ function normaliseMultipleChoiceLabel(label) {
   primary entity but a different asset. In that case, the variant name is
   included to distinguish the questions.
 */
+
+function normaliseQuizDisplayNameOverride(value) {
+  return typeof value === "string" && value.trim() !== ""
+    ? value.trim()
+    : null;
+}
+
+function normaliseQuizAnswerAliases(value) {
+  if (!Array.isArray(value)) {
+    return [];
+  }
+
+  const seen = new Set();
+  const aliases = [];
+
+  value.forEach(alias => {
+    if (typeof alias !== "string" || alias.trim() === "") {
+      return;
+    }
+
+    const trimmedAlias = alias.trim();
+    const key = trimmedAlias.toLowerCase();
+
+    if (seen.has(key)) {
+      return;
+    }
+
+    seen.add(key);
+    aliases.push(trimmedAlias);
+  });
+
+  return aliases;
+}
+
+function getContextualDisplayNamesForQuestion(question) {
+  const names = [];
+
+  if (normaliseQuizDisplayNameOverride(question?.displayNameOverride)) {
+    names.push(question.displayNameOverride.trim());
+  }
+
+  if (Array.isArray(question?.acceptedDisplayNames)) {
+    question.acceptedDisplayNames.forEach(displayName => {
+      const normalisedDisplayName = normaliseQuizDisplayNameOverride(
+        displayName
+      );
+
+      if (normalisedDisplayName) {
+        names.push(normalisedDisplayName);
+      }
+    });
+  }
+
+  return deduplicateQuizStrings(names);
+}
+
+function createQuizQuestionIdentityKey(question) {
+  const contextualNames = getContextualDisplayNamesForQuestion(question);
+
+  if (contextualNames.length > 0) {
+    return `context:${contextualNames.map(name => name.toLowerCase()).join("|")}`;
+  }
+
+  if (Array.isArray(question?.acceptedEntityIds)) {
+    return `entities:${question.acceptedEntityIds.slice().sort().join("|")}`;
+  }
+
+  return `entity:${question?.primaryEntityId ?? ""}`;
+}
+
+function deduplicateQuizStrings(values) {
+  const seen = new Set();
+  const results = [];
+
+  values.forEach(value => {
+    if (typeof value !== "string" || value.trim() === "") {
+      return;
+    }
+
+    const trimmedValue = value.trim();
+    const key = trimmedValue.toLowerCase();
+
+    if (seen.has(key)) {
+      return;
+    }
+
+    seen.add(key);
+    results.push(trimmedValue);
+  });
+
+  return results;
+}
+
 function getQuizQuestionAnswerLabel(question, allQuestions, dataIndex) {
   if (!question || !dataIndex) {
     return "";
@@ -684,6 +810,8 @@ function questionNeedsVariantLabel(question, allQuestions) {
     return false;
   }
 
+  const questionIdentityKey = createQuizQuestionIdentityKey(question);
+
   return allQuestions.some(otherQuestion => {
     if (!otherQuestion) {
       return false;
@@ -693,10 +821,8 @@ function questionNeedsVariantLabel(question, allQuestions) {
       return false;
     }
 
-    return (
-      otherQuestion.primaryEntityId ===
-      question.primaryEntityId
-    );
+    return createQuizQuestionIdentityKey(otherQuestion) ===
+      questionIdentityKey;
   });
 }
 
@@ -714,6 +840,12 @@ function getEntityAnswerLabel(question, dataIndex) {
     return "";
   }
 
+  const displayNames = getContextualDisplayNamesForQuestion(question);
+
+  if (displayNames.length > 0) {
+    return displayNames.join(" / ");
+  }
+
   return question.acceptedEntityIds
     .map(entityId => dataIndex.entitiesById[entityId])
     .filter(Boolean)
@@ -728,12 +860,17 @@ function getEntityAnswerLabel(question, dataIndex) {
   Bolivia - Civil Flag
 */
 function getVariantAnswerLabel(question, dataIndex) {
-  const entity = dataIndex.entitiesById[question.primaryEntityId];
   const variant = dataIndex.variantsById[question.displayedVariantId];
 
-  if (!entity || !variant) {
+  if (!variant) {
     return getEntityAnswerLabel(question, dataIndex);
   }
 
-  return `${entity.name} - ${variant.displayName}`;
+  const entityLabel = getEntityAnswerLabel(question, dataIndex);
+
+  if (!entityLabel) {
+    return variant.displayName || "";
+  }
+
+  return `${entityLabel} - ${variant.displayName}`;
 }

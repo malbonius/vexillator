@@ -86,8 +86,33 @@ function getAcceptedAnswersForQuestion(quizQuestion, dataIndex) {
   Shared-asset questions may contain several accepted entity IDs, so every
   represented entity contributes its own name and aliases.
 */
+
+function getContextualEntityAnswerFormsForQuestion(quizQuestion) {
+  const answers = [];
+
+  if (
+    typeof quizQuestion?.displayNameOverride === "string" &&
+    quizQuestion.displayNameOverride.trim() !== ""
+  ) {
+    answers.push(quizQuestion.displayNameOverride.trim());
+  }
+
+  if (Array.isArray(quizQuestion?.acceptedDisplayNames)) {
+    answers.push(...quizQuestion.acceptedDisplayNames);
+  }
+
+  if (Array.isArray(quizQuestion?.answerAliases)) {
+    answers.push(...quizQuestion.answerAliases);
+  }
+
+  return deduplicateAnswers(answers);
+}
+
 function getAcceptedEntityAnswersForQuestion(quizQuestion, dataIndex) {
   const answers = [];
+
+  answers.push(...getContextualEntityAnswerFormsForQuestion(quizQuestion));
+
   const acceptedEntityIds = getAcceptedEntityIdsForTypingQuestion(
     quizQuestion
   );
@@ -167,80 +192,55 @@ function getVariantDisplayAnswerForms(displayName) {
 function getAcceptedVariantAnswersForQuestion(
   quizQuestion,
   dataIndex,
-  includeVariantOnlyAnswers = true
+  includeVariantOnlyAnswers
 ) {
-  const entity = dataIndex?.entitiesById?.[
-    quizQuestion?.primaryEntityId
-  ];
+  const variant = dataIndex.variantsById?.[quizQuestion.displayedVariantId];
 
-  const variant = dataIndex?.variantsById?.[
-    quizQuestion?.displayedVariantId
-  ];
-
-  if (!entity || !variant) {
-    return getAcceptedEntityAnswersForQuestion(
-      quizQuestion,
-      dataIndex
-    );
+  if (!variant) {
+    return [];
   }
 
+  const entity = dataIndex.entitiesById?.[variant.entityId];
   const answers = [];
 
-  const entityNames = [
-    entity.name,
-    ...(Array.isArray(entity.aliases) ? entity.aliases : [])
-  ];
+  if (includeVariantOnlyAnswers) {
+    answers.push(...getVariantDisplayAnswerForms(variant.displayName));
+  }
 
-  const variantDisplayNames = getVariantDisplayAnswerForms(
+  if (Array.isArray(variant.aliases)) {
+    answers.push(...variant.aliases);
+  }
+
+  const entityNames = getContextualEntityAnswerFormsForQuestion(
+    quizQuestion
+  );
+
+  if (entity) {
+    entityNames.push(entity.name);
+
+    if (Array.isArray(entity.aliases)) {
+      entityNames.push(...entity.aliases);
+    }
+  }
+
+  const variantForms = getVariantDisplayAnswerForms(
     variant.displayName
   );
 
-  const variantAliases = Array.isArray(variant.aliases)
-    ? variant.aliases
-    : [];
+  deduplicateAnswers(entityNames).forEach(entityName => {
+    variantForms.forEach(variantForm => {
+      const normalisedEntityName = normaliseAnswerText(entityName);
+      const normalisedVariantForm = normaliseAnswerText(variantForm);
 
-  /*
-    Accept full entity + display-name combinations.
+      if (normalisedVariantForm.startsWith(normalisedEntityName)) {
+        answers.push(variantForm);
+        return;
+      }
 
-    Examples:
-    - United States National Flag
-    - USA - National Flag
-    - Paraguay Reverse
-  */
-  entityNames.forEach(entityName => {
-    variantDisplayNames.forEach(variantName => {
-      answers.push(`${entityName} ${variantName}`);
-      answers.push(`${entityName} - ${variantName}`);
+      answers.push(`${entityName} ${variantForm}`);
+      answers.push(`${entityName} - ${variantForm}`);
     });
   });
-
-  /*
-    Accept full entity + variant-alias combinations.
-
-    Examples:
-    - United States Old Glory
-    - USA - Stars and Stripes
-  */
-  entityNames.forEach(entityName => {
-    variantAliases.forEach(alias => {
-      answers.push(`${entityName} ${alias}`);
-      answers.push(`${entityName} - ${alias}`);
-    });
-  });
-
-  /*
-    A genuine variant alias identifies the design and may therefore stand
-    alone even in a mixed-entity quiz.
-  */
-  answers.push(...variantAliases);
-
-  /*
-    Generic standalone labels such as "State Flag" or "Reverse" are allowed
-    only when the quiz context already implies the entity.
-  */
-  if (includeVariantOnlyAnswers) {
-    answers.push(...variantDisplayNames);
-  }
 
   return deduplicateAnswers(answers);
 }
