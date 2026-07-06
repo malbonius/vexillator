@@ -5351,16 +5351,144 @@ const collections = [
   },
 
 
-  {
+{
     id: "col_fifa_member_association_flags",
     name: "FIFA Member Association Flags",
     type: "dynamic",
     target: "entity",
-    notes: "Membership-driven collection. FIFA membership is stored in entityMemberships.js; contextual membership fields handle FIFA-facing names and representative flags such as Tahiti/French Polynesia, Chinese Taipei/Taiwan and Afghanistan's external tricolour representation.",
+    notes: "Membership-driven collection for FIFA's 211 current member associations. Contextual member data in entityMemberships.js handles non-geographic representation, including Afghanistan's Republic tricolour, Taiwan as Chinese Taipei, and French Polynesia as Tahiti.",
     rules: {
       all: [
         {
           memberOf: "ent_fifa",
+          relationshipType: "member",
+          membershipType: "member_association",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
+    id: "col_afc_member_association_flags",
+    name: "AFC Member Association Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection for FIFA member associations affiliated with the Asian Football Confederation. This is not a geographic Asia collection; Australia and Guam remain geographically modelled elsewhere.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_afc",
+          relationshipType: "member",
+          membershipType: "member_association",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
+    id: "col_caf_member_association_flags",
+    name: "CAF Member Association Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection for FIFA member associations affiliated with the Confederation of African Football.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_caf",
+          relationshipType: "member",
+          membershipType: "member_association",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
+    id: "col_concacaf_member_association_flags",
+    name: "Concacaf Member Association Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection for FIFA member associations affiliated with Concacaf. This is not a pure North America collection; Guyana and Suriname remain geographically South American.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_concacaf",
+          relationshipType: "member",
+          membershipType: "member_association",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
+    id: "col_conmebol_member_association_flags",
+    name: "CONMEBOL Member Association Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection for FIFA member associations affiliated with CONMEBOL.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_conmebol",
+          relationshipType: "member",
+          membershipType: "member_association",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
+    id: "col_ofc_member_association_flags",
+    name: "OFC Member Association Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection for FIFA member associations affiliated with the Oceania Football Confederation. French Polynesia is represented in FIFA/OFC contexts as Tahiti.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_ofc",
+          relationshipType: "member",
+          membershipType: "member_association",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
+    id: "col_uefa_member_association_flags",
+    name: "UEFA Member Association Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection for FIFA member associations affiliated with UEFA. This is not a pure Europe collection; Israel and Kazakhstan remain geographically Asian.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_uefa",
+          relationshipType: "member",
+          membershipType: "member_association",
           membershipStatus: "current"
         },
         {

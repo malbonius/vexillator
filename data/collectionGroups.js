@@ -1040,12 +1040,18 @@ const collectionGroups = [
     ]
   },
 
-  {
+{
     id: "grp_fifa",
     name: "FIFA",
     parentGroupIds: ["grp_international_sporting_organisations"],
     collectionIds: [
-      "col_fifa_member_association_flags"
+      "col_fifa_member_association_flags",
+      "col_afc_member_association_flags",
+      "col_caf_member_association_flags",
+      "col_concacaf_member_association_flags",
+      "col_conmebol_member_association_flags",
+      "col_ofc_member_association_flags",
+      "col_uefa_member_association_flags"
     ]
   },
 

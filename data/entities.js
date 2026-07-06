@@ -13695,4 +13695,59 @@ const entities = [
   tags: ["organisation", "international_organisation", "sport", "current"],
   defaultVariantId: "var_fifa_current"
 }
+,
+{
+  id: "ent_afc",
+  name: "Asian Football Confederation",
+  aliases: ["AFC"],
+  entityType: "organisation",
+  parentIds: ["ent_fifa"],
+  tags: ["organisation", "international_organisation", "sport", "current"],
+  defaultVariantId: null
+},
+{
+  id: "ent_caf",
+  name: "Confederation of African Football",
+  aliases: ["CAF"],
+  entityType: "organisation",
+  parentIds: ["ent_fifa"],
+  tags: ["organisation", "international_organisation", "sport", "current"],
+  defaultVariantId: null
+},
+{
+  id: "ent_concacaf",
+  name: "Concacaf",
+  aliases: ["CONCACAF", "Confederation of North, Central America and Caribbean Association Football"],
+  entityType: "organisation",
+  parentIds: ["ent_fifa"],
+  tags: ["organisation", "international_organisation", "sport", "current"],
+  defaultVariantId: null
+},
+{
+  id: "ent_conmebol",
+  name: "CONMEBOL",
+  aliases: ["South American Football Confederation", "CSF", "Confederación Sudamericana de Fútbol"],
+  entityType: "organisation",
+  parentIds: ["ent_fifa"],
+  tags: ["organisation", "international_organisation", "sport", "current"],
+  defaultVariantId: null
+},
+{
+  id: "ent_ofc",
+  name: "Oceania Football Confederation",
+  aliases: ["OFC"],
+  entityType: "organisation",
+  parentIds: ["ent_fifa"],
+  tags: ["organisation", "international_organisation", "sport", "current"],
+  defaultVariantId: null
+},
+{
+  id: "ent_uefa",
+  name: "UEFA",
+  aliases: ["Union of European Football Associations"],
+  entityType: "organisation",
+  parentIds: ["ent_fifa"],
+  tags: ["organisation", "international_organisation", "sport", "current"],
+  defaultVariantId: null
+}
 ];
