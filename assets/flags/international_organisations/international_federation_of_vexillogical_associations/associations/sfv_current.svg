@@ -1,0 +1,18 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1600" viewBox="0 0 1600 1600">
+<g id="SVF-(France)">
+<path d="M0,800 L800,800 L800,1600 L0,1600 L0,800 z" fill="#ED2939" />
+<path d="M800,0 L1600,0 L1600,800 L800,800 L800,0 z" fill="#ED2939" />
+<path d="M800,800 L1600,800 L1600,1600 L800,1600 L800,800 z" fill="#002395" />
+<path d="M0,0 L800,0 L800,800 L0,800 L0,0 z" fill="#002395" />
+<path d="M0,518 L1600,518 L1600,1082 L0,1082 L0,518 z" fill="#FFFFFF" />
+<path d="M518,0 L1082,0 L1082,1600 L518,1600 L518,0 z" fill="#FFFFFF" />
+<path d="M0,588 L1600,588 L1600,1012 L0,1012 L0,588 z" fill="#ED2939" />
+<path d="M0,800 L800,800 L800,1012 L0,1012 L0,800 z" fill="#002395" />
+<path d="M800,588 L1600,588 L1600,800 L800,800 L800,588 z" fill="#002395" />
+<path d="M588,0 L1012,0 L1012,1600 L588,1600 L588,0 z" fill="#ED2939" />
+<path d="M588,800 L800,800 L800,1600 L588,1600 L588,800 z" fill="#002395" />
+<path d="M800,0 L1012,0 L1012,800 L800,800 L800,0 z" fill="#002395" />
+<path d="M658,0 L942,0 L942,1600 L658,1600 L658,0 z" fill="#FFFFFF" />
+<path d="M0,658 L1600,658 L1600,942 L0,942 L0,658 z" fill="#FFFFFF" />
+</g>
+</svg>

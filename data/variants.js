@@ -15017,6 +15017,489 @@ const variants = [
     endYear: null,
     // The real variant represented by this technical quiz image.
     baseVariantId: "var_world_food_programme_current"
-  }
+  },
 
+  /*
+    International Federation of Vexillological Associations.
+  */
+  {
+    id: "var_fiav_current",
+    entityId: "ent_fiav",
+    assetId: "ast_fiav_current",
+    displayName: "Organisation Flag",
+    aliases: ["FIAV Flag", "Flag of the International Federation of Vexillological Associations"],
+    tags: ["organisation", "current"],
+    startYear: 1967,
+    endYear: null
+  },
+  {
+    id: "var_fiav_aav_current",
+    entityId: "ent_fiav_aav",
+    assetId: "ast_aav_current",
+    displayName: "Organisation Flag",
+    aliases: ["AAV Flag", "Flag of Asociación Argentina de Vexilología"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_acv_current",
+    entityId: "ent_fiav_acv",
+    assetId: "ast_acv_current",
+    displayName: "Organisation Flag",
+    aliases: ["ACV Flag", "Flag of Associació Catalana de Vexil·lologia"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_bda_current",
+    entityId: "ent_fiav_bda",
+    assetId: "ast_bda_current",
+    displayName: "Organisation Flag",
+    aliases: ["BDA Flag", "Flag of The Burgee Data Archives"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_bhvs_current",
+    entityId: "ent_fiav_bhvs",
+    assetId: "ast_bhvs_current",
+    displayName: "Organisation Flag",
+    aliases: ["BHVS Flag", "Flag of Bulgarian Heraldry and Vexillology Society"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_bs_current",
+    entityId: "ent_fiav_bs",
+    assetId: "ast_bs_current",
+    displayName: "Organisation Flag",
+    aliases: ["BS Flag", "Flag of Bandiere Storiche"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_cbfa_current",
+    entityId: "ent_fiav_cbfa",
+    assetId: "ast_cbfa_current",
+    displayName: "Organisation Flag",
+    aliases: ["CBFA Flag", "Flag of Chesapeake Bay Flag Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_cebed_current",
+    entityId: "ent_fiav_cebed",
+    assetId: "ast_cebed_current",
+    displayName: "Organisation Flag",
+    aliases: ["CEBED Flag", "Flag of Centre Belgo-Européen d’Études des Drapeaux"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_cfa_current",
+    entityId: "ent_fiav_cfa",
+    assetId: "ast_cfa_current",
+    displayName: "Organisation Flag",
+    aliases: ["CFA Flag", "Flag of The Canadian Flag Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_cidec_current",
+    entityId: "ent_fiav_cidec",
+    assetId: "ast_cidec_current",
+    displayName: "Organisation Flag",
+    aliases: ["CIDEC Flag", "Flag of Fundación Centro Interdisciplinario de Estudios Culturales"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_cisv_current",
+    entityId: "ent_fiav_cisv",
+    assetId: "ast_cisv_current",
+    displayName: "Organisation Flag",
+    aliases: ["CISV Flag", "Flag of Centro Italiano Studi Vessillologici"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_conavex_current",
+    entityId: "ent_fiav_conavex",
+    assetId: "ast_conavex_current",
+    displayName: "Organisation Flag",
+    aliases: ["CONAVEX Flag", "Flag of Corporación Nacional de Vexilología de Chile"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_cvs_current",
+    entityId: "ent_fiav_cvs",
+    assetId: "ast_cvs_current",
+    displayName: "Organisation Flag",
+    aliases: ["CVS Flag", "Flag of Česká vexilologická společnost"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_dgf_current",
+    entityId: "ent_fiav_dgf",
+    assetId: "ast_dgf_current",
+    displayName: "Organisation Flag",
+    aliases: ["DGF Flag", "Flag of Deutsche Gesellschaft für Flaggenkunde e.V."],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_fhf_current",
+    entityId: "ent_fiav_fhf",
+    assetId: "ast_fhf_current",
+    displayName: "Organisation Flag",
+    aliases: ["FHF Flag", "Flag of Flag Heritage Foundation"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_fi_current",
+    entityId: "ent_fiav_fi",
+    assetId: "ast_fi_current",
+    displayName: "Organisation Flag",
+    aliases: ["FI Flag", "Flag of The Flag Institute"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_fotw_current",
+    entityId: "ent_fiav_fotw",
+    assetId: "ast_fotw_current",
+    displayName: "Organisation Flag",
+    aliases: ["FOTW Flag", "Flag of Flags of the World"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_frc_current",
+    entityId: "ent_fiav_frc",
+    assetId: "ast_frc_current",
+    displayName: "Organisation Flag",
+    aliases: ["FRC Flag", "Flag of The Flag Research Center"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_fsa_current",
+    entityId: "ent_fiav_fsa",
+    assetId: "ast_fsa_current",
+    displayName: "Organisation Flag",
+    aliases: ["FSA Flag", "Flag of Flag Society of Australia Inc."],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_gsi_current",
+    entityId: "ent_fiav_gsi",
+    assetId: "ast_gsi_current",
+    displayName: "Organisation Flag",
+    aliases: ["GSI Flag", "Flag of Genealogical Society of Ireland Limited (Vexillology Ireland branch)"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_gwav_current",
+    entityId: "ent_fiav_gwav",
+    assetId: "ast_gwav_current",
+    displayName: "Organisation Flag",
+    aliases: ["GWAV Flag", "Flag of Great Waters Association of Vexillology"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_hgzd_current",
+    entityId: "ent_fiav_hgzd",
+    assetId: "ast_hgzd_current",
+    displayName: "Organisation Flag",
+    aliases: ["HGZD Flag", "Flag of Hrvatsko grboslovno i zastavoslovno društvo"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_hs_current",
+    entityId: "ent_fiav_hs",
+    assetId: "ast_hs_current",
+    displayName: "Organisation Flag",
+    aliases: ["HS Flag", "Flag of Heraldica Slovenica"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_hvk_current",
+    entityId: "ent_fiav_hvk",
+    assetId: "ast_hvk_current",
+    displayName: "Organisation Flag",
+    aliases: ["HVK Flag", "Flag of Heraldischer Verein \"Zum Kleeblatt\" von 1888 zu Hannover e.V."],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_ihw_current",
+    entityId: "ent_fiav_ihw",
+    assetId: "ast_ihw_current",
+    displayName: "Organisation Flag",
+    aliases: ["IHW Flag", "Flag of Instytut Heraldyczno-Weksylologiczny"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_iva_current",
+    entityId: "ent_fiav_iva",
+    assetId: "ast_iva_current",
+    displayName: "Organisation Flag",
+    aliases: ["IVA Flag", "Flag of Indian Vexillological Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_java_current",
+    entityId: "ent_fiav_java",
+    assetId: "ast_java_current",
+    displayName: "Organisation Flag",
+    aliases: ["JAVA Flag", "Flag of Japanese Vexillological Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_kvv_current",
+    entityId: "ent_fiav_kvv",
+    assetId: "ast_kvv_current",
+    displayName: "Organisation Flag",
+    aliases: ["KVV Flag", "Flag of Kevarzhe Vannielouriezh Vreizh"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_nava_current",
+    entityId: "ent_fiav_nava",
+    assetId: "ast_nava_current",
+    displayName: "Organisation Flag",
+    aliases: ["NAVA Flag", "Flag of North American Vexillological Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_neva_current",
+    entityId: "ent_fiav_neva",
+    assetId: "ast_neva_current",
+    displayName: "Organisation Flag",
+    aliases: ["NEVA Flag", "Flag of New England Vexillological Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_nf_current",
+    entityId: "ent_fiav_nf",
+    assetId: "ast_nf_current",
+    displayName: "Organisation Flag",
+    aliases: ["NF Flag", "Flag of Nordisk Flaggselskap"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_nvvv_current",
+    entityId: "ent_fiav_nvvv",
+    assetId: "ast_nvvv_current",
+    displayName: "Organisation Flag",
+    aliases: ["NVvV Flag", "Flag of Nederlandse Vereniging voor Vlaggenkunde"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_nzfa_current",
+    entityId: "ent_fiav_nzfa",
+    assetId: "ast_nzfa_current",
+    displayName: "Organisation Flag",
+    aliases: ["NZFA Flag", "Flag of New Zealand Flag Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_pfa_current",
+    entityId: "ent_fiav_pfa",
+    assetId: "ast_pfa_current",
+    displayName: "Organisation Flag",
+    aliases: ["PFA Flag", "Flag of The Portland Flag Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_ptw_current",
+    entityId: "ent_fiav_ptw",
+    assetId: "ast_ptw_current",
+    displayName: "Organisation Flag",
+    aliases: ["PTW Flag", "Flag of Polskie Towarzystwo Weksylologiczne"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_rcvh_current",
+    entityId: "ent_fiav_rcvh",
+    assetId: "ast_rcvh_current",
+    displayName: "Organisation Flag",
+    aliases: ["RCVH Flag", "Flag of Russian Centre of Vexillology and Heraldry"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_sava_current",
+    entityId: "ent_fiav_sava",
+    assetId: "ast_sava_current",
+    displayName: "Organisation Flag",
+    aliases: ["SAVA Flag", "Flag of Southern African Vexillological Association"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_schg_current",
+    entityId: "ent_fiav_schg",
+    assetId: "ast_schg_current",
+    displayName: "Organisation Flag",
+    aliases: ["SCHG Flag", "Flag of State Council of Heraldry at the Parliament of Georgia"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_sev_current",
+    entityId: "ent_fiav_sev",
+    assetId: "ast_sev_current",
+    displayName: "Organisation Flag",
+    aliases: ["SEV Flag", "Flag of Sociedad Española de Vexilología"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_sfv_current",
+    entityId: "ent_fiav_sfv",
+    assetId: "ast_sfv_current",
+    displayName: "Organisation Flag",
+    aliases: ["SFV Flag", "Flag of Société française de vexillologie"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_sghapg_current",
+    entityId: "ent_fiav_sghapg",
+    assetId: "ast_sghapg_current",
+    displayName: "Organisation Flag",
+    aliases: ["SGHAPG Flag", "Flag of Societatea de Genealogie, Heraldică şi Arhivistică \"Paul Gore\""],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_ssv_current",
+    entityId: "ent_fiav_ssv",
+    assetId: "ast_ssv_current",
+    displayName: "Organisation Flag",
+    aliases: ["SSV Flag", "Flag of Schweizerische Gesellschaft für Fahnen- und Flaggenkunde"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_svb_current",
+    entityId: "ent_fiav_svb",
+    assetId: "ast_svb_current",
+    displayName: "Organisation Flag",
+    aliases: ["SVB Flag", "Flag of Societas Vexillologica Belgica"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_svi_current",
+    entityId: "ent_fiav_svi",
+    assetId: "ast_svi_current",
+    displayName: "Organisation Flag",
+    aliases: ["SVI Flag", "Flag of Středisko vexilologických informací"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_svpr_current",
+    entityId: "ent_fiav_svpr",
+    assetId: "ast_svpr_current",
+    displayName: "Organisation Flag",
+    aliases: ["SVPR Flag", "Flag of Stichting Vlaggenparade Rotterdam"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_uht_current",
+    entityId: "ent_fiav_uht",
+    assetId: "ast_uht_current",
+    displayName: "Organisation Flag",
+    aliases: ["UHT Flag", "Flag of Українське Геральдичне Товариство"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_vast_current",
+    entityId: "ent_fiav_vast",
+    assetId: "ast_vast_current",
+    displayName: "Organisation Flag",
+    aliases: ["VAST Flag", "Flag of Vexillological Association of the State of Texas"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_fiav_wvri_current",
+    entityId: "ent_fiav_wvri",
+    assetId: "ast_wvri_current",
+    displayName: "Organisation Flag",
+    aliases: ["WVRI Flag", "Flag of World Vexillological Research Institute"],
+    tags: ["organisation", "current"],
+    startYear: null,
+    endYear: null
+  }
 ];

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg137" width="1800" height="1200" version="1.1" viewBox="0 0 1800 1200" xmlns="http://www.w3.org/2000/svg">
+ <g id="main">
+  <path id="rect1" d="m0 0h1800v1200h-1800z" fill="#000000"/>
+  <g id="cross" fill="#ffffff">
+   <path id="horiz" d="m0 400h1800v400h-1800z"/>
+   <path id="vert" d="m380 0h400v1200h-400z"/>
+  </g>
+ </g>
+</svg>

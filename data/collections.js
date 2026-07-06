@@ -5497,6 +5497,27 @@ const collections = [
       ]
     }
   },
+
+{
+    id: "col_fiav_member_association_flags",
+    name: "FIAV Member Association Flags",
+    type: "dynamic",
+    target: "entity",
+    notes: "Membership-driven collection for the asset-backed member associations of the International Federation of Vexillological Associations. Member data is stored in entityMemberships.js so the association entities can remain ordinary organisation entities.",
+    rules: {
+      all: [
+        {
+          memberOf: "ent_fiav",
+          relationshipType: "member",
+          membershipType: "member_association",
+          membershipStatus: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
   {
     id: "col_ukraine_first_level_subdivisions",
     name: "Ukrainian First-Level Subdivision Flags",

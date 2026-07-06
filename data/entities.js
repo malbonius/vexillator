@@ -13749,5 +13749,442 @@ const entities = [
   parentIds: ["ent_fifa"],
   tags: ["organisation", "international_organisation", "sport", "current"],
   defaultVariantId: null
+},
+
+/*
+  International Federation of Vexillological Associations.
+*/
+
+{
+  id: "ent_fiav",
+  name: "International Federation of Vexillological Associations",
+  aliases: ["FIAV", "Fédération internationale des associations vexillologiques"],
+  entityType: "organisation",
+  parentIds: ["ent_international_organisations"],
+  tags: ["organisation", "international_organisation", "current"],
+  defaultVariantId: "var_fiav_current"
+},
+{
+  id: "ent_fiav_aav",
+  name: "Asociación Argentina de Vexilología",
+  aliases: ["AAV", "Argentina Vexillology Association"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_aav_current"
+},
+{
+  id: "ent_fiav_acv",
+  name: "Associació Catalana de Vexil·lologia",
+  aliases: ["ACV", "Catalonian Vexillological Association"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_acv_current"
+},
+{
+  id: "ent_fiav_bda",
+  name: "The Burgee Data Archives",
+  aliases: ["BDA", "Burgee Data Archives"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_bda_current"
+},
+{
+  id: "ent_fiav_bhvs",
+  name: "Bulgarian Heraldry and Vexillology Society",
+  aliases: ["BHVS", "Българско хералдическо и вексилоложко общество"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_bhvs_current"
+},
+{
+  id: "ent_fiav_bs",
+  name: "Bandiere Storiche",
+  aliases: ["BS", "Bandiere Storiche ONLUS"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_bs_current"
+},
+{
+  id: "ent_fiav_cbfa",
+  name: "Chesapeake Bay Flag Association",
+  aliases: ["CBFA"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_cbfa_current"
+},
+{
+  id: "ent_fiav_cebed",
+  name: "Centre Belgo-Européen d’Études des Drapeaux",
+  aliases: ["CEBED", "Belgo-European Studies Center for Flags"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_cebed_current"
+},
+{
+  id: "ent_fiav_cfa",
+  name: "The Canadian Flag Association",
+  aliases: ["CFA", "L’Association canadienne de vexillologie", "Canadian Flag Association"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_cfa_current"
+},
+{
+  id: "ent_fiav_cidec",
+  name: "Fundación Centro Interdisciplinario de Estudios Culturales",
+  aliases: ["CIDEC", "Foundation Interdisciplinary Center for Cultural Studies"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_cidec_current"
+},
+{
+  id: "ent_fiav_cisv",
+  name: "Centro Italiano Studi Vessillologici",
+  aliases: ["CISV", "Italian Centre of Vexillological Studies"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_cisv_current"
+},
+{
+  id: "ent_fiav_conavex",
+  name: "Corporación Nacional de Vexilología de Chile",
+  aliases: ["CONAVEX"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_conavex_current"
+},
+{
+  id: "ent_fiav_cvs",
+  name: "Česká vexilologická společnost",
+  aliases: ["CVS", "Czech Vexillological Society"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_cvs_current"
+},
+{
+  id: "ent_fiav_dgf",
+  name: "Deutsche Gesellschaft für Flaggenkunde e.V.",
+  aliases: ["DGF", "German Vexillological Association"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_dgf_current"
+},
+{
+  id: "ent_fiav_fhf",
+  name: "Flag Heritage Foundation",
+  aliases: ["FHF"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_fhf_current"
+},
+{
+  id: "ent_fiav_fi",
+  name: "The Flag Institute",
+  aliases: ["FI", "Flag Institute"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_fi_current"
+},
+{
+  id: "ent_fiav_fotw",
+  name: "Flags of the World",
+  aliases: ["FOTW"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_fotw_current"
+},
+{
+  id: "ent_fiav_frc",
+  name: "The Flag Research Center",
+  aliases: ["FRC", "Flag Research Center"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_frc_current"
+},
+{
+  id: "ent_fiav_fsa",
+  name: "Flag Society of Australia Inc.",
+  aliases: ["FSA", "Flags Australia", "Flag Society of Australia"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_fsa_current"
+},
+{
+  id: "ent_fiav_gsi",
+  name: "Genealogical Society of Ireland Limited (Vexillology Ireland branch)",
+  aliases: ["GSI", "Cumann Geinealais na hÉireann Teoranta", "Brateolaíocht Éireann branch"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_gsi_current"
+},
+{
+  id: "ent_fiav_gwav",
+  name: "Great Waters Association of Vexillology",
+  aliases: ["GWAV"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_gwav_current"
+},
+{
+  id: "ent_fiav_hgzd",
+  name: "Hrvatsko grboslovno i zastavoslovno društvo",
+  aliases: ["HGZD", "Croatian Heraldic and Vexillological Association"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_hgzd_current"
+},
+{
+  id: "ent_fiav_hs",
+  name: "Heraldica Slovenica",
+  aliases: ["HS", "Grboslovno in zastavoslovno društvo Heraldica Slovenica", "Heraldica Slovenica Heraldry and Vexillology Society"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_hs_current"
+},
+{
+  id: "ent_fiav_hvk",
+  name: "Heraldischer Verein \"Zum Kleeblatt\" von 1888 zu Hannover e.V.",
+  aliases: ["HVK", "Heraldic Society \"The Clover Leaf\""],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_hvk_current"
+},
+{
+  id: "ent_fiav_ihw",
+  name: "Instytut Heraldyczno-Weksylologiczny",
+  aliases: ["IHW", "Institute of Heraldry and Vexillology"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_ihw_current"
+},
+{
+  id: "ent_fiav_iva",
+  name: "Indian Vexillological Association",
+  aliases: ["IVA"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_iva_current"
+},
+{
+  id: "ent_fiav_java",
+  name: "Japanese Vexillological Association",
+  aliases: ["JAVA", "日本旗章学協会", "Nihon Kishōgaku Kyōkai"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_java_current"
+},
+{
+  id: "ent_fiav_kvv",
+  name: "Kevarzhe Vannielouriezh Vreizh",
+  aliases: ["KVV", "Société Bretonne de Vexillologie", "Breton Vexillology Society"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_kvv_current"
+},
+{
+  id: "ent_fiav_nava",
+  name: "North American Vexillological Association",
+  aliases: ["NAVA"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_nava_current"
+},
+{
+  id: "ent_fiav_neva",
+  name: "New England Vexillological Association",
+  aliases: ["NEVA"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_neva_current"
+},
+{
+  id: "ent_fiav_nf",
+  name: "Nordisk Flaggselskap",
+  aliases: ["NF", "Nordisk Flagselskab", "Nordiska Flaggsällskapet", "Norræna Fánafélagið", "Pohjoismaiden Lippuseura", "Nordic Flag Society"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_nf_current"
+},
+{
+  id: "ent_fiav_nvvv",
+  name: "Nederlandse Vereniging voor Vlaggenkunde",
+  aliases: ["NVvV", "Dutch Association for Vexillology"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_nvvv_current"
+},
+{
+  id: "ent_fiav_nzfa",
+  name: "New Zealand Flag Association",
+  aliases: ["NZFA"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_nzfa_current"
+},
+{
+  id: "ent_fiav_pfa",
+  name: "The Portland Flag Association",
+  aliases: ["PFA", "Portland Flag Association"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_pfa_current"
+},
+{
+  id: "ent_fiav_ptw",
+  name: "Polskie Towarzystwo Weksylologiczne",
+  aliases: ["PTW", "Polish Vexillology Society"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_ptw_current"
+},
+{
+  id: "ent_fiav_rcvh",
+  name: "Russian Centre of Vexillology and Heraldry",
+  aliases: ["RCVH", "Российский Центр флаговедения и геральдики"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_rcvh_current"
+},
+{
+  id: "ent_fiav_sava",
+  name: "Southern African Vexillological Association",
+  aliases: ["SAVA"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_sava_current"
+},
+{
+  id: "ent_fiav_schg",
+  name: "State Council of Heraldry at the Parliament of Georgia",
+  aliases: ["SCHG", "Department of State Symbols and Heraldry of Georgia", "SSHG"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_schg_current"
+},
+{
+  id: "ent_fiav_sev",
+  name: "Sociedad Española de Vexilología",
+  aliases: ["SEV", "Spanish Society of Vexillology"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_sev_current"
+},
+{
+  id: "ent_fiav_sfv",
+  name: "Société française de vexillologie",
+  aliases: ["SFV", "French Society of Vexillology"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_sfv_current"
+},
+{
+  id: "ent_fiav_sghapg",
+  name: "Societatea de Genealogie, Heraldică şi Arhivistică \"Paul Gore\"",
+  aliases: ["SGHAPG", "Society of Genealogy, Heraldry and Archivist \"Paul Gore\""],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_sghapg_current"
+},
+{
+  id: "ent_fiav_ssv",
+  name: "Schweizerische Gesellschaft für Fahnen- und Flaggenkunde",
+  aliases: ["SSV", "Société Suisse de Vexillologie", "Societa Svizzera di Vessillologia", "Swiss Society for Vexillology"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_ssv_current"
+},
+{
+  id: "ent_fiav_svb",
+  name: "Societas Vexillologica Belgica",
+  aliases: ["SVB", "Belgium Vexillology Society"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_svb_current"
+},
+{
+  id: "ent_fiav_svi",
+  name: "Středisko vexilologických informací",
+  aliases: ["SVI", "Flag Data Centre", "Flag Data Center"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_svi_current"
+},
+{
+  id: "ent_fiav_svpr",
+  name: "Stichting Vlaggenparade Rotterdam",
+  aliases: ["SVPR", "Rotterdam Flag Parade Foundation"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_svpr_current"
+},
+{
+  id: "ent_fiav_uht",
+  name: "Ukrainian Heraldry Society",
+  aliases: ["UHT", "Ukrayins’ke Heral’dychne Tovarystvo", "Українське Геральдичне Товариство"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_uht_current"
+},
+{
+  id: "ent_fiav_vast",
+  name: "Vexillological Association of the State of Texas",
+  aliases: ["VAST"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_vast_current"
+},
+{
+  id: "ent_fiav_wvri",
+  name: "World Vexillological Research Institute",
+  aliases: ["WVRI"],
+  entityType: "organisation",
+  parentIds: ["ent_fiav"],
+  tags: ["organisation", "current"],
+  defaultVariantId: "var_fiav_wvri_current"
 }
 ];

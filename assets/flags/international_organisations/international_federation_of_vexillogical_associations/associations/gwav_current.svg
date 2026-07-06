@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="670" height="400">
+	<rect width="670" height="400" fill="#000080"/>
+	<path d="M 0,0 V 200 L 335,400 L 670,200 V 0 L 335,200 z" fill="#fff"/>
+	<path id="path3810" d="M 0,120 V 160 L 335,360 L 670,160 V 120 L 335,320 z" fill="#f00"/>
+	<use xlink:href="#path3810" y="-80"/>
+</svg>

@@ -7947,5 +7947,479 @@ const entityMemberships = Object.freeze([
     status: "current",
     startYear: null,
     endYear: null
+  }),
+
+  /*
+    International Federation of Vexillological Associations member associations.
+  */
+  Object.freeze({
+    id: "mem_fiav_aav_fiav",
+    memberEntityId: "ent_fiav_aav",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_acv_fiav",
+    memberEntityId: "ent_fiav_acv",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_bda_fiav",
+    memberEntityId: "ent_fiav_bda",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_bhvs_fiav",
+    memberEntityId: "ent_fiav_bhvs",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_bs_fiav",
+    memberEntityId: "ent_fiav_bs",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_cbfa_fiav",
+    memberEntityId: "ent_fiav_cbfa",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_cebed_fiav",
+    memberEntityId: "ent_fiav_cebed",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_cfa_fiav",
+    memberEntityId: "ent_fiav_cfa",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_cidec_fiav",
+    memberEntityId: "ent_fiav_cidec",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_cisv_fiav",
+    memberEntityId: "ent_fiav_cisv",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_conavex_fiav",
+    memberEntityId: "ent_fiav_conavex",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_cvs_fiav",
+    memberEntityId: "ent_fiav_cvs",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_dgf_fiav",
+    memberEntityId: "ent_fiav_dgf",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_fhf_fiav",
+    memberEntityId: "ent_fiav_fhf",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_fi_fiav",
+    memberEntityId: "ent_fiav_fi",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_fotw_fiav",
+    memberEntityId: "ent_fiav_fotw",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_frc_fiav",
+    memberEntityId: "ent_fiav_frc",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_fsa_fiav",
+    memberEntityId: "ent_fiav_fsa",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_gsi_fiav",
+    memberEntityId: "ent_fiav_gsi",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_gwav_fiav",
+    memberEntityId: "ent_fiav_gwav",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_hgzd_fiav",
+    memberEntityId: "ent_fiav_hgzd",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_hs_fiav",
+    memberEntityId: "ent_fiav_hs",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_hvk_fiav",
+    memberEntityId: "ent_fiav_hvk",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_ihw_fiav",
+    memberEntityId: "ent_fiav_ihw",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_iva_fiav",
+    memberEntityId: "ent_fiav_iva",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_java_fiav",
+    memberEntityId: "ent_fiav_java",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_kvv_fiav",
+    memberEntityId: "ent_fiav_kvv",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_nava_fiav",
+    memberEntityId: "ent_fiav_nava",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_neva_fiav",
+    memberEntityId: "ent_fiav_neva",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_nf_fiav",
+    memberEntityId: "ent_fiav_nf",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_nvvv_fiav",
+    memberEntityId: "ent_fiav_nvvv",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_nzfa_fiav",
+    memberEntityId: "ent_fiav_nzfa",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_pfa_fiav",
+    memberEntityId: "ent_fiav_pfa",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_ptw_fiav",
+    memberEntityId: "ent_fiav_ptw",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_rcvh_fiav",
+    memberEntityId: "ent_fiav_rcvh",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_sava_fiav",
+    memberEntityId: "ent_fiav_sava",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_schg_fiav",
+    memberEntityId: "ent_fiav_schg",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_sev_fiav",
+    memberEntityId: "ent_fiav_sev",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_sfv_fiav",
+    memberEntityId: "ent_fiav_sfv",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_sghapg_fiav",
+    memberEntityId: "ent_fiav_sghapg",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_ssv_fiav",
+    memberEntityId: "ent_fiav_ssv",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_svb_fiav",
+    memberEntityId: "ent_fiav_svb",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_svi_fiav",
+    memberEntityId: "ent_fiav_svi",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_svpr_fiav",
+    memberEntityId: "ent_fiav_svpr",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_uht_fiav",
+    memberEntityId: "ent_fiav_uht",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_vast_fiav",
+    memberEntityId: "ent_fiav_vast",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
+  }),
+  Object.freeze({
+    id: "mem_fiav_wvri_fiav",
+    memberEntityId: "ent_fiav_wvri",
+    groupEntityId: "ent_fiav",
+    relationshipType: "member",
+    membershipType: "member_association",
+    status: "current",
+    startYear: null,
+    endYear: null
   })
 ]);

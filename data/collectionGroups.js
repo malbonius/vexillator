@@ -1055,6 +1055,16 @@ const collectionGroups = [
     ]
   },
 
+
+{
+    id: "grp_fiav",
+    name: "International Federation of Vexillological Associations",
+    parentGroupIds: ["grp_international_organisations"],
+    collectionIds: [
+      "col_fiav_member_association_flags"
+    ]
+  },
+
   {
     id: "grp_arab_league",
     name: "Arab League",

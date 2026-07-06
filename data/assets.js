@@ -13,6 +13,10 @@ const assets = [
     path: "assets/flags/geography/europe/western_europe/switzerland/cantons/aargau_current.svg"
   },
   {
+    id: "ast_aav_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/aav_current.svg"
+  },
+  {
     id: "ast_aberdeenshire_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/scotland/counties/aberdeenshire_current.svg"
   },
@@ -31,6 +35,10 @@ const assets = [
   {
     id: "ast_acquaviva_current_text_removed",
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/acquaviva_current_text_removed.svg"
+  },
+  {
+    id: "ast_acv_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/acv_current.svg"
   },
   {
     id: "ast_adygea_current",
@@ -429,6 +437,10 @@ const assets = [
     path: "assets/flags/geography/europe/western_europe/germany/lander/bavaria_current_striped.svg"
   },
   {
+    id: "ast_bda_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/bda_current.svg"
+  },
+  {
     id: "ast_bedfordshire_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/bedfordshire_current.svg"
   },
@@ -507,6 +519,10 @@ const assets = [
   {
     id: "ast_bhutan_current",
     path: "assets/flags/geography/asia/southern_asia/bhutan/national/bhutan_current.svg"
+  },
+  {
+    id: "ast_bhvs_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/bhvs_current.svg"
   },
   {
     id: "ast_bihor_current",
@@ -667,6 +683,10 @@ const assets = [
   {
     id: "ast_bryansk_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/central/bryansk_current.svg"
+  },
+  {
+    id: "ast_bs_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/bs_current.svg"
   },
   {
     id: "ast_bucharest_current",
@@ -837,6 +857,14 @@ const assets = [
     path: "assets/flags/geography/caribbean/cayman_islands/national/cayman_islands_current.svg"
   },
   {
+    id: "ast_cbfa_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/cbfa_current.svg"
+  },
+  {
+    id: "ast_cebed_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/cebed_current.svg"
+  },
+  {
     id: "ast_centar_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/skopje/city_of_skopje/centar_current.svg"
   },
@@ -879,6 +907,10 @@ const assets = [
   {
     id: "ast_ceuta_current",
     path: "assets/flags/geography/africa/northern_africa/dependencies_territories/ceuta/ceuta_current.svg"
+  },
+  {
+    id: "ast_cfa_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/cfa_current.svg"
   },
   {
     id: "ast_chad_current",
@@ -953,6 +985,14 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/volga/chuvashia_current.svg"
   },
   {
+    id: "ast_cidec_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/cidec_current.svg"
+  },
+  {
+    id: "ast_cisv_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/cisv_current.svg"
+  },
+  {
     id: "ast_city_of_london_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/city_of_london_current.svg"
   },
@@ -999,6 +1039,10 @@ const assets = [
   {
     id: "ast_comoros_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/comoros/national/comoros_current.svg"
+  },
+  {
+    id: "ast_conavex_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/conavex_current.svg"
   },
   {
     id: "ast_connecticut",
@@ -1081,6 +1125,10 @@ const assets = [
     path: "assets/flags/geography/caribbean/curacao/national/curacao_current.svg"
   },
   {
+    id: "ast_cvs_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/cvs_current.svg"
+  },
+  {
     id: "ast_cyprus_current",
     path: "assets/flags/geography/asia/western_asia/cyprus/national/cyprus_current.svg"
   },
@@ -1151,6 +1199,10 @@ const assets = [
   {
     id: "ast_devon_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/devon_current.svg"
+  },
+  {
+    id: "ast_dgf_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/dgf_current.svg"
   },
   {
     id: "ast_diber_current",
@@ -1417,6 +1469,18 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/fejer_current_text_removed.svg"
   },
   {
+    id: "ast_fhf_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/fhf_current.svg"
+  },
+  {
+    id: "ast_fi_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/fi_current.svg"
+  },
+  {
+    id: "ast_fiav_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/fiav_current.svg"
+  },
+  {
     id: "ast_fier_current",
     path: "assets/flags/geography/europe/southern_europe/albania/counties/fier_current.svg"
   },
@@ -1473,6 +1537,10 @@ const assets = [
     path: "assets/flags/geography/northern_america/united_states/states/florida/florida_text_removed.svg"
   },
   {
+    id: "ast_fotw_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/fotw_current.svg"
+  },
+  {
     id: "ast_france_current",
     path: "assets/flags/geography/europe/western_europe/france/national/france_current.svg"
   },
@@ -1487,6 +1555,10 @@ const assets = [
   {
     id: "ast_franche_comte_current",
     path: "assets/flags/geography/europe/western_europe/france/regions/pre-2016/franche_comte/franche_comte_current.svg"
+  },
+  {
+    id: "ast_frc_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/frc_current.svg"
   },
   {
     id: "ast_french_guiana_current_unofficial",
@@ -1511,6 +1583,10 @@ const assets = [
   {
     id: "ast_friuli_venezia_giulia_current",
     path: "assets/flags/geography/europe/southern_europe/italy/regions/friuli_venezia_giulia/friuli_venezia_giulia_current.svg"
+  },
+  {
+    id: "ast_fsa_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/fsa_current.svg"
   },
   {
     id: "ast_fukui_current",
@@ -1693,6 +1769,10 @@ const assets = [
     path: "assets/flags/geography/europe/western_europe/netherlands/provinces/groningen_current.svg"
   },
   {
+    id: "ast_gsi_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/gsi_current.svg"
+  },
+  {
     id: "ast_guadeloupe_current_unofficial",
     path: "assets/flags/geography/caribbean/guadeloupe/national/guadeloupe_current_unofficial.svg"
   },
@@ -1755,6 +1835,10 @@ const assets = [
   {
     id: "ast_guyana_current",
     path: "assets/flags/geography/south_america/guyana/national/guyana_current.svg"
+  },
+  {
+    id: "ast_gwav_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/gwav_current.svg"
   },
   {
     id: "ast_gyor_moson_sopron_current",
@@ -1829,6 +1913,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/heves_current.svg"
   },
   {
+    id: "ast_hgzd_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/hgzd_current.svg"
+  },
+  {
     id: "ast_hiiu_current",
     path: "assets/flags/geography/europe/northern_europe/estonia/counties/hiiu_current.svg"
   },
@@ -1865,6 +1953,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/czechia/regions/hradec_kralove_current.svg"
   },
   {
+    id: "ast_hs_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/hs_current.svg"
+  },
+  {
     id: "ast_hungary_current",
     path: "assets/flags/geography/europe/eastern_europe/hungary/national/hungary_current.svg"
   },
@@ -1875,6 +1967,10 @@ const assets = [
   {
     id: "ast_huntingdonshire",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/historic/huntingdonshire.svg"
+  },
+  {
+    id: "ast_hvk_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/hvk_current.svg"
   },
   {
     id: "ast_hyogo_current",
@@ -1919,6 +2015,10 @@ const assets = [
   {
     id: "ast_idaho_text_removed",
     path: "assets/flags/geography/northern_america/united_states/states/idaho/idaho_text_removed.svg"
+  },
+  {
+    id: "ast_ihw_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/ihw_current.svg"
   },
   {
     id: "ast_ile_de_france_current",
@@ -2053,6 +2153,10 @@ const assets = [
     path: "assets/flags/international_organisations/united_nations_system/itu_current_text_removed.svg"
   },
   {
+    id: "ast_iva_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/iva_current.svg"
+  },
+  {
     id: "ast_ivano_frankivst_current",
     path: "assets/flags/geography/europe/eastern_europe/ukraine/oblasts/ivano_frankivst_current.svg"
   },
@@ -2099,6 +2203,10 @@ const assets = [
   {
     id: "ast_jasz_nagykun_szolnok_current_text_removed",
     path: "assets/flags/geography/europe/eastern_europe/hungary/counties/jasz_nagykun_szolnok_current_text_removed.svg"
+  },
+  {
+    id: "ast_java_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/java_current.svg"
   },
   {
     id: "ast_jegunovce_current",
@@ -2431,6 +2539,10 @@ const assets = [
   {
     id: "ast_kuyavian_pomeranian_current",
     path: "assets/flags/geography/europe/eastern_europe/poland/voivodeships/kuyavian_pomeranian_current.svg"
+  },
+  {
+    id: "ast_kvv_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/kvv_current.svg"
   },
   {
     id: "ast_kyiv_city_current",
@@ -3065,6 +3177,10 @@ const assets = [
     path: "assets/flags/geography/oceania/micronesian_region/nauru/national/nauru_current.svg"
   },
   {
+    id: "ast_nava_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/nava_current.svg"
+  },
+  {
     id: "ast_navarra_current",
     path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/navarra_current.svg"
   },
@@ -3095,6 +3211,10 @@ const assets = [
   {
     id: "ast_neuchatel_current",
     path: "assets/flags/geography/europe/western_europe/switzerland/cantons/neuchatel_current.svg"
+  },
+  {
+    id: "ast_neva_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/neva_current.svg"
   },
   {
     id: "ast_nevada",
@@ -3143,6 +3263,10 @@ const assets = [
   {
     id: "ast_newfoundland_and_labrador_current",
     path: "assets/flags/geography/northern_america/canada/provinces/newfoundland_and_labrador_current.svg"
+  },
+  {
+    id: "ast_nf_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/nf_current.svg"
   },
   {
     id: "ast_nicaragua_current",
@@ -3355,6 +3479,14 @@ const assets = [
   {
     id: "ast_nunavut_current",
     path: "assets/flags/geography/northern_america/canada/territories/nunavut_current.svg"
+  },
+  {
+    id: "ast_nvvv_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/nvvv_current.svg"
+  },
+  {
+    id: "ast_nzfa_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/nzfa_current.svg"
   },
   {
     id: "ast_obwalden_current",
@@ -3621,6 +3753,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/skopje/petrovec_current_text_removed.svg"
   },
   {
+    id: "ast_pfa_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/pfa_current.svg"
+  },
+  {
     id: "ast_philippines_current",
     path: "assets/flags/geography/asia/south_eastern_asia/philippines/national/philippines_current.svg"
   },
@@ -3737,6 +3873,10 @@ const assets = [
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/northwestern/pskov_current.svg"
   },
   {
+    id: "ast_ptw_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/ptw_current.svg"
+  },
+  {
     id: "ast_puerto_rico_current",
     path: "assets/flags/geography/caribbean/puerto_rico/national/puerto_rico_current.svg"
   },
@@ -3779,6 +3919,10 @@ const assets = [
   {
     id: "ast_razgrad_current_text_removed",
     path: "assets/flags/geography/europe/eastern_europe/bulgaria/provinces/razgrad_current_text_removed.svg"
+  },
+  {
+    id: "ast_rcvh_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/rcvh_current.svg"
   },
   {
     id: "ast_republic_of_the_congo_current",
@@ -4017,6 +4161,10 @@ const assets = [
     path: "assets/flags/geography/asia/western_asia/saudi_arabia/national/saudi_arabia_current.svg"
   },
   {
+    id: "ast_sava_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/sava_current.svg"
+  },
+  {
     id: "ast_saxony_anhalt_current",
     path: "assets/flags/geography/europe/western_europe/germany/lander/saxony_anhalt_current.svg"
   },
@@ -4027,6 +4175,10 @@ const assets = [
   {
     id: "ast_schaffhausen_current",
     path: "assets/flags/geography/europe/western_europe/switzerland/cantons/schaffhausen_current.svg"
+  },
+  {
+    id: "ast_schg_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/schg_current.svg"
   },
   {
     id: "ast_schleswig_holstein_current",
@@ -4061,12 +4213,24 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/san_marino/castelli/serravalle_current_text_removed.svg"
   },
   {
+    id: "ast_sev_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/sev_current.svg"
+  },
+  {
     id: "ast_sevastopol_current",
     path: "assets/flags/geography/europe/eastern_europe/ukraine/cities/sevastopol_current.svg"
   },
   {
     id: "ast_seychelles_current",
     path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/seychelles/national/seychelles_current.svg"
+  },
+  {
+    id: "ast_sfv_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/sfv_current.svg"
+  },
+  {
+    id: "ast_sghapg_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/sghapg_current.svg"
   },
   {
     id: "ast_shetland_current",
@@ -4309,6 +4473,10 @@ const assets = [
     path: "assets/flags/geography/asia/southern_asia/sri_lanka/national/sri_lanka_current.svg"
   },
   {
+    id: "ast_ssv_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/ssv_current.svg"
+  },
+  {
     id: "ast_st_gallen_current",
     path: "assets/flags/geography/europe/western_europe/switzerland/cantons/st_gallen_current.svg"
   },
@@ -4405,8 +4573,20 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/skopje/city_of_skopje/suto_orizari_current.svg"
   },
   {
+    id: "ast_svb_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/svb_current.svg"
+  },
+  {
     id: "ast_sverdlovsk_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/ural/sverdlovsk_current.svg"
+  },
+  {
+    id: "ast_svi_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/svi_current.svg"
+  },
+  {
+    id: "ast_svpr_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/svpr_current.svg"
   },
   {
     id: "ast_sweden_current",
@@ -4689,6 +4869,10 @@ const assets = [
     path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/uganda/national/uganda_current.svg"
   },
   {
+    id: "ast_uht_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/uht_current.svg"
+  },
+  {
     id: "ast_ukraine_current",
     path: "assets/flags/geography/europe/eastern_europe/ukraine/national/ukraine_current.svg"
   },
@@ -4843,6 +5027,10 @@ const assets = [
   {
     id: "ast_vasilevo_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/vasilevo_current.svg"
+  },
+  {
+    id: "ast_vast_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/vast_current.svg"
   },
   {
     id: "ast_vasterbotten_current",
@@ -5123,6 +5311,10 @@ const assets = [
   {
     id: "ast_worcestershire_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/worcestershire_current.svg"
+  },
+  {
+    id: "ast_wvri_current",
+    path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/wvri_current.svg"
   },
   {
     id: "ast_wyoming",
