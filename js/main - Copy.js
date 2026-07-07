@@ -1043,7 +1043,7 @@ function showSystemStatus(index) {
 */
 function refreshAfterSelectionChange(options = {}) {
   const {
-    showGallery = false
+    showGallery = true
   } = options;
   renderBrowseView();
   renderCurrentSelection();
@@ -1061,9 +1061,8 @@ function refreshAfterSelectionChange(options = {}) {
   }
 
   /*
-    Selection changes now stay in the user's current workspace by default.
-    Call refreshAfterSelectionChange({ showGallery: true }) only for actions
-    that deliberately want to jump to Gallery.
+    After changing collection selection, show the gallery so the user can
+    immediately see the result of the selection.
   */
   if (showGallery) {
     closeBrowsePanel({
