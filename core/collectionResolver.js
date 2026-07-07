@@ -566,7 +566,6 @@ function createDynamicMemberId(targetId, collectionId) {
   - constituentOf
   - memberOf / relationshipType / membershipType / membershipStatus
   - entityTypeIs
-  - hasColour / hasColours / dominantColour / colourCount
 */
 function entityMatchesRules(entity, ruleSet, dataIndex) {
   if (!ruleSet || typeof ruleSet !== "object") {
@@ -689,14 +688,6 @@ function entityMatchesRules(entity, ruleSet, dataIndex) {
     );
   }
 
-  if (ruleContainsVisualColourCriteria(ruleSet)) {
-    return entityDefaultAssetMatchesVisualColourCriteria(
-      entity,
-      ruleSet,
-      dataIndex
-    );
-  }
-
   console.warn("Unknown entity rule:", ruleSet);
   return false;
 }
@@ -715,7 +706,6 @@ function entityMatchesRules(entity, ruleSet, dataIndex) {
   - variantEntityMemberOf / variantEntityRelationshipType
   - variantEntityMembershipType / variantEntityMembershipStatus
   - variantEntityTypeIs
-  - hasColour / hasColours / dominantColour / colourCount
 */
 function variantMatchesRules(variant, ruleSet, dataIndex) {
   const entity = dataIndex.entitiesById[variant.entityId];
@@ -813,181 +803,8 @@ function variantMatchesRules(variant, ruleSet, dataIndex) {
     );
   }
 
-  if (ruleContainsVisualColourCriteria(ruleSet)) {
-    return variantAssetMatchesVisualColourCriteria(
-      variant,
-      ruleSet,
-      dataIndex
-    );
-  }
-
   console.warn("Unknown variant rule:", ruleSet);
   return false;
-}
-
-
-function ruleContainsVisualColourCriteria(ruleSet) {
-  return Boolean(
-    Object.prototype.hasOwnProperty.call(ruleSet, "hasColour") ||
-    Object.prototype.hasOwnProperty.call(ruleSet, "hasColours") ||
-    Object.prototype.hasOwnProperty.call(ruleSet, "dominantColour") ||
-    Object.prototype.hasOwnProperty.call(ruleSet, "colourCount")
-  );
-}
-
-function entityDefaultAssetMatchesVisualColourCriteria(
-  entity,
-  ruleSet,
-  dataIndex
-) {
-  const defaultVariant = entity.defaultVariantId
-    ? dataIndex.variantsById?.[entity.defaultVariantId]
-    : null;
-
-  if (!defaultVariant || defaultVariant.entityId !== entity.id) {
-    return false;
-  }
-
-  return assetMatchesVisualColourCriteria(
-    defaultVariant.assetId,
-    ruleSet,
-    dataIndex
-  );
-}
-
-function variantAssetMatchesVisualColourCriteria(
-  variant,
-  ruleSet,
-  dataIndex
-) {
-  return assetMatchesVisualColourCriteria(
-    variant.assetId,
-    ruleSet,
-    dataIndex
-  );
-}
-
-function assetMatchesVisualColourCriteria(
-  assetId,
-  ruleSet,
-  dataIndex
-) {
-  const metadata = dataIndex.assetVisualMetadataByAssetId?.[assetId];
-
-  if (!metadata) {
-    return false;
-  }
-
-  const colours = new Set(
-    normaliseVisualColourArray(metadata.colours)
-  );
-
-  const dominantColours = new Set(
-    normaliseVisualColourArray(metadata.dominantColours)
-  );
-
-  if (Object.prototype.hasOwnProperty.call(ruleSet, "hasColour")) {
-    const colour = normaliseResolverVisualColourName(ruleSet.hasColour);
-
-    if (!colour || !colours.has(colour)) {
-      return false;
-    }
-  }
-
-  if (Object.prototype.hasOwnProperty.call(ruleSet, "hasColours")) {
-    if (!Array.isArray(ruleSet.hasColours)) {
-      return false;
-    }
-
-    const requiredColours = normaliseVisualColourArray(
-      ruleSet.hasColours
-    );
-
-    if (
-      requiredColours.length !== ruleSet.hasColours.length ||
-      !requiredColours.every(colour => colours.has(colour))
-    ) {
-      return false;
-    }
-  }
-
-  if (Object.prototype.hasOwnProperty.call(ruleSet, "dominantColour")) {
-    const colour = normaliseResolverVisualColourName(
-      ruleSet.dominantColour
-    );
-
-    if (!colour || !dominantColours.has(colour)) {
-      return false;
-    }
-  }
-
-  if (Object.prototype.hasOwnProperty.call(ruleSet, "colourCount")) {
-    const colourCount = Number.isInteger(metadata.colourCount)
-      ? metadata.colourCount
-      : colours.size;
-
-    if (colourCount !== ruleSet.colourCount) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-function normaliseVisualColourArray(colours) {
-  if (!Array.isArray(colours)) {
-    return [];
-  }
-
-  const seen = new Set();
-  const normalisedColours = [];
-
-  colours.forEach(colour => {
-    const normalisedColour = normaliseResolverVisualColourName(colour);
-
-    if (!normalisedColour || seen.has(normalisedColour)) {
-      return;
-    }
-
-    seen.add(normalisedColour);
-    normalisedColours.push(normalisedColour);
-  });
-
-  return normalisedColours;
-}
-
-function normaliseResolverVisualColourName(colour) {
-  if (typeof colour !== "string") {
-    return null;
-  }
-
-  const normalisedColour = colour.trim().toLowerCase();
-
-  const aliases = {
-    gray: "grey"
-  };
-
-  const canonicalColour = aliases[normalisedColour] ?? normalisedColour;
-
-  const supportedColours = [
-    "black",
-    "white",
-    "grey",
-    "red",
-    "orange",
-    "yellow",
-    "green",
-    "blue",
-    "purple",
-    "pink",
-    "brown",
-    "gold",
-    "silver"
-  ];
-
-  return supportedColours.includes(canonicalColour)
-    ? canonicalColour
-    : null;
 }
 
 function entityRuleContainsMembershipCriteria(ruleSet) {
