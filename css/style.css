@@ -2214,10 +2214,29 @@ body.shell-drawer-open {
   font: inherit;
 }
 
+.quiz-question-count-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quiz-question-count-input {
+  flex: 0 0 7rem;
+  width: 7rem;
+  max-width: 100%;
+}
+
 .quiz-controls button {
   padding: 0.55rem;
   font: inherit;
   cursor: pointer;
+}
+
+.quiz-max-questions-button {
+  flex: 0 0 auto;
+  width: auto;
+  white-space: nowrap;
 }
 
 /* Main quiz card */

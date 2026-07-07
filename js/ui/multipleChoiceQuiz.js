@@ -12,10 +12,43 @@
 */
 function setupMultipleChoiceQuiz() {
   const startButton = document.getElementById("startMultipleChoiceQuizButton");
+  const maxQuestionsButton = document.getElementById(
+    "multipleChoiceMaxQuestionsButton"
+  );
 
   startButton.addEventListener("click", () => {
     startMultipleChoiceQuiz();
   });
+
+  if (maxQuestionsButton) {
+    maxQuestionsButton.addEventListener("click", () => {
+      setMultipleChoiceQuestionCountToMaximum();
+    });
+  }
+}
+
+/*
+  Uses the current input maximum as the requested quiz length.
+
+  main.js updates the max value whenever the active selection changes, so this
+  button remains data-driven rather than hardcoding a question count.
+*/
+function setMultipleChoiceQuestionCountToMaximum() {
+  const questionCountInput = document.getElementById(
+    "multipleChoiceQuestionCountInput"
+  );
+
+  if (!questionCountInput) {
+    return;
+  }
+
+  const maximumQuestionCount = Number(questionCountInput.max);
+
+  if (!Number.isFinite(maximumQuestionCount)) {
+    return;
+  }
+
+  questionCountInput.value = Math.max(0, maximumQuestionCount);
 }
 
 /*

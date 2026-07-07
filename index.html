@@ -386,13 +386,24 @@
         <div class="quiz-controls">
           <label for="typingQuestionCountInput">Questions</label>
 
-          <input
-            id="typingQuestionCountInput"
-            type="number"
-            min="1"
-            max="100"
-            value="10"
-          >
+          <div class="quiz-question-count-control">
+            <input
+              id="typingQuestionCountInput"
+              class="quiz-question-count-input"
+              type="number"
+              min="1"
+              max="100"
+              value="10"
+            >
+
+            <button
+              id="typingMaxQuestionsButton"
+              class="quiz-max-questions-button"
+              type="button"
+            >
+              Max
+            </button>
+          </div>
 
           <button id="startTypingQuizButton" type="button">
             Start Typing Quiz
@@ -426,13 +437,24 @@
         <div class="quiz-controls">
           <label for="multipleChoiceQuestionCountInput">Questions</label>
 
-          <input
-            id="multipleChoiceQuestionCountInput"
-            type="number"
-            min="1"
-            max="100"
-            value="10"
-          >
+          <div class="quiz-question-count-control">
+            <input
+              id="multipleChoiceQuestionCountInput"
+              class="quiz-question-count-input"
+              type="number"
+              min="1"
+              max="100"
+              value="10"
+            >
+
+            <button
+              id="multipleChoiceMaxQuestionsButton"
+              class="quiz-max-questions-button"
+              type="button"
+            >
+              Max
+            </button>
+          </div>
 
           <button id="startMultipleChoiceQuizButton" type="button">
             Start Multiple-Choice Quiz
