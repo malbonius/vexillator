@@ -842,7 +842,7 @@ const assets = [
   },
   {
     id: "ast_castilla_la_mancha_current_alt",
-    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/castilla_la_mancha_current_alt.svg"
+    path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/castilla_la_mancha_current_alt.png"
   },
   {
     id: "ast_castilla_y_leon_current",
@@ -4463,6 +4463,10 @@ const assets = [
   {
     id: "ast_spain_current",
     path: "assets/flags/geography/europe/southern_europe/spain/national/spain_current.svg"
+  },
+  {
+    id: "ast_spain_current_alt",
+    path: "assets/flags/geography/europe/southern_europe/spain/national/spain_current_alt.svg"
   },
   {
     id: "ast_split_dalmatia_current",
