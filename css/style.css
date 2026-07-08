@@ -3764,3 +3764,41 @@ html.theme-dark {
     display: grid;
   }
 }
+
+/*
+  Quiz Builder visual colour filters.
+
+  These are per-rule filters using generated main visual colours only.
+  Accent, minor and trace colour controls can be added later without changing
+  the current layout.
+*/
+.random-quiz-visual-colour-section {
+  grid-column: 1 / -1;
+}
+
+.random-quiz-colour-match-mode {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+
+.random-quiz-colour-match-label {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.random-quiz-colour-match-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr));
+  gap: 0.45rem 0.65rem;
+}
+
+.random-quiz-colour-option-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 8.5rem), 1fr));
+}
+
+.random-quiz-radio {
+  align-items: center;
+}
+

@@ -102,6 +102,21 @@ const RANDOM_QUIZ_TYPE_OPTIONS = [
   }
 ];
 
+const RANDOM_QUIZ_VISUAL_COLOUR_OPTIONS = Object.freeze([
+  { key: "red", label: "Red" },
+  { key: "white", label: "White" },
+  { key: "blue", label: "Blue" },
+  { key: "green", label: "Green" },
+  { key: "gold", label: "Gold" },
+  { key: "black", label: "Black" },
+  { key: "orange", label: "Orange" },
+  { key: "brown", label: "Brown" },
+  { key: "silver", label: "Silver" },
+  { key: "grey", label: "Grey" },
+  { key: "purple", label: "Purple" },
+  { key: "pink", label: "Pink" }
+]);
+
 function normaliseRandomQuizRule(rule = {}) {
   const regionEntityIds = Array.isArray(rule.regionEntityIds)
     ? rule.regionEntityIds.filter(value => typeof value === "string")
@@ -109,10 +124,23 @@ function normaliseRandomQuizRule(rule = {}) {
   const typeKeys = Array.isArray(rule.typeKeys)
     ? rule.typeKeys.filter(value => typeof value === "string")
     : [];
+  const allowedColourKeys = new Set(
+    RANDOM_QUIZ_VISUAL_COLOUR_OPTIONS.map(option => option.key)
+  );
+  const colourKeys = Array.isArray(rule.colourKeys)
+    ? rule.colourKeys.filter(value => {
+        return typeof value === "string" && allowedColourKeys.has(value);
+      })
+    : [];
+  const colourMatchMode = rule.colourMatchMode === "all"
+    ? "all"
+    : "any";
 
   return {
     regionEntityIds: Array.from(new Set(regionEntityIds)),
-    typeKeys: Array.from(new Set(typeKeys))
+    typeKeys: Array.from(new Set(typeKeys)),
+    colourKeys: Array.from(new Set(colourKeys)),
+    colourMatchMode
   };
 }
 
@@ -365,6 +393,10 @@ function getRandomQuizAvailableTypeOptions() {
   return RANDOM_QUIZ_TYPE_OPTIONS.slice();
 }
 
+function getRandomQuizAvailableVisualColourOptions() {
+  return RANDOM_QUIZ_VISUAL_COLOUR_OPTIONS.slice();
+}
+
 function buildRandomQuizEntityIds(filters, index) {
   const normalisedFilters = normaliseRandomQuizFilters(filters);
 
@@ -452,7 +484,49 @@ function entityMatchesRandomQuizRule(entity, rule, index) {
     return false;
   }
 
-  return true;
+  return entityMatchesRandomQuizVisualColours(entity, rule, index);
+}
+
+function entityMatchesRandomQuizVisualColours(entity, rule, index) {
+  if (!Array.isArray(rule.colourKeys) || rule.colourKeys.length === 0) {
+    return true;
+  }
+
+  const variant = index.variantsById[entity.defaultVariantId];
+  const colours = getRandomQuizVariantMainVisualColours(variant, index);
+
+  if (colours.length === 0) {
+    return false;
+  }
+
+  const colourSet = new Set(colours);
+
+  if (rule.colourMatchMode === "all") {
+    return rule.colourKeys.every(colourKey => {
+      return colourSet.has(colourKey);
+    });
+  }
+
+  return rule.colourKeys.some(colourKey => {
+    return colourSet.has(colourKey);
+  });
+}
+
+function getRandomQuizVariantMainVisualColours(variant, index) {
+  if (!variant) {
+    return [];
+  }
+
+  if (typeof getVariantVisualColours === "function") {
+    return getVariantVisualColours(index, variant);
+  }
+
+  const metadata = index.assetVisualMetadataByAssetId?.[variant.assetId] ??
+    null;
+
+  return Array.isArray(metadata?.colours)
+    ? metadata.colours
+    : [];
 }
 
 function entityMatchesRandomQuizRegion(entity, rule, index) {

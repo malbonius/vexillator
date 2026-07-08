@@ -32,7 +32,15 @@ function createRandomQuizRuleState(options = {}) {
       Array.isArray(options.typeKeys)
         ? options.typeKeys
         : []
-    )
+    ),
+    colourKeys: new Set(
+      Array.isArray(options.colourKeys)
+        ? options.colourKeys
+        : []
+    ),
+    colourMatchMode: options.colourMatchMode === "all"
+      ? "all"
+      : "any"
   };
 }
 
@@ -71,6 +79,18 @@ function ensureRandomQuizRulesState() {
       rule.regionEntityIds instanceof Set &&
       rule.typeKeys instanceof Set
     ) {
+      if (!(rule.colourKeys instanceof Set)) {
+        rule.colourKeys = new Set(
+          Array.isArray(rule.colourKeys)
+            ? rule.colourKeys
+            : []
+        );
+      }
+
+      rule.colourMatchMode = rule.colourMatchMode === "all"
+        ? "all"
+        : "any";
+
       return rule;
     }
 
@@ -84,11 +104,18 @@ function ensureRandomQuizRulesState() {
       : Array.isArray(rule?.typeKeys)
         ? rule.typeKeys
         : [];
+    const colourKeys = rule?.colourKeys instanceof Set
+      ? Array.from(rule.colourKeys)
+      : Array.isArray(rule?.colourKeys)
+        ? rule.colourKeys
+        : [];
 
     return createRandomQuizRuleState({
       id: rule?.id,
       regionEntityIds,
-      typeKeys
+      typeKeys,
+      colourKeys,
+      colourMatchMode: rule?.colourMatchMode
     });
   });
 }
@@ -211,8 +238,14 @@ function createRandomQuizRuleElement(rule, ruleIndex) {
   typeSectionElement.appendChild(typeNoteElement);
   typeSectionElement.appendChild(typeOptionsElement);
 
+  const colourSectionElement = createRandomQuizVisualColourSection(
+    rule,
+    ruleIndex
+  );
+
   filterGridElement.appendChild(scopeSectionElement);
   filterGridElement.appendChild(typeSectionElement);
+  filterGridElement.appendChild(colourSectionElement);
 
   contentElement.appendChild(actionsElement);
   contentElement.appendChild(filterGridElement);
@@ -221,6 +254,86 @@ function createRandomQuizRuleElement(rule, ruleIndex) {
   ruleElement.appendChild(contentElement);
 
   return ruleElement;
+}
+
+function createRandomQuizVisualColourSection(rule, ruleIndex) {
+  const colourSectionElement = document.createElement("section");
+  colourSectionElement.className =
+    "random-quiz-rule-filter-section random-quiz-visual-colour-section";
+
+  const colourHeadingElement = document.createElement("h4");
+  colourHeadingElement.textContent = "Visual colours";
+
+  const colourNoteElement = document.createElement("p");
+  colourNoteElement.className = "panel-note";
+  colourNoteElement.textContent =
+    "Uses main generated colours only. Accent, minor and trace colours are ignored for now.";
+
+  const matchModeElement = document.createElement("div");
+  matchModeElement.className = "random-quiz-colour-match-mode";
+
+  const matchModeLabelElement = document.createElement("p");
+  matchModeLabelElement.className = "random-quiz-colour-match-label";
+  matchModeLabelElement.textContent = "Match";
+
+  const matchModeOptionsElement = document.createElement("div");
+  matchModeOptionsElement.className = "random-quiz-colour-match-options";
+
+  [
+    { value: "any", label: "Any selected colour" },
+    { value: "all", label: "All selected colours" }
+  ].forEach(option => {
+    matchModeOptionsElement.appendChild(
+      createRandomQuizRadioOption({
+        inputName: `randomQuizColourMatch_${rule.id}`,
+        value: option.value,
+        label: option.label,
+        checked: rule.colourMatchMode === option.value,
+        onChange: event => {
+          if (!event.target.checked) {
+            return;
+          }
+
+          rule.colourMatchMode = option.value;
+          handleRandomQuizRuleChange(rule, ruleIndex);
+        }
+      })
+    );
+  });
+
+  matchModeElement.appendChild(matchModeLabelElement);
+  matchModeElement.appendChild(matchModeOptionsElement);
+
+  const colourOptionsElement = document.createElement("div");
+  colourOptionsElement.className =
+    "random-quiz-option-grid random-quiz-colour-option-grid";
+
+  getRandomQuizAvailableVisualColourOptions().forEach(option => {
+    colourOptionsElement.appendChild(
+      createRandomQuizCheckbox({
+        inputName: `randomQuizVisualColour_${rule.id}`,
+        value: option.key,
+        label: option.label,
+        checked: rule.colourKeys.has(option.key),
+        onChange: event => {
+          updateRandomQuizSetFromCheckbox(
+            rule.colourKeys,
+            option.key,
+            event.target.checked
+          );
+
+          handleRandomQuizRuleChange(rule, ruleIndex);
+        }
+      })
+    );
+  });
+
+  colourSectionElement.appendChild(colourHeadingElement);
+  colourSectionElement.appendChild(colourNoteElement);
+  colourSectionElement.appendChild(matchModeElement);
+  colourSectionElement.appendChild(colourOptionsElement);
+
+  return colourSectionElement;
 }
 
 function createRandomQuizRegionGroupElement(group, rule, ruleIndex) {
@@ -283,11 +396,38 @@ function createRandomQuizCheckbox(options) {
   return labelElement;
 }
 
+function createRandomQuizRadioOption(options) {
+  const labelElement = document.createElement("label");
+  labelElement.className = "random-quiz-checkbox random-quiz-radio";
+
+  const inputElement = document.createElement("input");
+  inputElement.type = "radio";
+  inputElement.name = options.inputName;
+  inputElement.value = options.value;
+  inputElement.checked = options.checked;
+
+  inputElement.addEventListener("change", options.onChange);
+
+  const textElement = document.createElement("span");
+  textElement.textContent = options.label;
+
+  labelElement.appendChild(inputElement);
+  labelElement.appendChild(textElement);
+
+  return labelElement;
+}
+
 function getRandomQuizRuleSummaryText(rule, ruleIndex) {
   const scopeText = getRandomQuizRuleScopeSummary(rule);
   const typeText = getRandomQuizRuleTypeSummary(rule);
+  const colourText = getRandomQuizRuleColourSummary(rule);
+  const summaryParts = [scopeText, typeText];
 
-  return `Include rule ${ruleIndex + 1} — ${scopeText} + ${typeText}`;
+  if (colourText) {
+    summaryParts.push(colourText);
+  }
+
+  return `Include rule ${ruleIndex + 1} — ${summaryParts.join(" + ")}`;
 }
 
 function getRandomQuizRuleScopeSummary(rule) {
@@ -330,6 +470,33 @@ function getRandomQuizRuleTypeSummary(rule) {
   });
 
   return formatRandomQuizRuleSummaryLabels(labels, "type", "types");
+}
+
+function getRandomQuizRuleColourSummary(rule) {
+  const selectedKeys = Array.from(rule.colourKeys);
+
+  if (selectedKeys.length === 0) {
+    return null;
+  }
+
+  const availableOptionsByKey = new Map(
+    getRandomQuizAvailableVisualColourOptions().map(option => {
+      return [option.key, option.label.toLowerCase()];
+    })
+  );
+
+  const labels = selectedKeys.map(colourKey => {
+    return availableOptionsByKey.get(colourKey) || colourKey;
+  });
+  const matchText = rule.colourMatchMode === "all"
+    ? "all colours"
+    : "any colour";
+
+  return `${matchText}: ${formatRandomQuizRuleSummaryLabels(
+    labels,
+    "colour",
+    "colours"
+  )}`;
 }
 
 function formatRandomQuizRuleSummaryLabels(
@@ -456,7 +623,11 @@ function getRandomQuizFiltersFromState() {
   return {
     rules: appState.randomQuiz.rules.map(rule => ({
       regionEntityIds: Array.from(rule.regionEntityIds),
-      typeKeys: Array.from(rule.typeKeys)
+      typeKeys: Array.from(rule.typeKeys),
+      colourKeys: Array.from(rule.colourKeys),
+      colourMatchMode: rule.colourMatchMode === "all"
+        ? "all"
+        : "any"
     })),
     includeDisputed: appState.randomQuiz.includeDisputed
   };
@@ -585,7 +756,13 @@ function cloneRandomQuizFilters(filters) {
             : [],
           typeKeys: Array.isArray(rule.typeKeys)
             ? [...rule.typeKeys]
-            : []
+            : [],
+          colourKeys: Array.isArray(rule.colourKeys)
+            ? [...rule.colourKeys]
+            : [],
+          colourMatchMode: rule.colourMatchMode === "all"
+            ? "all"
+            : "any"
         }))
       : [],
     includeDisputed: Boolean(filters?.includeDisputed)
