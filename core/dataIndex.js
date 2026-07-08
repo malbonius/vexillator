@@ -19,6 +19,13 @@ function buildDataIndex(rawData) {
     entityMembershipsById: {},
     entityMembershipsByMemberEntityId: {},
     entityMembershipsByGroupEntityId: {},
+    assetVisualMetadataByAssetId: {},
+    variantVisualMetadataByVariantId: {},
+    visualMetadata: {
+      colourFamilyAliases: {},
+      assets: [],
+      variants: []
+    },
     errors: [],
     warnings: []
   };
@@ -52,11 +59,13 @@ function buildDataIndex(rawData) {
   );
 
   indexEntityMemberships(rawData.entityMemberships ?? [], index);
+  indexVisualMetadata(getRawVisualMetadata(rawData), index);
 
   validateAssets(rawData.assets, index);
   validateEntities(rawData.entities, index, rawData.tagRegistry);
   validateVariants(rawData.variants, index, rawData.tagRegistry);
   validateEntityMemberships(rawData.entityMemberships ?? [], index);
+  validateVisualMetadata(index.visualMetadata, index);
   validateCollections(rawData.collections, index);
   validateCollectionGroups(rawData.collectionGroups, index);
   validateQuizPresets(rawData.quizPresets, index);
@@ -133,6 +142,601 @@ function addMembershipToLookup(lookup, entityId, membership) {
   }
 
   lookup[entityId].push(membership);
+}
+
+
+/*
+  Visual metadata is optional, generated asset-level data.
+
+  It is deliberately kept outside variants.js. At this stage it is indexed and
+  exposed for diagnostics/future filters only; it does not affect selection,
+  quiz generation or collection membership.
+*/
+function getRawVisualMetadata(rawData) {
+  if (
+    rawData &&
+    rawData.visualMetadata &&
+    typeof rawData.visualMetadata === "object" &&
+    !Array.isArray(rawData.visualMetadata)
+  ) {
+    return rawData.visualMetadata;
+  }
+
+  if (typeof visualMetadata !== "undefined") {
+    return visualMetadata;
+  }
+
+  return {
+    colourFamilyAliases: {},
+    assets: [],
+    variants: []
+  };
+}
+
+function indexVisualMetadata(rawVisualMetadata, index) {
+  const visualMetadataData = normaliseVisualMetadata(rawVisualMetadata);
+
+  index.visualMetadata = visualMetadataData;
+
+  indexArrayByField(
+    visualMetadataData.assets,
+    index.assetVisualMetadataByAssetId,
+    "assetId",
+    "asset visual metadata",
+    index.errors
+  );
+
+  indexArrayByField(
+    visualMetadataData.variants,
+    index.variantVisualMetadataByVariantId,
+    "variantId",
+    "variant visual metadata",
+    index.errors
+  );
+}
+
+function normaliseVisualMetadata(rawVisualMetadata) {
+  if (
+    !rawVisualMetadata ||
+    typeof rawVisualMetadata !== "object" ||
+    Array.isArray(rawVisualMetadata)
+  ) {
+    return {
+      colourFamilyAliases: {},
+      assets: [],
+      variants: []
+    };
+  }
+
+  return {
+    colourFamilyAliases:
+      rawVisualMetadata.colourFamilyAliases &&
+      typeof rawVisualMetadata.colourFamilyAliases === "object" &&
+      !Array.isArray(rawVisualMetadata.colourFamilyAliases)
+        ? rawVisualMetadata.colourFamilyAliases
+        : {},
+    assets: Array.isArray(rawVisualMetadata.assets)
+      ? rawVisualMetadata.assets
+      : [],
+    variants: Array.isArray(rawVisualMetadata.variants)
+      ? rawVisualMetadata.variants
+      : []
+  };
+}
+
+function indexArrayByField(
+  items,
+  targetMap,
+  fieldName,
+  itemType,
+  errors
+) {
+  if (!Array.isArray(items)) {
+    errors.push(`Expected ${itemType} data to be an array.`);
+    return;
+  }
+
+  items.forEach(item => {
+    if (!item || typeof item !== "object") {
+      errors.push(`Invalid ${itemType} entry found.`);
+      return;
+    }
+
+    const key = item[fieldName];
+
+    if (typeof key !== "string" || key.trim() === "") {
+      errors.push(`Missing ${fieldName} on ${itemType}.`);
+      return;
+    }
+
+    if (targetMap[key]) {
+      errors.push(
+        `Duplicate ${itemType} ${fieldName} found: ${key}`
+      );
+      return;
+    }
+
+    targetMap[key] = item;
+  });
+}
+
+function validateVisualMetadata(visualMetadataData, index) {
+  if (
+    !visualMetadataData ||
+    typeof visualMetadataData !== "object" ||
+    Array.isArray(visualMetadataData)
+  ) {
+    index.errors.push("visualMetadata must be an object when provided.");
+    return;
+  }
+
+  validateVisualColourFamilyAliases(
+    visualMetadataData.colourFamilyAliases,
+    index.errors
+  );
+
+  validateAssetVisualMetadataList(
+    visualMetadataData.assets,
+    index
+  );
+
+  validateVariantVisualMetadataList(
+    visualMetadataData.variants,
+    index
+  );
+}
+
+function validateVisualColourFamilyAliases(aliases, errors) {
+  if (aliases === undefined) {
+    return;
+  }
+
+  if (!aliases || typeof aliases !== "object" || Array.isArray(aliases)) {
+    errors.push("visualMetadata.colourFamilyAliases must be an object when provided.");
+    return;
+  }
+
+  Object.entries(aliases).forEach(([alias, canonical]) => {
+    if (!normaliseVisualColourName(alias)) {
+      errors.push(
+        `visualMetadata.colourFamilyAliases contains unsupported alias: ${alias}`
+      );
+    }
+
+    if (!normaliseVisualColourName(canonical)) {
+      errors.push(
+        `visualMetadata.colourFamilyAliases.${alias} references unsupported colour: ${canonical}`
+      );
+    }
+  });
+}
+
+function validateAssetVisualMetadataList(assetMetadataList, index) {
+  if (!Array.isArray(assetMetadataList)) {
+    index.errors.push("visualMetadata.assets must be an array.");
+    return;
+  }
+
+  assetMetadataList.forEach(metadata => {
+    if (!metadata || typeof metadata !== "object") {
+      index.errors.push("Invalid asset visual metadata entry found.");
+      return;
+    }
+
+    const ownerLabel =
+      `Asset visual metadata ${metadata.assetId ?? "<missing assetId>"}`;
+
+    if (
+      typeof metadata.assetId !== "string" ||
+      metadata.assetId.trim() === ""
+    ) {
+      index.errors.push(`${ownerLabel} has no valid assetId.`);
+    } else if (!index.assetsById[metadata.assetId]) {
+      index.errors.push(
+        `${ownerLabel} references missing asset: ${metadata.assetId}`
+      );
+    }
+
+    validateVisualColourList(
+      metadata.colours,
+      `${ownerLabel} colours`,
+      index.errors,
+      false
+    );
+
+    [
+      "accentColours",
+      "minorColours",
+      "traceColours",
+      "detectedColourFamilies",
+      "sourceColourFamilies"
+    ].forEach(fieldName => {
+      validateVisualColourList(
+        metadata[fieldName],
+        `${ownerLabel} ${fieldName}`,
+        index.errors,
+        true
+      );
+    });
+
+    validateColourCoverage(
+      metadata.colourCoverage,
+      ownerLabel,
+      index.errors
+    );
+
+    validateColourCoverage(
+      metadata.traceColourCoverage,
+      ownerLabel,
+      index.errors
+    );
+
+    validateVisualMetadataCount(
+      metadata.colourCount,
+      metadata.colours,
+      "colourCount",
+      ownerLabel,
+      index
+    );
+
+    validateVisualMetadataCount(
+      metadata.accentColourCount,
+      metadata.accentColours,
+      "accentColourCount",
+      ownerLabel,
+      index
+    );
+
+    validateVisualMetadataCount(
+      metadata.minorColourCount,
+      metadata.minorColours,
+      "minorColourCount",
+      ownerLabel,
+      index
+    );
+
+    validateVisualMetadataCount(
+      metadata.traceColourCount,
+      metadata.traceColours,
+      "traceColourCount",
+      ownerLabel,
+      index
+    );
+
+    validateVisualMetadataCount(
+      metadata.detectedColourFamilyCount,
+      metadata.detectedColourFamilies,
+      "detectedColourFamilyCount",
+      ownerLabel,
+      index
+    );
+
+    validateOptionalVisualMetadataBooleans(
+      metadata,
+      ownerLabel,
+      index.errors
+    );
+
+    validateVisualMetadataConfidence(
+      metadata.confidence,
+      ownerLabel,
+      index.errors
+    );
+
+    if (
+      metadata.metadataMethod !== undefined &&
+      (typeof metadata.metadataMethod !== "string" ||
+        metadata.metadataMethod.trim() === "")
+    ) {
+      index.errors.push(
+        `${ownerLabel} metadataMethod must be a non-empty string when provided.`
+      );
+    }
+  });
+}
+
+function validateVariantVisualMetadataList(variantMetadataList, index) {
+  if (!Array.isArray(variantMetadataList)) {
+    index.errors.push("visualMetadata.variants must be an array.");
+    return;
+  }
+
+  variantMetadataList.forEach(metadata => {
+    if (!metadata || typeof metadata !== "object") {
+      index.errors.push("Invalid variant visual metadata entry found.");
+      return;
+    }
+
+    const ownerLabel =
+      `Variant visual metadata ${metadata.variantId ?? "<missing variantId>"}`;
+
+    if (
+      typeof metadata.variantId !== "string" ||
+      metadata.variantId.trim() === ""
+    ) {
+      index.errors.push(`${ownerLabel} has no valid variantId.`);
+    } else if (!index.variantsById[metadata.variantId]) {
+      index.errors.push(
+        `${ownerLabel} references missing variant: ${metadata.variantId}`
+      );
+    }
+  });
+}
+
+function validateVisualColourList(
+  colours,
+  ownerLabel,
+  errors,
+  allowOmitted
+) {
+  if (colours === undefined && allowOmitted) {
+    return;
+  }
+
+  if (!Array.isArray(colours)) {
+    errors.push(`${ownerLabel} must be an array.`);
+    return;
+  }
+
+  const seenColours = new Set();
+
+  colours.forEach(colour => {
+    const normalisedColour = normaliseVisualColourName(colour);
+
+    if (!normalisedColour) {
+      errors.push(`${ownerLabel} contains an invalid colour: ${colour}`);
+      return;
+    }
+
+    if (seenColours.has(normalisedColour)) {
+      errors.push(`${ownerLabel} contains duplicate colour: ${colour}`);
+      return;
+    }
+
+    seenColours.add(normalisedColour);
+  });
+}
+
+function validateColourCoverage(colourCoverage, ownerLabel, errors) {
+  if (colourCoverage === undefined) {
+    return;
+  }
+
+  if (
+    !colourCoverage ||
+    typeof colourCoverage !== "object" ||
+    Array.isArray(colourCoverage)
+  ) {
+    errors.push(`${ownerLabel} colourCoverage must be an object.`);
+    return;
+  }
+
+  Object.entries(colourCoverage).forEach(([colour, value]) => {
+    if (!normaliseVisualColourName(colour)) {
+      errors.push(
+        `${ownerLabel} colourCoverage contains unsupported colour: ${colour}`
+      );
+    }
+
+    if (typeof value !== "number" || value < 0 || value > 1) {
+      errors.push(
+        `${ownerLabel} colourCoverage.${colour} must be a number from 0 to 1.`
+      );
+    }
+  });
+}
+
+function validateVisualMetadataCount(
+  count,
+  relatedArray,
+  fieldName,
+  ownerLabel,
+  index
+) {
+  if (count === undefined) {
+    return;
+  }
+
+  if (!Number.isInteger(count) || count < 0) {
+    index.errors.push(
+      `${ownerLabel} ${fieldName} must be a non-negative integer when provided.`
+    );
+    return;
+  }
+
+  if (Array.isArray(relatedArray) && count !== relatedArray.length) {
+    index.warnings.push(
+      `${ownerLabel} ${fieldName} does not match its related array length.`
+    );
+  }
+}
+
+function validateOptionalVisualMetadataBooleans(
+  metadata,
+  ownerLabel,
+  errors
+) {
+  [
+    "generated",
+    "reviewed",
+    "needsReview",
+    "coverageReliable",
+    "dominanceReliable"
+  ].forEach(fieldName => {
+    if (
+      metadata[fieldName] !== undefined &&
+      typeof metadata[fieldName] !== "boolean"
+    ) {
+      errors.push(
+        `${ownerLabel} ${fieldName} must be a boolean when provided.`
+      );
+    }
+  });
+}
+
+function validateVisualMetadataConfidence(confidence, ownerLabel, errors) {
+  if (confidence === undefined) {
+    return;
+  }
+
+  if (!["low", "medium", "high"].includes(confidence)) {
+    errors.push(
+      `${ownerLabel} confidence must be low, medium or high when provided.`
+    );
+  }
+}
+
+function normaliseVisualColourName(colour) {
+  if (typeof colour !== "string") {
+    return null;
+  }
+
+  const normalisedColour = colour.trim().toLowerCase();
+
+  const aliases = {
+    gray: "grey",
+    yellow: "gold"
+  };
+
+  const canonicalColour = aliases[normalisedColour] ?? normalisedColour;
+
+  const supportedColours = [
+    "black",
+    "white",
+    "grey",
+    "red",
+    "orange",
+    "green",
+    "blue",
+    "purple",
+    "pink",
+    "brown",
+    "gold",
+    "silver"
+  ];
+
+  return supportedColours.includes(canonicalColour)
+    ? canonicalColour
+    : null;
+}
+
+function getVisualMetadataForAssetId(index, assetId) {
+  if (
+    !index ||
+    typeof assetId !== "string" ||
+    assetId.trim() === ""
+  ) {
+    return null;
+  }
+
+  return index.assetVisualMetadataByAssetId?.[assetId] ?? null;
+}
+
+function getVisualMetadataForAsset(index, asset) {
+  if (!asset || typeof asset !== "object") {
+    return null;
+  }
+
+  return getVisualMetadataForAssetId(index, asset.id);
+}
+
+function getVisualMetadataForVariantId(index, variantId) {
+  if (
+    !index ||
+    typeof variantId !== "string" ||
+    variantId.trim() === ""
+  ) {
+    return null;
+  }
+
+  const variant = index.variantsById?.[variantId];
+
+  return getVisualMetadataForVariant(index, variant);
+}
+
+function getVisualMetadataForVariant(index, variant) {
+  if (!variant || typeof variant !== "object") {
+    return null;
+  }
+
+  const variantMetadata =
+    index.variantVisualMetadataByVariantId?.[variant.id];
+
+  if (variantMetadata) {
+    return variantMetadata;
+  }
+
+  return getVisualMetadataForAssetId(index, variant.assetId);
+}
+
+function getVariantVisualColours(index, variant) {
+  const metadata = getVisualMetadataForVariant(index, variant);
+
+  return Array.isArray(metadata?.colours)
+    ? metadata.colours
+    : [];
+}
+
+function getAssetVisualColourFamilies(index, assetId, options = {}) {
+  const metadata = getVisualMetadataForAssetId(index, assetId);
+
+  return getVisualMetadataColourFamilies(metadata, options);
+}
+
+function getVariantVisualColourFamilies(index, variant, options = {}) {
+  const metadata = getVisualMetadataForVariant(index, variant);
+
+  return getVisualMetadataColourFamilies(metadata, options);
+}
+
+function getVisualMetadataColourFamilies(metadata, options = {}) {
+  if (!metadata || typeof metadata !== "object") {
+    return [];
+  }
+
+  if (options.detected === true) {
+    return uniqueVisualColours(metadata.detectedColourFamilies);
+  }
+
+  const colourFields = ["colours"];
+
+  if (options.includeAccents === true) {
+    colourFields.push("accentColours");
+  }
+
+  if (options.includeMinor === true) {
+    colourFields.push("minorColours");
+  }
+
+  if (options.includeTrace === true) {
+    colourFields.push("traceColours");
+  }
+
+  return uniqueVisualColours(
+    colourFields.flatMap(fieldName => metadata[fieldName] ?? [])
+  );
+}
+
+function uniqueVisualColours(colours) {
+  if (!Array.isArray(colours)) {
+    return [];
+  }
+
+  const seenColours = new Set();
+  const uniqueColours = [];
+
+  colours.forEach(colour => {
+    const normalisedColour = normaliseVisualColourName(colour);
+
+    if (!normalisedColour || seenColours.has(normalisedColour)) {
+      return;
+    }
+
+    seenColours.add(normalisedColour);
+    uniqueColours.push(normalisedColour);
+  });
+
+  return uniqueColours;
 }
 
 function validateAssets(assetList, index) {

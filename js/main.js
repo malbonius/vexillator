@@ -1008,11 +1008,17 @@ renderStatsView();
 /*
   Shows whether the data passed validation.
 
-  For now this is deliberately simple.
-  Later we can replace this with a nicer developer/debug panel.
+  This remains a lightweight developer diagnostic rather than normal UI.
 */
 function showSystemStatus(index) {
   const statusElement = document.getElementById("systemStatus");
+
+  if (!statusElement) {
+    return;
+  }
+
+  const visualMetadataStatus = getVisualMetadataStatusLines(index)
+    .join("\n");
 
   if (index.errors.length === 0) {
     statusElement.textContent =
@@ -1022,13 +1028,65 @@ function showSystemStatus(index) {
       `Variants: ${variants.length}\n` +
       `Collections: ${collections.length}\n` +
       `Collection groups: ${collectionGroups.length}\n` +
-      `Quiz presets: ${quizPresets.length}`;
+      `Quiz presets: ${quizPresets.length}\n\n` +
+      visualMetadataStatus;
   } else {
     statusElement.textContent =
       "Vexillator loaded with errors:\n\n" +
-      index.errors.join("\n");
+      index.errors.join("\n") +
+      "\n\n" +
+      visualMetadataStatus;
+  }
+}
+
+function getVisualMetadataStatusLines(index) {
+  const metadataEntries = Array.isArray(index.visualMetadata?.assets)
+    ? index.visualMetadata.assets
+    : [];
+
+  const indexedAssetMetadataCount = Object.keys(
+    index.assetVisualMetadataByAssetId ?? {}
+  ).length;
+
+  const totalAssetCount = Array.isArray(assets)
+    ? assets.length
+    : 0;
+
+  const missingAssetMetadataCount = Array.isArray(assets)
+    ? assets.filter(asset => {
+        return !index.assetVisualMetadataByAssetId?.[asset.id];
+      }).length
+    : 0;
+
+  const visualMetadataWarningCount = Array.isArray(index.warnings)
+    ? index.warnings.filter(isVisualMetadataWarning).length
+    : 0;
+
+  const visualMetadataReviewCount = metadataEntries.filter(entry => {
+    return entry?.needsReview === true;
+  }).length;
+
+  return [
+    `Visual metadata: ${indexedAssetMetadataCount} / ${totalAssetCount} assets indexed`,
+    `Visual metadata missing assets: ${missingAssetMetadataCount}`,
+    `Visual metadata warnings: ${visualMetadataWarningCount}`,
+    `Visual metadata review items: ${visualMetadataReviewCount}`
+  ];
+}
+
+function isVisualMetadataWarning(warning) {
+  if (typeof warning !== "string") {
+    return false;
   }
 
+  const normalisedWarning = warning.toLowerCase();
+
+  return (
+    normalisedWarning.includes("visualmetadata") ||
+    normalisedWarning.includes("visual metadata") ||
+    normalisedWarning.includes("asset visual metadata") ||
+    normalisedWarning.includes("variant visual metadata")
+  );
 }
 
 /*

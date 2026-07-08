@@ -1,9 +1,9 @@
 /*
   AUTO-GENERATED VISUAL METADATA.
 
-  Generated: 2026-07-08T17:05:37.216Z
+  Generated: 2026-07-08T17:30:11.295Z
   Method: rendered pixel sampling via sharp
-  Assets processed: 1361 of 1361
+  Assets processed: 1362 of 1362
   Render width: 384px
 
   Do not edit generated entries manually. Review overrides should be handled
@@ -124851,6 +124851,134 @@ const visualMetadata = Object.freeze({
           "hex": "#A0A0A0",
           "coverage": 0.0013,
           "pixelCount": 123
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_spain_current_alt",
+      "colours": [
+        "red",
+        "gold"
+      ],
+      "accentColours": [],
+      "minorColours": [
+        "brown",
+        "silver"
+      ],
+      "traceColours": [
+        "pink"
+      ],
+      "detectedColourFamilies": [
+        "red",
+        "gold",
+        "brown",
+        "silver"
+      ],
+      "colourCoverage": {
+        "red": 0.5207,
+        "gold": 0.4547,
+        "brown": 0.0082,
+        "silver": 0.0062
+      },
+      "traceColourCoverage": {
+        "pink": 0.002
+      },
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 2,
+      "traceColourCount": 1,
+      "detectedColourFamilyCount": 4,
+      "sourceColourFamilies": [
+        "red",
+        "blue",
+        "green",
+        "gold",
+        "white",
+        "black",
+        "brown",
+        "silver",
+        "pink"
+      ],
+      "palette": [
+        {
+          "family": "red",
+          "hex": "#B01020",
+          "coverage": 0.5002,
+          "pixelCount": 49171
+        },
+        {
+          "family": "gold",
+          "hex": "#FFC000",
+          "coverage": 0.4359,
+          "pixelCount": 42847
+        },
+        {
+          "family": "red",
+          "hex": "#B00020",
+          "coverage": 0.0115,
+          "pixelCount": 1130
+        },
+        {
+          "family": "silver",
+          "hex": "#B0B0B0",
+          "coverage": 0.0062,
+          "pixelCount": 609
+        },
+        {
+          "family": "gold",
+          "hex": "#A08000",
+          "coverage": 0.0037,
+          "pixelCount": 360
+        },
+        {
+          "family": "gold",
+          "hex": "#907000",
+          "coverage": 0.0029,
+          "pixelCount": 285
+        },
+        {
+          "family": "gold",
+          "hex": "#806000",
+          "coverage": 0.002,
+          "pixelCount": 197
+        },
+        {
+          "family": "red",
+          "hex": "#A00020",
+          "coverage": 0.0014,
+          "pixelCount": 134
+        },
+        {
+          "family": "grey",
+          "hex": "#909090",
+          "coverage": 0.0014,
+          "pixelCount": 134
+        },
+        {
+          "family": "brown",
+          "hex": "#803010",
+          "coverage": 0.0013,
+          "pixelCount": 126
+        },
+        {
+          "family": "grey",
+          "hex": "#A0A0A0",
+          "coverage": 0.0012,
+          "pixelCount": 122
         }
       ],
       "pixelSample": {
