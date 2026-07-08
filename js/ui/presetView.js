@@ -313,8 +313,18 @@ function buildRandomQuizFilterPresetPayload() {
 
   return {
     rules: filters.rules.map(rule => ({
-      regionEntityIds: rule.regionEntityIds.slice(),
-      typeKeys: rule.typeKeys.slice()
+      regionEntityIds: Array.isArray(rule.regionEntityIds)
+        ? rule.regionEntityIds.slice()
+        : [],
+      typeKeys: Array.isArray(rule.typeKeys)
+        ? rule.typeKeys.slice()
+        : [],
+      colourKeys: Array.isArray(rule.colourKeys)
+        ? rule.colourKeys.slice()
+        : [],
+      colourMatchMode: rule.colourMatchMode === "all"
+        ? "all"
+        : "any"
     })),
     includeDisputed: filters.includeDisputed === true,
     questionCountMode: hasFixedQuestionCount ? "fixed" : "maximum",
@@ -359,6 +369,24 @@ function normaliseRandomFilterPresetPayload(payload) {
   const availableTypeKeys = new Set(
     getRandomQuizAvailableTypeOptions().map(option => option.key)
   );
+  const availableColourKeys = new Set(
+    typeof getRandomQuizAvailableVisualColourOptions === "function"
+      ? getRandomQuizAvailableVisualColourOptions().map(option => option.key)
+      : [
+          "red",
+          "white",
+          "blue",
+          "green",
+          "gold",
+          "black",
+          "orange",
+          "brown",
+          "silver",
+          "grey",
+          "purple",
+          "pink"
+        ]
+  );
 
   /*
     Legacy presets used top-level regionEntityIds/typeKeys. Convert that shape
@@ -369,7 +397,9 @@ function normaliseRandomFilterPresetPayload(payload) {
     : [
         {
           regionEntityIds: payload.regionEntityIds,
-          typeKeys: payload.typeKeys
+          typeKeys: payload.typeKeys,
+          colourKeys: payload.colourKeys,
+          colourMatchMode: payload.colourMatchMode
         }
       ];
 
@@ -386,9 +416,19 @@ function normaliseRandomFilterPresetPayload(payload) {
         })))
       : [];
 
+    const colourKeys = Array.isArray(rule?.colourKeys)
+      ? Array.from(new Set(rule.colourKeys.filter(colourKey => {
+          return availableColourKeys.has(colourKey);
+        })))
+      : [];
+
     return {
       regionEntityIds,
-      typeKeys
+      typeKeys,
+      colourKeys,
+      colourMatchMode: rule?.colourMatchMode === "all"
+        ? "all"
+        : "any"
     };
   });
 
@@ -434,6 +474,12 @@ function getRandomFilterPresetMetaText(preset) {
   const typeCount = payload.rules.reduce((total, rule) => {
     return total + rule.typeKeys.length;
   }, 0);
+  const colourCount = payload.rules.reduce((total, rule) => {
+    return total + rule.colourKeys.length;
+  }, 0);
+  const colourText = colourCount > 0
+    ? ` · ${colourCount} ${colourCount === 1 ? "colour filter" : "colour filters"}`
+    : "";
   const questionCountText = payload.questionCountMode === "fixed"
     ? `fixed ${payload.questionCount} question limit`
     : "maximum questions";
@@ -445,7 +491,8 @@ function getRandomFilterPresetMetaText(preset) {
     `Quiz Builder preset · ${ruleCount} ` +
     `${ruleCount === 1 ? "include rule" : "include rules"} · ` +
     `${scopeCount} ${scopeCount === 1 ? "area selection" : "area selections"} · ` +
-    `${typeCount} ${typeCount === 1 ? "type selection" : "type selections"} · ` +
+    `${typeCount} ${typeCount === 1 ? "type selection" : "type selections"}` +
+    `${colourText} · ` +
     `${availableQuestionCount} matching quiz ` +
     `${availableQuestionCount === 1 ? "question" : "questions"} · ` +
     `${questionCountText} · ${disputedText}`
@@ -468,7 +515,11 @@ function applyRandomFilterPreset(preset) {
     return {
       id: `random_quiz_rule_${Date.now()}_${Math.random()}`,
       regionEntityIds: new Set(rule.regionEntityIds),
-      typeKeys: new Set(rule.typeKeys)
+      typeKeys: new Set(rule.typeKeys),
+      colourKeys: new Set(rule.colourKeys),
+      colourMatchMode: rule.colourMatchMode === "all"
+        ? "all"
+        : "any"
     };
   });
   appState.randomQuiz.includeDisputed = payload.includeDisputed;
