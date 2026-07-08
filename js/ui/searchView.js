@@ -74,12 +74,15 @@ const searchTypeOrder = {
   Searches the current data index.
 
   Ranking rules favour:
-  - complete entity matches;
-  - complete variant matches;
-  - complete collection and CollectionGroup matches;
-  - prefix / word-start matches;
-  - partial contains matches;
+  - direct entity-name matches;
+  - direct variant-label/name matches;
+  - aliases;
+  - collections and CollectionGroups;
   - low-priority metadata matches such as IDs and tags.
+
+  Prefix matches outrank word-start matches. This prevents aliases such as
+  "United Mexican States" from beating entity names such as
+  "United Kingdom" when the user searches for "united".
 */
 function searchVexillator(normalisedQuery) {
   const results = [];
@@ -181,8 +184,9 @@ function getBestSearchFieldMatch(normalisedQuery, fields) {
   Returns the rank for one searchable field, or null when the field does not
   match the query.
 
-  Prefix matches and word-start matches share the same rank. This lets "west"
-  find "West Yorkshire" and "york" find it as a useful high-quality match.
+  Prefix matches and word-start matches can use different ranks. This lets
+  "United Kingdom" beat aliases such as "United Mexican States" for
+  the query "united", while still letting "york" find "West Yorkshire".
 */
 function getSearchFieldMatchRank(
   normalisedQuery,
@@ -201,6 +205,13 @@ function getSearchFieldMatchRank(
     normalisedValue.startsWith(normalisedQuery)
   ) {
     return field.prefixRank;
+  }
+
+  if (
+    typeof field.wordStartRank === "number" &&
+    searchValueHasWordStartingWith(normalisedValue, normalisedQuery)
+  ) {
+    return field.wordStartRank;
   }
 
   if (
@@ -241,6 +252,7 @@ function createAliasSearchFields(
     exactRank,
     prefixRank,
     containsRank,
+    wordStartRank,
     source
   }
 ) {
@@ -249,6 +261,7 @@ function createAliasSearchFields(
       value: alias,
       exactRank,
       prefixRank,
+      wordStartRank,
       containsRank,
       source
     };
@@ -289,13 +302,15 @@ function searchEntities(
         value: entity.name,
         exactRank: 0,
         prefixRank: 10,
-        containsRank: 20,
+        wordStartRank: 20,
+        containsRank: 30,
         source: "entity name"
       },
       ...createAliasSearchFields(entity.aliases, {
-        exactRank: 1,
-        prefixRank: 10,
-        containsRank: 20,
+        exactRank: 100,
+        prefixRank: 110,
+        wordStartRank: 120,
+        containsRank: 130,
         source: "entity alias"
       }),
       ...createMetadataSearchFields(
@@ -304,7 +319,7 @@ function searchEntities(
           entity.entityType,
           ...entity.tags
         ],
-        50,
+        500,
         "entity metadata"
       )
     ];
@@ -315,7 +330,7 @@ function searchEntities(
       return;
     }
 
-    if (match.rank < 50) {
+    if (match.rank < 500) {
       directlyMatchedEntityIds.add(entity.id);
     }
 
@@ -398,7 +413,7 @@ function searchUpwardContextEntities(
         id: contextEntity.id,
         label: contextEntity.name,
         meta: contextEntry.label,
-        searchRank: 70,
+        searchRank: 600,
         matchSource: "upward context"
       });
     });
@@ -436,41 +451,57 @@ function createMembershipContextEntries(entity) {
 
 /*
   Variant search:
-  direct variant names and aliases rank highest.
+  direct variant labels/names rank after direct entity-name matches.
 
-  Parent entity names and aliases also match variants, but after direct variant
-  matches. This means searching "France" still shows French variants near the
-  top without allowing them to beat the exact France entity result.
+  Aliases and metadata remain searchable, but they do not beat visible entity
+  or variant names. The combined label lets a query such as "united" match
+  "United Kingdom - National Flag" as a variant result.
 */
 function searchVariants(normalisedQuery, results) {
   Object.values(dataIndex.variantsById).forEach(variant => {
     const entity = dataIndex.entitiesById[variant.entityId];
 
+    const variantLabel = entity ?
+      `${entity.name} - ${variant.displayName}` :
+      variant.displayName;
+
     const fields = [
       {
+        value: variantLabel,
+        exactRank: 40,
+        prefixRank: 50,
+        wordStartRank: 60,
+        containsRank: 70,
+        source: "variant label"
+      },
+      {
         value: variant.displayName,
-        exactRank: 2,
-        prefixRank: 11,
-        containsRank: 21,
+        exactRank: 40,
+        prefixRank: 50,
+        wordStartRank: 60,
+        containsRank: 70,
         source: "variant name"
       },
-      ...createAliasSearchFields(variant.aliases, {
-        exactRank: 3,
-        prefixRank: 11,
-        containsRank: 21,
-        source: "variant alias"
-      }),
       {
         value: entity ? entity.name : "",
-        exactRank: 4,
-        prefixRank: 11,
-        containsRank: 21,
+        exactRank: 40,
+        prefixRank: 50,
+        wordStartRank: 60,
+        containsRank: 70,
         source: "parent entity name"
       },
+      ...createAliasSearchFields(variant.aliases, {
+        exactRank: 140,
+        prefixRank: 150,
+        wordStartRank: 160,
+        containsRank: 170,
+        source: "variant alias"
+      }),
       ...createAliasSearchFields(entity ? entity.aliases : [], {
-        exactRank: 4,
-        prefixRank: 11,
-        containsRank: 21,
+        exactRank: 180,
+        prefixRank: 190,
+        wordStartRank: 200,
+        containsRank: 210,
         source: "parent entity alias"
       }),
       ...createMetadataSearchFields(
@@ -479,7 +510,7 @@ function searchVariants(normalisedQuery, results) {
           ...variant.tags,
           entity ? entity.id : ""
         ],
-        51,
+        510,
         "variant metadata"
       )
     ];
@@ -493,7 +524,7 @@ function searchVariants(normalisedQuery, results) {
     results.push({
       type: "variant",
       id: variant.id,
-      label: entity ? `${entity.name} - ${variant.displayName}` : variant.displayName,
+      label: variantLabel,
       meta: [
           variant.aliases.length > 0 ?
           `Aliases: ${variant.aliases.join(", ")}` :
@@ -519,9 +550,10 @@ function searchCollections(normalisedQuery, results) {
       const fields = [
         {
           value: collection.name,
-          exactRank: 5,
-          prefixRank: 12,
-          containsRank: 22,
+          exactRank: 300,
+          prefixRank: 310,
+          wordStartRank: 320,
+          containsRank: 330,
           source: "collection name"
         },
         ...createMetadataSearchFields(
@@ -530,7 +562,7 @@ function searchCollections(normalisedQuery, results) {
             collection.type,
             collection.target
           ],
-          52,
+          520,
           "collection metadata"
         )
       ];
@@ -567,14 +599,15 @@ function searchCollectionGroups(normalisedQuery, results) {
       const fields = [
         {
           value: group.name,
-          exactRank: 6,
-          prefixRank: 13,
-          containsRank: 23,
+          exactRank: 340,
+          prefixRank: 350,
+          wordStartRank: 360,
+          containsRank: 370,
           source: "collection group name"
         },
         ...createMetadataSearchFields(
           [group.id],
-          53,
+          530,
           "collection group metadata"
         )
       ];
