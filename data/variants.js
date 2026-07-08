@@ -13317,6 +13317,7 @@ const variants = [
     id: "var_spain_current",
     entityId: "ent_spain",
     assetId: "ast_spain_current",
+    alternativeAssetIds: ["ast_spain_current_alt"],
     displayName: "National Flag",
     aliases: ["La Rojigualda"],
     tags: ["official", "current", "national", "state"],
