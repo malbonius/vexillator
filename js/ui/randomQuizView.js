@@ -421,20 +421,23 @@ function getRandomQuizRuleSummaryText(rule, ruleIndex) {
   const scopeText = getRandomQuizRuleScopeSummary(rule);
   const typeText = getRandomQuizRuleTypeSummary(rule);
   const colourText = getRandomQuizRuleColourSummary(rule);
-  const summaryParts = [scopeText, typeText];
+  const summaryParts = [
+    `Areas: ${scopeText}`,
+    `Types: ${typeText}`
+  ];
 
   if (colourText) {
-    summaryParts.push(colourText);
+    summaryParts.push(`Colours: ${colourText}`);
   }
 
-  return `Include rule ${ruleIndex + 1} — ${summaryParts.join(" + ")}`;
+  return `Include rule ${ruleIndex + 1} — ${summaryParts.join(" · ")}`;
 }
 
 function getRandomQuizRuleScopeSummary(rule) {
   const selectedIds = Array.from(rule.regionEntityIds);
 
   if (selectedIds.length === 0) {
-    return "All areas";
+    return "all";
   }
 
   const availableOptionsById = new Map(
@@ -456,7 +459,7 @@ function getRandomQuizRuleTypeSummary(rule) {
   const selectedKeys = Array.from(rule.typeKeys);
 
   if (selectedKeys.length === 0) {
-    return "All current types";
+    return "all current";
   }
 
   const availableOptionsByKey = new Map(
@@ -479,24 +482,53 @@ function getRandomQuizRuleColourSummary(rule) {
     return null;
   }
 
+  const visualColourOptions = getRandomQuizAvailableVisualColourOptions();
   const availableOptionsByKey = new Map(
-    getRandomQuizAvailableVisualColourOptions().map(option => {
+    visualColourOptions.map(option => {
       return [option.key, option.label.toLowerCase()];
     })
   );
+  const optionOrderByKey = new Map(
+    visualColourOptions.map((option, optionIndex) => {
+      return [option.key, optionIndex];
+    })
+  );
 
-  const labels = selectedKeys.map(colourKey => {
-    return availableOptionsByKey.get(colourKey) || colourKey;
-  });
+  const labels = selectedKeys
+    .slice()
+    .sort((firstKey, secondKey) => {
+      const firstOrder = optionOrderByKey.has(firstKey)
+        ? optionOrderByKey.get(firstKey)
+        : Number.MAX_SAFE_INTEGER;
+      const secondOrder = optionOrderByKey.has(secondKey)
+        ? optionOrderByKey.get(secondKey)
+        : Number.MAX_SAFE_INTEGER;
+
+      if (firstOrder !== secondOrder) {
+        return firstOrder - secondOrder;
+      }
+
+      return firstKey.localeCompare(secondKey);
+    })
+    .map(colourKey => {
+      return availableOptionsByKey.get(colourKey) || colourKey;
+    });
   const matchText = rule.colourMatchMode === "all"
-    ? "all colours"
-    : "any colour";
+    ? "all"
+    : "any";
 
-  return `${matchText}: ${formatRandomQuizRuleSummaryLabels(
-    labels,
-    "colour",
-    "colours"
-  )}`;
+  return `${formatRandomQuizRuleColourLabels(labels)} · ${matchText}`;
+}
+
+function formatRandomQuizRuleColourLabels(labels) {
+  if (labels.length <= 3) {
+    return labels.join(" + ");
+  }
+
+  const remainingCount = labels.length - 3;
+  const noun = remainingCount === 1 ? "colour" : "colours";
+
+  return `${labels.slice(0, 3).join(" + ")} + ${remainingCount} more ${noun}`;
 }
 
 function formatRandomQuizRuleSummaryLabels(
