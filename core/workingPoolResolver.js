@@ -8,7 +8,8 @@
   - selected collections;
   - explicit grouped entity selections;
   - directly selected entities;
-  - directly selected variants.
+  - directly selected variants;
+  - temporary grouped variant selections.
 
   Gallery and quiz consume these resolved members rather than reading
   selection state directly.
@@ -24,7 +25,8 @@ function resolveWorkingPool(options = {}, dataIndex) {
     collectionIds = [],
     entityGroups = [],
     entityIds = [],
-    variantIds = []
+    variantIds = [],
+    variantGroups = []
   } = options;
 
   const workingPoolMembers = [];
@@ -79,6 +81,15 @@ function resolveWorkingPool(options = {}, dataIndex) {
     if (workingPoolMember) {
       workingPoolMembers.push(workingPoolMember);
     }
+  });
+
+  variantGroups.forEach(variantGroup => {
+    const groupMembers = createVariantGroupWorkingPoolMembers(
+      variantGroup,
+      dataIndex
+    );
+
+    workingPoolMembers.push(...groupMembers);
   });
 
   /*
@@ -379,6 +390,85 @@ function createDirectEntityWorkingPoolMember(entityId, dataIndex) {
   Gallery and answer reveal use the ordinary variant identified by
   baseVariantId. The entity default remains a defensive fallback.
 */
+
+
+/*
+  Normalises a temporary grouped variant selection into WorkingPoolMembers.
+
+  The group controls provenance only. Each selected variant still resolves as a
+  normal variant member, but all members retain the same source metadata so
+  Grouped Gallery can show one section for the original Quiz Builder result.
+*/
+function createVariantGroupWorkingPoolMembers(variantGroup, dataIndex) {
+  if (
+    !variantGroup ||
+    typeof variantGroup !== "object" ||
+    typeof variantGroup.id !== "string" ||
+    variantGroup.id.trim() === "" ||
+    !Array.isArray(variantGroup.variantIds)
+  ) {
+    console.error(
+      "Cannot resolve an invalid grouped variant selection.",
+      variantGroup
+    );
+
+    return [];
+  }
+
+  const seenVariantIds = new Set();
+  const workingPoolMembers = [];
+
+  variantGroup.variantIds.forEach(variantId => {
+    if (
+      typeof variantId !== "string" ||
+      variantId.trim() === "" ||
+      seenVariantIds.has(variantId)
+    ) {
+      return;
+    }
+
+    seenVariantIds.add(variantId);
+
+    const variant = dataIndex.variantsById?.[variantId];
+
+    if (!variant) {
+      console.error(
+        `Cannot resolve missing grouped variant: ${variantId}`
+      );
+
+      return;
+    }
+
+    const entity = dataIndex.entitiesById?.[variant.entityId];
+
+    if (!entity) {
+      console.error(
+        `Cannot resolve grouped variant ${variantId}: ` +
+        `missing entity ${variant.entityId}`
+      );
+
+      return;
+    }
+
+    workingPoolMembers.push({
+      id: `${variantGroup.id}_${variant.id}`,
+      sourceType: "variant_group",
+      sourceId: variantGroup.id,
+      sourceLabel:
+        normaliseWorkingPoolDisplayNameOverride(variantGroup.label) ??
+        "Variant group",
+      sourceGroupType:
+        variantGroup.sourceType ?? null,
+      collectionId: null,
+      entityId: variant.entityId,
+      galleryVariantId: getBaseVariantId(variant, dataIndex),
+      quizVariantId: variant.id
+    });
+  });
+
+  return workingPoolMembers;
+}
+
 function createDirectVariantWorkingPoolMember(variantId, dataIndex) {
   const variant = dataIndex.variantsById?.[variantId];
 

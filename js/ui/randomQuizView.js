@@ -809,6 +809,56 @@ function getGalleryVariantIdsFromRandomQuizQuestions(questions) {
   return variantIds;
 }
 
+function createRandomQuizGalleryGroupId() {
+  const randomPart = Math.random().toString(36).slice(2, 8);
+
+  return `variant_group_quiz_builder_${Date.now()}_${randomPart}`;
+}
+
+function getRandomQuizRuleGalleryLabel(rule) {
+  const labelParts = [
+    getRandomQuizRuleScopeSummary(rule),
+    getRandomQuizRuleTypeSummary(rule)
+  ];
+
+  const colourText = getRandomQuizRuleColourSummary(rule);
+
+  if (colourText) {
+    labelParts.push(colourText);
+  }
+
+  return labelParts.join(" · ");
+}
+
+function shortenRandomQuizGalleryLabel(label, maxLength = 96) {
+  if (label.length <= maxLength) {
+    return label;
+  }
+
+  return `${label.slice(0, maxLength - 1).trim()}…`;
+}
+
+function getRandomQuizGalleryGroupLabel() {
+  ensureRandomQuizRulesState();
+
+  const rules = appState.randomQuiz.rules;
+
+  if (rules.length === 1) {
+    return shortenRandomQuizGalleryLabel(
+      `Quiz Builder — ${getRandomQuizRuleGalleryLabel(rules[0])}`
+    );
+  }
+
+  const firstRuleLabel = getRandomQuizRuleGalleryLabel(rules[0]);
+  const remainingRuleCount = rules.length - 1;
+
+  return shortenRandomQuizGalleryLabel(
+    `Quiz Builder — ${rules.length} rules: ` +
+    `${firstRuleLabel} + ${remainingRuleCount} more ` +
+    `${remainingRuleCount === 1 ? "rule" : "rules"}`
+  );
+}
+
 function addRandomQuizMatchesToGallery() {
   const questions = getRandomQuizMatchingQuestionsForGallery();
   const variantIds = getGalleryVariantIdsFromRandomQuizQuestions(questions);
@@ -818,9 +868,23 @@ function addRandomQuizMatchesToGallery() {
     return;
   }
 
-  variantIds.forEach(variantId => {
-    appState.selectedVariantIds.add(variantId);
-  });
+  if (!(appState.selectedVariantGroups instanceof Map)) {
+    appState.selectedVariantGroups = new Map();
+  }
+
+  const variantGroup = {
+    id: createRandomQuizGalleryGroupId(),
+    sourceType: "quiz_builder",
+    label: getRandomQuizGalleryGroupLabel(),
+    variantIds,
+    createdAt: new Date().toISOString(),
+    filters: cloneRandomQuizFilters(getRandomQuizFiltersFromState())
+  };
+
+  appState.selectedVariantGroups.set(
+    variantGroup.id,
+    variantGroup
+  );
 
   if (typeof refreshAfterSelectionChange === "function") {
     refreshAfterSelectionChange({

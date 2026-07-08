@@ -234,7 +234,8 @@ function renderGallery() {
     appState.selectedCollectionIds.size > 0 ||
     appState.selectedEntityGroups.size > 0 ||
     appState.selectedEntityIds.size > 0 ||
-    appState.selectedVariantIds.size > 0;
+    appState.selectedVariantIds.size > 0 ||
+    appState.selectedVariantGroups.size > 0;
 
   if (!hasActiveSelection) {
     setGalleryZoomContext(null, [], 0);
@@ -255,7 +256,8 @@ function renderGallery() {
       collectionIds: Array.from(appState.selectedCollectionIds),
       entityGroups: Array.from(appState.selectedEntityGroups.values()),
       entityIds: Array.from(appState.selectedEntityIds),
-      variantIds: Array.from(appState.selectedVariantIds)
+      variantIds: Array.from(appState.selectedVariantIds),
+      variantGroups: Array.from(appState.selectedVariantGroups.values())
     },
     dataIndex
   );
@@ -1042,6 +1044,8 @@ function buildDeduplicatedGalleryItems(members) {
 
   Explicit entity groups each retain their own bulk-action provenance.
 
+  Temporary variant groups each retain their own source provenance.
+
   Individual direct entity and direct variant sources remain grouped by source
   type so the gallery does not create a separate heading for every selection.
 
@@ -1117,6 +1121,34 @@ function buildGallerySourceGroups(members) {
       sourceType: "entity_group",
       sourceId: entityGroup.id,
       heading: `${sourceEntity.name} — ${groupTypeLabel}`,
+      items: buildDeduplicatedGalleryItems(groupedMembers)
+    });
+  });
+
+  /*
+    Temporary grouped variant selections each receive their own section.
+
+    This is used by Quiz Builder's Add to Gallery action, preserving each
+    builder result as a separate source while combined Gallery can still
+    deduplicate the displayed flags.
+  */
+  appState.selectedVariantGroups.forEach(variantGroup => {
+    const groupedMembers = members.filter(member => {
+      return (
+        member.sourceType === "variant_group" &&
+        member.sourceId === variantGroup.id
+      );
+    });
+
+    if (groupedMembers.length === 0) {
+      return;
+    }
+
+    groups.push({
+      id: `gallery_source_${variantGroup.id}`,
+      sourceType: "variant_group",
+      sourceId: variantGroup.id,
+      heading: variantGroup.label ?? "Variant group",
       items: buildDeduplicatedGalleryItems(groupedMembers)
     });
   });

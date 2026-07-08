@@ -30,6 +30,8 @@ const ENTITY_DETAIL_AUTO_EXPAND_THRESHOLD = 8;
   selectedEntityIds stores entities selected individually.
   selectedEntityGroups stores explicit bulk-selection provenance.
   selectedVariantIds stores variants selected directly.
+  selectedVariantGroups stores temporary grouped variant selections, such as
+  Quiz Builder results added to Gallery as one named source.
   collapsedGroupIds stores collapsed navigation groups.
 */
 const appState = {
@@ -37,6 +39,7 @@ const appState = {
   selectedEntityGroups: new Map(),
   selectedEntityIds: new Set(),
   selectedVariantIds: new Set(),
+  selectedVariantGroups: new Map(),
 
   /*
     Entity browsing is the default route in the redesigned shell.
@@ -149,6 +152,8 @@ const appState = {
 
     The builder creates a temporary entity/default-variant quiz pool.
     It deliberately does not add matching entities to Current Selection.
+    Its Add to Gallery action can create a temporary selectedVariantGroups
+    source so the result can be inspected without flooding Current Selection.
   */
   randomQuiz: {
     /*

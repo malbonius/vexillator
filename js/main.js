@@ -630,6 +630,7 @@ function clearAllSelections() {
   appState.selectedEntityGroups.clear();
   appState.selectedEntityIds.clear();
   appState.selectedVariantIds.clear();
+  appState.selectedVariantGroups.clear();
 
   refreshAfterSelectionChange({
     showGallery: false
@@ -730,7 +731,8 @@ function hasCurrentSelection() {
     appState.selectedCollectionIds.size > 0 ||
     appState.selectedEntityGroups.size > 0 ||
     appState.selectedEntityIds.size > 0 ||
-    appState.selectedVariantIds.size > 0
+    appState.selectedVariantIds.size > 0 ||
+    appState.selectedVariantGroups.size > 0
   );
 }
 
@@ -789,7 +791,8 @@ function updateSelectionSummaries() {
     appState.selectedCollectionIds.size +
     appState.selectedEntityGroups.size +
     appState.selectedEntityIds.size +
-    appState.selectedVariantIds.size;
+    appState.selectedVariantIds.size +
+    appState.selectedVariantGroups.size;
 
   let flagCount = 0;
 
@@ -806,6 +809,9 @@ function updateSelectionSummaries() {
         ),
         variantIds: Array.from(
           appState.selectedVariantIds
+        ),
+        variantGroups: Array.from(
+          appState.selectedVariantGroups.values()
         )
       },
       dataIndex
@@ -1233,6 +1239,10 @@ function createCurrentSelectionItem(label, type, id) {
       appState.selectedVariantIds.delete(id);
     }
 
+    if (type === "variant_group") {
+      appState.selectedVariantGroups.delete(id);
+    }
+
     refreshAfterSelectionChange();
   });
 
@@ -1353,6 +1363,34 @@ function renderCurrentSelection() {
     })
     .filter(Boolean);
 
+  const variantGroupItems = Array.from(
+    appState.selectedVariantGroups.values()
+  )
+    .map(variantGroup => {
+      if (
+        !variantGroup ||
+        typeof variantGroup.id !== "string" ||
+        !Array.isArray(variantGroup.variantIds)
+      ) {
+        return null;
+      }
+
+      const variantCount = variantGroup.variantIds.length;
+      const label = typeof variantGroup.label === "string" &&
+        variantGroup.label.trim() !== ""
+          ? variantGroup.label.trim()
+          : "Variant group";
+
+      return {
+        type: "variant_group",
+        id: variantGroup.id,
+        label:
+          `${label} (${variantCount} ` +
+          `${variantCount === 1 ? "variant" : "variants"})`
+      };
+    })
+    .filter(Boolean);
+
   const variantItems = Array.from(appState.selectedVariantIds)
     .map(variantId => {
       const variant = dataIndex.variantsById[variantId];
@@ -1389,6 +1427,12 @@ function renderCurrentSelection() {
     selectedElement,
     "Entities",
     entityItems
+  );
+
+  appendCurrentSelectionSection(
+    selectedElement,
+    "Variant Groups",
+    variantGroupItems
   );
 
   appendCurrentSelectionSection(
@@ -1547,6 +1591,7 @@ function loadQuizPreset(preset) {
   appState.selectedEntityGroups.clear();
   appState.selectedEntityIds.clear();
   appState.selectedVariantIds.clear();
+  appState.selectedVariantGroups.clear();
 
   /*
     Generate the full available pool so the input maximum and default value
@@ -1701,7 +1746,8 @@ function updateQuizQuestionCountInputsToMaximum() {
     appState.selectedCollectionIds.size > 0 ||
     appState.selectedEntityGroups.size > 0 ||
     appState.selectedEntityIds.size > 0 ||
-    appState.selectedVariantIds.size > 0;
+    appState.selectedVariantIds.size > 0 ||
+    appState.selectedVariantGroups.size > 0;
 
   /*
     If no collections are selected, restore the original visual default.
@@ -1737,6 +1783,7 @@ function updateQuizQuestionCountInputsToMaximum() {
       entityGroups: Array.from(appState.selectedEntityGroups.values()),
       entityIds: Array.from(appState.selectedEntityIds),
       variantIds: Array.from(appState.selectedVariantIds),
+      variantGroups: Array.from(appState.selectedVariantGroups.values()),
       questionCount: Number.MAX_SAFE_INTEGER
     },
     dataIndex
