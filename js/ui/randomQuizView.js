@@ -608,6 +608,9 @@ function bindRandomQuizControls() {
   const startMultipleChoiceButton = document.getElementById(
     "startRandomMultipleChoiceQuizButton"
   );
+  const addToGalleryButton = document.getElementById(
+    "addRandomQuizMatchesToGalleryButton"
+  );
   const clearFiltersButton = document.getElementById(
     "clearRandomQuizFiltersButton"
   );
@@ -633,6 +636,10 @@ function bindRandomQuizControls() {
 
   startMultipleChoiceButton?.addEventListener("click", () => {
     startRandomQuiz("multiple_choice");
+  });
+
+  addToGalleryButton?.addEventListener("click", () => {
+    addRandomQuizMatchesToGallery();
   });
 
   clearFiltersButton?.addEventListener("click", () => {
@@ -744,11 +751,15 @@ function updateRandomQuizStartButtonState() {
   const startMultipleChoiceButton = document.getElementById(
     "startRandomMultipleChoiceQuizButton"
   );
+  const addToGalleryButton = document.getElementById(
+    "addRandomQuizMatchesToGalleryButton"
+  );
 
   const requestedQuestionCount = Number(questionCountInput?.value);
   const canStart = maximumQuestionCount > 0 &&
     Number.isFinite(requestedQuestionCount) &&
     requestedQuestionCount >= 1;
+  const canAddToGallery = maximumQuestionCount > 0;
 
   if (startTypingButton) {
     startTypingButton.disabled = !canStart;
@@ -756,6 +767,82 @@ function updateRandomQuizStartButtonState() {
 
   if (startMultipleChoiceButton) {
     startMultipleChoiceButton.disabled = !canStart;
+  }
+
+  if (addToGalleryButton) {
+    addToGalleryButton.disabled = !canAddToGallery;
+  }
+}
+
+function getRandomQuizMatchingQuestionsForGallery() {
+  const filters = getRandomQuizFiltersFromState();
+
+  return generateRandomQuizQuestions({
+      filters,
+      questionCount: Number.MAX_SAFE_INTEGER
+    },
+    dataIndex
+  );
+}
+
+function getGalleryVariantIdsFromRandomQuizQuestions(questions) {
+  const variantIds = [];
+  const seenVariantIds = new Set();
+
+  questions.forEach(question => {
+    const variantId = question?.displayedVariantId ||
+      question?.revealVariantId ||
+      question?.variantId;
+
+    if (
+      typeof variantId !== "string" ||
+      seenVariantIds.has(variantId) ||
+      !dataIndex.variantsById?.[variantId]
+    ) {
+      return;
+    }
+
+    seenVariantIds.add(variantId);
+    variantIds.push(variantId);
+  });
+
+  return variantIds;
+}
+
+function addRandomQuizMatchesToGallery() {
+  const questions = getRandomQuizMatchingQuestionsForGallery();
+  const variantIds = getGalleryVariantIdsFromRandomQuizQuestions(questions);
+
+  if (variantIds.length === 0) {
+    updateRandomQuizSummaryAndControls();
+    return;
+  }
+
+  variantIds.forEach(variantId => {
+    appState.selectedVariantIds.add(variantId);
+  });
+
+  if (typeof refreshAfterSelectionChange === "function") {
+    refreshAfterSelectionChange({
+      showGallery: true
+    });
+    return;
+  }
+
+  if (typeof renderCurrentSelection === "function") {
+    renderCurrentSelection();
+  }
+
+  if (typeof resetGalleryRenderLimit === "function") {
+    resetGalleryRenderLimit();
+  }
+
+  if (typeof renderGallery === "function") {
+    renderGallery();
+  }
+
+  if (typeof showModePanel === "function") {
+    showModePanel("gallery");
   }
 }
 
