@@ -725,6 +725,65 @@ function updateCurrentModeTitle(modeName) {
     titlesByMode[modeName] ?? "Vexillator";
 }
 
+function hasCurrentSelection() {
+  return (
+    appState.selectedCollectionIds.size > 0 ||
+    appState.selectedEntityGroups.size > 0 ||
+    appState.selectedEntityIds.size > 0 ||
+    appState.selectedVariantIds.size > 0
+  );
+}
+
+function syncCurrentSelectionQuizStartControls() {
+  const hasActiveSelection = hasCurrentSelection();
+
+  const setAvailability = element => {
+    if (!element) {
+      return;
+    }
+
+    /*
+      Do not rely on the HTML hidden attribute alone here.
+      Author CSS such as .quiz-controls { display: ... } can override the
+      browser's default [hidden] display rule, leaving nested controls visible.
+      Inline display is used only as a visibility guard and is cleared when the
+      Current Selection becomes active again.
+    */
+    element.hidden = !hasActiveSelection;
+    element.style.display = hasActiveSelection ? "" : "none";
+    element.setAttribute(
+      "aria-hidden",
+      hasActiveSelection ? "false" : "true"
+    );
+
+    if ("disabled" in element) {
+      element.disabled = !hasActiveSelection;
+    }
+  };
+
+  const ordinaryQuizStartButtonIds = [
+    "startTypingQuizButton",
+    "startMultipleChoiceQuizButton"
+  ];
+
+  ordinaryQuizStartButtonIds.forEach(buttonId => {
+    const button = document.getElementById(buttonId);
+    const controlGroup = button?.closest(".quiz-controls");
+
+    setAvailability(controlGroup);
+    setAvailability(button);
+  });
+
+  const drawerQuizButtonIds = [
+    "selectionTypingButton",
+    "selectionMultipleChoiceButton"
+  ];
+
+  drawerQuizButtonIds.forEach(buttonId => {
+    setAvailability(document.getElementById(buttonId));
+  });
+}
+
 function updateSelectionSummaries() {
   const sourceCount =
     appState.selectedCollectionIds.size +
@@ -780,6 +839,8 @@ function updateSelectionSummaries() {
       `${sourceLabel} · ${flagCount} resolved ` +
       `${flagCount === 1 ? "flag" : "flags"}`;
   }
+
+  syncCurrentSelectionQuizStartControls();
 }
 
 function setupApplicationShell() {
@@ -874,6 +935,10 @@ function setupApplicationShell() {
   selectionTypingButton?.addEventListener(
     "click",
     () => {
+      if (!hasCurrentSelection()) {
+        return;
+      }
+
       closeSelectionDrawer({
         returnFocus: false
       });
@@ -885,6 +950,10 @@ function setupApplicationShell() {
   selectionMultipleChoiceButton?.addEventListener(
     "click",
     () => {
+      if (!hasCurrentSelection()) {
+        return;
+      }
+
       closeSelectionDrawer({
         returnFocus: false
       });
@@ -1217,11 +1286,7 @@ function renderCurrentSelection() {
 
   updateSelectionSummaries();
 
-  const hasActiveSelection =
-    appState.selectedCollectionIds.size > 0 ||
-    appState.selectedEntityGroups.size > 0 ||
-    appState.selectedEntityIds.size > 0 ||
-    appState.selectedVariantIds.size > 0;
+  const hasActiveSelection = hasCurrentSelection();
 
   if (!hasActiveSelection) {
     selectedElement.textContent = "No selections made.";
