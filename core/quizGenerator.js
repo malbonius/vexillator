@@ -103,12 +103,20 @@ function generateQuizQuestions(options = {}, dataIndex) {
   const limitedQuestions = shuffledEntries.slice(0, questionCount);
 
   /*
-    Visual ambiguity must be calculated from the final question set, not the
-    full resolved pool. A near-identical variant only needs special handling
-    when another member of the same visual group is actually present in the
-    current quiz.
+    Visual ambiguity must be calculated from the complete eligible pool before
+    random question sampling. If Romania and Chad are both in the source pool
+    but only one is sampled into a shorter quiz, the displayed flag is still
+    ambiguous from the user's point of view.
   */
-  attachQuizVisualGroupMetadata(limitedQuestions, dataIndex);
+  const visualGroupContextQuestions = mergedEntries.map(entry => ({
+    ...entry
+  }));
+
+  attachQuizVisualGroupMetadata(
+    limitedQuestions,
+    dataIndex,
+    visualGroupContextQuestions
+  );
 
   /*
     Add display labels and typing-answer context after the final question set
@@ -131,7 +139,11 @@ function generateQuizQuestions(options = {}, dataIndex) {
     question.allowsVariantOnlyAnswers = allowsVariantOnlyAnswers;
   });
 
-  attachQuizVisualGroupLabels(limitedQuestions, dataIndex);
+  attachQuizVisualGroupLabels(
+    limitedQuestions,
+    dataIndex,
+    visualGroupContextQuestions
+  );
 
   return limitedQuestions;
 }
@@ -394,19 +406,50 @@ function mergeAcceptedAnswersByAsset(entries) {
   variants that are visually identical or near-identical for quiz purposes
   even when they use different assets.
 
-  The special handling is final-quiz aware:
-  - if only one member of a visual group is present, the question behaves
-    normally;
-  - if multiple members are present, typing mode can accept any active entity
-    from that visual group;
+  The special handling is eligible-pool aware:
+  - if only one member of a visual group is present in the full source pool,
+    the question behaves normally;
+  - if multiple members are present in the full source pool, typing mode can
+    accept any active entity from that visual group, even when the final sampled
+    quiz contains only one of them;
   - multiple-choice mode can avoid using same-group questions as distractors.
 */
-function attachQuizVisualGroupMetadata(questions, dataIndex) {
+function attachQuizVisualGroupMetadata(
+  questions,
+  dataIndex,
+  contextQuestions = questions
+) {
   if (!Array.isArray(questions) || !dataIndex) {
     return;
   }
 
-  const questionsByGroupId = new Map();
+  const safeContextQuestions =
+    Array.isArray(contextQuestions) && contextQuestions.length > 0
+      ? contextQuestions
+      : questions;
+
+  const contextQuestionsByGroupId = new Map();
+
+  safeContextQuestions.forEach(contextQuestion => {
+    if (!contextQuestion) {
+      return;
+    }
+
+    const contextGroupId = resolveQuestionQuizVisualGroupId(
+      contextQuestion,
+      dataIndex
+    );
+
+    if (!contextGroupId) {
+      return;
+    }
+
+    if (!contextQuestionsByGroupId.has(contextGroupId)) {
+      contextQuestionsByGroupId.set(contextGroupId, []);
+    }
+
+    contextQuestionsByGroupId.get(contextGroupId).push(contextQuestion);
+  });
 
   questions.forEach(question => {
     if (!question) {
@@ -432,34 +475,29 @@ function attachQuizVisualGroupMetadata(questions, dataIndex) {
       return;
     }
 
-    if (!questionsByGroupId.has(groupId)) {
-      questionsByGroupId.set(groupId, []);
-    }
+    const groupContextQuestions =
+      contextQuestionsByGroupId.get(groupId) || [];
 
-    questionsByGroupId.get(groupId).push(question);
-  });
-
-  questionsByGroupId.forEach(groupQuestions => {
     const acceptedEntityIds = new Set();
     const assetIds = new Set();
 
-    groupQuestions.forEach(question => {
-      (question.acceptedEntityIds || []).forEach(entityId => {
+    groupContextQuestions.forEach(contextQuestion => {
+      (contextQuestion.acceptedEntityIds || []).forEach(entityId => {
         acceptedEntityIds.add(entityId);
       });
 
-      if (question.assetId) {
-        assetIds.add(question.assetId);
+      if (contextQuestion.assetId) {
+        assetIds.add(contextQuestion.assetId);
       }
     });
 
     /*
-      A collision exists when several final questions share a visual group or
+      A collision exists when several eligible questions share a visual group or
       when exact shared-asset merging has already produced one grouped question
       with several accepted entities.
     */
     const hasCollision =
-      groupQuestions.length > 1 || acceptedEntityIds.size > 1;
+      groupContextQuestions.length > 1 || acceptedEntityIds.size > 1;
 
     if (!hasCollision) {
       return;
@@ -468,12 +506,10 @@ function attachQuizVisualGroupMetadata(questions, dataIndex) {
     const acceptedEntityIdList = Array.from(acceptedEntityIds);
     const assetIdList = Array.from(assetIds);
 
-    groupQuestions.forEach(question => {
-      question.quizVisualGroupCollision = true;
-      question.typingAcceptedEntityIds = acceptedEntityIdList;
-      question.visualGroupAcceptedEntityIds = acceptedEntityIdList;
-      question.visualGroupQuestionAssetIds = assetIdList;
-    });
+    question.quizVisualGroupCollision = true;
+    question.typingAcceptedEntityIds = acceptedEntityIdList;
+    question.visualGroupAcceptedEntityIds = acceptedEntityIdList;
+    question.visualGroupQuestionAssetIds = assetIdList;
   });
 }
 
@@ -512,10 +548,19 @@ function resolveQuestionQuizVisualGroupId(question, dataIndex) {
   main.js can show visualGroupNote after answer reveal without rebuilding the
   ambiguity explanation itself.
 */
-function attachQuizVisualGroupLabels(questions, dataIndex) {
+function attachQuizVisualGroupLabels(
+  questions,
+  dataIndex,
+  contextQuestions = questions
+) {
   if (!Array.isArray(questions) || !dataIndex) {
     return;
   }
+
+  const safeContextQuestions =
+    Array.isArray(contextQuestions) && contextQuestions.length > 0
+      ? contextQuestions
+      : questions;
 
   questions.forEach(question => {
     if (!question?.quizVisualGroupCollision) {
@@ -524,19 +569,24 @@ function attachQuizVisualGroupLabels(questions, dataIndex) {
 
     const labels = new Set();
 
-    questions.forEach(otherQuestion => {
+    safeContextQuestions.forEach(contextQuestion => {
+      const contextGroupId = resolveQuestionQuizVisualGroupId(
+        contextQuestion,
+        dataIndex
+      );
+
       if (
-        !otherQuestion ||
-        otherQuestion.quizVisualGroupId !== question.quizVisualGroupId
+        !contextQuestion ||
+        contextGroupId !== question.quizVisualGroupId
       ) {
         return;
       }
 
       const label =
-        otherQuestion.answerLabel ||
+        contextQuestion.answerLabel ||
         getQuizQuestionAnswerLabel(
-          otherQuestion,
-          questions,
+          contextQuestion,
+          safeContextQuestions,
           dataIndex
         );
 
@@ -550,14 +600,14 @@ function attachQuizVisualGroupLabels(questions, dataIndex) {
     if (question.visualGroupMemberLabels.length > 1) {
       question.visualGroupNote =
         "This flag is visually identical or near-identical to other " +
-        "active quiz answers: " +
+        "answers in the active quiz pool: " +
         question.visualGroupMemberLabels.join(", ") +
         ". Typing answers for any of these active visual matches are " +
         "accepted for this question.";
     } else {
       question.visualGroupNote =
         "This flag is visually identical or near-identical to another " +
-        "accepted answer for this question.";
+        "accepted answer in the active quiz pool.";
     }
   });
 }

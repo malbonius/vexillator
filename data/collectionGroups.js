@@ -436,7 +436,7 @@ const collectionGroups = [
   },
   {
     id: "grp_czechia",
-    name: "Czechia",
+    name: "Czech Republic",
     parentGroupIds: ["grp_eastern_europe"],
     collectionIds: [
       "col_czechia_regions"

@@ -6540,8 +6540,8 @@ const entities = [
   },
   {
     id: "ent_czechia",
-    name: "Czechia",
-    aliases: ["Czech Republic"],
+    name: "Czech Republic",
+    aliases: ["Czechia"],
     entityType: "geographic",
     parentIds: ["ent_eastern_europe"],
     tags: ["sovereign", "country", "current", "recognised"],
