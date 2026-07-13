@@ -1577,8 +1577,11 @@ function createQuizPresetElement(preset) {
 /*
   Loads a preset into the current selection.
 
-  Current V1 presets replace the active selection with their saved collection
-  source. They default to the full question count currently available from the
+  Presets add their saved collection source to the active selection instead of
+  replacing it. Current Selection and Gallery already dedupe overlapping
+  sources, so loading multiple presets should be an additive workflow.
+
+  Presets default to the full question count currently available from the
   resolved preset pool.
 */
 function loadQuizPreset(preset) {
@@ -1587,18 +1590,20 @@ function loadQuizPreset(preset) {
     return;
   }
 
-  appState.selectedCollectionIds = new Set(preset.collectionIds);
-  appState.selectedEntityGroups.clear();
-  appState.selectedEntityIds.clear();
-  appState.selectedVariantIds.clear();
-  appState.selectedVariantGroups.clear();
+  const presetCollectionIds = Array.isArray(preset.collectionIds)
+    ? preset.collectionIds
+    : [];
+
+  presetCollectionIds.forEach(collectionId => {
+    appState.selectedCollectionIds.add(collectionId);
+  });
 
   /*
     Generate the full available pool so the input maximum and default value
     remain data-driven as collection membership changes.
   */
   const availableQuestions = generateQuizQuestions({
-    collectionIds: preset.collectionIds,
+    collectionIds: presetCollectionIds,
     questionCount: Number.MAX_SAFE_INTEGER
   }, dataIndex);
 

@@ -244,12 +244,29 @@ function applySelectionPreset(preset) {
       })
     : [];
 
-  appState.selectedCollectionIds = new Set(collectionIds);
-  appState.selectedEntityGroups = new Map(
-    entityGroups.map(entityGroup => [entityGroup.id, entityGroup])
-  );
-  appState.selectedEntityIds = new Set(entityIds);
-  appState.selectedVariantIds = new Set(variantIds);
+  /*
+    Loading a selection preset is additive.
+
+    Presets should add their saved sources to the current working selection
+    rather than replacing it. The resolved Gallery/quiz pools already dedupe
+    overlapping entities and variants, while Current Selection remains the
+    visible source-provenance surface.
+  */
+  collectionIds.forEach(collectionId => {
+    appState.selectedCollectionIds.add(collectionId);
+  });
+
+  entityGroups.forEach(entityGroup => {
+    appState.selectedEntityGroups.set(entityGroup.id, entityGroup);
+  });
+
+  entityIds.forEach(entityId => {
+    appState.selectedEntityIds.add(entityId);
+  });
+
+  variantIds.forEach(variantId => {
+    appState.selectedVariantIds.add(variantId);
+  });
 
   refreshAfterSelectionChange({
     showGallery: false
