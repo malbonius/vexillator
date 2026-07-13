@@ -1730,19 +1730,14 @@ function renderEntityView() {
       }
 
       refreshAfterSelectionChange({
-        /*
-          Adding sends the user to Gallery.
-          Removing keeps them on the Entity page.
-        */
-        showGallery: !wasSelected
+        showGallery: false
       });
 
-      if (wasSelected) {
-        /*
-          The user stayed on the Entity page, so update the button text.
-        */
-        renderEntityView();
-      }
+      /*
+        Stay on Entity Detail after adding or removing.
+        Current Selection and the button state already provide confirmation.
+      */
+      renderEntityView();
     });
 
     summaryInfoElement.appendChild(entityActionButton);
@@ -2913,16 +2908,14 @@ childrenSectionElement.appendChild(childrenHeaderElement);
         }
 
         refreshAfterSelectionChange({
-          /*
-            Adding opens Gallery for immediate visual confirmation.
-            Removing keeps the user on the Entity page.
-          */
-          showGallery: !wasSelected
+          showGallery: false
         });
 
-        if (wasSelected) {
-          renderEntityView();
-        }
+        /*
+          Stay on Entity Detail after adding or removing.
+          Current Selection and the button state already provide confirmation.
+        */
+        renderEntityView();
       });
 
       collectionItemElement.appendChild(collectionInfoElement);
@@ -3170,19 +3163,14 @@ if (variantsSectionExpanded) {
         }
 
         refreshAfterSelectionChange({
-          /*
-            Adding sends the user to Gallery.
-            Removing keeps them on the Entity page.
-          */
-          showGallery: !wasSelected
+          showGallery: false
         });
 
-        if (wasSelected) {
-          /*
-            The user stayed on the Entity page, so update the button text.
-          */
-          renderEntityView();
-        }
+        /*
+          Stay on Entity Detail after adding or removing.
+          Current Selection and the button state already provide confirmation.
+        */
+        renderEntityView();
       });
 
       bodyElement.appendChild(variantActionButton);
