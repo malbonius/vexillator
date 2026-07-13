@@ -3433,7 +3433,7 @@ const collections = [
   },
   {
     id: "col_england_historical_counties",
-    name: "English Historical County Flags",
+    name: "English Historic County Flags",
     type: "dynamic",
     target: "entity",
     rules: {
@@ -3445,7 +3445,7 @@ const collections = [
           hasTag: "county"
         },
         {
-          hasTag: "historical"
+          hasTag: "historic_administrative_area"
         },
         {
           hasDefaultVariant: true

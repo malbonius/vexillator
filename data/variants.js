@@ -14133,162 +14133,16 @@ const variants = [
   },
 
   /*
-    Flags representing the historic counties of England.
+    Flags representing historic English counties without a current
+    ceremonial-county duplicate.
+
+    Current ceremonial counties that also belong to the historic-county
+    framework use their normal current/default variant.
   */
-  {
-    id: "var_bedfordshire_historic",
-    entityId: "ent_bedfordshire_historic",
-    assetId: "ast_bedfordshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_berkshire_historic",
-    entityId: "ent_berkshire_historic",
-    assetId: "ast_berkshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_buckinghamshire_historic",
-    entityId: "ent_buckinghamshire_historic",
-    assetId: "ast_buckinghamshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_cambridgeshire_historic",
-    entityId: "ent_cambridgeshire_historic",
-    assetId: "ast_cambridgeshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_cheshire_historic",
-    entityId: "ent_cheshire_historic",
-    assetId: "ast_cheshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_cornwall_historic",
-    entityId: "ent_cornwall_historic",
-    assetId: "ast_cornwall_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
   {
     id: "var_cumberland_historic",
     entityId: "ent_cumberland_historic",
     assetId: "ast_cumberland_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_derbyshire_historic",
-    entityId: "ent_derbyshire_historic",
-    assetId: "ast_derbyshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_devon_historic",
-    entityId: "ent_devon_historic",
-    assetId: "ast_devon_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_dorset_historic",
-    entityId: "ent_dorset_historic",
-    assetId: "ast_dorset_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_durham_historic",
-    entityId: "ent_durham_historic",
-    assetId: "ast_county_durham_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_essex_historic",
-    entityId: "ent_essex_historic",
-    assetId: "ast_essex_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_gloucestershire_historic",
-    entityId: "ent_gloucestershire_historic",
-    assetId: "ast_gloucestershire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_hampshire_historic",
-    entityId: "ent_hampshire_historic",
-    assetId: "ast_hampshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_herefordshire_historic",
-    entityId: "ent_herefordshire_historic",
-    assetId: "ast_herefordshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_hertfordshire_historic",
-    entityId: "ent_hertfordshire_historic",
-    assetId: "ast_hertfordshire_current",
     displayName: "Historic County Flag",
     aliases: [],
     tags: ["historical"],
@@ -14306,159 +14160,9 @@ const variants = [
     endYear: null
   },
   {
-    id: "var_kent_historic",
-    entityId: "ent_kent_historic",
-    assetId: "ast_kent_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_lancashire_historic",
-    entityId: "ent_lancashire_historic",
-    assetId: "ast_lancashire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_leicestershire_historic",
-    entityId: "ent_leicestershire_historic",
-    assetId: "ast_leicestershire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_lincolnshire_historic",
-    entityId: "ent_lincolnshire_historic",
-    assetId: "ast_lincolnshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
     id: "var_middlesex_historic",
     entityId: "ent_middlesex_historic",
     assetId: "ast_middlesex",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_norfolk_historic",
-    entityId: "ent_norfolk_historic",
-    assetId: "ast_norfolk_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_northamptonshire_historic",
-    entityId: "ent_northamptonshire_historic",
-    assetId: "ast_northamptonshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_northumberland_historic",
-    entityId: "ent_northumberland_historic",
-    assetId: "ast_northumberland_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_nottinghamshire_historic",
-    entityId: "ent_nottinghamshire_historic",
-    assetId: "ast_nottinghamshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_oxfordshire_historic",
-    entityId: "ent_oxfordshire_historic",
-    assetId: "ast_oxfordshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_rutland_historic",
-    entityId: "ent_rutland_historic",
-    assetId: "ast_rutland_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_shropshire_historic",
-    entityId: "ent_shropshire_historic",
-    assetId: "ast_shropshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_somerset_historic",
-    entityId: "ent_somerset_historic",
-    assetId: "ast_somerset_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_staffordshire_historic",
-    entityId: "ent_staffordshire_historic",
-    assetId: "ast_staffordshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_suffolk_historic",
-    entityId: "ent_suffolk_historic",
-    assetId: "ast_suffolk_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_surrey_historic",
-    entityId: "ent_surrey_historic",
-    assetId: "ast_surrey_current",
     displayName: "Historic County Flag",
     aliases: [],
     tags: ["historical"],
@@ -14476,39 +14180,9 @@ const variants = [
     endYear: null
   },
   {
-    id: "var_warwickshire_historic",
-    entityId: "ent_warwickshire_historic",
-    assetId: "ast_warwickshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
     id: "var_westmorland_historic",
     entityId: "ent_westmorland_historic",
     assetId: "ast_westmorland",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_wiltshire_historic",
-    entityId: "ent_wiltshire_historic",
-    assetId: "ast_wiltshire_current",
-    displayName: "Historic County Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
-  {
-    id: "var_worcestershire_historic",
-    entityId: "ent_worcestershire_historic",
-    assetId: "ast_worcestershire_current",
     displayName: "Historic County Flag",
     aliases: [],
     tags: ["historical"],
@@ -14529,16 +14203,6 @@ const variants = [
   /*
     Flags representing the historic Ridings of Yorkshire.
   */
-  {
-    id: "var_east_riding_of_yorkshire_historic",
-    entityId: "ent_east_riding_of_yorkshire_historic",
-    assetId: "ast_east_riding_of_yorkshire",
-    displayName: "Historic Riding Flag",
-    aliases: [],
-    tags: ["historical"],
-    startYear: null,
-    endYear: null
-  },
   {
     id: "var_north_riding_of_yorkshire",
     entityId: "ent_north_riding_of_yorkshire",

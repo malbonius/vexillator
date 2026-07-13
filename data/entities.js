@@ -12335,7 +12335,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_bedfordshire_current"
   },
   {
@@ -12344,7 +12344,7 @@ const entities = [
     aliases: ["Royal County of Berkshire"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_berkshire_current"
   },
   /*{
@@ -12362,7 +12362,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_buckinghamshire_current"
   },
   {
@@ -12371,7 +12371,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_cambridgeshire_current"
   },
   {
@@ -12380,7 +12380,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_cheshire_current"
   },
   {
@@ -12398,7 +12398,7 @@ const entities = [
     aliases: ["Kernow"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_cornwall_current"
   },
   {
@@ -12416,7 +12416,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_derbyshire_current"
   },
   {
@@ -12425,7 +12425,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_devon_current"
   },
   {
@@ -12434,7 +12434,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_dorset_current"
   },
   {
@@ -12443,7 +12443,7 @@ const entities = [
     aliases: ["Durham"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_county_durham_current"
   },
   {
@@ -12452,7 +12452,7 @@ const entities = [
     aliases: ["East Riding"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_east_riding_of_yorkshire_current"
   },
   {
@@ -12470,7 +12470,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_essex_current"
   },
   {
@@ -12479,7 +12479,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_gloucestershire_current"
   },
   {
@@ -12506,7 +12506,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_hampshire_current"
   },
   {
@@ -12515,7 +12515,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_herefordshire_current"
   },
   {
@@ -12524,7 +12524,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_hertfordshire_current"
   },
   {
@@ -12542,7 +12542,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_kent_current"
   },
   {
@@ -12551,7 +12551,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_lancashire_current"
   },
   {
@@ -12560,7 +12560,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_leicestershire_current"
   },
   {
@@ -12569,7 +12569,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_lincolnshire_current"
   },
   {
@@ -12587,7 +12587,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_norfolk_current"
   },
   {
@@ -12605,7 +12605,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_northamptonshire_current"
   },
   {
@@ -12614,7 +12614,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_northumberland_current"
   },
   {
@@ -12623,7 +12623,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_nottinghamshire_current"
   },
   {
@@ -12632,7 +12632,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_oxfordshire_current"
   },
   {
@@ -12641,7 +12641,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_rutland_current"
   },
   {
@@ -12650,7 +12650,7 @@ const entities = [
     aliases: ["Salop"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_shropshire_current"
   },
   {
@@ -12659,7 +12659,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_somerset_current"
   },
   {
@@ -12677,7 +12677,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_staffordshire_current"
   },
   {
@@ -12686,7 +12686,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_suffolk_current"
   },
   {
@@ -12695,7 +12695,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_surrey_current"
   },
   {
@@ -12713,7 +12713,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_warwickshire_current"
   },
   {
@@ -12749,7 +12749,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_wiltshire_current"
   },
   {
@@ -12758,388 +12758,83 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "historic_administrative_area"],
     defaultVariantId: "var_worcestershire_current"
   },
 
   /*
-    Historic counties of England.
+    Historic counties of England that do not have a current ceremonial-county
+    entity representing the same identity.
 
-    Historic entities share current ceremonial assets where the same design
-    represents both contexts. Westmorland remains non-selectable until a flag
-    asset is added.
+    Current ceremonial counties that also belong to the historic-county
+    framework use the `historic_administrative_area` tag instead of duplicate
+    `_historic` entities.
   */
   {
-    id: "ent_bedfordshire_historic",
-    name: "Bedfordshire (historic county)",
-    aliases: ["Bedfordshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_bedfordshire_historic"
-  },
-  {
-    id: "ent_berkshire_historic",
-    name: "Berkshire (historic county)",
-    aliases: ["Berkshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_berkshire_historic"
-  },
-  {
-    id: "ent_buckinghamshire_historic",
-    name: "Buckinghamshire (historic county)",
-    aliases: ["Buckinghamshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_buckinghamshire_historic"
-  },
-  {
-    id: "ent_cambridgeshire_historic",
-    name: "Cambridgeshire (historic county)",
-    aliases: ["Cambridgeshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_cambridgeshire_historic"
-  },
-  {
-    id: "ent_cheshire_historic",
-    name: "Cheshire (historic county)",
-    aliases: ["Cheshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_cheshire_historic"
-  },
-  {
-    id: "ent_cornwall_historic",
-    name: "Cornwall (historic county)",
-    aliases: ["Cornwall", "Kernow"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_cornwall_historic"
-  },
-  {
     id: "ent_cumberland_historic",
-    name: "Cumberland (historic county)",
+    name: "Cumberland",
     aliases: ["Cumberland"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_cumberland_historic"
   },
   {
-    id: "ent_derbyshire_historic",
-    name: "Derbyshire (historic county)",
-    aliases: ["Derbyshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_derbyshire_historic"
-  },
-  {
-    id: "ent_devon_historic",
-    name: "Devon (historic county)",
-    aliases: ["Devon"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_devon_historic"
-  },
-  {
-    id: "ent_dorset_historic",
-    name: "Dorset (historic county)",
-    aliases: ["Dorset"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_dorset_historic"
-  },
-  {
-    id: "ent_durham_historic",
-    name: "Durham (historic county)",
-    aliases: ["County Durham", "Durham"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_durham_historic"
-  },
-  {
-    id: "ent_essex_historic",
-    name: "Essex (historic county)",
-    aliases: ["Essex"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_essex_historic"
-  },
-  {
-    id: "ent_gloucestershire_historic",
-    name: "Gloucestershire (historic county)",
-    aliases: ["Gloucestershire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_gloucestershire_historic"
-  },
-  {
-    id: "ent_hampshire_historic",
-    name: "Hampshire (historic county)",
-    aliases: ["Hampshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_hampshire_historic"
-  },
-  {
-    id: "ent_herefordshire_historic",
-    name: "Herefordshire (historic county)",
-    aliases: ["Herefordshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_herefordshire_historic"
-  },
-  {
-    id: "ent_hertfordshire_historic",
-    name: "Hertfordshire (historic county)",
-    aliases: ["Hertfordshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_hertfordshire_historic"
-  },
-  {
     id: "ent_huntingdonshire_historic",
-    name: "Huntingdonshire (historic county)",
+    name: "Huntingdonshire",
     aliases: ["Huntingdonshire"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_huntingdonshire_historic"
   },
   {
-    id: "ent_kent_historic",
-    name: "Kent (historic county)",
-    aliases: ["Kent"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_kent_historic"
-  },
-  {
-    id: "ent_lancashire_historic",
-    name: "Lancashire (historic county)",
-    aliases: ["Lancashire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_lancashire_historic"
-  },
-  {
-    id: "ent_leicestershire_historic",
-    name: "Leicestershire (historic county)",
-    aliases: ["Leicestershire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_leicestershire_historic"
-  },
-  {
-    id: "ent_lincolnshire_historic",
-    name: "Lincolnshire (historic county)",
-    aliases: ["Lincolnshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_lincolnshire_historic"
-  },
-  {
     id: "ent_middlesex_historic",
-    name: "Middlesex (historic county)",
+    name: "Middlesex",
     aliases: ["Middlesex"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_middlesex_historic"
   },
   {
-    id: "ent_norfolk_historic",
-    name: "Norfolk (historic county)",
-    aliases: ["Norfolk"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_norfolk_historic"
-  },
-  {
-    id: "ent_northamptonshire_historic",
-    name: "Northamptonshire (historic county)",
-    aliases: ["Northamptonshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_northamptonshire_historic"
-  },
-  {
-    id: "ent_northumberland_historic",
-    name: "Northumberland (historic county)",
-    aliases: ["Northumberland"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_northumberland_historic"
-  },
-  {
-    id: "ent_nottinghamshire_historic",
-    name: "Nottinghamshire (historic county)",
-    aliases: ["Nottinghamshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_nottinghamshire_historic"
-  },
-  {
-    id: "ent_oxfordshire_historic",
-    name: "Oxfordshire (historic county)",
-    aliases: ["Oxfordshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_oxfordshire_historic"
-  },
-  {
-    id: "ent_rutland_historic",
-    name: "Rutland (historic county)",
-    aliases: ["Rutland"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_rutland_historic"
-  },
-  {
-    id: "ent_shropshire_historic",
-    name: "Shropshire (historic county)",
-    aliases: ["Shropshire", "Salop"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_shropshire_historic"
-  },
-  {
-    id: "ent_somerset_historic",
-    name: "Somerset (historic county)",
-    aliases: ["Somerset"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_somerset_historic"
-  },
-  {
-    id: "ent_staffordshire_historic",
-    name: "Staffordshire (historic county)",
-    aliases: ["Staffordshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_staffordshire_historic"
-  },
-  {
-    id: "ent_suffolk_historic",
-    name: "Suffolk (historic county)",
-    aliases: ["Suffolk"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_suffolk_historic"
-  },
-  {
-    id: "ent_surrey_historic",
-    name: "Surrey (historic county)",
-    aliases: ["Surrey"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_surrey_historic"
-  },
-  {
     id: "ent_sussex_historic",
-    name: "Sussex (historic county)",
+    name: "Sussex",
     aliases: ["Sussex"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_sussex_historic"
   },
   {
-    id: "ent_warwickshire_historic",
-    name: "Warwickshire (historic county)",
-    aliases: ["Warwickshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_warwickshire_historic"
-  },
-  {
     id: "ent_westmorland_historic",
-    name: "Westmorland (historic county)",
+    name: "Westmorland",
     aliases: ["Westmorland"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_westmorland_historic"
   },
   {
-    id: "ent_wiltshire_historic",
-    name: "Wiltshire (historic county)",
-    aliases: ["Wiltshire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_wiltshire_historic"
-  },
-  {
-    id: "ent_worcestershire_historic",
-    name: "Worcestershire (historic county)",
-    aliases: ["Worcestershire"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_worcestershire_historic"
-  },
-  {
     id: "ent_yorkshire_historic",
-    name: "Yorkshire (historic county)",
+    name: "Yorkshire",
     aliases: ["Yorkshire"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_yorkshire_historic"
   },
 
   /*
-    Historic Ridings of Yorkshire.
+    Historic Ridings of Yorkshire without a current ceremonial-county duplicate.
   */
-  {
-    id: "ent_east_riding_of_yorkshire_historic",
-    name: "East Riding of Yorkshire (historic riding)",
-    aliases: ["East Riding of Yorkshire", "East Riding"],
-    entityType: "geographic",
-    parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
-    defaultVariantId: "var_east_riding_of_yorkshire_historic"
-  },
   {
     id: "ent_north_riding_of_yorkshire",
     name: "North Riding of Yorkshire",
     aliases: ["North Riding"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_north_riding_of_yorkshire"
   },
   {
@@ -13148,7 +12843,7 @@ const entities = [
     aliases: ["West Riding"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_west_riding_historic"
   },
 
@@ -13192,7 +12887,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_aberdeenshire_historic"
   },
   {
@@ -13201,7 +12896,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_banffshire_historic"
   },
   {
@@ -13210,7 +12905,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_berwickshire_historic"
   },
   {
@@ -13219,7 +12914,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_caithness_historic"
   },
   {
@@ -13228,7 +12923,7 @@ const entities = [
     aliases: ["Haddingtonshire"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_east_lothian_historic"
   },
   {
@@ -13237,7 +12932,7 @@ const entities = [
     aliases: ["Stewartry of Kirkcudbright"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_kirkcudbrightshire_historic"
   },
   {
@@ -13246,7 +12941,7 @@ const entities = [
     aliases: ["County of Moray", "Elginshire"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_morayshire_historic"
   },
   {
@@ -13255,7 +12950,7 @@ const entities = [
     aliases: ["Orkney Islands"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_orkney_historic"
   },
   {
@@ -13264,7 +12959,7 @@ const entities = [
     aliases: ["Shetland Islands"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_shetland_historic"
   },
   {
@@ -13273,7 +12968,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_sutherland_historic"
   },
 
@@ -13344,7 +13039,7 @@ const entities = [
     aliases: ["Isle of Anglesey", "Ynys Môn"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_anglesey_historic"
   },
   {
@@ -13353,7 +13048,7 @@ const entities = [
     aliases: ["County of Brecknock", "Sir Frycheiniog"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_brecknockshire_historic"
   },
   {
@@ -13362,7 +13057,7 @@ const entities = [
     aliases: ["Carnarvonshire", "Sir Gaernarfon"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_caernarfonshire_historic"
   },
   {
@@ -13371,7 +13066,7 @@ const entities = [
     aliases: ["Ceredigion", "Sir Aberteifi"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_cardiganshire_historic"
   },
   {
@@ -13380,7 +13075,7 @@ const entities = [
     aliases: ["Sir y Fflint"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_flintshire_historic"
   },
   {
@@ -13389,7 +13084,7 @@ const entities = [
     aliases: ["Morgannwg"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_glamorgan_historic"
   },
   {
@@ -13398,7 +13093,7 @@ const entities = [
     aliases: ["Merioneth", "Sir Feirionnydd"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_merionethshire_historic"
   },
   {
@@ -13407,7 +13102,7 @@ const entities = [
     aliases: ["Sir Fynwy"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_monmouthshire_historic"
   },
   {
@@ -13416,7 +13111,7 @@ const entities = [
     aliases: ["Sir Benfro"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
     defaultVariantId: "var_pembrokeshire_historic"
   },
   /*
