@@ -19,6 +19,7 @@ const tagRegistry = Object.freeze({
 	"first_level_subdivision",
     "former_subdivision",
     "historic_administrative_area",
+    "island_area",
     "county",
 	"territory",
 	"overseas",

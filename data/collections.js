@@ -3498,6 +3498,26 @@ const collections = [
     }
   },
 
+  {
+    id: "col_united_kingdom_islands",
+    name: "United Kingdom Island Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_united_kingdom"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
 
   /*
     Recently expanded first-level subdivision collections.

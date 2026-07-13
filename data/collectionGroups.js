@@ -50,6 +50,7 @@ const collectionGroups = [
       "col_england_historical_counties",
       "col_scotland_historical_counties",
       "col_wales_historical_counties",
+      "col_united_kingdom_islands",
       "col_quiz_safe_text_removed_flags"
     ]
   },
@@ -523,7 +524,9 @@ const collectionGroups = [
     id: "grp_united_kingdom",
     name: "United Kingdom",
     parentGroupIds: ["grp_northern_europe"],
-    collectionIds: []
+    collectionIds: [
+      "col_united_kingdom_islands"
+    ]
   },
   {
     id: "grp_england",

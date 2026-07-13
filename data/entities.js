@@ -12533,7 +12533,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["county", "current", "subdivision"],
+    tags: ["county", "current", "subdivision", "island_area"],
     defaultVariantId: "var_isle_of_wight_current"
   },
   {
@@ -12856,7 +12856,7 @@ const entities = [
     aliases: ["Lundy Island"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_lundy_current"
   },
   {
@@ -12865,7 +12865,7 @@ const entities = [
     aliases: ["Portland"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_isle_of_portland_current"
   },
   {
@@ -12874,7 +12874,7 @@ const entities = [
     aliases: ["Purbeck"],
     entityType: "geographic",
     parentIds: ["ent_england"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_isle_of_purbeck_current"
   },
 
@@ -12950,7 +12950,7 @@ const entities = [
     aliases: ["Orkney Islands"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area", "island_area"],
     defaultVariantId: "var_orkney_historic"
   },
   {
@@ -12959,7 +12959,7 @@ const entities = [
     aliases: ["Shetland Islands"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area", "island_area"],
     defaultVariantId: "var_shetland_historic"
   },
   {
@@ -12981,7 +12981,7 @@ const entities = [
     aliases: ["Barraigh"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_barra_current"
   },
   {
@@ -12990,7 +12990,7 @@ const entities = [
     aliases: ["Beàrnaraigh Mòr"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_great_bernera_current"
   },
   {
@@ -12999,7 +12999,7 @@ const entities = [
     aliases: ["Western Isles", "Na h-Eileanan Siar"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_outer_hebrides_current"
   },
   {
@@ -13008,7 +13008,7 @@ const entities = [
     aliases: ["Isle of Skye", "An t-Eilean Sgitheanach"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_skye_current"
   },
   {
@@ -13017,7 +13017,7 @@ const entities = [
     aliases: ["Uibhist a Deas"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_south_uist_current"
   },
   {
@@ -13026,7 +13026,7 @@ const entities = [
     aliases: ["Isle of Tiree", "Tiriodh"],
     entityType: "geographic",
     parentIds: ["ent_scotland"],
-    tags: ["current"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_tiree_current"
   },
 
