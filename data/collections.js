@@ -3453,6 +3453,50 @@ const collections = [
       ]
     }
   },
+  {
+    id: "col_scotland_historical_counties",
+    name: "Scottish Historic County Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_scotland"
+        },
+        {
+          hasTag: "county"
+        },
+        {
+          hasTag: "historic_administrative_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_wales_historical_counties",
+    name: "Welsh Historic County Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_wales"
+        },
+        {
+          hasTag: "county"
+        },
+        {
+          hasTag: "historic_administrative_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
 
 
   /*

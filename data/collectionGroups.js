@@ -48,6 +48,8 @@ const collectionGroups = [
     parentGroupIds: ["grp_world"],
     collectionIds: [
       "col_england_historical_counties",
+      "col_scotland_historical_counties",
+      "col_wales_historical_counties",
       "col_quiz_safe_text_removed_flags"
     ]
   },
@@ -530,6 +532,22 @@ const collectionGroups = [
     collectionIds: [
       "col_england_ceremonial_counties",
       "col_england_historical_counties"
+    ]
+  },
+  {
+    id: "grp_scotland",
+    name: "Scotland",
+    parentGroupIds: ["grp_united_kingdom"],
+    collectionIds: [
+      "col_scotland_historical_counties"
+    ]
+  },
+  {
+    id: "grp_wales",
+    name: "Wales",
+    parentGroupIds: ["grp_united_kingdom"],
+    collectionIds: [
+      "col_wales_historical_counties"
     ]
   },
   {
