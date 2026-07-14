@@ -28,7 +28,9 @@ const collectionGroups = [
     id: "grp_geography",
     name: "Geography",
     parentGroupIds: ["grp_world"],
-    collectionIds: []
+    collectionIds: [
+      "col_island_area_flags"
+    ]
   },
   {
     id: "grp_political_status",
@@ -50,6 +52,7 @@ const collectionGroups = [
       "col_england_historical_counties",
       "col_scotland_historical_counties",
       "col_wales_historical_counties",
+      "col_island_area_flags",
       "col_united_kingdom_islands",
       "col_quiz_safe_text_removed_flags"
     ]
@@ -65,7 +68,8 @@ const collectionGroups = [
     collectionIds: [
       "col_south_american_sovereign",
       "col_south_american_flags",
-      "col_south_american_dependents"
+      "col_south_american_dependents",
+      "col_south_american_island_area_flags"
     ]
   },
 
@@ -105,7 +109,8 @@ const collectionGroups = [
     collectionIds: [
       "col_north_america_countries",
       "col_north_american_flags",
-      "col_north_america_dependents"
+      "col_north_america_dependents",
+      "col_north_american_island_area_flags"
     ]
   },
   {
@@ -265,7 +270,8 @@ const collectionGroups = [
     collectionIds: [
       "col_caribbean_sovereign",
       "col_caribbean_flags",
-      "col_caribbean_dependents"
+      "col_caribbean_dependents",
+      "col_caribbean_island_area_flags"
     ]
   },
 
@@ -279,7 +285,8 @@ const collectionGroups = [
     collectionIds: [
       "col_african_sovereign",
       "col_african_flags",
-      "col_african_dependents"
+      "col_african_dependents",
+      "col_african_island_area_flags"
     ]
   },
   {
@@ -339,6 +346,7 @@ const collectionGroups = [
       "col_european_sovereign",
       "col_european_flags",
       "col_european_dependents",
+      "col_european_island_area_flags",
       "col_europe_first_level_subdivisions"
     ]
   },
@@ -931,7 +939,8 @@ const collectionGroups = [
     collectionIds: [
       "col_oceanian_sovereign",
       "col_oceanian_flags",
-      "col_oceanian_dependents"
+      "col_oceanian_dependents",
+      "col_oceanian_island_area_flags"
     ]
   },
   {
