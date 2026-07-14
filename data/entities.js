@@ -185,7 +185,7 @@ const entities = [
     aliases: [],
     entityType: "geographic",
     parentIds: ["ent_northern_europe"],
-    tags: ["region"],
+    tags: ["region", "island_area"],
     defaultVariantId: null
   },
   {
@@ -445,7 +445,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: null
   },
@@ -465,7 +466,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: null
   },
@@ -482,7 +484,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_christmas_island_current_unofficial"
   },
@@ -503,7 +506,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_cocos_keeling_islands_current_unofficial"
   },
@@ -523,7 +527,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: null
   },
@@ -551,7 +556,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_norfolk_island_current"
   },
@@ -582,7 +588,8 @@ const entities = [
       "overseas",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_new_caledonia_kanak_current_unofficial"
   },
@@ -681,7 +688,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_guam_current"
   },
@@ -732,7 +740,8 @@ const entities = [
       "overseas",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_northern_mariana_islands_current"
   },
@@ -760,7 +769,7 @@ const entities = [
     parentIds: ["ent_micronesia"],
     administeringEntityIds: ["ent_united_states"],
     officialRepresentationVariantIds: ["var_united_states_current"],
-    tags: ["region", "overseas", "current"],
+    tags: ["region", "overseas", "current", "island_area"],
     defaultVariantId: null
   },
   {
@@ -776,7 +785,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_johnston_atoll_current_unofficial"
   },
@@ -796,7 +806,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_midway_atoll_current_unofficial"
   },
@@ -813,7 +824,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "disputed"
+      "disputed",
+      "island_area"
     ],
     defaultVariantId: "var_wake_island_current_unofficial"
   },
@@ -836,7 +848,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_american_samoa_current"
   },
@@ -862,7 +875,8 @@ const entities = [
       "overseas",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_french_polynesia_current"
   },
@@ -900,7 +914,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_pitcairn_islands_current"
   },
@@ -925,7 +940,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_tokelau_current"
   },
@@ -963,7 +979,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_wallis_and_futuna_current_unofficial"
   },
@@ -1229,7 +1246,8 @@ const entities = [
       "first_level_subdivision",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_mayotte_unofficial"
   },
@@ -1246,7 +1264,8 @@ const entities = [
       "first_level_subdivision",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_reunion_unofficial"
   },
@@ -1257,7 +1276,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_eastern_africa"],
     administeringEntityIds: ["ent_united_kingdom"],
-    tags: ["territory", "overseas", "current", "recognised", "disputed"],
+    tags: ["territory", "overseas", "current", "recognised", "disputed", "island_area"],
     defaultVariantId: "var_british_indian_ocean_territory_current"
   },
   {
@@ -1590,7 +1609,7 @@ const entities = [
     officialRepresentationVariantIds: [
       "var_united_kingdom_current"
     ],
-    tags: ["dependency", "overseas", "current", "recognised"],
+    tags: ["dependency", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: null
   },
   {
@@ -1603,7 +1622,7 @@ const entities = [
     constituentOfEntityIds: [
       "ent_saint_helena_ascension_and_tristan_da_cunha"
     ],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_saint_helena_current"
   },
   {
@@ -1616,7 +1635,7 @@ const entities = [
     constituentOfEntityIds: [
       "ent_saint_helena_ascension_and_tristan_da_cunha"
     ],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_ascension_island_current"
   },
   {
@@ -1629,7 +1648,7 @@ const entities = [
     constituentOfEntityIds: [
       "ent_saint_helena_ascension_and_tristan_da_cunha"
     ],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_tristan_da_cunha_current"
   },
 
@@ -1669,7 +1688,8 @@ const entities = [
       "territory",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: null
   },
@@ -1716,7 +1736,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_south_america"],
 	administeringEntityIds: ["ent_united_kingdom"],
-    tags: [ "territory", "overseas", "current", "recognised", "disputed"],
+    tags: ["territory", "overseas", "current", "recognised", "disputed", "island_area"],
     defaultVariantId: "var_falkland_islands_current"
   },
   {
@@ -1767,7 +1787,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_south_america"],
 	administeringEntityIds: ["ent_united_kingdom"],
-    tags: [ "territory", "overseas", "current", "recognised", "disputed"],
+    tags: ["territory", "overseas", "current", "recognised", "disputed", "island_area"],
     defaultVariantId: "var_south_georgia_and_the_south_sandwich_islands_current"
   },
   {
@@ -2103,7 +2123,7 @@ const entities = [
     aliases: ["PEI"],
     entityType: "geographic",
     parentIds: ["ent_canada"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
     defaultVariantId: "var_canada_prince_edward_island_current"
   },
   {
@@ -2160,7 +2180,7 @@ const entities = [
 	constituentOfEntityIds: [
       "ent_kingdom_of_denmark"
     ],
-    tags: ["territory", "autonomous", "current", "recognised"],
+    tags: ["territory", "autonomous", "current", "recognised", "island_area"],
     defaultVariantId: "var_greenland_current"
   },
    {
@@ -2176,7 +2196,7 @@ const entities = [
 	officialRepresentationVariantIds: [
       "var_france_current"
     ],
-    tags: [ "territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_saint_pierre_and_miquelon_current_unofficial"
   },
   {
@@ -2739,7 +2759,7 @@ const entities = [
     entityType: "geographic",
     parentIds: [ "ent_caribbean" ],
 	administeringEntityIds: ["ent_united_kingdom"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_anguilla_current"
   },
   {
@@ -2760,7 +2780,7 @@ const entities = [
 	constituentOfEntityIds: [
       "ent_kingdom_of_the_netherlands"
     ],
-    tags: ["country", "overseas", "current", "recognised"],
+    tags: ["country", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_aruba_current"
   },
   {
@@ -2788,7 +2808,7 @@ const entities = [
     entityType: "geographic",
     parentIds: [ "ent_northern_america" ],
 	administeringEntityIds: ["ent_united_kingdom"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_bermuda_current"
   },
   {
@@ -2798,8 +2818,13 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean_netherlands"],
 	administeringEntityIds: ["ent_netherlands"],
-    tags: ["subdivision", "overseas",
-	"current", "recognised"],
+    tags: [
+      "subdivision",
+      "overseas",
+      "current",
+      "recognised",
+      "island_area"
+    ],
     defaultVariantId: "var_bonaire_current"
   },
   {
@@ -2809,7 +2834,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean"],
 	administeringEntityIds: ["ent_united_kingdom"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_british_virgin_islands_current"
   },
   {
@@ -2819,7 +2844,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean"],
 	administeringEntityIds: ["ent_united_kingdom"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_cayman_islands_current"
   },
   {
@@ -2845,7 +2870,7 @@ const entities = [
     officialRepresentationVariantIds: [
       "var_netherlands_current"
     ],
-    tags: ["region", "overseas", "current", "recognised"],
+    tags: ["region", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: null
   },
   {
@@ -2857,7 +2882,7 @@ const entities = [
 	constituentOfEntityIds: [
       "ent_kingdom_of_the_netherlands"
     ],
-    tags: ["country", "overseas", "current", "recognised"],
+    tags: ["country", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_curacao_current"
   },
   {
@@ -2885,7 +2910,7 @@ const entities = [
     entityType: "geographic",
     parentIds: [ "ent_caribbean" ],
 	administeringEntityIds: ["ent_venezuela"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId:
       "var_federal_dependencies_of_venezuela_current"
   },
@@ -2908,7 +2933,7 @@ const entities = [
 	officialRepresentationVariantIds: [
       "var_france_current"
     ],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_guadeloupe_current_unofficial"
   },
   {
@@ -2939,7 +2964,7 @@ const entities = [
 	officialRepresentationVariantIds: [
       "var_france_current"
     ],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_martinique_current"
   },
   {
@@ -2949,7 +2974,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean"],
 	administeringEntityIds: ["ent_united_kingdom"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_montserrat_current"
   },
   {
@@ -2959,7 +2984,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean"],
 	administeringEntityIds: ["ent_united_states"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_puerto_rico_current"
   },
   {
@@ -2969,7 +2994,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean_netherlands"],
 	administeringEntityIds: ["ent_netherlands"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_saba_current"
   },
   {
@@ -2991,7 +3016,7 @@ const entities = [
 	officialRepresentationVariantIds: [
       "var_france_current"
     ],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_saint_barthelemy_current_unofficial"
   },
   {
@@ -3022,7 +3047,7 @@ const entities = [
 	officialRepresentationVariantIds: [
       "var_france_current"
     ],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_saint_martin_current_unofficial"
   },
   {
@@ -3045,7 +3070,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean_netherlands"],
 	administeringEntityIds: ["ent_netherlands"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_sint_eustatius_current"
   },
   {
@@ -3057,7 +3082,7 @@ const entities = [
 	constituentOfEntityIds: [
       "ent_kingdom_of_the_netherlands"
     ],
-    tags: ["country", "overseas", "current", "recognised"],
+    tags: ["country", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_sint_maarten_current"
   },
   {
@@ -3076,7 +3101,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean"],
 	administeringEntityIds: ["ent_united_kingdom"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_turks_and_caicos_islands_current"
   },
   {
@@ -3090,7 +3115,7 @@ const entities = [
     entityType: "geographic",
     parentIds: ["ent_caribbean"],
 	administeringEntityIds: ["ent_united_states"],
-    tags: ["territory", "overseas", "current", "recognised"],
+    tags: ["territory", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: "var_us_virgin_islands_current"
   },
 
@@ -5342,7 +5367,8 @@ const entities = [
       "first_level_subdivision",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_aland_current"
   },
@@ -7031,7 +7057,8 @@ const entities = [
       "territory",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_faroe_islands_current"
   },
@@ -7930,7 +7957,7 @@ const entities = [
     aliases: ["Sardegna"],
     entityType: "geographic",
     parentIds: ["ent_italy"],
-    tags: ["subdivision", "first_level_subdivision", "autonomous", "current"],
+    tags: ["subdivision", "first_level_subdivision", "autonomous", "current", "island_area"],
     defaultVariantId: "var_italy_sardinia_current"
   },
   {
@@ -7939,7 +7966,7 @@ const entities = [
     aliases: ["Sicilia"],
     entityType: "geographic",
     parentIds: ["ent_italy"],
-    tags: ["subdivision", "first_level_subdivision", "autonomous", "current"],
+    tags: ["subdivision", "first_level_subdivision", "autonomous", "current", "island_area"],
     defaultVariantId: "var_italy_sicily_current"
   },
   {
@@ -9885,7 +9912,8 @@ const entities = [
       "autonomous",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_azores_current"
   },
@@ -9906,7 +9934,8 @@ const entities = [
       "autonomous",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_madeira_current"
   },
@@ -10301,7 +10330,7 @@ const entities = [
     officialRepresentationVariantIds: [
       "var_norway_current"
     ],
-    tags: ["region", "overseas", "current", "recognised"],
+    tags: ["region", "overseas", "current", "recognised", "island_area"],
     defaultVariantId: null
   },
   {
@@ -10363,7 +10392,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_sweden"],
-    tags: ["subdivision", "first_level_subdivision", "county", "current"],
+    tags: ["subdivision", "first_level_subdivision", "county", "current", "island_area"],
     defaultVariantId: "var_sweden_gotland_county_current"
   },
   {
@@ -11471,7 +11500,7 @@ const entities = [
     ],
     entityType: "geographic",
     parentIds: ["ent_denmark"],
-    tags: ["subdivision", "first_level_subdivision", "region", "current"],
+    tags: ["subdivision", "first_level_subdivision", "region", "current", "island_area"],
     defaultVariantId: "var_denmark_sjaelland_current"
   },
   {
@@ -11542,7 +11571,7 @@ const entities = [
     aliases: ["Corse"],
     entityType: "geographic",
     parentIds: ["ent_france"],
-    tags: ["subdivision", "first_level_subdivision", "current"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
     defaultVariantId: "var_france_corsica_current"
   },
   {
@@ -11630,7 +11659,8 @@ const entities = [
       "dependency",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_isle_of_man_current",
   },
@@ -11869,7 +11899,8 @@ const entities = [
       "first_level_subdivision",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_balearic_islands_current"
   },
@@ -11907,7 +11938,8 @@ const entities = [
       "autonomous",
       "overseas",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_canary_islands_current"
   },
@@ -12208,7 +12240,8 @@ const entities = [
       "dependency",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: null
   },
@@ -12224,7 +12257,8 @@ const entities = [
       "dependency",
       "autonomous",
       "current",
-      "recognised"
+      "recognised",
+      "island_area"
     ],
     defaultVariantId: "var_jersey_current"
   },
@@ -12240,7 +12274,8 @@ const entities = [
   tags: [
     "autonomous",
     "current",
-    "recognised"
+    "recognised",
+    "island_area"
   ],
   defaultVariantId: "var_alderney_current"
 },
@@ -12270,7 +12305,8 @@ const entities = [
   tags: [
     "autonomous",
     "current",
-    "recognised"
+    "recognised",
+    "island_area"
   ],
   defaultVariantId: "var_guernsey_current"
 },
@@ -12302,7 +12338,8 @@ const entities = [
   ],
   tags: [
     "current",
-    "recognised"
+    "recognised",
+    "island_area"
   ],
   defaultVariantId: "var_lihou_current"
 },
@@ -12318,7 +12355,8 @@ const entities = [
   tags: [
     "autonomous",
     "current",
-    "recognised"
+    "recognised",
+    "island_area"
   ],
   defaultVariantId: "var_sark_current"
 },
@@ -13039,7 +13077,7 @@ const entities = [
     aliases: ["Isle of Anglesey", "Ynys Môn"],
     entityType: "geographic",
     parentIds: ["ent_wales"],
-    tags: ["county", "historical", "former_subdivision", "historic_administrative_area"],
+    tags: ["county", "historical", "former_subdivision", "historic_administrative_area", "island_area"],
     defaultVariantId: "var_anglesey_historic"
   },
   {
