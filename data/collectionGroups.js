@@ -973,6 +973,15 @@ const collectionGroups = [
       "col_melanesia_flags"
     ]
   },
+
+  {
+    id: "grp_solomon_islands",
+    name: "Solomon Islands",
+    parentGroupIds: ["grp_melanesia"],
+    collectionIds: [
+      "col_solomon_islands_province_and_capital_flags"
+    ]
+  },
   {
     id: "grp_micronesia",
     name: "Micronesia",
@@ -998,6 +1007,17 @@ const collectionGroups = [
     collectionIds: [
       "col_polynesia_sovereign",
       "col_polynesia_flags"
+    ]
+  },
+
+  {
+    id: "grp_french_polynesia",
+    name: "French Polynesia",
+    parentGroupIds: ["grp_polynesia"],
+    collectionIds: [
+      "col_french_polynesia_island_area_flags",
+      "col_french_polynesia_island_group_flags",
+      "col_french_polynesia_island_flags"
     ]
   },
 

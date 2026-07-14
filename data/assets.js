@@ -177,6 +177,10 @@ const assets = [
     path: "assets/flags/geography/caribbean/anguilla/national/anguilla_current.svg"
   },
   {
+    id: "ast_anjouan_current",
+    path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/comoros/islands/anjouan_current.svg"
+  },
+  {
     id: "ast_antarctic_treaty_current",
     path: "assets/flags/international_organisations/treaty_systems/antarctic_treaty_current.svg"
   },
@@ -1745,6 +1749,10 @@ const assets = [
     path: "assets/flags/geography/europe/western_europe/france/regions/grand_est_current_text_removed.svg"
   },
   {
+    id: "ast_grande_comore_current",
+    path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/comoros/islands/grande_comore_current.svg"
+  },
+  {
     id: "ast_great_bernera_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/scotland/isles/great_bernera_current.svg"
   },
@@ -3091,6 +3099,10 @@ const assets = [
   {
     id: "ast_mogilev_current",
     path: "assets/flags/geography/europe/eastern_europe/belarus/regions/mogilev_current.svg"
+  },
+  {
+    id: "ast_moheli_current",
+    path: "assets/flags/geography/africa/sub_saharan_africa/eastern_africa/comoros/islands/moheli_current.svg"
   },
   {
     id: "ast_moldova_current",

@@ -1351,6 +1351,37 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_comoros_current"
   },
+
+  /*
+    Comoros autonomous islands represented in the current asset set.
+  */
+  {
+    id: "ent_comoros_anjouan",
+    name: "Anjouan",
+    aliases: ["Ndzuwani", "Nzwani"],
+    entityType: "geographic",
+    parentIds: ["ent_comoros"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_comoros_anjouan_current"
+  },
+  {
+    id: "ent_comoros_grande_comore",
+    name: "Grande Comore",
+    aliases: ["Ngazidja"],
+    entityType: "geographic",
+    parentIds: ["ent_comoros"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_comoros_grande_comore_current"
+  },
+  {
+    id: "ent_comoros_moheli",
+    name: "Mohéli",
+    aliases: ["Moheli", "Mwali"],
+    entityType: "geographic",
+    parentIds: ["ent_comoros"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_comoros_moheli_current"
+  },
   {
     id: "ent_djibouti",
     name: "Djibouti",

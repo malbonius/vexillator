@@ -2028,6 +2028,116 @@ const collections = [
   },
 
   /*
+    Oceania country and territory sub-collections.
+  */
+  {
+    id: "col_solomon_islands_province_and_capital_flags",
+    name: "Solomon Islands Province and Capital Territory Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasParent: "ent_solomon_islands"
+        },
+        {
+          hasTag: "first_level_subdivision"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_french_polynesia_island_area_flags",
+    name: "French Polynesian Island and Island Group Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_french_polynesia"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        },
+        {
+          not: {
+            entityIs: "ent_french_polynesia"
+          }
+        }
+      ]
+    }
+  },
+  {
+    id: "col_french_polynesia_island_group_flags",
+    name: "French Polynesian Island Group Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_french_polynesia"
+        },
+        {
+          hasTag: "region"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_french_polynesia_island_flags",
+    name: "French Polynesian Island Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_french_polynesia"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          not: {
+            hasTag: "region"
+          }
+        },
+        {
+          not: {
+            entityIs: "ent_french_polynesia"
+          }
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  /*
     Specialist user-facing collections.
   */
 

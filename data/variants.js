@@ -892,6 +892,36 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_comoros_anjouan_current",
+    entityId: "ent_comoros_anjouan",
+    assetId: "ast_anjouan_current",
+    displayName: "Autonomous Island Flag",
+    aliases: ["Anjouan Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_comoros_grande_comore_current",
+    entityId: "ent_comoros_grande_comore",
+    assetId: "ast_grande_comore_current",
+    displayName: "Autonomous Island Flag",
+    aliases: ["Grande Comore Flag", "Ngazidja Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_comoros_moheli_current",
+    entityId: "ent_comoros_moheli",
+    assetId: "ast_moheli_current",
+    displayName: "Autonomous Island Flag",
+    aliases: ["Mohéli Flag", "Moheli Flag", "Mwali Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_djibouti_current",
     entityId: "ent_djibouti",
     assetId: "ast_djibouti_current",
