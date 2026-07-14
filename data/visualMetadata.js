@@ -1,9 +1,12 @@
 /*
   AUTO-GENERATED VISUAL METADATA.
 
-  Generated: 2026-07-08T17:30:11.295Z
+  Generated: 2026-07-14T20:32:59.674Z
   Method: rendered pixel sampling via sharp
-  Assets processed: 1362 of 1362
+  Generation mode: new
+  Assets processed this run: 30 of 1392
+  Existing asset metadata preserved: 1362
+  Asset metadata entries in output: 1392
   Render width: 384px
 
   Do not edit generated entries manually. Review overrides should be handled
@@ -152574,6 +152577,2964 @@ const visualMetadata = Object.freeze({
         "height": 384,
         "totalPixels": 147456,
         "visiblePixels": 147456,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_anjouan_current",
+      "colours": [
+        "red",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "red",
+        "white"
+      ],
+      "colourCoverage": {
+        "red": 0.928,
+        "white": 0.0691
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "red",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "red",
+          "hex": "#D01020",
+          "coverage": 0.9212,
+          "pixelCount": 90558
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.0684,
+          "pixelCount": 6720
+        },
+        {
+          "family": "red",
+          "hex": "#E04050",
+          "coverage": 0.0012,
+          "pixelCount": 115
+        },
+        {
+          "family": "red",
+          "hex": "#D02030",
+          "coverage": 0.0011,
+          "pixelCount": 113
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_austral_islands_current",
+      "colours": [
+        "white",
+        "red",
+        "blue"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "white",
+        "red",
+        "blue"
+      ],
+      "colourCoverage": {
+        "white": 0.5201,
+        "red": 0.401,
+        "blue": 0.0789
+      },
+      "traceColourCoverage": {},
+      "colourCount": 3,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [
+        "red",
+        "blue",
+        "white",
+        "grey"
+      ],
+      "palette": [
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.5183,
+          "pixelCount": 50955
+        },
+        {
+          "family": "red",
+          "hex": "#E00030",
+          "coverage": 0.3958,
+          "pixelCount": 38912
+        },
+        {
+          "family": "blue",
+          "hex": "#0030A0",
+          "coverage": 0.0685,
+          "pixelCount": 6733
+        },
+        {
+          "family": "red",
+          "hex": "#F03050",
+          "coverage": 0.0052,
+          "pixelCount": 512
+        },
+        {
+          "family": "blue",
+          "hex": "#1040A0",
+          "coverage": 0.001,
+          "pixelCount": 102
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_bora_bora_current",
+      "colours": [
+        "red",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "red",
+        "white"
+      ],
+      "colourCoverage": {
+        "red": 0.6016,
+        "white": 0.3906
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "red",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "red",
+          "hex": "#D02030",
+          "coverage": 0.5938,
+          "pixelCount": 58368
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.3906,
+          "pixelCount": 38400
+        },
+        {
+          "family": "pink",
+          "hex": "#F0D0D0",
+          "coverage": 0.0078,
+          "pixelCount": 768
+        },
+        {
+          "family": "red",
+          "hex": "#E08080",
+          "coverage": 0.0078,
+          "pixelCount": 768
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_central_province_current",
+      "colours": [
+        "blue"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "blue"
+      ],
+      "colourCoverage": {
+        "blue": 0.8101
+      },
+      "traceColourCoverage": {},
+      "colourCount": 1,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 1,
+      "sourceColourFamilies": [],
+      "palette": [
+        {
+          "family": "blue",
+          "hex": "#301070",
+          "coverage": 0.7634,
+          "pixelCount": 56286
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.047,
+          "pixelCount": 3466
+        },
+        {
+          "family": "green",
+          "hex": "#00D000",
+          "coverage": 0.0332,
+          "pixelCount": 2445
+        },
+        {
+          "family": "gold",
+          "hex": "#FFF000",
+          "coverage": 0.0273,
+          "pixelCount": 2013
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.026,
+          "pixelCount": 1914
+        },
+        {
+          "family": "blue",
+          "hex": "#0090E0",
+          "coverage": 0.0201,
+          "pixelCount": 1480
+        },
+        {
+          "family": "gold",
+          "hex": "#FFFF00",
+          "coverage": 0.0103,
+          "pixelCount": 762
+        },
+        {
+          "family": "green",
+          "hex": "#006000",
+          "coverage": 0.0076,
+          "pixelCount": 563
+        },
+        {
+          "family": "blue",
+          "hex": "#302070",
+          "coverage": 0.0076,
+          "pixelCount": 558
+        },
+        {
+          "family": "blue",
+          "hex": "#201070",
+          "coverage": 0.0054,
+          "pixelCount": 396
+        },
+        {
+          "family": "purple",
+          "hex": "#301070",
+          "coverage": 0.0023,
+          "pixelCount": 169
+        },
+        {
+          "family": "white",
+          "hex": "#F0F0F0",
+          "coverage": 0.0013,
+          "pixelCount": 95
+        },
+        {
+          "family": "gold",
+          "hex": "#F0F000",
+          "coverage": 0.0012,
+          "pixelCount": 90
+        },
+        {
+          "family": "green",
+          "hex": "#50E050",
+          "coverage": 0.0012,
+          "pixelCount": 85
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 192,
+        "totalPixels": 73728,
+        "visiblePixels": 73728,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_choiseul_current",
+      "colours": [
+        "gold",
+        "green",
+        "blue",
+        "black",
+        "red",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "gold",
+        "green",
+        "blue",
+        "black",
+        "red",
+        "white"
+      ],
+      "colourCoverage": {
+        "gold": 0.315,
+        "green": 0.2383,
+        "blue": 0.2252,
+        "black": 0.0794,
+        "red": 0.0644,
+        "white": 0.0628
+      },
+      "traceColourCoverage": {},
+      "colourCount": 6,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 6,
+      "sourceColourFamilies": [],
+      "palette": [
+        {
+          "family": "gold",
+          "hex": "#F0F010",
+          "coverage": 0.2765,
+          "pixelCount": 20491
+        },
+        {
+          "family": "blue",
+          "hex": "#0060D0",
+          "coverage": 0.2166,
+          "pixelCount": 16051
+        },
+        {
+          "family": "green",
+          "hex": "#30D060",
+          "coverage": 0.2165,
+          "pixelCount": 16045
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.0759,
+          "pixelCount": 5624
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.0612,
+          "pixelCount": 4534
+        },
+        {
+          "family": "red",
+          "hex": "#FF0000",
+          "coverage": 0.0559,
+          "pixelCount": 4140
+        },
+        {
+          "family": "gold",
+          "hex": "#FFF010",
+          "coverage": 0.0118,
+          "pixelCount": 876
+        },
+        {
+          "family": "gold",
+          "hex": "#F0FF10",
+          "coverage": 0.0062,
+          "pixelCount": 460
+        },
+        {
+          "family": "green",
+          "hex": "#30D070",
+          "coverage": 0.0057,
+          "pixelCount": 423
+        },
+        {
+          "family": "gold",
+          "hex": "#C0D040",
+          "coverage": 0.0052,
+          "pixelCount": 384
+        },
+        {
+          "family": "green",
+          "hex": "#80D050",
+          "coverage": 0.0052,
+          "pixelCount": 382
+        },
+        {
+          "family": "green",
+          "hex": "#20D070",
+          "coverage": 0.0051,
+          "pixelCount": 381
+        },
+        {
+          "family": "gold",
+          "hex": "#FF9010",
+          "coverage": 0.0042,
+          "pixelCount": 312
+        },
+        {
+          "family": "red",
+          "hex": "#B00000",
+          "coverage": 0.004,
+          "pixelCount": 293
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 193,
+        "totalPixels": 74112,
+        "visiblePixels": 74112,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_gambier_islands_current",
+      "colours": [
+        "white",
+        "blue"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "white",
+        "blue"
+      ],
+      "colourCoverage": {
+        "white": 0.6083,
+        "blue": 0.391
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "blue",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.6064,
+          "pixelCount": 59616
+        },
+        {
+          "family": "blue",
+          "hex": "#204090",
+          "coverage": 0.3724,
+          "pixelCount": 36604
+        },
+        {
+          "family": "blue",
+          "hex": "#7080B0",
+          "coverage": 0.0084,
+          "pixelCount": 823
+        },
+        {
+          "family": "blue",
+          "hex": "#D0E0F0",
+          "coverage": 0.0013,
+          "pixelCount": 128
+        },
+        {
+          "family": "blue",
+          "hex": "#A0B0D0",
+          "coverage": 0.001,
+          "pixelCount": 99
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_grande_comore_current",
+      "colours": [
+        "blue",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "blue",
+        "white"
+      ],
+      "colourCoverage": {
+        "blue": 0.9299,
+        "white": 0.07
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "blue",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "blue",
+          "hex": "#002080",
+          "coverage": 0.9205,
+          "pixelCount": 90488
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.0681,
+          "pixelCount": 6691
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_guadalcanal_current",
+      "colours": [
+        "green",
+        "white",
+        "gold"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "green",
+        "white",
+        "gold"
+      ],
+      "colourCoverage": {
+        "green": 0.7641,
+        "white": 0.1123,
+        "gold": 0.0531
+      },
+      "traceColourCoverage": {},
+      "colourCount": 3,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [],
+      "palette": [
+        {
+          "family": "green",
+          "hex": "#507040",
+          "coverage": 0.6947,
+          "pixelCount": 51218
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.1067,
+          "pixelCount": 7867
+        },
+        {
+          "family": "gold",
+          "hex": "#F0FF70",
+          "coverage": 0.0412,
+          "pixelCount": 3037
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.0323,
+          "pixelCount": 2383
+        },
+        {
+          "family": "green",
+          "hex": "#506040",
+          "coverage": 0.0134,
+          "pixelCount": 989
+        },
+        {
+          "family": "green",
+          "hex": "#60A010",
+          "coverage": 0.0115,
+          "pixelCount": 848
+        },
+        {
+          "family": "green",
+          "hex": "#506030",
+          "coverage": 0.0101,
+          "pixelCount": 741
+        },
+        {
+          "family": "green",
+          "hex": "#809070",
+          "coverage": 0.007,
+          "pixelCount": 516
+        },
+        {
+          "family": "gold",
+          "hex": "#E0FF70",
+          "coverage": 0.0051,
+          "pixelCount": 379
+        },
+        {
+          "family": "white",
+          "hex": "#F0F0F0",
+          "coverage": 0.005,
+          "pixelCount": 370
+        },
+        {
+          "family": "silver",
+          "hex": "#E0E0E0",
+          "coverage": 0.0043,
+          "pixelCount": 319
+        },
+        {
+          "family": "green",
+          "hex": "#607040",
+          "coverage": 0.0037,
+          "pixelCount": 272
+        },
+        {
+          "family": "black",
+          "hex": "#101010",
+          "coverage": 0.0033,
+          "pixelCount": 245
+        },
+        {
+          "family": "green",
+          "hex": "#809080",
+          "coverage": 0.0028,
+          "pixelCount": 208
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 192,
+        "totalPixels": 73728,
+        "visiblePixels": 73728,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_hao_current",
+      "colours": [
+        "white",
+        "red"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "white",
+        "red"
+      ],
+      "colourCoverage": {
+        "white": 0.6641,
+        "red": 0.3359
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "red",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.6641,
+          "pixelCount": 65280
+        },
+        {
+          "family": "red",
+          "hex": "#E02020",
+          "coverage": 0.2992,
+          "pixelCount": 29408
+        },
+        {
+          "family": "red",
+          "hex": "#301010",
+          "coverage": 0.0191,
+          "pixelCount": 1873
+        },
+        {
+          "family": "red",
+          "hex": "#F08080",
+          "coverage": 0.0078,
+          "pixelCount": 768
+        },
+        {
+          "family": "red",
+          "hex": "#401010",
+          "coverage": 0.0023,
+          "pixelCount": 230
+        },
+        {
+          "family": "red",
+          "hex": "#D02020",
+          "coverage": 0.0016,
+          "pixelCount": 162
+        },
+        {
+          "family": "red",
+          "hex": "#601010",
+          "coverage": 0.001,
+          "pixelCount": 99
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_honiara_capital_territory_current",
+      "colours": [
+        "white"
+      ],
+      "accentColours": [
+        "green",
+        "black",
+        "gold"
+      ],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "white",
+        "green",
+        "black",
+        "gold"
+      ],
+      "colourCoverage": {
+        "white": 0.8823,
+        "green": 0.0462,
+        "black": 0.0256,
+        "gold": 0.0205
+      },
+      "traceColourCoverage": {},
+      "colourCount": 1,
+      "accentColourCount": 3,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 4,
+      "sourceColourFamilies": [
+        "green",
+        "gold",
+        "white",
+        "black"
+      ],
+      "palette": [
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.8799,
+          "pixelCount": 64870
+        },
+        {
+          "family": "green",
+          "hex": "#007050",
+          "coverage": 0.041,
+          "pixelCount": 3026
+        },
+        {
+          "family": "gold",
+          "hex": "#FFE040",
+          "coverage": 0.0194,
+          "pixelCount": 1427
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.0181,
+          "pixelCount": 1331
+        },
+        {
+          "family": "black",
+          "hex": "#101010",
+          "coverage": 0.0036,
+          "pixelCount": 268
+        },
+        {
+          "family": "green",
+          "hex": "#004030",
+          "coverage": 0.0025,
+          "pixelCount": 184
+        },
+        {
+          "family": "black",
+          "hex": "#202020",
+          "coverage": 0.0025,
+          "pixelCount": 181
+        },
+        {
+          "family": "white",
+          "hex": "#F0F0F0",
+          "coverage": 0.0024,
+          "pixelCount": 178
+        },
+        {
+          "family": "silver",
+          "hex": "#E0E0E0",
+          "coverage": 0.0022,
+          "pixelCount": 161
+        },
+        {
+          "family": "silver",
+          "hex": "#C0C0C0",
+          "coverage": 0.0022,
+          "pixelCount": 159
+        },
+        {
+          "family": "grey",
+          "hex": "#A0A0A0",
+          "coverage": 0.0021,
+          "pixelCount": 153
+        },
+        {
+          "family": "grey",
+          "hex": "#404040",
+          "coverage": 0.002,
+          "pixelCount": 151
+        },
+        {
+          "family": "brown",
+          "hex": "#706020",
+          "coverage": 0.0019,
+          "pixelCount": 140
+        },
+        {
+          "family": "silver",
+          "hex": "#D0D0D0",
+          "coverage": 0.0019,
+          "pixelCount": 139
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 192,
+        "totalPixels": 73728,
+        "visiblePixels": 73728,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_huahine_current",
+      "colours": [
+        "white",
+        "red"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "white",
+        "red"
+      ],
+      "colourCoverage": {
+        "white": 0.6641,
+        "red": 0.3359
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "red",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.6641,
+          "pixelCount": 65280
+        },
+        {
+          "family": "red",
+          "hex": "#D00000",
+          "coverage": 0.3281,
+          "pixelCount": 32256
+        },
+        {
+          "family": "red",
+          "hex": "#D02020",
+          "coverage": 0.0039,
+          "pixelCount": 384
+        },
+        {
+          "family": "red",
+          "hex": "#E07070",
+          "coverage": 0.0039,
+          "pixelCount": 384
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_isabel_province_current",
+      "colours": [
+        "blue",
+        "green",
+        "gold",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "blue",
+        "green",
+        "gold",
+        "white"
+      ],
+      "colourCoverage": {
+        "blue": 0.3166,
+        "green": 0.2989,
+        "gold": 0.2529,
+        "white": 0.1016
+      },
+      "traceColourCoverage": {},
+      "colourCount": 4,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 4,
+      "sourceColourFamilies": [],
+      "palette": [
+        {
+          "family": "blue",
+          "hex": "#00A0F0",
+          "coverage": 0.2979,
+          "pixelCount": 21965
+        },
+        {
+          "family": "green",
+          "hex": "#60A030",
+          "coverage": 0.292,
+          "pixelCount": 21527
+        },
+        {
+          "family": "gold",
+          "hex": "#FFFF00",
+          "coverage": 0.2383,
+          "pixelCount": 17571
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.0962,
+          "pixelCount": 7092
+        },
+        {
+          "family": "silver",
+          "hex": "#C0C0C0",
+          "coverage": 0.0113,
+          "pixelCount": 830
+        },
+        {
+          "family": "blue",
+          "hex": "#A0B0C0",
+          "coverage": 0.0048,
+          "pixelCount": 356
+        },
+        {
+          "family": "silver",
+          "hex": "#D0D0D0",
+          "coverage": 0.0047,
+          "pixelCount": 347
+        },
+        {
+          "family": "silver",
+          "hex": "#E0E0E0",
+          "coverage": 0.0033,
+          "pixelCount": 245
+        },
+        {
+          "family": "blue",
+          "hex": "#B0B0C0",
+          "coverage": 0.003,
+          "pixelCount": 218
+        },
+        {
+          "family": "white",
+          "hex": "#F0F0F0",
+          "coverage": 0.0028,
+          "pixelCount": 205
+        },
+        {
+          "family": "blue",
+          "hex": "#0090F0",
+          "coverage": 0.0022,
+          "pixelCount": 161
+        },
+        {
+          "family": "green",
+          "hex": "#609020",
+          "coverage": 0.002,
+          "pixelCount": 144
+        },
+        {
+          "family": "silver",
+          "hex": "#B0C0C0",
+          "coverage": 0.0018,
+          "pixelCount": 132
+        },
+        {
+          "family": "grey",
+          "hex": "#404040",
+          "coverage": 0.0017,
+          "pixelCount": 123
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 192,
+        "totalPixels": 73728,
+        "visiblePixels": 73728,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_leeward_islands_current",
+      "colours": [
+        "red",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "red",
+        "white"
+      ],
+      "colourCoverage": {
+        "red": 0.5781,
+        "white": 0.4219
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "red",
+        "white",
+        "grey"
+      ],
+      "palette": [
+        {
+          "family": "red",
+          "hex": "#D02030",
+          "coverage": 0.5547,
+          "pixelCount": 54528
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.4219,
+          "pixelCount": 41472
+        },
+        {
+          "family": "red",
+          "hex": "#E08080",
+          "coverage": 0.0078,
+          "pixelCount": 768
+        },
+        {
+          "family": "red",
+          "hex": "#D04040",
+          "coverage": 0.0078,
+          "pixelCount": 768
+        },
+        {
+          "family": "red",
+          "hex": "#E06060",
+          "coverage": 0.0078,
+          "pixelCount": 768
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_makatea_current",
+      "colours": [
+        "blue",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [
+        "red"
+      ],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "blue",
+        "white",
+        "red"
+      ],
+      "colourCoverage": {
+        "blue": 0.8053,
+        "white": 0.1861,
+        "red": 0.0081
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 1,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [
+        "red",
+        "blue",
+        "white",
+        "grey"
+      ],
+      "palette": [
+        {
+          "family": "blue",
+          "hex": "#30A0FF",
+          "coverage": 0.3982,
+          "pixelCount": 34560
+        },
+        {
+          "family": "blue",
+          "hex": "#0000FF",
+          "coverage": 0.3938,
+          "pixelCount": 34176
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.1859,
+          "pixelCount": 16134
+        },
+        {
+          "family": "red",
+          "hex": "#FF0000",
+          "coverage": 0.0068,
+          "pixelCount": 590
+        },
+        {
+          "family": "blue",
+          "hex": "#B0D0FF",
+          "coverage": 0.0044,
+          "pixelCount": 384
+        },
+        {
+          "family": "blue",
+          "hex": "#9090FF",
+          "coverage": 0.0044,
+          "pixelCount": 384
+        },
+        {
+          "family": "blue",
+          "hex": "#1010FF",
+          "coverage": 0.0044,
+          "pixelCount": 384
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 226,
+        "totalPixels": 86784,
+        "visiblePixels": 86784,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_makira_ulawa_current",
+      "colours": [
+        "blue",
+        "white",
+        "red",
+        "black",
+        "gold"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "blue",
+        "white",
+        "red",
+        "black",
+        "gold"
+      ],
+      "colourCoverage": {
+        "blue": 0.3432,
+        "white": 0.1842,
+        "red": 0.1832,
+        "black": 0.1527,
+        "gold": 0.0766
+      },
+      "traceColourCoverage": {},
+      "colourCount": 5,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 5,
+      "sourceColourFamilies": [],
+      "palette": [
+        {
+          "family": "blue",
+          "hex": "#00A0FF",
+          "coverage": 0.291,
+          "pixelCount": 21457
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.1835,
+          "pixelCount": 13526
+        },
+        {
+          "family": "red",
+          "hex": "#D00000",
+          "coverage": 0.1719,
+          "pixelCount": 12672
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.1509,
+          "pixelCount": 11126
+        },
+        {
+          "family": "gold",
+          "hex": "#FFD000",
+          "coverage": 0.0582,
+          "pixelCount": 4294
+        },
+        {
+          "family": "green",
+          "hex": "#206030",
+          "coverage": 0.0334,
+          "pixelCount": 2463
+        },
+        {
+          "family": "blue",
+          "hex": "#0050C0",
+          "coverage": 0.0308,
+          "pixelCount": 2269
+        },
+        {
+          "family": "grey",
+          "hex": "#909090",
+          "coverage": 0.0081,
+          "pixelCount": 596
+        },
+        {
+          "family": "blue",
+          "hex": "#0090FF",
+          "coverage": 0.0058,
+          "pixelCount": 424
+        },
+        {
+          "family": "red",
+          "hex": "#A00000",
+          "coverage": 0.0052,
+          "pixelCount": 384
+        },
+        {
+          "family": "gold",
+          "hex": "#FFD010",
+          "coverage": 0.0042,
+          "pixelCount": 306
+        },
+        {
+          "family": "gold",
+          "hex": "#FFE000",
+          "coverage": 0.0035,
+          "pixelCount": 259
+        },
+        {
+          "family": "blue",
+          "hex": "#0050B0",
+          "coverage": 0.0026,
+          "pixelCount": 195
+        },
+        {
+          "family": "blue",
+          "hex": "#0070B0",
+          "coverage": 0.0025,
+          "pixelCount": 187
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 192,
+        "totalPixels": 73728,
+        "visiblePixels": 73728,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_malaiita_current",
+      "colours": [
+        "white",
+        "blue",
+        "red",
+        "gold",
+        "green"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "white",
+        "blue",
+        "red",
+        "gold",
+        "green"
+      ],
+      "colourCoverage": {
+        "white": 0.3474,
+        "blue": 0.3467,
+        "red": 0.1854,
+        "gold": 0.0579,
+        "green": 0.0515
+      },
+      "traceColourCoverage": {},
+      "colourCount": 5,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 5,
+      "sourceColourFamilies": [],
+      "palette": [
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.3446,
+          "pixelCount": 25539
+        },
+        {
+          "family": "blue",
+          "hex": "#0060A0",
+          "coverage": 0.2756,
+          "pixelCount": 20422
+        },
+        {
+          "family": "red",
+          "hex": "#D00000",
+          "coverage": 0.182,
+          "pixelCount": 13487
+        },
+        {
+          "family": "green",
+          "hex": "#206030",
+          "coverage": 0.0446,
+          "pixelCount": 3307
+        },
+        {
+          "family": "blue",
+          "hex": "#0050C0",
+          "coverage": 0.0426,
+          "pixelCount": 3156
+        },
+        {
+          "family": "blue",
+          "hex": "#006090",
+          "coverage": 0.0099,
+          "pixelCount": 734
+        },
+        {
+          "family": "gold",
+          "hex": "#FFA000",
+          "coverage": 0.0088,
+          "pixelCount": 653
+        },
+        {
+          "family": "brown",
+          "hex": "#603000",
+          "coverage": 0.0065,
+          "pixelCount": 484
+        },
+        {
+          "family": "gold",
+          "hex": "#FF9000",
+          "coverage": 0.0065,
+          "pixelCount": 479
+        },
+        {
+          "family": "gold",
+          "hex": "#FFD010",
+          "coverage": 0.0061,
+          "pixelCount": 450
+        },
+        {
+          "family": "blue",
+          "hex": "#4080A0",
+          "coverage": 0.0046,
+          "pixelCount": 343
+        },
+        {
+          "family": "blue",
+          "hex": "#80B0D0",
+          "coverage": 0.0036,
+          "pixelCount": 267
+        },
+        {
+          "family": "blue",
+          "hex": "#0070A0",
+          "coverage": 0.0036,
+          "pixelCount": 267
+        },
+        {
+          "family": "green",
+          "hex": "#90B0A0",
+          "coverage": 0.0016,
+          "pixelCount": 118
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 193,
+        "totalPixels": 74112,
+        "visiblePixels": 74112,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_marquesas_islands_current",
+      "colours": [
+        "gold",
+        "red",
+        "white"
+      ],
+      "accentColours": [
+        "black"
+      ],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "gold",
+        "red",
+        "white",
+        "black"
+      ],
+      "colourCoverage": {
+        "gold": 0.3757,
+        "red": 0.375,
+        "white": 0.213,
+        "black": 0.019
+      },
+      "traceColourCoverage": {},
+      "colourCount": 3,
+      "accentColourCount": 1,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 4,
+      "sourceColourFamilies": [
+        "red",
+        "gold",
+        "white",
+        "black"
+      ],
+      "palette": [
+        {
+          "family": "gold",
+          "hex": "#FFD000",
+          "coverage": 0.3737,
+          "pixelCount": 36741
+        },
+        {
+          "family": "red",
+          "hex": "#F02030",
+          "coverage": 0.3737,
+          "pixelCount": 36736
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.2116,
+          "pixelCount": 20805
+        },
+        {
+          "family": "black",
+          "hex": "#101010",
+          "coverage": 0.017,
+          "pixelCount": 1673
+        },
+        {
+          "family": "silver",
+          "hex": "#E0E0E0",
+          "coverage": 0.0017,
+          "pixelCount": 164
+        },
+        {
+          "family": "grey",
+          "hex": "#505050",
+          "coverage": 0.0016,
+          "pixelCount": 157
+        },
+        {
+          "family": "grey",
+          "hex": "#808080",
+          "coverage": 0.0016,
+          "pixelCount": 157
+        },
+        {
+          "family": "grey",
+          "hex": "#707070",
+          "coverage": 0.0015,
+          "pixelCount": 151
+        },
+        {
+          "family": "black",
+          "hex": "#202020",
+          "coverage": 0.0015,
+          "pixelCount": 146
+        },
+        {
+          "family": "white",
+          "hex": "#F0F0F0",
+          "coverage": 0.0013,
+          "pixelCount": 131
+        },
+        {
+          "family": "silver",
+          "hex": "#D0D0D0",
+          "coverage": 0.0013,
+          "pixelCount": 131
+        },
+        {
+          "family": "grey",
+          "hex": "#404040",
+          "coverage": 0.0013,
+          "pixelCount": 131
+        },
+        {
+          "family": "grey",
+          "hex": "#909090",
+          "coverage": 0.0013,
+          "pixelCount": 129
+        },
+        {
+          "family": "grey",
+          "hex": "#A0A0A0",
+          "coverage": 0.0013,
+          "pixelCount": 125
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_moheli_current",
+      "colours": [
+        "gold",
+        "red"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "gold",
+        "red"
+      ],
+      "colourCoverage": {
+        "gold": 0.9432,
+        "red": 0.0562
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "red",
+        "gold"
+      ],
+      "palette": [
+        {
+          "family": "gold",
+          "hex": "#FFE020",
+          "coverage": 0.94,
+          "pixelCount": 92402
+        },
+        {
+          "family": "red",
+          "hex": "#D01020",
+          "coverage": 0.0549,
+          "pixelCount": 5395
+        },
+        {
+          "family": "gold",
+          "hex": "#F0B020",
+          "coverage": 0.0014,
+          "pixelCount": 135
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_moorea_maiao_current",
+      "colours": [
+        "green",
+        "white"
+      ],
+      "accentColours": [
+        "gold"
+      ],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "green",
+        "white",
+        "gold"
+      ],
+      "colourCoverage": {
+        "green": 0.6268,
+        "white": 0.3503,
+        "gold": 0.016
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 1,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [
+        "green",
+        "gold",
+        "white",
+        "black",
+        "orange"
+      ],
+      "palette": [
+        {
+          "family": "green",
+          "hex": "#00B060",
+          "coverage": 0.6105,
+          "pixelCount": 60010
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.3488,
+          "pixelCount": 34284
+        },
+        {
+          "family": "gold",
+          "hex": "#F07000",
+          "coverage": 0.0098,
+          "pixelCount": 968
+        },
+        {
+          "family": "brown",
+          "hex": "#502000",
+          "coverage": 0.0015,
+          "pixelCount": 149
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.0015,
+          "pixelCount": 144
+        },
+        {
+          "family": "green",
+          "hex": "#10B060",
+          "coverage": 0.0014,
+          "pixelCount": 136
+        },
+        {
+          "family": "gold",
+          "hex": "#E07000",
+          "coverage": 0.001,
+          "pixelCount": 103
+        },
+        {
+          "family": "gold",
+          "hex": "#D06000",
+          "coverage": 0.001,
+          "pixelCount": 100
+        },
+        {
+          "family": "brown",
+          "hex": "#703000",
+          "coverage": 0.001,
+          "pixelCount": 99
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_raiatea_current",
+      "colours": [
+        "white",
+        "red"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "white",
+        "red"
+      ],
+      "colourCoverage": {
+        "white": 0.5938,
+        "red": 0.4063
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "red",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.5938,
+          "pixelCount": 58368
+        },
+        {
+          "family": "red",
+          "hex": "#D02030",
+          "coverage": 0.3896,
+          "pixelCount": 38300
+        },
+        {
+          "family": "red",
+          "hex": "#E09090",
+          "coverage": 0.0078,
+          "pixelCount": 768
+        },
+        {
+          "family": "red",
+          "hex": "#D03040",
+          "coverage": 0.0078,
+          "pixelCount": 766
+        },
+        {
+          "family": "red",
+          "hex": "#D02020",
+          "coverage": 0.001,
+          "pixelCount": 100
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_raivavae_current",
+      "colours": [
+        "green",
+        "white",
+        "black"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "green",
+        "white",
+        "black"
+      ],
+      "colourCoverage": {
+        "green": 0.6719,
+        "white": 0.2555,
+        "black": 0.0594
+      },
+      "traceColourCoverage": {},
+      "colourCount": 3,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [
+        "green",
+        "white",
+        "black"
+      ],
+      "palette": [
+        {
+          "family": "green",
+          "hex": "#00D000",
+          "coverage": 0.6641,
+          "pixelCount": 65280
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.2545,
+          "pixelCount": 25020
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.0561,
+          "pixelCount": 5510
+        },
+        {
+          "family": "green",
+          "hex": "#B0F0B0",
+          "coverage": 0.0078,
+          "pixelCount": 768
+        },
+        {
+          "family": "silver",
+          "hex": "#D0D0D0",
+          "coverage": 0.0038,
+          "pixelCount": 377
+        },
+        {
+          "family": "black",
+          "hex": "#101010",
+          "coverage": 0.0018,
+          "pixelCount": 178
+        },
+        {
+          "family": "black",
+          "hex": "#202020",
+          "coverage": 0.0013,
+          "pixelCount": 125
+        },
+        {
+          "family": "grey",
+          "hex": "#505050",
+          "coverage": 0.0011,
+          "pixelCount": 110
+        },
+        {
+          "family": "grey",
+          "hex": "#404040",
+          "coverage": 0.0011,
+          "pixelCount": 105
+        },
+        {
+          "family": "white",
+          "hex": "#F0F0F0",
+          "coverage": 0.001,
+          "pixelCount": 100
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_rapa_iti_current",
+      "colours": [
+        "white",
+        "red",
+        "gold"
+      ],
+      "accentColours": [
+        "blue"
+      ],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "white",
+        "red",
+        "gold",
+        "blue"
+      ],
+      "colourCoverage": {
+        "white": 0.6499,
+        "red": 0.254,
+        "gold": 0.0598,
+        "blue": 0.0264
+      },
+      "traceColourCoverage": {},
+      "colourCount": 3,
+      "accentColourCount": 1,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 4,
+      "sourceColourFamilies": [
+        "red",
+        "blue",
+        "gold",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.6485,
+          "pixelCount": 63751
+        },
+        {
+          "family": "red",
+          "hex": "#F03040",
+          "coverage": 0.251,
+          "pixelCount": 24675
+        },
+        {
+          "family": "gold",
+          "hex": "#FFFF00",
+          "coverage": 0.0543,
+          "pixelCount": 5333
+        },
+        {
+          "family": "blue",
+          "hex": "#002090",
+          "coverage": 0.0242,
+          "pixelCount": 2382
+        },
+        {
+          "family": "pink",
+          "hex": "#FFB0B0",
+          "coverage": 0.0071,
+          "pixelCount": 702
+        },
+        {
+          "family": "gold",
+          "hex": "#FFFF60",
+          "coverage": 0.0027,
+          "pixelCount": 269
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_reao_pukaruha_current",
+      "colours": [
+        "blue",
+        "gold"
+      ],
+      "accentColours": [
+        "black"
+      ],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "blue",
+        "gold",
+        "black"
+      ],
+      "colourCoverage": {
+        "blue": 0.475,
+        "gold": 0.4685,
+        "black": 0.0491
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 1,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [
+        "blue",
+        "gold",
+        "black"
+      ],
+      "palette": [
+        {
+          "family": "blue",
+          "hex": "#0090D0",
+          "coverage": 0.4645,
+          "pixelCount": 45659
+        },
+        {
+          "family": "gold",
+          "hex": "#F0E010",
+          "coverage": 0.4616,
+          "pixelCount": 45381
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.046,
+          "pixelCount": 4522
+        },
+        {
+          "family": "blue",
+          "hex": "#0070A0",
+          "coverage": 0.0019,
+          "pixelCount": 185
+        },
+        {
+          "family": "black",
+          "hex": "#001010",
+          "coverage": 0.0017,
+          "pixelCount": 165
+        },
+        {
+          "family": "blue",
+          "hex": "#006090",
+          "coverage": 0.0015,
+          "pixelCount": 148
+        },
+        {
+          "family": "gold",
+          "hex": "#A0A010",
+          "coverage": 0.0013,
+          "pixelCount": 132
+        },
+        {
+          "family": "black",
+          "hex": "#101000",
+          "coverage": 0.0012,
+          "pixelCount": 121
+        },
+        {
+          "family": "green",
+          "hex": "#A0D050",
+          "coverage": 0.0012,
+          "pixelCount": 114
+        },
+        {
+          "family": "blue",
+          "hex": "#1090C0",
+          "coverage": 0.0012,
+          "pixelCount": 114
+        },
+        {
+          "family": "green",
+          "hex": "#50B090",
+          "coverage": 0.0011,
+          "pixelCount": 113
+        },
+        {
+          "family": "gold",
+          "hex": "#E0E020",
+          "coverage": 0.0011,
+          "pixelCount": 112
+        },
+        {
+          "family": "brown",
+          "hex": "#303000",
+          "coverage": 0.0011,
+          "pixelCount": 105
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_rennell_and_bellona_current",
+      "colours": [
+        "blue",
+        "white",
+        "black"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "blue",
+        "white",
+        "black"
+      ],
+      "colourCoverage": {
+        "blue": 0.6667,
+        "white": 0.2642,
+        "black": 0.0641
+      },
+      "traceColourCoverage": {},
+      "colourCount": 3,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [
+        "blue",
+        "white",
+        "black"
+      ],
+      "palette": [
+        {
+          "family": "blue",
+          "hex": "#4090D0",
+          "coverage": 0.6667,
+          "pixelCount": 49152
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.2638,
+          "pixelCount": 19446
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.0628,
+          "pixelCount": 4630
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 192,
+        "totalPixels": 73728,
+        "visiblePixels": 73728,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_rimatara_current",
+      "colours": [
+        "red",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "red",
+        "white"
+      ],
+      "colourCoverage": {
+        "red": 0.7126,
+        "white": 0.2751
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "red",
+        "white",
+        "grey"
+      ],
+      "palette": [
+        {
+          "family": "red",
+          "hex": "#E00000",
+          "coverage": 0.7014,
+          "pixelCount": 68947
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.2741,
+          "pixelCount": 26945
+        },
+        {
+          "family": "pink",
+          "hex": "#F0B0B0",
+          "coverage": 0.008,
+          "pixelCount": 791
+        },
+        {
+          "family": "red",
+          "hex": "#F06060",
+          "coverage": 0.0019,
+          "pixelCount": 188
+        },
+        {
+          "family": "red",
+          "hex": "#F03030",
+          "coverage": 0.0017,
+          "pixelCount": 169
+        },
+        {
+          "family": "red",
+          "hex": "#F02020",
+          "coverage": 0.0013,
+          "pixelCount": 129
+        },
+        {
+          "family": "red",
+          "hex": "#F04040",
+          "coverage": 0.0011,
+          "pixelCount": 110
+        },
+        {
+          "family": "white",
+          "hex": "#FFF0F0",
+          "coverage": 0.001,
+          "pixelCount": 103
+        },
+        {
+          "family": "pink",
+          "hex": "#FFE0E0",
+          "coverage": 0.001,
+          "pixelCount": 101
+        },
+        {
+          "family": "pink",
+          "hex": "#FFC0C0",
+          "coverage": 0.001,
+          "pixelCount": 99
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_rurutu_current",
+      "colours": [
+        "red",
+        "white"
+      ],
+      "accentColours": [
+        "blue"
+      ],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "red",
+        "white",
+        "blue"
+      ],
+      "colourCoverage": {
+        "red": 0.5,
+        "white": 0.4533,
+        "blue": 0.0467
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 1,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [
+        "red",
+        "blue",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "red",
+          "hex": "#D02030",
+          "coverage": 0.5,
+          "pixelCount": 49152
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.4525,
+          "pixelCount": 44478
+        },
+        {
+          "family": "blue",
+          "hex": "#1040A0",
+          "coverage": 0.0392,
+          "pixelCount": 3855
+        },
+        {
+          "family": "blue",
+          "hex": "#90B0D0",
+          "coverage": 0.002,
+          "pixelCount": 197
+        },
+        {
+          "family": "blue",
+          "hex": "#3060B0",
+          "coverage": 0.0011,
+          "pixelCount": 105
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_temotu_province_current",
+      "colours": [
+        "red",
+        "green"
+      ],
+      "accentColours": [
+        "blue",
+        "white",
+        "gold"
+      ],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "red",
+        "green",
+        "blue",
+        "white",
+        "gold"
+      ],
+      "colourCoverage": {
+        "red": 0.8578,
+        "green": 0.0505,
+        "blue": 0.0475,
+        "white": 0.0314,
+        "gold": 0.011
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 3,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 5,
+      "sourceColourFamilies": [
+        "red",
+        "blue",
+        "green",
+        "gold",
+        "white"
+      ],
+      "palette": [
+        {
+          "family": "red",
+          "hex": "#D00000",
+          "coverage": 0.8538,
+          "pixelCount": 62952
+        },
+        {
+          "family": "green",
+          "hex": "#206030",
+          "coverage": 0.0488,
+          "pixelCount": 3600
+        },
+        {
+          "family": "blue",
+          "hex": "#0050C0",
+          "coverage": 0.0442,
+          "pixelCount": 3261
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.0305,
+          "pixelCount": 2250
+        },
+        {
+          "family": "gold",
+          "hex": "#FFD010",
+          "coverage": 0.0085,
+          "pixelCount": 628
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 192,
+        "totalPixels": 73728,
+        "visiblePixels": 73728,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_tuamotu_archipelago_current",
+      "colours": [
+        "red",
+        "blue",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "red",
+        "blue",
+        "white"
+      ],
+      "colourCoverage": {
+        "red": 0.4738,
+        "blue": 0.337,
+        "white": 0.1815
+      },
+      "traceColourCoverage": {},
+      "colourCount": 3,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 3,
+      "sourceColourFamilies": [
+        "red",
+        "blue"
+      ],
+      "palette": [
+        {
+          "family": "red",
+          "hex": "#F02030",
+          "coverage": 0.4738,
+          "pixelCount": 46580
+        },
+        {
+          "family": "blue",
+          "hex": "#204090",
+          "coverage": 0.3219,
+          "pixelCount": 31641
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.1781,
+          "pixelCount": 17505
+        },
+        {
+          "family": "pink",
+          "hex": "#FFB0C0",
+          "coverage": 0.0056,
+          "pixelCount": 548
+        },
+        {
+          "family": "blue",
+          "hex": "#6070B0",
+          "coverage": 0.0019,
+          "pixelCount": 182
+        },
+        {
+          "family": "purple",
+          "hex": "#603070",
+          "coverage": 0.0017,
+          "pixelCount": 170
+        },
+        {
+          "family": "blue",
+          "hex": "#305090",
+          "coverage": 0.0014,
+          "pixelCount": 137
+        },
+        {
+          "family": "white",
+          "hex": "#F0F0F0",
+          "coverage": 0.0012,
+          "pixelCount": 117
+        },
+        {
+          "family": "blue",
+          "hex": "#7080B0",
+          "coverage": 0.0011,
+          "pixelCount": 106
+        },
+        {
+          "family": "blue",
+          "hex": "#4060A0",
+          "coverage": 0.0011,
+          "pixelCount": 105
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_tubuai_current",
+      "colours": [
+        "black",
+        "white"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "black",
+        "white"
+      ],
+      "colourCoverage": {
+        "black": 0.715,
+        "white": 0.2656
+      },
+      "traceColourCoverage": {},
+      "colourCount": 2,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 2,
+      "sourceColourFamilies": [
+        "white",
+        "black"
+      ],
+      "palette": [
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.7138,
+          "pixelCount": 70172
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.2647,
+          "pixelCount": 26023
+        },
+        {
+          "family": "grey",
+          "hex": "#B0B0B0",
+          "coverage": 0.008,
+          "pixelCount": 785
+        },
+        {
+          "family": "grey",
+          "hex": "#909090",
+          "coverage": 0.0023,
+          "pixelCount": 229
+        },
+        {
+          "family": "silver",
+          "hex": "#E0E0E0",
+          "coverage": 0.0014,
+          "pixelCount": 135
+        },
+        {
+          "family": "grey",
+          "hex": "#303030",
+          "coverage": 0.0011,
+          "pixelCount": 111
+        },
+        {
+          "family": "grey",
+          "hex": "#A0A0A0",
+          "coverage": 0.0011,
+          "pixelCount": 108
+        },
+        {
+          "family": "grey",
+          "hex": "#404040",
+          "coverage": 0.001,
+          "pixelCount": 102
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 256,
+        "totalPixels": 98304,
+        "visiblePixels": 98304,
+        "transparentPixels": 0
+      },
+      "generated": true,
+      "reviewed": false,
+      "needsReview": false,
+      "confidence": "high",
+      "coverageReliable": true,
+      "dominanceReliable": true,
+      "metadataMethod": "rendered_pixel_sampling"
+    },
+    {
+      "assetId": "ast_western_province_current",
+      "colours": [
+        "green",
+        "black",
+        "white",
+        "blue"
+      ],
+      "accentColours": [],
+      "minorColours": [],
+      "traceColours": [],
+      "detectedColourFamilies": [
+        "green",
+        "black",
+        "white",
+        "blue"
+      ],
+      "colourCoverage": {
+        "green": 0.4804,
+        "black": 0.2301,
+        "white": 0.1386,
+        "blue": 0.1066
+      },
+      "traceColourCoverage": {},
+      "colourCount": 4,
+      "accentColourCount": 0,
+      "minorColourCount": 0,
+      "traceColourCount": 0,
+      "detectedColourFamilyCount": 4,
+      "sourceColourFamilies": [],
+      "palette": [
+        {
+          "family": "green",
+          "hex": "#206030",
+          "coverage": 0.4607,
+          "pixelCount": 33964
+        },
+        {
+          "family": "black",
+          "hex": "#000000",
+          "coverage": 0.2285,
+          "pixelCount": 16849
+        },
+        {
+          "family": "white",
+          "hex": "#FFFFFF",
+          "coverage": 0.1341,
+          "pixelCount": 9884
+        },
+        {
+          "family": "blue",
+          "hex": "#0050C0",
+          "coverage": 0.0437,
+          "pixelCount": 3224
+        },
+        {
+          "family": "blue",
+          "hex": "#4080C0",
+          "coverage": 0.0374,
+          "pixelCount": 2758
+        },
+        {
+          "family": "gold",
+          "hex": "#FFD010",
+          "coverage": 0.0233,
+          "pixelCount": 1719
+        },
+        {
+          "family": "blue",
+          "hex": "#3080B0",
+          "coverage": 0.0062,
+          "pixelCount": 460
+        },
+        {
+          "family": "green",
+          "hex": "#205030",
+          "coverage": 0.0041,
+          "pixelCount": 305
+        },
+        {
+          "family": "green",
+          "hex": "#105030",
+          "coverage": 0.0038,
+          "pixelCount": 279
+        },
+        {
+          "family": "grey",
+          "hex": "#707070",
+          "coverage": 0.0031,
+          "pixelCount": 227
+        },
+        {
+          "family": "blue",
+          "hex": "#4080B0",
+          "coverage": 0.0026,
+          "pixelCount": 190
+        },
+        {
+          "family": "gold",
+          "hex": "#FFD020",
+          "coverage": 0.0026,
+          "pixelCount": 189
+        },
+        {
+          "family": "green",
+          "hex": "#105020",
+          "coverage": 0.0024,
+          "pixelCount": 178
+        },
+        {
+          "family": "white",
+          "hex": "#F0F0F0",
+          "coverage": 0.0017,
+          "pixelCount": 127
+        }
+      ],
+      "pixelSample": {
+        "width": 384,
+        "height": 192,
+        "totalPixels": 73728,
+        "visiblePixels": 73728,
         "transparentPixels": 0
       },
       "generated": true,

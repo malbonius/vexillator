@@ -1532,6 +1532,28 @@ const collections = [
     }
   },
   {
+    id: "col_comoros_island_flags",
+    name: "Comoros Island Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasParent: "ent_comoros"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasTag: "current"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
     id: "col_middle_africa_flags",
     name: "Middle African Flags",
     type: "dynamic",

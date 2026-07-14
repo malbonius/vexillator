@@ -308,6 +308,14 @@ const collectionGroups = [
     ]
   },
   {
+    id: "grp_comoros",
+    name: "Comoros",
+    parentGroupIds: ["grp_eastern_africa"],
+    collectionIds: [
+      "col_comoros_island_flags"
+    ]
+  },
+  {
     id: "grp_middle_africa",
     name: "Middle Africa",
     parentGroupIds: ["grp_africa"],
