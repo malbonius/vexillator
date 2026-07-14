@@ -134,6 +134,23 @@ const collections = [
     }
   },
   {
+    id: "col_island_area_flags",
+    name: "Island Area Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+
+  {
     id: "col_unofficial_current_flags",
     name: "Unofficial Current Flags",
     type: "dynamic",
@@ -1312,6 +1329,124 @@ const collections = [
             "territory",
             "overseas"
           ]
+        }
+      ]
+    }
+  },
+
+  /*
+    Regional island-area collections.
+  */
+  {
+    id: "col_south_american_island_area_flags",
+    name: "South American Island Area Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_south_america"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_north_american_island_area_flags",
+    name: "North American Island Area Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_north_america"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_caribbean_island_area_flags",
+    name: "Caribbean Island Area Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_caribbean"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_african_island_area_flags",
+    name: "African Island Area Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_africa"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_european_island_area_flags",
+    name: "European Island Area Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_europe"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasDefaultVariant: true
+        }
+      ]
+    }
+  },
+  {
+    id: "col_oceanian_island_area_flags",
+    name: "Oceanian Island Area Flags",
+    type: "dynamic",
+    target: "entity",
+    rules: {
+      all: [
+        {
+          hasAncestor: "ent_oceania"
+        },
+        {
+          hasTag: "island_area"
+        },
+        {
+          hasDefaultVariant: true
         }
       ]
     }
