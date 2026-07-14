@@ -3154,7 +3154,7 @@ const assets = [
   },
   {
     id: "ast_moorea_maiao_current",
-    path: "assets/flags/geography/oceania/polynesia/french_polynesia/tuamotu_archipelago/moorea_maiao_current.svg"
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/windward_islands/moorea_maiao_current.svg"
   },
   {
     id: "ast_moravian_silesian_current",
@@ -4718,7 +4718,7 @@ const assets = [
   },
   {
     id: "ast_tahiti_current",
-    path: "assets/flags/geography/oceania/polynesia/french_polynesia/windward_islands/tahiti/tahiti_current.svg"
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/windward_islands/tahiti_current.svg"
   },
   {
     id: "ast_taiwan_current",

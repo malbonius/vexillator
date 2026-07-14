@@ -614,6 +614,99 @@ const entities = [
     tags: ["sovereign", "country", "current", "recognised"],
     defaultVariantId: "var_solomon_islands_current"
   },
+  /*
+    Solomon Islands provinces and capital territory.
+  */
+  {
+    id: "ent_solomon_islands_central_province",
+    name: "Central Province",
+    aliases: ["Central Province, Solomon Islands"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_central_province_current"
+  },
+  {
+    id: "ent_solomon_islands_choiseul_province",
+    name: "Choiseul Province",
+    aliases: ["Choiseul"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_choiseul_province_current"
+  },
+  {
+    id: "ent_solomon_islands_guadalcanal_province",
+    name: "Guadalcanal Province",
+    aliases: ["Guadalcanal"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_guadalcanal_province_current"
+  },
+  {
+    id: "ent_solomon_islands_honiara_capital_territory",
+    name: "Honiara Capital Territory",
+    aliases: ["Honiara"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current"],
+    defaultVariantId: "var_solomon_islands_honiara_capital_territory_current"
+  },
+  {
+    id: "ent_solomon_islands_isabel_province",
+    name: "Isabel Province",
+    aliases: ["Ysabel Province", "Isabel"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_isabel_province_current"
+  },
+  {
+    id: "ent_solomon_islands_makira_ulawa_province",
+    name: "Makira-Ulawa Province",
+    aliases: ["Makira and Ulawa Province", "Makira-Ulawa"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_makira_ulawa_province_current"
+  },
+  {
+    id: "ent_solomon_islands_malaita_province",
+    name: "Malaita Province",
+    aliases: ["Malaita"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_malaita_province_current"
+  },
+  {
+    id: "ent_solomon_islands_rennell_and_bellona_province",
+    name: "Rennell and Bellona Province",
+    aliases: ["Rennell and Bellona"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_rennell_and_bellona_province_current"
+  },
+  {
+    id: "ent_solomon_islands_temotu_province",
+    name: "Temotu Province",
+    aliases: ["Temotu"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_temotu_province_current"
+  },
+  {
+    id: "ent_solomon_islands_western_province",
+    name: "Western Province",
+    aliases: ["Western Province, Solomon Islands"],
+    entityType: "geographic",
+    parentIds: ["ent_solomon_islands"],
+    tags: ["subdivision", "first_level_subdivision", "current", "island_area"],
+    defaultVariantId: "var_solomon_islands_western_province_current"
+  },
   {
     id: "ent_vanuatu",
     name: "Vanuatu",
@@ -882,13 +975,194 @@ const entities = [
   },
 
   {
+    id: "ent_society_islands",
+    name: "Society Islands",
+    aliases: ["Îles de la Société"],
+    entityType: "geographic",
+    parentIds: ["ent_french_polynesia"],
+    tags: ["region", "current", "island_area"],
+    defaultVariantId: null
+  },
+  {
+    id: "ent_windward_islands",
+    name: "Windward Islands",
+    aliases: ["Îles du Vent"],
+    entityType: "geographic",
+    parentIds: ["ent_society_islands"],
+    tags: ["region", "current", "island_area"],
+    defaultVariantId: null
+  },
+  {
+    id: "ent_leeward_islands",
+    name: "Leeward Islands",
+    aliases: ["Îles Sous-le-Vent"],
+    entityType: "geographic",
+    parentIds: ["ent_society_islands"],
+    tags: ["region", "current", "island_area"],
+    defaultVariantId: "var_leeward_islands_current"
+  },
+  {
+    id: "ent_austral_islands",
+    name: "Austral Islands",
+    aliases: ["Îles Australes", "Tuha'a Pae"],
+    entityType: "geographic",
+    parentIds: ["ent_french_polynesia"],
+    tags: ["region", "current", "island_area"],
+    defaultVariantId: "var_austral_islands_current"
+  },
+  {
+    id: "ent_marquesas_islands",
+    name: "Marquesas Islands",
+    aliases: ["Îles Marquises"],
+    entityType: "geographic",
+    parentIds: ["ent_french_polynesia"],
+    tags: ["region", "current", "island_area"],
+    defaultVariantId: "var_marquesas_islands_current"
+  },
+  {
+    id: "ent_tuamotu_gambier_islands",
+    name: "Tuamotu-Gambier Islands",
+    aliases: ["Tuamotu-Gambier", "Îles Tuamotu-Gambier"],
+    entityType: "geographic",
+    parentIds: ["ent_french_polynesia"],
+    tags: ["region", "current", "island_area"],
+    defaultVariantId: null
+  },
+  {
+    id: "ent_tuamotu_archipelago",
+    name: "Tuamotu Archipelago",
+    aliases: ["Tuamotu Islands", "Archipel des Tuamotu"],
+    entityType: "geographic",
+    parentIds: ["ent_tuamotu_gambier_islands"],
+    tags: ["region", "current", "island_area"],
+    defaultVariantId: "var_tuamotu_archipelago_current"
+  },
+  {
+    id: "ent_gambier_islands",
+    name: "Gambier Islands",
+    aliases: ["Îles Gambier", "Mangareva Islands"],
+    entityType: "geographic",
+    parentIds: ["ent_tuamotu_gambier_islands"],
+    tags: ["region", "current", "island_area"],
+    defaultVariantId: "var_gambier_islands_current"
+  },
+
+  {
     id: "ent_tahiti",
     name: "Tahiti",
     aliases: [],
     entityType: "geographic",
-    parentIds: ["ent_french_polynesia"],
-    tags: ["region", "current"],
+    parentIds: ["ent_windward_islands"],
+    tags: ["current", "island_area"],
     defaultVariantId: "var_tahiti_current"
+  },
+  {
+    id: "ent_moorea_maiao",
+    name: "Moorea-Maiao",
+    aliases: ["Moʻorea-Maiʻao", "Moorea Maiao"],
+    entityType: "geographic",
+    parentIds: ["ent_windward_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_moorea_maiao_current"
+  },
+  {
+    id: "ent_bora_bora",
+    name: "Bora Bora",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_leeward_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_bora_bora_current"
+  },
+  {
+    id: "ent_huahine",
+    name: "Huahine",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_leeward_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_huahine_current"
+  },
+  {
+    id: "ent_raiatea",
+    name: "Raiatea",
+    aliases: ["Ra'iātea"],
+    entityType: "geographic",
+    parentIds: ["ent_leeward_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_raiatea_current"
+  },
+  {
+    id: "ent_raivavae",
+    name: "Raivavae",
+    aliases: ["Ra'ivavae"],
+    entityType: "geographic",
+    parentIds: ["ent_austral_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_raivavae_current"
+  },
+  {
+    id: "ent_rapa_iti",
+    name: "Rapa Iti",
+    aliases: ["Rapa"],
+    entityType: "geographic",
+    parentIds: ["ent_austral_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_rapa_iti_current"
+  },
+  {
+    id: "ent_rimatara",
+    name: "Rimatara",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_austral_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_rimatara_current"
+  },
+  {
+    id: "ent_rurutu",
+    name: "Rurutu",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_austral_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_rurutu_current"
+  },
+  {
+    id: "ent_tubuai",
+    name: "Tubuai",
+    aliases: ["Tupua'i"],
+    entityType: "geographic",
+    parentIds: ["ent_austral_islands"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_tubuai_current"
+  },
+  {
+    id: "ent_hao",
+    name: "Hao",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_tuamotu_archipelago"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_hao_current"
+  },
+  {
+    id: "ent_makatea",
+    name: "Makatea",
+    aliases: [],
+    entityType: "geographic",
+    parentIds: ["ent_tuamotu_archipelago"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_makatea_current"
+  },
+  {
+    id: "ent_reao_pukaruha",
+    name: "Reao-Pukaruha",
+    aliases: ["Reao-Pukarua", "Reao Pukaruha"],
+    entityType: "geographic",
+    parentIds: ["ent_tuamotu_archipelago"],
+    tags: ["current", "island_area"],
+    defaultVariantId: "var_reao_pukaruha_current"
   },
   {
     id: "ent_niue",

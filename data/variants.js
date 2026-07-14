@@ -210,6 +210,106 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_solomon_islands_central_province_current",
+    entityId: "ent_solomon_islands_central_province",
+    assetId: "ast_central_province_current",
+    displayName: "Provincial Flag",
+    aliases: ["Central Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_choiseul_province_current",
+    entityId: "ent_solomon_islands_choiseul_province",
+    assetId: "ast_choiseul_current",
+    displayName: "Provincial Flag",
+    aliases: ["Choiseul Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_guadalcanal_province_current",
+    entityId: "ent_solomon_islands_guadalcanal_province",
+    assetId: "ast_guadalcanal_current",
+    displayName: "Provincial Flag",
+    aliases: ["Guadalcanal Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_honiara_capital_territory_current",
+    entityId: "ent_solomon_islands_honiara_capital_territory",
+    assetId: "ast_honiara_capital_territory_current",
+    displayName: "Capital Territory Flag",
+    aliases: ["Honiara Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_isabel_province_current",
+    entityId: "ent_solomon_islands_isabel_province",
+    assetId: "ast_isabel_province_current",
+    displayName: "Provincial Flag",
+    aliases: ["Isabel Province Flag", "Ysabel Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_makira_ulawa_province_current",
+    entityId: "ent_solomon_islands_makira_ulawa_province",
+    assetId: "ast_makira_ulawa_current",
+    displayName: "Provincial Flag",
+    aliases: ["Makira-Ulawa Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_malaita_province_current",
+    entityId: "ent_solomon_islands_malaita_province",
+    assetId: "ast_malaiita_current",
+    displayName: "Provincial Flag",
+    aliases: ["Malaita Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_rennell_and_bellona_province_current",
+    entityId: "ent_solomon_islands_rennell_and_bellona_province",
+    assetId: "ast_rennell_and_bellona_current",
+    displayName: "Provincial Flag",
+    aliases: ["Rennell and Bellona Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_temotu_province_current",
+    entityId: "ent_solomon_islands_temotu_province",
+    assetId: "ast_temotu_province_current",
+    displayName: "Provincial Flag",
+    aliases: ["Temotu Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_solomon_islands_western_province_current",
+    entityId: "ent_solomon_islands_western_province",
+    assetId: "ast_western_province_current",
+    displayName: "Provincial Flag",
+    aliases: ["Western Province Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
     id: "var_vanuatu_current",
     entityId: "ent_vanuatu",
     assetId: "ast_vanuatu_current",
@@ -439,11 +539,182 @@ const variants = [
   },
 
   {
+    id: "var_leeward_islands_current",
+    entityId: "ent_leeward_islands",
+    assetId: "ast_leeward_islands_current",
+    displayName: "Island Group Flag",
+    aliases: ["Leeward Islands Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_austral_islands_current",
+    entityId: "ent_austral_islands",
+    assetId: "ast_austral_islands_current",
+    displayName: "Island Group Flag",
+    aliases: ["Austral Islands Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_marquesas_islands_current",
+    entityId: "ent_marquesas_islands",
+    assetId: "ast_marquesas_islands_current",
+    displayName: "Island Group Flag",
+    aliases: ["Marquesas Islands Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_tuamotu_archipelago_current",
+    entityId: "ent_tuamotu_archipelago",
+    assetId: "ast_tuamotu_archipelago_current",
+    displayName: "Archipelago Flag",
+    aliases: ["Tuamotu Archipelago Flag", "Tuamotu Islands Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_gambier_islands_current",
+    entityId: "ent_gambier_islands",
+    assetId: "ast_gambier_islands_current",
+    displayName: "Island Group Flag",
+    aliases: ["Gambier Islands Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+
+  {
     id: "var_tahiti_current",
     entityId: "ent_tahiti",
     assetId: "ast_tahiti_current",
     displayName: "Island Flag",
-    aliases: [],
+    aliases: ["Tahiti Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_moorea_maiao_current",
+    entityId: "ent_moorea_maiao",
+    assetId: "ast_moorea_maiao_current",
+    displayName: "Commune Flag",
+    aliases: ["Moorea-Maiao Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_bora_bora_current",
+    entityId: "ent_bora_bora",
+    assetId: "ast_bora_bora_current",
+    displayName: "Island Flag",
+    aliases: ["Bora Bora Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_huahine_current",
+    entityId: "ent_huahine",
+    assetId: "ast_huahine_current",
+    displayName: "Island Flag",
+    aliases: ["Huahine Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_raiatea_current",
+    entityId: "ent_raiatea",
+    assetId: "ast_raiatea_current",
+    displayName: "Island Flag",
+    aliases: ["Raiatea Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_raivavae_current",
+    entityId: "ent_raivavae",
+    assetId: "ast_raivavae_current",
+    displayName: "Island Flag",
+    aliases: ["Raivavae Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_rapa_iti_current",
+    entityId: "ent_rapa_iti",
+    assetId: "ast_rapa_iti_current",
+    displayName: "Island Flag",
+    aliases: ["Rapa Iti Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_rimatara_current",
+    entityId: "ent_rimatara",
+    assetId: "ast_rimatara_current",
+    displayName: "Island Flag",
+    aliases: ["Rimatara Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_rurutu_current",
+    entityId: "ent_rurutu",
+    assetId: "ast_rurutu_current",
+    displayName: "Island Flag",
+    aliases: ["Rurutu Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_tubuai_current",
+    entityId: "ent_tubuai",
+    assetId: "ast_tubuai_current",
+    displayName: "Island Flag",
+    aliases: ["Tubuai Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_hao_current",
+    entityId: "ent_hao",
+    assetId: "ast_hao_current",
+    displayName: "Island Flag",
+    aliases: ["Hao Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_makatea_current",
+    entityId: "ent_makatea",
+    assetId: "ast_makatea_current",
+    displayName: "Island Flag",
+    aliases: ["Makatea Flag"],
+    tags: ["official", "current"],
+    startYear: null,
+    endYear: null
+  },
+  {
+    id: "var_reao_pukaruha_current",
+    entityId: "ent_reao_pukaruha",
+    assetId: "ast_reao_pukaruha_current",
+    displayName: "Commune Flag",
+    aliases: ["Reao-Pukaruha Flag", "Reao-Pukarua Flag"],
     tags: ["official", "current"],
     startYear: null,
     endYear: null
