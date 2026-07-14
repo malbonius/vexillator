@@ -305,6 +305,10 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/spain/autonomous_communities_cities/asturias_state_current.svg"
   },
   {
+    id: "ast_austral_islands_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/austral_islands/austral_islands_current.svg"
+  },
+  {
     id: "ast_australia_current",
     path: "assets/flags/geography/oceania/australia_and_new_zealand/australia/national/australia_current.svg"
   },
@@ -571,6 +575,10 @@ const assets = [
   {
     id: "ast_bonaire_current",
     path: "assets/flags/geography/caribbean/bonaire/national/bonaire_current.svg"
+  },
+  {
+    id: "ast_bora_bora_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/leeward_islands/bora_bora_current.svg"
   },
   {
     id: "ast_borgo_maggiore_current",
@@ -897,6 +905,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/finland/regions/central_ostrobothnia_current.svg"
   },
   {
+    id: "ast_central_province_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/central_province_current.png"
+  },
+  {
     id: "ast_centre_val_de_loire_current",
     path: "assets/flags/geography/europe/western_europe/france/regions/centre_val_de_loire_current.svg"
   },
@@ -967,6 +979,10 @@ const assets = [
   {
     id: "ast_chinese_taipei_current",
     path: "assets/flags/geography/asia/eastern_asia/taiwan/olympic/chinese_taipei_current.svg"
+  },
+  {
+    id: "ast_choiseul_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/choiseul_current.png"
   },
   {
     id: "ast_christmas_island_current_unofficial",
@@ -1625,6 +1641,10 @@ const assets = [
     path: "assets/flags/geography/africa/sub_saharan_africa/western_africa/gambia/national/gambia_current.svg"
   },
   {
+    id: "ast_gambier_islands_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/gambier_islands/gambier_islands_current.svg"
+  },
+  {
     id: "ast_gavleborg_current",
     path: "assets/flags/geography/europe/northern_europe/sweden/counties/gavleborg_current.svg"
   },
@@ -1773,6 +1793,10 @@ const assets = [
     path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/gsi_current.svg"
   },
   {
+    id: "ast_guadalcanal_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/guadalcanal_current.png"
+  },
+  {
     id: "ast_guadeloupe_current_unofficial",
     path: "assets/flags/geography/caribbean/guadeloupe/national/guadeloupe_current_unofficial.svg"
   },
@@ -1873,6 +1897,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/hampshire_current.svg"
   },
   {
+    id: "ast_hao_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/tuamotu_archipelago/hao_current.svg"
+  },
+  {
     id: "ast_harju_current",
     path: "assets/flags/geography/europe/northern_europe/estonia/counties/harju_current.svg"
   },
@@ -1949,12 +1977,20 @@ const assets = [
     path: "assets/flags/geography/asia/eastern_asia/hong_kong/national/hong_kong_current.svg"
   },
   {
+    id: "ast_honiara_capital_territory_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/honiara_capital_territory_current.svg"
+  },
+  {
     id: "ast_hradec_kralove_current",
     path: "assets/flags/geography/europe/eastern_europe/czechia/regions/hradec_kralove_current.svg"
   },
   {
     id: "ast_hs_current",
     path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/hs_current.svg"
+  },
+  {
+    id: "ast_huahine_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/leeward_islands/huahine_current.svg"
   },
   {
     id: "ast_hungary_current",
@@ -2099,6 +2135,10 @@ const assets = [
   {
     id: "ast_irkutsk_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/siberian/irkutsk_current.svg"
+  },
+  {
+    id: "ast_isabel_province_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/isabel_province_current.png"
   },
   {
     id: "ast_ishikawa_current",
@@ -2629,6 +2669,10 @@ const assets = [
     path: "assets/flags/geography/asia/western_asia/lebanon/national/lebanon_current.svg"
   },
   {
+    id: "ast_leeward_islands_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/leeward_islands/leeward_islands_current.svg"
+  },
+  {
     id: "ast_leicestershire_current",
     path: "assets/flags/geography/europe/northern_europe/united_kingdom/england/counties/ceremonial/leicestershire_current.svg"
   },
@@ -2837,12 +2881,24 @@ const assets = [
     path: "assets/flags/geography/northern_america/united_states/states/maine/maine_text_removed.svg"
   },
   {
+    id: "ast_makatea_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/tuamotu_archipelago/makatea_current.svg"
+  },
+  {
     id: "ast_makedonska_kamenica_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/eastern/makedonska_kamenica_current.svg"
   },
   {
     id: "ast_makedonski_brod_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southwestern/makedonski_brod_current.svg"
+  },
+  {
+    id: "ast_makira_ulawa_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/makira_ulawa_current.png"
+  },
+  {
+    id: "ast_malaiita_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/malaiita_current.png"
   },
   {
     id: "ast_malawi_current",
@@ -2883,6 +2939,10 @@ const assets = [
   {
     id: "ast_marijampole_current",
     path: "assets/flags/geography/europe/northern_europe/lithuania/counties/marijampole_current.svg"
+  },
+  {
+    id: "ast_marquesas_islands_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/marquesas_islands/marquesas_islands_current.svg"
   },
   {
     id: "ast_marshall_islands_current",
@@ -3091,6 +3151,10 @@ const assets = [
   {
     id: "ast_montserrat_current",
     path: "assets/flags/geography/caribbean/montserrat/national/montserrat_current.svg"
+  },
+  {
+    id: "ast_moorea_maiao_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/tuamotu_archipelago/moorea_maiao_current.svg"
   },
   {
     id: "ast_moravian_silesian_current",
@@ -3905,8 +3969,20 @@ const assets = [
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/southeastern/radovis_current.svg"
   },
   {
+    id: "ast_raiatea_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/leeward_islands/raiatea_current.svg"
+  },
+  {
+    id: "ast_raivavae_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/austral_islands/raivavae_current.svg"
+  },
+  {
     id: "ast_rankovce_current",
     path: "assets/flags/geography/europe/southern_europe/north_macedonia/statistical_regions/northeastern/rankovce_current.svg"
+  },
+  {
+    id: "ast_rapa_iti_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/austral_islands/rapa_iti_current.svg"
   },
   {
     id: "ast_rapla_current",
@@ -3923,6 +3999,14 @@ const assets = [
   {
     id: "ast_rcvh_current",
     path: "assets/flags/international_organisations/international_federation_of_vexillogical_associations/associations/rcvh_current.svg"
+  },
+  {
+    id: "ast_reao_pukaruha_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/tuamotu_archipelago/reao_pukaruha_current.svg"
+  },
+  {
+    id: "ast_rennell_and_bellona_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/rennell_and_bellona_current.svg"
   },
   {
     id: "ast_republic_of_the_congo_current",
@@ -3961,6 +4045,10 @@ const assets = [
     path: "assets/flags/geography/europe/northern_europe/latvia/state_cities/riga_current.svg"
   },
   {
+    id: "ast_rimatara_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/austral_islands/rimatara_current.svg"
+  },
+  {
     id: "ast_rivne_current",
     path: "assets/flags/geography/europe/eastern_europe/ukraine/oblasts/rivne_current.svg"
   },
@@ -3979,6 +4067,10 @@ const assets = [
   {
     id: "ast_rostov_current",
     path: "assets/flags/geography/europe/eastern_europe/russia/sub_divisions/southern/rostov_current.svg"
+  },
+  {
+    id: "ast_rurutu_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/austral_islands/rurutu_current.svg"
   },
   {
     id: "ast_russia_current",
@@ -4626,7 +4718,7 @@ const assets = [
   },
   {
     id: "ast_tahiti_current",
-    path: "assets/flags/geography/oceania/polynesia/french_polynesia/tahiti/tahiti_current.svg"
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/windward_islands/tahiti/tahiti_current.svg"
   },
   {
     id: "ast_taiwan_current",
@@ -4667,6 +4759,10 @@ const assets = [
   {
     id: "ast_telsiai_current",
     path: "assets/flags/geography/europe/northern_europe/lithuania/counties/telsiai_current.svg"
+  },
+  {
+    id: "ast_temotu_province_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/temotu_province_current.svg"
   },
   {
     id: "ast_tennessee",
@@ -4807,6 +4903,14 @@ const assets = [
   {
     id: "ast_trujillo_current",
     path: "assets/flags/geography/south_america/venezuela/region/andean_region/trujillo_current.svg"
+  },
+  {
+    id: "ast_tuamotu_archipelago_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/tuamotu_archipelago/tuamotu_archipelago_current.svg"
+  },
+  {
+    id: "ast_tubuai_current",
+    path: "assets/flags/geography/oceania/polynesia/french_polynesia/austral_islands/tubuai_current.svg"
   },
   {
     id: "ast_tula_current",
@@ -5279,6 +5383,10 @@ const assets = [
   {
     id: "ast_western_australia_current",
     path: "assets/flags/geography/oceania/australia_and_new_zealand/australia/states/western_australia_current.svg"
+  },
+  {
+    id: "ast_western_province_current",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/western_province_current.png"
   },
   {
     id: "ast_westmorland",
