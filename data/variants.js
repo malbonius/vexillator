@@ -5937,6 +5937,7 @@ const variants = [
       "Flag of Republic of North Ossetia-Alania",
       "Flag of North Ossetia"
     ],
+	quizVisualGroupId: "white_red_gold_horizontal_tricolour",
     tags: ["official", "current"],
     startYear: null,
     endYear: null
@@ -6571,6 +6572,7 @@ const variants = [
     assetId: "ast_south_ossetia_current",
     displayName: "National Flag",
     aliases: [],
+	quizVisualGroupId: "white_red_gold_horizontal_tricolour",
     tags: ["official", "current", "national"],
     startYear: 1992,
     endYear: null
