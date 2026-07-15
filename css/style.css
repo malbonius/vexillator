@@ -3802,3 +3802,301 @@ html.theme-dark {
   align-items: center;
 }
 
+
+/*
+  Variant Detail view.
+
+  This page explains one flag design for normal users. It intentionally avoids
+  exposing internal variant IDs, asset IDs or file paths.
+*/
+.variant-detail {
+  display: grid;
+  gap: 1rem;
+}
+
+.variant-detail-back-button,
+.variant-detail-secondary-button,
+.flag-card-detail-button,
+.entity-default-variant-detail-button,
+.entity-variant-detail-button {
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #bbb;
+  border-radius: 0.35rem;
+  background: #f8f8f8;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.variant-detail-back-button:hover,
+.variant-detail-secondary-button:hover,
+.flag-card-detail-button:hover,
+.entity-default-variant-detail-button:hover,
+.entity-variant-detail-button:hover {
+  background: #eeeeee;
+  border-color: #2563eb;
+}
+
+.variant-detail-back-button:focus-visible,
+.variant-detail-secondary-button:focus-visible,
+.flag-card-detail-button:focus-visible,
+.entity-default-variant-detail-button:focus-visible,
+.entity-variant-detail-button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.variant-detail-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(14rem, 26rem);
+  gap: 1rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.55rem;
+  background: #fafafa;
+}
+
+.variant-detail-heading-group {
+  min-width: 0;
+}
+
+.variant-detail-heading-group h2 {
+  margin: 0;
+}
+
+.variant-detail-subtitle {
+  margin: 0.35rem 0 0;
+  color: #555;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.variant-detail-meta {
+  margin: 0.45rem 0 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.variant-detail-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.75rem 0;
+}
+
+.variant-detail-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.45rem;
+  border: 1px solid #93c5fd;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1e3a8a;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.variant-detail-badge.muted {
+  border-color: #d1d5db;
+  background: #f3f4f6;
+  color: #4b5563;
+}
+
+.variant-detail-preview {
+  min-width: 0;
+}
+
+.variant-detail-preview-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 180px;
+  padding: 0.85rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #f8f8f8;
+  cursor: zoom-in;
+  font: inherit;
+}
+
+.variant-detail-preview-button:hover:not(:disabled) {
+  border-color: #2563eb;
+  background: #eeeeee;
+}
+
+.variant-detail-preview-button:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.variant-detail-preview-button:disabled {
+  cursor: default;
+  opacity: 0.75;
+}
+
+.variant-detail-image {
+  display: block;
+  width: 100%;
+  height: clamp(160px, 28vw, 260px);
+  max-height: 260px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+.variant-detail-missing-image {
+  color: #666;
+}
+
+.variant-detail-section {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.variant-detail-section h3 {
+  margin-top: 0;
+}
+
+.variant-detail-facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.45rem 0.75rem;
+  margin: 0;
+}
+
+.variant-detail-facts dt {
+  font-weight: 700;
+}
+
+.variant-detail-facts dd {
+  margin: 0;
+  min-width: 0;
+  color: #555;
+}
+
+.variant-detail-colour-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.45rem 0 0.75rem;
+}
+
+.variant-detail-colour-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 999px;
+  background: #f3f4f6;
+  color: #374151;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.variant-detail-related-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 18rem), 1fr)
+  );
+  gap: 0.75rem;
+}
+
+.variant-detail-related-card {
+  display: grid;
+  grid-template-columns: minmax(6rem, 9rem) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.45rem;
+  background: #fafafa;
+}
+
+.variant-detail-related-image {
+  display: block;
+  width: 100%;
+  height: 5.5rem;
+  object-fit: contain;
+  border: 1px solid #ddd;
+}
+
+.variant-detail-related-body {
+  min-width: 0;
+}
+
+.variant-detail-related-body h4 {
+  margin: 0;
+}
+
+.flag-card-detail-button {
+  margin-top: 0.65rem;
+}
+
+@media (max-width: 760px) {
+  .variant-detail-summary,
+  .variant-detail-related-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .variant-detail-image {
+    height: clamp(150px, 42vw, 220px);
+  }
+
+  .variant-detail-facts {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+html.theme-dark .variant-detail-summary,
+html.theme-dark .variant-detail-section,
+html.theme-dark .variant-detail-related-card {
+  border-color: var(--border-soft);
+  background: var(--surface-bg-soft);
+  color: var(--text-main);
+}
+
+html.theme-dark .variant-detail-preview-button,
+html.theme-dark .variant-detail-back-button,
+html.theme-dark .variant-detail-secondary-button,
+html.theme-dark .flag-card-detail-button,
+html.theme-dark .entity-default-variant-detail-button,
+html.theme-dark .entity-variant-detail-button {
+  border-color: var(--border-strong);
+  background: var(--button-bg);
+  color: var(--text-main);
+}
+
+html.theme-dark .variant-detail-preview-button:hover:not(:disabled),
+html.theme-dark .variant-detail-back-button:hover,
+html.theme-dark .variant-detail-secondary-button:hover,
+html.theme-dark .flag-card-detail-button:hover,
+html.theme-dark .entity-default-variant-detail-button:hover,
+html.theme-dark .entity-variant-detail-button:hover {
+  background: var(--button-hover-bg);
+}
+
+html.theme-dark .variant-detail-subtitle,
+html.theme-dark .variant-detail-meta,
+html.theme-dark .variant-detail-facts dd,
+html.theme-dark .variant-detail-missing-image {
+  color: var(--text-subtle);
+}
+
+html.theme-dark .variant-detail-preview-button,
+html.theme-dark .variant-detail-image,
+html.theme-dark .variant-detail-related-image {
+  border-color: var(--border-soft);
+}
+
+html.theme-dark .variant-detail-preview-button,
+html.theme-dark .variant-detail-colour-chip {
+  background: var(--surface-bg-muted);
+  color: var(--text-main);
+}

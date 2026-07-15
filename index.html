@@ -246,6 +246,14 @@
 		  Entity
 		</button>
 
+		<button
+		  class="mode-tab"
+		  type="button"
+		  data-mode-tab="variant"
+		>
+		  Variant
+		</button>
+
         <button
           class="mode-tab"
           type="button"
@@ -310,6 +318,18 @@
       <div class="mode-panel" id="entityModePanel">
         <div id="entityView">
           No entity selected.
+        </div>
+      </div>
+
+      <!--
+        Displays the currently active flag variant.
+
+        This page explains the selected flag design without exposing internal
+        database identifiers to normal users.
+      -->
+      <div class="mode-panel" id="variantModePanel">
+        <div id="variantView">
+          No flag variant selected.
         </div>
       </div>
 
@@ -939,6 +959,14 @@
 		</div>
 		
           <button
+            id="viewGalleryZoomVariantButton"
+            class="zoom-entity-button"
+            type="button"
+          >
+            View flag details
+          </button>
+
+          <button
             id="viewGalleryZoomEntityButton"
             class="zoom-entity-button"
             type="button"
@@ -996,6 +1024,7 @@
   <script src="js/ui/statsView.js"></script>
   <script src="js/ui/searchView.js"></script>
   <script src="js/ui/entityDetail.js"></script>
+  <script src="js/ui/variantDetail.js"></script>
   <script src="js/ui/presetView.js"></script>
 
   <!-- Main application entry point. -->

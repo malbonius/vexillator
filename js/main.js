@@ -14,6 +14,10 @@ const rawData = {
       ? entityMemberships
       : [],
   variants,
+  visualMetadata:
+    typeof visualMetadata !== "undefined"
+      ? visualMetadata
+      : undefined,
   collections,
   collectionGroups,
   quizPresets
@@ -704,6 +708,7 @@ function updateCurrentModeTitle(modeName) {
 
   const titlesByMode = {
     search: "Search",
+    variant: "Variant",
     gallery: "Gallery",
     typing: "Typing Quiz",
     multipleChoice: "Multiple-Choice",
@@ -718,6 +723,22 @@ function updateCurrentModeTitle(modeName) {
 
     titleElement.textContent =
       entity?.name ?? "Entity";
+
+    return;
+  }
+
+  if (modeName === "variant") {
+    const variant = dataIndex.variantsById[
+      appState.variantView.activeVariantId
+    ];
+
+    const entity = variant
+      ? dataIndex.entitiesById[variant.entityId]
+      : null;
+
+    titleElement.textContent = entity && variant
+      ? `${entity.name} - ${variant.displayName}`
+      : "Variant";
 
     return;
   }
@@ -1718,6 +1739,7 @@ function showModePanel(modeName) {
   const panelIdByMode = {
     search: "searchModePanel",
     entity: "entityModePanel",
+    variant: "variantModePanel",
     gallery: "galleryModePanel",
     typing: "typingModePanel",
     multipleChoice: "multipleChoiceModePanel",
@@ -1734,6 +1756,14 @@ function showModePanel(modeName) {
 
   appState.activeMode = modeName;
   selectedPanel.classList.add("active");
+
+  if (
+    modeName === "variant" &&
+    typeof renderVariantDetailView === "function"
+  ) {
+    renderVariantDetailView();
+  }
+
   updateCurrentModeTitle(modeName);
 }
 

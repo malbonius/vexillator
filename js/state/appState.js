@@ -193,6 +193,19 @@ const appState = {
     */
     history: []
   },
+
+  /*
+    Variant Detail state.
+
+    activeVariantId identifies the exact flag design currently being viewed.
+    returnContext records the user-facing workspace that opened it so the page
+    can offer a meaningful Back action without exposing internal IDs.
+  */
+  variantView: {
+    activeVariantId: null,
+    returnContext: null
+  },
+
   /*
     Shared flag zoom state.
 

@@ -1446,6 +1446,18 @@ function createEntityDefaultVariantHeroElement(
 
   heroElement.appendChild(imageButton);
 
+  const detailButton = document.createElement("button");
+  detailButton.type = "button";
+  detailButton.className = "entity-selection-action entity-default-variant-detail-button";
+  detailButton.textContent = "View flag details";
+
+  detailButton.addEventListener("click", () => {
+    openVariantDetailView(defaultVariant.id, {
+      sourceMode: "entity"
+    });
+  });
+
+  heroElement.appendChild(detailButton);
 
   return heroElement;
 }
@@ -3139,6 +3151,19 @@ if (variantsSectionExpanded) {
 
         bodyElement.appendChild(technicalNoteElement);
       }
+
+      const detailButton = document.createElement("button");
+      detailButton.type = "button";
+      detailButton.className = "entity-selection-action entity-variant-detail-button";
+      detailButton.textContent = "View flag details";
+
+      detailButton.addEventListener("click", () => {
+        openVariantDetailView(variant.id, {
+          sourceMode: "entity"
+        });
+      });
+
+      bodyElement.appendChild(detailButton);
 
       /*
         Add or remove this exact variant as a direct selection source.

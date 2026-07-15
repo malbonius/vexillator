@@ -1278,6 +1278,32 @@ function createGalleryStatsElement(galleryItem) {
   return statsWrapper;
 }
 
+
+function appendGalleryCardDetailButton(bodyElement, variant) {
+  if (!bodyElement || !variant) {
+    return;
+  }
+
+  const detailButton = document.createElement("button");
+  detailButton.type = "button";
+  detailButton.className = "entity-selection-action flag-card-detail-button";
+  detailButton.textContent = "View flag details";
+
+  detailButton.addEventListener("click", event => {
+    event.stopPropagation();
+
+    openVariantDetailView(variant.id, {
+      sourceMode: "gallery"
+    });
+  });
+
+  detailButton.addEventListener("keydown", event => {
+    event.stopPropagation();
+  });
+
+  bodyElement.appendChild(detailButton);
+}
+
 /*
   Creates one gallery card from a deduplicated gallery item.
 
@@ -1374,6 +1400,7 @@ function createFlagCard(galleryItem, galleryItems) {
     Name Only mode stops after the title.
   */
   if (appState.galleryDetailsMode === "name") {
+    appendGalleryCardDetailButton(bodyElement, variant);
     cardElement.appendChild(bodyElement);
     return cardElement;
   }
@@ -1392,6 +1419,7 @@ function createFlagCard(galleryItem, galleryItems) {
       bodyElement.appendChild(yearsElement);
     }
 
+    appendGalleryCardDetailButton(bodyElement, variant);
     cardElement.appendChild(bodyElement);
     return cardElement;
   }
@@ -1406,6 +1434,7 @@ function createFlagCard(galleryItem, galleryItems) {
     const statsElement = createGalleryStatsElement(galleryItem);
 
     bodyElement.appendChild(statsElement);
+    appendGalleryCardDetailButton(bodyElement, variant);
     cardElement.appendChild(bodyElement);
 
     return cardElement;
@@ -1462,6 +1491,7 @@ function createFlagCard(galleryItem, galleryItems) {
     "Collections: none";
 
   bodyElement.appendChild(collectionsElement);
+  appendGalleryCardDetailButton(bodyElement, variant);
   cardElement.appendChild(bodyElement);
 
   return cardElement;

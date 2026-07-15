@@ -17,6 +17,9 @@ function setupGalleryZoomViewer() {
   const closeButton = document.getElementById("closeGalleryZoomButton");
   const previousButton = document.getElementById("previousGalleryZoomButton");
   const nextButton = document.getElementById("nextGalleryZoomButton");
+  const viewVariantButton = document.getElementById(
+    "viewGalleryZoomVariantButton"
+  );
   const viewEntityButton = document.getElementById(
     "viewGalleryZoomEntityButton"
   );
@@ -68,6 +71,26 @@ function setupGalleryZoomViewer() {
   if (reverseButton) {
     reverseButton.addEventListener("click", () => {
       cycleGalleryZoomRelatedVariants("reverses");
+    });
+  }
+
+  if (viewVariantButton) {
+    viewVariantButton.addEventListener("click", () => {
+      const displayedVariant = getDisplayedGalleryZoomVariant();
+
+      if (!displayedVariant) {
+        return;
+      }
+
+      const sourceMode = appState.galleryZoom.sourceMode === "entity"
+        ? "entity"
+        : "gallery";
+
+      closeGalleryZoom();
+
+      openVariantDetailView(displayedVariant.id, {
+        sourceMode
+      });
     });
   }
 
@@ -513,6 +536,9 @@ function renderGalleryZoomItem() {
     .map(collection => collection.name);
 
   const metaElement = document.getElementById("galleryZoomMeta");
+  const viewVariantButton = document.getElementById(
+    "viewGalleryZoomVariantButton"
+  );
   const viewEntityButton = document.getElementById(
     "viewGalleryZoomEntityButton"
   );
@@ -591,6 +617,10 @@ function renderGalleryZoomItem() {
 
     if (nextButton) {
       nextButton.hidden = true;
+    }
+
+    if (viewVariantButton) {
+      viewVariantButton.hidden = true;
     }
 
     if (viewEntityButton) {
@@ -764,6 +794,15 @@ if (renditionButton) {
       !hasValidAlternatives &&
       !hasValidReverse &&
       !hasMultipleRenditions;
+  }
+
+  if (viewVariantButton) {
+    const variantAlreadyOpen =
+      appState.activeMode === "variant" &&
+      variant &&
+      appState.variantView.activeVariantId === variant.id;
+
+    viewVariantButton.hidden = !variant || variantAlreadyOpen;
   }
 
   /*

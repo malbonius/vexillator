@@ -745,7 +745,9 @@ function createSearchResultElement(result) {
         return;
       }
 
-      openEntityView(variant.entityId, variant.id);
+      openVariantDetailView(variant.id, {
+        sourceMode: "search"
+      });
     });
 
     resultElement.appendChild(viewButton);
