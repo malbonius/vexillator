@@ -2493,7 +2493,9 @@ const entities = [
     name: "Saint-Pierre and Miquelon",
     aliases: [
 	"Saint Pierre and Miquelon",
-    "Saint-Pierre-et-Miquelon"
+    "Saint-Pierre-et-Miquelon",
+	"St Pierre and Miquelon",
+	"St. Pierre and Miquelon"
     ],
     entityType: "geographic",
     parentIds: ["ent_northern_america"],
