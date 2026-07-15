@@ -461,6 +461,163 @@ function createVariantDetailDesignSection(variant) {
   return section;
 }
 
+
+function getVariantDetailStatRecord(variantId, mode) {
+  if (typeof getStatRecord !== "function") {
+    return null;
+  }
+
+  return getStatRecord("variant", variantId, mode);
+}
+
+function getVariantDetailStatAccuracy(record) {
+  if (!record || !record.seen) {
+    return null;
+  }
+
+  return Math.round((record.correct / record.seen) * 100);
+}
+
+function formatVariantDetailStatMode(mode) {
+  const labelsByMode = {
+    typing: "Typing",
+    multiple_choice: "Multiple-choice"
+  };
+
+  return labelsByMode[mode] ?? mode;
+}
+
+function formatVariantDetailStatDate(value) {
+  if (!value) {
+    return "Never";
+  }
+
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) {
+    return "Unknown";
+  }
+
+  return date.toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric"
+  });
+}
+
+function formatVariantDetailAverageTime(record) {
+  if (!record || record.averageResponseTime === null) {
+    return "No time data";
+  }
+
+  if (
+    typeof record.averageResponseTime !== "number" ||
+    !Number.isFinite(record.averageResponseTime)
+  ) {
+    return "No time data";
+  }
+
+  return `${record.averageResponseTime.toFixed(1)}s`;
+}
+
+function createVariantDetailStatCard(mode, record) {
+  const card = document.createElement("article");
+  card.className = "variant-detail-stat-card";
+
+  const title = document.createElement("h4");
+  title.textContent = formatVariantDetailStatMode(mode);
+  card.appendChild(title);
+
+  if (!record || record.seen === 0) {
+    const empty = document.createElement("p");
+    empty.className = "variant-detail-meta";
+    empty.textContent = "Not practised yet.";
+    card.appendChild(empty);
+    return card;
+  }
+
+  const accuracy = getVariantDetailStatAccuracy(record);
+
+  const summary = document.createElement("p");
+  summary.className = "variant-detail-stat-summary";
+  summary.textContent = accuracy === null ? "No accuracy yet" : `${accuracy}%`;
+  card.appendChild(summary);
+
+  const list = document.createElement("dl");
+  list.className = "variant-detail-stat-facts";
+
+  function addFact(label, value) {
+    const term = document.createElement("dt");
+    term.textContent = label;
+
+    const description = document.createElement("dd");
+    description.textContent = value;
+
+    list.appendChild(term);
+    list.appendChild(description);
+  }
+
+  addFact("Seen", String(record.seen));
+  addFact("Correct", String(record.correct));
+  addFact("Incorrect", String(record.incorrect));
+  addFact("Average time", formatVariantDetailAverageTime(record));
+  addFact("Last seen", formatVariantDetailStatDate(record.lastSeen));
+
+  if (record.lastIncorrect) {
+    addFact("Last incorrect", formatVariantDetailStatDate(record.lastIncorrect));
+  }
+
+  card.appendChild(list);
+
+  return card;
+}
+
+function createVariantDetailStatsSection(variant) {
+  const section = document.createElement("section");
+  section.className = "variant-detail-section variant-detail-stats-section";
+
+  const heading = document.createElement("h3");
+  heading.textContent = "Practice stats";
+  section.appendChild(heading);
+
+  const note = document.createElement("p");
+  note.className = "variant-detail-meta";
+  note.textContent = "Stats are tracked for this exact flag in each quiz mode.";
+  section.appendChild(note);
+
+  const modes = ["typing", "multiple_choice"];
+  const records = modes.map(mode => {
+    return {
+      mode,
+      record: getVariantDetailStatRecord(variant.id, mode)
+    };
+  });
+
+  const hasAnyStats = records.some(item => {
+    return item.record && item.record.seen > 0;
+  });
+
+  if (!hasAnyStats) {
+    const empty = document.createElement("p");
+    empty.className = "empty-message";
+    empty.textContent = "This flag has not appeared in a recorded quiz yet.";
+    section.appendChild(empty);
+  }
+
+  const grid = document.createElement("div");
+  grid.className = "variant-detail-stat-grid";
+
+  records.forEach(item => {
+    grid.appendChild(
+      createVariantDetailStatCard(item.mode, item.record)
+    );
+  });
+
+  section.appendChild(grid);
+
+  return section;
+}
+
 function createVariantDetailRelatedCard(relatedVariant, relationshipLabel) {
   const relatedEntity = dataIndex.entitiesById[relatedVariant.entityId];
   const asset = dataIndex.assetsById[relatedVariant.assetId];
@@ -632,6 +789,7 @@ function renderVariantDetailView() {
   wrapper.appendChild(createVariantDetailBackButton());
   wrapper.appendChild(createVariantDetailSummary(variant, entity));
   wrapper.appendChild(createVariantDetailAboutSection(variant, entity));
+  wrapper.appendChild(createVariantDetailStatsSection(variant));
   wrapper.appendChild(createVariantDetailDesignSection(variant));
   wrapper.appendChild(createVariantDetailRelatedSection(variant, entity));
 

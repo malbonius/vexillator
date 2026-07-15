@@ -3999,6 +3999,57 @@ html.theme-dark {
   font-weight: 600;
 }
 
+
+.variant-detail-stats-section .empty-message {
+  margin-bottom: 0.75rem;
+}
+
+.variant-detail-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 14rem), 1fr)
+  );
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.variant-detail-stat-card {
+  min-width: 0;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 0.45rem;
+  background: #fafafa;
+}
+
+.variant-detail-stat-card h4 {
+  margin: 0;
+}
+
+.variant-detail-stat-summary {
+  margin: 0.35rem 0 0.65rem;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.variant-detail-stat-facts {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.3rem 0.6rem;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.variant-detail-stat-facts dt {
+  font-weight: 700;
+}
+
+.variant-detail-stat-facts dd {
+  margin: 0;
+  min-width: 0;
+  color: #555;
+}
+
 .variant-detail-related-list {
   display: grid;
   grid-template-columns: repeat(
@@ -4056,7 +4107,8 @@ html.theme-dark {
 
 html.theme-dark .variant-detail-summary,
 html.theme-dark .variant-detail-section,
-html.theme-dark .variant-detail-related-card {
+html.theme-dark .variant-detail-related-card,
+html.theme-dark .variant-detail-stat-card {
   border-color: var(--border-soft);
   background: var(--surface-bg-soft);
   color: var(--text-main);
@@ -4085,6 +4137,7 @@ html.theme-dark .entity-variant-detail-button:hover {
 html.theme-dark .variant-detail-subtitle,
 html.theme-dark .variant-detail-meta,
 html.theme-dark .variant-detail-facts dd,
+html.theme-dark .variant-detail-stat-facts dd,
 html.theme-dark .variant-detail-missing-image {
   color: var(--text-subtle);
 }
