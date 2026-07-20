@@ -3773,6 +3773,17 @@ const variants = [
     endYear: null
   },
   {
+    id: "var_dominican_republic_current_text_removed",
+    entityId: "ent_dominican_republic",
+    assetId: "ast_dominican_republic_current_text_removed",
+    displayName: "National Flag",
+    aliases: [],
+    tags: ["quiz", "text_removed", "current"],
+    startYear: 1863,
+    endYear: null,
+    baseVariantId: "var_dominican_republic_current"
+  },
+  {
     id: "var_federal_dependencies_of_venezuela_current",
     entityId: "ent_federal_dependencies_of_venezuela",
     assetId: "ast_federal_dependencies_of_venezuela_current",

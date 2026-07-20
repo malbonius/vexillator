@@ -152,8 +152,7 @@ function startTypingQuiz() {
     appState.selectedCollectionIds.size > 0 ||
     appState.selectedEntityGroups.size > 0 ||
     appState.selectedEntityIds.size > 0 ||
-    appState.selectedVariantIds.size > 0 ||
-    appState.selectedVariantGroups.size > 0;
+    appState.selectedVariantIds.size > 0;
 
   if (!hasActiveSelection) {
     quizViewElement.innerHTML = ` <p class="empty-message">
@@ -183,7 +182,6 @@ function startTypingQuiz() {
       entityGroups: Array.from(appState.selectedEntityGroups.values()),
       entityIds: Array.from(appState.selectedEntityIds),
       variantIds: Array.from(appState.selectedVariantIds),
-      variantGroups: Array.from(appState.selectedVariantGroups.values()),
       questionCount: requestedQuestionCount
     },
     dataIndex
@@ -364,6 +362,17 @@ function submitTypingAnswer() {
 
   const answerInput = document.getElementById("typingAnswerInput");
   const userAnswer = answerInput.value;
+
+  if (userAnswer.trim() === "") {
+    const shouldSubmitBlankAnswer = window.confirm(
+      "Submit a blank answer?"
+    );
+
+    if (!shouldSubmitBlankAnswer) {
+      answerInput.focus();
+      return;
+    }
+  }
 
   const result = checkTypedAnswer(userAnswer, currentQuestion, dataIndex);
 

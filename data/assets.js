@@ -1293,6 +1293,10 @@ const assets = [
     path: "assets/flags/geography/caribbean/dominican_republic/dominican_republic_current.svg"
   },
   {
+    id: "ast_dominican_republic_current_text_removed",
+    path: "assets/flags/geography/caribbean/dominican_republic/dominican_republic_current_text_removed.svg"
+  },
+  {
     id: "ast_dominican_republic_judiciary",
     path: "assets/flags/geography/caribbean/dominican_republic/dominican_republic_judiciary.svg"
   },
@@ -1987,6 +1991,10 @@ const assets = [
   {
     id: "ast_honiara_capital_territory_current",
     path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/honiara_capital_territory_current.svg"
+  },
+  {
+    id: "ast_honiara_capital_territory_current_text_removed",
+    path: "assets/flags/geography/oceania/melanesia/solomon_islands/provinces/honiara_capital_territory_current_text_removed.svg"
   },
   {
     id: "ast_hradec_kralove_current",
